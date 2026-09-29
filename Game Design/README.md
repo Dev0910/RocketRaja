@@ -2,6 +2,8 @@
 
 Research expanded 30 September 2026. These documents study Game Hive's *Tap Tycoon: Country vs Country*, review the full checked-in Rocket Raja design, compare other incremental games and primary research papers, and define testable responses to the identified problems. This is a design review; the playable economy was not changed.
 
+Open [the interactive findings dashboard](index.html) in a browser for a visual overview. It is a self-contained HTML file that works from a local checkout; its source links lead back to the Markdown reports.
+
 ## Reading order
 
 1. [Comprehensive Design Audit](Comprehensive%20Design%20Audit.md) — ranked problem register across pacing, purchases, products, tapping, skills, prestige, UI, return play, and evidence gaps; includes a fresh instrumented trace.

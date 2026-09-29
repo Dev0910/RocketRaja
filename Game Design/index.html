@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Rocket Raja · Game Design Findings</title>
+  <style>
+    :root {
+      --bg:#0c1120; --surface:#151d30; --surface2:#1c2740; --surface3:#233150;
+      --ink:#f3f6ff; --muted:#b6c3da; --faint:#8292ad; --line:#33425f;
+      --gold:#ffcb70; --gold2:#e9a74c; --teal:#73e0cc; --blue:#8bb8ff;
+      --coral:#ff8d87; --violet:#b8a0ff; --max:1320px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; min-width:320px; background:var(--bg); color:var(--ink); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }
+    a { color:var(--teal); text-underline-offset:3px; }
+    a:hover { color:#b1fff0; }
+    button, input, select { font:inherit; }
+    button { cursor:pointer; }
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+    .skip { position:absolute; top:-100px; left:14px; z-index:100; background:var(--gold); color:#11182a; padding:8px 12px; border-radius:8px; }
+    .skip:focus { top:12px; }
+    .shell { width:min(calc(100% - 40px),var(--max)); margin:auto; }
+    header { position:sticky; top:0; z-index:20; background:rgba(12,17,32,.94); border-bottom:1px solid var(--line); backdrop-filter:blur(14px); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:66px; }
+    .brand { display:flex; align-items:center; gap:11px; color:var(--ink); text-decoration:none; font-weight:800; white-space:nowrap; letter-spacing:-.02em; }
+    .brand-mark { width:31px; height:31px; display:grid; place-items:center; border:1px solid #bc8548; border-radius:10px; color:var(--gold); background:#31283a; font-size:19px; line-height:1; }
+    .topnav { display:flex; align-items:center; gap:4px; overflow-x:auto; white-space:nowrap; }
+    .topnav a { padding:9px 12px; text-decoration:none; color:var(--muted); border-radius:9px; font-size:.88rem; }
+    .topnav a:hover, .topnav a:focus-visible { background:var(--surface2); color:var(--ink); }
+    .topnav .source-nav { color:var(--gold); }
+    main section { scroll-margin-top:92px; }
+    .hero { display:grid; grid-template-columns:minmax(0,1.45fr) minmax(300px,.72fr); gap:38px; align-items:center; padding:71px 0 34px; }
+    .eyebrow { color:var(--gold); font-size:.78rem; font-weight:800; letter-spacing:.17em; text-transform:uppercase; }
+    h1,h2,h3,p { margin-top:0; }
+    h1 { font-size:clamp(2.55rem,5vw,5.35rem); line-height:1.04; letter-spacing:-.055em; max-width:880px; margin:15px 0 22px; }
+    h1 em { color:var(--gold); font-style:normal; }
+    .lede { color:var(--muted); font-size:1.12rem; max-width:660px; line-height:1.62; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:11px; margin-top:26px; }
+    .button-link { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 15px; border-radius:10px; text-decoration:none; font-weight:750; font-size:.9rem; border:1px solid var(--line); color:var(--ink); background:var(--surface2); }
+    .button-link:hover { color:var(--ink); background:var(--surface3); }
+    .button-link.primary { color:#171b2c; background:var(--gold); border-color:var(--gold); }
+    .button-link.primary:hover { background:#ffe0a2; }
+    .hero-panel { position:relative; overflow:hidden; min-height:265px; border-radius:21px; background:linear-gradient(145deg,#283958,#17223b 68%); border:1px solid #415174; padding:24px; box-shadow:0 18px 55px #05091856; }
+    .hero-panel:before { content:""; position:absolute; width:245px; height:245px; right:-75px; top:-85px; border-radius:50%; border:1px solid #6f85a450; box-shadow:0 0 0 29px #6f85a41b,0 0 0 58px #6f85a414; }
+    .hero-panel .small { position:relative; color:var(--gold); font-weight:750; font-size:.82rem; letter-spacing:.1em; text-transform:uppercase; }
+    .hero-panel .big { position:relative; font-weight:850; font-size:4.5rem; letter-spacing:-.07em; line-height:1; margin:24px 0 11px; }
+    .hero-panel .sub { position:relative; max-width:270px; color:var(--muted); font-size:.95rem; }
+    .hero-panel a { position:relative; font-size:.85rem; }
+    .notice { border:1px solid #7d6747; background:#3b30272e; border-radius:13px; padding:14px 17px; color:#f5dcb1; font-size:.92rem; }
+    .notice strong { color:#ffe3a5; }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:22px; margin:0 0 22px; }
+    .section-head h2 { margin:5px 0 0; font-size:clamp(1.8rem,3vw,2.6rem); line-height:1.15; letter-spacing:-.04em; }
+    .section-head p { color:var(--muted); max-width:650px; margin:8px 0 0; }
+    .section-head .text-link { flex:none; font-size:.88rem; font-weight:700; }
+    .section { padding:68px 0 0; }
+    .metric-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:13px; margin-top:27px; }
+    .metric { min-height:190px; border:1px solid var(--line); border-radius:16px; background:var(--surface); padding:21px; }
+    .metric .label { color:var(--muted); font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.07em; }
+    .metric .value { display:block; margin:17px 0 8px; font-size:clamp(2rem,3vw,3.1rem); line-height:1; font-weight:820; letter-spacing:-.055em; font-variant-numeric:tabular-nums; }
+    .metric .value.gold { color:var(--gold); } .metric .value.teal { color:var(--teal); } .metric .value.coral { color:var(--coral); } .metric .value.blue { color:var(--blue); font-size:clamp(1.45rem,2vw,2.15rem); overflow-wrap:anywhere; }
+    .metric .detail { color:var(--muted); font-size:.86rem; margin-bottom:0; }
+    .metric a { font-size:.78rem; }
+    .grid-two { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .panel { border:1px solid var(--line); border-radius:18px; background:var(--surface); padding:25px; }
+    .panel h3 { font-size:1.25rem; letter-spacing:-.025em; margin-bottom:6px; }
+    .panel > p, .panel header p { color:var(--muted); font-size:.9rem; }
+    .panel-head { display:flex; justify-content:space-between; align-items:start; gap:16px; }
+    .panel-head a { flex:none; font-size:.8rem; }
+    .timeline { display:flex; width:100%; margin:31px 0 12px; border:1px solid #4b5c78; border-radius:12px; overflow:hidden; background:#11192a; min-height:82px; }
+    .timeline button { border:0; border-right:1px solid #1b263c; min-width:0; padding:8px; color:#121a28; text-align:left; font-weight:850; font-size:.76rem; line-height:1.15; transition:filter .15s, transform .15s; }
+    .timeline button:last-child { border-right:0; }
+    .timeline button:hover { filter:brightness(1.15); }
+    .timeline button[aria-pressed="true"] { outline:3px solid white; outline-offset:-5px; filter:brightness(1.13); }
+    .timeline .phase1 { flex:451; background:var(--teal); }
+    .timeline .phase2 { flex:1139; background:var(--gold); }
+    .timeline .phase3 { flex:1196; background:var(--coral); }
+    .tick-row { display:flex; justify-content:space-between; color:var(--muted); font-size:.75rem; font-variant-numeric:tabular-nums; }
+    .phase-readout { margin-top:21px; padding:15px; min-height:94px; background:var(--surface2); border-radius:11px; border:1px solid var(--line); }
+    .phase-readout strong { color:var(--gold); }
+    .phase-readout p { margin:5px 0 0; color:var(--muted); font-size:.88rem; }
+    .seg-note { color:var(--faint); font-size:.78rem; margin:12px 0 0; }
+    .keyline { display:flex; flex-wrap:wrap; gap:13px 18px; color:var(--muted); font-size:.8rem; margin:16px 0 0; }
+    .keyline span { display:inline-flex; align-items:center; gap:7px; }
+    .swatch { width:11px; height:11px; display:inline-block; border-radius:3px; }
+    .chart-controls { display:flex; flex-wrap:wrap; gap:7px; margin:12px 0 4px; }
+    .chart-controls label { display:inline-flex; align-items:center; gap:6px; padding:5px 9px; border:1px solid var(--line); border-radius:8px; font-size:.8rem; color:var(--muted); cursor:pointer; }
+    .chart-controls input { accent-color:var(--teal); }
+    #shareChart { width:100%; height:auto; display:block; margin:13px 0 0; }
+    .chart-caption { color:var(--muted); font-size:.8rem; margin:7px 0 0; }
+    .data-details { border-top:1px solid var(--line); margin-top:16px; padding-top:9px; }
+    .data-details summary { cursor:pointer; color:var(--teal); font-size:.86rem; font-weight:700; }
+    .table-wrap { overflow:auto; max-width:100%; }
+    table { border-collapse:collapse; width:100%; font-size:.79rem; font-variant-numeric:tabular-nums; }
+    th,td { padding:8px 9px; border-bottom:1px solid var(--line); text-align:right; white-space:nowrap; }
+    th:first-child,td:first-child { text-align:left; }
+    th { color:var(--muted); font-weight:750; }
+    .findings-intro { display:grid; grid-template-columns:1fr 1fr 1fr; gap:13px; margin-bottom:20px; }
+    .finding-feature { border:1px solid var(--line); border-radius:14px; padding:18px; background:var(--surface); }
+    .finding-feature .number { color:var(--gold); font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; font-weight:800; }
+    .finding-feature h3 { margin:8px 0 7px; font-size:1.12rem; }
+    .finding-feature p { margin:0; color:var(--muted); font-size:.86rem; }
+    .toolbar { display:flex; flex-wrap:wrap; align-items:end; gap:12px; padding:16px; background:var(--surface); border:1px solid var(--line); border-radius:14px; }
+    .field { display:flex; flex-direction:column; gap:5px; min-width:130px; }
+    .field.search { flex:1 1 250px; }
+    .field label { font-size:.73rem; font-weight:750; letter-spacing:.06em; color:var(--muted); text-transform:uppercase; }
+    .field input, .field select { width:100%; background:#0e1729; color:var(--ink); border:1px solid #53627c; border-radius:9px; padding:9px 11px; min-height:42px; }
+    .filter-reset { min-height:42px; border:1px solid var(--line); border-radius:9px; padding:7px 12px; color:var(--ink); background:var(--surface2); }
+    .filter-reset:hover { background:var(--surface3); }
+    .result-count { color:var(--muted); font-size:.84rem; margin:13px 0; }
+    .issue-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+    .issue { border:1px solid var(--line); border-radius:14px; background:var(--surface); padding:17px 19px; }
+    .issue:focus-within { border-color:#7c92b2; }
+    .issue-top { display:flex; align-items:center; flex-wrap:wrap; gap:7px; margin-bottom:8px; }
+    .issue-id { font-size:.76rem; font-weight:850; letter-spacing:.07em; color:var(--gold); }
+    .badge { display:inline-flex; align-items:center; border:1px solid var(--line); border-radius:99px; padding:2px 7px; font-size:.69rem; line-height:1.4; font-weight:750; color:var(--muted); background:var(--surface2); }
+    .badge.p0 { color:#ffb7b1; border-color:#ae5e60; background:#9e373422; } .badge.p1 { color:#ffdf9c; border-color:#8b704a; background:#ac7b2422; }
+    .badge.p2 { color:#a4d5ff; border-color:#5f85a9; background:#33689a22; } .badge.p3 { color:#b5e7d0; border-color:#608a79; background:#3f816522; }
+    .issue h3 { margin:0 0 8px; font-size:1rem; line-height:1.3; }
+    .issue p { color:var(--muted); font-size:.84rem; margin:0 0 10px; }
+    .issue details { margin-top:8px; padding-top:8px; border-top:1px solid var(--line); }
+    .issue summary { color:var(--teal); font-weight:750; font-size:.82rem; cursor:pointer; }
+    .issue details p { margin:7px 0 0; }
+    .issue .read { font-size:.78rem; font-weight:700; }
+    .empty { grid-column:1/-1; border:1px dashed var(--line); padding:24px; border-radius:12px; color:var(--muted); }
+    .evidence-legend { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 16px; }
+    .evidence-legend span { font-size:.76rem; color:var(--muted); border-left:2px solid var(--teal); padding:3px 7px; background:#1a263b; }
+    .roadmap { display:grid; grid-template-columns:minmax(230px,.65fr) minmax(0,1.35fr); gap:16px; }
+    .roadmap-steps { display:flex; flex-direction:column; gap:8px; }
+    .roadmap-steps button { text-align:left; width:100%; padding:14px 16px; border-radius:11px; color:var(--muted); border:1px solid var(--line); background:var(--surface); }
+    .roadmap-steps button:hover { background:var(--surface2); color:var(--ink); }
+    .roadmap-steps button[aria-selected="true"] { border-color:var(--gold2); background:#3d342e; color:var(--ink); }
+    .roadmap-steps .step-num { display:block; color:var(--gold); font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .roadmap-display { min-height:352px; border:1px solid var(--line); border-radius:15px; padding:24px; background:var(--surface); }
+    .roadmap-display h3 { font-size:1.38rem; margin:0 0 9px; }
+    .roadmap-display p { color:var(--muted); }
+    .proposal-tag { display:inline-block; margin-bottom:15px; font-size:.75rem; letter-spacing:.08em; text-transform:uppercase; font-weight:800; color:#151b28; background:var(--teal); padding:4px 8px; border-radius:5px; }
+    .roadmap-display dl { display:grid; grid-template-columns:94px 1fr; gap:8px 15px; margin:20px 0; font-size:.88rem; }
+    .roadmap-display dt { color:var(--gold); font-weight:800; } .roadmap-display dd { margin:0; color:var(--muted); }
+    .roadmap-display a { font-size:.86rem; font-weight:700; }
+    .research-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+    .reference-strip { display:grid; grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr); gap:18px; align-items:start; border:1px solid #725e49; border-radius:16px; background:linear-gradient(110deg,#332b32,#1a2438 65%); padding:22px; margin-bottom:18px; }
+    .reference-strip h3 { margin:5px 0 8px; font-size:1.36rem; }
+    .reference-strip p { color:var(--muted); font-size:.86rem; margin:0; }
+    .reference-strip ul { list-style:none; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; padding:0; margin:0; }
+    .reference-strip li { border-left:2px solid var(--gold); padding:0 0 0 11px; color:var(--muted); font-size:.82rem; }
+    .reference-strip strong { display:block; color:var(--ink); font-size:.87rem; margin-bottom:3px; }
+    .reference-strip a { font-size:.8rem; font-weight:700; }
+    .research-card { border:1px solid var(--line); border-radius:14px; padding:19px; background:var(--surface); }
+    .research-card .kicker { color:var(--gold); font-size:.72rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+    .research-card h3 { margin:8px 0; font-size:1.06rem; }
+    .research-card p { color:var(--muted); font-size:.84rem; margin-bottom:12px; }
+    .research-card a { font-size:.8rem; font-weight:700; }
+    .paper-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 24px; margin:11px 0 0; padding:0; list-style:none; }
+    .paper-list li { border-top:1px solid var(--line); padding:13px 0; font-size:.87rem; color:var(--muted); }
+    .paper-list strong { color:var(--ink); }
+    .paper-list a { font-weight:750; }
+    .method-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+    .method-grid .panel { padding:20px; }
+    .method-grid h3 { font-size:1rem; }
+    .method-grid p { margin:0; }
+    .source-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+    .source-row { display:flex; flex-direction:column; gap:4px; padding:13px 15px; border-radius:10px; border:1px solid var(--line); text-decoration:none; color:var(--ink); background:var(--surface); }
+    .source-row:hover { color:var(--ink); background:var(--surface2); }
+    .source-row span { color:var(--muted); font-size:.78rem; }
+    footer { border-top:1px solid var(--line); color:var(--faint); margin-top:76px; padding:28px 0 44px; font-size:.82rem; }
+    footer .shell { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    @media(max-width:1000px) { .hero { grid-template-columns:1fr; } .hero-panel { min-height:225px; } .metric-grid { grid-template-columns:repeat(2,1fr); } .research-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:760px) { .grid-two,.roadmap,.findings-intro,.method-grid,.source-grid,.paper-list,.reference-strip { grid-template-columns:1fr; } .issue-grid { grid-template-columns:1fr; } .topbar { display:block; padding:10px 0 6px; } .topnav { margin-top:4px; margin-left:-8px; } .topnav a { padding:7px 8px; } .hero { padding-top:44px; } .section { padding-top:52px; } .section-head { align-items:start; flex-direction:column; gap:8px; } .roadmap-display { min-height:0; } .roadmap-steps { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:520px) { .shell { width:min(calc(100% - 28px),var(--max)); } h1 { font-size:2.55rem; } .lede { font-size:1rem; } .metric-grid,.research-grid,.reference-strip ul { grid-template-columns:1fr; } .metric { min-height:0; } .metric .value { margin:10px 0 5px; } .panel { padding:16px; } .timeline { min-height:88px; } .timeline button { font-size:.68rem; padding:5px; overflow-wrap:anywhere; } .roadmap-steps { grid-template-columns:1fr; } .roadmap-display dl { grid-template-columns:1fr; gap:3px; } .roadmap-display dd { margin-bottom:7px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .timeline button { transition:none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to findings</a>
+  <header>
+    <div class="shell topbar">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">✦</span><span>Rocket Raja <span style="color:var(--faint);font-weight:600">/ Design findings</span></span></a>
+      <nav class="topnav" aria-label="Page sections">
+        <a href="#overview">Overview</a><a href="#progression">Progression</a><a href="#issues">Issue explorer</a><a href="#roadmap">Roadmap</a><a href="#research">Research</a><a class="source-nav" href="#sources">Full reports ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div id="top" class="shell">
+      <div class="hero">
+        <div>
+          <div class="eyebrow">Game design audit · 30 September 2026</div>
+          <h1>All eight families arrive early. <em>The first reset comes much later.</em></h1>
+          <p class="lede">A visual guide to the repository’s economy audit, research review, game benchmarks, and proposed experiments. Explore the measured first run, inspect every documented problem, and see what to test next.</p>
+          <div class="hero-actions"><a class="button-link primary" href="#progression">Explore the evidence <span aria-hidden="true">↓</span></a><a class="button-link" href="Comprehensive%20Design%20Audit.md">Read full audit ↗</a></div>
+        </div>
+        <aside class="hero-panel" aria-label="Main measured gap">
+          <div class="small">Current scripted first run</div>
+          <div class="big">38:55</div>
+          <p class="sub">Between owning all eight product families and the first available prestige. That is 84% of the 46:26 run.</p>
+          <a href="Comprehensive%20Design%20Audit.md#executive-finding">Read the measured finding ↗</a>
+        </aside>
+      </div>
+      <div class="notice" role="note"><strong>Read the numbers as simulator diagnostics.</strong> The trace uses a deterministic active policy: three taps per second, automatic Buy All, best-payback level purchases, and ready skills. It is not a human playtest or a retention estimate. Proposed changes below are not shipped. <a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Method and limitations ↗</a></div>
+    </div>
+
+    <section class="section" id="overview">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">01 / At a glance</div><h2>What the current evidence says</h2><p>These are repository rules and one instrumented simulator policy. The desired pacing bands are project targets, not findings from academic papers.</p></div><a class="text-link" href="Comprehensive%20Design%20Audit.md">Read full audit ↗</a></div>
+        <div class="metric-grid">
+          <article class="metric"><div class="label">First prestige</div><strong class="value coral">46:26</strong><p class="detail">Against a documented 20–30 minute simulator target; current assertion fails.</p><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Trace and method ↗</a></article>
+          <article class="metric"><div class="label">All eight families</div><strong class="value teal">7:31</strong><p class="detail">The final product family is already owned 16% into the traced first run.</p><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Trace and method ↗</a></article>
+          <article class="metric"><div class="label">Last purchased cash upgrade</div><strong class="value gold">26:30</strong><p class="detail">No further upgrade purchase in the last 19:56; nine entries remain unbought.</p><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Trace and method ↗</a></article>
+          <article class="metric"><div class="label">Tap rate at prestige</div><strong class="value blue">0.000002051%</strong><p class="detail">Potential income from three manual taps/s relative to normal product income.</p><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Ratio definition ↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="progression">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">02 / Measured policy</div><h2>Follow the first run</h2><p>Click a timeline segment and toggle chart series to inspect where new families, purchases, and active input lose momentum.</p></div><a class="text-link" href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Read full trace ↗</a></div>
+        <div class="grid-two">
+          <article class="panel">
+            <div class="panel-head"><div><h3>Where the 46:26 goes</h3><p>Bar width is proportional to elapsed time in the scripted run.</p></div><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Full report ↗</a></div>
+            <div class="timeline" role="group" aria-label="First run stages">
+              <button type="button" class="phase1" data-phase="0" aria-pressed="true" aria-label="Start to all families, 0 to 7 minutes 31 seconds">0–7:31<br>Open families</button>
+              <button type="button" class="phase2" data-phase="1" aria-pressed="false" aria-label="All families to last purchased cash upgrade, 7 minutes 31 seconds to 26 minutes 30 seconds">7:31–26:30<br>Buy upgrades</button>
+              <button type="button" class="phase3" data-phase="2" aria-pressed="false" aria-label="Last purchased cash upgrade to prestige, 26 minutes 30 seconds to 46 minutes 26 seconds">26:30–46:26<br>No new upgrade</button>
+            </div>
+            <div class="tick-row" aria-hidden="true"><span>Start</span><span>7:31</span><span>26:30</span><span>Prestige 46:26</span></div>
+            <div id="phaseReadout" class="phase-readout" aria-live="polite"></div>
+            <p class="seg-note">“No further upgrade purchase” does not mean all upgrades are owned: the trace reaches 87 of 96, with nine costly entries still available later. Product levels continue to rise.</p>
+          </article>
+          <article class="panel">
+            <div class="panel-head"><div><h3>Income share at checkpoints</h3><p>Logarithmic scale; each point is an instantaneous potential rate, not total earned cash.</p></div><a href="Comprehensive%20Design%20Audit.md#fresh-progression-trace-and-method">Full report ↗</a></div>
+            <div class="chart-controls" role="group" aria-label="Chart series">
+              <label><input type="checkbox" data-series="tap" checked> <span style="color:var(--teal)">●</span> Three manual taps/s</label>
+              <label><input type="checkbox" data-series="first" checked> <span style="color:var(--gold)">●</span> First family</label>
+              <label><input type="checkbox" data-series="last" checked> <span style="color:var(--coral)">●</span> Last family</label>
+            </div>
+            <svg id="shareChart" viewBox="0 0 680 310" role="img" aria-label="Logarithmic line chart of tap rate, first family share, and last family share at five scripted-run checkpoints"></svg>
+            <p class="chart-caption">Denominator: normal product ₹/s. The tap series assumes three manual taps every second and excludes skill/ad effects; it is not actual player tap earnings. Last family has no value at 5:00 because it is not yet owned.</p>
+            <details class="data-details"><summary>Show exact checkpoint values</summary><div class="table-wrap"><table><thead><tr><th>Time</th><th>Families</th><th>Upgrades</th><th>Three taps/s</th><th>First family</th><th>Last family</th></tr></thead><tbody><tr><td>5:00</td><td>2</td><td>5/96</td><td>35.94%</td><td>51.61%</td><td>Not owned</td></tr><tr><td>7:31</td><td>8</td><td>44/96</td><td>0.00225%</td><td>0.09175%</td><td>28.23%</td></tr><tr><td>10:00</td><td>8</td><td>79/96</td><td>0.000006324%</td><td>0.001135%</td><td>66.41%</td></tr><tr><td>30:00</td><td>8</td><td>87/96</td><td>0.000002163%</td><td>0.001364%</td><td>82.47%</td></tr><tr><td>46:26</td><td>8</td><td>87/96</td><td>0.000002051%</td><td>0.001328%</td><td>82.76%</td></tr></tbody></table></div></details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="issues">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">03 / Full problem register</div><h2>Explore all 29 audited findings</h2><p>Filter by priority, system, or evidence. Each card points to the detailed audit and offers a concrete next response.</p></div><a class="text-link" href="Comprehensive%20Design%20Audit.md#problem-register">Read full register ↗</a></div>
+        <div class="findings-intro">
+          <div class="finding-feature"><div class="number">Priority 01 / Products</div><h3>Old families lose a job</h3><p>The first family is 0.001328% of normal product income at reset in the traced policy. Self-only milestones do not create a portfolio role. <a href="Comprehensive%20Design%20Audit.md#a-pacing-purchases-and-products">Read finding ↗</a></p></div>
+          <div class="finding-feature"><div class="number">Priority 02 / Active play</div><h3>Tapping has a separate ceiling</h3><p>The tap formula misses the multiplicative product layers, and Helping Hands inherits the late-run weakness. <a href="Comprehensive%20Design%20Audit.md#b-tapping-and-active-skills">Read finding ↗</a></p></div>
+          <div class="finding-feature"><div class="number">Priority 03 / Reset</div><h3>Prestige is useful but opaque</h3><p>Legacy can accelerate the next run, yet whole-shop and tap options sit below eight family perks and there is no next-run forecast. <a href="Comprehensive%20Design%20Audit.md#c-prestige-and-permanent-progression">Read finding ↗</a></p></div>
+        </div>
+        <div class="evidence-legend" aria-label="Evidence definitions"><span>Confirmed rule: read from code or catalog</span><span>Measured policy: scripted simulator result</span><span>Observed UI: current screen or screen code</span><span>Hypothesis: effect still needs player testing</span></div>
+        <div class="toolbar" role="search">
+          <div class="field search"><label for="issueSearch">Search findings</label><input id="issueSearch" type="search" placeholder="Try prestige, artwork, upgrade, offline…" autocomplete="off"></div>
+          <div class="field"><label for="priorityFilter">Priority</label><select id="priorityFilter"><option value="all">All priorities</option><option value="P0">P0 · failing target / evidence</option><option value="P1">P1 · core value</option><option value="P2">P2 · clarity / depth</option><option value="P3">P3 · investigate</option></select></div>
+          <div class="field"><label for="categoryFilter">System</label><select id="categoryFilter"><option value="all">All systems</option><option value="Products">Pacing & products</option><option value="Active">Tapping & skills</option><option value="Prestige">Prestige & Legacy</option><option value="Experience">Teaching & return play</option></select></div>
+          <div class="field"><label for="evidenceFilter">Evidence</label><select id="evidenceFilter"><option value="all">Any evidence</option><option value="Measured policy">Measured policy</option><option value="Confirmed rule">Confirmed rule</option><option value="Observed UI">Observed UI</option></select></div>
+          <button class="filter-reset" id="resetFilters" type="button">Reset filters</button>
+        </div>
+        <p id="resultCount" class="result-count" aria-live="polite"></p>
+        <div id="issueGrid" class="issue-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">04 / Proposed experiments</div><h2>Decide what to test next</h2><p>These condensed stages are design proposals, not implemented features. Start with reliable measurement and clearer choices before coupling new economy rules.</p></div><a class="text-link" href="Design%20Recovery%20Roadmap.md">Read full roadmap ↗</a></div>
+        <div class="roadmap">
+          <div class="roadmap-steps" role="tablist" aria-label="Roadmap stages"><button type="button" role="tab" id="tab-0" aria-controls="roadmapDisplay" aria-selected="true" data-step="0"><span class="step-num">01 · Baseline</span>Restore trustworthy evidence</button><button type="button" role="tab" id="tab-1" aria-controls="roadmapDisplay" aria-selected="false" data-step="1" tabindex="-1"><span class="step-num">02 · Clarity</span>Reveal real choices</button><button type="button" role="tab" id="tab-2" aria-controls="roadmapDisplay" aria-selected="false" data-step="2" tabindex="-1"><span class="step-num">03 · Economy</span>Prototype separate variants</button><button type="button" role="tab" id="tab-3" aria-controls="roadmapDisplay" aria-selected="false" data-step="3" tabindex="-1"><span class="step-num">04 · Validation</span>Test combined effects with people</button><button type="button" role="tab" id="tab-4" aria-controls="roadmapDisplay" aria-selected="false" data-step="4" tabindex="-1"><span class="step-num">05 · Long tail</span>Add depth after the loop works</button></div>
+          <div class="roadmap-display" id="roadmapDisplay" role="tabpanel" aria-labelledby="tab-0" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">05 / External evidence</div><h2>Patterns to adapt, not copy</h2><p>Developer documentation shows possible mechanic structures; academic work helps frame questions and measurement. Neither supplies a ready-made Rocket Raja multiplier.</p></div><a class="text-link" href="Incremental%20Game%20Benchmarks.md">Read full benchmarks ↗</a></div>
+        <div class="reference-strip">
+          <div><div class="eyebrow">Original reference game</div><h3>Tap Tycoon</h3><p>Game Hive’s official pages confirm the tap → business → country competition loop. The more detailed mechanics here come from player guides and spreadsheets documenting roughly 2015–2017 builds; they are <strong>historical observations</strong>, not a verified current balance table. <a href="Tap%20Tycoon%20Design%20Breakdown.md#1-evidence-method-and-limits">Read evidence limits ↗</a></p></div>
+          <ul><li><strong>Old businesses return</strong>Historical all-business milestones and repeated Restaurant upgrades gave a reason to revisit the opener. <a href="Comparison%20and%20Recommendations.md#1-keep-starting-products-relevant">Compare ↗</a></li><li><strong>Tap and business connect</strong>A historical Transforming account describes a business-profit contribution to taps; the exact formula is unverified. <a href="Comparison%20and%20Recommendations.md#2-make-tapping-worth-doing-beyond-the-opening">Compare ↗</a></li><li><strong>Resets connect to a larger goal</strong>Official listings describe country competition, cards, and groups alongside prestige systems. <a href="Comparison%20and%20Recommendations.md#3-give-prestige-a-stronger-payoff-and-destination">Compare ↗</a></li></ul>
+        </div>
+        <div class="research-grid">
+          <article class="research-card"><div class="kicker">Old products</div><h3>AdVenture Capitalist</h3><p>Its documented cross-business Unlocks make an older business affect another business’s income. Test a visible portfolio link, not its exact multipliers.</p><a href="https://screenzilla.helpshift.com/hc/en/5-adventure-capitalist/faq/506-unlocks-have-incorrect-descriptions/" target="_blank" rel="noopener noreferrer">Developer support ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#1-adventure-capitalist-make-old-businesses-affect-the-portfolio">Full comparison ↗</a></article>
+          <article class="research-card"><div class="kicker">Reset clarity</div><h3>Tap Titans 2</h3><p>Its official prestige help explains the reset, persistent Artifacts, and the next starting stage. Rocket Raja can preview the next run more concretely.</p><a href="https://gamehive.helpshift.com/hc/en/3-tap-titans-2/faq/75-should-i-prestige-when/" target="_blank" rel="noopener noreferrer">Developer support ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#2-tap-titans-2-make-prestige-a-visible-new-run-then-shorten-the-repeat">Full comparison ↗</a></article>
+          <article class="research-card"><div class="kicker">Reset cost</div><h3>Idle Miner Tycoon</h3><p>Prestige discloses the reset cost and preserved resources. Parallel objectives create progress beyond one mine’s raw income.</p><a href="https://kolibri-games.helpshift.com/hc/en/3-idle-miner-tycoon/faq/48-how-does-the-prestige-system-work/" target="_blank" rel="noopener noreferrer">Developer support ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#3-idle-miner-tycoon-disclose-reset-cost-and-preserve-parallel-progress">Full comparison ↗</a></article>
+          <article class="research-card"><div class="kicker">Play styles</div><h3>Realm Grinder</h3><p>Developer-described factions reward different tapping and structure strategies. A small post-prestige specialization could change actual decisions.</p><a href="https://store.steampowered.com/app/610080/Realm_Grinder/" target="_blank" rel="noopener noreferrer">Developer description ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#4-realm-grinder-make-active-and-passive-paths-different-choices">Full comparison ↗</a></article>
+          <article class="research-card"><div class="kicker">Waiting incentive</div><h3>Cell to Singularity</h3><p>A documented 2026 balance change made an active upgrade valuable against waiting, while reducing related multipliers to control power.</p><a href="https://steamcommunity.com/games/977400/announcements/detail/686380477674684636" target="_blank" rel="noopener noreferrer">Developer update ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#5-cell-to-singularity-actively-fix-the-incentive-to-wait">Full comparison ↗</a></article>
+          <article class="research-card"><div class="kicker">Old generators</div><h3>Cookie Clicker</h3><p>Current achievements reward existing buildings. A 2023 developer note says future minigames were planned for them; that plan is not evidence they shipped.</p><a href="https://steamcommunity.com/games/1454400/announcements/detail/3716076292770968956" target="_blank" rel="noopener noreferrer">Developer update ↗</a> · <a href="Incremental%20Game%20Benchmarks.md#6-cookie-clicker-add-jobs-to-familiar-generators-before-adding-more">Full comparison ↗</a></article>
+        </div>
+        <div class="panel" style="margin-top:18px">
+          <div class="panel-head"><div><h3>Nine papers, nine different lenses</h3><p>Click through for the primary study; the Markdown review records methods, populations, findings, and transfer limits.</p></div><a href="Research%20Paper%20Review.md#evidence-map">Full paper review ↗</a></div>
+          <ul class="paper-list">
+            <li><strong>Idle-game mechanics:</strong> Alharthi et al., 66-game taxonomy. <a href="https://doi.org/10.1145/3173574.3174195" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Reset and planning:</strong> Alharthi et al., <i>Kittens</i> close reading. <a href="https://doi.org/10.1184/R1/6686957" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Developer intent:</strong> Spiel et al., six idle-game developer interviews. <a href="https://doi.org/10.1145/3311350.3347180" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Player reports:</strong> Hwang, small idle-game mixed-methods study. <a href="https://escholarship.org/uc/item/0b07v51w" target="_blank" rel="noopener noreferrer">Thesis ↗</a></li>
+            <li><strong>Engagement dimensions:</strong> Cutting et al., 1,972 <i>Neko Atsume</i> respondents. <a href="https://doi.org/10.1016/j.ijhcs.2018.09.006" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Waiting:</strong> Tepponen et al., literature review and 16 exploratory responses. <a href="https://doi.org/10.1145/3748613" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Motivation:</strong> Ryan et al., competence and autonomy across four game studies. <a href="https://doi.org/10.1007/s11031-006-9051-8" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Visible goals:</strong> Kivetz et al., goal-gradient field and lab studies. <a href="https://doi.org/10.1509/jmkr.43.1.39" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+            <li><strong>Economy simulation:</strong> Rupp &amp; Eckert, evolutionary search case study. <a href="https://arxiv.org/pdf/2404.18574" target="_blank" rel="noopener noreferrer">Paper ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="methods">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">06 / Evidence boundaries</div><h2>What still needs real players</h2><p>Use this dashboard to choose investigations, not to declare retention or fun solved.</p></div><a class="text-link" href="Comprehensive%20Design%20Audit.md#what-this-audit-cannot-establish">Read full limitations ↗</a></div>
+        <div class="method-grid">
+          <div class="panel"><h3>Simulated policy ≠ average player</h3><p>The 46:26 run assumes relentless three-tap input and automated purchases. Low-tap, check-in, offline, and sponsor policies may follow different paths. <a href="Design%20Recovery%20Roadmap.md#1-establish-a-trustworthy-baseline-before-changing-values">Measurement plan ↗</a></p></div>
+          <div class="panel"><h3>Screen evidence ≠ comprehension</h3><p>Code and desktop captures show what is available or hidden, but only uncoached sessions can establish what players notice, understand, or prefer. <a href="Design%20Recovery%20Roadmap.md#5-playtest-and-decision-sheet">Playtest sheet ↗</a></p></div>
+          <div class="panel"><h3>Precedent ≠ causal proof</h3><p>Research and competitor mechanics suggest hypotheses. No reviewed paper gives a universal tap share, product distribution, prestige time, or Rocket Raja retention effect. <a href="Research%20Paper%20Review.md#what-these-papers-do-not-answer">Research limits ↗</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="shell">
+        <div class="section-head"><div><div class="eyebrow">07 / Source library</div><h2>Open the underlying Markdown</h2><p>Every view above links to its evidence. These reports contain the formulas, code references, source qualifications, and experiment details.</p></div></div>
+        <div class="source-grid">
+          <a class="source-row" href="Comprehensive%20Design%20Audit.md"><strong>Comprehensive Design Audit ↗</strong><span>All 29 findings, evidence classes, formulas, UI review, and limitations.</span></a>
+          <a class="source-row" href="Design%20Recovery%20Roadmap.md"><strong>Design Recovery Roadmap ↗</strong><span>Baseline, UI clarity, separate prototypes, combined tests, save constraints.</span></a>
+          <a class="source-row" href="Research%20Paper%20Review.md"><strong>Research Paper Review ↗</strong><span>Nine primary studies with methods, findings, and transfer limits.</span></a>
+          <a class="source-row" href="Incremental%20Game%20Benchmarks.md"><strong>Incremental Game Benchmarks ↗</strong><span>Six games, developer sources, transfer opportunities, and failure modes.</span></a>
+          <a class="source-row" href="Rocket%20Raja%20Economy%20Audit.md"><strong>Rocket Raja Economy Audit ↗</strong><span>Current formulas, catalog, milestones, tap, prestige, and balance.</span></a>
+          <a class="source-row" href="Comparison%20and%20Recommendations.md"><strong>Tap Tycoon Comparison ↗</strong><span>Comparative design analysis and original recommendations.</span></a>
+          <a class="source-row" href="Balance%20Experiment%20Plan.md"><strong>Balance Experiment Plan ↗</strong><span>Initial portfolio, tap, and prestige prototype inputs.</span></a>
+          <a class="source-row" href="Research%20Sources.md"><strong>Research Sources ↗</strong><span>Source register, attribution, and confidence notes.</span></a>
+          <a class="source-row" href="Tap%20Tycoon%20Design%20Breakdown.md"><strong>Tap Tycoon Design Breakdown ↗</strong><span>Reference game's loop, public evidence, and historical-source caveats.</span></a>
+          <a class="source-row" href="README.md"><strong>Game Design Index ↗</strong><span>Overview and reading order for the full report set.</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="shell"><span>Rocket Raja · Game design research · 30 September 2026</span><span>Self-contained HTML · Works offline from this folder · No analytics or remote runtime</span></div></footer>
+  <script>
+    (() => {
+      'use strict';
+      const audit = 'Comprehensive%20Design%20Audit.md';
+      const anchors = { Products:'#a-pacing-purchases-and-products', Active:'#b-tapping-and-active-skills', Prestige:'#c-prestige-and-permanent-progression', Experience:'#d-teaching-return-play-and-evidence-gaps' };
+      const issues = [
+        {id:'A1',p:'P0',c:'Products',e:['Measured policy'],t:'First prestige misses the documented pacing band',f:'46:26 in the current active-policy simulator versus the checked-in 20–30 minute first-run bound; second run is 12:36 versus 5–10 minutes.',a:'Version the catalog and policy trace; compare multiple policies before retuning the gate.'},
+        {id:'A2',p:'P1',c:'Products',e:['Measured policy'],t:'A long stretch follows the last family unlock',f:'All eight families are owned at 7:31, leaving 38:55 before prestige. No cash upgrade is purchased in the final 19:56.',a:'Test a mid-run goal, useful new decision, and/or a shorter gap; log time between meaningful events.'},
+        {id:'A3',p:'P1',c:'Products',e:['Confirmed rule','Measured policy'],t:'Starter families lose direct economic share',f:'Each next family starts at 8× the previous cost and income; self-only milestones leave the first family at 0.001328% of normal income by reset in the trace.',a:'Compare visible cross-family and portfolio milestones using total marginal return, while retaining a strong frontier family.'},
+        {id:'A4',p:'P1',c:'Products',e:['Confirmed rule'],t:'Upgrade landmark labels do not gate purchases',f:'Non-skill requiredLevel fields are not enforced, and product upgrades can be purchased before the related product is owned.',a:'Decide whether to enforce true unlocks; otherwise label pre-buys as applying when owned and preview future effects.'},
+        {id:'A5',p:'P1',c:'Products',e:['Confirmed rule','Observed UI'],t:'The cheapest-ten list hides upgrade choices',f:'Player displays only ten cheapest remaining upgrades although the engine accepts any affordable unlocked entry; Buy All purchases affordable entries cheapest first.',a:'Show all available upgrades with filters, individual effects, and an explicit Buy All summary.'},
+        {id:'A6',p:'P1',c:'Products',e:['Confirmed rule','Observed UI'],t:'Visual tiers do not swap product or stall art',f:'VisualTier rises at level 1/25/50/100, but the current imported Home binds one sprite per product and one stall backdrop; tiers pulse the same art.',a:'Implement and verify distinct tier art, or revise the display-tier promise to describe the feedback actually delivered.'},
+        {id:'A6b',p:'P2',c:'Products',e:['Confirmed rule'],t:'High levels have few authored beats',f:'Priced profit upgrades stop at the level-250 landmark while numeric levels can continue to 100,000; self-milestones recur every hundred.',a:'Add a small number of later mechanical or visual beats where playtests reveal a gap.'},
+        {id:'A7',p:'P2',c:'Products',e:['Observed UI'],t:'Tall product rows slow comparison',f:'The current desktop capture exposes roughly two product rows inside the constrained Products panel; device capacity varies.',a:'Test a compact summary view or pinned next-useful-purchase strip on smaller screens.'},
+        {id:'A8',p:'P3',c:'Products',e:['Confirmed rule'],t:'Bulk-buy mode can impede the first post-reset buy',f:'The ×1/×10/×100/MAX setting survives prestige; fixed batches require the whole batch to be affordable.',a:'Observe whether this confuses players; consider resetting to ×1 or buying the affordable portion with explicit quantity.'},
+        {id:'B1',p:'P1',c:'Active',e:['Confirmed rule','Measured policy'],t:'Tap income decouples from the product economy',f:'Tap payout receives none of the main product multipliers. Three manual taps/s fall from 35.94% of normal product income at 5:00 to 0.000002051% at prestige.',a:'Prototype a bounded link to normal shop output with visible payoff and a viable low-tap path.'},
+        {id:'B2',p:'P1',c:'Active',e:['Confirmed rule','Measured policy'],t:'Tap levels lose investment value',f:'Each level adds a fixed 1.4 before multipliers while the next cost rises 17%; the scripted policy stops buying tap levels at 60.',a:'Show marginal ₹/tap and active payback; retune only after seeing real tap use.'},
+        {id:'B3',p:'P1',c:'Active',e:['Confirmed rule'],t:'Skills have weak late-run interaction',f:'Helping Hands uses the weak tap payout; Festival Rush boosts products, while Bulk Order grants normal sales without Rush interaction.',a:'After tap scaling is repaired, test one visible capped skill combo and measure actual use.'},
+        {id:'B4',p:'P2',c:'Active',e:['Observed UI'],t:'Home keeps saying “Tap to earn” when taps fade',f:'The high-income Home hint does not respond to the current tap/passive ratio.',a:'Make the hint contextual to the next useful action or an active tap burst.'},
+        {id:'B5',p:'P3',c:'Active',e:['Confirmed rule'],t:'The active simulator policy is not a player model',f:'It makes three manual taps every second for a 46-minute run and automatically uses ready skills.',a:'Add low-tap, occasional-return, and offline policies; observe comfortable human cadence.'},
+        {id:'C1',p:'P1',c:'Prestige',e:['Confirmed rule','Observed UI'],t:'First Legacy choices are ordered by family, not whole-shop effect',f:'Five reputation can be earned at first reset, but eight family perks precede global product and tap perks without a matched-state income preview.',a:'Group by effect and preview early and late next-run outcomes for each affordable perk.'},
+        {id:'C2',p:'P1',c:'Prestige',e:['Confirmed rule','Measured policy'],t:'Prestige repeats the same action sequence',f:'Legacy can shorten the second simulated run to 12:36, but the reset unlocks no new action, family, or permanent appearance.',a:'After clear reset preview, test one persistent choice that changes a decision rather than only a multiplier.'},
+        {id:'C3',p:'P1',c:'Prestige',e:['Confirmed rule','Observed UI'],t:'The next reputation point is invisible',f:'Reward is floor(5 × √(eligible/threshold)): six points need 1.44× threshold and ten need 4×. UI shows current payout, not the next breakpoint.',a:'Show the next-point requirement and labeled reset-now versus push estimate.'},
+        {id:'C4',p:'P2',c:'Prestige',e:['Confirmed rule'],t:'Fixed Legacy tree eventually caps its spend',f:'All 60 Legacy ranks cost 434 reputation total; no other spend route exists. How many players approach this cap is unknown.',a:'Instrument cap approach before adding a late reputation sink.'},
+        {id:'C5',p:'P2',c:'Prestige',e:['Observed UI'],t:'Prestige uses inconsistent number suffixes',f:'The gate is shown as ₹170Q while eligible earnings use ₹170aa for the same magnitude.',a:'Use one amount formatter and show progress toward the current and next reward.'},
+        {id:'C6',p:'P2',c:'Prestige',e:['Observed UI'],t:'Ready prestige is easy to miss on Home',f:'Home briefly announces a ready reset; the persistent entry point is on Player.',a:'Keep a ready indicator until the prestige panel is opened, then test comprehension.'},
+        {id:'C7',p:'P3',c:'Prestige',e:['Confirmed rule'],t:'Contextual Legacy perks look equally priced',f:'Offline-cap and cooldown first ranks cost the same point as ×2 product/tap ranks, though value depends on absences or repeated skills.',a:'Explain use cases and estimate benefits for a player’s pattern before price changes.'},
+        {id:'D1',p:'P1',c:'Experience',e:['Confirmed rule','Observed UI'],t:'Onboarding state does not teach a sequence',f:'An onboarding flag changes, but the game does not read it for progressive guidance; locked Home skills cannot reveal requirements there.',a:'Test short contextual teaching at first product, first skill, and prestige; reveal locked skill paths on touch.'},
+        {id:'D2',p:'P2',c:'Experience',e:['Confirmed rule'],t:'Two prompts precede the first tap',f:'Account choice and an optional store-name dialog appear before first earning.',a:'Observe time to first reward and consider deferring naming until after it.'},
+        {id:'D3',p:'P2',c:'Experience',e:['Observed UI'],t:'Offline ad failure leaves conflicting copy',f:'After a failed or closed offline ad, the panel still invites watching while its retry button is disabled.',a:'Explain the one-attempt rule or permit retry after provider lifecycle validation.'},
+        {id:'D4',p:'P2',c:'Experience',e:['Confirmed rule'],t:'Sponsor cash and prestige eligibility differ',f:'A renewable five-minute sponsor boosts product cash, but bonus cash is excluded from eligible prestige earnings.',a:'State the eligibility rule and measure sponsor-assisted versus no-ad runs separately.'},
+        {id:'D5',p:'P2',c:'Experience',e:['Confirmed rule'],t:'Signed-in return can pause play',f:'Signed-in play pauses when account connection or acknowledgment is unavailable; the incidence is not known.',a:'Measure affected returns and test a clear recovery path that preserves save ownership.'},
+        {id:'D6',p:'P0',c:'Experience',e:['Confirmed rule'],t:'Saved balance evidence is stale and human tests remain open',f:'Checked-in simulation output reports older 24:35 / 9:18 / 5:55 timings; the unmodified current first-run assertion fails. Human onboarding and prestige tests are outstanding.',a:'Version simulation results with catalog and code identity; add internal design events and uncoached sessions.'},
+        {id:'D7',p:'P3',c:'Experience',e:['Confirmed rule'],t:'No secondary run objective exists',f:'The audited build has no quests, daily/weekly goals, collection, achievements, or social comparison.',a:'After core pacing improves, test a small local goal rather than a broad event system.'},
+        {id:'D8',p:'P2',c:'Experience',e:['Confirmed rule'],t:'Informational dialogs pause production silently',f:'Product detail, skills guide, and statistics dialogs pause GameEngine.Advance; skipped time is not credited when they close.',a:'Keep production running or disclose the pause, then verify pause/resume accounting.'}
+      ];
+      const $ = (selector) => document.querySelector(selector);
+      const grid = $('#issueGrid');
+      const search = $('#issueSearch');
+      const priority = $('#priorityFilter');
+      const category = $('#categoryFilter');
+      const evidence = $('#evidenceFilter');
+      function renderIssues() {
+        const q = search.value.trim().toLocaleLowerCase();
+        const shown = issues.filter(i => (priority.value === 'all' || i.p === priority.value) && (category.value === 'all' || i.c === category.value) && (evidence.value === 'all' || i.e.includes(evidence.value)) && (!q || [i.id,i.p,i.c,i.t,i.f,i.a,...i.e].join(' ').toLocaleLowerCase().includes(q)));
+        $('#resultCount').textContent = `${shown.length} of ${issues.length} findings shown`;
+        grid.replaceChildren();
+        if (!shown.length) { const empty = document.createElement('p'); empty.className='empty'; empty.textContent='No findings match these filters. Try a broader term or reset the filters.'; grid.append(empty); return; }
+        const frag = document.createDocumentFragment();
+        for (const i of shown) {
+          const card = document.createElement('article'); card.className='issue';
+          const top = document.createElement('div'); top.className='issue-top';
+          const id=document.createElement('span'); id.className='issue-id'; id.textContent=i.id; top.append(id);
+          const p=document.createElement('span'); p.className=`badge ${i.p.toLowerCase()}`; p.textContent=i.p; top.append(p);
+          const system=document.createElement('span'); system.className='badge'; system.textContent=i.c; top.append(system);
+          for (const ev of i.e) { const el=document.createElement('span'); el.className='badge'; el.textContent=ev; top.append(el); }
+          const title=document.createElement('h3'); title.textContent=i.t;
+          const fact=document.createElement('p'); fact.textContent=i.f;
+          const link=document.createElement('a'); link.className='read'; link.href=audit+anchors[i.c]; link.textContent='Read full finding ↗';
+          const detail=document.createElement('details'); const summary=document.createElement('summary'); summary.textContent='Proposed response'; const action=document.createElement('p'); action.textContent=i.a; detail.append(summary,action);
+          card.append(top,title,fact,link,detail); frag.append(card);
+        }
+        grid.append(frag);
+      }
+      for (const control of [search,priority,category,evidence]) control.addEventListener(control === search ? 'input' : 'change',renderIssues);
+      $('#resetFilters').addEventListener('click',() => { search.value=''; priority.value='all'; category.value='all'; evidence.value='all'; renderIssues(); search.focus(); });
+      renderIssues();
+
+      const phases = [
+        {name:'Start → all eight families · 0:00–7:31',body:'The newest family arrives early: by 7:31 the policy owns all eight, has bought 44 of 96 run upgrades, and its three-tap rate has already fallen to 0.00225% of normal product income.'},
+        {name:'All families → last bought upgrade · 7:31–26:30',body:'The trace buys the remaining purchased upgrades during this interval, reaching 87 of 96. Families and levels still grow, but no new family enters after 7:31.'},
+        {name:'Last bought upgrade → prestige · 26:30–46:26',body:'For 19:56 the policy buys no further authored cash upgrade. Product levels continue and nine expensive upgrades remain; first prestige becomes available at 46:26.'}
+      ];
+      function selectPhase(n) {
+        document.querySelectorAll('[data-phase]').forEach((b,j) => b.setAttribute('aria-pressed',String(j===n)));
+        const box=$('#phaseReadout'); box.replaceChildren();
+        const strong=document.createElement('strong'); strong.textContent=phases[n].name; const p=document.createElement('p'); p.textContent=phases[n].body; box.append(strong,p);
+      }
+      document.querySelectorAll('[data-phase]').forEach(b => b.addEventListener('click',() => selectPhase(Number(b.dataset.phase))));
+      selectPhase(0);
+
+      const trace = [
+        {time:300,label:'5:00',tap:35.94,first:51.61,last:null},
+        {time:451,label:'7:31',tap:.00225,first:.09175,last:28.23},
+        {time:600,label:'10:00',tap:.000006324,first:.001135,last:66.41},
+        {time:1800,label:'30:00',tap:.000002163,first:.001364,last:82.47},
+        {time:2786,label:'46:26',tap:.000002051,first:.001328,last:82.76}
+      ];
+      const series = {tap:{name:'Three taps/s',color:'#73e0cc'},first:{name:'First family',color:'#ffcb70'},last:{name:'Last family',color:'#ff8d87'}};
+      const svgNS='http://www.w3.org/2000/svg';
+      const svg=$('#shareChart');
+      function svgEl(tag,attrs={}) { const e=document.createElementNS(svgNS,tag); for(const [k,v] of Object.entries(attrs)) e.setAttribute(k,String(v)); return e; }
+      function drawChart() {
+        svg.replaceChildren();
+        const width=Math.max(280,Math.round(svg.getBoundingClientRect().width || svg.parentElement.clientWidth));
+        svg.setAttribute('viewBox',`0 0 ${width} 310`);
+        const narrow=width<440;
+        const left=narrow?88:76,right=width-(narrow?30:20),top=21,bottom=252;
+        const X=t => left+(t/2786)*(right-left);
+        const Y=v => top+((2-Math.log10(v))/8)*(bottom-top);
+        for (const [value,label] of [[100,'100%'],[1,'1%'],[.01,'0.01%'],[.0001,'0.0001%'],[.000001,'0.000001%']]) {
+          const y=Y(value);
+          svg.append(svgEl('line',{x1:left,y1:y,x2:right,y2:y,stroke:'#43506a','stroke-width':'1','stroke-dasharray':'3 5'}));
+          const t=svgEl('text',{x:left-9,y:y+4,'text-anchor':'end',fill:'#b6c3da','font-size':'12'}); t.textContent=label; svg.append(t);
+        }
+        for (const point of trace) {
+          const x=X(point.time);
+          svg.append(svgEl('line',{x1:x,y1:top,x2:x,y2:bottom,stroke:'#344159','stroke-width':'1'}));
+          if (!narrow || [300,1800,2786].includes(point.time)) { const t=svgEl('text',{x,y:bottom+20,'text-anchor':'middle',fill:'#b6c3da','font-size':'12'}); t.textContent=point.label; svg.append(t); }
+        }
+        for (const [key,meta] of Object.entries(series)) {
+          if (!document.querySelector(`[data-series="${key}"]`).checked) continue;
+          const points=trace.filter(p=>p[key]!==null).map(p=>[X(p.time),Y(p[key]),p]);
+          const path=svgEl('polyline',{points:points.map(([x,y])=>`${x},${y}`).join(' '),fill:'none',stroke:meta.color,'stroke-width':'3','stroke-linecap':'round','stroke-linejoin':'round'}); svg.append(path);
+          for(const [x,y,p] of points) { const dot=svgEl('circle',{cx:x,cy:y,r:5,fill:meta.color,stroke:'#0c1120','stroke-width':'2'}); const title=svgEl('title'); title.textContent=`${meta.name} at ${p.label}: ${p[key]}%`; dot.append(title); svg.append(dot); }
+        }
+        const label=svgEl('text',{x:(left+right)/2,y:302,'text-anchor':'middle',fill:'#8292ad','font-size':'12'}); label.textContent='Scripted run time'; svg.append(label);
+      }
+      document.querySelectorAll('[data-series]').forEach(box=>box.addEventListener('change',drawChart));
+      window.addEventListener('resize',drawChart);
+      drawChart();
+
+      const steps=[
+        {title:'Restore trustworthy evidence',desc:'The unmodified first-run simulator assertion fails and the saved report is older than current behavior. Establish a versioned baseline before touching balance numbers.',test:'Record commit, authored catalog hash, policy, and date. Compare active, low-tap, occasional-return, offline, no-ad, and sponsor-assisted paths; observe at least five uncoached first-prestige sessions for diagnosis.',risk:'A single optimized bot can make a broken first session look healthy, or the reverse.',href:'Design%20Recovery%20Roadmap.md#1-establish-a-trustworthy-baseline-before-changing-values'},
+        {title:'Reveal choices and explain rewards',desc:'Expose every available upgrade, show current → after-purchase output, organize Legacy by effect, and preview the next prestige point and retained reward. Make locked skill requirements and visual-tier claims truthful.',test:'In uncoached sessions, ask players to find the next useful purchase, explain a first Legacy choice, identify a locked skill path, and distinguish the prestige gate from eligible earnings.',risk:'More panels can overwhelm players if information is not grouped around a decision.',href:'Design%20Recovery%20Roadmap.md#2-repair-discoverability-and-reward-clarity'},
+        {title:'Prototype economy variants separately',desc:'Compare three old-family routes (portfolio milestone, directed supply link, later authored upgrade), three optional tap routes (flat link, mastery-scaled link, short burst), and prestige timing/choice alternatives.',test:'For every variant, report direct family share and marginal portfolio return, actual tap cash share and time saved, first three run times, reset-now versus push value, and low-tap accessibility.',risk:'Synergies, tap linkage, and Legacy multipliers compound. A fix to one rate can break the whole pacing curve or make one purchase path mandatory.',href:'Design%20Recovery%20Roadmap.md#3-prototype-economy-alternatives-separately'},
+        {title:'Validate combined rules and player meaning',desc:'Simulate combined proposals after individual tests, then repeat human sessions across first reset, the next five minutes, and offline returns. Keep authored content, save ID validation, export, and UI copy in sync.',test:'Require understandable new decisions across the current long interval, no invalid saves, no forced ad route, and a next run that feels meaningfully different. Treat target time and tap-share bands as provisional owner goals.',risk:'A faster first prestige alone can conceal weaker later choices or worse return play.',href:'Design%20Recovery%20Roadmap.md#5-playtest-and-decision-sheet'},
+        {title:'Add long-term depth only when needed',desc:'After players reach and understand the existing loop, consider a few later authored product beats, local rotating objectives, or a diminishing reputation sink. Each should answer an observed late-run problem.',test:'Measure whether players approach the 434-point Legacy cap, which goals they voluntarily pursue, and whether added systems create a new decision rather than another automatic checklist.',risk:'A large content layer can mask unresolved first-run pacing and overwhelm the present interface.',href:'Design%20Recovery%20Roadmap.md#recommended-work-order'}
+      ];
+      function selectStep(n,focus=false) {
+        document.querySelectorAll('[data-step]').forEach((tab,j)=>{ tab.setAttribute('aria-selected',String(j===n)); tab.tabIndex=j===n?0:-1; });
+        const panel=$('#roadmapDisplay'); panel.setAttribute('aria-labelledby',`tab-${n}`); panel.replaceChildren();
+        const tag=document.createElement('span'); tag.className='proposal-tag'; tag.textContent='Proposed, not shipped';
+        const title=document.createElement('h3'); title.textContent=steps[n].title;
+        const desc=document.createElement('p'); desc.textContent=steps[n].desc;
+        const dl=document.createElement('dl');
+        for (const [label,value] of [['Measure',steps[n].test],['Watch for',steps[n].risk]]) { const dt=document.createElement('dt');dt.textContent=label;const dd=document.createElement('dd');dd.textContent=value;dl.append(dt,dd); }
+        const a=document.createElement('a');a.href=steps[n].href;a.textContent='Read full roadmap step ↗';
+        panel.append(tag,title,desc,dl,a);
+        if(focus) document.querySelector(`[data-step="${n}"]`).focus();
+      }
+      document.querySelectorAll('[data-step]').forEach((tab,index)=>{
+        tab.addEventListener('click',()=>selectStep(index));
+        tab.addEventListener('keydown',ev=>{ if(ev.key==='ArrowDown'||ev.key==='ArrowRight'){ev.preventDefault();selectStep((index+1)%steps.length,true);} if(ev.key==='ArrowUp'||ev.key==='ArrowLeft'){ev.preventDefault();selectStep((index+steps.length-1)%steps.length,true);} if(ev.key==='Home'){ev.preventDefault();selectStep(0,true);} if(ev.key==='End'){ev.preventDefault();selectStep(steps.length-1,true);} });
+      });
+      selectStep(0);
+    })();
+  </script>
+</body>
+</html>
