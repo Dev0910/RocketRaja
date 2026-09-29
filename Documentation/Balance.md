@@ -1,5 +1,7 @@
 # Economy version 1.0.0
 
+> **30 September 2026 verification note:** The table below is the saved historical result in `EconomySimulation.json`, not a passing run of the current code. `dotnet run --project Tools/EconomyLab -- --catalog Documentation/ContentCatalog.json --simulate` currently throws `First-run pacing target failed` at `Program.cs:165`. A temporary diagnostic copy that logged instead of throwing measured active cycles of **46:26**, **12:36**, and **9:10** with the current exported catalog; first level 25 was **4:12** and all families **7:31**. The current first and second cycles exceed the asserted pacing ranges. See [the current economy audit](../Game%20Design/Rocket%20Raja%20Economy%20Audit.md#7-what-the-existing-simulator-shows-and-the-current-pacing-failure). The original simulator's assertions and economy data were not changed by this documentation update.
+
 These results are deterministic simulations of the implemented economy, without advertising. They are not human playtest results.
 
 | Active progression | Result | Target |
