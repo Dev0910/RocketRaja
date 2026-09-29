@@ -8,7 +8,15 @@ namespace RocketRaja
         GameController owner;
         float from, target, elapsed = 1;
         bool bound;
+        int interval = -1;
         public float Value => fill.anchorMax.x;
+        public void SetInterval(float value, int previousThreshold, GameController game)
+        {
+            bool changed = interval != previousThreshold;
+            interval = previousThreshold;
+            Set(value, game);
+            if (changed) Finish();
+        }
         public void Set(float value, GameController game, bool reveal = false)
         {
             owner = game; value = Mathf.Clamp01(value);

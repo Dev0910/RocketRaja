@@ -87,6 +87,7 @@ namespace RocketRaja
             if (motionStage == "ambient") { yield return HtmlAmbientChecks(); Finish(); yield break; }
             if (motionStage == "ui-bugs") { yield return UiBugChecks(); Finish(); yield break; }
             if (motionStage == "max-purchase") { yield return MaxPurchaseChecks(); Finish(); yield break; }
+            if (motionStage == "milestones") { yield return MilestoneChecks(); Finish(); yield break; }
 #endif
             var e = game.Engine;
             e.State.reducedMotion = true;

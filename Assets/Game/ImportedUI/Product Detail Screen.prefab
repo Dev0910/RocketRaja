@@ -693,7 +693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Display progression
+  m_text: Milestones
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -2657,7 +2657,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lv.1
+  m_text: Lv.25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -3678,7 +3678,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Level 25"
+  m_text: "Milestones \xB7 Level 25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -4415,7 +4415,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lv.250
+  m_text: Every 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -5006,7 +5006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lv.25
+  m_text: Lv.50
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}

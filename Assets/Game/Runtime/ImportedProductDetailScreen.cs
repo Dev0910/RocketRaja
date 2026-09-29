@@ -84,22 +84,20 @@ namespace RocketRaja
             subtitleLabel.text = definition.subtitle;
             levelLabel.text = level > 0 ? "Level " + level : "Not stocked";
             incomeLabel.text = "₹" + engine.ProductIncome(productIndex) + " / sec";
-            int next = 0;
-            foreach (int milestone in Catalog.VisualLevels)
-                if (milestone > level) { next = milestone; break; }
+            int next = ProductMilestones.Next(level);
             if (next > 0)
             {
-                nextLabel.text = "Next display · Level " + next;
+                nextLabel.text = level == 0 ? "Stock at Level 1" : "Milestones · Level " + next;
                 progressLabel.text = level + " / " + next + " levels";
-                progressTarget = Mathf.Clamp01(level / (float)next);
+                progressTarget = ProductMilestones.Progress(level);
             }
             else
             {
-                nextLabel.text = "Premium display";
-                progressLabel.text = "All display milestones reached";
+                nextLabel.text = "Max level";
+                progressLabel.text = "All milestones reached";
                 progressTarget = 1;
             }
-            progressMotion.Set(progressTarget, controller);
+            progressMotion.SetInterval(progressTarget, ProductMilestones.Previous(level), controller);
         }
 
         public void Close()

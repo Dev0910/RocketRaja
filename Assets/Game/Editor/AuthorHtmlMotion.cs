@@ -103,7 +103,7 @@ namespace RocketRaja.EditorTools
             var progress = Ensure<UiProgress>(fill.gameObject); var data = new SerializedObject(progress);
             data.FindProperty("fill").objectReferenceValue = fill; data.ApplyModifiedPropertiesWithoutUndo(); return progress;
         }
-        static void Meters(GameObject root)
+        public static void Meters(GameObject root)
         {
             var product = root.GetComponent<ImportedProductsScreen>();
             if (product != null)

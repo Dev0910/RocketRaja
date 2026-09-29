@@ -160,7 +160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -2658,7 +2658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -6989,7 +6989,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -9767,7 +9767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -11919,7 +11919,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -13557,7 +13557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
@@ -15033,7 +15033,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Next display \xB7 Lv.25"
+  m_text: "Milestones \xB7 Lv.25"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}
   m_sharedMaterial: {fileID: 2741957345004047726, guid: 3ce3ca8546168634f8fd9585d0278b5b, type: 2}

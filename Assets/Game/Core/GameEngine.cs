@@ -21,14 +21,13 @@ namespace RocketRaja.Core
         }
         void Touch(bool critical = false) { State.revision++; Changed?.Invoke(); if (critical) CriticalSave?.Invoke(); }
         public int SkillRank(int skill) => Data.upgrades.Count(x => x.effect == Effect.Skill && x.target == skill && State.upgrades.Contains(x.id));
-        public int VisualTier(int index) { int level = State.Level(index); return level >= 250 ? 4 : level >= 100 ? 3 : level >= 25 ? 2 : level > 0 ? 1 : 0; }
+        public int VisualTier(int index) => Catalog.VisualLevels.Count(level => State.Level(index) >= level);
         public int StallTier => State.OwnedProducts >= 8 ? 4 : State.OwnedProducts >= 6 ? 3 : State.OwnedProducts >= 3 ? 2 : State.OwnedProducts > 0 ? 1 : 0;
         double RunMultiplier(Effect effect, int target = -1) => Data.upgrades.Where(x => x.effect == effect && (target < 0 || x.target == target) && State.upgrades.Contains(x.id)).Aggregate(1d, (v, u) => v * u.multiplier);
         public Amount ProductIncome(int i, int extra = 0)
         {
             int n = State.Level(i) + extra; if (n == 0) return Amount.Zero;
-            int milestones = new[] { 10, 25, 50, 100, 175, 250, 500, 1000 }.Count(x => n >= x);
-            return new Amount(Data.products[i].income) * n * Math.Pow(2, milestones) * RunMultiplier(Effect.ProductProfit, i) * RunMultiplier(Effect.AllProfit) * Math.Pow(Data.legacy[i].valuePerRank, State.Legacy(i)) * Math.Pow(Data.legacy[9].valuePerRank, State.Legacy(9));
+            return new Amount(Data.products[i].income) * n * ProductMilestones.Multiplier(n) * RunMultiplier(Effect.ProductProfit, i) * RunMultiplier(Effect.AllProfit) * Math.Pow(Data.legacy[i].valuePerRank, State.Legacy(i)) * Math.Pow(Data.legacy[9].valuePerRank, State.Legacy(9));
         }
         public Amount NormalIncome => Enumerable.Range(0, 8).Aggregate(Amount.Zero, (a, i) => a + ProductIncome(i));
         public Amount TapIncome => new Amount(1 + State.tapLevel * 1.4) * RunMultiplier(Effect.TapProfit) * Math.Pow(Data.legacy[8].valuePerRank, State.Legacy(8));

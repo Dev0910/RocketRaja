@@ -114,7 +114,7 @@ namespace RocketRaja.EditorTools
                     Ink, TextAlignmentOptions.MidlineRight);
                 incomes[i] = Text(Stretch(row, "product-income-" + i, 213, 380, 68, 84), "₹36.4 / sec", 32,
                     Ink, TextAlignmentOptions.MidlineLeft, true);
-                milestones[i] = Text(Stretch(row, "product-next-" + i, 213, 380, 21, 145), "Next display · Lv.25", 27,
+                milestones[i] = Text(Stretch(row, "product-next-" + i, 213, 380, 21, 145), "Milestones · Lv.25", 27,
                     Muted, TextAlignmentOptions.MidlineLeft);
                 detailButtons[i] = InvisibleButton(Stretch(row, "detail-" + i, 10, 350, 10, 10));
                 purchaseButtons[i] = Button(Stretch(row, "purchase-" + i, 700, 18, 18, 18), Blue);
@@ -160,6 +160,7 @@ namespace RocketRaja.EditorTools
             Assign(serialized, "milestones", milestones);
             Assign(serialized, "purchaseLabels", priceLabels);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            AuthorHtmlMotion.Meters(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();

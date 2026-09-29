@@ -56,7 +56,7 @@ namespace RocketRaja.Core
         public SkillDef[] skills;
         public LegacyDef[] legacy;
         public static readonly string[] SkillNames = { "Festival Rush", "Helping Hands", "Bulk Order" };
-        public static readonly int[] VisualLevels = { 1, 25, 100, 250 };
+        public static readonly int[] VisualLevels = { 1, 25, 50, 100 };
         public static readonly string[] ProductIds = { "phuljhari", "anar", "chakri", "rockets", "small-crackers", "cracker-strings", "aerial-shots", "gift-boxes" };
         public static Catalog Create()
         {

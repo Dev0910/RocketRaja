@@ -94,12 +94,10 @@ namespace RocketRaja
                 names[i].text = engine.Data.products[i].name;
                 levels[i].text = level == 0 ? "Not owned" : "Level " + level;
                 incomes[i].text = "₹" + engine.ProductIncome(i) + " / sec";
-                int next = 0;
-                foreach (int mark in Catalog.VisualLevels)
-                    if (mark > level) { next = mark; break; }
-                displayProgress[i].Set(next == 0 ? 1 : level / (float)next, controller);
-                milestones[i].text = next == 0 ? "Premium display · Auto sales on" :
-                    level == 0 ? "Next display · Lv.1" : "Next display · Lv." + next;
+                int next = ProductMilestones.Next(level);
+                displayProgress[i].SetInterval(ProductMilestones.Progress(level), ProductMilestones.Previous(level), controller);
+                milestones[i].text = next == 0 ? "Max level" :
+                    level == 0 ? "Stock at Level 1" : "Milestones · Lv." + next;
                 var quote = engine.ProductQuote(i, buyMode);
                 bool blocked = i > 0 && state.Level(i - 1) == 0;
                 if (blocked) purchaseLabels[i].text = "Own " + engine.Data.products[i - 1].name;

@@ -26,7 +26,27 @@ if (!args.Contains("--simulate"))
     Check(h.ProductQuote(0, int.MaxValue).quantity == 100, "Buy Max boundary");
     Check(!h.BuyProduct(1, 1), "Products unlock in sequence");
     Check(h.BuyProduct(0, 100) && h.State.cash >= Amount.Zero, "Affordable bulk buy preserves non-negative cash");
-    foreach (var n in new[] { 0, 1, 25, 100, 250 }) { h.State.products[0].level = n; Check(h.VisualTier(0) == Array.IndexOf(new[] { 0, 1, 25, 100, 250 }, n), "Visual tier at " + n); }
+    foreach (var n in new[] { 0, 1, 25, 50, 100 }) { h.State.products[0].level = n; Check(h.VisualTier(0) == Array.IndexOf(new[] { 0, 1, 25, 50, 100 }, n), "Visual tier at " + n); }
+    Check(ProductMilestones.Progress(75) == .5f && ProductMilestones.Progress(100) == 0, "Interval progress resets at milestone");
+    Check(ProductMilestones.Next(0) == 1 && ProductMilestones.Progress(1) == 0 && ProductMilestones.Next(Catalog.MaxLevel) == 0 && ProductMilestones.Progress(Catalog.MaxLevel) == 1, "Stocking and maximum endpoints");
+    for (int product = 0; product < 8; product++)
+    {
+        var m = Fresh();
+        foreach (int level in new[] { 0, 1, 9, 10, 24, 25, 49, 50, 75, 99, 100, 174, 175, 199, 200, 249, 250, 299, 300, Catalog.MaxLevel })
+        {
+            m.State.products[product].level = level;
+            int boosts = Enumerable.Range(1, 1000).Count(x => x * 100 <= level) + (level >= 25 ? 1 : 0) + (level >= 50 ? 1 : 0);
+            Amount expected = new Amount(m.Data.products[product].income) * level * Amount.Pow10(boosts * Math.Log10(2));
+            Check(m.ProductIncome(product).Valid && Near(m.ProductIncome(product), expected), "Product " + product + " profit schedule at " + level);
+        }
+        m.State.cash = Amount.Pow10(6000);
+        m.State.products[product].level = 1;
+        if (product > 0) m.State.products[product - 1].level = 1;
+        Check(m.BuyProduct(product, 299) && ProductMilestones.BoostCount(m.State.Level(product)) == 5, "Bulk crosses every milestone once " + product);
+        m.State.upgrades.Add("tap-0");
+        var restored = new GameEngine(m.Data, Clone(m.State));
+        Check(restored.State.Level(product) == 300 && restored.State.upgrades.Contains("tap-0") && Near(restored.ProductIncome(product), m.ProductIncome(product)), "State roundtrip retains progress " + product);
+    }
     g = Fresh(); g.State.cash = 1e100; for (int i = 0; i < 8; i++) g.BuyProduct(i, 300); g.State.tapLevel = 100; g.BuyAll();
     Check(g.State.upgrades.Count == 96, "All 96 unlockables reachable and ordered");
     g.ActivateSkill(0); g.ActivateSkill(1); g.RewardAd("one", "sponsor");

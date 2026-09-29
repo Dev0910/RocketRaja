@@ -120,7 +120,7 @@ namespace RocketRaja.EditorTools
                 Muted, TextAlignmentOptions.MidlineLeft);
 
             var progress = FramedCard(content, "Next Display", 280);
-            var next = Text(Stretch(progress, "detail-next", 36, 30, 174, 27), "Next display · Level 25", 40,
+            var next = Text(Stretch(progress, "detail-next", 36, 30, 174, 27), "Milestones · Level 25", 40,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
             var track = Stretch(progress, "Progress Track", 38, 38, 88, 145);
             Image(track, Hex("E8E0CE"));
@@ -133,9 +133,9 @@ namespace RocketRaja.EditorTools
                 "13 / 25 levels", 32, Muted, TextAlignmentOptions.MidlineLeft);
 
             var steps = FramedCard(content, "Display Progression", 185);
-            Text(Stretch(steps, "Heading", 36, 25, 93, 18), "Display progression", 40,
+            Text(Stretch(steps, "Heading", 36, 25, 93, 18), "Milestones", 40,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            string[] labels = { "Lv.1", "Lv.25", "Lv.100", "Lv.250" };
+            string[] labels = { "Lv.25", "Lv.50", "Lv.100", "Every 100" };
             for (int i = 0; i < 4; i++)
             {
                 var rect = New("Milestone " + labels[i], steps).GetComponent<RectTransform>();
@@ -170,6 +170,7 @@ namespace RocketRaja.EditorTools
             for (int i = 0; i < sprites.Length; i++)
                 art.GetArrayElementAtIndex(i).objectReferenceValue = sprites[i];
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            AuthorHtmlMotion.Meters(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();
