@@ -52,9 +52,9 @@ namespace RocketRaja.EditorTools
             Image(Fill(root.transform, "DimBackdrop"), new Color(.035f, .07f, .13f, .76f), true);
             var safe = Fill(root.transform, "SafeArea");
             safe.gameObject.AddComponent<ImportedSafeArea>();
-            var dialog = Dialog(safe, "ProductDetailDialog", 1690);
+            var dialog = Dialog(safe, "ProductDetailDialog", 1250);
             var fit = dialog.gameObject.AddComponent<ImportedDialogFit>();
-            fit.SetPreferredHeight(1690);
+            fit.SetPreferredHeight(1250);
 
             var header = Top(dialog, "Header", 183);
             Image(header, IvoryColor);
@@ -119,8 +119,8 @@ namespace RocketRaja.EditorTools
             Text(Stretch(hero, "Income Caption", 340, 20, 83, 158), "Normal product income", 33,
                 Muted, TextAlignmentOptions.MidlineLeft);
 
-            var progress = FramedCard(content, "Next Display", 280);
-            var next = Text(Stretch(progress, "detail-next", 36, 30, 174, 27), "Milestones · Level 25", 40,
+            var progress = FramedCard(content, "Milestones", 280);
+            var next = Text(Stretch(progress, "detail-next", 36, 30, 174, 27), "Profit ×2 at Level 25", 40,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
             var track = Stretch(progress, "Progress Track", 38, 38, 88, 145);
             Image(track, Hex("E8E0CE"));
@@ -131,27 +131,6 @@ namespace RocketRaja.EditorTools
             Image(fill, Hex("255883"));
             var progressLabel = Text(Stretch(progress, "detail-progress-label", 36, 30, 14, 205),
                 "13 / 25 levels", 32, Muted, TextAlignmentOptions.MidlineLeft);
-
-            var steps = FramedCard(content, "Display Progression", 185);
-            Text(Stretch(steps, "Heading", 36, 25, 93, 18), "Milestones", 40,
-                Ink, TextAlignmentOptions.MidlineLeft, true);
-            string[] labels = { "Lv.25", "Lv.50", "Lv.100", "Every 100" };
-            for (int i = 0; i < 4; i++)
-            {
-                var rect = New("Milestone " + labels[i], steps).GetComponent<RectTransform>();
-                rect.anchorMin = new Vector2(i / 4f, 0);
-                rect.anchorMax = new Vector2((i + 1) / 4f, 0);
-                rect.offsetMin = new Vector2(26, 22);
-                rect.offsetMax = new Vector2(-10, 85);
-                Text(Fill(rect, "Label"), labels[i], 29, Ink, TextAlignmentOptions.MidlineLeft, true);
-            }
-
-            var sales = FramedCard(content, "Automatic Sales", 255);
-            Text(Stretch(sales, "Heading", 36, 25, 145, 19), "Automatic sales", 40,
-                Ink, TextAlignmentOptions.MidlineLeft, true);
-            Text(Stretch(sales, "Description", 36, 25, 24, 91),
-                "Products earn continuously. Your displays never run out.", 37,
-                Ink, TextAlignmentOptions.TopLeft);
 
             var presenter = root.AddComponent<ImportedProductDetailScreen>();
             var serialized = new SerializedObject(presenter);

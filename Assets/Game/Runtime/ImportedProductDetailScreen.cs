@@ -87,8 +87,8 @@ namespace RocketRaja
             int next = ProductMilestones.Next(level);
             if (next > 0)
             {
-                nextLabel.text = level == 0 ? "Stock at Level 1" : "Milestones · Level " + next;
-                progressLabel.text = level + " / " + next + " levels";
+                nextLabel.text = level == 0 ? "Stock at Level 1" : "Profit ×2 at Level " + next;
+                progressLabel.text = level == 0 ? "Profit ×2 at Level " + ProductMilestones.Next(1) : level + " / " + next + " levels";
                 progressTarget = ProductMilestones.Progress(level);
             }
             else

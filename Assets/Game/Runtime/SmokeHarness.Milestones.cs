@@ -29,6 +29,12 @@ namespace RocketRaja
                     {
                         state.products[product].level = level;
                         detail.Refresh(); game.ProductsScreen.Refresh();
+                        var labels = detail.GetComponentsInChildren<TMP_Text>(true);
+                        string expected = level == 0 ? "Stock at Level 1" : level == Catalog.MaxLevel ? "Max level" : "Profit ×2 at Level " + ProductMilestones.Next(level);
+                        Check(labels.Single(x => x.name == "detail-next").text == expected && labels.Single(x => x.name == "detail-name").text == game.Engine.Data.products[product].name, "Product-specific reward preview " + product + "/" + level);
+                        Check(!labels.Any(x => x.text.Contains("Automatic sales") || x.text.Contains("Display progression")), "Obsolete popup sections removed");
+                        if (level == 0 || level == Catalog.MaxLevel)
+                            Check(labels.Single(x => x.name == "detail-progress-label").text == (level == 0 ? "Profit ×2 at Level 25" : "All milestones reached"), "Unowned/completed reward " + product);
                         if (ProductMilestones.Progress(level) == 0 || level == Catalog.MaxLevel)
                             Check(Mathf.Approximately(fill.Value, ProductMilestones.Progress(level)), "Immediate interval reset product " + product + " level " + level + " reduced " + reduced);
                         if (ProductMilestones.Progress(level) > 0 && level < Catalog.MaxLevel)
