@@ -1,0 +1,10 @@
+PASS Main scene booted
+PASS Visitors use a saved clipped non-interactive native graphic
+PASS Keeper matches bottom pivot, .7-degree extremes and four-second HTML loop
+PASS Visitors match 16s/21s loops and second visitor nine-second offset
+PASS Ambient motion advances during normal play
+PASS Opening a modal freezes both ambient loops
+PASS Ambient loops resume after modal release
+CAPTURE 10-ambient 1080x2400
+PASS Reduced Motion hides visitors and restores the keeper's authored pose
+SMOKE SUCCEEDED

@@ -1,0 +1,3 @@
+# Built-in image_gen revision v2
+
+Edit image 1 Player reference with only these corrections from detailed review; keep its lower panel style, structure and all other content. Image 2 is actual existing Home HTML: copy its upper stall composition including settings TOP LEFT, cash, eight slots, shopkeeper bottom right and exact same painted navigation icons: Player shopkeeper, Products shelf, Legacy gold medal. Retain three labels and selected Player state. Upper scene persistent across all tabs, no character omission or rank header. Add clear top-right collapse chevron in Player title band. Show an opaque Scroll for more footer above navigation. Preserve portrait composition, Gouache Storybook painted textures, readable typography. Do not add any extra mechanics.

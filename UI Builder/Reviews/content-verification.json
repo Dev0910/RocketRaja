@@ -1,0 +1,11 @@
+{
+  "result": "exact match",
+  "source": "Assets/Resources/GameContent.asset",
+  "export": "Documentation/ContentCatalog.json",
+  "counts": {
+    "products": 8,
+    "upgrades": 96,
+    "skills": 3,
+    "legacy": 12
+  }
+}

@@ -1,0 +1,2 @@
+PASS Direct Main play redirects to Bootstrap before gameplay initialization
+PASS No guest save or account session loaded by the redirect test

@@ -1,0 +1,36 @@
+/* Gouache Storybook finish. Layout geometry and gameplay bindings remain in home.css/home.html. */
+:root{
+  --cream:#f8eed7;--ink:#173b47;--teal:#326b69;--maroon:#8c2937;
+  --gold:#edbc5a;--line:#c9aa76;
+  --paper:url('assets/gouache-paper.svg');
+}
+.dashboard{background-color:var(--cream);background-image:var(--paper);background-size:calc(180px * var(--scale));border-top-color:#c8943f}
+.card{background-color:#fbf2dd;background-image:var(--paper);background-size:calc(150px * var(--scale));border-color:#c5a16d;border-radius:calc(2px * var(--scale)) calc(4px * var(--scale)) calc(2px * var(--scale)) calc(3px * var(--scale));box-shadow:inset 0 0 calc(5px * var(--scale)) #b78a3926,0 calc(.6px * var(--scale)) #fff6dd}
+.milestone{border-color:#b8854d}.milestone small{color:#3c6860}
+.beveled-teal,.milestone-icon{background-color:#317877;background-image:var(--paper);background-size:calc(95px * var(--scale));border-color:#305c58;box-shadow:inset 0 0 0 calc(1px * var(--scale)) #9ac8b9,inset 0 0 calc(5px * var(--scale)) #163f4333,0 calc(1px * var(--scale)) calc(2px * var(--scale)) #35271044}
+.settings{border-radius:calc(5px * var(--scale)) calc(8px * var(--scale)) calc(6px * var(--scale)) calc(7px * var(--scale))}
+.cash{color:#f4cb77;text-shadow:0 calc(1px * var(--scale)) #604426,0 calc(2px * var(--scale)) calc(2px * var(--scale)) #19243988}
+.wallet>span{color:#fcf0cf}
+.shop-title{left:29%;width:42%;font-size:min(calc(15px * var(--scale)),4.1cqh);font-family:var(--font-sign);font-weight:700;letter-spacing:0;color:#ffedba;background:transparent;text-shadow:0 calc(.7px * var(--scale)) #592633}
+.product-name{background-color:#f5dfad;background-image:var(--paper);background-size:calc(80px * var(--scale));border-color:#b5874e;color:#39291c;box-shadow:inset 0 0 calc(2px * var(--scale)) #9e691c33}
+.product[data-owned="false"] .product-name{color:#705b3f}
+.counter-message{font-size:calc(9px * var(--scale));color:#f6d590;text-shadow:0 1px #684129}
+.tap-hint{background-color:#f4dfad;background-image:var(--paper);background-size:calc(95px * var(--scale));border-color:#b8854c;outline-color:#e7c183;color:#503521;border-radius:calc(10px * var(--scale)) calc(12px * var(--scale)) calc(9px * var(--scale)) calc(13px * var(--scale))}
+.skill-disc{background-color:#ac4a37;background-image:var(--paper);background-size:calc(65px * var(--scale));border-color:#ddb05b;box-shadow:0 0 0 calc(1px * var(--scale)) #966835,inset 0 0 0 calc(1px * var(--scale)) #f8df9d,inset 0 0 calc(5px * var(--scale)) #642c3444;border-radius:48% 52% 49% 51%}
+.hands .skill-disc{background-color:#3c8290;background-image:var(--paper)}.order .skill-disc{background-color:#826086;background-image:var(--paper)}
+.skill[data-skill-state="locked"] .skill-disc{background-color:#8d8876;background-image:var(--paper);border-color:#c5b18a;filter:saturate(.35)}
+.skill-status{color:#2b713d}.skill[data-skill-state="active"] .skill-status{color:#226d87}.skill[data-skill-state="cooldown"] .skill-status{color:#73507b}
+.sponsor{background-color:#d3e7d9;background-image:var(--paper);background-size:calc(180px * var(--scale));border-color:#689a87;border-radius:calc(3px * var(--scale)) calc(5px * var(--scale));box-shadow:inset 0 0 calc(4px * var(--scale)) #476b6222}
+.sponsor-decoration{opacity:.28}
+.navigation{background-color:#2d6969;background-image:var(--paper);background-size:calc(135px * var(--scale));border-top-color:#ca994c;box-shadow:inset 0 calc(1px * var(--scale)) #bfd0ae}
+.navigation button+button:before{background:#92b5a2;box-shadow:calc(1px * var(--scale)) 0 #214f50}
+.navigation strong{color:#fff3d5;text-shadow:0 1px #34534b}
+.navigation button:focus-visible,.skill:focus-visible{outline-color:#7d4a2b}
+.review-route>div{background-color:var(--cream);background-image:var(--paper)}
+.review-route button{background-color:#326b69}
+
+/* Cooldown cover starts full and clears clockwise from twelve o'clock. */
+.skill-disc{position:relative;isolation:isolate;overflow:hidden}
+.skill-disc::after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;display:none;background:conic-gradient(from 0deg,transparent 0deg var(--cooldown-cleared,0deg),rgba(65,68,71,.78) var(--cooldown-cleared,0deg) 360deg);z-index:1}
+.skill[data-skill-state="cooldown"] .skill-disc::after{display:block}
+

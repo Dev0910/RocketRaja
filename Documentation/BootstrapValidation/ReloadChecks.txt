@@ -1,0 +1,3 @@
+PASS Three serialized startup action buttons after reload
+PASS Both save summary cards survive reload
+Privacy card preferred height=310; text=Guests stay on this device. Google players sync progress and basic profile data to Firebase. One device plays at a time. Analytics and crash collection are off by default.

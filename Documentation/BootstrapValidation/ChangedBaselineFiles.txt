@@ -1,0 +1,8 @@
+Assets/Game/Runtime/Cloud/BootstrapController.cs
+Assets/Game/Runtime/Cloud/PlayerSessionHost.cs
+Assets/Game/Runtime/GameController.cs
+Assets/Game/Editor/BuildImportedSettings.cs
+Assets/Game/Editor/BuildImportedPrivacy.cs
+Assets/Game/ImportedUI/Settings Screen.prefab
+Assets/Game/ImportedUI/Privacy Screen.prefab
+ProjectSettings/EditorBuildSettings.asset

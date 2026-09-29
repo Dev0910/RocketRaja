@@ -1,0 +1,17 @@
+
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="androidx.credentials.playservices.CredentialProviderMetadataHolder" (Raw: "androidx.credentials.playservices.CredentialProviderMetadataHolder")
+              A: http://schemas.android.com/apk/res/android:enabled(0x0101000e)=true
+>                 A: http://schemas.android.com/apk/res/android:name(0x01010003)="androidx.credentials.CREDENTIAL_PROVIDER_KEY" (Raw: "androidx.credentials.CREDENTIAL_PROVIDER_KEY")
+>                 A: http://schemas.android.com/apk/res/android:value(0x01010024)="androidx.credentials.playservices.CredentialProviderPlayServicesImpl" (Raw: "androidx.credentials.playservices.CredentialProviderPlayServicesImpl")
+            E: activity (line=274)
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="androidx.credentials.playservices.controllers.identityauth.HiddenActivity" (Raw: "androidx.credentials.playservices.controllers.identityauth.HiddenActivity")
+              A: http://schemas.android.com/apk/res/android:enabled(0x0101000e)=true
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity" (Raw: "androidx.credentials.playservices.controllers.identitycredentials.IdentityCredentialApiHiddenActivity")
+              A: http://schemas.android.com/apk/res/android:enabled(0x0101000e)=true
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="firebase_analytics_collection_deactivated" (Raw: "firebase_analytics_collection_deactivated")
+              A: http://schemas.android.com/apk/res/android:value(0x01010024)=true
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="firebase_analytics_collection_enabled" (Raw: "firebase_analytics_collection_enabled")
+              A: http://schemas.android.com/apk/res/android:value(0x01010024)=false
+>             A: http://schemas.android.com/apk/res/android:name(0x01010003)="firebase_crashlytics_collection_enabled" (Raw: "firebase_crashlytics_collection_enabled")
+              A: http://schemas.android.com/apk/res/android:value(0x01010024)=false
+

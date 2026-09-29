@@ -1,0 +1,85 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "entry": "Player/player.html",
+      "state": "new",
+      "refs": [
+        "#icon-lock",
+        "#icon-lock",
+        "#icon-lock"
+      ],
+      "cooldownMasks": 0,
+      "status": "pass"
+    },
+    {
+      "entry": "Player/player.html",
+      "state": "ready",
+      "refs": [
+        "#icon-burst",
+        "#icon-hands",
+        "#icon-order"
+      ],
+      "cooldownMasks": 0,
+      "status": "pass"
+    },
+    {
+      "entry": "Player/player.html",
+      "state": "cooldown",
+      "refs": [
+        "#icon-burst",
+        "#icon-hands",
+        "#icon-order"
+      ],
+      "cooldownMasks": 3,
+      "status": "pass"
+    },
+    {
+      "entry": "Home/home.html",
+      "state": "new",
+      "refs": [
+        "#icon-lock",
+        "#icon-lock",
+        "#icon-lock"
+      ],
+      "cooldownMasks": 0,
+      "status": "pass"
+    },
+    {
+      "entry": "Home/home.html",
+      "state": "ready",
+      "refs": [
+        "#icon-burst",
+        "#icon-hands",
+        "#icon-order"
+      ],
+      "cooldownMasks": 0,
+      "status": "pass"
+    },
+    {
+      "entry": "Home/home.html",
+      "state": "cooldown",
+      "refs": [
+        "#icon-burst",
+        "#icon-hands",
+        "#icon-order"
+      ],
+      "cooldownMasks": 3,
+      "status": "pass"
+    },
+    {
+      "check": "Legacy timing perks",
+      "perks": [
+        {
+          "label": "After-hours business",
+          "icon": "#icon-clock"
+        },
+        {
+          "label": "Experienced team",
+          "icon": "#icon-cooldown"
+        }
+      ],
+      "status": "pass"
+    }
+  ]
+}

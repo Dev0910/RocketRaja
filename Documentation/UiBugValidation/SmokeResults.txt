@@ -1,0 +1,32 @@
+PASS Main scene booted
+PASS Home has no scroll input at (360, 540)
+PASS Entire fixed Home dashboard fits at (360, 540)
+PASS Cash popup starts at the actual pointer at (360, 540)
+PASS Cash popup is blue
+CAPTURE ui-fixed-home-360 360x540
+PASS Home has no scroll input at (450, 916)
+PASS Entire fixed Home dashboard fits at (450, 916)
+PASS Cash popup starts at the actual pointer at (450, 916)
+PASS Cash popup is blue
+CAPTURE ui-fixed-home-450 450x916
+PASS Products multiplier choices form one vertical column
+CAPTURE ui-quantity-Products 450x916
+PASS Products purchase initially affordable
+PASS Products purchase disables immediately when cash is spent
+PASS Products purchase animation preserves the disabled tint
+PASS Products unaffordable purchase uses muted artwork
+CAPTURE ui-disabled-Products 450x916
+PASS Products purchase restores when affordable
+PASS Products affordable purchase restores blue artwork
+PASS Player multiplier choices form one vertical column
+CAPTURE ui-quantity-Player 450x916
+PASS Player purchase initially affordable
+PASS Player purchase disables immediately when cash is spent
+PASS Player purchase animation preserves the disabled tint
+PASS Player unaffordable purchase uses muted artwork
+CAPTURE ui-disabled-Player 450x916
+PASS Player purchase restores when affordable
+PASS Player affordable purchase restores blue artwork
+PASS Settings return button uses blue artwork and white text
+CAPTURE ui-blue-settings 450x916
+SMOKE SUCCEEDED

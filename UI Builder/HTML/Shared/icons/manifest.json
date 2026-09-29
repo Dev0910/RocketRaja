@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "style": "Ivory Bazaar / Gouache Storybook",
+  "atlas": "ivory-gouache-atlas.png",
+  "width": 1254,
+  "height": 1254,
+  "icons": {
+    "player": {"crop": [26, 24, 310, 336], "label": "Player", "use": "Player navigation portrait"},
+    "shelf": {"crop": [341, 58, 296, 294], "label": "Products", "use": "Products navigation and all-product Legacy perk"},
+    "legacy": {"crop": [645, 48, 284, 312], "label": "Reputation", "use": "Legacy navigation"},
+    "gear": {"crop": [945, 66, 290, 287], "label": "Settings", "use": "Persistent settings button"},
+    "burst": {"crop": [20, 360, 299, 280], "label": "Festival Rush", "use": "Home milestone, Festival Rush skill, Sponsor reward"},
+    "hands": {"crop": [320, 401, 334, 220], "label": "Helping Hands", "use": "Home skill and Skills guide"},
+    "order": {"crop": [649, 362, 292, 289], "label": "Bulk Order", "use": "Home skill and Skills guide"},
+    "coins": {"crop": [942, 382, 303, 272], "label": "Earnings", "use": "Automatic sales and Offline reward"},
+    "tap": {"crop": [84, 640, 193, 304], "label": "Tap earnings", "use": "Home per-tap, Salesmanship and tapping Legacy perk"},
+    "stats": {"crop": [313, 673, 318, 271], "label": "Statistics", "use": "Player Statistics shortcut"},
+    "skills": {"crop": [630, 647, 307, 297], "label": "Skills", "use": "Player skill guide shortcut"},
+    "prestige": {"crop": [944, 650, 304, 299], "label": "Prestige", "use": "Player prestige shortcut"},
+    "clock": {"crop": [30, 946, 286, 282], "label": "Offline capacity", "use": "Offline-capacity Legacy perk"},
+    "cooldown": {"crop": [357, 947, 271, 278], "label": "Skill cooldown", "use": "Shorter-cooldown Legacy perk"},
+    "lock": {"crop": [653, 943, 265, 286], "label": "Locked skill", "use": "Locked Home skills"},
+    "play": {"crop": [934, 974, 311, 223], "label": "Optional video", "use": "Home Sponsor action"}
+  }
+}

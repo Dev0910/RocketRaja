@@ -1,0 +1,22 @@
+# Economy version 1.0.0
+
+These results are deterministic simulations of the implemented economy, without advertising. They are not human playtest results.
+
+| Active progression | Result | Target |
+|---|---:|---:|
+| First product | 48 seconds | 30–60 seconds |
+| First level-25 display | 3:35 | Before 5:00 |
+| All eight families | 5:07 | Before first prestige |
+| First prestige | 24:35 | 20:00–30:00 |
+| First rebuild to prestige | 9:18 | 5:00–10:00 |
+| Third prestige cycle | 5:55 | Faster than the second |
+
+The active policy taps three times per second, buys all affordable unlocked run upgrades in display order, buys levels by marginal income per rupee, caps its tap-level investment at 60, and activates skills when ready. After prestige it prioritizes all-product Legacy, then tap Legacy, then individual products. The initial reward is five reputation: enough for the three-point global perk plus two one-point perk purchases.
+
+An occasional policy plays two minutes in every thirty while the game remains open. The offline policy plays similar sessions but closes between them and receives 50% normal income. Their full three-cycle wall-clock timings are in `EconomySimulation.json`. Skill availability, purchase choices and session boundaries change these timings substantially.
+
+The first-run pacing and first-rebuild bounds are assertions in the simulator. The third cycle must improve on the preceding cycle. Run the simulator again after changing authored content; use its `--catalog` option against the exported content to avoid testing different data from Unity.
+
+The first prestige threshold is 1.7e17 eligible rupees. Formula: floor(5 × sqrt(eligible / threshold)), with ownership of all eight families required. Rupee costs use compact K/M/B/T/aa notation at large magnitudes; there are no real-money purchases.
+
+Known balance work for closed testing: verify that humans can find skill upgrades and Buy All, determine whether the eight-product unlock cadence feels satisfying, and check that the reset does not feel like lost visual progress. Change balance from observed player behavior, then rerun regression checks.

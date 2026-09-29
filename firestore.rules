@@ -1,0 +1,51 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /user/{uid} {
+      function signedIn() { return request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider == 'google.com'; }
+      function validSave(s) { return s is map && s.keys().hasAll(['schema','json','checksum']) && s.keys().hasOnly(['schema','json','checksum']) && s.schema == 1 && s.json is string && s.json.size() > 0 && s.json.size() <= 750000 && s.checksum is string && s.checksum.matches('^[A-F0-9]{64}$'); }
+      function valid(d) {
+        return d.keys().hasAll(['profile','save','revision','generation','owner','handoff','commitId','createdAt','updatedAt','heartbeatAt'])
+          && d.keys().hasOnly(['profile','save','revision','generation','owner','handoff','commitId','createdAt','updatedAt','heartbeatAt'])
+          && d.profile is map && d.profile.keys().hasAll(['uid','displayName','email','photoUrl']) && d.profile.keys().hasOnly(['uid','displayName','email','photoUrl'])
+          && d.profile.uid == uid && d.profile.displayName is string && d.profile.displayName.size() <= 256
+          && d.profile.email is string && d.profile.email.size() <= 320 && d.profile.photoUrl is string && d.profile.photoUrl.size() <= 2048
+          && validSave(d.save) && d.revision is int && d.revision > 0 && d.generation is int && d.generation >= 0
+          && d.owner is string && (d.owner == '' || d.owner.matches('^[a-f0-9]{32}$'))
+          && d.handoff is string && (d.handoff == '' || d.handoff.matches('^[a-f0-9]{32}$'))
+          && d.commitId is string && d.commitId.matches('^[a-f0-9]{32}$')
+          && d.createdAt is timestamp && d.updatedAt is timestamp && d.heartbeatAt is timestamp;
+      }
+      function changedOnly(fields) { return request.resource.data.diff(resource.data).affectedKeys().hasOnly(fields); }
+      function acquire() {
+        let n = request.resource.data; let o = resource.data;
+        return changedOnly(['owner','generation','heartbeatAt','handoff'])
+          && n.owner != '' && n.generation == o.generation + 1 && n.handoff == ''
+          && n.heartbeatAt == request.time && (o.owner == '' || request.time >= o.heartbeatAt + duration.value(30, 's'));
+      }
+      function renew() {
+        return changedOnly(['heartbeatAt']) && resource.data.owner != '' && resource.data.handoff == '' && request.resource.data.heartbeatAt == request.time;
+      }
+      function commit() {
+        let n = request.resource.data; let o = resource.data;
+        return changedOnly(['save','revision','commitId','updatedAt','heartbeatAt','owner']) && o.owner != ''
+          && (n.owner == o.owner || n.owner == '') && n.generation == o.generation && n.revision == o.revision + 1
+          && n.commitId != o.commitId && n.updatedAt == request.time && n.heartbeatAt == request.time
+          && request.time < o.heartbeatAt + duration.value(30, 's');
+      }
+      function release() {
+        return changedOnly(['owner','heartbeatAt']) && resource.data.owner != '' && request.resource.data.owner == '' && request.resource.data.heartbeatAt == request.time;
+      }
+      function handoff() {
+        let n = request.resource.data; let o = resource.data;
+        return changedOnly(['handoff']) && o.owner != '' && n.handoff != '' && n.handoff != o.owner && (o.handoff == '' || o.handoff == n.handoff);
+      }
+      allow get: if signedIn();
+      allow list, delete: if false;
+      allow create: if signedIn() && valid(request.resource.data)
+        && request.resource.data.owner == '' && request.resource.data.handoff == '' && request.resource.data.generation == 0 && request.resource.data.revision == 1
+        && request.resource.data.createdAt == request.time && request.resource.data.updatedAt == request.time && request.resource.data.heartbeatAt == request.time;
+      allow update: if signedIn() && valid(request.resource.data) && (acquire() || renew() || commit() || release() || handoff());
+    }
+  }
+}

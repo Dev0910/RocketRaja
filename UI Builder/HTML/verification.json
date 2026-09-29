@@ -1,0 +1,784 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "screen": "Player",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        360,
+        640
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        360,
+        540
+      ],
+      "state": "progressed",
+      "layout": "pass",
+      "metadata": "pass"
+    },
+    {
+      "screen": "Player",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Player",
+      "state": "unaffordable",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Player",
+      "state": "purchased",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Products",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Products",
+      "state": "unaffordable",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Products",
+      "state": "premium",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Products",
+      "state": "max-level",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "state": "unaffordable",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Legacy",
+      "state": "mastered",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Statistics",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Skills",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Skills",
+      "state": "ready",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Skills",
+      "state": "active",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Skills",
+      "state": "cooldown",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "state": "new",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "ProductDetail",
+      "state": "premium",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "state": "locked",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "state": "ready",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "state": "stale",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Settings",
+      "state": "active",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Settings",
+      "state": "consent-required",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Offline",
+      "state": "unavailable",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Offline",
+      "state": "cancelled",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Offline",
+      "state": "failed",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Offline",
+      "state": "consumed",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "state": "active",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "state": "unavailable",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "state": "cancelled",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Sponsor",
+      "state": "failed",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    },
+    {
+      "screen": "Privacy",
+      "state": "consent-required",
+      "viewport": [
+        360,
+        640
+      ],
+      "capture": "pass"
+    }
+  ],
+  "interactions": [
+    "direct privacy return",
+    "independent reduced motion",
+    "prestige eligibility and ready route",
+    "consistent tap fixture",
+    "cached scroll",
+    "selected-tab collapse",
+    "quantity selection",
+    "details focus restore",
+    "modal inert background",
+    "nested privacy return",
+    "setting toggle",
+    "ad unavailable no reward",
+    "offline dismiss no second credit",
+    "stale prestige refusal",
+    "recovery blocks dismiss",
+    "skill guide read-only",
+    "controls and drag do not tap"
+  ],
+  "browserErrors": []
+}

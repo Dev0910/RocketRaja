@@ -1,0 +1,7 @@
+<linker>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="RocketRaja.Cloud.GoogleSignInBridge" preserve="all" />
+    <type fullname="RocketRaja.Core.AccountCheckpoint" preserve="all" />
+    <type fullname="RocketRaja.Core.SavePayload" preserve="all" />
+  </assembly>
+</linker>

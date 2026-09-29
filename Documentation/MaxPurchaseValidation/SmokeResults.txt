@@ -1,0 +1,30 @@
+PASS Main scene booted
+PASS Products MAX at level 0 shows one-upgrade cost with 0 of required cash
+PASS Products unaffordable MAX stays greyed out
+PASS Products MAX at level 0 shows one-upgrade cost with 0.99 of required cash
+PASS Products unaffordable MAX stays greyed out
+PASS Products MAX enables at the exact one-upgrade cost
+PASS Products MAX immediately shows the next single cost after spending all cash
+PASS Products MAX at level 5 shows one-upgrade cost with 0 of required cash
+PASS Products unaffordable MAX stays greyed out
+PASS Products MAX at level 5 shows one-upgrade cost with 0.99 of required cash
+PASS Products unaffordable MAX stays greyed out
+PASS Products MAX enables at the exact one-upgrade cost
+PASS Products MAX immediately shows the next single cost after spending all cash
+PASS Products MAX still quotes the affordable bulk quantity
+PASS Products actual level cap still displays Max level
+PASS Player MAX at level 0 shows one-upgrade cost with 0 of required cash
+PASS Player unaffordable MAX stays greyed out
+PASS Player MAX at level 0 shows one-upgrade cost with 0.99 of required cash
+PASS Player unaffordable MAX stays greyed out
+PASS Player MAX enables at the exact one-upgrade cost
+PASS Player MAX immediately shows the next single cost after spending all cash
+PASS Player MAX at level 5 shows one-upgrade cost with 0 of required cash
+PASS Player unaffordable MAX stays greyed out
+PASS Player MAX at level 5 shows one-upgrade cost with 0.99 of required cash
+PASS Player unaffordable MAX stays greyed out
+PASS Player MAX enables at the exact one-upgrade cost
+PASS Player MAX immediately shows the next single cost after spending all cash
+PASS Player MAX still quotes the affordable bulk quantity
+PASS Player actual level cap still displays Max level
+SMOKE SUCCEEDED

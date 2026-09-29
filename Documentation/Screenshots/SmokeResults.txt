@@ -1,0 +1,48 @@
+PASS Game scene booted
+PASS Authored catalog loaded
+PASS Rupee glyph supported by UI font
+PASS Art loaded: phuljhari
+PASS Art loaded: anar
+PASS Art loaded: chakri
+PASS Art loaded: rockets
+PASS Art loaded: small-crackers
+PASS Art loaded: cracker-strings
+PASS Art loaded: aerial-shots
+PASS Art loaded: gift-boxes
+PASS Art loaded: stalls
+PASS Art loaded: shopkeeper
+CAPTURE 01-new-shop 540x960
+PASS Automatic income value renders without clipping
+PASS Shop UI constructed
+PASS Scene tap earns exactly once
+PASS Scene drag never earns tap income
+PASS Navigation never earns tap income
+PASS Product populates shelf 0
+PASS Product populates shelf 1
+PASS Product populates shelf 2
+PASS Product populates shelf 3
+PASS Product populates shelf 4
+PASS Product populates shelf 5
+PASS Product populates shelf 6
+PASS Product populates shelf 7
+CAPTURE 02-products 540x960
+PASS All eight displays visible at level 25
+CAPTURE tier-25 540x960
+PASS All eight displays visible at level 100
+CAPTURE tier-100 540x960
+PASS All eight displays visible at level 250
+CAPTURE tier-250 540x960
+PASS All run unlockables purchased in Unity
+CAPTURE 03-player 540x960
+PASS Panel scroll position survives navigation without taps
+CAPTURE 04-prestige-preview 540x960
+PASS Prestige confirmation resets and grants quoted reward
+PASS Permanent Legacy perk purchased
+CAPTURE 05-legacy 540x960
+CAPTURE 06-offline 540x960
+PASS Test rewarded callback doubles offline reward once
+PASS Dismissed test ad grants no bonus
+PASS Completed test sponsor starts boost
+CAPTURE home-540x900 540x900
+CAPTURE home-540x1200 540x1080
+SMOKE SUCCEEDED

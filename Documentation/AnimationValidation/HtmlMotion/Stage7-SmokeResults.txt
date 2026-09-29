@@ -1,0 +1,9 @@
+PASS Main scene booted
+PASS Celebration host and renderer are saved and non-interactive
+PASS Celebration uses twelve stars
+CAPTURE 09-celebration-mid 1080x2400
+PASS Repeated celebrations restart the bounded star group without adding objects
+PASS Celebration clears after 850ms
+PASS Reduced Motion cancels an active celebration
+PASS Reduced Motion suppresses future decorative stars
+SMOKE SUCCEEDED

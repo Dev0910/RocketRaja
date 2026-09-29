@@ -1,0 +1,3 @@
+# Built-in image_gen revision v2
+
+Edit the first ProductDetail modal reference, preserving the cream gouache card, title, all correct data and typography. REQUIRED: dark translucent indigo scrim over ALL background outside card, including header and bottom tabs; the card alone stays bright. Use second image (actual Home) for consistent background scene, settings at top LEFT, shopkeeper and bottom nav icons (shopkeeper / shelf / gold medal). Replace the two bottom return/back buttons by ONE full-width button labeled Return to Products. This is a blocking modal; underlying scene visibly dim/inactive. Preserve all numbers, layout and read-only content. No new mechanics.

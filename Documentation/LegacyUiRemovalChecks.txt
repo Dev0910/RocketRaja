@@ -1,0 +1,29 @@
+PASS Main boots with current UI
+PASS Exactly thirteen saved screen canvases
+PASS No obsolete UI copies
+PASS Shop tap earns once with feedback
+PASS Current Home notice
+PASS Products navigation
+PASS Product purchase 0
+PASS Product purchase 1
+PASS Product purchase 2
+PASS Product purchase 3
+PASS Product purchase 4
+PASS Product purchase 5
+PASS Product purchase 6
+PASS Product purchase 7
+PASS Player navigation
+PASS Reputation Legacy screen retained
+PASS Statistics dialog
+PASS Skills dialog
+PASS Product detail dialog
+PASS Sponsor dialog
+PASS Settings dialog
+PASS Privacy from Settings
+PASS Privacy returns to Settings
+PASS Privacy opens directly without obsolete modal
+PASS Prestige dialog
+PASS Prestige commits and opens current Legacy screen
+PASS Offline dialog
+PASS Save Recovery dialog
+PASS No obsolete runtime canvas after all navigation

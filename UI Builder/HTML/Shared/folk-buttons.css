@@ -1,0 +1,22 @@
+/* User-selected C — Folk print. Shared by every HTML screen, including Home. */
+html body :is(.action,.sponsor,.settings,.close,.toggle,.review-route button){
+ --folk-face:url('folk/blue.svg');background:transparent!important;border-color:transparent!important;border-style:solid;border-image:var(--folk-face) 24 fill / 12px / 0 stretch!important;border-radius:0!important;box-shadow:none!important;filter:drop-shadow(0 2px 0 #15365b);color:#fff2d5!important;text-shadow:none;transition:filter .12s,transform .12s;
+}
+html body :is(.action.maroon,.action[aria-pressed=true]){--folk-face:url('folk/red.svg');filter:drop-shadow(0 2px 0 #781d38)}
+html body :is(.action.secondary,.toggle[aria-checked=false],button:disabled){--folk-face:url('folk/sand.svg');color:#514b3c!important;filter:drop-shadow(0 2px 0 #998a6c)}
+html body :is(.action,.sponsor,.settings,.close,.toggle):enabled:hover{filter:brightness(1.09) drop-shadow(0 2px 0 #15365b)}
+html body :is(.action,.sponsor,.settings,.close,.toggle):enabled:active{transform:translateY(1px);filter:brightness(.95)}
+html body button:focus-visible{outline:3px solid #e9a529;outline-offset:2px}
+html body .sponsor small{color:inherit!important}
+html body .toggle:after{background:#fff0c8;box-shadow:none}
+html body .player-icon{color:#164b91;border-radius:5px}
+html body .player-icon:hover{background:#eadbb9}
+html body .panel-head .collapse{color:#a52449}
+html body .modal-head .close{color:#fff2d5}
+html body :is(.app,.game) .navigation{background-color:#174884;background-image:var(--paper);border-top-color:#f1c45f}
+html body :is(.app,.game) .navigation button[aria-pressed=true]{background:transparent;border:1px solid transparent;border-image:url('folk/red.svg') 24 fill / 10px / 0 stretch;border-radius:0}
+html body :is(.app,.game) .navigation button+button:before{background:#ecdbaf;box-shadow:none}
+html body .skill .skill-disc{background:#1754a0;border-color:#fff0c8;box-shadow:0 0 0 2px #184477;border-radius:25% 12%;}
+html body .skill[data-skill-state=active] .skill-disc{background:#bd2853;box-shadow:0 0 0 2px #831a3a}
+html body .skill:disabled .skill-disc{background:#cabc9f;border-color:#f9edce;box-shadow:0 0 0 2px #998a6c}
+@media(prefers-reduced-motion:reduce){html body button{transition:none!important}}

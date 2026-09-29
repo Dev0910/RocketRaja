@@ -1,0 +1,33 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "viewport": [
+        360,
+        540
+      ],
+      "panels": "open/close/rapid switching",
+      "popups": "nested close/focus/inert",
+      "geometry": "stable stall; no overflow",
+      "scroll": "retained"
+    },
+    {
+      "viewport": [
+        450,
+        916
+      ],
+      "panels": "open/close/rapid switching",
+      "popups": "nested close/focus/inert",
+      "geometry": "stable stall; no overflow",
+      "scroll": "retained"
+    },
+    {
+      "reducedMotion": "system and game preference; active exits cancelled"
+    },
+    {
+      "recovery": "still blocking",
+      "standaloneHome": "popup opens and closes"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,9 @@
+/* HTML font audition. Unity font assets remain pending user review. */
+@font-face{font-family:'Baloo 2';src:url('fonts/baloo2.ttf') format('truetype');font-weight:400 800;font-display:swap}
+@font-face{font-family:Nunito;src:url('fonts/nunito.ttf') format('truetype');font-weight:200 1000;font-display:swap}
+@font-face{font-family:Fraunces;src:url('fonts/fraunces.ttf') format('truetype');font-weight:100 900;font-display:swap}
+@font-face{font-family:Fredoka;src:url('fonts/fredoka.ttf') format('truetype');font-weight:300 700;font-display:swap}
+:root{--font-ui:Nunito,Arial,sans-serif;--font-display:'Baloo 2',Nunito,sans-serif;--font-display-weight:700;--font-sign:var(--font-display)}
+/* Keep dense descriptions and changing amounts in the readable UI family. */
+:is(.app,.game) :is(.cash,.income-total strong,.per-tap strong,.hero-number,.stats dd,.row-action){font-variant-numeric:tabular-nums lining-nums}
+:is(.app,.game) :is(.navigation strong,.shop-title){font-family:var(--font-display);font-weight:var(--font-display-weight)}

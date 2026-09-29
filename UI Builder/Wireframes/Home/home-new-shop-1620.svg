@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1620" viewBox="0 0 1080 1620" role="img" aria-label="Home — new shop"><title>Home — new shop</title><desc>Grayscale structural wireframe. No final artwork. Progressed figures are illustrative. Dashed top and bottom lines mark the safe area.</desc><g font-family="Segoe UI, Arial, sans-serif"><rect x="0" y="0" width="1080" height="1620" rx="0" fill="#fafafa" stroke="none" stroke-width="2" />
+<g id="safe-area-guides">
+<rect x="0" y="0" width="1080" height="24" rx="0" fill="#dedede" stroke="none" stroke-width="2" />
+<rect x="0" y="1596" width="1080" height="24" rx="0" fill="#dedede" stroke="none" stroke-width="2" />
+<path d="M0 24 L1080 24" fill="none" stroke="#777" stroke-width="2" stroke-dasharray="12 9"/>
+<path d="M0 1596 L1080 1596" fill="none" stroke="#777" stroke-width="2" stroke-dasharray="12 9"/>
+</g>
+<g id="header">
+<rect x="42" y="42" width="124" height="124" rx="8" fill="#f1f1f1" stroke="#888" stroke-width="2" />
+<circle cx="104" cy="104" r="26" fill="none" stroke="#555" stroke-width="3" />
+<circle cx="104" cy="104" r="10" fill="none" stroke="#555" stroke-width="3" />
+<path d="M134 104 L146 104" fill="none" stroke="#555" stroke-width="2" />
+<path d="M125.21320343559643 125.21320343559643 L133.698484809835 133.698484809835" fill="none" stroke="#555" stroke-width="2" />
+<path d="M104 134 L104 146" fill="none" stroke="#555" stroke-width="2" />
+<path d="M82.78679656440357 125.21320343559643 L74.301515190165 133.698484809835" fill="none" stroke="#555" stroke-width="2" />
+<path d="M74 104 L62 104" fill="none" stroke="#555" stroke-width="2" />
+<path d="M82.78679656440357 82.78679656440357 L74.30151519016499 74.301515190165" fill="none" stroke="#555" stroke-width="2" />
+<path d="M104 74 L103.99999999999999 62" fill="none" stroke="#555" stroke-width="2" />
+<path d="M125.21320343559643 82.78679656440357 L133.69848480983498 74.30151519016499" fill="none" stroke="#555" stroke-width="2" />
+<text x="540" y="82" font-size="34" font-weight="700" text-anchor="middle" fill="#333">SHOP RANK 1</text>
+<rect x="338" y="106" width="404" height="14" rx="7" fill="#e4e4e4" stroke="#999" stroke-width="2" />
+<rect x="338" y="106" width="12" height="14" rx="7" fill="#777" stroke="none" stroke-width="2" />
+<text x="540" y="213" font-size="78" font-weight="700" text-anchor="middle" fill="#333">₹0</text>
+<text x="540" y="253" font-size="27" font-weight="400" text-anchor="middle" fill="#666">CASH BALANCE</text>
+</g>
+<g id="stall-tap-surface">
+<rect x="24" y="284" width="1032" height="470" rx="0" fill="#efefef" stroke="#b2b2b2" stroke-width="2" />
+<rect x="60" y="302" width="960" height="388" rx="4" fill="#fafafa" stroke="#666" stroke-width="2" />
+<rect x="60" y="302" width="960" height="72" rx="0" fill="#e1e1e1" stroke="#666" stroke-width="2" />
+<path d="M60 302 L60 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M140 302 L140 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M220 302 L220 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M300 302 L300 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M380 302 L380 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M460 302 L460 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M540 302 L540 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M620 302 L620 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M700 302 L700 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M780 302 L780 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M860 302 L860 374" fill="none" stroke="#aaa" stroke-width="2" />
+<path d="M940 302 L940 374" fill="none" stroke="#aaa" stroke-width="2" />
+<rect x="278" y="310" width="524" height="56" rx="3" fill="#fff" stroke="#777" stroke-width="2" />
+<text x="540" y="350" font-size="34" font-weight="700" text-anchor="middle" fill="#333">DIWALI DUKAAN</text>
+<g id="shelf-1">
+<rect x="84" y="390" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="96" y="417" font-size="23" font-weight="600" text-anchor="start" fill="#777">01</text>
+<path d="M185 422 L205 422" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M195 412 L195 432" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="195" y="480" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Phuljhari</text>
+</g>
+<g id="shelf-2">
+<rect x="314" y="390" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="326" y="417" font-size="23" font-weight="600" text-anchor="start" fill="#777">02</text>
+<path d="M415 422 L435 422" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M425 412 L425 432" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="425" y="480" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Anar</text>
+</g>
+<g id="shelf-3">
+<rect x="544" y="390" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="556" y="417" font-size="23" font-weight="600" text-anchor="start" fill="#777">03</text>
+<path d="M645 422 L665 422" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M655 412 L655 432" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="655" y="480" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Chakri</text>
+</g>
+<g id="shelf-4">
+<rect x="774" y="390" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="786" y="417" font-size="23" font-weight="600" text-anchor="start" fill="#777">04</text>
+<path d="M875 422 L895 422" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M885 412 L885 432" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="885" y="480" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Rockets</text>
+</g>
+<g id="shelf-5">
+<rect x="84" y="507" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="96" y="534" font-size="23" font-weight="600" text-anchor="start" fill="#777">05</text>
+<path d="M185 530 L205 530" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M195 520 L195 540" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="195" y="572" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Small</text>
+<text x="195" y="597" font-size="25" font-weight="500" text-anchor="middle" fill="#555">crackers</text>
+</g>
+<g id="shelf-6">
+<rect x="314" y="507" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="326" y="534" font-size="23" font-weight="600" text-anchor="start" fill="#777">06</text>
+<path d="M415 530 L435 530" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M425 520 L425 540" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="425" y="572" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Cracker</text>
+<text x="425" y="597" font-size="25" font-weight="500" text-anchor="middle" fill="#555">strings</text>
+</g>
+<g id="shelf-7">
+<rect x="544" y="507" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="556" y="534" font-size="23" font-weight="600" text-anchor="start" fill="#777">07</text>
+<path d="M645 539 L665 539" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M655 529 L655 549" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="655" y="597" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Aerial shots</text>
+</g>
+<g id="shelf-8">
+<rect x="774" y="507" width="222" height="99" rx="0" fill="#fff" stroke="#aaa" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="786" y="534" font-size="23" font-weight="600" text-anchor="start" fill="#777">08</text>
+<path d="M875 530 L895 530" fill="none" stroke="#bbb" stroke-width="2" />
+<path d="M885 520 L885 540" fill="none" stroke="#bbb" stroke-width="2" />
+<text x="885" y="572" font-size="25" font-weight="500" text-anchor="middle" fill="#555">Celebration</text>
+<text x="885" y="597" font-size="25" font-weight="500" text-anchor="middle" fill="#555">gift boxes</text>
+</g>
+<rect x="76" y="614" width="928" height="64" rx="0" fill="#d9d9d9" stroke="#777" stroke-width="2" />
+<text x="146" y="657" font-size="27" font-weight="500" text-anchor="start" fill="#666">COUNTER</text>
+<circle cx="875" cy="633" r="18" fill="#eee" stroke="#666" stroke-width="3" />
+<rect x="852" y="652" width="46" height="26" rx="8" fill="#eee" stroke="#666" stroke-width="2" />
+<path d="M857 658 L846 674" fill="none" stroke="#666" stroke-width="2" />
+<path d="M893 658 L904 674" fill="none" stroke="#666" stroke-width="2" />
+<text x="540" y="735" font-size="29" font-weight="600" text-anchor="middle" fill="#444">TAP TO EARN · THEN OPEN PRODUCTS</text>
+</g>
+<g id="milestone-and-feedback">
+<rect x="24" y="766" width="1032" height="94" rx="5" fill="#e7e7e7" stroke="#bbb" stroke-width="2" />
+<text x="52" y="800" font-size="26" font-weight="700" text-anchor="start" fill="#666">FIRST PRODUCT</text>
+<text x="52" y="838" font-size="34" font-weight="600" text-anchor="start" fill="#333">Phuljhari · ₹120 to stock your first shelf</text>
+</g>
+<g id="income-summary">
+<text x="48" y="909" font-size="30" font-weight="600" text-anchor="start" fill="#666">AUTOMATIC SALES</text>
+<text x="48" y="982" font-size="66" font-weight="700" text-anchor="start" fill="#333">₹0</text>
+<text x="157" y="982" font-size="32" font-weight="400" text-anchor="start" fill="#666">/ sec</text>
+<text x="1028" y="910" font-size="30" font-weight="600" text-anchor="end" fill="#666">PER TAP</text>
+<text x="1028" y="973" font-size="49" font-weight="700" text-anchor="end" fill="#333">₹1</text>
+<text x="48" y="1030" font-size="32" font-weight="400" text-anchor="start" fill="#555">Normal sales ₹0 / sec</text>
+<text x="48" y="1074" font-size="32" font-weight="500" text-anchor="start" fill="#333">This run · ₹0 earned</text>
+<path d="M48 1092 L1032 1092" fill="none" stroke="#ccc" stroke-width="2" />
+</g>
+<g id="home-only-skills">
+<g id="skill-0">
+<circle cx="190" cy="1157" r="48" fill="#eee" stroke="#666" stroke-width="3" />
+<rect x="173" y="1155" width="34" height="30" rx="4" fill="none" stroke="#888" stroke-width="2" />
+<path d="M179 1155 v-12 a11 11 0 0 1 22 0 v12" fill="none" stroke="#888" stroke-width="3"/>
+<text x="190" y="1249" font-size="34" font-weight="600" text-anchor="middle" fill="#333">Festival Rush</text>
+<text x="190" y="1282" font-size="29" font-weight="500" text-anchor="middle" fill="#666">LOCKED</text>
+</g>
+<g id="skill-1">
+<circle cx="540" cy="1157" r="48" fill="#eee" stroke="#666" stroke-width="3" />
+<rect x="523" y="1155" width="34" height="30" rx="4" fill="none" stroke="#888" stroke-width="2" />
+<path d="M529 1155 v-12 a11 11 0 0 1 22 0 v12" fill="none" stroke="#888" stroke-width="3"/>
+<text x="540" y="1249" font-size="34" font-weight="600" text-anchor="middle" fill="#333">Helping Hands</text>
+<text x="540" y="1282" font-size="29" font-weight="500" text-anchor="middle" fill="#666">LOCKED</text>
+</g>
+<g id="skill-2">
+<circle cx="890" cy="1157" r="48" fill="#eee" stroke="#666" stroke-width="3" />
+<rect x="873" y="1155" width="34" height="30" rx="4" fill="none" stroke="#888" stroke-width="2" />
+<path d="M879 1155 v-12 a11 11 0 0 1 22 0 v12" fill="none" stroke="#888" stroke-width="3"/>
+<text x="890" y="1249" font-size="34" font-weight="600" text-anchor="middle" fill="#333">Bulk Order</text>
+<text x="890" y="1282" font-size="29" font-weight="500" text-anchor="middle" fill="#666">LOCKED</text>
+</g>
+</g>
+<g id="festival-sponsor">
+<rect x="40" y="1324" width="1000" height="112" rx="6" fill="#e6e6e6" stroke="#999" stroke-width="2" />
+<rect x="65" y="1352" width="61" height="54" rx="5" fill="none" stroke="#666" stroke-width="2" />
+<path d="M86 1364 l23 15 -23 15 z" fill="#777"/>
+<text x="154" y="1371" font-size="32" font-weight="700" text-anchor="start" fill="#333">FESTIVAL SPONSOR</text>
+<text x="154" y="1412" font-size="32" font-weight="400" text-anchor="start" fill="#555">Optional video · ×2 sales for 5 minutes</text>
+</g>
+<g id="bottom-navigation">
+<rect x="0" y="1452" width="1080" height="144" rx="0" fill="#ddd" stroke="none" stroke-width="2" />
+<path d="M0 1452 L1080 1452" fill="none" stroke="#888" stroke-width="2" />
+<circle cx="180" cy="1492" r="16" fill="none" stroke="#555" stroke-width="3" />
+<path d="M151 1530 q0-32 29-32 q29 0 29 32" fill="none" stroke="#555" stroke-width="3"/>
+<text x="180" y="1574" font-size="36" font-weight="600" text-anchor="middle" fill="#333">Player</text>
+<path d="M360 1470 L360 1580" fill="none" stroke="#aaa" stroke-width="2" />
+<rect x="506" y="1480" width="68" height="53" rx="0" fill="none" stroke="#555" stroke-width="2" />
+<path d="M506 1507 L574 1507" fill="none" stroke="#555" stroke-width="2" />
+<path d="M540 1480 L540 1533" fill="none" stroke="#555" stroke-width="2" />
+<text x="540" y="1574" font-size="36" font-weight="600" text-anchor="middle" fill="#333">Products</text>
+<path d="M720 1470 L720 1580" fill="none" stroke="#aaa" stroke-width="2" />
+<circle cx="900" cy="1501" r="23" fill="none" stroke="#555" stroke-width="3" />
+<path d="M884 1519 l-8 22 24-10 24 10-8-22" fill="none" stroke="#555" stroke-width="3"/>
+<text x="900" y="1574" font-size="36" font-weight="600" text-anchor="middle" fill="#333">Legacy</text>
+</g></g></svg>

@@ -1,0 +1,2 @@
+PASS No Firebase auth/cloud adapters initialized before guest choice
+PASS Real guest button initializes isolated local session

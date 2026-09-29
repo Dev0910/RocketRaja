@@ -1,0 +1,142 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "check": "All tabs preserve Home stall geometry",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "height": 1252
+    },
+    {
+      "check": "All tabs preserve Home stall geometry",
+      "viewport": [
+        450,
+        916
+      ],
+      "height": 521.5
+    },
+    {
+      "check": "All tabs preserve Home stall geometry",
+      "viewport": [
+        390,
+        844
+      ],
+      "height": 501.875
+    },
+    {
+      "check": "All tabs preserve Home stall geometry",
+      "viewport": [
+        360,
+        640
+      ],
+      "height": 324
+    },
+    {
+      "check": "All tabs preserve Home stall geometry",
+      "viewport": [
+        360,
+        540
+      ],
+      "height": 227
+    },
+    {
+      "screen": "Player",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 198,
+      "overflow": 805,
+      "scroll": 805
+    },
+    {
+      "screen": "Products",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 198,
+      "overflow": 570,
+      "scroll": 570
+    },
+    {
+      "screen": "Legacy",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 198,
+      "overflow": 928,
+      "scroll": 928
+    },
+    {
+      "screen": "Statistics",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 348,
+      "overflow": 0,
+      "scroll": 0
+    },
+    {
+      "screen": "Skills",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 377,
+      "overflow": 122,
+      "scroll": 122
+    },
+    {
+      "screen": "ProductDetail",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 377,
+      "overflow": 55,
+      "scroll": 55
+    },
+    {
+      "screen": "Prestige",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 305,
+      "overflow": 0,
+      "scroll": 0
+    },
+    {
+      "screen": "Settings",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 349,
+      "overflow": 0,
+      "scroll": 0
+    },
+    {
+      "screen": "Offline",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 322,
+      "overflow": 17,
+      "scroll": 17
+    },
+    {
+      "screen": "Sponsor",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 322,
+      "overflow": 69,
+      "scroll": 69
+    },
+    {
+      "screen": "Privacy",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 336,
+      "overflow": 0,
+      "scroll": 0
+    },
+    {
+      "screen": "SaveRecovery",
+      "check": "Long content reachable; no clipped labels; modal footer remains visible",
+      "height": 223,
+      "overflow": 0,
+      "scroll": 0
+    },
+    {
+      "check": "Player quantity menu and next ten unlockables"
+    },
+    {
+      "check": "Conditional privacy controls and nested return"
+    },
+    {
+      "check": "Ready prestige confirm remains accessible"
+    },
+    {
+      "check": "Gallery has 13 previews; every image loads"
+    }
+  ],
+  "browserErrors": []
+}

@@ -1,0 +1,20 @@
+Run: firebase emulators:exec --only firestore --project demo-rocket-raja --config firebase.json "node --test Tools/CloudSaveTests/rules.test.cjs"
+Runtime: checksum-verified Adoptium JRE 21.0.12.1+1
+Firestore emulator: 1.22.0 (Standard edition)
+
+PASS Google player can create and read exactly their own user document
+PASS guests, anonymous accounts and another UID cannot read or create player saves
+PASS collection enumeration and deletion are denied
+PASS extra fields, wrong UID and unsupported payload schema are denied
+PASS new saves require server timestamps, an unowned session and initial revision
+PASS simultaneous acquisitions produce only one active lease
+PASS valid saves increment one revision; rollback, jumps and same receipt are denied
+PASS server-time lease expiry prevents late commits and permits takeover
+PASS stale ownership generation cannot be replayed after takeover
+PASS handoff preserves data, allows a final save and releases before the next owner enters
+PASS lease changes cannot smuggle progress or identity edits
+PASS a released session cannot write until ownership is acquired again
+
+Tests: 12; passed: 12; failed: 0; skipped: 0.
+Script exited successfully (code 0). Emulator shut down.
+No live Firebase project was accessed by this test run.

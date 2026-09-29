@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "259290147663",
+    "project_id": "rocket-raja-4729c",
+    "storage_bucket": "rocket-raja-4729c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:259290147663:android:d754f7274e18330880f33a",
+        "android_client_info": {
+          "package_name": "com.diwali.fireworkstycoon.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "259290147663-1fa2sjtqmimkad72u8rnrbamj7psmhmj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diwali.fireworkstycoon.dev",
+            "certificate_hash": "77E713207402051368DDB3143AF3A954311D218D"
+          }
+        },
+        {
+          "client_id": "259290147663-21gevt258mekmmqp6bhecfiquqij962k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuqZC3VxIMwHdsgXCYeZxolTj-IgyLOo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "259290147663-21gevt258mekmmqp6bhecfiquqij962k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

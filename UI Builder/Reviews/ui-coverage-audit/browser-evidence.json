@@ -1,0 +1,328 @@
+{
+  "screens": [
+    {
+      "screen": "Home",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": null,
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Player",
+      "state": {
+        "state": "progressed",
+        "tab": "Player",
+        "modal": null,
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Player"
+      ],
+      "modals": [],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Products",
+      "state": {
+        "state": "progressed",
+        "tab": "Products",
+        "modal": null,
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Products"
+      ],
+      "modals": [],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Legacy",
+      "state": {
+        "state": "progressed",
+        "tab": "Legacy",
+        "modal": null,
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Legacy"
+      ],
+      "modals": [],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Statistics",
+      "state": {
+        "state": "progressed",
+        "tab": "Player",
+        "modal": "Statistics",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Player"
+      ],
+      "modals": [
+        "modal-Statistics"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Skills",
+      "state": {
+        "state": "progressed",
+        "tab": "Player",
+        "modal": "Skills",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Player"
+      ],
+      "modals": [
+        "modal-Skills"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "ProductDetail",
+      "state": {
+        "state": "progressed",
+        "tab": "Products",
+        "modal": "ProductDetail",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Products"
+      ],
+      "modals": [
+        "modal-ProductDetail"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Prestige",
+      "state": {
+        "state": "progressed",
+        "tab": "Player",
+        "modal": "Prestige",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Player"
+      ],
+      "modals": [
+        "modal-Prestige"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Settings",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": "Settings",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [
+        "modal-Settings"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Offline",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": "Offline",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [
+        "modal-Offline"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Sponsor",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": "Sponsor",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [
+        "modal-Sponsor"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "Privacy",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": "Privacy",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [
+        "modal-Privacy"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    },
+    {
+      "screen": "SaveRecovery",
+      "state": {
+        "state": "progressed",
+        "tab": "Home",
+        "modal": "SaveRecovery",
+        "quantity": "1",
+        "playerQuantity": "1",
+        "selected": "phuljhari",
+        "events": [],
+        "cash": "₹1.24M"
+      },
+      "panels": [
+        "panel-Home"
+      ],
+      "modals": [
+        "modal-SaveRecovery"
+      ],
+      "productCount": 8,
+      "perkCount": 12,
+      "unlockableCount": 96
+    }
+  ],
+  "homeStates": {
+    "new": {
+      "milestone": "Phuljhari · ₹120 to stock your first shelf",
+      "sponsor": "Festival SponsorOptional video · ×2 sales for 5 minutes",
+      "sponsorDisabled": false,
+      "normal": "Normal sales ₹0 / sec",
+      "stall": "../Home/assets/gouache-stall.png",
+      "productArt": "<svg viewBox=\"0 175 295 430\" preserveAspectRatio=\"xMidYMid meet\" overflow=\"hidden\"><image href=\"../Home/assets/gouache-products.png\" width=\"1254\" height=\"1254\" style=\"clip-path:inset(175px 959px 649px 0px)\"></image></svg>"
+    },
+    "progressed": {
+      "milestone": "Phuljhari · 12 levels to upgrade",
+      "sponsor": "Festival SponsorOptional video · ×2 sales for 5 minutes",
+      "sponsorDisabled": false,
+      "normal": "Normal sales ₹6.71M / sec · Sponsor ×2",
+      "stall": "../Home/assets/gouache-stall.png",
+      "productArt": "<svg viewBox=\"0 175 295 430\" preserveAspectRatio=\"xMidYMid meet\" overflow=\"hidden\"><image href=\"../Home/assets/gouache-products.png\" width=\"1254\" height=\"1254\" style=\"clip-path:inset(175px 959px 649px 0px)\"></image></svg>"
+    },
+    "active": {
+      "milestone": "Phuljhari · 12 levels to upgrade",
+      "sponsor": "Festival SponsorOptional video · ×2 sales for 5 minutes",
+      "sponsorDisabled": false,
+      "normal": "Normal sales ₹6.71M / sec · Sponsor ×2",
+      "stall": "../Home/assets/gouache-stall.png",
+      "productArt": "<svg viewBox=\"0 175 295 430\" preserveAspectRatio=\"xMidYMid meet\" overflow=\"hidden\"><image href=\"../Home/assets/gouache-products.png\" width=\"1254\" height=\"1254\" style=\"clip-path:inset(175px 959px 649px 0px)\"></image></svg>"
+    },
+    "premium": {
+      "milestone": "Phuljhari · 12 levels to upgrade",
+      "sponsor": "Festival SponsorOptional video · ×2 sales for 5 minutes",
+      "sponsorDisabled": false,
+      "normal": "Normal sales ₹6.71M / sec · Sponsor ×2",
+      "stall": "../Home/assets/gouache-stall.png",
+      "productArt": "<svg viewBox=\"0 175 295 430\" preserveAspectRatio=\"xMidYMid meet\" overflow=\"hidden\"><image href=\"../Home/assets/gouache-products.png\" width=\"1254\" height=\"1254\" style=\"clip-path:inset(175px 959px 649px 0px)\"></image></svg>"
+    }
+  },
+  "tap": {
+    "events": [
+      {
+        "action": "TapStall",
+        "param": "none",
+        "fixture": "progressed"
+      }
+    ],
+    "feedback": null,
+    "toastVisible": false
+  },
+  "errors": []
+}

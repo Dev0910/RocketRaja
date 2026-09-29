@@ -1,0 +1,11 @@
+/* Ivory Bazaar icons: one atlas, consistent optical bounds, no hit-target changes. */
+.game-icon{display:block;flex:none;overflow:hidden;pointer-events:none}
+html body :is(.app,.game) .skill-disc{padding:calc(3px * var(--scale))}
+html body :is(.app,.game) .skill-disc>.game-icon{width:calc(32px * var(--scale));height:calc(32px * var(--scale))}
+html body #panel-Player .player-icon>.game-icon{width:calc(29px * var(--scale));height:calc(29px * var(--scale))}
+html body :is(.app,.game) .navigation button>.game-icon{width:calc(37px * var(--scale));height:calc(38px * var(--scale))}
+html body .app .navigation button[aria-pressed=true]>.game-icon{width:calc(42px * var(--scale));height:calc(44px * var(--scale))}
+html body :is(.app,.game) .empty-mark>.game-icon{width:calc(22px * var(--scale));height:calc(22px * var(--scale));align-self:center}
+html body .game .video-icon{padding:0;background:none;border:0;box-shadow:none}
+html body :is(.app,.game) .skill:disabled{filter:none}
+html body :is(.app,.game) .skill[data-skill-state=locked] .game-icon{filter:saturate(.35)}

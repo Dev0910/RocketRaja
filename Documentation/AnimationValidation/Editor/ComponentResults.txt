@@ -1,0 +1,4 @@
+PASS Show uses the Editor-authored CanvasGroup
+PASS A newly created surface closes
+PASS Reopening reuses existing components
+PASS Button feedback reuses its authored component

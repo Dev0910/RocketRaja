@@ -1,0 +1,428 @@
+{
+  "Player": {
+    "title": "Player",
+    "kind": "panel",
+    "lead": "Grow your salesmanship",
+    "rows": [
+      [
+        "Salesmanship · Level 12",
+        "₹18 per tap",
+        "Upgrade · ₹263"
+      ],
+      [
+        "A brighter beginning",
+        "Prestige earns permanent reputation",
+        "View prestige"
+      ],
+      [
+        "Your shop in numbers",
+        "",
+        "Statistics | Skills"
+      ],
+      [
+        "Unlockables · 8 / 96 purchased",
+        "Buy all available",
+        "Buy all"
+      ],
+      [
+        "Festival Rush 1",
+        "×2 sales for 30 seconds",
+        "Purchased"
+      ],
+      [
+        "Phuljhari · Gift Packaging",
+        "×2 Phuljhari income · Level 10 required",
+        "Buy upgrade"
+      ]
+    ],
+    "states": "new, progressed, unaffordable, purchased; 96 authored upgrades; show only the next 10 unpurchased"
+  },
+  "Products": {
+    "title": "Products",
+    "kind": "panel",
+    "lead": "Normal sales · ₹6.2K / sec",
+    "rows": [
+      [
+        "Buy quantity",
+        "",
+        "×1 | ×10 | ×100 | MAX"
+      ],
+      [
+        "Phuljhari · Level 13",
+        "₹36.4 / sec · Display at Lv.25",
+        "₹524 · Upgrade ×1"
+      ],
+      [
+        "Anar · Level 8",
+        "₹179.2 / sec · Display at Lv.25",
+        "₹2.38K · Upgrade ×1"
+      ],
+      [
+        "Chakri · Level 1",
+        "₹179.2 / sec · Display at Lv.25",
+        "Upgrade"
+      ],
+      [
+        "Rockets · Not owned",
+        "Send your ambitions skyward",
+        "Stock shelf"
+      ],
+      [
+        "Small crackers · Locked",
+        "Own Rockets first",
+        "Locked"
+      ]
+    ],
+    "states": "new, progressed, unaffordable, premium display (not a level cap); 8 families; expandable quantity selector; framed display progress; top-right levels; Profit total; no normal-sales note"
+  },
+  "Legacy": {
+    "title": "Legacy",
+    "kind": "panel",
+    "lead": "12 reputation available",
+    "rows": [
+      [
+        "A brighter beginning, every time",
+        "Permanent perks survive prestige",
+        ""
+      ],
+      [
+        "Phuljhari expertise · Rank 1 / 5",
+        "×2 product income per rank",
+        "2 reputation"
+      ],
+      [
+        "Natural salesperson · Rank 0 / 5",
+        "×2 tap income per rank",
+        "1 reputation"
+      ],
+      [
+        "Trusted festival brand · Rank 0 / 5",
+        "×2 all product income per rank",
+        "3 reputation"
+      ],
+      [
+        "After-hours business · Rank 1 / 5",
+        "+2 hours capacity per rank · Cap 10h",
+        "2 reputation"
+      ],
+      [
+        "Experienced team · Rank 0 / 5",
+        "5% shorter skill cooldowns per rank",
+        "1 reputation"
+      ]
+    ],
+    "states": "zero reputation, affordable, unaffordable, mastered; all 12 stable perk IDs"
+  },
+  "Statistics": {
+    "title": "Your shop in numbers",
+    "kind": "modal",
+    "lead": "Every little spark adds up",
+    "rows": [
+      [
+        "THIS RUN",
+        "",
+        ""
+      ],
+      [
+        "Total earned",
+        "₹3.8M",
+        ""
+      ],
+      [
+        "Prestige-eligible",
+        "₹3.6M",
+        ""
+      ],
+      [
+        "LIFETIME",
+        "",
+        ""
+      ],
+      [
+        "Total earned",
+        "₹24.6M",
+        ""
+      ],
+      [
+        "Manual taps",
+        "12,480",
+        ""
+      ],
+      [
+        "Prestiges",
+        "3",
+        ""
+      ],
+      [
+        "Reputation earned",
+        "24",
+        ""
+      ],
+      [
+        "",
+        "Return to Player",
+        "Back"
+      ]
+    ],
+    "states": "new and progressed; read-only actual GameState fields only"
+  },
+  "Skills": {
+    "title": "Festival skills",
+    "kind": "modal",
+    "lead": "Activate your skills from Home",
+    "rows": [
+      [
+        "Festival Rush · Rank 1 / 4",
+        "×2 automatic sales · 30s · Cooldown 5m",
+        "Ready"
+      ],
+      [
+        "Helping Hands · Rank 1 / 4",
+        "5 automatic taps / sec · 30s · Cooldown 5m",
+        "Active · 00:18"
+      ],
+      [
+        "Bulk Order · Rank 1 / 4",
+        "120 seconds of normal sales · Cooldown 10m",
+        "Wait · 04:20"
+      ],
+      [
+        "Grow your skills",
+        "Buy skill ranks in Player unlockables",
+        ""
+      ],
+      [
+        "",
+        "Return to Player",
+        "Back"
+      ]
+    ],
+    "states": "locked, ready, active, cooldown; 3 skills; no activation buttons; read-only new presentation needs adaptation"
+  },
+  "ProductDetail": {
+    "title": "Phuljhari",
+    "kind": "modal",
+    "lead": "A little spark of celebration",
+    "rows": [
+      [
+        "Level 13",
+        "₹36.4 / sec · Normal product income",
+        ""
+      ],
+      [
+        "Next display · Level 25",
+        "13 / 25 levels",
+        ""
+      ],
+      [
+        "Display progression",
+        "Lv.1 → Lv.25 → Lv.100 → Lv.250",
+        ""
+      ],
+      [
+        "Automatic sales",
+        "Products earn continuously; no depletion",
+        ""
+      ],
+      [
+        "",
+        "Return to Products",
+        "Back"
+      ]
+    ],
+    "states": "unowned, progressed, premium; all eight IDs; no invented synergy bonus; new read-only presentation needs adaptation"
+  },
+  "Prestige": {
+    "title": "Begin again, brighter",
+    "kind": "modal",
+    "lead": "Earn +5 reputation",
+    "rows": [
+      [
+        "RESET",
+        "Cash, shelves, product & tap levels",
+        ""
+      ],
+      [
+        "ALSO RESET",
+        "Run upgrades, skills, stall, sponsor & offline offer",
+        ""
+      ],
+      [
+        "KEEP",
+        "Reputation, Legacy, lifetime stats, settings",
+        ""
+      ],
+      [
+        "Take your time",
+        "Your shop pauses while you decide",
+        ""
+      ],
+      [
+        "Begin your next chapter",
+        "Prestige · +5 reputation",
+        "Confirm"
+      ],
+      [
+        "",
+        "Keep growing",
+        "Cancel"
+      ]
+    ],
+    "states": "locked: 8 families + ₹170Q eligible; ready; stale quote refusal; exact-once atomic command"
+  },
+  "Settings": {
+    "title": "Make yourself comfortable",
+    "kind": "modal",
+    "lead": "Your festival, your way",
+    "rows": [
+      [
+        "Music",
+        "Gentle festival melodies",
+        "ON"
+      ],
+      [
+        "Sound",
+        "Taps and celebrations",
+        "ON"
+      ],
+      [
+        "Reduced motion",
+        "Quieter movement and effects",
+        "OFF"
+      ],
+      [
+        "Privacy information",
+        "Progress is saved on this device",
+        "Open"
+      ],
+      [
+        "Advertising privacy choices",
+        "Manage your advertising preferences",
+        "Open"
+      ],
+      [
+        "",
+        "Back to my shop",
+        "Back"
+      ]
+    ],
+    "states": "on/off; conditional privacy choices; device-local settings only"
+  },
+  "Offline": {
+    "title": "Welcome back",
+    "kind": "modal",
+    "lead": "Your shop kept the festival going",
+    "rows": [
+      [
+        "₹24.8K",
+        "Already added to your wallet",
+        ""
+      ],
+      [
+        "After-hours sales",
+        "50% of normal sales · 8h base cap",
+        ""
+      ],
+      [
+        "Optional video",
+        "Add another ₹24.8K",
+        "Double reward"
+      ],
+      [
+        "",
+        "Continue without video",
+        "Continue"
+      ]
+    ],
+    "states": "available, unavailable, cancelled, failed, already-consumed; base already credited; callback-only extra"
+  },
+  "Sponsor": {
+    "title": "Festival Sponsor",
+    "kind": "modal",
+    "lead": "A little help for your festival",
+    "rows": [
+      [
+        "×2 automatic sales",
+        "For five minutes",
+        ""
+      ],
+      [
+        "Optional video",
+        "Extra income does not earn reputation",
+        ""
+      ],
+      [
+        "Ready when you are",
+        "Complete the video to receive your bonus",
+        "Watch video"
+      ],
+      [
+        "",
+        "Keep playing",
+        "Back"
+      ]
+    ],
+    "states": "available, active, unavailable, cancelled, failed; callback-only; no browser ad or reward grant"
+  },
+  "Privacy": {
+    "title": "Privacy information",
+    "kind": "modal",
+    "lead": "Your progress stays on this device",
+    "rows": [
+      [
+        "Local progress",
+        "There is no cloud account or cloud recovery",
+        ""
+      ],
+      [
+        "Optional videos",
+        "Google advertising and consent services",
+        ""
+      ],
+      [
+        "Development build",
+        "Production privacy details must be supplied",
+        ""
+      ],
+      [
+        "Advertising privacy choices",
+        "Manage your advertising preferences",
+        "Open"
+      ],
+      [
+        "",
+        "Back to Settings",
+        "Back"
+      ]
+    ],
+    "states": "development fallback verified; configured URL must be used natively; no invented policy"
+  },
+  "SaveRecovery": {
+    "title": "Your save needs attention",
+    "kind": "modal",
+    "lead": "Your saved files could not be read",
+    "rows": [
+      [
+        "Main save and backup are unreadable",
+        "Damaged files are preserved",
+        ""
+      ],
+      [
+        "Start a new local game",
+        "Enable saving with a fresh game",
+        "Start new"
+      ],
+      [
+        "No cloud recovery",
+        "This device stores progress locally",
+        ""
+      ],
+      [
+        "Preserve your files",
+        "Leave without starting over",
+        "Keep files and exit"
+      ]
+    ],
+    "states": "blocking recovery; no dismiss or background input; preview never deletes saves or quits Unity"
+  }
+}

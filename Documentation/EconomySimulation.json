@@ -1,0 +1,92 @@
+[
+  {
+    "policy": "active",
+    "run": 1,
+    "seconds": 1475,
+    "firstProduct": 48,
+    "firstTier": 215,
+    "allProducts": 307,
+    "reputation": 5,
+    "earnings": "190.16aa"
+  },
+  {
+    "policy": "active",
+    "run": 2,
+    "seconds": 558,
+    "firstProduct": 26,
+    "firstTier": 108,
+    "allProducts": 132,
+    "reputation": 5,
+    "earnings": "170.18aa"
+  },
+  {
+    "policy": "active",
+    "run": 3,
+    "seconds": 355,
+    "firstProduct": 17,
+    "firstTier": 66,
+    "allProducts": 86,
+    "reputation": 5,
+    "earnings": "170.02aa"
+  },
+  {
+    "policy": "occasional",
+    "run": 1,
+    "seconds": 5401,
+    "firstProduct": 48,
+    "firstTier": 1809,
+    "allProducts": 1839,
+    "reputation": 6,
+    "earnings": "302.26aa"
+  },
+  {
+    "policy": "occasional",
+    "run": 2,
+    "seconds": 3600,
+    "firstProduct": 17,
+    "firstTier": 66,
+    "allProducts": 86,
+    "reputation": 8,
+    "earnings": "496.99aa"
+  },
+  {
+    "policy": "occasional",
+    "run": 3,
+    "seconds": 1800,
+    "firstProduct": 15,
+    "firstTier": 57,
+    "allProducts": 65,
+    "reputation": 14,
+    "earnings": "1.49ab"
+  },
+  {
+    "policy": "offline",
+    "run": 1,
+    "seconds": 5401,
+    "firstProduct": 48,
+    "firstTier": 1820,
+    "allProducts": 1884,
+    "reputation": 5,
+    "earnings": "184.33aa"
+  },
+  {
+    "policy": "offline",
+    "run": 2,
+    "seconds": 3600,
+    "firstProduct": 26,
+    "firstTier": 108,
+    "allProducts": 1801,
+    "reputation": 7,
+    "earnings": "422.91aa"
+  },
+  {
+    "policy": "offline",
+    "run": 3,
+    "seconds": 1848,
+    "firstProduct": 21,
+    "firstTier": 84,
+    "allProducts": 94,
+    "reputation": 5,
+    "earnings": "170.39aa"
+  }
+]

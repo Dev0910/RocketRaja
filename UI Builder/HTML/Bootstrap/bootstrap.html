@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Rocket Raja · Welcome to your stall</title>
+  <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+  <aside class="review-tools" data-handoff-role="review-tool" aria-label="Preview controls">
+    <strong>BOOTSTRAP · HTML CANDIDATE v1</strong>
+    <label for="review-state">Review state</label><select id="review-state" data-handoff-role="review-tool"></select>
+    <p>Illustrative saves only. Buttons demonstrate the flow; no sign-in or save writes occur.</p>
+    <output id="review-message" aria-live="polite">Choose a state or try a button.</output>
+  </aside>
+  <main id="bootstrap-screen" class="screen" data-unity-name="BootstrapScreen" data-state="welcome">
+    <div class="world" aria-hidden="true"><img src="assets/bootstrap-text-free-v1.png" alt="" draggable="false"></div>
+    <header class="brand"><div class="ornament" aria-hidden="true">✦</div><h1>ROCKET RAJA</h1><p>Your fireworks story starts here</p></header>
+    <div class="scene-space" aria-hidden="true"></div>
+    <section class="panel" aria-labelledby="status-heading" aria-describedby="status-description">
+      <span class="corner top-left" aria-hidden="true">✥</span><span class="corner top-right" aria-hidden="true">✥</span>
+      <h2 id="status-heading" tabindex="-1" data-unity-name="Heading" data-unity-binding="Heading">Welcome to your stall</h2>
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+      <p id="status-description" data-unity-name="Description" data-unity-binding="Description">Save your progress with Google and continue on another device.</p>
+      <div id="save-comparison" class="comparison" data-unity-name="SaveComparison" data-unity-binding="Comparison" hidden>
+        <article class="save-card"><span class="save-label">This device</span><strong id="device-cash">₹1.24M</strong><span id="device-summary">6 products · 1 prestige</span><small id="device-time">Saved just now</small></article>
+        <article class="save-card cloud"><span class="save-label">Google save</span><strong id="cloud-cash">₹8.60M</strong><span id="cloud-summary">8 products · 3 prestiges</span><small id="cloud-time">Saved 2 hours ago</small></article>
+      </div>
+      <div id="sync-progress" class="sync-progress" role="status" data-unity-name="Progress" data-unity-binding="Progress" hidden><span class="spinner" aria-hidden="true"></span><span id="progress-label">Restoring your saved progress…</span></div>
+      <div class="actions">
+        <button id="primary-action" class="primary" data-unity-name="PrimaryButton" data-unity-action="Primary" data-runtime-status="existing-needs-adaptation" data-unity-listener-owner="RocketRaja.Cloud.BootstrapController" data-unity-interactability="Visible action exists and !busy" data-unity-raycast-target="true"><svg id="google-mark" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.5l6.8-6.8C35.8 2.4 30.4 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.1C12.4 13.7 17.7 9.5 24 9.5Z"/><path fill="#4285F4" d="M46.9 24.6c0-1.6-.2-3.2-.4-4.6H24v9.1h12.9c-.6 3-2.3 5.5-4.8 7.2l7.7 6C44.3 38.1 46.9 32 46.9 24.6Z"/><path fill="#FBBC05" d="M10.5 28.7a14.4 14.4 0 0 1 0-9.4l-7.9-6.1a24 24 0 0 0 0 21.6Z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.7l-7.9-6c-2.1 1.4-4.8 2.2-8.1 2.2-6.3 0-11.6-4.2-13.5-9.8l-7.9 6.1C6.5 42.6 14.6 48 24 48Z"/></svg><span id="primary-label" data-unity-binding="ActionLabels">Sign in with Google</span></button>
+        <button id="secondary-action" class="secondary" data-unity-name="SecondaryButton" data-unity-action="Secondary" data-runtime-status="existing-needs-adaptation" data-unity-listener-owner="RocketRaja.Cloud.BootstrapController" data-unity-interactability="Visible action exists and !busy" data-unity-raycast-target="true"><span id="secondary-label" data-unity-binding="ActionLabels">Play as guest</span></button>
+        <button id="tertiary-action" class="tertiary" data-unity-name="TertiaryButton" data-unity-action="Tertiary" data-runtime-status="existing-needs-adaptation" data-unity-listener-owner="RocketRaja.Cloud.BootstrapController" data-unity-interactability="Visible action exists and !busy" data-unity-raycast-target="true" hidden><span id="tertiary-label" data-unity-binding="ActionLabels"></span></button>
+      </div>
+      <p id="status-hint" class="hint" data-unity-name="Hint" data-unity-binding="Hint">You can connect Google later in Settings.</p>
+      <footer><div class="divider" aria-hidden="true"><span>✦</span></div>Guest progress stays on this device.<br>Google progress follows you between devices.</footer>
+      <span class="corner bottom-left" aria-hidden="true">✥</span><span class="corner bottom-right" aria-hidden="true">✥</span>
+    </section>
+  </main>
+  <!-- The single declarative Unity behavior contract is embedded below. -->
+  <script id="unity-metadata" type="application/json">
+{
+  "schemaVersion": 1,
+  "screen": {
+    "functionalityProfile": "mixed",
+    "identity": "Bootstrap",
+    "destinationOrOwner": "RocketRaja.Cloud.BootstrapController",
+    "entryState": "remembered identity or welcome",
+    "referenceViewport": {
+      "width": 1080,
+      "height": 2200
+    },
+    "lifecycle": {
+      "open": "Awake binds once; Start inspects local identity and chooses path",
+      "close": "OnDestroy removes button listeners; PlayerSessionHost survives scene changes"
+    },
+    "behaviorAuthority": [
+      "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "Assets/Game/Runtime/Cloud/PlayerSessionHost.cs",
+      "User-approved Google login/cloud-save plan"
+    ],
+    "capabilityModules": [
+      "stateMachines",
+      "asyncOperations",
+      "persistence",
+      "accessibilityAndPresentation"
+    ]
+  },
+  "actions": {
+    "Primary": {
+      "triggerIds": [
+        "primary-action"
+      ],
+      "parameterSource": "State delegates assigned by BootstrapController.Show; see modules.stateMachines",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "ownerType": "RocketRaja.Cloud.BootstrapController",
+      "entrySymbol": "Primary",
+      "guards": [
+        "!busy",
+        "Assigned delegate exists",
+        "Only visible buttons accept input",
+        "Account entry requires authentication and ownership"
+      ],
+      "reentryPolicy": "Run rejects repeated requests while busy",
+      "success": "Transition to next initialization state or Main after session Ready",
+      "failure": [
+        "Google cancellation returns Welcome",
+        "Authentication or cloud failure shows Retry and separate guest route",
+        "Unreadable guest save shows Recovery",
+        "Changed cloud revision requires comparison again"
+      ],
+      "sideEffectOwners": [
+        "Assets/Game/Runtime/Cloud/PlayerSessionHost.cs",
+        "Assets/Game/Core/AccountSession.cs",
+        "Assets/Game/Runtime/Cloud/LocalProfiles.cs"
+      ],
+      "listenerPolicy": "Awake.AddListener once; OnDestroy.RemoveListener; preview JS is demonstration only",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Primary/Secondary/Tertiary, Show, Run, ChooseProgress, ConfirmReplacement, Guest, Recovery, SignOut"
+      },
+      "approvalStatus": "approved",
+      "reason": "Controller code exists; Bootstrap scene and serialized UI are not yet authored. Live hints and split comparison cards need presentation bindings.",
+      "canFail": true,
+      "confirmation": "Device-over-cloud replacement and fresh guest require a second explicit action",
+      "atomicity": "PlayerSessionHost and AccountSession own backups, fenced commit, revision and exact-once payout; HTML performs no persistence",
+      "recovery": "Retain original files/checkpoints and expose retry or separate guest",
+      "localRefresh": "Controller updates state after async completion",
+      "forbiddenEffects": [
+        "No duplicate requests",
+        "No combined balances/rewards",
+        "No guest Firebase writes"
+      ]
+    },
+    "Secondary": {
+      "triggerIds": [
+        "secondary-action"
+      ],
+      "parameterSource": "State delegates assigned by BootstrapController.Show; see modules.stateMachines",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "ownerType": "RocketRaja.Cloud.BootstrapController",
+      "entrySymbol": "Secondary",
+      "guards": [
+        "!busy",
+        "Assigned delegate exists",
+        "Only visible buttons accept input",
+        "Account entry requires authentication and ownership"
+      ],
+      "reentryPolicy": "Run rejects repeated requests while busy",
+      "success": "Transition to next initialization state or Main after session Ready",
+      "failure": [
+        "Google cancellation returns Welcome",
+        "Authentication or cloud failure shows Retry and separate guest route",
+        "Unreadable guest save shows Recovery",
+        "Changed cloud revision requires comparison again"
+      ],
+      "sideEffectOwners": [
+        "Assets/Game/Runtime/Cloud/PlayerSessionHost.cs",
+        "Assets/Game/Core/AccountSession.cs",
+        "Assets/Game/Runtime/Cloud/LocalProfiles.cs"
+      ],
+      "listenerPolicy": "Awake.AddListener once; OnDestroy.RemoveListener; preview JS is demonstration only",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Primary/Secondary/Tertiary, Show, Run, ChooseProgress, ConfirmReplacement, Guest, Recovery, SignOut"
+      },
+      "approvalStatus": "approved",
+      "reason": "Controller code exists; Bootstrap scene and serialized UI are not yet authored. Live hints and split comparison cards need presentation bindings.",
+      "canFail": true,
+      "confirmation": "Device-over-cloud replacement and fresh guest require a second explicit action",
+      "atomicity": "PlayerSessionHost and AccountSession own backups, fenced commit, revision and exact-once payout; HTML performs no persistence",
+      "recovery": "Retain original files/checkpoints and expose retry or separate guest",
+      "localRefresh": "Controller updates state after async completion",
+      "forbiddenEffects": [
+        "No duplicate requests",
+        "No combined balances/rewards",
+        "No guest Firebase writes"
+      ]
+    },
+    "Tertiary": {
+      "triggerIds": [
+        "tertiary-action"
+      ],
+      "parameterSource": "State delegates assigned by BootstrapController.Show; see modules.stateMachines",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "ownerType": "RocketRaja.Cloud.BootstrapController",
+      "entrySymbol": "Tertiary",
+      "guards": [
+        "!busy",
+        "Assigned delegate exists",
+        "Only visible buttons accept input",
+        "Account entry requires authentication and ownership"
+      ],
+      "reentryPolicy": "Run rejects repeated requests while busy",
+      "success": "Transition to next initialization state or Main after session Ready",
+      "failure": [
+        "Google cancellation returns Welcome",
+        "Authentication or cloud failure shows Retry and separate guest route",
+        "Unreadable guest save shows Recovery",
+        "Changed cloud revision requires comparison again"
+      ],
+      "sideEffectOwners": [
+        "Assets/Game/Runtime/Cloud/PlayerSessionHost.cs",
+        "Assets/Game/Core/AccountSession.cs",
+        "Assets/Game/Runtime/Cloud/LocalProfiles.cs"
+      ],
+      "listenerPolicy": "Awake.AddListener once; OnDestroy.RemoveListener; preview JS is demonstration only",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Primary/Secondary/Tertiary, Show, Run, ChooseProgress, ConfirmReplacement, Guest, Recovery, SignOut"
+      },
+      "approvalStatus": "approved",
+      "reason": "Controller code exists; Bootstrap scene and serialized UI are not yet authored. Live hints and split comparison cards need presentation bindings.",
+      "canFail": true,
+      "confirmation": "Device-over-cloud replacement and fresh guest require a second explicit action",
+      "atomicity": "PlayerSessionHost and AccountSession own backups, fenced commit, revision and exact-once payout; HTML performs no persistence",
+      "recovery": "Retain original files/checkpoints and expose retry or separate guest",
+      "localRefresh": "Controller updates state after async completion",
+      "forbiddenEffects": [
+        "No duplicate requests",
+        "No combined balances/rewards",
+        "No guest Firebase writes"
+      ]
+    }
+  },
+  "bindings": {
+    "Heading": {
+      "targetIds": [
+        "status-heading"
+      ],
+      "valueType": "string",
+      "format": "Localized plain text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "Show/heading",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Per current state",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Show/heading"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    },
+    "Description": {
+      "targetIds": [
+        "status-description"
+      ],
+      "valueType": "string",
+      "format": "Localized plain text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "Show/description",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Per current state",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Show/description"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    },
+    "Comparison": {
+      "targetIds": [
+        "save-comparison",
+        "device-cash",
+        "device-summary",
+        "device-time",
+        "cloud-cash",
+        "cloud-summary",
+        "cloud-time"
+      ],
+      "valueType": "save summaries",
+      "format": "Currency via Amount, owned products, prestiges and local saved date; HTML fixtures are not real saves",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "ChooseProgress/Summary",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Only conflicting save selection",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "ChooseProgress/Summary"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    },
+    "Progress": {
+      "targetIds": [
+        "sync-progress",
+        "progress-label"
+      ],
+      "valueType": "string",
+      "format": "Localized plain text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "Run/Enter/Update",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Only pending operation",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Run/Enter/Update"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    },
+    "ActionLabels": {
+      "targetIds": [
+        "primary-label",
+        "secondary-label",
+        "tertiary-label"
+      ],
+      "valueType": "strings",
+      "format": "Localized plain text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "Show",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Per current state",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Show"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    },
+    "Hint": {
+      "targetIds": [
+        "status-hint"
+      ],
+      "valueType": "string",
+      "format": "Localized plain text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "Show (new serialized hint binding needed)",
+      "updateTrigger": "State entry or pending operation update",
+      "visibilityRule": "Per current state",
+      "interactabilityRule": "Text does not accept game input; actions disabled while busy",
+      "fallback": "Explicit error or unavailable summary; never fabricate runtime progress",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": {
+        "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+        "symbols": "Show (new serialized hint binding needed)"
+      },
+      "reason": "Native scene binding pending; split cards, contextual hints and distinct pending/error headings adapt existing text presentation without changing save semantics."
+    }
+  },
+  "navigation": {
+    "main": {
+      "owner": "PlayerSessionHost.EnterMain",
+      "route": "Main",
+      "synchronization": "Ready session required after local initialization or server-confirmed account initialization",
+      "history": "No browser history equivalent; preview stops at initialization",
+      "unavailableDestinations": [
+        "Main is not rendered by this preview"
+      ],
+      "transitionTiming": "After initialization succeeds"
+    },
+    "account": {
+      "owner": "PlayerSessionHost.OpenAccountMenu",
+      "route": "Bootstrap",
+      "history": "Back to my shop calls EnterMain; sign out returns to separate guest",
+      "synchronization": "Flush and release account before sign-out"
+    }
+  },
+  "conflicts": [
+    {
+      "htmlIntent": "Split save cards and contextual hints, distinct loading/sync/handoff/error headings",
+      "runtimeEvidence": "Controller uses a single comparison TMP_Text and generic Run/Error headings; no hint field",
+      "disposition": "Adapt presentation in separately directed Unity reconstruction",
+      "approvalStatus": "candidate",
+      "implementationConsequence": "Bind serialized texts/cards to existing session data; do not implement save rules in UI"
+    },
+    {
+      "htmlIntent": "Illustrated eight display slots and shopkeeper are decorative at startup",
+      "runtimeEvidence": "Bootstrap has no economy input or product animation owner",
+      "disposition": "One text-free illustration is appropriate here; no state-dependent product display or animation is claimed",
+      "approvalStatus": "candidate",
+      "implementationConsequence": "Keep live UI separate; split illustration later only if startup animation becomes required"
+    }
+  ],
+  "qaScenarios": [
+    {
+      "id": "google-cancel",
+      "preconditions": "Welcome",
+      "event": "Google cancel",
+      "expectedUIState": "Welcome; guest still available",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No account save mutation",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "guest",
+      "preconditions": "Welcome",
+      "event": "Play as guest",
+      "expectedUIState": "Local initialization then Main",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No Firebase account or write",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "conflict-cloud",
+      "preconditions": "Two saves",
+      "event": "Use Google progress",
+      "expectedUIState": "Account initialization",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No merging",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "conflict-device",
+      "preconditions": "Two saves",
+      "event": "Use device progress then confirm",
+      "expectedUIState": "Backup then fenced account replacement",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No replacement on first click",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "handoff",
+      "preconditions": "Other device active",
+      "event": "Play here",
+      "expectedUIState": "Wait for final save/release or expiry",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No stale snapshot overwrite",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "offline",
+      "preconditions": "Account connection fails",
+      "event": "Retry connection",
+      "expectedUIState": "Paused until authoritative restore",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No offline account mutation",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "recovery",
+      "preconditions": "Both local saves unreadable",
+      "event": "Start new guest then Back",
+      "expectedUIState": "Recovery screen; preserved files",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No fresh game until confirmed",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "sign-out",
+      "preconditions": "Account controls",
+      "event": "Sign out",
+      "expectedUIState": "Separate guest restored after flush",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No account-to-guest copy",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    },
+    {
+      "id": "busy",
+      "preconditions": "Pending operation",
+      "event": "Repeated button input",
+      "expectedUIState": "No actionable controls",
+      "expectedSideEffects": "Only declared owner operations in Unity; preview has none",
+      "forbiddenSideEffects": "No duplicate operation",
+      "relatedActionIds": [
+        "Primary",
+        "Secondary",
+        "Tertiary"
+      ]
+    }
+  ],
+  "modules": {
+    "stateMachines": {
+      "owner": "BootstrapController",
+      "states": [
+        {
+          "state": "welcome",
+          "actions": {
+            "Primary": "Google(true)",
+            "Secondary": "Guest"
+          },
+          "entry": "No remembered choice or login cancellation",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "loading",
+          "actions": {},
+          "entry": "Local identity/save initialization",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "syncing",
+          "actions": {},
+          "entry": "Google authentication/cloud initialization",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "conflict",
+          "actions": {
+            "Primary": "useGuest=false; ContinueAccount",
+            "Secondary": "ConfirmReplacement",
+            "Tertiary": "Guest"
+          },
+          "entry": "AskGuestChoice",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "replace",
+          "actions": {
+            "Primary": "useGuest=true; ContinueAccount",
+            "Secondary": "ChooseProgress"
+          },
+          "entry": "Player selects device progress",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "device",
+          "actions": {
+            "Primary": "Enter(true)",
+            "Secondary": "Guest"
+          },
+          "entry": "OtherDevice",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "handoff",
+          "actions": {},
+          "entry": "Player requests Play here",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "offline",
+          "actions": {
+            "Primary": "Google(googleInteractive)",
+            "Secondary": "Guest"
+          },
+          "entry": "Lost connection or blocked account",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "error",
+          "actions": {
+            "Primary": "Google(googleInteractive)",
+            "Secondary": "Guest"
+          },
+          "entry": "Sign-in or initialization failure",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "recovery",
+          "actions": {
+            "Primary": "Guest",
+            "Secondary": "Google(true)",
+            "Tertiary": "Fresh confirmation"
+          },
+          "entry": "GuestNeedsRecovery",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "fresh",
+          "actions": {
+            "Primary": "PlayerSessionHost.StartFreshGuest; EnterMain",
+            "Secondary": "Recovery"
+          },
+          "entry": "Player selects new guest",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        },
+        {
+          "state": "account",
+          "actions": {
+            "Primary": "SignOut",
+            "Secondary": "EnterMain"
+          },
+          "entry": "AccountMenuRequested and Account != null",
+          "exit": "Assigned action or successful/failed asynchronous completion"
+        }
+      ],
+      "preview": "Fixture actions only. Loading states never auto-complete; use review selector for outcomes. No real Google popup, persistence or Main scene."
+    },
+    "asyncOperations": {
+      "owner": "BootstrapController.Run + PlayerSessionHost",
+      "busy": "No action re-entry, spinner is indeterminate (no invented percentage)",
+      "cancellation": "OperationCanceledException returns Welcome",
+      "timeout": "Controller shows Still connecting after 15 seconds; host handoff retries bounded to 45 seconds; account unacknowledged saves block gameplay",
+      "staleResults": "Ownership generation and cloud revision validated by save layer before application",
+      "failureRecovery": "Retry, return to separate guest, or compare updated saves",
+      "teardown": "Controller ignores UI updates after destruction; listener teardown in OnDestroy"
+    },
+    "persistence": {
+      "owner": "LocalProfiles, CheckpointStore, AccountSession, FirestoreSaveStore",
+      "guest": "Local save only; no Firebase account or document",
+      "account": "user/{firebaseUid}; versioned full snapshot and checksum; UID-isolated checkpoints",
+      "selection": "Never merge currencies, purchases or receipts; preserve recovery backup before replacement",
+      "authority": "30-second renewable ownership lease; generation and expected revision fence writes",
+      "acknowledgement": "Saved only after server acknowledgement",
+      "recovery": "Retain interrupted pending checkpoints; retry only valid ownership/base revision; preserve superseded checkpoint evidence",
+      "signOut": "Flush/release then restore separate guest; never copy account into guest"
+    },
+    "accessibilityAndPresentation": {
+      "labels": "Live semantic headings and named buttons; decorative art hidden from accessibility tree",
+      "focus": "Visible focus ring and heading focus after preview state changes",
+      "touchTargets": "At least 48 CSS pixels at phone widths",
+      "motion": "Indeterminate spinner; static ring with prefers-reduced-motion",
+      "localization": "All copy editable; fixture summaries may be replaced by localized bindings",
+      "safeArea": "Native safe-area handling deferred to Unity reconstruction; HTML viewport tests are not device proof"
+    }
+  }
+}
+</script>
+  <script src="preview.js" data-handoff-role="preview-only"></script>
+</body>
+</html>

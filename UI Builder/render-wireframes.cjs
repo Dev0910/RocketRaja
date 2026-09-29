@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path'),{pathToFileURL}=require('url');
+const {chromium}=require('C:/Users/Dev/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});let p=await b.newPage({viewport:{width:1080,height:2200}});for(const n of Object.keys(require('./screen-specs.json'))){const d=path.join(__dirname,'Wireframes',n);await p.goto(pathToFileURL(path.join(d,'wireframe-v2.svg')).href);await p.screenshot({path:path.join(d,'wireframe-v2.png')});}await b.close()})();

@@ -1,0 +1,10 @@
+PASS Main scene booted
+PASS Tap earnings rise straight without drift or bounce
+PASS Tap earnings fade throughout the 900ms flight
+CAPTURE 08-tap-mid 1080x2400
+PASS Tap earnings disappear after 900ms
+PASS Rapid taps reuse six authored labels without growing the hierarchy
+PASS Enabling Reduced Motion cancels flying tap labels
+PASS Reduced Motion keeps tap income readable without moving or fading
+PASS Static reduced-motion tap labels hide after 650ms
+SMOKE SUCCEEDED

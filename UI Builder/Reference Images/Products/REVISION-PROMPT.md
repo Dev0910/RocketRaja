@@ -1,0 +1,3 @@
+# Built-in image_gen revision v2
+
+Edit image 1 Products reference with only these corrections from detailed review; keep its lower panel style, structure and all other content. Image 2 is actual existing Home HTML: copy its upper stall composition including settings TOP LEFT, cash, eight slots, shopkeeper bottom right and exact same painted navigation icons: Player shopkeeper, Products shelf, Legacy gold medal. Retain three labels and selected Products state. Upper scene persistent across all tabs, no character omission or rank header. Correct Chakri income to ₹179.2 / sec and next level price to ₹8.6K. Preserve portrait composition, Gouache Storybook painted textures, readable typography. Do not add any extra mechanics.

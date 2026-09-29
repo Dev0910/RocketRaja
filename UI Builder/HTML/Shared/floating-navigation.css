@@ -1,0 +1,47 @@
+/* Approved Floating Tickets navigation, solid Ivory Bazaar surface. */
+html body :is(.app,.game){
+  --navigation-height:max(52px,calc(50px * var(--scale)));
+  --navigation-previous-height:max(48px,calc(58px * var(--scale)));
+  --navigation-reclaimed:max(0px,calc(var(--navigation-previous-height) - var(--navigation-height)));
+}
+html body .app{--navigation-previous-height:max(64px,calc(67px * var(--scale)))}
+@media(max-height:600px){html body .app{--navigation-previous-height:64px}}
+/* Give the saved height to the lower UI, keeping the approved stall geometry. */
+html body :is(.app,.game) .dashboard{padding-bottom:calc(3px * var(--scale) + var(--navigation-reclaimed))}
+html body :is(.app,.game) .navigation{
+  height:var(--navigation-height);min-height:52px;flex:none;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  width:100%;padding:2px calc(8px * var(--scale));gap:calc(7px * var(--scale));
+  position:relative;isolation:isolate;
+  background:#fff4db var(--paper);border:0;box-shadow:none;
+}
+html body :is(.app,.game) .navigation::before,
+html body :is(.app,.game) .navigation::after{display:none}
+html body :is(.app,.game) .navigation button,
+html body :is(.app,.game) .navigation button[aria-pressed=true]{
+  position:relative;isolation:isolate;z-index:1;display:flex;align-items:center;justify-content:center;
+  width:100%;height:100%;min-width:48px;min-height:48px;padding:0;
+  background:none;border:0;border-image:none;border-radius:0;box-shadow:none;
+  color:#164b80;filter:none;cursor:pointer;
+}
+html body :is(.app,.game) .navigation button::before,
+html body :is(.app,.game) .navigation button+button::before{display:none}
+html body :is(.app,.game) .navigation button::after{
+  content:'';position:absolute;z-index:-1;inset:1px 0;
+  border:1px solid transparent;pointer-events:none;
+  border-image:url('folk/blue.svg') 24 fill / calc(10px * var(--scale)) / 0 stretch;
+}
+html body :is(.app,.game) .navigation button[aria-pressed=true]::after{border-image-source:url('ivory/nav-blue-selected.svg')}
+html body :is(.app,.game) .navigation button:focus-visible{outline:2px solid #164b80;outline-offset:-2px;border-radius:5px}
+html body :is(.app,.game) .navigation button:active{transform:translateY(1px)}
+html body :is(.app,.game) .navigation strong{display:none}
+html body :is(.app,.game) .navigation :is(button>svg,button>img,.portrait){
+  width:calc(34px * var(--scale));height:calc(36px * var(--scale));
+  object-fit:contain;overflow:hidden;flex:none;pointer-events:none;
+}
+html body .game .navigation .portrait img{position:static;width:100%;height:100%;object-fit:contain;transform:none}
+/* The selected ticket grows upward; other tabs retain their compact size. */
+html body .app .navigation:has(button[aria-pressed=true]){height:calc(var(--navigation-height) + 8px * var(--scale))}
+html body .app .navigation button{align-self:end;height:calc(var(--navigation-height) - 4px)}
+html body .app .navigation button[aria-pressed=true]{height:100%}
+html body .app .navigation button[aria-pressed=true]>:is(svg,img){width:calc(40px * var(--scale));height:calc(43px * var(--scale))}

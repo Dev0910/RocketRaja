@@ -1,0 +1,870 @@
+[
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "welcome",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "loading",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "syncing",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use Google progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Use device progress…",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "conflict",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use device progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "replace",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Play here",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "device",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "handoff",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Retry connection",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "offline",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try Google again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "error",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Start a new guest game…",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "recovery",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Start fresh",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "fresh",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign out",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back to my shop",
+        "visible": true
+      }
+    ],
+    "height": 540,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "account",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "welcome",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "loading",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "syncing",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use Google progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Use device progress…",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "conflict",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use device progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "replace",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Play here",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "device",
+    "width": 360
+  },
+  {
+    "buttons": [],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "handoff",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Retry connection",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "offline",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try Google again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "error",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Start a new guest game…",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "recovery",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Start fresh",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "fresh",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign out",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back to my shop",
+        "visible": true
+      }
+    ],
+    "height": 640,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "account",
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "welcome",
+    "width": 390
+  },
+  {
+    "buttons": [],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "loading",
+    "width": 390
+  },
+  {
+    "buttons": [],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "syncing",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use Google progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Use device progress…",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "conflict",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Use device progress",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "replace",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Play here",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "device",
+    "width": 390
+  },
+  {
+    "buttons": [],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "handoff",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Retry connection",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "offline",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try Google again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "error",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Try again",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Start a new guest game…",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "recovery",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Start fresh",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "fresh",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 48,
+        "label": "Sign out",
+        "visible": true
+      },
+      {
+        "height": 48,
+        "label": "Back to my shop",
+        "visible": true
+      }
+    ],
+    "height": 844,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "account",
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "height": 118.4375,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "welcome",
+    "width": 1080
+  },
+  {
+    "buttons": [],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "loading",
+    "width": 1080
+  },
+  {
+    "buttons": [],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "syncing",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Use Google progress",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Use device progress…",
+        "visible": true
+      },
+      {
+        "height": 65.328125,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "conflict",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Use device progress",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "replace",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Play here",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "device",
+    "width": 1080
+  },
+  {
+    "buttons": [],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "handoff",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Retry connection",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Return to guest",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "offline",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Try Google again",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Play as guest",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "error",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Try again",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Sign in with Google",
+        "visible": true
+      },
+      {
+        "height": 65.328125,
+        "label": "Start a new guest game…",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "recovery",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Start fresh",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Back",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "fresh",
+    "width": 1080
+  },
+  {
+    "buttons": [
+      {
+        "height": 104.109375,
+        "label": "Sign out",
+        "visible": true
+      },
+      {
+        "height": 104.109375,
+        "label": "Back to my shop",
+        "visible": true
+      }
+    ],
+    "height": 2200,
+    "images": true,
+    "overflow": false,
+    "overlap": false,
+    "state": "account",
+    "width": 1080
+  }
+]

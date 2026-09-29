@@ -1,0 +1,4 @@
+PASS Native loading spinner rotates on its authored transform
+PASS Leaving loading hides the existing spinner
+PASS State transitions retain all UI objects
+PASS Press feedback moves and restores the authored label

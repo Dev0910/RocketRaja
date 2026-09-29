@@ -1,0 +1,10 @@
+CompilationFailed=False
+DuplicateEDM=False
+Firebase.Analytics=True
+Firebase.Crashlytics=True
+Firebase.RemoteConfig=True
+Firebase.Auth=True
+Firebase.Firestore=True
+Firebase.AppCheck=True
+Google.JarResolver=True
+GoogleMobileAds.Editor=True

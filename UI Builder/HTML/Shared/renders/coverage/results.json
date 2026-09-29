@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "state": "first-shelf",
+      "result": "pass"
+    },
+    {
+      "state": "partial-shop",
+      "result": "pass"
+    },
+    {
+      "state": "showroom",
+      "result": "pass"
+    },
+    {
+      "state": "display-25",
+      "result": "pass"
+    },
+    {
+      "state": "display-100",
+      "result": "pass"
+    },
+    {
+      "state": "all-displays",
+      "result": "pass"
+    },
+    {
+      "state": "post-prestige",
+      "result": "pass"
+    },
+    {
+      "state": "sponsor-active",
+      "result": "pass"
+    },
+    {
+      "state": "sponsor-expiring",
+      "result": "pass"
+    },
+    {
+      "state": "sponsor-expired",
+      "result": "pass"
+    },
+    {
+      "state": "save-failed",
+      "result": "pass"
+    },
+    {
+      "state": "backup-recovered",
+      "result": "pass"
+    },
+    {
+      "state": "purchase-success",
+      "result": "pass"
+    },
+    {
+      "state": "unlockable-success",
+      "result": "pass"
+    },
+    {
+      "state": "buy-all-success",
+      "result": "pass"
+    },
+    {
+      "state": "perk-success",
+      "result": "pass"
+    },
+    {
+      "state": "display-upgraded",
+      "result": "pass"
+    },
+    {
+      "state": "skill-activated",
+      "result": "pass"
+    },
+    {
+      "state": "reward-success",
+      "result": "pass"
+    },
+    {
+      "state": "prestige-success",
+      "result": "pass"
+    },
+    {
+      "state": "tap-feedback",
+      "result": "pass"
+    },
+    {
+      "state": "ambient",
+      "result": "pass"
+    }
+  ],
+  "errors": [],
+  "verified": [
+    "Sponsor expires and re-enables",
+    "Milestones follow ownership and display completion",
+    "Legacy retained after prestige",
+    "Tier artwork reaches detail dialog",
+    "Tap feedback leaves cash unchanged",
+    "Reduced motion suppresses ambient and celebrations"
+  ]
+}

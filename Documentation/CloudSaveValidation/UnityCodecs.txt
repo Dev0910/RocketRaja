@@ -1,0 +1,7 @@
+PASS: New guest initializes without Firebase services
+PASS: Guest survives closing and reopening through Unity codec
+PASS: Unity checkpoint preserves upload metadata and follow-up snapshot atomically
+PASS: Account snapshot retains large-number precision
+PASS: Wrong account cannot load a checkpoint
+PASS: Damaged guest data is not silently reset
+PASS: Explicit fresh start preserves damaged evidence

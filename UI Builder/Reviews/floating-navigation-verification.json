@@ -1,0 +1,50 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "viewport": [
+        360,
+        540
+      ],
+      "world": 227,
+      "beforeNav": 64,
+      "newNav": 52
+    },
+    {
+      "viewport": [
+        360,
+        640
+      ],
+      "world": 324,
+      "beforeNav": 67,
+      "newNav": 52
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "world": 501.875,
+      "beforeNav": 72.578125,
+      "newNav": 54.15625
+    },
+    {
+      "viewport": [
+        450,
+        916
+      ],
+      "world": 521.5,
+      "beforeNav": 83.75,
+      "newNav": 62.5
+    },
+    {
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": 1252,
+      "beforeNav": 201,
+      "newNav": 150
+    }
+  ]
+}

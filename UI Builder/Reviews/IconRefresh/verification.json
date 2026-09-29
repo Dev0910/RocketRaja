@@ -1,0 +1,2822 @@
+{
+  "status": "pass",
+  "metadata": {
+    "Home": "efc4881f2cd05d5b078a6e5333cafbff534b0c0e75781d48bfa62737068ca766",
+    "Player": "efc4881f2cd05d5b078a6e5333cafbff534b0c0e75781d48bfa62737068ca766",
+    "Products": "3b83db83d3f08b166eb8438906f9ee4501e0d7c75472fcd479d4aa95b2bf2268",
+    "Legacy": "9ee6b83cdb081a201631a7ae83d196beaf0952d8b0951966cea0095f634a67d8",
+    "Statistics": "8aec5a032217336966bf4afe61728943168dc29ec1a2fb7e8b19a89abbd0df23",
+    "Skills": "9f988014791d45d367f1c51dafb0573c877df15560ae73a932ebe52512d587d4",
+    "ProductDetail": "30e30f3a56ffd8b4a144e5e0c906cf31c977f700f1720145256e9823c9d67304",
+    "Prestige": "d108bdee6d1f64b721f87993ab80e89fea52605b4054edc666904476087d725b",
+    "Settings": "04f008f7c7598ed2e67dbae86a36795679570e66c0d8428153283406ea1db0e4",
+    "Offline": "59644d0f61e84f5a78c62c7c9fb6028052abdb1ddf4790aedc740d95e7f701c8",
+    "Sponsor": "0dcb4dd0e92cbff3b590b405b2685d1aa885b6dda6816365eadc06759f7ebfdd",
+    "Privacy": "980ba9452cc64d955d280239c777185b36a811be49766ad7d486c0d47e2d4ebb",
+    "SaveRecovery": "1a9259bca8828e34facc744c2830ebd7894fd4a26bf56301062b962fd19502db",
+    "StandaloneHome": "6c755fd846a8b02ce7fc5814b7b7ea0d6dd31e20b7aa8416a68e7ff525623278"
+  },
+  "checks": [
+    {
+      "screen": "Home",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "#icon-burst",
+          "width": 18,
+          "height": 18
+        },
+        {
+          "name": "#icon-coins",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-tap",
+          "width": 27,
+          "height": 34
+        },
+        {
+          "name": "#icon-burst",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-hands",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-order",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-play",
+          "width": 28,
+          "height": 28
+        },
+        {
+          "name": "#icon-player",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 37,
+          "height": 38
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Home",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 32.84375,
+          "height": 32.84375
+        },
+        {
+          "name": "#icon-burst",
+          "width": 19.65625,
+          "height": 19.65625
+        },
+        {
+          "name": "#icon-coins",
+          "width": 43.328125,
+          "height": 43.328125
+        },
+        {
+          "name": "#icon-tap",
+          "width": 29.25,
+          "height": 36.828125
+        },
+        {
+          "name": "#icon-burst",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-hands",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-order",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-play",
+          "width": 30.328125,
+          "height": 30.328125
+        },
+        {
+          "name": "#icon-player",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 40.078125,
+          "height": 41.15625
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Home",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 38.5,
+          "height": 38.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 23,
+          "height": 23
+        },
+        {
+          "name": "#icon-coins",
+          "width": 50,
+          "height": 50
+        },
+        {
+          "name": "#icon-tap",
+          "width": 33.75,
+          "height": 42.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-hands",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-order",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-play",
+          "width": 35,
+          "height": 35
+        },
+        {
+          "name": "#icon-player",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 46.25,
+          "height": 47.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Home",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "#icon-burst",
+          "width": 58,
+          "height": 58
+        },
+        {
+          "name": "#icon-coins",
+          "width": 120,
+          "height": 120
+        },
+        {
+          "name": "#icon-tap",
+          "width": 81,
+          "height": 102
+        },
+        {
+          "name": "#icon-burst",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-hands",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-order",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-play",
+          "width": 84,
+          "height": 84
+        },
+        {
+          "name": "#icon-player",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 111,
+          "height": 114
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-stats",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "#icon-skills",
+          "width": 29,
+          "height": 29
+        },
+        {
+          "name": "#icon-tap",
+          "width": 32,
+          "height": 37
+        },
+        {
+          "name": "#icon-prestige",
+          "width": 32,
+          "height": 37
+        },
+        {
+          "name": "#icon-player",
+          "width": 42,
+          "height": 44
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 37,
+          "height": 38
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 32.84375,
+          "height": 32.84375
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-stats",
+          "width": 31.40625,
+          "height": 31.40625
+        },
+        {
+          "name": "#icon-skills",
+          "width": 31.40625,
+          "height": 31.40625
+        },
+        {
+          "name": "#icon-tap",
+          "width": 34.65625,
+          "height": 40.078125
+        },
+        {
+          "name": "#icon-prestige",
+          "width": 34.65625,
+          "height": 40.078125
+        },
+        {
+          "name": "#icon-player",
+          "width": 45.5,
+          "height": 47.65625
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 40.078125,
+          "height": 41.15625
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 38.5,
+          "height": 38.5
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-stats",
+          "width": 36.25,
+          "height": 36.25
+        },
+        {
+          "name": "#icon-skills",
+          "width": 36.25,
+          "height": 36.25
+        },
+        {
+          "name": "#icon-tap",
+          "width": 40,
+          "height": 46.25
+        },
+        {
+          "name": "#icon-prestige",
+          "width": 40,
+          "height": 46.25
+        },
+        {
+          "name": "#icon-player",
+          "width": 52.5,
+          "height": 55
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 46.25,
+          "height": 47.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Player",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-stats",
+          "width": 87,
+          "height": 87
+        },
+        {
+          "name": "#icon-skills",
+          "width": 87,
+          "height": 87
+        },
+        {
+          "name": "#icon-tap",
+          "width": 96,
+          "height": 111
+        },
+        {
+          "name": "#icon-prestige",
+          "width": 96,
+          "height": 111
+        },
+        {
+          "name": "#icon-player",
+          "width": 126,
+          "height": 132
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 111,
+          "height": 114
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-player",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 42,
+          "height": 44
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 37,
+          "height": 38
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 32.84375,
+          "height": 32.84375
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-player",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 45.5,
+          "height": 47.65625
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 40.078125,
+          "height": 41.15625
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 38.5,
+          "height": 38.5
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-player",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 52.5,
+          "height": 55
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 46.25,
+          "height": 47.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Products",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-player",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 126,
+          "height": 132
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 111,
+          "height": 114
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-tap",
+          "width": 32,
+          "height": 40
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 32,
+          "height": 40
+        },
+        {
+          "name": "#icon-clock",
+          "width": 32,
+          "height": 40
+        },
+        {
+          "name": "#icon-cooldown",
+          "width": 32,
+          "height": 40
+        },
+        {
+          "name": "#icon-player",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 42,
+          "height": 44
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 32.84375,
+          "height": 32.84375
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-tap",
+          "width": 34.65625,
+          "height": 43.328125
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 34.65625,
+          "height": 43.328125
+        },
+        {
+          "name": "#icon-clock",
+          "width": 34.65625,
+          "height": 43.328125
+        },
+        {
+          "name": "#icon-cooldown",
+          "width": 34.65625,
+          "height": 43.328125
+        },
+        {
+          "name": "#icon-player",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 45.5,
+          "height": 47.65625
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 38.5,
+          "height": 38.5
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-tap",
+          "width": 40,
+          "height": 50
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 40,
+          "height": 50
+        },
+        {
+          "name": "#icon-clock",
+          "width": 40,
+          "height": 50
+        },
+        {
+          "name": "#icon-cooldown",
+          "width": 40,
+          "height": 50
+        },
+        {
+          "name": "#icon-player",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 52.5,
+          "height": 55
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Legacy",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "#icon-chevron",
+          "width": 22,
+          "height": 22
+        },
+        {
+          "name": "#icon-tap",
+          "width": 96,
+          "height": 120
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 96,
+          "height": 120
+        },
+        {
+          "name": "#icon-clock",
+          "width": 96,
+          "height": 120
+        },
+        {
+          "name": "#icon-cooldown",
+          "width": 96,
+          "height": 120
+        },
+        {
+          "name": "#icon-player",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 126,
+          "height": 132
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Statistics",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "name": "#icon-burst",
+          "width": 38,
+          "height": 42
+        },
+        {
+          "name": "#icon-hands",
+          "width": 38,
+          "height": 42
+        },
+        {
+          "name": "#icon-order",
+          "width": 38,
+          "height": 42
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        },
+        {
+          "name": "#icon-burst",
+          "width": 41.15625,
+          "height": 45.5
+        },
+        {
+          "name": "#icon-hands",
+          "width": 41.15625,
+          "height": 45.5
+        },
+        {
+          "name": "#icon-order",
+          "width": 41.15625,
+          "height": 45.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 47.5,
+          "height": 52.5
+        },
+        {
+          "name": "#icon-hands",
+          "width": 47.5,
+          "height": 52.5
+        },
+        {
+          "name": "#icon-order",
+          "width": 47.5,
+          "height": 52.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Skills",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "name": "#icon-burst",
+          "width": 114,
+          "height": 126
+        },
+        {
+          "name": "#icon-hands",
+          "width": 114,
+          "height": 126
+        },
+        {
+          "name": "#icon-order",
+          "width": 114,
+          "height": 126
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "ProductDetail",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        480,
+        360,
+        60
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        781.171875,
+        390,
+        62.828125
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        843.5,
+        450,
+        72.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Prestige",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2026,
+        1080,
+        174
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Settings",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "name": "#icon-coins",
+          "width": 66,
+          "height": 66
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        },
+        {
+          "name": "#icon-coins",
+          "width": 71.5,
+          "height": 71.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        },
+        {
+          "name": "#icon-coins",
+          "width": 82.5,
+          "height": 82.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Offline",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "name": "#icon-coins",
+          "width": 198,
+          "height": 198
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        },
+        {
+          "name": "#icon-burst",
+          "width": 66,
+          "height": 66
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        },
+        {
+          "name": "#icon-burst",
+          "width": 71.5,
+          "height": 71.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 82.5,
+          "height": 82.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Sponsor",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        },
+        {
+          "name": "#icon-burst",
+          "width": 198,
+          "height": 198
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 24,
+          "height": 24
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 22.1875,
+          "height": 22.1875
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 25.5,
+          "height": 25.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "Privacy",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-close",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        227
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        501.875
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        521.5
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "SaveRecovery",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1252
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "StandaloneHome",
+      "viewport": [
+        360,
+        540
+      ],
+      "world": [
+        0,
+        0,
+        360,
+        233
+      ],
+      "navigation": [
+        0,
+        488,
+        360,
+        52
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 30,
+          "height": 30
+        },
+        {
+          "name": "#icon-burst",
+          "width": 18,
+          "height": 18
+        },
+        {
+          "name": "#icon-coins",
+          "width": 29,
+          "height": 36
+        },
+        {
+          "name": "#icon-tap",
+          "width": 27,
+          "height": 34
+        },
+        {
+          "name": "#icon-burst",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-hands",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-order",
+          "width": 32,
+          "height": 32
+        },
+        {
+          "name": "#icon-play",
+          "width": 26,
+          "height": 26
+        },
+        {
+          "name": "#icon-burst",
+          "width": 45,
+          "height": 45
+        },
+        {
+          "name": "#icon-player",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 37,
+          "height": 38
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 37,
+          "height": 38
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "StandaloneHome",
+      "viewport": [
+        390,
+        844
+      ],
+      "world": [
+        0,
+        0,
+        390,
+        511.625
+      ],
+      "navigation": [
+        0,
+        789.84375,
+        390,
+        54.15625
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 32.84375,
+          "height": 32.84375
+        },
+        {
+          "name": "#icon-burst",
+          "width": 19.65625,
+          "height": 19.65625
+        },
+        {
+          "name": "#icon-coins",
+          "width": 31.40625,
+          "height": 39
+        },
+        {
+          "name": "#icon-tap",
+          "width": 29.25,
+          "height": 36.828125
+        },
+        {
+          "name": "#icon-burst",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-hands",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-order",
+          "width": 34.65625,
+          "height": 34.65625
+        },
+        {
+          "name": "#icon-play",
+          "width": 28.15625,
+          "height": 28.15625
+        },
+        {
+          "name": "#icon-burst",
+          "width": 48.75,
+          "height": 48.75
+        },
+        {
+          "name": "#icon-player",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 40.078125,
+          "height": 41.15625
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 40.078125,
+          "height": 41.15625
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "StandaloneHome",
+      "viewport": [
+        450,
+        916
+      ],
+      "world": [
+        0,
+        0,
+        450,
+        532.75
+      ],
+      "navigation": [
+        0,
+        853.5,
+        450,
+        62.5
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 38.5,
+          "height": 38.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 23,
+          "height": 23
+        },
+        {
+          "name": "#icon-coins",
+          "width": 36.25,
+          "height": 45
+        },
+        {
+          "name": "#icon-tap",
+          "width": 33.75,
+          "height": 42.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-hands",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-order",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "name": "#icon-play",
+          "width": 32.5,
+          "height": 32.5
+        },
+        {
+          "name": "#icon-burst",
+          "width": 56.25,
+          "height": 56.25
+        },
+        {
+          "name": "#icon-player",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 46.25,
+          "height": 47.5
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 46.25,
+          "height": 47.5
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    },
+    {
+      "screen": "StandaloneHome",
+      "viewport": [
+        1080,
+        2200
+      ],
+      "world": [
+        0,
+        0,
+        1080,
+        1279
+      ],
+      "navigation": [
+        0,
+        2050,
+        1080,
+        150
+      ],
+      "missingSymbols": [],
+      "icons": [
+        {
+          "name": "#icon-gear",
+          "width": 90,
+          "height": 90
+        },
+        {
+          "name": "#icon-burst",
+          "width": 58,
+          "height": 58
+        },
+        {
+          "name": "#icon-coins",
+          "width": 87,
+          "height": 108
+        },
+        {
+          "name": "#icon-tap",
+          "width": 81,
+          "height": 102
+        },
+        {
+          "name": "#icon-burst",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-hands",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-order",
+          "width": 96,
+          "height": 96
+        },
+        {
+          "name": "#icon-play",
+          "width": 78,
+          "height": 78
+        },
+        {
+          "name": "#icon-burst",
+          "width": 135,
+          "height": 135
+        },
+        {
+          "name": "#icon-player",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-shelf",
+          "width": 111,
+          "height": 114
+        },
+        {
+          "name": "#icon-legacy",
+          "width": 111,
+          "height": 114
+        }
+      ],
+      "smallTargets": [],
+      "overflow": false,
+      "navLabels": [
+        "Player",
+        "Products",
+        "Legacy"
+      ]
+    }
+  ],
+  "errors": []
+}

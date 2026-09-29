@@ -1,0 +1,31 @@
+/* Short, event-driven motion. The world and wallet never move with panels. */
+.app-inner{position:relative;isolation:isolate}
+html body [data-motion-exit][hidden]{display:var(--exit-display)!important}
+html body [data-motion-exit=panel]{z-index:5;pointer-events:none}
+html body [data-motion-exit=modal]{z-index:35}
+html body :is(.app,.game) .navigation{z-index:10}
+html body :is(.app,.game) :is(.action,.settings,.sponsor,.toggle,.player-icon,.collapse,.close){transition:transform 120ms ease-out,filter 160ms ease-out,background-color 160ms ease-out}
+html body :is(.app,.game) :is(.action,.settings,.sponsor,.toggle,.player-icon,.collapse,.close):enabled:active{transform:translateY(1px) scale(.98)}
+html body :is(.app,.game) .navigation button>.game-icon{transition:width 180ms ease-out,height 180ms ease-out,filter 160ms ease-out}
+html body :is(.app,.game) .navigation button::after{transition:filter 160ms ease-out}
+html body :is(.app,.game) .navigation button:active::after{filter:brightness(1.15)}
+html body :is(.app,.game) .skill-disc{transition:transform 140ms ease-out,box-shadow 180ms ease-out}
+html body :is(.app,.game) .skill:enabled:active .skill-disc{transform:scale(.93)}
+.product-display-track>span,.progress-fill{transition:width 360ms cubic-bezier(.2,.75,.25,1)}
+.player-quantity-options:not([hidden]){animation:quantity-reveal 170ms cubic-bezier(.2,.75,.25,1);transform-origin:top right}
+.app .message:not([hidden]),.app .toast:not([hidden]){animation:notice-reveal 180ms ease-out}
+@keyframes quantity-reveal{from{opacity:0;transform:translateY(7px) scaleY(.97)}to{opacity:1;transform:none}}
+@keyframes notice-reveal{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(hover:hover) and (pointer:fine){
+ html body :is(.app,.game) .navigation button:hover::after{filter:brightness(1.1)}
+ html body :is(.app,.game) .skill:enabled:hover .skill-disc{transform:translateY(-2px)}
+}
+html body :is(.app,.game)[data-reduced-motion=true] *,
+html body :is(.app,.game)[data-reduced-motion=true] *::before,
+html body :is(.app,.game)[data-reduced-motion=true] *::after{animation:none!important;transition:none!important}
+html body :is(.app,.game)[data-reduced-motion=true] button:active,
+html body :is(.app,.game)[data-reduced-motion=true] .skill-disc{transform:none!important}
+@media(prefers-reduced-motion:reduce){
+ html body :is(.app,.game) *,html body :is(.app,.game) *::before,html body :is(.app,.game) *::after{animation:none!important;transition:none!important}
+ html body :is(.app,.game) button:active,html body :is(.app,.game) .skill-disc{transform:none!important}
+}

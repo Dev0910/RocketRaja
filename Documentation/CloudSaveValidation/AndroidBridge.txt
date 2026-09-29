@@ -1,0 +1,45 @@
+
+C d 9	9	833	com.rocketrajagame.identity.GoogleSignInBridge
+M d 1	1	37	com.rocketrajagame.identity.GoogleSignInBridge void $r8$lambda$6XmuaiYapp_hL8f4kHM8Qfs0XA8(android.app.Activity,java.lang.Runnable)
+M d 1	1	37	com.rocketrajagame.identity.GoogleSignInBridge void -$$Nest$smreply(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+M d 1	1	38	com.rocketrajagame.identity.GoogleSignInBridge <init>()
+M d 1	1	54	com.rocketrajagame.identity.GoogleSignInBridge void cancel()
+M d 1	1	276	com.rocketrajagame.identity.GoogleSignInBridge void lambda$signIn$0(android.app.Activity,java.lang.String,java.lang.String)
+M d 1	1	105	com.rocketrajagame.identity.GoogleSignInBridge void lambda$signOut$1(android.app.Activity,java.lang.String,java.lang.String)
+M d 1	1	136	com.rocketrajagame.identity.GoogleSignInBridge void reply(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge void signIn(java.lang.String,java.lang.String)
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge void signOut(java.lang.String,java.lang.String)
+F d 0	0	10	com.rocketrajagame.identity.GoogleSignInBridge android.os.CancellationSignal cancellation
+C d 5	5	464	com.rocketrajagame.identity.GoogleSignInBridge$1
+M d 1	1	46	com.rocketrajagame.identity.GoogleSignInBridge$1 <init>(java.lang.String,java.lang.String)
+M d 1	1	64	com.rocketrajagame.identity.GoogleSignInBridge$1 void onError(androidx.credentials.exceptions.GetCredentialException)
+M d 1	1	41	com.rocketrajagame.identity.GoogleSignInBridge$1 void onError(java.lang.Object)
+M d 1	1	172	com.rocketrajagame.identity.GoogleSignInBridge$1 void onResult(androidx.credentials.GetCredentialResponse)
+M d 1	1	41	com.rocketrajagame.identity.GoogleSignInBridge$1 void onResult(java.lang.Object)
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$1 java.lang.String val$id
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$1 java.lang.String val$target
+C d 5	5	328	com.rocketrajagame.identity.GoogleSignInBridge$2
+M d 1	1	46	com.rocketrajagame.identity.GoogleSignInBridge$2 <init>(java.lang.String,java.lang.String)
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge$2 void onError(androidx.credentials.exceptions.ClearCredentialException)
+M d 1	1	41	com.rocketrajagame.identity.GoogleSignInBridge$2 void onError(java.lang.Object)
+M d 1	1	41	com.rocketrajagame.identity.GoogleSignInBridge$2 void onResult(java.lang.Object)
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge$2 void onResult(java.lang.Void)
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$2 java.lang.String val$id
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$2 java.lang.String val$target
+C d 2	2	205	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0 <init>(android.app.Activity,java.lang.String,java.lang.String)
+M d 1	1	48	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0 void run()
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0 android.app.Activity f$0
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0 java.lang.String f$1
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda0 java.lang.String f$2
+C d 2	2	205	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1
+M d 1	1	50	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1 <init>(android.app.Activity,java.lang.String,java.lang.String)
+M d 1	1	48	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1 void run()
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1 android.app.Activity f$0
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1 java.lang.String f$1
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda1 java.lang.String f$2
+C d 2	2	167	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda2
+M d 1	1	42	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda2 <init>(android.app.Activity)
+M d 1	1	40	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda2 void execute(java.lang.Runnable)
+F d 0	0	11	com.rocketrajagame.identity.GoogleSignInBridge$$ExternalSyntheticLambda2 android.app.Activity f$0
+

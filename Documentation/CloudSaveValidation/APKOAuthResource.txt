@@ -1,0 +1,4 @@
+
+>     resource 0x7f0f0049 string/default_web_client_id
+        () "259290147663-21gevt258mekmmqp6bhecfiquqij962k.apps.googleusercontent.com"
+

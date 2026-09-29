@@ -1,0 +1,6 @@
+Running isolated Firebase SDK acknowledgement regression…
+Legacy Source.Server stale reads: 0/100
+PASS 100 transaction reads confirmed the committed revision with an active listener
+PASS 200 confirmed account uploads, including in-flight follow-ups, without false pauses
+PASS final cloud snapshot contains all 200 taps; local checkpoint acknowledged
+Finished

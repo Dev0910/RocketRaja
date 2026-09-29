@@ -1,0 +1,20 @@
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.app #home-next{font-size:calc(11px * var(--s));text-overflow:ellipsis;overflow:hidden}
+.app .toast{bottom:calc(76px * var(--s));background:#fff4db;color:#164b80;border:2px solid #205685;border-radius:5px;box-shadow:0 5px 18px #16283c44;padding:calc(10px * var(--s)) calc(12px * var(--s))}
+.app .toast strong,.app .toast span{display:block}.app .toast strong{font-size:calc(13px * var(--s));font-weight:800}.app .toast span{font-size:calc(11px * var(--s));margin-top:4px}
+.app .toast[data-kind=warning]{background:#fff0d3;border-color:#a64d26;color:#743713}
+.app .toast[data-kind=success]{border-color:#28724e;color:#205b42;background:#f5f4db}
+.feedback-layer{position:absolute;inset:0;z-index:7;pointer-events:none;overflow:hidden}
+.cash-burst{position:absolute;top:65%;opacity:0;font:850 calc(24px * var(--s)) Outfit,Arial,sans-serif;color:#164b80;text-shadow:0 1px 2px #fff4db;white-space:nowrap}
+.celebration-spark{position:absolute;top:20%;left:50%;font-size:calc(15px * var(--s));color:#ffd465;opacity:0;text-shadow:0 0 6px #fff2ab}
+.celebration-spark:nth-of-type(3n){color:#f9a74a}
+.visitor-layer{position:absolute;left:0;right:0;bottom:0;height:9%;z-index:3;overflow:hidden;pointer-events:none;display:none}
+.visitor{position:absolute;bottom:-12%;left:-15%;color:#143450b3;font-size:calc(39px * var(--s));filter:blur(.4px)}
+.app[data-ambient=true] .visitor-layer{display:block}.app[data-ambient=true] .visitor-one{animation:visitor-walk 16s linear infinite}.app[data-ambient=true] .visitor-two{animation:visitor-walk 21s linear -9s infinite}
+.app[data-ambient=true] .shopkeeper{transform-origin:bottom center;animation:keeper-idle 4s ease-in-out infinite}
+.app[data-ambient=true] .app-inner[inert] :is(.visitor,.shopkeeper){animation-play-state:paused}
+@keyframes visitor-walk{from{left:-15%}to{left:110%}}
+@keyframes keeper-idle{0%,100%{transform:rotate(-.7deg)}50%{transform:rotate(.7deg)}}
+.app[data-reduced-motion=true] .visitor-layer{display:none}
+@media(prefers-reduced-motion:reduce){.visitor-layer{display:none!important}}
+.review-dock{max-height:calc(100dvh - 24px);overflow:auto}.review-dock select{max-width:100%}

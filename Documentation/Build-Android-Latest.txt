@@ -1,0 +1,7 @@
+Succeeded
+Output: C:\Unity\Projects\Incremental game\Builds\Android\Rocket Raja.apk
+Completed UTC: 2026-09-28T13:33:49.2793688Z
+749809119 bytes
+00:00:24.4531616
+0 errors
+15 warnings

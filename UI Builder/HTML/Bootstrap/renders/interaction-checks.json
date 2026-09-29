@@ -1,0 +1,86 @@
+[
+  {
+    "from": "welcome",
+    "button": "Play as guest",
+    "to": "loading",
+    "actual": "loading",
+    "passed": true
+  },
+  {
+    "from": "conflict",
+    "button": "Use Google progress",
+    "to": "syncing",
+    "actual": "syncing",
+    "passed": true
+  },
+  {
+    "from": "conflict",
+    "button": "Use device progress…",
+    "to": "replace",
+    "actual": "replace",
+    "passed": true
+  },
+  {
+    "from": "replace",
+    "button": "Back",
+    "to": "conflict",
+    "actual": "conflict",
+    "passed": true
+  },
+  {
+    "from": "replace",
+    "button": "Use device progress",
+    "to": "syncing",
+    "actual": "syncing",
+    "passed": true
+  },
+  {
+    "from": "device",
+    "button": "Play here",
+    "to": "handoff",
+    "actual": "handoff",
+    "passed": true
+  },
+  {
+    "from": "offline",
+    "button": "Retry connection",
+    "to": "syncing",
+    "actual": "syncing",
+    "passed": true
+  },
+  {
+    "from": "error",
+    "button": "Play as guest",
+    "to": "loading",
+    "actual": "loading",
+    "passed": true
+  },
+  {
+    "from": "recovery",
+    "button": "Start a new guest game…",
+    "to": "fresh",
+    "actual": "fresh",
+    "passed": true
+  },
+  {
+    "from": "fresh",
+    "button": "Back",
+    "to": "recovery",
+    "actual": "recovery",
+    "passed": true
+  },
+  {
+    "from": "fresh",
+    "button": "Start fresh",
+    "to": "loading",
+    "actual": "loading",
+    "passed": true
+  },
+  {
+    "from": "account",
+    "button": "Sign out",
+    "to": "loading",
+    "actual": "loading",
+    "passed": true
+  }
+]

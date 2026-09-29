@@ -1,0 +1,237 @@
+[
+  {
+    "screen": "Player",
+    "wireframe": "Wireframes/Player/wireframe-v2.svg",
+    "wireframeSHA256": "44efb68b0602f2a53b424ee537168284e03df2370473ab942d545f2ec1edbf5e",
+    "reference": "Reference Images/Player/reference-v2.png",
+    "referenceSHA256": "dc006ceb438c8421e7e33960cdc3b5a1a43eda460de440d672238c8470d23452",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Player/player.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new",
+      "unaffordable",
+      "purchased"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Products",
+    "wireframe": "Wireframes/Products/wireframe-v2.svg",
+    "wireframeSHA256": "fda960370e8f2ae292e966f16743d08c8533388af6645c1d87578724171616b9",
+    "reference": "Reference Images/Products/reference-v2.png",
+    "referenceSHA256": "d528dd543c0d6f8bcbf50988135e1dbfd83e9e099facc8936d16b9d596ee7ff4",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Products/products.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new",
+      "unaffordable",
+      "premium",
+      "max-level"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Legacy",
+    "wireframe": "Wireframes/Legacy/wireframe-v2.svg",
+    "wireframeSHA256": "426535c6c646bc044e5ff1366ddda58de0f7b5a9ef957dcaa4f216683482156a",
+    "reference": "Reference Images/Legacy/reference-v3.png",
+    "referenceSHA256": "3574319995a37a3489f91e33c5bce12c70ccfc850f3e127bcbe7e8c67266f2e9",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Legacy/legacy.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new",
+      "unaffordable",
+      "mastered"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Statistics",
+    "wireframe": "Wireframes/Statistics/wireframe-v2.svg",
+    "wireframeSHA256": "e85877334e2b1b4304533e73e968dd952d76d905acbf456246afc67d48aef40e",
+    "reference": "Reference Images/Statistics/reference-v2.png",
+    "referenceSHA256": "f065304a26a324f129f74b889efa3c5e3e23e839264ca7ca7f8e528b73f6be4d",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Statistics/statistics.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Skills",
+    "wireframe": "Wireframes/Skills/wireframe-v2.svg",
+    "wireframeSHA256": "b6ff8c98a079eb6c9671f904cf33d63b0723fc7e51d31d4f5beead13357cd752",
+    "reference": "Reference Images/Skills/reference-v2.png",
+    "referenceSHA256": "e5fd746da34de972e6a5f89a94d0ae929a986d29129269721019eff08f5bf7c2",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Skills/skills.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new",
+      "ready",
+      "active",
+      "cooldown"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "ProductDetail",
+    "wireframe": "Wireframes/ProductDetail/wireframe-v2.svg",
+    "wireframeSHA256": "4f59986bb98c81c6e7a335326bedb3dd25d5525c9c8087e75a1b7255fc874ded",
+    "reference": "Reference Images/ProductDetail/reference-v2.png",
+    "referenceSHA256": "bad906ac2448a1bf59eeac65247d7c2b7aee7eecfcbb2fd1774869f0ec04dc03",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/ProductDetail/productdetail.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "new",
+      "premium"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Prestige",
+    "wireframe": "Wireframes/Prestige/wireframe-v2.svg",
+    "wireframeSHA256": "5873ff0c5fcda8f9f17a3572cc774405dc2c93b00a12227f0f4777354ecc4507",
+    "reference": "Reference Images/Prestige/reference-v1.png",
+    "referenceSHA256": "65676df5aa5d6ccf87bd3dfe9e3b216e898af063c64767159a20139a3ade23c8",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Prestige/prestige.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "locked",
+      "ready",
+      "stale"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Settings",
+    "wireframe": "Wireframes/Settings/wireframe-v2.svg",
+    "wireframeSHA256": "df0434d6dd42a0a99b0b598b3df955fb52e903c2406c37eea7431fed0f45096a",
+    "reference": "Reference Images/Settings/reference-v1.png",
+    "referenceSHA256": "ae73b9fe92e2b531e1d2a08853a99083b27a9e4a9c76cc826349a03b4f0ba87d",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Settings/settings.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "active",
+      "consent-required"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Offline",
+    "wireframe": "Wireframes/Offline/wireframe-v2.svg",
+    "wireframeSHA256": "d7654261fa958c333490befa5bdb92eee6ae24b8d04679d99b7ca7f3b376a344",
+    "reference": "Reference Images/Offline/reference-v1.png",
+    "referenceSHA256": "f9aa264622d96a31a13445b3f987888be161fd7bbfca1c1a3dab9ac0cee14c3d",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Offline/offline.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "unavailable",
+      "cancelled",
+      "failed",
+      "consumed"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Sponsor",
+    "wireframe": "Wireframes/Sponsor/wireframe-v2.svg",
+    "wireframeSHA256": "1e837b71c594e547f2b69baec3cd2b957de749f3e0b4e4ebe11f693b4a1f2cd0",
+    "reference": "Reference Images/Sponsor/reference-v1.png",
+    "referenceSHA256": "8153af27a9f11af655edd141707dd3023e0f46d9d1b5b795a83a911f3bb2c3af",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Sponsor/sponsor.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "active",
+      "unavailable",
+      "cancelled",
+      "failed"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "Privacy",
+    "wireframe": "Wireframes/Privacy/wireframe-v2.svg",
+    "wireframeSHA256": "c409ea6b43ada80d27a7edb86c515d9166a5451d4b628a57f9d8da17e70ed517",
+    "reference": "Reference Images/Privacy/reference-v1.png",
+    "referenceSHA256": "4d7e373692ad3c2080bb25eaebd33077d87e49a9151e2d5f81198ac4b763674f",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/Privacy/privacy.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed",
+      "consent-required"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  },
+  {
+    "screen": "SaveRecovery",
+    "wireframe": "Wireframes/SaveRecovery/wireframe-v2.svg",
+    "wireframeSHA256": "8ddc0e883a0b5c4525d22d356e8745b6b96ee4c7e3ed23296631eeb0c6780b85",
+    "reference": "Reference Images/SaveRecovery/reference-v1.png",
+    "referenceSHA256": "e5ab3dbdd4d75d33762d8de86e45c6783fbe01411987b60783af3fea50078a0c",
+    "stageReview": "accepted by delegated design reviewer; no claim of user visual approval",
+    "html": "HTML/SaveRecovery/saverecovery.html",
+    "htmlApproval": "candidate",
+    "states": [
+      "progressed"
+    ],
+    "currentStyleReference": "Reference Images/Player/Folk Variations/A-ivory-bazaar.png",
+    "currentStyleSHA256": "e513897d169b72d0b66d91bf2b20570629d9438034f9fa99d254e9aa65305fa1",
+    "currentStyleApproval": "User-selected A — Ivory Bazaar; all-screen rollout explicitly authorized",
+    "currentHTMLReview": "Detailed local code, pixel and browser review; no native Unity verification"
+  }
+]
