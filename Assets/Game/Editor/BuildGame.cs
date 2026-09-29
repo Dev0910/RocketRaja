@@ -44,7 +44,6 @@ namespace RocketRaja.Editor
             PlayerSettings.companyName = "Diwali Games"; PlayerSettings.productName = "Rocket Raja";
             var appIcon = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Branding/AppIcon.png");
             if (appIcon != null) PlayerSettings.SetIconsForTargetGroup(BuildTargetGroup.Unknown, new[] { appIcon });
-            PlayerSettings.bundleVersion = "0.1.0"; PlayerSettings.Android.bundleVersionCode = 1;
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, "com.diwali.fireworkstycoon.dev");
             PlayerSettings.defaultInterfaceOrientation = UIOrientation.Portrait;
             PlayerSettings.allowedAutorotateToLandscapeLeft = PlayerSettings.allowedAutorotateToLandscapeRight = PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;

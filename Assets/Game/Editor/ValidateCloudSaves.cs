@@ -28,6 +28,19 @@ namespace RocketRaja.Editor
             Check(loaded.Valid(c.uid) && loaded.baseRevision == 3 && loaded.generation == 1 && loaded.followup.Valid(), "Unity checkpoint preserves upload metadata and follow-up snapshot atomically");
             Check(JsonUtility.FromJson<GameState>(loaded.save.json).cash.exponent == 450, "Account snapshot retains large-number precision");
             Check(store.Load("another-user") == null, "Wrong account cannot load a checkpoint");
+            c.followup = null; store.Save(c);
+            var encodedAbsent = JsonUtility.FromJson<AccountCheckpoint>(JsonUtility.ToJson(c));
+            Check(encodedAbsent.followup != null && !encodedAbsent.followup.Valid(), "Reproduces Unity's empty-object representation of a null follow-up");
+            loaded = store.Load(c.uid);
+            Check(loaded != null && loaded.pending && loaded.followup == null && loaded.save.checksum == payload.checksum,
+                "Pending checkpoint reload normalizes absent follow-up without losing the primary receipt");
+            c.pending = false; store.Save(c); loaded = store.Load(c.uid);
+            Check(loaded != null && !loaded.pending && loaded.followup == null, "Acknowledged checkpoint reload also normalizes absent follow-up");
+            c.followup = new SavePayload { json = "damaged", checksum = "wrong" }; store.Save(c); loaded = store.Load(c.uid);
+            Check(loaded.followup != null && loaded.followup.json == "damaged" && !loaded.followup.Valid(),
+                "Populated corrupt follow-up is preserved, never silently treated as absent");
+            c.followup = payload; c.pending = true; store.Save(c); loaded = store.Load(c.uid);
+            Check(loaded.followup != null && loaded.followup.Valid(), "Real follow-up survives normalization and remains recoverable");
             File.WriteAllText(Path.Combine(root, "diwali-v1.save"), "damaged");
             File.WriteAllText(Path.Combine(root, "diwali-v1.save.bak"), "damaged backup");
             var damaged = new GuestSession(root); damaged.Save();

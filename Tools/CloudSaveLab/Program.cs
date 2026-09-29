@@ -116,6 +116,24 @@ static class Test
         await restarted.InitializeAsync(await timeoutCloud.AcquireAsync("player", "a"));
         Check(restarted.State.manualTaps == 2 && !timeoutStore.Load("player").pending,
             "Restart uploads a valid interrupted local checkpoint without losing or duplicating progress");
+        foreach (bool acceptedBeforeRestart in new[] { false, true })
+        {
+            var recoveryCloud = new FakeCloud();
+            var recoveryState = new GameState { now = 1000, savedAt = 1000, manualTaps = 1 };
+            await recoveryCloud.CreateAsync(new AccountProfile { uid = "player" }, SavePayload.Create(Encode(new GameState { now = 1000, savedAt = 1000 })));
+            var recoveryOwned = await recoveryCloud.AcquireAsync("player", "a");
+            var recoveryStore = new CheckpointStore(Path.Combine(root, "empty-followup-" + acceptedBeforeRestart), "player", Encode, Decode<AccountCheckpoint>);
+            var interrupted = new AccountCheckpoint { uid = "player", owner = "a", generation = recoveryOwned.generation,
+                baseRevision = recoveryOwned.revision, commitId = "interrupted", pending = true, save = SavePayload.Create(Encode(recoveryState)),
+                // Exact representation emitted by Unity JsonUtility for a null inline class.
+                followup = new SavePayload { schema = 1, json = "", checksum = "" } };
+            recoveryStore.Save(interrupted);
+            if (acceptedBeforeRestart) await recoveryCloud.CommitAsync(interrupted);
+            using var recovered = new AccountSession(recoveryCloud, recoveryStore, "player", "a", data, Encode, Decode<GameState>, () => recoveryCloud.Time);
+            await recovered.InitializeAsync(await recoveryCloud.AcquireAsync("player", "a"));
+            Check(recovered.CanPlay && recovered.State.manualTaps == 1 && !recoveryStore.Load("player").pending,
+                "Restart with Unity empty follow-up recovers " + (acceptedBeforeRestart ? "already accepted" : "not yet uploaded") + " receipt exactly once");
+        }
         Console.WriteLine($"All {checks} cloud protocol checks passed. Artifacts: {root}");
     }
 

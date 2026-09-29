@@ -114,7 +114,18 @@ namespace RocketRaja.Core
                     string raw = File.ReadAllText(path); int n = raw.IndexOf('\n');
                     if (n < 1 || raw.Substring(0, n) != SavePayload.Digest(raw.Substring(n + 1))) continue;
                     var value = decode(raw.Substring(n + 1));
-                    if (value != null && value.Valid(uid)) return value;
+                    if (value != null && value.Valid(uid))
+                    {
+                        // Unity serializes null inline classes as empty objects. A schema-1
+                        // checkpoint can therefore reload an absent follow-up as {json:"",
+                        // checksum:""}. It is not a second upload. Normalize only that exact
+                        // empty representation; never discard a populated/damaged payload.
+                        var followup = value.followup;
+                        if (followup != null && (followup.schema == 0 || followup.schema == 1) &&
+                            string.IsNullOrEmpty(followup.json) && string.IsNullOrEmpty(followup.checksum))
+                            value.followup = null;
+                        return value;
+                    }
                 }
                 catch (Exception) { /* Preserve unreadable evidence; try the last validated backup. */ }
             }

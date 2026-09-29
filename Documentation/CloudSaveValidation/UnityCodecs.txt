@@ -3,5 +3,10 @@ PASS: Guest survives closing and reopening through Unity codec
 PASS: Unity checkpoint preserves upload metadata and follow-up snapshot atomically
 PASS: Account snapshot retains large-number precision
 PASS: Wrong account cannot load a checkpoint
+PASS: Reproduces Unity's empty-object representation of a null follow-up
+PASS: Pending checkpoint reload normalizes absent follow-up without losing the primary receipt
+PASS: Acknowledged checkpoint reload also normalizes absent follow-up
+PASS: Populated corrupt follow-up is preserved, never silently treated as absent
+PASS: Real follow-up survives normalization and remains recoverable
 PASS: Damaged guest data is not silently reset
 PASS: Explicit fresh start preserves damaged evidence
