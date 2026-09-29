@@ -49,6 +49,24 @@ if (!args.Contains("--simulate"))
     }
     g = Fresh(); g.State.cash = 1e100; for (int i = 0; i < 8; i++) g.BuyProduct(i, 300); g.State.tapLevel = 100; g.BuyAll();
     Check(g.State.upgrades.Count == 96, "All 96 unlockables reachable and ordered");
+    var unlocked = Fresh(); unlocked.State.cash = Amount.Pow10(100);
+    Check(unlocked.Data.upgrades.Where(x => x.effect != Effect.Skill).All(x => unlocked.Unlocked(x)), "Non-skill upgrades have no product or tap gates");
+    Check(unlocked.BuyAll() == 84 && unlocked.State.upgrades.Distinct().Count() == 84 && unlocked.BuyAll() == 0, "Bulk buys beyond ten visible rows without duplicates; skill ownership retained");
+    for (int i = 0; i < 3; i++) unlocked.State.products[i].level = 1;
+    Check(!unlocked.Unlocked(unlocked.Data.upgrades.Single(x => x.id == "skill-0-1")), "Skill ranks remain sequential");
+    Check(unlocked.BuyAll() == 12 && Enumerable.Range(0,3).All(x => unlocked.SkillRank(x) == 4), "Buy All unlocks successive skill ranks");
+    var partial = Fresh();
+    Check(partial.BuyAll() == 0, "Buy All with insufficient cash is a no-op");
+    var affordable = partial.Data.upgrades.Where(x => x.effect != Effect.Skill).Take(3).ToArray();
+    partial.State.cash = affordable.Aggregate(Amount.Zero, (sum, x) => sum + x.price) * 1.00000001;
+    Check(partial.BuyAll() == 3 && partial.State.upgrades.SequenceEqual(affordable.Select(x => x.id)), "Partial affordability uses cheapest-first order");
+    Check(Clone(partial.State).upgrades.SequenceEqual(partial.State.upgrades), "Bulk upgrades persist through serialization");
+    partial.MutationAllowed = () => false; partial.State.cash = Amount.Pow10(100);
+    Check(partial.BuyAll() == 0 && !partial.BuyUpgrade(partial.Data.upgrades.Last().id), "Disabled sessions reject individual and bulk purchases");
+    var tied = Catalog.Create();
+    tied.upgrades = new[] { new UpgradeDef { id = "z", effect = Effect.TapProfit, price = 10 }, new UpgradeDef { id = "a", effect = Effect.TapProfit, price = 10 } };
+    var tieEngine = new GameEngine(tied, new GameState()); tieEngine.State.cash = 10;
+    Check(tieEngine.BuyAll() == 1 && tieEngine.State.upgrades.Single() == "a", "Equal prices use deterministic ordinal ID order");
     g.ActivateSkill(0); g.ActivateSkill(1); g.RewardAd("one", "sponsor");
     h = new GameEngine(g.Data, Clone(g.State));
     g.Advance(400); for (int i = 0; i < 4000; i++) h.Advance(.1);

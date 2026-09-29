@@ -21,15 +21,13 @@ namespace RocketRaja
         [SerializeField] GameObject quantityMenu;
         [SerializeField] Button tapBuyButton;
         [SerializeField] Button prestigeButton;
-        [SerializeField] Button previousPageButton;
-        [SerializeField] Button nextPageButton;
+        [SerializeField] Button buyAllButton;
         [SerializeField] TMP_Text quantityLabel;
         [SerializeField] TMP_Text tapLevelLabel;
         [SerializeField] TMP_Text tapIncomeLabel;
         [SerializeField] TMP_Text tapBuyLabel;
         [SerializeField] TMP_Text prestigeLabel;
         [SerializeField] TMP_Text unlockableCountLabel;
-        [SerializeField] TMP_Text pageLabel;
         [SerializeField] GameObject[] upgradeRows;
         [SerializeField] Button[] upgradeButtons;
         [SerializeField] TMP_Text[] upgradeNames;
@@ -39,7 +37,7 @@ namespace RocketRaja
         readonly string[] visibleIds = new string[PoolSize];
         GameController controller;
         GameView view;
-        int buyMode = 1, page;
+        int buyMode = 1;
         float refreshClock;
         float preservedScroll = 1f;
         bool restoreScroll;
@@ -64,10 +62,10 @@ namespace RocketRaja
         {
             if (collapseButton == null || scroll == null || statsButton == null || skillsButton == null ||
                 quantityButton == null || !Valid(quantityChoices, 4) || quantityMenu == null ||
-                tapBuyButton == null || prestigeButton == null || previousPageButton == null ||
-                nextPageButton == null || quantityLabel == null || tapLevelLabel == null ||
+                tapBuyButton == null || prestigeButton == null || buyAllButton == null ||
+                quantityLabel == null || tapLevelLabel == null ||
                 tapIncomeLabel == null || tapBuyLabel == null || prestigeLabel == null ||
-                unlockableCountLabel == null || pageLabel == null || !Valid(upgradeRows, PoolSize) ||
+                unlockableCountLabel == null || !Valid(upgradeRows, PoolSize) ||
                 !Valid(upgradeButtons, PoolSize) || !Valid(upgradeNames, PoolSize) ||
                 !Valid(upgradeEffects, PoolSize) || !Valid(upgradePrices, PoolSize))
             {
@@ -87,8 +85,7 @@ namespace RocketRaja
             }
             tapBuyButton.onClick.AddListener(BuyTap);
             prestigeButton.onClick.AddListener(() => view?.ShowPrestige());
-            previousPageButton.onClick.AddListener(() => { page = Math.Max(0, page - 1); Refresh(); AnimateRows(); });
-            nextPageButton.onClick.AddListener(() => { page++; Refresh(); AnimateRows(); });
+            buyAllButton.onClick.AddListener(BuyAll);
             for (int i = 0; i < PoolSize; i++)
             {
                 int slot = i;
@@ -132,16 +129,12 @@ namespace RocketRaja
             tapBuyButton.interactable = tap.affordable;
             var prestige = engine.PreviewPrestige();
             prestigeLabel.text = prestige.reward > 0 ? "View prestige · +" + prestige.reward : "View prestige";
-            var remaining = engine.Data.upgrades.Where(x => !state.upgrades.Contains(x.id)).ToList();
-            int pageCount = Math.Max(1, (remaining.Count + PoolSize - 1) / PoolSize);
-            page = Mathf.Clamp(page, 0, pageCount - 1);
-            unlockableCountLabel.text = state.upgrades.Count + " / " + engine.Data.upgrades.Length + " purchased";
-            pageLabel.text = (page + 1) + " / " + pageCount;
-            previousPageButton.interactable = page > 0;
-            nextPageButton.interactable = page < pageCount - 1;
+            var remaining = engine.Data.upgrades.Where(x => !state.upgrades.Contains(x.id)).OrderBy(x => x.price).ThenBy(x => x.id, StringComparer.Ordinal).ToList();
+            unlockableCountLabel.text = remaining.Count == 0 ? "All upgrades purchased" : state.upgrades.Count + " / " + engine.Data.upgrades.Length + " purchased";
+            buyAllButton.interactable = engine.CanMutate && remaining.Any(x => engine.Unlocked(x) && state.cash >= x.price);
             for (int slot = 0; slot < PoolSize; slot++)
             {
-                int index = page * PoolSize + slot;
+                int index = slot;
                 bool present = index < remaining.Count;
                 upgradeRows[slot].SetActive(present);
                 visibleIds[slot] = present ? remaining[index].id : null;
@@ -151,7 +144,7 @@ namespace RocketRaja
                 upgradeEffects[slot].text = upgrade.Description(engine.Data);
                 bool unlocked = engine.Unlocked(upgrade);
                 upgradePrices[slot].text = unlocked ? "₹" + upgrade.price + "\nBuy upgrade" : Requirement(upgrade, engine);
-                upgradeButtons[slot].interactable = unlocked && state.cash >= upgrade.price;
+                upgradeButtons[slot].interactable = engine.CanMutate && unlocked && state.cash >= upgrade.price;
             }
         }
 
@@ -159,8 +152,7 @@ namespace RocketRaja
         {
             if (upgrade.effect == Effect.Skill)
                 return upgrade.tier == 0 ? "Own " + (upgrade.target + 1) + " products" : "Previous skill rank";
-            if (upgrade.effect == Effect.TapProfit) return "Reach tap level " + upgrade.requiredLevel;
-            return "Reach product level " + upgrade.requiredLevel;
+            return "";
         }
 
         void AnimateRows()
@@ -180,6 +172,21 @@ namespace RocketRaja
                 UiFeedback.Pulse(tapLevelLabel.transform, controller);
                 UiFeedback.Pulse(tapBuyButton.transform, controller, .07f);
                 controller.HomeScreen?.RewardFeedback(false);
+            }
+            Refresh();
+        }
+
+        void BuyAll()
+        {
+            if (controller == null) return;
+            int count = controller.Engine.BuyAll();
+            if (count > 0)
+            {
+                controller.Save();
+                view?.Notice(count + " upgrades purchased.");
+                view?.RefreshNow();
+                AnimateRows();
+                controller.HomeScreen?.RewardFeedback();
             }
             Refresh();
         }

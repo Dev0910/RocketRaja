@@ -126,8 +126,7 @@ namespace RocketRaja.Core
         {
             if (State.upgrades.Contains(u.id)) return false;
             if (u.effect == Effect.Skill) return SkillRank(u.target) == u.tier && State.OwnedProducts >= u.target + 1;
-            if (u.effect == Effect.TapProfit) return State.tapLevel >= u.requiredLevel;
-            return State.Level(u.target) >= u.requiredLevel;
+            return true;
         }
         public bool BuyUpgrade(string id)
         {
@@ -137,7 +136,11 @@ namespace RocketRaja.Core
         }
         public int BuyAll()
         {
-            int count = 0; foreach (var u in Data.upgrades) if (BuyUpgrade(u.id)) count++; return count;
+            if (!CanMutate) return 0;
+            int count = 0;
+            foreach (var u in Data.upgrades.OrderBy(x => x.price).ThenBy(x => x.id, StringComparer.Ordinal))
+                if (BuyUpgrade(u.id)) count++;
+            return count;
         }
         public bool ActivateSkill(int i)
         {

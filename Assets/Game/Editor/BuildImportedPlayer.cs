@@ -119,11 +119,14 @@ namespace RocketRaja.EditorTools
                 Color.white, TextAlignmentOptions.Center, true);
 
             var heading = New("Unlockables Heading", content).GetComponent<RectTransform>();
-            heading.gameObject.AddComponent<LayoutElement>().preferredHeight = 105;
-            Text(Stretch(heading, "Title", 12, 400, 43, 7), "Unlockables", 41,
+            heading.gameObject.AddComponent<LayoutElement>().preferredHeight = 155;
+            Text(Stretch(heading, "Title", 12, 400, 75, 10), "Unlockables", 41,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            var count = Text(Stretch(heading, "unlockable-count", 12, 350, 3, 58), "0 / 96 purchased", 29,
+            var count = Text(Stretch(heading, "unlockable-count", 12, 350, 10, 87), "0 / 96 purchased", 29,
                 Muted, TextAlignmentOptions.MidlineLeft);
+
+            var buyAll = Button(Stretch(heading, "buy-all", 700, 22, 5, 5), Blue);
+            Text(Fill(buyAll.transform, "Label"), "Buy All", 33, Color.white, TextAlignmentOptions.Center, true);
 
             var rows = new GameObject[10];
             var buttons = new Button[10];
@@ -142,15 +145,6 @@ namespace RocketRaja.EditorTools
                 prices[i] = Text(Fill(buttons[i].transform, "Price"), "₹250\nBuy upgrade", 31,
                     Color.white, TextAlignmentOptions.Center, true);
             }
-
-            var pageBar = New("Unlockable Pages", content).GetComponent<RectTransform>();
-            pageBar.gameObject.AddComponent<LayoutElement>().preferredHeight = 136;
-            var previous = Button(Region(pageBar, "Previous Page", .02f, .08f, .28f, .92f), Ivory);
-            Text(Fill(previous.transform, "Label"), "Previous", 30, Ink, TextAlignmentOptions.Center, true);
-            var pageLabel = Text(Region(pageBar, "Page Label", .32f, .08f, .68f, .92f), "1 / 10", 29,
-                Ink, TextAlignmentOptions.Center, true);
-            var next = Button(Region(pageBar, "Next Page", .72f, .08f, .98f, .92f), Ivory);
-            Text(Fill(next.transform, "Label"), "More", 30, Ink, TextAlignmentOptions.Center, true);
 
             var menu = New("Quantity Menu", panel).GetComponent<RectTransform>();
             menu.anchorMin = menu.anchorMax = new Vector2(1, 1);
@@ -184,15 +178,13 @@ namespace RocketRaja.EditorTools
             serialized.FindProperty("quantityMenu").objectReferenceValue = menu.gameObject;
             serialized.FindProperty("tapBuyButton").objectReferenceValue = buy;
             serialized.FindProperty("prestigeButton").objectReferenceValue = prestigeButton;
-            serialized.FindProperty("previousPageButton").objectReferenceValue = previous;
-            serialized.FindProperty("nextPageButton").objectReferenceValue = next;
+            serialized.FindProperty("buyAllButton").objectReferenceValue = buyAll;
             serialized.FindProperty("quantityLabel").objectReferenceValue = quantityText;
             serialized.FindProperty("tapLevelLabel").objectReferenceValue = level;
             serialized.FindProperty("tapIncomeLabel").objectReferenceValue = income;
             serialized.FindProperty("tapBuyLabel").objectReferenceValue = buyText;
             serialized.FindProperty("prestigeLabel").objectReferenceValue = prestigeText;
             serialized.FindProperty("unlockableCountLabel").objectReferenceValue = count;
-            serialized.FindProperty("pageLabel").objectReferenceValue = pageLabel;
             Assign(serialized, "upgradeRows", rows);
             Assign(serialized, "upgradeButtons", buttons);
             Assign(serialized, "upgradeNames", names);
