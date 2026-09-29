@@ -198,6 +198,42 @@ namespace RocketRaja.EditorTools
             world.Find("Festival Sparkles").SetAsLastSibling();
         }
 
+        public static void ApplyRoot(GameObject root)
+        {
+            var dialog = root.GetComponentsInChildren<RectTransform>(true).FirstOrDefault(x => x.name.EndsWith("Dialog"));
+            var fit = root.GetComponent<ImportedPanelFit>();
+            var home = root.GetComponent<ImportedHomeScreen>();
+            if (dialog != null) Motion(root, UiMotion.Kind.Modal, dialog, true);
+            else if (fit != null)
+            {
+                var owner = home != null ? fit.MotionTarget.gameObject : root;
+                Motion(owner, UiMotion.Kind.Panel, fit.MotionTarget, true);
+            }
+            foreach (var presenter in root.GetComponents<MonoBehaviour>())
+            {
+                var data = new SerializedObject(presenter);
+                var menu = data.FindProperty("quantityMenu")?.objectReferenceValue as GameObject;
+                if (menu != null) Motion(menu, UiMotion.Kind.Quantity, (RectTransform)menu.transform, false);
+                foreach (string field in new[] { "messageRow", "failureRow" })
+                {
+                    var row = data.FindProperty(field)?.objectReferenceValue as GameObject;
+                    if (row != null) Motion(row, UiMotion.Kind.Notice, MessageHost(row.transform), false);
+                }
+            }
+            if (home != null)
+            {
+                var notice = Field(home, "noticeRoot");
+                Motion(notice, UiMotion.Kind.Notice, (RectTransform)notice.transform, false);
+            }
+            Meters(root);
+            TapLabels(root);
+            Celebration(root);
+            Ambient(root);
+            Feedback(root);
+            if (home != null) HomePageAuthoring.ApplyHome(root);
+            if (root.GetComponent<ImportedSettingsScreen>() != null) HomePageAuthoring.ApplySettings(root);
+        }
+
         [MenuItem("Tools/Rocket Raja/Author HTML Motion")]
         public static void Apply()
         {
@@ -208,41 +244,12 @@ namespace RocketRaja.EditorTools
                 var root = PrefabUtility.LoadPrefabContents(path);
                 try
                 {
-                    var dialog = root.GetComponentsInChildren<RectTransform>(true).FirstOrDefault(x => x.name.EndsWith("Dialog"));
-                    var fit = root.GetComponent<ImportedPanelFit>();
-                    var home = root.GetComponent<ImportedHomeScreen>();
-                    if (dialog != null) Motion(root, UiMotion.Kind.Modal, dialog, true);
-                    else if (fit != null)
-                    {
-                        var owner = home != null ? fit.MotionTarget.gameObject : root;
-                        Motion(owner, UiMotion.Kind.Panel, fit.MotionTarget, true);
-                    }
-                    foreach (var presenter in root.GetComponents<MonoBehaviour>())
-                    {
-                        var data = new SerializedObject(presenter);
-                        var menu = data.FindProperty("quantityMenu")?.objectReferenceValue as GameObject;
-                        if (menu != null) Motion(menu, UiMotion.Kind.Quantity, (RectTransform)menu.transform, false);
-                        foreach (string field in new[] { "messageRow", "failureRow" })
-                        {
-                            var row = data.FindProperty(field)?.objectReferenceValue as GameObject;
-                            if (row != null) Motion(row, UiMotion.Kind.Notice, MessageHost(row.transform), false);
-                        }
-                    }
-                    if (home != null)
-                    {
-                        var notice = Field(home, "noticeRoot");
-                        Motion(notice, UiMotion.Kind.Notice, (RectTransform)notice.transform, false);
-                    }
-                    Meters(root);
-                    TapLabels(root);
-                    Celebration(root);
-                    Ambient(root);
-                    Feedback(root);
+                    ApplyRoot(root);
                     PrefabUtility.SaveAsPrefabAsset(root, path);
                 }
                 finally { PrefabUtility.UnloadPrefabContents(root); }
             }
-            Debug.Log("Saved HTML motion hosts and references in all 13 screen prefabs.");
+            Debug.Log("Saved HTML motion hosts and references in screen prefabs.");
         }
     }
 }

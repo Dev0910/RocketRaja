@@ -21,6 +21,16 @@ namespace RocketRaja.Core
         public List<SkillState> skills = Enumerable.Range(0, 3).Select(i => new SkillState { id = "skill-" + i }).ToList();
         public double now, savedAt, sponsorUntil, runSeconds;
         public int onboarding;
+        public string storeName;
+        public bool storeNamePromptHandled;
+        public const string DefaultStoreName = "My Fireworks Store";
+        public string StoreName => TryStoreName(storeName, out var name) ? name : DefaultStoreName;
+        public static bool TryStoreName(string value, out string name)
+        {
+            name = value?.Trim();
+            return name != null && name.Length >= 1 && name.Length <= 24 &&
+                !value.Any(c => char.IsControl(c) || c == '\u2028' || c == '\u2029');
+        }
         public bool music = true, sound = true, reducedMotion;
         public string pendingOfflineId;
         public Amount pendingOfflineReward;

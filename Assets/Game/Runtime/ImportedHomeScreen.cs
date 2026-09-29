@@ -24,12 +24,8 @@ namespace RocketRaja
         [SerializeField] Sprite[] skillArtwork;
         [SerializeField] Sprite lockedSkillIcon;
         [SerializeField] TMP_Text cashLabel;
-        [SerializeField] TMP_Text milestoneKicker;
-        [SerializeField] TMP_Text milestoneLabel;
         [SerializeField] TMP_Text incomeLabel;
         [SerializeField] TMP_Text tapLabel;
-        [SerializeField] TMP_Text normalLabel;
-        [SerializeField] TMP_Text runLabel;
         [SerializeField] TMP_Text sponsorLabel;
         [SerializeField] TMP_Text tapHintLabel;
         [SerializeField] TMP_Text counterLabel;
@@ -46,7 +42,7 @@ namespace RocketRaja
         GameController controller;
         GameView view;
         float refreshClock, noticeClock;
-        int popupIndex;
+        int popupIndex, popupSequence;
         readonly float[] popupAges = new float[12];
         readonly Vector2[] popupOrigins = new Vector2[12];
         readonly bool[] popupStatic = new bool[12];
@@ -57,6 +53,8 @@ namespace RocketRaja
         string selectedTab = "Home";
         RectTransform keeper;
         bool hadMotion = true;
+        public bool HasNotice => noticeClock > 0;
+        [SerializeField] LayoutElement sponsorLayout;
 
         void Awake()
         {
@@ -64,9 +62,9 @@ namespace RocketRaja
                 !Valid(navigationButtons, 3) || !Valid(shelfButtons, 8) || !Valid(skillButtons, 3) ||
                 sponsorButton == null || !Valid(shelfArt, 8) || !Valid(emptyShelfMarks, 8) || !Valid(shelfNames, 8) ||
                 !Valid(skillStatus, 3) || !Valid(skillImages, 3) || !Valid(skillArtwork, 3) ||
-                lockedSkillIcon == null || cashLabel == null || milestoneKicker == null || milestoneLabel == null ||
-                incomeLabel == null || tapLabel == null || normalLabel == null || runLabel == null ||
-                sponsorLabel == null || tapHintLabel == null || counterLabel == null ||
+                lockedSkillIcon == null || cashLabel == null ||
+                incomeLabel == null || tapLabel == null ||
+                sponsorLabel == null || sponsorLayout == null || tapHintLabel == null || counterLabel == null ||
                 noticeLabel == null || noticeRoot == null ||
                 !Valid(tapPopupRects, 12) || !Valid(tapPopupLabels, 12) || !Valid(skillCooldowns, 3) || !Valid(skillRings, 3) || celebrationImage == null || sparkles == null || ambient == null)
             {
@@ -192,43 +190,8 @@ namespace RocketRaja
             var engine = controller.Engine;
             var state = engine.State;
             cashLabel.text = "₹" + state.cash;
-            int owned = state.OwnedProducts;
-            if (owned == 0)
-            {
-                milestoneKicker.text = "FIRST PRODUCT";
-                milestoneLabel.text = engine.Data.products[0].name + " · ₹" + engine.ProductCost(0, 1) + " to stock your first shelf";
-            }
-            else
-            {
-                int best = -1, remaining = int.MaxValue;
-                for (int i = 0; i < 8; i++)
-                {
-                    int level = state.Level(i);
-                    if (level == 0) continue;
-                    foreach (int milestone in Catalog.VisualLevels)
-                        if (milestone > level && milestone - level < remaining)
-                        { best = i; remaining = milestone - level; break; }
-                }
-                if (best >= 0)
-                {
-                    milestoneKicker.text = "NEXT DISPLAY";
-                    milestoneLabel.text = engine.Data.products[best].name + " · " + remaining + " levels to upgrade";
-                }
-                else if (owned < 8)
-                {
-                    milestoneKicker.text = "NEXT SHELF";
-                    milestoneLabel.text = engine.Data.products[owned].name + " · ₹" + engine.ProductCost(owned, 1);
-                }
-                else
-                {
-                    milestoneKicker.text = "PRESTIGE";
-                    milestoneLabel.text = engine.PreviewPrestige().reward + " reputation available";
-                }
-            }
             incomeLabel.text = "₹" + engine.LiveIncome;
             tapLabel.text = "₹" + engine.TapIncome;
-            normalLabel.text = "Normal sales ₹" + engine.NormalIncome + " / sec" + (state.sponsorUntil > state.now ? " · Sponsor ×2" : "");
-            runLabel.text = "This run · ₹" + state.runEarnings + " earned";
             for (int i = 0; i < 8; i++)
             {
                 bool visible = state.Level(i) > 0;
@@ -250,23 +213,26 @@ namespace RocketRaja
             {
                 int rank = engine.SkillRank(i);
                 var skill = state.skills[i];
-                skillRings[i].SetState(skill.activeUntil > state.now, rank == 0, controller);
+                skillRings[i].SetState(skill.activeUntil > state.now, rank == 0, controller, skill.readyAt > state.now);
                 skillStatus[i].text = rank == 0 ? "LOCKED" : skill.activeUntil > state.now ?
                     "ACTIVE · " + GameView.Duration(skill.activeUntil - state.now) :
-                    skill.readyAt > state.now ? "WAIT · " + GameView.Duration(skill.readyAt - state.now) : "READY";
-                skillButtons[i].interactable = rank > 0 && skill.readyAt <= state.now;
+                    skill.readyAt > state.now ? "COOLDOWN · " + GameView.Duration(skill.readyAt - state.now) : "READY";
+                skillButtons[i].interactable = engine.CanMutate && rank > 0 && skill.readyAt <= state.now && skill.activeUntil <= state.now;
                 bool ready = rank > 0 && skill.readyAt <= state.now;
                 if (observedState && ready && !skillReady[i]) UiFeedback.Pulse(skillButtons[i].transform, controller, .08f, .38f);
                 skillReady[i] = ready;
                 skillImages[i].sprite = rank == 0 ? lockedSkillIcon : skillArtwork[i];
+                skillImages[i].color = rank == 0 ? new Color(.55f, .55f, .55f, .7f) : skill.activeUntil > state.now ? new Color(1, .85f, .45f) : skill.readyAt > state.now ? new Color(.5f, .5f, .5f, .65f) : Color.white;
             }
-            tapHintLabel.text = owned == 0 ? "TAP TO EARN · THEN OPEN PRODUCTS" : "TAP THE STALL TO EARN";
-            tapHintLabel.fontSize = owned == 0 ? 30 : 39;
-            counterLabel.text = owned == 0 ? "" : "PATAAKHEIN, ROSHAN DIL";
-            sponsorLabel.text = state.sponsorUntil > state.now ?
-                "SPONSOR ACTIVE · " + GameView.Duration(state.sponsorUntil - state.now) :
-                "OPTIONAL SPONSOR · ×2 sales for five minutes";
-            sponsorButton.interactable = state.sponsorUntil <= state.now;
+            tapHintLabel.text = "Tap to earn";
+            counterLabel.richText = false;
+            counterLabel.text = state.StoreName;
+            bool boosted = state.sponsorUntil > state.now;
+            bool offer = !boosted && controller.Ads != null && controller.Ads.Ready;
+            sponsorLayout.gameObject.SetActive(boosted || offer);
+            sponsorLayout.preferredHeight = boosted ? 95 : 136;
+            sponsorLabel.text = boosted ? "SPONSOR ×2 · " + GameView.Duration(state.sponsorUntil - state.now) : "OPTIONAL SPONSOR · ×2 sales";
+            sponsorButton.interactable = offer && engine.CanMutate;
             bool prestigeReady = engine.PreviewPrestige().reward > 0;
             if (observedState && prestigeReady && !wasPrestigeReady)
             {
@@ -302,10 +268,17 @@ namespace RocketRaja
             var screenPosition = stallTap.TapPosition ?? RectTransformUtility.WorldToScreenPoint(
                 stallTap.TapCamera, stallTap.transform.TransformPoint(((RectTransform)stallTap.transform).rect.center));
             RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, screenPosition, stallTap.TapCamera, out popupOrigins[index]);
+            bool hasReward = false;
+            for (int i = 0; i < 6; i++) if (i != index && tapPopupRects[i].gameObject.activeSelf) hasReward = true;
+            popupSequence = hasReward ? (popupSequence + 1) % 6 : 0;
+            int column = popupSequence % 3;
+            popupOrigins[index] += new Vector2(column == 1 ? 60 : column == 2 ? -60 : 0, popupSequence / 3 * 32) * UiEasing.Pixels(tapPopupRects[index]);
+            var bounds = parent.rect;
+            popupOrigins[index].x = Mathf.Clamp(popupOrigins[index].x, bounds.xMin + 220, bounds.xMax - 220);
             tapPopupRects[index].anchoredPosition = popupOrigins[index];
             tapPopupRects[index].localScale = Vector3.one;
             tapPopupLabels[index].text = "+₹" + controller.Engine.TapIncome;
-            tapPopupLabels[index].color = new Color32(22, 75, 128, 255);
+            tapPopupLabels[index].color = Color.white;
             tapPopupRects[index].gameObject.SetActive(true);
             UiFeedback.Pulse(cashLabel.transform, controller, .035f, .18f);
             UiFeedback.Pulse(keeper, controller, .035f, .2f);
@@ -330,7 +303,7 @@ namespace RocketRaja
         {
             RewardFeedback();
             if (controller == null || controller.Engine.State.reducedMotion) return;
-            UiFeedback.Pulse(milestoneLabel.transform, controller, .08f, .8f);
+            UiFeedback.Pulse(counterLabel.transform, controller, .08f, .8f);
         }
     }
 }

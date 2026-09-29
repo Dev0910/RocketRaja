@@ -22,7 +22,7 @@ namespace RocketRaja
                 controller.SaveRecoveryScreen == null || controller.OfflineScreen == null ||
                 controller.SponsorScreen == null || controller.PrestigeScreen == null ||
                 controller.StatisticsScreen == null || controller.SkillsScreen == null ||
-                controller.ProductDetailScreen == null)
+                controller.ProductDetailScreen == null || controller.StoreNameScreen == null)
             {
                 Debug.LogError("Main GameController has missing editor-authored screen references.", this);
                 enabled = false;
@@ -76,12 +76,17 @@ namespace RocketRaja
             if (game == null) return;
             refreshClock += Time.unscaledDeltaTime;
             if (refreshClock > .2f) { refreshClock = 0; RefreshNow(); }
+            if (game.StartupReady && currentTab == "Home" && game.CanPlay && E.CanMutate &&
+                !E.State.storeNamePromptHandled && !game.ModalPaused && !game.IsAdShowing &&
+                string.IsNullOrEmpty(E.State.pendingOfflineId) && !game.HomeScreen.HasNotice)
+                ShowStoreName(true);
             if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
         }
 
         void HandleEscape()
         {
             if (game.SaveNeedsRecovery) Application.Quit();
+            else if (game.StoreNameScreen.gameObject.activeInHierarchy) game.StoreNameScreen.Dismiss();
             else if (game.PrivacyScreen.gameObject.activeInHierarchy) game.PrivacyScreen.Close();
             else if (game.SettingsScreen.gameObject.activeInHierarchy) game.SettingsScreen.Close();
             else if (game.OfflineScreen.gameObject.activeInHierarchy) game.OfflineScreen.Dismiss();
@@ -186,6 +191,12 @@ namespace RocketRaja
             }
             settings.Bind(game, this);
             settings.Open();
+        }
+        public void ShowStoreName(bool firstVisit = false)
+        {
+            if (!game.CanPlay || !E.CanMutate) return;
+            if (!firstVisit) game.SettingsScreen.CloseForChild();
+            game.StoreNameScreen.Open(game, firstVisit, firstVisit ? (Action)null : ShowSettings);
         }
         public void ShowPrivacy()
         {

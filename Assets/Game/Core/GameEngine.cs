@@ -20,6 +20,14 @@ namespace RocketRaja.Core
             if (Data.legacy == null || Data.legacy.Length != 12) Data.legacy = Catalog.Create().legacy;
         }
         void Touch(bool critical = false) { State.revision++; Changed?.Invoke(); if (critical) CriticalSave?.Invoke(); }
+        public bool SetStoreName(string value)
+        {
+            if (!CanMutate || !GameState.TryStoreName(value, out var name)) return false;
+            State.storeName = name;
+            State.storeNamePromptHandled = true;
+            Touch(true);
+            return true;
+        }
         public int SkillRank(int skill) => Data.upgrades.Count(x => x.effect == Effect.Skill && x.target == skill && State.upgrades.Contains(x.id));
         public int VisualTier(int index) => Catalog.VisualLevels.Count(level => State.Level(index) >= level);
         public int StallTier => State.OwnedProducts >= 8 ? 4 : State.OwnedProducts >= 6 ? 3 : State.OwnedProducts >= 3 ? 2 : State.OwnedProducts > 0 ? 1 : 0;

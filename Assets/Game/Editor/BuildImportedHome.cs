@@ -81,9 +81,10 @@ namespace RocketRaja.EditorTools
                 Hex("FFE3A6"), TextAlignmentOptions.Center, true);
             var cashCaption = Text(Region(world, "Cash Caption", .24f, .833f, .76f, .885f), "CASH BALANCE", 40,
                 Color.white, TextAlignmentOptions.Center, true);
-            var shopSign = Text(Region(world, "Shop Sign", .25f, .672f, .75f, .744f), "ROCKET RAJA", 48,
+            var shopSign = Text(Region(world, "Shop Sign", .25f, .672f, .75f, .744f), RocketRaja.Core.GameState.DefaultStoreName, 48,
                 IvoryColor, TextAlignmentOptions.Center, true);
 
+            shopSign.richText = false; shopSign.enableAutoSizing = true; shopSign.fontSizeMin = 20; shopSign.fontSizeMax = 48;
             var displays = new Image[8];
             var emptyMarks = new TMP_Text[8];
             var names = new TMP_Text[8];
@@ -107,15 +108,13 @@ namespace RocketRaja.EditorTools
                     row == 0 ? .463f : .282f, center + .105f, row == 0 ? .625f : .445f);
                 shelfButtons[i] = InvisibleButton(clickRect);
             }
-            var counterMessage = Text(Region(world, "Counter Message", .28f, .120f, .77f, .180f), "PATAAKHEIN, ROSHAN DIL", 37,
-                Hex("FFE1A3"), TextAlignmentOptions.Center, true);
             var keeperRect = Region(world, "Shopkeeper", .79f, .078f, 1, .239f);
             var keeperImage = Image(keeperRect, Color.white, false, keeper);
             keeperImage.type = UnityEngine.UI.Image.Type.Simple;
             keeperImage.preserveAspect = true;
             var hint = Region(world, "Tap Hint", .185f, .035f, .815f, .085f);
             Image(hint, Hex("FFF4DB"), false);
-            var hintText = Text(Fill(hint, "Hint Text"), "TAP THE STALL TO EARN", 39,
+            var hintText = Text(Fill(hint, "Hint Text"), "Tap to earn", 32,
                 Hex("4A291B"), TextAlignmentOptions.Center, true);
 
             var popupRects = new RectTransform[12];
@@ -160,7 +159,6 @@ namespace RocketRaja.EditorTools
             fitData.FindProperty("cashLabel").objectReferenceValue = cash;
             fitData.FindProperty("cashCaption").objectReferenceValue = cashCaption;
             fitData.FindProperty("shopSign").objectReferenceValue = shopSign;
-            fitData.FindProperty("counterMessage").objectReferenceValue = counterMessage;
             fitData.FindProperty("tapHint").objectReferenceValue = hintText;
             fitData.ApplyModifiedPropertiesWithoutUndo();
             var viewport = Fill(panel, "Home Scroll");
@@ -183,15 +181,6 @@ namespace RocketRaja.EditorTools
             content.gameObject.AddComponent<ContentSizeFitter>().verticalFit = ContentSizeFitter.FitMode.PreferredSize;
             content.gameObject.AddComponent<ImportedHomeLayout>();
 
-            var milestone = FramedCard(content, "Next Display", 112);
-            var milestoneIcon = Image(Stretch(milestone, "Burst", 18, 890, 12, 12), Color.white, false, skillArt[0]);
-            milestoneIcon.type = UnityEngine.UI.Image.Type.Simple;
-            milestoneIcon.preserveAspect = true;
-            var milestoneKicker = Text(Stretch(milestone, "Kicker", 130, 18, 64, 4), "NEXT DISPLAY", 29,
-                Ink, TextAlignmentOptions.MidlineLeft, true);
-            var milestoneText = Text(Stretch(milestone, "home-next", 130, 18, 11, 42),
-                "Phuljhari · 12 levels to upgrade", 35, Ink, TextAlignmentOptions.MidlineLeft, true);
-
             var incomeCard = FramedCard(content, "Income", 230);
             Text(Stretch(incomeCard, "Income Kicker", 130, 295, 174, 15), "AUTOMATIC SALES", 29,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
@@ -210,10 +199,6 @@ namespace RocketRaja.EditorTools
             tapIcon.preserveAspect = true;
             var tapLabel = Text(Stretch(incomeCard, "home-tap", 835, 22, 68, 40), "₹250", 65,
                 Ink, TextAlignmentOptions.MidlineRight, true);
-            var normal = Text(Stretch(incomeCard, "home-normal", 18, 18, 50, 135),
-                "Normal sales ₹6.2K / sec · Sponsor ×2", 31, Ink, TextAlignmentOptions.MidlineLeft);
-            var run = Text(Stretch(incomeCard, "home-run", 18, 18, 10, 170),
-                "This run · ₹3.8M earned", 31, Ink, TextAlignmentOptions.MidlineLeft);
             Image(Region(incomeCard, "Vertical Divider", .71f, .38f, .713f, .91f), Hex("D3C3A7"));
 
             var skillRow = New("Skills", content).GetComponent<RectTransform>();
@@ -272,21 +257,18 @@ namespace RocketRaja.EditorTools
             Assign(data, "skillArtwork", skillArt);
             data.FindProperty("lockedSkillIcon").objectReferenceValue = lockedSkillIcon;
             data.FindProperty("cashLabel").objectReferenceValue = cash;
-            data.FindProperty("milestoneKicker").objectReferenceValue = milestoneKicker;
-            data.FindProperty("milestoneLabel").objectReferenceValue = milestoneText;
             data.FindProperty("incomeLabel").objectReferenceValue = income;
             data.FindProperty("tapLabel").objectReferenceValue = tapLabel;
-            data.FindProperty("normalLabel").objectReferenceValue = normal;
-            data.FindProperty("runLabel").objectReferenceValue = run;
             data.FindProperty("sponsorLabel").objectReferenceValue = sponsorLabel;
             data.FindProperty("tapHintLabel").objectReferenceValue = hintText;
-            data.FindProperty("counterLabel").objectReferenceValue = counterMessage;
+            data.FindProperty("counterLabel").objectReferenceValue = shopSign;
             data.FindProperty("noticeLabel").objectReferenceValue = noticeText;
             data.FindProperty("noticeRoot").objectReferenceValue = notice.gameObject;
             Assign(data, "tapPopupRects", popupRects);
             Assign(data, "tapPopupLabels", popupLabels);
             data.FindProperty("celebrationImage").objectReferenceValue = celebration;
             data.ApplyModifiedPropertiesWithoutUndo();
+            AuthorHtmlMotion.ApplyRoot(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();

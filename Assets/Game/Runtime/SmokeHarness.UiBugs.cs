@@ -88,7 +88,7 @@ namespace RocketRaja
                 var active = popup.Single(x => x.gameObject.activeSelf);
                 Check(Vector2.Distance(RectTransformUtility.WorldToScreenPoint(null, active.position), point) < 1,
                     "Cash popup starts at the actual pointer at " + size);
-                Check(active.GetComponentInChildren<TMP_Text>().color == (Color)new Color32(22, 75, 128, 255), "Cash popup is blue");
+                Check(active.GetComponentInChildren<TMP_Text>().color == Color.white, "Cash popup is white with a saved contrasting outline");
                 yield return Capture("ui-fixed-home-" + size.x, 0);
             }
             foreach (string tab in new[] { "Products", "Player" })

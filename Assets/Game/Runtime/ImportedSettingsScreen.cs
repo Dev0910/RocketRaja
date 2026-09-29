@@ -20,13 +20,14 @@ namespace RocketRaja
         [SerializeField] Sprite disabledFace;
         [SerializeField] Button accountButton;
         [SerializeField] TMP_Text accountStatus;
+        [SerializeField] Button renameStoreButton;
 
         GameController controller;
         GameView view;
 
         void Awake()
         {
-            if (closeButton == null || backButton == null || privacyButton == null || consentButton == null ||
+            if (closeButton == null || backButton == null || privacyButton == null || consentButton == null || renameStoreButton == null ||
                 consentRow == null || enabledFace == null || disabledFace == null ||
                 settingButtons == null || settingButtons.Length != 3 ||
                 settingFaces == null || settingFaces.Length != 3 ||
@@ -51,6 +52,7 @@ namespace RocketRaja
             privacyButton.onClick.AddListener(OpenPrivacy);
             consentButton.onClick.AddListener(OpenConsent);
             if (accountButton != null) accountButton.onClick.AddListener(OpenAccount);
+            renameStoreButton.onClick.AddListener(RenameStore);
             settingButtons[0].onClick.AddListener(ToggleMusic);
             settingButtons[1].onClick.AddListener(ToggleSound);
             settingButtons[2].onClick.AddListener(ToggleMotion);
@@ -63,6 +65,7 @@ namespace RocketRaja
             if (privacyButton != null) privacyButton.onClick.RemoveListener(OpenPrivacy);
             if (consentButton != null) consentButton.onClick.RemoveListener(OpenConsent);
             if (accountButton != null) accountButton.onClick.RemoveListener(OpenAccount);
+            if (renameStoreButton != null) renameStoreButton.onClick.RemoveListener(RenameStore);
             if (settingButtons == null || settingButtons.Length != 3) return;
             if (settingButtons[0] != null) settingButtons[0].onClick.RemoveListener(ToggleMusic);
             if (settingButtons[1] != null) settingButtons[1].onClick.RemoveListener(ToggleSound);
@@ -98,6 +101,7 @@ namespace RocketRaja
         {
             if (controller == null || controller.Engine == null) return;
             var state = controller.Engine.State;
+            renameStoreButton.interactable = controller.Engine.CanMutate;
             var values = new[] { state.music, state.sound, state.reducedMotion };
             for (int i = 0; i < 3; i++)
             {
@@ -149,6 +153,7 @@ namespace RocketRaja
         }
 
         void OpenPrivacy() => view?.ShowPrivacy();
+        void RenameStore() => view?.ShowStoreName();
         void OpenAccount() { controller?.Save(); Cloud.PlayerSessionHost.Ensure().OpenAccountMenu(); }
 
         void OpenConsent()

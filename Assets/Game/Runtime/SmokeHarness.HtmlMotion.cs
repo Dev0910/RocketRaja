@@ -67,17 +67,16 @@ namespace RocketRaja
             // The automation may run while the Editor is unfocused. Control this input explicitly.
             ambient.SendMessage("OnApplicationFocus", true);
             Check(ambient != null && ambient.GetComponent<CanvasRenderer>() != null && ambient.GetComponentInParent<RectMask2D>() != null && !ambient.raycastTarget,
-                "Visitors use a saved clipped non-interactive native graphic");
+                "Keeper motion uses a saved non-interactive component");
             Check(ambient.Keeper.pivot == new Vector2(.5f, 0) && Mathf.Abs(ShopAmbient.KeeperAngle(0) + .7f) < .001f && Mathf.Abs(ShopAmbient.KeeperAngle(1)) < .001f && Mathf.Abs(ShopAmbient.KeeperAngle(2) - .7f) < .001f && Mathf.Abs(ShopAmbient.KeeperAngle(4) + .7f) < .001f,
                 "Keeper matches bottom pivot, .7-degree extremes and four-second HTML loop");
             var world = (RectTransform)ambient.Keeper.parent;
             var center = world.InverseTransformPoint(ambient.Keeper.TransformPoint(ambient.Keeper.rect.center));
             Check(Mathf.Abs((center.y - world.rect.yMin) / world.rect.height - .1585f) < .005f,
                 "Keeper stays at the original lower-right counter position after the pivot change");
-            Check(Mathf.Abs(ShopAmbient.VisitorX(8, 0) - .475f) < .001f && Mathf.Abs(ShopAmbient.VisitorX(1.5f, 1) - .475f) < .001f,
-                "Visitors match 16s/21s loops and second visitor nine-second offset");
+            Check(!ambient.VisitorsVisible, "Decorative visitors are removed");
             float before = ambient.Phase; yield return new WaitForSecondsRealtime(.2f);
-            Check(ambient.Phase > before && ambient.VisitorsVisible, "Ambient motion advances during normal play");
+            Check(ambient.Phase > before && !ambient.VisitorsVisible, "Keeper motion advances without visitors");
             game.View.ShowSettings(); before = ambient.Phase; var rotation = ambient.Keeper.localRotation;
             yield return new WaitForSecondsRealtime(.35f);
             Check(ambient.Phase == before && ambient.Keeper.localRotation == rotation, "Opening a modal freezes both ambient loops");

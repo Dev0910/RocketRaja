@@ -10,10 +10,10 @@ namespace RocketRaja
         GameController owner;
         float elapsed = 1;
         bool bound;
-        public void SetState(bool active, bool locked, GameController game)
+        public void SetState(bool active, bool locked, GameController game, bool cooldown = false)
         {
             owner = game;
-            Color next = locked ? new Color32(153, 138, 108, 255) : active ? new Color32(146, 35, 73, 255) : new Color32(24, 68, 119, 255);
+            Color next = locked ? new Color32(153, 138, 108, 255) : active ? new Color32(146, 35, 73, 255) : cooldown ? new Color32(112, 121, 132, 255) : new Color32(24, 68, 119, 255);
             if (bound && target == next) return;
             target = next; from = color; elapsed = 0;
             if (!bound || game.Engine.State.reducedMotion) { color = target; elapsed = .18f; }

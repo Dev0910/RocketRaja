@@ -15,6 +15,18 @@ if (!args.Contains("--simulate"))
     var g = Fresh();
     Check(g.Data.products.Length == 8 && g.Data.upgrades.Length == 96 && g.Data.upgrades.Select(x => x.id).Distinct().Count() == 96, "Catalog has 8 products and 96 unique unlockables");
     Check(g.State.legacy.Count == 12 && g.State.Valid(), "12 Legacy perks and valid initial state");
+    var named = Fresh();
+    Check(named.State.StoreName == GameState.DefaultStoreName && !named.State.storeNamePromptHandled, "Old and fresh saves default to an unhandled store name");
+    foreach (var invalid in new[] { "", "   ", new string('x',25), "two\nlines", "two\rlines", "tab\tname" })
+        Check(!named.SetStoreName(invalid), "Invalid store name rejected");
+    Check(named.SetStoreName("  <b>My Store</b>  ") && named.State.storeName == "<b>My Store</b>", "Store names trim and preserve literal text");
+    var payload = SavePayload.Create(JsonSerializer.Serialize(named.State, options));
+    var cloudName = JsonSerializer.Deserialize<GameState>(payload.json, options);
+    Check(payload.Valid() && cloudName.StoreName == named.State.StoreName && cloudName.storeNamePromptHandled, "Account payload retains name and prompt state");
+    named.State.products.ForEach(x => x.level = 1); named.State.eligibleEarnings = Catalog.PrestigeThreshold * 4;
+    Check(named.Prestige(named.PreviewPrestige()) && named.State.StoreName == "<b>My Store</b>" && named.State.storeNamePromptHandled, "Store name survives prestige");
+    named.MutationAllowed = () => false;
+    Check(!named.SetStoreName("Changed") && named.State.StoreName == "<b>My Store</b>", "Read-only session cannot rename");
     Check(new Amount(1, 450) + new Amount(2, 449) > new Amount(1, 450), "Large numbers exceed double range");
     Check(new Amount(double.Epsilon).Valid && (new Amount(1, -450) - Amount.Zero).Valid, "Tiny values normalize and subtract zero safely");
     Check((new Amount(1, 450) * 100).exponent == 452, "Large-number multiply");
@@ -89,6 +101,7 @@ if (!args.Contains("--simulate"))
     balance = g.State.cash; double saved = g.State.savedAt; g.ResolveOffline(saved - 1000); g.ResolveOffline(saved); Check(Near(balance, g.State.cash), "Clock rollback cannot replay offline time");
     var root = Path.Combine(Path.GetTempPath(), "DiwaliTests-" + Guid.NewGuid());
     var store = new SaveStore(Path.Combine(root, "save"), s => JsonSerializer.Serialize(s, options), s => JsonSerializer.Deserialize<GameState>(s, options));
+    store.Save(named.State); Check(store.Load().StoreName == named.State.StoreName && store.Load().storeNamePromptHandled, "Store name survives disk restart");
     store.Save(g.State); var loaded = store.Load(); Check(loaded.Valid() && Near(loaded.cash, g.State.cash) && loaded.Legacy(9) == 1, "Save roundtrip retains values and permanent perks");
     store.Save(g.State); File.WriteAllText(Path.Combine(root, "save"), "corrupt"); loaded = store.Load(); Check(loaded != null && store.Warning != null, "Corrupt save recovers backup");
     Check(!g.RewardAd("invalid", "unknown"), "Unknown reward placement cannot mutate economy");

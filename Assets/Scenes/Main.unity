@@ -563,6 +563,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2505927aa34264d85c58e1ab41bc68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketRaja.ImportedStatisticsScreen
+--- !u!1001 &145944874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3230209369661319449, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5717390827458037371, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+      propertyPath: m_Name
+      value: ImportedStoreNameCanvas
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+--- !u!114 &145944875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3449550469484874893, guid: 1370bd8672c78d2469de16441d409ad1, type: 3}
+  m_PrefabInstance: {fileID: 145944874}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a128711f11a3a4c41993ac87c44a6282, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::RocketRaja.StoreNameDialog
 --- !u!1 &242834350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,7 +1715,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00199b7cc1d75e4498eeaad84ad8ffda, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::RocketRaja.GameController
   privacyScreen: {fileID: 1063163510}
   settingsScreen: {fileID: 2130670059}
@@ -1618,6 +1726,7 @@ MonoBehaviour:
   statisticsScreen: {fileID: 79010356}
   skillsScreen: {fileID: 75824644}
   productDetailScreen: {fileID: 385040526}
+  storeNameScreen: {fileID: 145944875}
   homeScreen: {fileID: 1615847215}
   playerScreen: {fileID: 618215231}
   productsScreen: {fileID: 482522022}
@@ -1647,7 +1756,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 900296385413b0741b53983408e86927, type: 3}
-  m_Name: 
+  m_Name:
   m_EditorClassIdentifier: Assembly-CSharp::RocketRaja.GameView
 --- !u!1001 &951461587
 PrefabInstance:
@@ -2789,3 +2898,4 @@ SceneRoots:
   - {fileID: 618215230}
   - {fileID: 482522021}
   - {fileID: 558106525}
+  - {fileID: 145944874}

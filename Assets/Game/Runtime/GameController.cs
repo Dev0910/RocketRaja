@@ -27,6 +27,9 @@ namespace RocketRaja
         public ImportedSkillsScreen SkillsScreen => skillsScreen;
         [SerializeField] ImportedProductDetailScreen productDetailScreen;
         public ImportedProductDetailScreen ProductDetailScreen => productDetailScreen;
+        [SerializeField] StoreNameDialog storeNameScreen;
+        public StoreNameDialog StoreNameScreen => storeNameScreen;
+        public bool StartupReady { get; private set; }
         [SerializeField] ImportedHomeScreen homeScreen;
         public ImportedHomeScreen HomeScreen => homeScreen;
         [SerializeField] ImportedPlayerScreen playerScreen;
@@ -111,6 +114,7 @@ namespace RocketRaja
             if (saveBlocked) View.ShowSaveRecovery();
             else if (SaveWarning != null) View.Notice(SaveWarning);
             else if (!string.IsNullOrEmpty(Engine.State.pendingOfflineId)) View.ShowOffline();
+            StartupReady = true;
         }
         void Update()
         {

@@ -151,6 +151,7 @@ namespace RocketRaja.EditorTools
             SetArray(serialized.FindProperty("settingStates"), states);
             SetArray(serialized.FindProperty("settingDots"), dots);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            AuthorHtmlMotion.ApplyRoot(root);
 
             if (Object.FindFirstObjectByType<EventSystem>() == null)
             {

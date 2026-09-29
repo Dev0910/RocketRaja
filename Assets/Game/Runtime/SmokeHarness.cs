@@ -82,6 +82,10 @@ namespace RocketRaja
             if (game == null) { Finish(); yield break; }
 #if UNITY_EDITOR
             string motionStage = UnityEditor.SessionState.GetString("RocketRaja.HtmlMotionStage", "");
+            if (motionStage == "home-card") { yield return HomeCardChecks(); Finish(); yield break; }
+            if (game.StoreNameScreen.gameObject.activeSelf) game.StoreNameScreen.Dismiss();
+            game.Engine.SetStoreName(GameState.DefaultStoreName);
+            yield return new WaitForSecondsRealtime(.2f);
             if (motionStage == "taps") { yield return HtmlTapChecks(); Finish(); yield break; }
             if (motionStage == "celebration") { yield return HtmlCelebrationChecks(); Finish(); yield break; }
             if (motionStage == "ambient") { yield return HtmlAmbientChecks(); Finish(); yield break; }
