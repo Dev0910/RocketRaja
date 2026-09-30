@@ -62,6 +62,24 @@ namespace RocketRaja
         }
         public static void Wire(GameObject root, GameController game)
         { foreach (var feedback in root.GetComponentsInChildren<UiFeedback>(true)) { feedback.owner = game; feedback.Initialize(); } }
+        /// <summary>Records an intentional presenter change to a control's normal artwork and text colors.</summary>
+        public static void SyncAppearance(Button control)
+        {
+            if (control == null || !control.TryGetComponent<UiFeedback>(out var feedback)) return;
+            feedback.Initialize();
+            if (!(feedback.face is Image image)) return;
+            // The presenter owns Image.sprite; overrideSprite may still contain our older
+            // normal or disabled appearance. Cache the newly assigned base artwork.
+            feedback.normalOverride = image.sprite;
+            if (feedback.labels == null) feedback.labels = feedback.GetComponentsInChildren<TMP_Text>(true);
+            if (feedback.labelColors == null || feedback.labelColors.Length != feedback.labels.Length)
+                feedback.labelColors = new Color[feedback.labels.Length];
+            for (int i = 0; i < feedback.labels.Length; i++)
+                if (feedback.labels[i] != null) feedback.labelColors[i] = feedback.labels[i].color;
+            feedback.availabilityApplied = false;
+            if (feedback.disabledFace == null) image.overrideSprite = feedback.normalOverride;
+            else feedback.ApplyAvailability();
+        }
         public static void Pulse(Transform target, GameController game, float amount = .09f, float seconds = .38f)
         {
             var feedback = Get(target, game);
@@ -111,7 +129,9 @@ namespace RocketRaja
             Apply();
             if (kind == Kind.Accent && pulseAge >= pulseDuration) enabled = false;
         }
-        void LateUpdate()
+        void LateUpdate() => ApplyAvailability();
+
+        void ApplyAvailability()
         {
             if (!initialized || button == null || disabledFace == null || !(face is Image image)) return;
             bool interactable = button.IsInteractable();

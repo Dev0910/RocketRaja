@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using RocketRaja.Core;
 using TMPro;
@@ -12,6 +13,8 @@ namespace RocketRaja
     public sealed class ImportedPlayerScreen : MonoBehaviour
     {
         const int PoolSize = 10;
+        static readonly int[] QuantityModes = { 1, 10, 100, int.MaxValue };
+        static readonly string[] QuantityOptions = { "×1", "×10", "×100", "Max affordable" };
         [SerializeField] Button collapseButton;
         [SerializeField] ScrollRect scroll;
         [SerializeField] Button statsButton;
@@ -34,7 +37,10 @@ namespace RocketRaja
         [SerializeField] TMP_Text[] upgradeEffects;
         [SerializeField] TMP_Text[] upgradePrices;
 
+        readonly TMP_Text[] quantityChoiceLabels = new TMP_Text[4];
+        readonly GameObject[] quantitySelectionMarks = new GameObject[4];
         readonly string[] visibleIds = new string[PoolSize];
+        bool quantityChoicesCached;
         GameController controller;
         GameView view;
         int buyMode = 1;
@@ -73,14 +79,14 @@ namespace RocketRaja
                 enabled = false;
                 return;
             }
+            if (!CacheQuantityChoices()) { enabled = false; return; }
             collapseButton.onClick.AddListener(() => view?.Switch("Home"));
             statsButton.onClick.AddListener(() => view?.ShowStatistics());
             skillsButton.onClick.AddListener(() => view?.ShowSkills());
             quantityButton.onClick.AddListener(() => UiMotion.Toggle(quantityMenu, controller));
-            int[] modes = { 1, 10, 100, int.MaxValue };
-            for (int i = 0; i < modes.Length; i++)
+            for (int i = 0; i < QuantityModes.Length; i++)
             {
-                int selected = modes[i];
+                int selected = QuantityModes[i];
                 quantityChoices[i].onClick.AddListener(() => { buyMode = selected; UiMotion.Hide(quantityMenu, controller); Refresh(); });
             }
             tapBuyButton.onClick.AddListener(BuyTap);
@@ -97,12 +103,35 @@ namespace RocketRaja
         static bool Valid<T>(T[] items, int size) where T : UnityEngine.Object =>
             items != null && items.Length == size && !Array.Exists(items, x => x == null);
 
+        bool CacheQuantityChoices()
+        {
+            if (quantityChoicesCached) return true;
+            if (!Valid(quantityChoices, QuantityModes.Length)) return false;
+            for (int i = 0; i < QuantityModes.Length; i++)
+            {
+                quantityChoiceLabels[i] = quantityChoices[i].GetComponentInChildren<TMP_Text>(true);
+                quantitySelectionMarks[i] = quantityChoices[i].transform.Find("Selected Mark")?.gameObject;
+                if (quantityChoiceLabels[i] != null) continue;
+                Debug.LogError("Player quantity choice is missing its label.", quantityChoices[i]);
+                return false;
+            }
+            quantityChoicesCached = true;
+            return true;
+        }
+
         public void Bind(GameController owner, GameView ownerView)
         {
             controller = owner;
             view = ownerView;
             UiFeedback.Wire(gameObject, owner);
             Refresh();
+        }
+
+        public bool DismissQuantityMenu()
+        {
+            if (quantityMenu == null || !quantityMenu.activeInHierarchy) return false;
+            UiMotion.Hide(quantityMenu, controller);
+            return true;
         }
 
         void Update()
@@ -117,16 +146,25 @@ namespace RocketRaja
         public void Refresh()
         {
             if (controller == null || controller.Engine == null) return;
+            // Bind can refresh this inactive screen before Unity calls Awake.
+            if (!CacheQuantityChoices()) return;
             var engine = controller.Engine;
             var state = engine.State;
-            quantityLabel.text = buyMode == int.MaxValue ? "Buy MAX" : "Buy ×" + buyMode;
+            quantityLabel.text = buyMode == int.MaxValue ? "Qty Max" : "Qty ×" + buyMode;
+            for (int i = 0; i < QuantityModes.Length; i++)
+            {
+                bool selected = buyMode == QuantityModes[i];
+                quantityChoiceLabels[i].text = QuantityOptions[i] + (selected ? "\nSelected" : "");
+                var mark = quantitySelectionMarks[i];
+                if (mark != null && mark.activeSelf != selected) mark.SetActive(selected);
+            }
             tapLevelLabel.text = "Level " + state.tapLevel;
             tapIncomeLabel.text = "₹" + engine.TapIncome + " per tap";
             Quote tap = engine.TapQuote(buyMode);
             tapBuyLabel.text = state.tapLevel >= Catalog.MaxLevel ? "Max level" :
                 tap.quantity > 0 ? "₹" + tap.cost + "\nUpgrade ×" + tap.quantity :
                 "₹" + engine.TapCostFor(1) + "\nUpgrade ×1";
-            tapBuyButton.interactable = tap.affordable;
+            tapBuyButton.interactable = engine.CanMutate && tap.affordable;
             var prestige = engine.PreviewPrestige();
             prestigeLabel.text = prestige.reward > 0 ? "View prestige · +" + prestige.reward : "View prestige";
             var remaining = engine.Data.upgrades.Where(x => !state.upgrades.Contains(x.id)).OrderBy(x => x.price).ThenBy(x => x.id, StringComparer.Ordinal).ToList();
@@ -141,17 +179,33 @@ namespace RocketRaja
                 if (!present) continue;
                 UpgradeDef upgrade = remaining[index];
                 upgradeNames[slot].text = upgrade.name;
-                upgradeEffects[slot].text = upgrade.Description(engine.Data);
+                upgradeEffects[slot].text = UpgradeDescription(upgrade, engine);
                 bool unlocked = engine.Unlocked(upgrade);
                 upgradePrices[slot].text = unlocked ? "₹" + upgrade.price + "\nBuy upgrade" : Requirement(upgrade, engine);
                 upgradeButtons[slot].interactable = engine.CanMutate && unlocked && state.cash >= upgrade.price;
             }
         }
 
+        static string UpgradeDescription(UpgradeDef upgrade, GameEngine engine)
+        {
+            if (upgrade.effect != Effect.Skill) return upgrade.Description(engine.Data);
+            var definition = engine.Data.skills[upgrade.target];
+            double value = definition.values[upgrade.tier];
+            string effect = upgrade.target == 0
+                ? "x" + value.ToString("0.##", CultureInfo.InvariantCulture) + " sales for " + definition.duration.ToString("0", CultureInfo.InvariantCulture) + "s"
+                : upgrade.target == 1
+                    ? value.ToString("0.##", CultureInfo.InvariantCulture) + " auto taps/s for " + definition.duration.ToString("0", CultureInfo.InvariantCulture) + "s"
+                    : (value / 60).ToString("0.##", CultureInfo.InvariantCulture) + " minutes normal sales";
+            return effect + "\nCooldown " + GameView.Duration(engine.SkillCooldown(upgrade.target));
+        }
+
         static string Requirement(UpgradeDef upgrade, GameEngine engine)
         {
             if (upgrade.effect == Effect.Skill)
-                return upgrade.tier == 0 ? "Own " + (upgrade.target + 1) + " products" : "Previous skill rank";
+            {
+                int needed = upgrade.target + 1;
+                return upgrade.tier == 0 ? "Own " + needed + (needed == 1 ? " product" : " products") : "Previous skill rank";
+            }
             return "";
         }
 

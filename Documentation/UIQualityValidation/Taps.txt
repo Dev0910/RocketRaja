@@ -1,0 +1,12 @@
+PASS Main scene booted
+PASS Every tap immediately shows its reward without blocking input
+PASS Tap earnings rise briefly within the counter lane
+PASS Tap earnings remain readable during the rise
+CAPTURE 08-tap-mid 644x641
+PASS Tap earnings fade only near the end of feedback
+PASS Tap earnings disappear promptly after feedback
+PASS Rapid taps aggregate in one authored label without growing the hierarchy
+PASS Enabling Reduced Motion cancels flying tap labels
+PASS Reduced Motion keeps tap income readable without moving or fading
+PASS Static reduced-motion tap labels hide after 650ms
+SMOKE SUCCEEDED

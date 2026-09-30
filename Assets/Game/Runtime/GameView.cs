@@ -12,6 +12,7 @@ namespace RocketRaja
         GameEngine E => game.Engine;
         float refreshClock;
         string currentTab = "Home";
+        public string CurrentTab => currentTab;
 
         public bool Initialize(GameController controller)
         {
@@ -30,6 +31,9 @@ namespace RocketRaja
             }
 
             game = controller;
+#if UNITY_ANDROID && !UNITY_EDITOR
+            Input.backButtonLeavesApp = false;
+#endif
             game.HomeScreen.gameObject.SetActive(true);
             game.HomeScreen.Bind(game, this);
             game.PlayerScreen.Bind(game, this);
@@ -49,6 +53,11 @@ namespace RocketRaja
             UiMotion.SettleExit(game.ProductsScreen.gameObject);
             UiMotion.SettleExit(game.LegacyScreen.gameObject);
             game.HomeScreen.SettlePanelExit();
+            bool browsing = tab != "Home";
+            game.HomeScreen.GetComponent<ImportedPanelFit>().SetBrowsing(browsing);
+            game.PlayerScreen.GetComponent<ImportedPanelFit>().SetBrowsing(browsing);
+            game.ProductsScreen.GetComponent<ImportedPanelFit>().SetBrowsing(browsing);
+            game.LegacyScreen.GetComponent<ImportedPanelFit>().SetBrowsing(browsing);
             game.HomeScreen.SetHomeVisible(tab == "Home");
             UiMotion.SetVisible(game.PlayerScreen.gameObject, tab == "Player", game, direction);
             UiMotion.SetVisible(game.ProductsScreen.gameObject, tab == "Products", game, direction);
@@ -77,14 +86,18 @@ namespace RocketRaja
             refreshClock += Time.unscaledDeltaTime;
             if (refreshClock > .2f) { refreshClock = 0; RefreshNow(); }
             if (game.StartupReady && currentTab == "Home" && game.CanPlay && E.CanMutate &&
-                !E.State.storeNamePromptHandled && !game.ModalPaused && !game.IsAdShowing &&
+                (E.State.onboarding >= 3 || E.State.OwnedProducts > 0) &&
+                !E.State.storeNamePromptHandled && string.IsNullOrEmpty(E.State.storeName) &&
+                !game.ModalPaused && !game.IsAdShowing &&
                 string.IsNullOrEmpty(E.State.pendingOfflineId) && !game.HomeScreen.HasNotice)
                 ShowStoreName(true);
-            if (Input.GetKeyDown(KeyCode.Escape)) HandleEscape();
+            if (Input.GetKeyDown(KeyCode.Escape) && !TryNavigateBack()) BackgroundTask();
         }
 
-        void HandleEscape()
+        // Return false only at the root, where Android should background the task.
+        internal bool TryNavigateBack()
         {
+            if (game == null) return true;
             if (game.SaveNeedsRecovery) Application.Quit();
             else if (game.StoreNameScreen.gameObject.activeInHierarchy) game.StoreNameScreen.Dismiss();
             else if (game.PrivacyScreen.gameObject.activeInHierarchy) game.PrivacyScreen.Close();
@@ -95,7 +108,30 @@ namespace RocketRaja
             else if (game.StatisticsScreen.gameObject.activeInHierarchy) game.StatisticsScreen.Close();
             else if (game.SkillsScreen.gameObject.activeInHierarchy) game.SkillsScreen.Close();
             else if (game.ProductDetailScreen.gameObject.activeInHierarchy) game.ProductDetailScreen.Close();
-            else Switch("Home");
+            else if (currentTab == "Products" && game.ProductsScreen.DismissQuantityMenu()) return true;
+            else if (currentTab == "Player" && game.PlayerScreen.DismissQuantityMenu()) return true;
+            else if (currentTab != "Home") Switch("Home");
+            else return false;
+            return true;
+        }
+
+        static void BackgroundTask()
+        {
+#if UNITY_ANDROID && !UNITY_EDITOR
+            try
+            {
+                using (var unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
+                using (var activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity"))
+                {
+                    if (activity == null || !activity.Call<bool>("moveTaskToBack", true))
+                        Debug.LogWarning("Android could not move the game task to the background.");
+                }
+            }
+            catch (AndroidJavaException exception)
+            {
+                Debug.LogWarning("Android could not move the game task to the background: " + exception.Message);
+            }
+#endif
         }
 
         public void TapFeedback() => game.HomeScreen.TapFeedback();
@@ -195,8 +231,14 @@ namespace RocketRaja
         public void ShowStoreName(bool firstVisit = false)
         {
             if (!game.CanPlay || !E.CanMutate) return;
+            if (firstVisit && !string.IsNullOrEmpty(E.State.storeName)) return;
             if (!firstVisit) game.SettingsScreen.CloseForChild();
             game.StoreNameScreen.Open(game, firstVisit, firstVisit ? (Action)null : ShowSettings);
+        }
+        public void ShowStoreNameDetail()
+        {
+            if (game == null || E == null || !game.StartupReady || game.ModalPaused || game.IsAdShowing) return;
+            game.StoreNameScreen.OpenDetail(game, currentTab == "Home" ? "Back to shop" : "Back to " + currentTab);
         }
         public void ShowPrivacy()
         {

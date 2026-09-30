@@ -29,6 +29,8 @@ namespace RocketRaja.Core
             return true;
         }
         public int SkillRank(int skill) => Data.upgrades.Count(x => x.effect == Effect.Skill && x.target == skill && State.upgrades.Contains(x.id));
+        public double SkillCooldown(int skill) => Data.skills[skill].cooldown *
+            (1 - Data.legacy[11].valuePerRank * State.Legacy(11));
         public int VisualTier(int index) => Catalog.VisualLevels.Count(level => State.Level(index) >= level);
         public int StallTier => State.OwnedProducts >= 8 ? 4 : State.OwnedProducts >= 6 ? 3 : State.OwnedProducts >= 3 ? 2 : State.OwnedProducts > 0 ? 1 : 0;
         double RunMultiplier(Effect effect, int target = -1) => Data.upgrades.Where(x => x.effect == effect && (target < 0 || x.target == target) && State.upgrades.Contains(x.id)).Aggregate(1d, (v, u) => v * u.multiplier);
@@ -72,7 +74,19 @@ namespace RocketRaja.Core
         public Amount ProductCost(int i, int quantity)
         {
             if (quantity <= 0) return Amount.Zero;
-            return new Amount(Data.products[i].cost) * RunMultiplier(Effect.ProductDiscount, i) * Amount.Pow10(State.Level(i) * Math.Log10(Catalog.Growth)) * (Amount.Pow10(quantity * Math.Log10(Catalog.Growth)) - new Amount(1)) / (Catalog.Growth - 1);
+            Amount unitCost = new Amount(Data.products[i].cost) * RunMultiplier(Effect.ProductDiscount, i);
+            double growthLog = Math.Log10(Catalog.Growth);
+            if (i == 0 && State.onboarding < 3 && State.Level(0) == 0)
+            {
+                // The introductory offer changes only the first unit, even in bulk and Max quotes.
+                Amount firstCost = unitCost * .25;
+                if (quantity == 1) return firstCost;
+                Amount remainingCost = unitCost * Catalog.Growth *
+                    (Amount.Pow10((quantity - 1) * growthLog) - new Amount(1)) / (Catalog.Growth - 1);
+                return firstCost + remainingCost;
+            }
+            return unitCost * Amount.Pow10(State.Level(i) * growthLog) *
+                (Amount.Pow10(quantity * growthLog) - new Amount(1)) / (Catalog.Growth - 1);
         }
         public Quote ProductQuote(int i, int desired)
         {
@@ -155,7 +169,7 @@ namespace RocketRaja.Core
             if (!CanMutate) return false;
             int rank = SkillRank(i); var skill = State.skills[i];
             if (rank == 0 || skill.readyAt > State.now) return false;
-            skill.readyAt = State.now + Data.skills[i].cooldown * (1 - Data.legacy[11].valuePerRank * State.Legacy(11));
+            skill.readyAt = State.now + SkillCooldown(i);
             if (i == 2) Grant(NormalIncome * Data.skills[i].values[rank - 1]);
             else skill.activeUntil = State.now + Data.skills[i].duration;
             Touch(true); return true;

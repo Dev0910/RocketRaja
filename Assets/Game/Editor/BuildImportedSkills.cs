@@ -1,4 +1,5 @@
 using RocketRaja;
+using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEditor.SceneManagement;
@@ -106,7 +107,7 @@ namespace RocketRaja.EditorTools
             var faces = new Image[3];
             string[] names = { "Festival Rush", "Helping Hands", "Bulk Order" };
             string[] defaults = { "×2 automatic sales for 30s", "5 automatic taps/sec for 30s", "120 seconds of normal product sales" };
-            string[] waits = { "Cooldown 5m", "Cooldown 5m", "Cooldown 10m" };
+            string[] waits = { "Cooldown 05:00", "Cooldown 05:00", "Cooldown 10:00" };
             for (int i = 0; i < 3; i++)
             {
                 var card = FramedCard(content, names[i] + " Guide", 365);
@@ -142,10 +143,74 @@ namespace RocketRaja.EditorTools
             Assign(serialized, "statusLabels", statuses);
             Assign(serialized, "statusFaces", faces);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            ApplyReadability(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();
             Debug.Log("Authored Skills guide in " + ImporterPath);
+        }
+
+        /// <summary>Reflows saved guide cards without replacing their referenced objects.</summary>
+        public static void ApplyReadability(GameObject root)
+        {
+            string[] names = { "Festival Rush", "Helping Hands", "Bulk Order" };
+            string[] waits = { "Cooldown 05:00", "Cooldown 05:00", "Cooldown 10:00" };
+            var rects = root.GetComponentsInChildren<RectTransform>(true);
+            for (int i = 0; i < names.Length; i++)
+            {
+                var card = rects.Single(x => x.name == names[i] + " Guide");
+                card.GetComponent<LayoutElement>().preferredHeight = 420;
+                var title = card.Find("Name").GetComponent<TMP_Text>();
+                PlaceTop(title.rectTransform, 206, 27, 26, 64);
+                ReadableText(title, 42, false);
+
+                var rank = card.Find("guide-rank-" + i).GetComponent<TMP_Text>();
+                PlaceTop(rank.rectTransform, 206, 27, 96, 54);
+                ReadableText(rank, 36, false);
+                var effect = card.Find("guide-effect-" + i).GetComponent<TMP_Text>();
+                // Keep the longer Bulk Order description on two readable lines.
+                PlaceTop(effect.rectTransform, 206, 160, 160, 104);
+                ReadableText(effect, 36, true);
+                var cooldown = card.Find("guide-cooldown-" + i).GetComponent<TMP_Text>();
+                PlaceTop(cooldown.rectTransform, 206, 27, 274, 54);
+                ReadableText(cooldown, 36, false);
+                cooldown.text = waits[i];
+
+                var badge = card.Find("guide-status-wrap-" + i) as RectTransform;
+                PlaceTop(badge, 206, 27, 340, 62);
+                var status = badge.Find("guide-status-" + i).GetComponent<TMP_Text>();
+                status.rectTransform.anchorMin = Vector2.zero;
+                status.rectTransform.anchorMax = Vector2.one;
+                status.rectTransform.offsetMin = new Vector2(16, 2);
+                status.rectTransform.offsetMax = new Vector2(-16, -2);
+                ReadableText(status, 36, false);
+                status.alignment = TextAlignmentOptions.Center;
+            }
+
+            var lead = rects.Single(x => x.name == "Skills Lead");
+            lead.GetComponent<LayoutElement>().preferredHeight = 78;
+            ReadableText(lead.Find("Lead Text").GetComponent<TMP_Text>(), 36, true);
+            var note = rects.Single(x => x.name == "Skills Note");
+            note.GetComponent<LayoutElement>().preferredHeight = 90;
+            ReadableText(note.Find("Note Text").GetComponent<TMP_Text>(), 36, true);
+        }
+
+        static void PlaceTop(RectTransform rect, float left, float right, float top, float height)
+        {
+            rect.anchorMin = new Vector2(0, 1);
+            rect.anchorMax = Vector2.one;
+            rect.pivot = new Vector2(.5f, 1);
+            rect.offsetMin = new Vector2(left, -top - height);
+            rect.offsetMax = new Vector2(-right, -top);
+        }
+
+        static void ReadableText(TMP_Text text, float size, bool wrap)
+        {
+            text.enableAutoSizing = false;
+            text.fontSize = text.fontSizeMin = text.fontSizeMax = size;
+            text.textWrappingMode = wrap ? TextWrappingModes.Normal : TextWrappingModes.NoWrap;
+            text.overflowMode = TextOverflowModes.Ellipsis;
+            EditorUtility.SetDirty(text);
         }
 
         static void Assign<T>(SerializedObject serialized, string name, T[] items) where T : Object

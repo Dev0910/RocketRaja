@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace RocketRaja.Core
 {
@@ -24,12 +25,39 @@ namespace RocketRaja.Core
         public string storeName;
         public bool storeNamePromptHandled;
         public const string DefaultStoreName = "My Fireworks Store";
-        public string StoreName => TryStoreName(storeName, out var name) ? name : DefaultStoreName;
+        public const string StoreNameUpdateRequired = "Name needs update";
+        // These visible, single-glyph characters are shared by the saved Baloo 2 and
+        // Nunito font assets. Text that needs shaping or an invisible format character
+        // cannot be displayed reliably by the current store-name UI.
+        public static readonly string SupportedStoreNameCharacters = new string(
+            Enumerable.Range(0x20, 0x5f)
+                .Concat(Enumerable.Range(0xa1, 0x0c))
+                .Concat(Enumerable.Range(0xae, 0x52))
+                .Concat(Enumerable.Range(0x100, 0x33))
+                .Concat(Enumerable.Range(0x134, 0x4b))
+                .Concat(new[] { 0x2010, 0x2013, 0x2014, 0x2018, 0x2019,
+                    0x201c, 0x201d, 0x2026, 0x20b9 })
+                .Select(codepoint => (char)codepoint).ToArray());
+        public bool NeedsStoreNameUpdate => !string.IsNullOrEmpty(storeName) && !TryStoreName(storeName, out _);
+        public string StoreName => TryStoreName(storeName, out var name) ? name :
+            NeedsStoreNameUpdate ? StoreNameUpdateRequired : DefaultStoreName;
         public static bool TryStoreName(string value, out string name)
         {
-            name = value?.Trim();
-            return name != null && name.Length >= 1 && name.Length <= 24 &&
-                !value.Any(c => char.IsControl(c) || c == '\u2028' || c == '\u2029');
+            name = null;
+            if (value == null) return false;
+            string candidate;
+            try { candidate = value.Trim(' ').Normalize(NormalizationForm.FormC); }
+            catch (ArgumentException) { return false; } // Malformed UTF-16 input.
+            if (candidate.Length < 1 || candidate.Length > 24) return false;
+            bool hasVisibleLetterOrDigit = false;
+            foreach (char c in candidate)
+            {
+                if (SupportedStoreNameCharacters.IndexOf(c) < 0) return false;
+                hasVisibleLetterOrDigit |= char.IsLetterOrDigit(c);
+            }
+            if (!hasVisibleLetterOrDigit) return false;
+            name = candidate;
+            return true;
         }
         public bool music = true, sound = true, reducedMotion;
         public string pendingOfflineId;

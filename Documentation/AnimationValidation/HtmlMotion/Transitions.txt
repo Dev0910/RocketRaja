@@ -158,3 +158,12 @@ PASS Statistics Screen opens from transparent
 PASS Statistics Screen HTML travel distance
 PASS Statistics Screen opening restores authored geometry
 PASS Statistics Screen exit becomes transparent
+PASS Store Name Screen has a transition profile
+PASS Store Name Screen every saved graphic has a renderer
+PASS Store Name Screen all controls have saved feedback references
+PASS Store Name Screen/Store Name Screen saved motion references
+PASS Store Name Screen HTML timings
+PASS Store Name Screen opens from transparent
+PASS Store Name Screen HTML travel distance
+PASS Store Name Screen opening restores authored geometry
+PASS Store Name Screen exit becomes transparent

@@ -1,0 +1,232 @@
+PASS Main scene booted
+PASS Fresh Home defers Sponsor until after the first shelf
+PASS First Phuljhari costs the introductory ₹30
+PASS Introductory discount applies only to the first unit in a bulk quote
+PASS Fresh Home starts with a tap prompt and no naming dialog
+PASS First tap earns and shows the introductory shelf goal
+PASS Naming waits while the first shelf is unowned
+PASS Goal action earns while the shelf is unaffordable
+PASS Products visit is recorded after the first tap
+PASS Unaffordable purchase does not finish onboarding
+PASS Affordable shelf action describes the Product Detail destination
+PASS Affordable starter goal opens Phuljhari Detail with Home as its origin
+CAPTURE home-goal-first-shelf-450 450x1000
+PASS Goal Detail return restores Home without switching tabs
+PASS First shelf is purchasable from its Detail action
+PASS First successful Detail purchase completes core onboarding on Home
+PASS Second Phuljhari uses its regular upgrade price
+PASS After first purchase Home shows the next upgrade and the exact tap reward
+PASS An owned shelf shows the exact tap reward even if onboarding is incomplete
+PASS Established Home tap awards exactly the value shown in its hint
+PASS Nearby meaningful upgrade is labeled as the next action
+PASS Upgrade goal opens the named Product Detail while keeping Home as origin
+PASS Upgrade Detail return restores Home
+PASS Store naming opens after the first purchase and Home return
+PASS Naming blocks background taps
+PASS Skip saves default and handles prompt
+PASS Skipped prompt does not repeat
+PASS Near-term Anar unlock becomes the next goal as income grows
+PASS Recommended Anar shelf opens its Detail without changing Products quantity
+PASS Recommended shelf returns to Home
+PASS All-stocked Home avoids recommending a negligible first-shelf level
+PASS Late-game Home shows the actual tap reward beside a stronger passive income and upgrade goal
+CAPTURE home-late-save-for-upgrade-360x540 360x540
+PASS Actual tap reward hint remains legible at (360, 540) (11.9px)
+CAPTURE home-late-save-for-upgrade-450x1000 450x1000
+PASS Actual tap reward hint remains legible at (450, 1000) (12.1px)
+PASS Late-game saving goal opens Gift boxes Detail from Home
+PASS Late-game Detail returns to Home
+PASS Funded late-game action remains nearby and clears the meaningful-gain floor
+PASS Rename cancellation preserves name and returns to Settings
+PASS Invalid name disables save: length 0
+PASS Invalid name disables save: length 3
+PASS Invalid name disables save: length 25
+PASS Store markup renders literally
+PASS Unity guest serialization retains store name and completed onboarding
+PASS Account payload preserves store name
+PASS Naming waits behind offline dialog
+PASS Naming appears after offline dismissal
+PASS Naming waits behind recovery dialog
+PASS Removed Home sections are absent
+PASS No decorative visitors
+PASS Unavailable Sponsor collapses
+PASS Ready Sponsor offer is enabled
+PASS Read-only session disables Sponsor
+PASS Active Sponsor uses compact timer
+PASS Expired unavailable Sponsor collapses
+PASS Locked skill can explain its unlock path
+PASS Locked skill points to its upgrade screen
+PASS Ready skill state
+PASS Active skill state
+PASS Cooldown skill state
+CAPTURE home-360-1000 360x640
+PASS Per Tap and action hint suffixes fit (360, 640)/1000
+PASS Floating reward keeps suffix 1000
+PASS Floating reward stays on the counter at (360, 640)/1000 (visual=(x:160.73, y:362.54, width:38.72, height:12.43), hintTop=344.7, shelfBottom=404.1, keeperLeft=284.4)
+CAPTURE home-360-1000000 360x640
+PASS Per Tap and action hint suffixes fit (360, 640)/1000000
+PASS Floating reward keeps suffix 1000000
+PASS Floating reward stays on the counter at (360, 640)/1000000 (visual=(x:159.26, y:362.54, width:41.10, height:12.43), hintTop=344.7, shelfBottom=404.1, keeperLeft=284.4)
+CAPTURE home-360-1000000000 360x640
+PASS Per Tap and action hint suffixes fit (360, 640)/1000000000
+PASS Floating reward keeps suffix 1000000000
+PASS Floating reward stays on the counter at (360, 640)/1000000000 (visual=(x:160.67, y:362.54, width:38.67, height:12.43), hintTop=344.7, shelfBottom=404.1, keeperLeft=284.4)
+CAPTURE home-360-1000000000000 360x640
+PASS Per Tap and action hint suffixes fit (360, 640)/1000000000000
+PASS Floating reward keeps suffix 1000000000000
+PASS Floating reward stays on the counter at (360, 640)/1000000000000 (visual=(x:161.16, y:362.54, width:38.47, height:12.43), hintTop=344.7, shelfBottom=404.1, keeperLeft=284.4)
+PASS Long store name keeps readable lettering on Home sign at (360, 640) (12.0px)
+CAPTURE store-name-360 360x640
+CAPTURE home-settings-360 360x640
+CAPTURE home-450-1000 450x1000
+PASS Per Tap and action hint suffixes fit (450, 1000)/1000
+PASS Floating reward keeps suffix 1000
+PASS Floating reward stays on the counter at (450, 1000)/1000 (visual=(x:200.91, y:511.28, width:48.40, height:15.53), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.5)
+CAPTURE home-450-1000000 450x1000
+PASS Per Tap and action hint suffixes fit (450, 1000)/1000000
+PASS Floating reward keeps suffix 1000000
+PASS Floating reward stays on the counter at (450, 1000)/1000000 (visual=(x:199.07, y:511.28, width:51.37, height:15.53), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.5)
+CAPTURE home-450-1000000000 450x1000
+PASS Per Tap and action hint suffixes fit (450, 1000)/1000000000
+PASS Floating reward keeps suffix 1000000000
+PASS Floating reward stays on the counter at (450, 1000)/1000000000 (visual=(x:200.84, y:511.28, width:48.34, height:15.53), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.5)
+CAPTURE home-450-1000000000000 450x1000
+PASS Per Tap and action hint suffixes fit (450, 1000)/1000000000000
+PASS Floating reward keeps suffix 1000000000000
+PASS Floating reward stays on the counter at (450, 1000)/1000000000000 (visual=(x:201.46, y:511.28, width:48.09, height:15.53), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.5)
+PASS Long store name keeps readable lettering on Home sign at (450, 1000) (15.0px)
+CAPTURE store-name-450 450x1000
+CAPTURE home-settings-450 450x1000
+PASS Compact sign ellipsizes long names at readable type size at (360, 540) (12.0px)
+PASS Sign has a 48-pixel touch area clear of gear and shelves at (360, 540) (201.6×48.8)
+PASS Sign receives the frontmost raycast at (360, 540)
+PASS Inspecting the sign opens its detail without earning cash at (360, 540)
+PASS Full 24-character name wraps visibly at (360, 540) (14.0px)
+PASS Mutable sign detail offers Rename without opening the keyboard at (360, 540)
+PASS Sign detail return and Rename actions remain separate at (360, 540)
+PASS Home-origin sign detail names its shop return at (360, 540)
+CAPTURE store-name-detail-360x540 360x540
+PASS Sign Rename opens the editable current name at (360, 540)
+PASS Naming guidance states supported characters without clipping at (360, 540)
+CAPTURE store-name-edit-360x540 360x540
+PASS Invalid edit disables Save before sign detail is reopened at (360, 540)
+PASS Sign-origin close returns Home at (360, 540)
+PASS Read-only player can inspect the full name without Rename at (360, 540)
+PASS Read-only detail centers its sole return action at (360, 540)
+CAPTURE store-name-readonly-360x540 360x540
+PASS Read-only sign detail closes to Home at (360, 540)
+PASS Rename recovers without button overlap after invalid edit and read-only view at (360, 540)
+PASS Settings Rename still opens the editable name at (360, 540)
+PASS Settings-origin Rename returns to Settings at (360, 540)
+PASS Shared sign remains reachable while browsing Products at (360, 540)
+PASS Browse-origin sign inspection preserves Products without awarding cash at (360, 540)
+PASS Products return and Rename remain separate and legible at (360, 540)
+CAPTURE store-name-detail-products-360x540 360x540
+PASS Browse-origin close restores Products and its scroll position at (360, 540)
+PASS Compact sign ellipsizes long names at readable type size at (450, 1000) (15.0px)
+PASS Sign has a 48-pixel touch area clear of gear and shelves at (450, 1000) (252.0×123.7)
+PASS Sign receives the frontmost raycast at (450, 1000)
+PASS Inspecting the sign opens its detail without earning cash at (450, 1000)
+PASS Full 24-character name wraps visibly at (450, 1000) (17.5px)
+PASS Mutable sign detail offers Rename without opening the keyboard at (450, 1000)
+PASS Sign detail return and Rename actions remain separate at (450, 1000)
+PASS Home-origin sign detail names its shop return at (450, 1000)
+CAPTURE store-name-detail-450x1000 450x1000
+PASS Sign Rename opens the editable current name at (450, 1000)
+PASS Naming guidance states supported characters without clipping at (450, 1000)
+CAPTURE store-name-edit-450x1000 450x1000
+PASS Invalid edit disables Save before sign detail is reopened at (450, 1000)
+PASS Sign-origin close returns Home at (450, 1000)
+PASS Read-only player can inspect the full name without Rename at (450, 1000)
+PASS Read-only detail centers its sole return action at (450, 1000)
+CAPTURE store-name-readonly-450x1000 450x1000
+PASS Read-only sign detail closes to Home at (450, 1000)
+PASS Rename recovers without button overlap after invalid edit and read-only view at (450, 1000)
+PASS Settings Rename still opens the editable name at (450, 1000)
+PASS Settings-origin Rename returns to Settings at (450, 1000)
+PASS Shared sign remains reachable while browsing Products at (450, 1000)
+PASS Browse-origin sign inspection preserves Products without awarding cash at (450, 1000)
+PASS Products return and Rename remain separate and legible at (450, 1000)
+CAPTURE store-name-detail-products-450x1000 450x1000
+PASS Browse-origin close restores Products and its scroll position at (450, 1000)
+PASS Burst popup uses its saved, high-contrast outline at (360, 540)
+PASS Eight-tap reward aggregates without covering shelves at (360, 540) (visual=(x:164.08, y:353.38, width:32.52, height:10.56), hintTop=337.6, shelfBottom=375.6, keeperLeft=284.1)
+CAPTURE home-tap-burst-360x540 360x540
+PASS Moving burst stays fully opaque between hint and shelves at (360, 540) (visual=(x:164.08, y:353.91, width:32.52, height:10.56), hintTop=337.6, shelfBottom=375.6, keeperLeft=283.9)
+PASS Mid-animation burst stays fully opaque between hint and shelves at (360, 540) (visual=(x:164.08, y:354.50, width:32.52, height:10.56), hintTop=337.6, shelfBottom=375.6, keeperLeft=284.4)
+CAPTURE home-tap-mid-360x540 360x540
+PASS Burst popup clears after its readable dwell and brief exit at (360, 540)
+PASS Burst popup uses its saved, high-contrast outline at (360, 640)
+PASS Eight-tap reward aggregates without covering shelves at (360, 640) (visual=(x:161.16, y:362.99, width:38.47, height:12.49), hintTop=344.7, shelfBottom=404.1, keeperLeft=283.4)
+CAPTURE home-tap-burst-360x640 360x640
+PASS Moving burst stays fully opaque between hint and shelves at (360, 640) (visual=(x:161.16, y:367.17, width:38.47, height:12.49), hintTop=344.7, shelfBottom=404.1, keeperLeft=283.3)
+PASS Mid-animation burst stays fully opaque between hint and shelves at (360, 640) (visual=(x:161.16, y:371.52, width:38.47, height:12.49), hintTop=344.7, shelfBottom=404.1, keeperLeft=283.8)
+CAPTURE home-tap-mid-360x640 360x640
+PASS Burst popup clears after its readable dwell and brief exit at (360, 640)
+PASS Burst popup uses its saved, high-contrast outline at (450, 1000)
+PASS Eight-tap reward aggregates without covering shelves at (450, 1000) (visual=(x:201.46, y:511.78, width:48.09, height:15.61), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.0)
+CAPTURE home-tap-burst-450x1000 450x1000
+PASS Moving burst stays fully opaque between hint and shelves at (450, 1000) (visual=(x:201.46, y:516.28, width:48.09, height:15.61), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.4)
+PASS Mid-animation burst stays fully opaque between hint and shelves at (450, 1000) (visual=(x:201.46, y:520.54, width:48.09, height:15.61), hintTop=466.3, shelfBottom=582.9, keeperLeft=355.5)
+CAPTURE home-tap-mid-450x1000 450x1000
+PASS Burst popup clears after its readable dwell and brief exit at (450, 1000)
+PASS Reduced-motion tap reward remains static and fully opaque during its dwell
+PASS Reduced-motion tap reward clears without a fade
+PASS Existing unsupported name shows sign status without first-visit overwrite at (360, 540)
+PASS Legacy sign detail explains preserved raw name and offers replacement at (360, 540) (copy 12.0px)
+CAPTURE store-name-legacy-detail-360x540 360x540
+PASS Legacy replacement starts blank and keeps old raw until Save at (360, 540) (help 12.0px)
+CAPTURE store-name-legacy-edit-360x540 360x540
+PASS Unsupported legacy characters cannot be resaved at (360, 540)
+PASS Keep name preserves raw value from Home at (360, 540)
+PASS Read-only legacy player can inspect and keep saved name at (360, 540)
+CAPTURE store-name-legacy-readonly-360x540 360x540
+PASS Read-only inspection leaves raw name untouched at (360, 540)
+PASS Settings names the problem and readable replacement action at (360, 540) (action 12.0px)
+CAPTURE store-name-legacy-settings-360x540 360x540
+PASS Settings replacement starts blank at (360, 540)
+PASS Settings Keep returns to Settings without replacing raw at (360, 540)
+PASS Browse sign exposes legacy status without changing Products at (360, 540)
+PASS Browse Keep preserves Products scroll and raw name at (360, 540)
+PASS Supported accented replacement enables Save at (360, 540)
+PASS Valid replacement clears legacy status and returns Settings at (360, 540)
+PASS Existing unsupported name shows sign status without first-visit overwrite at (450, 1000)
+PASS Legacy sign detail explains preserved raw name and offers replacement at (450, 1000) (copy 15.0px)
+CAPTURE store-name-legacy-detail-450x1000 450x1000
+PASS Legacy replacement starts blank and keeps old raw until Save at (450, 1000) (help 15.0px)
+CAPTURE store-name-legacy-edit-450x1000 450x1000
+PASS Unsupported legacy characters cannot be resaved at (450, 1000)
+PASS Keep name preserves raw value from Home at (450, 1000)
+PASS Read-only legacy player can inspect and keep saved name at (450, 1000)
+CAPTURE store-name-legacy-readonly-450x1000 450x1000
+PASS Read-only inspection leaves raw name untouched at (450, 1000)
+PASS Settings names the problem and readable replacement action at (450, 1000) (action 15.0px)
+CAPTURE store-name-legacy-settings-450x1000 450x1000
+PASS Settings replacement starts blank at (450, 1000)
+PASS Settings Keep returns to Settings without replacing raw at (450, 1000)
+PASS Browse sign exposes legacy status without changing Products at (450, 1000)
+PASS Browse Keep preserves Products scroll and raw name at (450, 1000)
+PASS Supported accented replacement enables Save at (450, 1000)
+PASS Valid replacement clears legacy status and returns Settings at (450, 1000)
+PASS Keeper motion uses a saved non-interactive component
+PASS Keeper matches bottom pivot, .7-degree extremes and four-second HTML loop
+PASS Keeper stays at the original lower-right counter position after the pivot change
+PASS Decorative visitors are removed
+PASS Keeper motion advances without visitors
+PASS Opening a modal freezes both ambient loops
+PASS Ambient loops resume after modal release
+PASS Background application focus pauses ambient motion
+PASS Returning application focus resumes ambient motion
+CAPTURE 10-ambient 450x1000
+PASS Reduced Motion hides visitors and restores the keeper's authored pose
+PASS Every tap immediately shows its reward without blocking input
+PASS Tap earnings rise briefly within the counter lane
+PASS Tap earnings remain readable during the rise
+CAPTURE 08-tap-mid 450x1000
+PASS Tap earnings fade only near the end of feedback
+PASS Tap earnings disappear promptly after feedback
+PASS Rapid taps aggregate in one authored label without growing the hierarchy
+PASS Enabling Reduced Motion cancels flying tap labels
+PASS Reduced Motion keeps tap income readable without moving or fading
+PASS Static reduced-motion tap labels hide after 650ms
+SMOKE SUCCEEDED

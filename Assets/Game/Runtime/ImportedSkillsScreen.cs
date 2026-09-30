@@ -82,7 +82,7 @@ namespace RocketRaja
                     : i == 1
                         ? value.ToString("0.##", CultureInfo.InvariantCulture) + " automatic taps/sec for " + definition.duration.ToString("0", CultureInfo.InvariantCulture) + "s"
                         : value.ToString("0", CultureInfo.InvariantCulture) + " seconds of normal product sales";
-                cooldownLabels[i].text = "Cooldown " + (definition.cooldown / 60).ToString("0", CultureInfo.InvariantCulture) + "m";
+                cooldownLabels[i].text = "Cooldown " + GameView.Duration(engine.SkillCooldown(i));
                 var skill = state.skills[i];
                 if (rank == 0)
                 {

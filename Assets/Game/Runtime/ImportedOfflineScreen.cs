@@ -21,7 +21,9 @@ namespace RocketRaja
         [SerializeField] ImportedDialogFit dialogFit;
 
         GameController controller;
-        bool resolved, awaiting, lastReady;
+        bool resolved, awaiting, lastReady, lastAdShowing, lastCanWatch, lastEligible;
+        bool lastAttemptFailed, bonusAdded;
+        string offeredOfflineId;
 
         void Awake()
         {
@@ -56,11 +58,15 @@ namespace RocketRaja
             }
             var engine = controller.Engine;
             if (string.IsNullOrEmpty(engine.State.pendingOfflineId)) return;
+            if (offeredOfflineId != engine.State.pendingOfflineId)
+                lastAttemptFailed = bonusAdded = false;
+            offeredOfflineId = engine.State.pendingOfflineId;
             rewardText.text = "₹" + engine.State.pendingOfflineReward;
             capText.text = "Up to " + (engine.OfflineCap / 3600).ToString("0") + " hours while you are away.";
             offerText.text = "Watch an optional video to add another ₹" + engine.State.pendingOfflineReward + ".";
             resolved = false;
-            awaiting = false;
+            // Reopening the modal must not release an in-flight request's guard.
+            awaiting = awaiting && controller.IsAdShowing;
             UiMotion.Show(gameObject, controller, true);
             UiFeedback.Pulse(rewardText.transform, controller, .1f, .65f);
             RefreshAvailability();
@@ -68,52 +74,75 @@ namespace RocketRaja
 
         void Update()
         {
-            if (controller == null || resolved || awaiting || controller.Ads == null) return;
-            if (controller.Ads.Ready != lastReady) RefreshAvailability();
+            if (controller == null || controller.Engine == null) return;
+            bool eligible = !string.IsNullOrEmpty(controller.Engine.State.pendingOfflineId) &&
+                            controller.Engine.State.pendingOfflineId == offeredOfflineId;
+            if ((controller.Ads != null && controller.Ads.Ready) != lastReady ||
+                controller.IsAdShowing != lastAdShowing || eligible != lastEligible ||
+                (controller.CanPlay && controller.Engine.CanMutate) != lastCanWatch)
+                RefreshAvailability();
         }
 
         void RefreshAvailability()
         {
-            bool ready = controller != null && controller.Ads != null && controller.Ads.Ready &&
-                         !string.IsNullOrEmpty(controller.Engine.State.pendingOfflineId);
+            if (controller == null || controller.Engine == null) return;
+            bool eligible = !string.IsNullOrEmpty(controller.Engine.State.pendingOfflineId) &&
+                            controller.Engine.State.pendingOfflineId == offeredOfflineId;
+            bool ready = controller.Ads != null && controller.Ads.Ready;
+            bool adShowing = controller.IsAdShowing;
+            bool canWatch = controller.CanPlay && controller.Engine.CanMutate;
+            resolved = !eligible;
             lastReady = ready;
-            videoButton.interactable = ready && !awaiting && !resolved;
+            lastAdShowing = adShowing;
+            lastCanWatch = canWatch;
+            lastEligible = eligible;
+            closeButton.interactable = continueButton.interactable = !awaiting && !adShowing;
+            videoButton.interactable = ready && canWatch && !adShowing && !awaiting && !resolved;
             videoFace.sprite = videoButton.interactable ? enabledFace : disabledFace;
-            UiMotion.SetVisible(messageRow, !ready && !resolved, controller);
-            if (!ready && !resolved) messageText.text = "No video is available. You can keep playing.";
-            dialogFit.SetPreferredHeight(ready && !resolved ? 1570 : 1725);
+            bool showMessage = resolved || awaiting || adShowing || !canWatch || !ready || lastAttemptFailed;
+            if (resolved)
+            {
+                offerText.text = bonusAdded ? "Your offline bonus has been added." : "This offer has ended.";
+                messageText.text = bonusAdded ? "Your offline earnings doubled. Keep playing!" :
+                    "This offer has ended. You can keep playing.";
+            }
+            else if (awaiting || adShowing) messageText.text = "Waiting for the video result.";
+            else if (!canWatch) messageText.text = "Videos are paused right now.";
+            else if (lastAttemptFailed) messageText.text = ready
+                ? "Video ended without a reward. You can try again."
+                : "Video ended without a reward. No video is available.";
+            else if (!ready) messageText.text = "No video is available. You can keep playing.";
+            // An asynchronous ad result can arrive after this modal was hidden.
+            if (gameObject.activeInHierarchy) UiMotion.SetVisible(messageRow, showMessage, controller);
+            else messageRow.SetActive(showMessage);
+            dialogFit.SetPreferredHeight(showMessage ? 1725 : 1570);
         }
 
         public void RequestVideo()
         {
-            if (controller == null || controller.Ads == null || !controller.Ads.Ready)
-            {
-                RefreshAvailability();
-                return;
-            }
-            if (awaiting || resolved || string.IsNullOrEmpty(controller.Engine.State.pendingOfflineId)) return;
+            if (controller == null || controller.Engine == null) return;
+            RefreshAvailability();
+            if (!videoButton.interactable) return;
             awaiting = true;
-            videoButton.interactable = false;
-            videoFace.sprite = disabledFace;
+            lastAttemptFailed = false;
+            RefreshAvailability();
             controller.ShowAd("offline", OnAdResult);
         }
 
         void OnAdResult(bool rewarded)
         {
+            if (this == null || controller == null || controller.Engine == null) return;
             awaiting = false;
-            resolved = true;
-            videoButton.interactable = false;
-            videoFace.sprite = disabledFace;
-            offerText.text = rewarded ? "This offer has ended." : "Watch an optional video to add another ₹" + controller.Engine.State.pendingOfflineReward + ".";
-            messageText.text = rewarded ? "This reward offer has already been used." :
-                "Video closed without a reward. Your progress is safe.";
-            UiMotion.Show(messageRow, controller);
-            dialogFit.SetPreferredHeight(1725);
-            if (rewarded) UiFeedback.Pulse(rewardText.transform, controller, .13f, .55f);
+            lastAttemptFailed = !rewarded;
+            bonusAdded = rewarded;
+            RefreshAvailability();
+            if (rewarded && gameObject.activeInHierarchy)
+                UiFeedback.Pulse(rewardText.transform, controller, .13f, .55f);
         }
 
         public void Dismiss()
         {
+            if (awaiting || (controller != null && controller.IsAdShowing)) return;
             if (controller != null && controller.Engine != null &&
                 !string.IsNullOrEmpty(controller.Engine.State.pendingOfflineId))
                 controller.Engine.DismissOffline();

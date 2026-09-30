@@ -53,10 +53,10 @@ namespace RocketRaja.EditorTools
 
             var header = Top(panel, "Header", 144);
             Image(header, IvoryColor);
-            Text(Stretch(header, "Title", 28, 170, 15, 10), "Products", 58,
+            Text(Stretch(header, "Title", 28, 300, 15, 10), "Products", 58,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            var collapse = InvisibleButton(Stretch(header, "collapse-Products", 905, 20, 15, 12));
-            Text(Fill(collapse.transform, "Collapse Icon"), "v", 63, Ink, TextAlignmentOptions.Center, true);
+            var collapse = InvisibleButton(Stretch(header, "collapse-Products", 800, 20, 5, 5));
+            Text(Fill(collapse.transform, "Collapse Icon"), "← Shop", 42, Ink, TextAlignmentOptions.Center, true);
             Image(Bottom(header, "Double Rule", 5), Hex("255883"));
 
             var body = Stretch(panel, "Scroll Body", 0, 0, 0, 144);
@@ -88,9 +88,11 @@ namespace RocketRaja.EditorTools
             toolbar.gameObject.AddComponent<LayoutElement>().preferredHeight = 175;
             var profit = Text(Stretch(toolbar, "products-profit", 4, 385, 28, 28), "Profit · ₹13.42M / sec", 40,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            var quantity = Button(Region(toolbar, "buy-quantity", .70f, .10f, .99f, .92f), Blue);
-            var quantityText = Text(Fill(quantity.transform, "Quantity Label"), "Buy ×1", 41,
-                Color.white, TextAlignmentOptions.Center, true);
+            var quantity = Button(Region(toolbar, "buy-quantity", .70f, .10f, .99f, .92f), Sand);
+            var quantityText = Text(Stretch(quantity.transform, "Quantity Label", 8, 43, 4, 4), "Qty ×1", 40,
+                Ink, TextAlignmentOptions.Center, true);
+            Text(Stretch(quantity.transform, "Quantity Arrow", 247, 10, 4, 4), "v", 38,
+                Ink, TextAlignmentOptions.Center, true);
 
             var detailButtons = new Button[8];
             var purchaseButtons = new Button[8];
@@ -108,13 +110,14 @@ namespace RocketRaja.EditorTools
                 images[i] = Image(Stretch(artFrame, "Product Art", 8, 8, 8, 8), Color.white, false, sprites[i]);
                 images[i].type = UnityEngine.UI.Image.Type.Simple;
                 images[i].preserveAspect = true;
-                names[i] = Text(Stretch(row, "product-name-" + i, 213, 380, 125, 19), Names[i], 38,
+                // Nunito's TMP line height is about 1.36 times font size; shorter rects ellipsize whole lines.
+                names[i] = Text(Stretch(row, "product-name-" + i, 213, 350, 160, 5), Names[i], 38,
                     Ink, TextAlignmentOptions.MidlineLeft, true);
-                levels[i] = Text(Stretch(row, "product-level-" + i, 552, 315, 129, 26), "Level 13", 25,
-                    Ink, TextAlignmentOptions.MidlineRight);
-                incomes[i] = Text(Stretch(row, "product-income-" + i, 213, 380, 68, 84), "₹36.4 / sec", 32,
+                levels[i] = Text(Stretch(row, "product-level-" + i, 213, 350, 113, 60), "Level 13", 33,
+                    Muted, TextAlignmentOptions.MidlineLeft);
+                incomes[i] = Text(Stretch(row, "product-income-" + i, 213, 350, 65, 107), "₹36.4 / sec", 32,
                     Ink, TextAlignmentOptions.MidlineLeft, true);
-                milestones[i] = Text(Stretch(row, "product-next-" + i, 213, 380, 21, 145), "Milestones · Lv.25", 27,
+                milestones[i] = Text(Stretch(row, "product-next-" + i, 213, 350, 10, 155), "Milestones · Lv.25", 33,
                     Muted, TextAlignmentOptions.MidlineLeft);
                 detailButtons[i] = InvisibleButton(Stretch(row, "detail-" + i, 10, 350, 10, 10));
                 purchaseButtons[i] = Button(Stretch(row, "purchase-" + i, 700, 18, 18, 18), Blue);
@@ -126,20 +129,24 @@ namespace RocketRaja.EditorTools
             menu.anchorMin = menu.anchorMax = new Vector2(1, 1);
             menu.pivot = new Vector2(1, 1);
             menu.anchoredPosition = new Vector2(-35, -150);
-            menu.sizeDelta = new Vector2(305, 470);
+            menu.sizeDelta = new Vector2(365, 568);
             Image(menu, IvoryColor, true);
             var choices = new Button[4];
-            string[] labels = { "Buy ×1", "Buy ×10", "Buy ×100", "Buy MAX" };
+            string[] objectNames = { "Buy ×1", "Buy ×10", "Buy ×100", "Buy MAX" };
+            string[] labels = { "×1", "×10", "×100", "Max affordable" };
             for (int i = 0; i < 4; i++)
             {
-                var rect = New("Quantity " + labels[i], menu).GetComponent<RectTransform>();
+                var rect = New("Quantity " + objectNames[i], menu).GetComponent<RectTransform>();
                 rect.anchorMin = new Vector2(0, 1);
                 rect.anchorMax = new Vector2(1, 1);
                 rect.pivot = new Vector2(.5f, 1);
-                rect.offsetMin = new Vector2(12, -(20 + (i + 1) * 108));
-                rect.offsetMax = new Vector2(-12, -(20 + i * 108));
-                choices[i] = Button(rect, Blue);
-                Text(Fill(rect, "Label"), labels[i], 32, Color.white, TextAlignmentOptions.Center, true);
+                rect.offsetMin = new Vector2(12, -(20 + (i + 1) * 132));
+                rect.offsetMax = new Vector2(-12, -(20 + i * 132));
+                choices[i] = Button(rect, Sand);
+                var mark = Image(Stretch(rect, "Selected Mark", 17, 309, 36, 36), Ink);
+                mark.gameObject.SetActive(i == 0);
+                Text(Stretch(rect, "Label", 38, 12, 6, 6), labels[i] + (i == 0 ? "\nSelected" : ""), 33,
+                    Ink, TextAlignmentOptions.Center, true);
             }
             menu.gameObject.SetActive(false);
 
@@ -160,6 +167,9 @@ namespace RocketRaja.EditorTools
             Assign(serialized, "milestones", milestones);
             Assign(serialized, "purchaseLabels", priceLabels);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            ApplyDetailsAffordance(root);
+            UiQuantityAuthoring.Apply(root);
+            UiCompactTypography.Apply(root);
             AuthorHtmlMotion.Meters(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
@@ -192,6 +202,28 @@ namespace RocketRaja.EditorTools
             button.transition = Selectable.Transition.None;
             button.navigation = new Navigation { mode = Navigation.Mode.None };
             return button;
+        }
+
+        public static void ApplyDetailsAffordance(GameObject root)
+        {
+            foreach (var art in root.GetComponentsInChildren<RectTransform>(true))
+            {
+                if (art.name != "Art Frame") continue;
+                var picture = art.Find("Product Art") as RectTransform;
+                if (picture == null) continue;
+                picture.offsetMin = new Vector2(8, 60);
+                var cue = art.Find("Details Cue") as RectTransform;
+                if (cue == null) cue = Bottom(art, "Details Cue", 56);
+                cue.offsetMin = new Vector2(4, 0);
+                cue.offsetMax = new Vector2(-4, 56);
+                var label = cue.GetComponent<TMP_Text>();
+                if (label == null) label = Text(cue, "Details >", 36, Ink, TextAlignmentOptions.Center, true);
+                label.text = "Details >";
+                label.fontSize = 36;
+                label.enableAutoSizing = false;
+                label.textWrappingMode = TextWrappingModes.NoWrap;
+                EditorUtility.SetDirty(label);
+            }
         }
 
         public static void Integrate()

@@ -72,9 +72,16 @@ namespace RocketRaja.EditorTools
             var footer = Bottom(dialog, "Footer", 202);
             Image(footer, IvoryColor);
             Image(Top(footer, "Footer Rule", 5), Hex("255883"));
-            var back = Button(Stretch(footer, "back-ProductDetail", 34, 34, 29, 34), Ivory);
-            Text(Fill(back.transform, "Back Label"), "Return to Products", 41,
+            var backRect = Stretch(footer, "back-ProductDetail", 34, 10, 29, 34);
+            backRect.anchorMax = new Vector2(.47f, 1);
+            var back = Button(backRect, Ivory);
+            Text(Fill(back.transform, "Back Label"), "Return to Products", 36,
                 Ink, TextAlignmentOptions.Center, true);
+            var purchaseRect = Stretch(footer, "purchase-ProductDetail", 10, 34, 29, 34);
+            purchaseRect.anchorMin = new Vector2(.47f, 0);
+            var purchase = Button(purchaseRect, Blue);
+            var purchaseText = Text(Fill(purchase.transform, "Purchase Label"), "Stock shelf\n₹30", 39,
+                Color.white, TextAlignmentOptions.Center, true);
 
             var body = Stretch(dialog, "Scroll Body", 5, 5, 202, 183);
             var image = Image(body, IvoryColor, true);
@@ -136,6 +143,8 @@ namespace RocketRaja.EditorTools
             var serialized = new SerializedObject(presenter);
             serialized.FindProperty("closeButton").objectReferenceValue = close;
             serialized.FindProperty("backButton").objectReferenceValue = back;
+            serialized.FindProperty("purchaseButton").objectReferenceValue = purchase;
+            serialized.FindProperty("purchaseLabel").objectReferenceValue = purchaseText;
             serialized.FindProperty("nameLabel").objectReferenceValue = title;
             serialized.FindProperty("subtitleLabel").objectReferenceValue = subtitle;
             serialized.FindProperty("levelLabel").objectReferenceValue = level;

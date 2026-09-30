@@ -1,0 +1,27 @@
+PASS Main scene booted
+PASS Detail purchase starts from a fresh, unstocked shop
+PASS Saved Home shelves and Product Detail purchase and return controls are bound
+PASS Tapping the Home shelf opens its purchase guide without leaving Home
+PASS Primary purchase and secondary return are separate, reachable touch targets at (360, 540)
+PASS Product Detail shows the first shelf action, exact price and Home return at (360, 540)
+CAPTURE detail-home-affordable-360 360x540
+PASS Primary purchase and secondary return are separate, reachable touch targets at (450, 916)
+PASS Product Detail shows the first shelf action, exact price and Home return at (450, 916)
+CAPTURE detail-home-affordable-450 450x916
+PASS Home shelf purchase spends once, stocks the shelf, completes onboarding and returns Home
+PASS First Product Detail purchase persists the shelf, wallet and completed onboarding
+PASS Spent wallet disables the next upgrade and repeated input cannot double-buy
+CAPTURE detail-home-after-purchase-450 450x916
+PASS Secondary Detail return restores Home without a purchase
+PASS Unaffordable upgrade explains its price and cannot spend
+PASS Locked Anar points to the prerequisite shelf and cannot be bought
+PASS Capped shelf has a disabled, explanatory purchase state
+PASS Read-only session disables Product Detail purchasing
+PASS Products can focus the last shelf before opening its guide
+PASS Products guide retains a clear purchase and return path
+CAPTURE detail-products-affordable-360 360x540
+PASS Product Detail stays at its Products scroll position while open (before 0.0000, after capture 0.0000)
+PASS Secondary Detail return restores Products at its previous scroll position (before 0.0000, after 0.0000)
+PASS Products-origin purchase buys the selected shelf and returns to Products
+PASS Products-origin purchase preserves its previous scroll position (before 0.0000, after 0.0000)
+SMOKE SUCCEEDED

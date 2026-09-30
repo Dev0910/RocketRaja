@@ -1,0 +1,131 @@
+PASS Main scene booted
+PASS Home has no scroll input at (360, 540)
+PASS Entire fixed Home dashboard fits at (360, 540)
+PASS Navigation, shelf, skill and next-goal labels fit at (360, 540)
+PASS Shelf and skill labels meet compact-screen type size at (360, 540) (dashboard scale 1.00)
+PASS Every named shelf stays legible without truncation at (360, 540)
+PASS Short-phone reward hint fits both current copy and a large suffix at (360, 540)
+PASS Home shelf touch targets stay at least 48 screen pixels wide and visible at (360, 540) (min 75.6×48.3)
+PASS Home shelf touch targets receive the frontmost raycast at (360, 540)
+PASS Starter offer and progress copy remain legible at (360, 540)
+PASS Home next-goal action is visible and usable at (360, 540)
+PASS Home Settings hit area is at least 44 pixels tall at (360, 540)
+PASS Pointer tap immediately awards and displays its exact cash reward at (360, 540)
+PASS Pointer reward stays on the counter at (360, 540) (visual=(x:191.25, y:353.34, width:23.71, height:10.51), hintTop=337.6, shelfBottom=375.6, keeperLeft=284.4)
+PASS Cash popup stays contrasting and does not block input
+PASS Edge tap reward stays clear of shelves at (360, 540) (visual=(x:124.32, y:353.34, width:23.61, height:10.53), hintTop=337.6, shelfBottom=375.6, keeperLeft=284.4)
+PASS Edge tap reward stays clear of shelves at (360, 540) (visual=(x:212.19, y:353.31, width:23.43, height:10.56), hintTop=337.6, shelfBottom=375.6, keeperLeft=284.4)
+CAPTURE ui-fixed-home-360 360x540
+PASS Sponsor and next-goal action remain readable and tappable at (360, 540)
+PASS Sponsored next-goal copy remains legible at (360, 540) (dashboard scale 0.98)
+PASS Owned-product Home dashboard still fits at (360, 540)
+CAPTURE ui-owned-home-360 360x540
+PASS Boosted Sponsor timer fits its compact row at (360, 540)
+CAPTURE ui-boosted-home-360 360x540
+PASS All product name, level, income and milestone rows fit at (360, 540)
+PASS Recommended Products row resets quantity and closes its menu at (360, 540)
+PASS Recommended lower Products row scrolls fully into view at (360, 540)
+PASS Player shelf touch targets stay at least 48 screen pixels wide and visible at (360, 540) (min 75.6×48.3)
+PASS Player shelf touch targets receive the frontmost raycast at (360, 540)
+CAPTURE ui-browse-player-360 360x540
+PASS Products shelf touch targets stay at least 48 screen pixels wide and visible at (360, 540) (min 75.6×48.3)
+PASS Products shelf touch targets receive the frontmost raycast at (360, 540)
+CAPTURE ui-browse-products-360 360x540
+PASS Legacy shelf touch targets stay at least 48 screen pixels wide and visible at (360, 540) (min 75.6×48.3)
+PASS Legacy shelf touch targets receive the frontmost raycast at (360, 540)
+CAPTURE ui-browse-legacy-360 360x540
+PASS Home has no scroll input at (450, 916)
+PASS Entire fixed Home dashboard fits at (450, 916)
+PASS Navigation, shelf, skill and next-goal labels fit at (450, 916)
+PASS Shelf and skill labels meet compact-screen type size at (450, 916) (dashboard scale 1.00)
+PASS Every named shelf stays legible without truncation at (450, 916)
+PASS Short-phone reward hint fits both current copy and a large suffix at (450, 916)
+PASS Home shelf touch targets stay at least 48 screen pixels wide and visible at (450, 916) (min 94.5×111.0)
+PASS Home shelf touch targets receive the frontmost raycast at (450, 916)
+PASS Starter offer and progress copy remain legible at (450, 916)
+PASS Home next-goal action is visible and usable at (450, 916)
+PASS Home Settings hit area is at least 44 pixels tall at (450, 916)
+PASS Pointer tap immediately awards and displays its exact cash reward at (450, 916)
+PASS Pointer reward stays on the counter at (450, 916) (visual=(x:230.63, y:473.69, width:35.05, height:15.53), hintTop=435.9, shelfBottom=538.1, keeperLeft=354.6)
+PASS Cash popup stays contrasting and does not block input
+PASS Edge tap reward stays clear of shelves at (450, 916) (visual=(x:122.39, y:473.69, width:34.92, height:15.57), hintTop=435.9, shelfBottom=538.1, keeperLeft=354.6)
+PASS Edge tap reward stays clear of shelves at (450, 916) (visual=(x:287.42, y:473.65, width:34.64, height:15.61), hintTop=435.9, shelfBottom=538.1, keeperLeft=354.6)
+CAPTURE ui-fixed-home-450 450x916
+PASS Sponsor and next-goal action remain readable and tappable at (450, 916)
+PASS Sponsored next-goal copy remains legible at (450, 916) (dashboard scale 0.98)
+PASS Owned-product Home dashboard still fits at (450, 916)
+CAPTURE ui-owned-home-450 450x916
+PASS Boosted Sponsor timer fits its compact row at (450, 916)
+CAPTURE ui-boosted-home-450 450x916
+PASS All product name, level, income and milestone rows fit at (450, 916)
+PASS Recommended Products row resets quantity and closes its menu at (450, 916)
+PASS Recommended lower Products row scrolls fully into view at (450, 916)
+PASS Player shelf touch targets stay at least 48 screen pixels wide and visible at (450, 916) (min 94.5×91.6)
+PASS Player shelf touch targets receive the frontmost raycast at (450, 916)
+CAPTURE ui-browse-player-450 450x916
+PASS Products shelf touch targets stay at least 48 screen pixels wide and visible at (450, 916) (min 94.5×91.6)
+PASS Products shelf touch targets receive the frontmost raycast at (450, 916)
+CAPTURE ui-browse-products-450 450x916
+PASS Legacy shelf touch targets stay at least 48 screen pixels wide and visible at (450, 916) (min 94.5×91.6)
+PASS Legacy shelf touch targets receive the frontmost raycast at (450, 916)
+CAPTURE ui-browse-legacy-450 450x916
+PASS Player has a readable Shop return control and 44-pixel hit area at 360x540
+PASS Player Shop control returns Home
+PASS Products has a readable Shop return control and 44-pixel hit area at 360x540
+PASS Products Shop control returns Home
+PASS Legacy has a readable Shop return control and 44-pixel hit area at 360x540
+PASS Legacy Shop control returns Home
+PASS Back at root Home requests task backgrounding without changing navigation
+PASS Products multiplier choices form one vertical column
+CAPTURE ui-quantity-Products 450x916
+PASS Back closes Product Detail before the Products quantity menu
+PASS Product Detail closes while its underlying quantity menu stays open
+PASS Products first Back dismisses its quantity menu and stays on the same tab
+PASS Products second Back returns Home
+PASS Products browse panel finishes closing after Back
+PASS Products purchase initially affordable
+PASS Products purchase disables immediately when cash is spent
+PASS Products purchase animation preserves the disabled tint
+PASS Products unaffordable purchase uses muted artwork
+CAPTURE ui-disabled-Products 450x916
+PASS Products purchase restores when affordable
+PASS Products affordable purchase restores blue artwork
+PASS Player multiplier choices form one vertical column
+CAPTURE ui-quantity-Player 450x916
+PASS Player first Back dismisses its quantity menu and stays on the same tab
+PASS Player second Back returns Home
+PASS Player browse panel finishes closing after Back
+PASS Player purchase initially affordable
+PASS Player purchase disables immediately when cash is spent
+PASS Player purchase animation preserves the disabled tint
+PASS Player unaffordable purchase uses muted artwork
+CAPTURE ui-disabled-Player 450x916
+PASS Player purchase restores when affordable
+PASS Player affordable purchase restores blue artwork
+PASS Settings return button uses blue artwork and white text
+CAPTURE ui-blue-settings 450x916
+PASS Product guide opened from Home labels its actual return destination
+PASS Product guide footer returns to Home without changing tabs
+PASS Product guide opened from Products labels its actual return destination
+PASS Product guide close keeps Products and its scroll position
+PASS Settings names its offscreen account and privacy options at (360, 540)
+PASS Settings shows a proportional scrollbar when content overflows at (360, 540)
+CAPTURE settings-top-360 360x540
+PASS Account and Privacy actions are reachable together at the end of Settings at (360, 540)
+PASS Settings scrollbar thumb follows the scroll position at (360, 540)
+PASS A connected account name and sync status fit at (360, 540)
+PASS Settings shows the complete literal store name at (360, 540) at 12.0px: WWWWWWWWWWWWWWWWWWWWWWWW
+CAPTURE settings-name-long-360 360x540
+PASS Settings shows the complete literal store name at (360, 540) at 12.0px: <b>Literal Name</b>
+CAPTURE settings-bottom-360 360x540
+PASS Settings names its offscreen account and privacy options at (450, 916)
+PASS Settings shows a proportional scrollbar when content overflows at (450, 916)
+CAPTURE settings-top-450 450x916
+PASS Account and Privacy actions are reachable together at the end of Settings at (450, 916)
+PASS Settings scrollbar thumb follows the scroll position at (450, 916)
+PASS A connected account name and sync status fit at (450, 916)
+PASS Settings shows the complete literal store name at (450, 916) at 15.0px: WWWWWWWWWWWWWWWWWWWWWWWW
+CAPTURE settings-name-long-450 450x916
+PASS Settings shows the complete literal store name at (450, 916) at 15.0px: <b>Literal Name</b>
+CAPTURE settings-bottom-450 450x916
+SMOKE SUCCEEDED

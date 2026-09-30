@@ -125,18 +125,30 @@ namespace RocketRaja
             int count = game.HomeScreen.GetComponentsInChildren<Transform>(true).Count(x => x.GetComponent<TMPro.TMP_SubMeshUI>() == null);
             game.HomeScreen.TapFeedback();
             var active = pool.Single(x => x.gameObject.activeSelf);
-            var origin = active.anchoredPosition; var anchor = active.anchorMin;
-            yield return new WaitForSecondsRealtime(.4f);
-            Check(active.anchoredPosition.y > origin.y && active.anchoredPosition.y < origin.y + 38 * UiEasing.Pixels(active) && active.anchoredPosition.x == origin.x && active.localScale == Vector3.one,
-                "Tap earnings rise straight without drift or bounce");
-            Check(active.GetComponentInChildren<TMPro.TMP_Text>().color.a > 0 && active.GetComponentInChildren<TMPro.TMP_Text>().color.a < 1,
-                "Tap earnings fade throughout the 900ms flight");
+            var origin = active.anchoredPosition;
+            Check(active.GetComponentInChildren<TMPro.TMP_Text>().text == "+₹" + game.Engine.TapIncome &&
+                  !active.GetComponentInChildren<TMPro.TMP_Text>().raycastTarget,
+                "Every tap immediately shows its reward without blocking input");
+            yield return new WaitForSecondsRealtime(.25f);
+            Check(active.anchoredPosition.y > origin.y &&
+                  active.anchoredPosition.y <= origin.y + 12 * UiEasing.Pixels(active) &&
+                  active.anchoredPosition.x == origin.x && active.localScale == Vector3.one,
+                "Tap earnings rise briefly within the counter lane");
+            Check(active.GetComponentInChildren<TMPro.TMP_Text>().color.a >= .99f,
+                "Tap earnings remain readable during the rise");
             yield return Capture("08-tap-mid", 0);
-            yield return new WaitForSecondsRealtime(.6f);
-            Check(pool.All(x => !x.gameObject.activeSelf), "Tap earnings disappear after 900ms");
+            yield return new WaitForSecondsRealtime(.35f);
+            Check(active.gameObject.activeSelf && active.GetComponentInChildren<TMPro.TMP_Text>().color.a > 0 &&
+                  active.GetComponentInChildren<TMPro.TMP_Text>().color.a < 1,
+                "Tap earnings fade only near the end of feedback");
+            yield return new WaitForSecondsRealtime(.15f);
+            Check(pool.All(x => !x.gameObject.activeSelf), "Tap earnings disappear promptly after feedback");
             for (int i = 0; i < 40; i++) game.HomeScreen.TapFeedback();
-            Check(pool.Count(x => x.gameObject.activeSelf) == 6 && game.HomeScreen.GetComponentsInChildren<Transform>(true).Count(x => x.GetComponent<TMPro.TMP_SubMeshUI>() == null) == count,
-                "Rapid taps reuse six authored labels without growing the hierarchy");
+            Check(pool.Length == 12 && pool.Count(x => x.gameObject.activeSelf) == 1 &&
+                  pool.Single(x => x.gameObject.activeSelf).GetComponentInChildren<TMPro.TMP_Text>().text ==
+                      "+₹" + game.Engine.TapIncome * 40 &&
+                  game.HomeScreen.GetComponentsInChildren<Transform>(true).Count(x => x.GetComponent<TMPro.TMP_SubMeshUI>() == null) == count,
+                "Rapid taps aggregate in one authored label without growing the hierarchy");
             state.reducedMotion = true; yield return null; yield return null;
             Check(pool.All(x => !x.gameObject.activeSelf), "Enabling Reduced Motion cancels flying tap labels");
             game.HomeScreen.TapFeedback(); active = pool.Single(x => x.gameObject.activeSelf); origin = active.anchoredPosition;

@@ -21,13 +21,44 @@ namespace RocketRaja
         [SerializeField] Button accountButton;
         [SerializeField] TMP_Text accountStatus;
         [SerializeField] Button renameStoreButton;
+        [SerializeField] TMP_Text storeNameLabel;
+        TMP_Text renameStoreActionLabel;
 
         GameController controller;
         GameView view;
+        Cloud.PlayerSessionHost sessionHost;
+
+        void OnEnable()
+        {
+            SubscribeSession();
+            RefreshAccountStatus();
+        }
+
+        void OnDisable() => UnsubscribeSession();
+
+        void SubscribeSession()
+        {
+            var host = Cloud.PlayerSessionHost.Instance;
+            if (sessionHost == host) return;
+            UnsubscribeSession();
+            sessionHost = host;
+            if (sessionHost != null) sessionHost.Changed += SessionChanged;
+        }
+
+        void UnsubscribeSession()
+        {
+            if (sessionHost != null) sessionHost.Changed -= SessionChanged;
+            sessionHost = null;
+        }
+
+        void SessionChanged()
+        {
+            if (isActiveAndEnabled) RefreshAccountStatus();
+        }
 
         void Awake()
         {
-            if (closeButton == null || backButton == null || privacyButton == null || consentButton == null || renameStoreButton == null ||
+            if (closeButton == null || backButton == null || privacyButton == null || consentButton == null || renameStoreButton == null || storeNameLabel == null ||
                 consentRow == null || enabledFace == null || disabledFace == null ||
                 settingButtons == null || settingButtons.Length != 3 ||
                 settingFaces == null || settingFaces.Length != 3 ||
@@ -48,6 +79,7 @@ namespace RocketRaja
                 }
 
             closeButton.onClick.AddListener(Close);
+            renameStoreActionLabel = renameStoreButton.GetComponentInChildren<TMP_Text>(true);
             backButton.onClick.AddListener(Close);
             privacyButton.onClick.AddListener(OpenPrivacy);
             consentButton.onClick.AddListener(OpenConsent);
@@ -60,6 +92,7 @@ namespace RocketRaja
 
         void OnDestroy()
         {
+            UnsubscribeSession();
             if (closeButton != null) closeButton.onClick.RemoveListener(Close);
             if (backButton != null) backButton.onClick.RemoveListener(Close);
             if (privacyButton != null) privacyButton.onClick.RemoveListener(OpenPrivacy);
@@ -76,6 +109,7 @@ namespace RocketRaja
         {
             controller = owner;
             view = ownerView;
+            if (isActiveAndEnabled) SubscribeSession();
             Refresh();
         }
 
@@ -102,6 +136,12 @@ namespace RocketRaja
             if (controller == null || controller.Engine == null) return;
             var state = controller.Engine.State;
             renameStoreButton.interactable = controller.Engine.CanMutate;
+            storeNameLabel.text = state.StoreName;
+            if (renameStoreActionLabel != null)
+            {
+                renameStoreActionLabel.text = state.NeedsStoreNameUpdate ? "Fix name" : "Rename";
+                renameStoreActionLabel.fontSize = state.NeedsStoreNameUpdate ? 36 : 32;
+            }
             var values = new[] { state.music, state.sound, state.reducedMotion };
             for (int i = 0; i < 3; i++)
             {
@@ -113,9 +153,15 @@ namespace RocketRaja
                 }
                 if (settingFaces[i] != null) settingFaces[i].sprite = values[i] ? enabledFace : disabledFace;
                 if (settingDots[i] != null) settingDots[i].rectTransform.anchoredPosition = values[i] ? new Vector2(54, 0) : new Vector2(-54, 0);
+                UiFeedback.SyncAppearance(settingButtons[i]);
             }
             if (consentRow != null)
                 consentRow.SetActive(controller.Ads != null && controller.Ads.PrivacyOptionsRequired);
+            RefreshAccountStatus();
+        }
+
+        void RefreshAccountStatus()
+        {
             if (accountStatus != null)
             {
                 var host = Cloud.PlayerSessionHost.Instance;

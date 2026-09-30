@@ -1,0 +1,17 @@
+PASS Main scene booted
+PASS No pagination buttons remain
+PASS Ten remaining rows with unaffordable Buy All disabled
+PASS Individual purchase replaces row with next cheapest
+PASS Read-only session disables all upgrade buttons
+PASS Buy All reaches beyond visible ten and preserves skill gates
+PASS Completion hides rows and disables Buy All
+PASS Completion text shown
+CAPTURE unlockables-360 360x640
+PASS Buy All touch height at (360, 640)
+PASS Quantity menu preserved
+CAPTURE unlockables-quantity-360 360x640
+CAPTURE unlockables-450 450x1000
+PASS Buy All touch height at (450, 1000)
+PASS Quantity menu preserved
+CAPTURE unlockables-quantity-450 450x1000
+SMOKE SUCCEEDED

@@ -18,7 +18,7 @@ namespace RocketRaja
         [SerializeField] ImportedDialogFit dialogFit;
 
         GameController controller;
-        bool attempted, awaiting, lastReady;
+        bool lastAttemptFailed, awaiting, lastReady, lastAdShowing, lastCanWatch;
         double lastRemaining;
 
         void Awake()
@@ -52,17 +52,20 @@ namespace RocketRaja
                 Debug.LogError("Sponsor canvas was opened before binding its game owner.", this);
                 return;
             }
-            attempted = false;
-            awaiting = false;
+            // Reopening the modal must not release an in-flight request's guard.
+            awaiting = awaiting && controller.IsAdShowing;
             UiMotion.Show(gameObject, controller, true);
             RefreshAvailability();
         }
 
         void Update()
         {
-            if (controller == null || awaiting || attempted || controller.Ads == null) return;
+            if (controller == null || controller.Engine == null) return;
             var remaining = controller.Engine.State.sponsorUntil - controller.Engine.State.now;
-            if (controller.Ads.Ready != lastReady || Mathf.Abs((float)(remaining - lastRemaining)) > 1)
+            if ((controller.Ads != null && controller.Ads.Ready) != lastReady ||
+                controller.IsAdShowing != lastAdShowing ||
+                (controller.CanPlay && controller.Engine.CanMutate) != lastCanWatch ||
+                (remaining > 0) != (lastRemaining > 0) || Mathf.Abs((float)(remaining - lastRemaining)) > 1)
                 RefreshAvailability();
         }
 
@@ -73,8 +76,13 @@ namespace RocketRaja
             lastRemaining = remaining;
             bool active = remaining > 0;
             bool ready = controller.Ads != null && controller.Ads.Ready;
+            bool adShowing = controller.IsAdShowing;
+            bool canWatch = controller.CanPlay && controller.Engine.CanMutate;
             lastReady = ready;
-            videoButton.interactable = !active && ready && !awaiting && !attempted;
+            lastAdShowing = adShowing;
+            lastCanWatch = canWatch;
+            closeButton.interactable = backButton.interactable = !awaiting && !adShowing;
+            videoButton.interactable = !active && ready && canWatch && !adShowing && !awaiting;
             videoFace.sprite = videoButton.interactable ? enabledFace : disabledFace;
             if (active)
             {
@@ -82,46 +90,41 @@ namespace RocketRaja
                 messageText.text = "Sponsor active · " + (seconds / 60).ToString("00") + ":" + (seconds % 60).ToString("00") +
                     " remaining. Come back after it expires.";
             }
+            else if (awaiting || adShowing) messageText.text = "Waiting for the video result.";
+            else if (!canWatch) messageText.text = "Videos are paused right now.";
+            else if (lastAttemptFailed) messageText.text = ready
+                ? "Video ended without a reward. You can try again."
+                : "Video ended without a reward. No video is available.";
             else if (!ready) messageText.text = "No video is available. You can keep playing.";
-            UiMotion.SetVisible(messageRow, active || !ready, controller);
-            dialogFit.SetPreferredHeight(messageRow.activeSelf ? 1730 : 1570);
+            bool showMessage = active || awaiting || adShowing || !canWatch || !ready || lastAttemptFailed;
+            // An asynchronous ad result can arrive after this modal was hidden.
+            if (gameObject.activeInHierarchy) UiMotion.SetVisible(messageRow, showMessage, controller);
+            else messageRow.SetActive(showMessage);
+            dialogFit.SetPreferredHeight(showMessage ? 1730 : 1570);
         }
 
         public void RequestVideo()
         {
-            if (controller == null || controller.Ads == null || !controller.Ads.Ready)
-            {
-                RefreshAvailability();
-                return;
-            }
-            if (awaiting || attempted || controller.Engine.State.sponsorUntil > controller.Engine.State.now) return;
+            if (controller == null || controller.Engine == null) return;
+            RefreshAvailability();
+            if (!videoButton.interactable) return;
             awaiting = true;
-            videoButton.interactable = false;
-            videoFace.sprite = disabledFace;
+            lastAttemptFailed = false;
+            RefreshAvailability();
             controller.ShowAd("sponsor", OnAdResult);
         }
 
         void OnAdResult(bool rewarded)
         {
+            if (this == null || controller == null || controller.Engine == null) return;
             awaiting = false;
-            attempted = true;
-            videoButton.interactable = false;
-            videoFace.sprite = disabledFace;
-            if (rewarded)
-            {
-                attempted = false;
-                RefreshAvailability();
-            }
-            else
-            {
-                messageText.text = "Video closed without a reward. Your progress is safe.";
-                UiMotion.Show(messageRow, controller);
-                dialogFit.SetPreferredHeight(1730);
-            }
+            lastAttemptFailed = !rewarded;
+            RefreshAvailability();
         }
 
         public void Close()
         {
+            if (awaiting || (controller != null && controller.IsAdShowing)) return;
             UiMotion.Hide(gameObject, controller);
         }
     }

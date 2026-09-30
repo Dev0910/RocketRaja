@@ -1,0 +1,42 @@
+PASS Main scene booted
+PASS Decomposed accent saves as NFC at (360, 540)
+PASS Home sign renders José with the saved accented glyph at (360, 540)
+CAPTURE store-glyph-home-360 360x540
+PASS Settings scroll cue draws the down arrow from a saved font at (360, 540)
+CAPTURE store-glyph-scroll-cue-360 360x540
+PASS Settings renders the full accented store name at (360, 540)
+CAPTURE store-glyph-settings-360 360x540
+PASS Full-name detail renders José at (360, 540)
+CAPTURE store-glyph-detail-360 360x540
+PASS Literal markup is accepted as a store name at (360, 540)
+PASS Home sign treats markup as text at (360, 540)
+PASS Full-name detail shows every markup character literally at (360, 540)
+CAPTURE store-glyph-literal-360 360x540
+PASS Decomposed accent saves as NFC at (450, 1000)
+PASS Home sign renders José with the saved accented glyph at (450, 1000)
+CAPTURE store-glyph-home-450 450x1000
+PASS Settings scroll cue draws the down arrow from a saved font at (450, 1000)
+CAPTURE store-glyph-scroll-cue-450 450x1000
+PASS Settings renders the full accented store name at (450, 1000)
+CAPTURE store-glyph-settings-450 450x1000
+PASS Full-name detail renders José at (450, 1000)
+CAPTURE store-glyph-detail-450 450x1000
+PASS Literal markup is accepted as a store name at (450, 1000)
+PASS Home sign treats markup as text at (450, 1000)
+PASS Full-name detail shows every markup character literally at (450, 1000)
+CAPTURE store-glyph-literal-450 450x1000
+PASS Products return cue draws the left arrow from a saved font at 360x540
+CAPTURE store-glyph-return-products 360x540
+PASS Player return cue draws the left arrow from a saved font at 360x540
+CAPTURE store-glyph-return-player 360x540
+PASS Legacy return cue draws the left arrow from a saved font at 360x540
+CAPTURE store-glyph-return-legacy 360x540
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Unsupported or invisible store name is rejected without changing saved value
+PASS Legacy unsupported raw name remains saved while display asks for an update
+PASS An unset store name still shows the default
+SMOKE SUCCEEDED

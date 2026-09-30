@@ -1,0 +1,945 @@
+PASS Main scene booted
+PASS Quality gameplay fixture satisfies all saved-state invariants before any saved operation
+PASS Skills guide reports effective cooldown for skill 0 at Legacy rank 0
+PASS Skill 0 activation uses the same cooldown at Legacy rank 0
+PASS Skills guide reports effective cooldown for skill 1 at Legacy rank 0
+PASS Skill 1 activation uses the same cooldown at Legacy rank 0
+PASS Skills guide reports effective cooldown for skill 2 at Legacy rank 0
+PASS Skill 2 activation uses the same cooldown at Legacy rank 0
+PASS Skills guide reports effective cooldown for skill 0 at Legacy rank 1
+PASS Skill 0 activation uses the same cooldown at Legacy rank 1
+PASS Skills guide reports effective cooldown for skill 1 at Legacy rank 1
+PASS Skill 1 activation uses the same cooldown at Legacy rank 1
+PASS Skills guide reports effective cooldown for skill 2 at Legacy rank 1
+PASS Skill 2 activation uses the same cooldown at Legacy rank 1
+PASS Skills guide reports effective cooldown for skill 0 at Legacy rank 5
+PASS Skill 0 activation uses the same cooldown at Legacy rank 5
+PASS Skills guide reports effective cooldown for skill 1 at Legacy rank 5
+PASS Skill 1 activation uses the same cooldown at Legacy rank 5
+PASS Skills guide reports effective cooldown for skill 2 at Legacy rank 5
+PASS Skill 2 activation uses the same cooldown at Legacy rank 5
+PASS Products purchase controls show disabled state when mutation is blocked despite ample currency
+PASS Player purchase controls show disabled state when mutation is blocked despite ample currency
+PASS Legacy purchase controls show disabled state when mutation is blocked despite ample currency
+PASS Products purchase controls recover when mutation resumes
+PASS Player purchase controls recover when mutation resumes
+PASS Legacy purchase controls recover when mutation resumes
+PASS Quality reward checks use only the deterministic test ad adapter
+PASS Cancelled offline video preserves its offer and exposes retry
+PASS Cancelled offline offer follows later ad unavailability
+PASS Cancelled offline offer re-enables retry when a video becomes ready
+PASS Successful offline retry awards exactly one bonus and consumes its offer
+PASS Consumed offline offer cannot award again through repeated invocation
+PASS Cancelled sponsor video awards no boost and exposes retry
+PASS Cancelled sponsor offer follows later ad unavailability
+PASS Cancelled sponsor offer re-enables retry when a video becomes ready
+PASS Successful sponsor retry awards one boost and shows its active state
+PASS Active sponsor cannot extend its boost through repeated invocation
+PASS Pending reward guard checks require an idle isolated guest test-ad session
+PASS Pending reward fixture resolves the controller's in-flight guard
+PASS Offline pending fixture resolves its request guard and completion callback
+PASS Offline reopening preserves its pending request while an external video/resync is in flight
+PASS Offline pending video disables both exits and another video request
+PASS Offline pending close/continue/Back cannot dismiss its protected surface
+PASS Offline pending duplicate requests/reopen preserve the offer, cash, receipts and original in-flight guard
+PASS Offline completed unsuccessful pending callback restores exits and an explicit ready retry
+PASS Offline unsuccessful pending callback grants no cash, receipt or boost and preserves eligibility
+PASS Offline can leave its modal after the pending callback completes
+PASS Sponsor pending fixture resolves its request guard and completion callback
+PASS Sponsor reopening preserves its pending request while an external video/resync is in flight
+PASS Sponsor pending video disables both exits and another video request
+PASS Sponsor pending close/continue/Back cannot dismiss its protected surface
+PASS Sponsor pending duplicate requests/reopen preserve the offer, cash, receipts and original in-flight guard
+PASS Sponsor completed unsuccessful pending callback restores exits and an explicit ready retry
+PASS Sponsor unsuccessful pending callback grants no cash, receipt or boost and preserves eligibility
+PASS Sponsor can leave its modal after the pending callback completes
+LIMIT Pending-video lifecycle uses reflected guards and a synthetic unsuccessful callback; no real external ad or cloud resync runs.
+PASS Store name field border contrasts at least 3:1 with its inner and outer surfaces
+PASS Store name placeholder contrasts at least 4.5:1 with the input surface
+PASS Store name selection reveals the saved focus underline
+PASS Store name deselection clears the saved focus underline
+PASS Settings status regression runs in an isolated guest smoke session
+PASS Visible Settings subscribes to session status changes
+PASS Session change refreshes visible Settings account status immediately
+PASS Hidden Settings releases its session status subscription
+PASS Settings toggle 0 keeps matching high-contrast ON artwork after feedback updates
+PASS Settings toggle 0 keeps matching high-contrast OFF artwork after feedback updates
+PASS Settings toggle 1 keeps matching high-contrast ON artwork after feedback updates
+PASS Settings toggle 1 keeps matching high-contrast OFF artwork after feedback updates
+PASS Settings toggle 2 keeps matching high-contrast OFF artwork after feedback updates
+PASS Settings toggle 2 keeps matching high-contrast ON artwork after feedback updates
+PASS Bootstrap button honors GuestState Reduced Motion before a session is selected
+PASS Bootstrap button retains press feedback with motion enabled
+PASS Enabling Reduced Motion resets a currently pressed bootstrap label
+PASS Transient reward notices expire before baseline matrix captures
+PASS Quality viewport activated: 360x540
+PASS Home fixed buttons stay within (360, 540)
+PASS Home scrolling controls fit within reachable content
+PASS Home fully visible enabled buttons receive the frontmost pointer hit
+PASS Home visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-home 360x540
+PASS Products top fixed buttons stay within (360, 540)
+PASS Products top scrolling controls fit within reachable content
+PASS Products top fully visible enabled buttons receive the frontmost pointer hit
+PASS Products top visible essential text fits without TMP truncation or overflow
+PASS Products top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-products 360x540
+PASS Products bottom fixed buttons stay within (360, 540)
+PASS Products bottom scrolling controls fit within reachable content
+PASS Products bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Products bottom visible essential text fits without TMP truncation or overflow
+PASS Products bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-products-bottom 360x540
+PASS Player top fixed buttons stay within (360, 540)
+PASS Player top scrolling controls fit within reachable content
+PASS Player top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player top visible essential text fits without TMP truncation or overflow
+PASS Player top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player 360x540
+PASS Player bottom fixed buttons stay within (360, 540)
+PASS Player bottom scrolling controls fit within reachable content
+PASS Player bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player bottom visible essential text fits without TMP truncation or overflow
+PASS Player bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player-bottom 360x540
+PASS Legacy top fixed buttons stay within (360, 540)
+PASS Legacy top scrolling controls fit within reachable content
+PASS Legacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy top visible essential text fits without TMP truncation or overflow
+PASS Legacy top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-legacy 360x540
+PASS Legacy bottom fixed buttons stay within (360, 540)
+PASS Legacy bottom scrolling controls fit within reachable content
+PASS Legacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy bottom visible essential text fits without TMP truncation or overflow
+PASS Legacy bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-legacy-bottom 360x540
+PASS Products quantity menu retains all four authored choices at (360, 540)
+PASS Products quantity opener enables its menu and outside blocker at (360, 540)
+PASS Products entire quantity menu fits all four choices on screen at (360, 540)
+CAPTURE quality-360x540-products-quantity 360x540
+PASS Products Quantity Buy ×1 receives the frontmost raycast at (360, 540)
+PASS Products Quantity Buy ×1 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Products Quantity Buy ×10 receives the frontmost raycast at (360, 540)
+PASS Products Quantity Buy ×10 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Products Quantity Buy ×100 receives the frontmost raycast at (360, 540)
+PASS Products Quantity Buy ×100 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Products Quantity Buy MAX receives the frontmost raycast at (360, 540)
+PASS Products Quantity Buy MAX updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Products has a visible purchase center outside its quantity menu at (360, 540)
+PASS Products outside blocker intercepts an underlying purchase hit at (360, 540)
+PASS Products outside tap closes the menu without purchasing or changing currency at (360, 540)
+PASS Player quantity menu retains all four authored choices at (360, 540)
+PASS Player quantity opener enables its menu and outside blocker at (360, 540)
+PASS Player entire quantity menu fits all four choices on screen at (360, 540)
+CAPTURE quality-360x540-player-quantity 360x540
+PASS Player Quantity Buy ×1 receives the frontmost raycast at (360, 540)
+PASS Player Quantity Buy ×1 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Player Quantity Buy ×10 receives the frontmost raycast at (360, 540)
+PASS Player Quantity Buy ×10 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Player Quantity Buy ×100 receives the frontmost raycast at (360, 540)
+PASS Player Quantity Buy ×100 updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Player Quantity Buy MAX receives the frontmost raycast at (360, 540)
+PASS Player Quantity Buy MAX updates quantity and selection, then closes menu/blocker at (360, 540)
+PASS Player has a visible purchase center outside its quantity menu at (360, 540)
+PASS Player outside blocker intercepts an underlying purchase hit at (360, 540)
+PASS Player outside tap closes the menu without purchasing or changing currency at (360, 540)
+PASS Settings top fixed buttons stay within (360, 540)
+PASS Settings top scrolling controls fit within reachable content
+PASS Settings top fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-settings 360x540
+PASS Settings bottom fixed buttons stay within (360, 540)
+PASS Settings bottom scrolling controls fit within reachable content
+PASS Settings bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-settings-bottom 360x540
+PASS Privacy top fixed buttons stay within (360, 540)
+PASS Privacy top scrolling controls fit within reachable content
+PASS Privacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-privacy 360x540
+PASS Privacy bottom fixed buttons stay within (360, 540)
+PASS Privacy bottom scrolling controls fit within reachable content
+PASS Privacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-privacy-bottom 360x540
+PASS Statistics top fixed buttons stay within (360, 540)
+PASS Statistics top scrolling controls fit within reachable content
+PASS Statistics top fully visible enabled buttons receive the frontmost pointer hit
+PASS Statistics top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-statistics 360x540
+PASS Skills top fixed buttons stay within (360, 540)
+PASS Skills top scrolling controls fit within reachable content
+PASS Skills top fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills top visible essential text fits without TMP truncation or overflow
+PASS Skills top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-skills 360x540
+PASS Skills bottom fixed buttons stay within (360, 540)
+PASS Skills bottom scrolling controls fit within reachable content
+PASS Skills bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills bottom visible essential text fits without TMP truncation or overflow
+PASS Skills bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-skills-bottom 360x540
+PASS Skills locked fixture shows LOCKED for skill 0 at (360, 540)
+PASS Skills locked fixture shows LOCKED for skill 1 at (360, 540)
+PASS Skills locked fixture shows LOCKED for skill 2 at (360, 540)
+PASS Skills locked fixed buttons stay within (360, 540)
+PASS Skills locked scrolling controls fit within reachable content
+PASS Skills locked fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills locked visible essential text fits without TMP truncation or overflow
+PASS Skills locked reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-skills-locked 360x540
+PASS Skills active fixture shows ACTIVE for skill 0 at (360, 540)
+PASS Skills active fixture shows ACTIVE for skill 1 at (360, 540)
+PASS Skills active fixture shows WAIT for skill 2 at (360, 540)
+PASS Skills active fixed buttons stay within (360, 540)
+PASS Skills active scrolling controls fit within reachable content
+PASS Skills active fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills active visible essential text fits without TMP truncation or overflow
+PASS Skills active reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-skills-active 360x540
+PASS Skills waiting fixture shows WAIT for skill 0 at (360, 540)
+PASS Skills waiting fixture shows WAIT for skill 1 at (360, 540)
+PASS Skills waiting fixture shows WAIT for skill 2 at (360, 540)
+PASS Skills waiting fixed buttons stay within (360, 540)
+PASS Skills waiting scrolling controls fit within reachable content
+PASS Skills waiting fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills waiting visible essential text fits without TMP truncation or overflow
+PASS Skills waiting reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-skills-waiting 360x540
+PASS Product-detail top fixed buttons stay within (360, 540)
+PASS Product-detail top scrolling controls fit within reachable content
+PASS Product-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Product-detail top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-product-detail 360x540
+PASS Prestige top fixed buttons stay within (360, 540)
+PASS Prestige top scrolling controls fit within reachable content
+PASS Prestige top fully visible enabled buttons receive the frontmost pointer hit
+PASS Prestige top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-prestige 360x540
+PASS Sponsor top fixed buttons stay within (360, 540)
+PASS Sponsor top scrolling controls fit within reachable content
+PASS Sponsor top fully visible enabled buttons receive the frontmost pointer hit
+PASS Sponsor top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-sponsor 360x540
+PASS Offline top fixed buttons stay within (360, 540)
+PASS Offline top scrolling controls fit within reachable content
+PASS Offline top fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-offline 360x540
+PASS Offline bottom fixed buttons stay within (360, 540)
+PASS Offline bottom scrolling controls fit within reachable content
+PASS Offline bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-offline-bottom 360x540
+PASS Save-recovery top fixed buttons stay within (360, 540)
+PASS Save-recovery top scrolling controls fit within reachable content
+PASS Save-recovery top fully visible enabled buttons receive the frontmost pointer hit
+PASS Save-recovery top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x540-save-recovery 360x540
+PASS Store-name top fixed buttons stay within (360, 540)
+PASS Store-name top scrolling controls fit within reachable content
+PASS Store-name top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name top visible essential text fits without TMP truncation or overflow
+PASS Store-name top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-store-name 360x540
+PASS Empty store-name field shows its placeholder before focus at (360, 540)
+PASS Store-name empty fixed buttons stay within (360, 540)
+PASS Store-name empty scrolling controls fit within reachable content
+PASS Store-name empty fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name empty visible essential text fits without TMP truncation or overflow
+PASS Store-name empty reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-store-name-empty 360x540
+PASS Native store-name input selection visibly activates its focus underline at (360, 540)
+CAPTURE quality-360x540-store-name-focused 360x540
+PASS Native store-name deselection removes its focus underline at (360, 540)
+PASS Store-name-detail top fixed buttons stay within (360, 540)
+PASS Store-name-detail top scrolling controls fit within reachable content
+PASS Store-name-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name-detail top visible essential text fits without TMP truncation or overflow
+PASS Store-name-detail top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-store-name-detail 360x540
+PASS Player retains the existing non-skill upgrade description for tap-0
+PASS Player retains the existing non-skill upgrade description for profit-phuljhari-0
+PASS Player retains the existing non-skill upgrade description for all-0
+PASS Player retains the existing non-skill upgrade description for tap-1
+PASS Player retains the existing non-skill upgrade description for profit-phuljhari-1
+PASS Player retains the existing non-skill upgrade description for profit-anar-0
+PASS Player retains the existing non-skill upgrade description for all-1
+PASS Player retains the existing non-skill upgrade description for tap-2
+PASS Player retains the existing non-skill upgrade description for discount-phuljhari-0
+PASS Player retains the existing non-skill upgrade description for profit-anar-1
+PASS Later skill-upgrade fixture remains a valid isolated state at Legacy rank 1
+PASS Player skill-0-1 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-0-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-1 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-1-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-1 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-2-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-0-2 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-0-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-2 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-1-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-2 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-2-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-0-3 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-0-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-3 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-1-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-3 reports effective cooldown at Legacy rank 1 and (360, 540)
+PASS Player skill-2-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS All nine later skill upgrades are covered at Legacy rank 1 and (360, 540)
+PASS Player-skill-upgrades-rank-1 top fixed buttons stay within (360, 540)
+PASS Player-skill-upgrades-rank-1 top scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-1 top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-1 top visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-1 top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player-skill-upgrades-rank-1 360x540
+PASS Player-skill-upgrades-rank-1 bottom fixed buttons stay within (360, 540)
+PASS Player-skill-upgrades-rank-1 bottom scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-1 bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-1 bottom visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-1 bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player-skill-upgrades-rank-1-bottom 360x540
+PASS Later skill-upgrade fixture remains a valid isolated state at Legacy rank 5
+PASS Player skill-0-1 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-0-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-1 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-1-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-1 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-2-1 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-0-2 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-0-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-2 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-1-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-2 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-2-2 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-0-3 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-0-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-1-3 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-1-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS Player skill-2-3 reports effective cooldown at Legacy rank 5 and (360, 540)
+PASS Player skill-2-3 complete skill effect/cooldown fits its pooled text box at (360, 540)
+PASS All nine later skill upgrades are covered at Legacy rank 5 and (360, 540)
+PASS Player-skill-upgrades-rank-5 top fixed buttons stay within (360, 540)
+PASS Player-skill-upgrades-rank-5 top scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-5 top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-5 top visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-5 top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player-skill-upgrades-rank-5 360x540
+PASS Player-skill-upgrades-rank-5 bottom fixed buttons stay within (360, 540)
+PASS Player-skill-upgrades-rank-5 bottom scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-5 bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-5 bottom visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-5 bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x540-player-skill-upgrades-rank-5-bottom 360x540
+PASS Quality viewport activated: 360x640
+PASS Home fixed buttons stay within (360, 640)
+PASS Home scrolling controls fit within reachable content
+PASS Home fully visible enabled buttons receive the frontmost pointer hit
+PASS Home visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-home 360x640
+PASS Products top fixed buttons stay within (360, 640)
+PASS Products top scrolling controls fit within reachable content
+PASS Products top fully visible enabled buttons receive the frontmost pointer hit
+PASS Products top visible essential text fits without TMP truncation or overflow
+PASS Products top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-products 360x640
+PASS Products bottom fixed buttons stay within (360, 640)
+PASS Products bottom scrolling controls fit within reachable content
+PASS Products bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Products bottom visible essential text fits without TMP truncation or overflow
+PASS Products bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-products-bottom 360x640
+PASS Player top fixed buttons stay within (360, 640)
+PASS Player top scrolling controls fit within reachable content
+PASS Player top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player top visible essential text fits without TMP truncation or overflow
+PASS Player top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-player 360x640
+PASS Player bottom fixed buttons stay within (360, 640)
+PASS Player bottom scrolling controls fit within reachable content
+PASS Player bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player bottom visible essential text fits without TMP truncation or overflow
+PASS Player bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-player-bottom 360x640
+PASS Legacy top fixed buttons stay within (360, 640)
+PASS Legacy top scrolling controls fit within reachable content
+PASS Legacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy top visible essential text fits without TMP truncation or overflow
+PASS Legacy top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-legacy 360x640
+PASS Legacy bottom fixed buttons stay within (360, 640)
+PASS Legacy bottom scrolling controls fit within reachable content
+PASS Legacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy bottom visible essential text fits without TMP truncation or overflow
+PASS Legacy bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-legacy-bottom 360x640
+PASS Settings top fixed buttons stay within (360, 640)
+PASS Settings top scrolling controls fit within reachable content
+PASS Settings top fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-settings 360x640
+PASS Settings bottom fixed buttons stay within (360, 640)
+PASS Settings bottom scrolling controls fit within reachable content
+PASS Settings bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-settings-bottom 360x640
+PASS Privacy top fixed buttons stay within (360, 640)
+PASS Privacy top scrolling controls fit within reachable content
+PASS Privacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-privacy 360x640
+PASS Privacy bottom fixed buttons stay within (360, 640)
+PASS Privacy bottom scrolling controls fit within reachable content
+PASS Privacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-privacy-bottom 360x640
+PASS Statistics top fixed buttons stay within (360, 640)
+PASS Statistics top scrolling controls fit within reachable content
+PASS Statistics top fully visible enabled buttons receive the frontmost pointer hit
+PASS Statistics top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-statistics 360x640
+PASS Skills top fixed buttons stay within (360, 640)
+PASS Skills top scrolling controls fit within reachable content
+PASS Skills top fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills top visible essential text fits without TMP truncation or overflow
+PASS Skills top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-skills 360x640
+PASS Skills bottom fixed buttons stay within (360, 640)
+PASS Skills bottom scrolling controls fit within reachable content
+PASS Skills bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills bottom visible essential text fits without TMP truncation or overflow
+PASS Skills bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-skills-bottom 360x640
+PASS Product-detail top fixed buttons stay within (360, 640)
+PASS Product-detail top scrolling controls fit within reachable content
+PASS Product-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Product-detail top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-product-detail 360x640
+PASS Prestige top fixed buttons stay within (360, 640)
+PASS Prestige top scrolling controls fit within reachable content
+PASS Prestige top fully visible enabled buttons receive the frontmost pointer hit
+PASS Prestige top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-prestige 360x640
+PASS Sponsor top fixed buttons stay within (360, 640)
+PASS Sponsor top scrolling controls fit within reachable content
+PASS Sponsor top fully visible enabled buttons receive the frontmost pointer hit
+PASS Sponsor top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-sponsor 360x640
+PASS Offline top fixed buttons stay within (360, 640)
+PASS Offline top scrolling controls fit within reachable content
+PASS Offline top fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-offline 360x640
+PASS Save-recovery top fixed buttons stay within (360, 640)
+PASS Save-recovery top scrolling controls fit within reachable content
+PASS Save-recovery top fully visible enabled buttons receive the frontmost pointer hit
+PASS Save-recovery top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-360x640-save-recovery 360x640
+PASS Store-name top fixed buttons stay within (360, 640)
+PASS Store-name top scrolling controls fit within reachable content
+PASS Store-name top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name top visible essential text fits without TMP truncation or overflow
+PASS Store-name top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-store-name 360x640
+PASS Store-name-detail top fixed buttons stay within (360, 640)
+PASS Store-name-detail top scrolling controls fit within reachable content
+PASS Store-name-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name-detail top visible essential text fits without TMP truncation or overflow
+PASS Store-name-detail top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-360x640-store-name-detail 360x640
+PASS Quality viewport activated: 390x844
+PASS Home fixed buttons stay within (390, 844)
+PASS Home scrolling controls fit within reachable content
+PASS Home fully visible enabled buttons receive the frontmost pointer hit
+PASS Home visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-home 390x844
+PASS Products top fixed buttons stay within (390, 844)
+PASS Products top scrolling controls fit within reachable content
+PASS Products top fully visible enabled buttons receive the frontmost pointer hit
+PASS Products top visible essential text fits without TMP truncation or overflow
+PASS Products top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-products 390x844
+PASS Products bottom fixed buttons stay within (390, 844)
+PASS Products bottom scrolling controls fit within reachable content
+PASS Products bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Products bottom visible essential text fits without TMP truncation or overflow
+PASS Products bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-products-bottom 390x844
+PASS Player top fixed buttons stay within (390, 844)
+PASS Player top scrolling controls fit within reachable content
+PASS Player top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player top visible essential text fits without TMP truncation or overflow
+PASS Player top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-player 390x844
+PASS Player bottom fixed buttons stay within (390, 844)
+PASS Player bottom scrolling controls fit within reachable content
+PASS Player bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player bottom visible essential text fits without TMP truncation or overflow
+PASS Player bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-player-bottom 390x844
+PASS Legacy top fixed buttons stay within (390, 844)
+PASS Legacy top scrolling controls fit within reachable content
+PASS Legacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy top visible essential text fits without TMP truncation or overflow
+PASS Legacy top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-legacy 390x844
+PASS Legacy bottom fixed buttons stay within (390, 844)
+PASS Legacy bottom scrolling controls fit within reachable content
+PASS Legacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy bottom visible essential text fits without TMP truncation or overflow
+PASS Legacy bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-legacy-bottom 390x844
+PASS Settings top fixed buttons stay within (390, 844)
+PASS Settings top scrolling controls fit within reachable content
+PASS Settings top fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-settings 390x844
+PASS Settings bottom fixed buttons stay within (390, 844)
+PASS Settings bottom scrolling controls fit within reachable content
+PASS Settings bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-settings-bottom 390x844
+PASS Privacy top fixed buttons stay within (390, 844)
+PASS Privacy top scrolling controls fit within reachable content
+PASS Privacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-privacy 390x844
+PASS Privacy bottom fixed buttons stay within (390, 844)
+PASS Privacy bottom scrolling controls fit within reachable content
+PASS Privacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-privacy-bottom 390x844
+PASS Statistics top fixed buttons stay within (390, 844)
+PASS Statistics top scrolling controls fit within reachable content
+PASS Statistics top fully visible enabled buttons receive the frontmost pointer hit
+PASS Statistics top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-statistics 390x844
+PASS Skills top fixed buttons stay within (390, 844)
+PASS Skills top scrolling controls fit within reachable content
+PASS Skills top fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills top visible essential text fits without TMP truncation or overflow
+PASS Skills top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-skills 390x844
+PASS Skills bottom fixed buttons stay within (390, 844)
+PASS Skills bottom scrolling controls fit within reachable content
+PASS Skills bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills bottom visible essential text fits without TMP truncation or overflow
+PASS Skills bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-skills-bottom 390x844
+PASS Product-detail top fixed buttons stay within (390, 844)
+PASS Product-detail top scrolling controls fit within reachable content
+PASS Product-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Product-detail top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-product-detail 390x844
+PASS Prestige top fixed buttons stay within (390, 844)
+PASS Prestige top scrolling controls fit within reachable content
+PASS Prestige top fully visible enabled buttons receive the frontmost pointer hit
+PASS Prestige top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-prestige 390x844
+PASS Sponsor top fixed buttons stay within (390, 844)
+PASS Sponsor top scrolling controls fit within reachable content
+PASS Sponsor top fully visible enabled buttons receive the frontmost pointer hit
+PASS Sponsor top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-sponsor 390x844
+PASS Offline top fixed buttons stay within (390, 844)
+PASS Offline top scrolling controls fit within reachable content
+PASS Offline top fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-offline 390x844
+PASS Save-recovery top fixed buttons stay within (390, 844)
+PASS Save-recovery top scrolling controls fit within reachable content
+PASS Save-recovery top fully visible enabled buttons receive the frontmost pointer hit
+PASS Save-recovery top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-390x844-save-recovery 390x844
+PASS Store-name top fixed buttons stay within (390, 844)
+PASS Store-name top scrolling controls fit within reachable content
+PASS Store-name top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name top visible essential text fits without TMP truncation or overflow
+PASS Store-name top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-store-name 390x844
+PASS Store-name-detail top fixed buttons stay within (390, 844)
+PASS Store-name-detail top scrolling controls fit within reachable content
+PASS Store-name-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name-detail top visible essential text fits without TMP truncation or overflow
+PASS Store-name-detail top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-390x844-store-name-detail 390x844
+PASS Quality viewport activated: 450x916
+PASS Home fixed buttons stay within (450, 916)
+PASS Home scrolling controls fit within reachable content
+PASS Home fully visible enabled buttons receive the frontmost pointer hit
+PASS Home visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-home 450x916
+PASS Products top fixed buttons stay within (450, 916)
+PASS Products top scrolling controls fit within reachable content
+PASS Products top fully visible enabled buttons receive the frontmost pointer hit
+PASS Products top visible essential text fits without TMP truncation or overflow
+PASS Products top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-products 450x916
+PASS Products bottom fixed buttons stay within (450, 916)
+PASS Products bottom scrolling controls fit within reachable content
+PASS Products bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Products bottom visible essential text fits without TMP truncation or overflow
+PASS Products bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-products-bottom 450x916
+PASS Player top fixed buttons stay within (450, 916)
+PASS Player top scrolling controls fit within reachable content
+PASS Player top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player top visible essential text fits without TMP truncation or overflow
+PASS Player top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player 450x916
+PASS Player bottom fixed buttons stay within (450, 916)
+PASS Player bottom scrolling controls fit within reachable content
+PASS Player bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player bottom visible essential text fits without TMP truncation or overflow
+PASS Player bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player-bottom 450x916
+PASS Legacy top fixed buttons stay within (450, 916)
+PASS Legacy top scrolling controls fit within reachable content
+PASS Legacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy top visible essential text fits without TMP truncation or overflow
+PASS Legacy top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-legacy 450x916
+PASS Legacy bottom fixed buttons stay within (450, 916)
+PASS Legacy bottom scrolling controls fit within reachable content
+PASS Legacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy bottom visible essential text fits without TMP truncation or overflow
+PASS Legacy bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-legacy-bottom 450x916
+PASS Products quantity menu retains all four authored choices at (450, 916)
+PASS Products quantity opener enables its menu and outside blocker at (450, 916)
+PASS Products entire quantity menu fits all four choices on screen at (450, 916)
+CAPTURE quality-450x916-products-quantity 450x916
+PASS Products Quantity Buy ×1 receives the frontmost raycast at (450, 916)
+PASS Products Quantity Buy ×1 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Products Quantity Buy ×10 receives the frontmost raycast at (450, 916)
+PASS Products Quantity Buy ×10 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Products Quantity Buy ×100 receives the frontmost raycast at (450, 916)
+PASS Products Quantity Buy ×100 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Products Quantity Buy MAX receives the frontmost raycast at (450, 916)
+PASS Products Quantity Buy MAX updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Products has a visible purchase center outside its quantity menu at (450, 916)
+PASS Products outside blocker intercepts an underlying purchase hit at (450, 916)
+PASS Products outside tap closes the menu without purchasing or changing currency at (450, 916)
+PASS Player quantity menu retains all four authored choices at (450, 916)
+PASS Player quantity opener enables its menu and outside blocker at (450, 916)
+PASS Player entire quantity menu fits all four choices on screen at (450, 916)
+CAPTURE quality-450x916-player-quantity 450x916
+PASS Player Quantity Buy ×1 receives the frontmost raycast at (450, 916)
+PASS Player Quantity Buy ×1 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Player Quantity Buy ×10 receives the frontmost raycast at (450, 916)
+PASS Player Quantity Buy ×10 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Player Quantity Buy ×100 receives the frontmost raycast at (450, 916)
+PASS Player Quantity Buy ×100 updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Player Quantity Buy MAX receives the frontmost raycast at (450, 916)
+PASS Player Quantity Buy MAX updates quantity and selection, then closes menu/blocker at (450, 916)
+PASS Player has a visible purchase center outside its quantity menu at (450, 916)
+PASS Player outside blocker intercepts an underlying purchase hit at (450, 916)
+PASS Player outside tap closes the menu without purchasing or changing currency at (450, 916)
+PASS Settings top fixed buttons stay within (450, 916)
+PASS Settings top scrolling controls fit within reachable content
+PASS Settings top fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-settings 450x916
+PASS Settings bottom fixed buttons stay within (450, 916)
+PASS Settings bottom scrolling controls fit within reachable content
+PASS Settings bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-settings-bottom 450x916
+PASS Privacy top fixed buttons stay within (450, 916)
+PASS Privacy top scrolling controls fit within reachable content
+PASS Privacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-privacy 450x916
+PASS Privacy bottom fixed buttons stay within (450, 916)
+PASS Privacy bottom scrolling controls fit within reachable content
+PASS Privacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-privacy-bottom 450x916
+PASS Statistics top fixed buttons stay within (450, 916)
+PASS Statistics top scrolling controls fit within reachable content
+PASS Statistics top fully visible enabled buttons receive the frontmost pointer hit
+PASS Statistics top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-statistics 450x916
+PASS Skills top fixed buttons stay within (450, 916)
+PASS Skills top scrolling controls fit within reachable content
+PASS Skills top fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills top visible essential text fits without TMP truncation or overflow
+PASS Skills top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-skills 450x916
+PASS Skills bottom fixed buttons stay within (450, 916)
+PASS Skills bottom scrolling controls fit within reachable content
+PASS Skills bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills bottom visible essential text fits without TMP truncation or overflow
+PASS Skills bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-skills-bottom 450x916
+PASS Skills locked fixture shows LOCKED for skill 0 at (450, 916)
+PASS Skills locked fixture shows LOCKED for skill 1 at (450, 916)
+PASS Skills locked fixture shows LOCKED for skill 2 at (450, 916)
+PASS Skills locked fixed buttons stay within (450, 916)
+PASS Skills locked scrolling controls fit within reachable content
+PASS Skills locked fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills locked visible essential text fits without TMP truncation or overflow
+PASS Skills locked reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-skills-locked 450x916
+PASS Skills active fixture shows ACTIVE for skill 0 at (450, 916)
+PASS Skills active fixture shows ACTIVE for skill 1 at (450, 916)
+PASS Skills active fixture shows WAIT for skill 2 at (450, 916)
+PASS Skills active fixed buttons stay within (450, 916)
+PASS Skills active scrolling controls fit within reachable content
+PASS Skills active fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills active visible essential text fits without TMP truncation or overflow
+PASS Skills active reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-skills-active 450x916
+PASS Skills waiting fixture shows WAIT for skill 0 at (450, 916)
+PASS Skills waiting fixture shows WAIT for skill 1 at (450, 916)
+PASS Skills waiting fixture shows WAIT for skill 2 at (450, 916)
+PASS Skills waiting fixed buttons stay within (450, 916)
+PASS Skills waiting scrolling controls fit within reachable content
+PASS Skills waiting fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills waiting visible essential text fits without TMP truncation or overflow
+PASS Skills waiting reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-skills-waiting 450x916
+PASS Product-detail top fixed buttons stay within (450, 916)
+PASS Product-detail top scrolling controls fit within reachable content
+PASS Product-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Product-detail top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-product-detail 450x916
+PASS Prestige top fixed buttons stay within (450, 916)
+PASS Prestige top scrolling controls fit within reachable content
+PASS Prestige top fully visible enabled buttons receive the frontmost pointer hit
+PASS Prestige top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-prestige 450x916
+PASS Sponsor top fixed buttons stay within (450, 916)
+PASS Sponsor top scrolling controls fit within reachable content
+PASS Sponsor top fully visible enabled buttons receive the frontmost pointer hit
+PASS Sponsor top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-sponsor 450x916
+PASS Offline top fixed buttons stay within (450, 916)
+PASS Offline top scrolling controls fit within reachable content
+PASS Offline top fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-offline 450x916
+PASS Save-recovery top fixed buttons stay within (450, 916)
+PASS Save-recovery top scrolling controls fit within reachable content
+PASS Save-recovery top fully visible enabled buttons receive the frontmost pointer hit
+PASS Save-recovery top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-450x916-save-recovery 450x916
+PASS Store-name top fixed buttons stay within (450, 916)
+PASS Store-name top scrolling controls fit within reachable content
+PASS Store-name top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name top visible essential text fits without TMP truncation or overflow
+PASS Store-name top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-store-name 450x916
+PASS Empty store-name field shows its placeholder before focus at (450, 916)
+PASS Store-name empty fixed buttons stay within (450, 916)
+PASS Store-name empty scrolling controls fit within reachable content
+PASS Store-name empty fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name empty visible essential text fits without TMP truncation or overflow
+PASS Store-name empty reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-store-name-empty 450x916
+PASS Native store-name input selection visibly activates its focus underline at (450, 916)
+CAPTURE quality-450x916-store-name-focused 450x916
+PASS Native store-name deselection removes its focus underline at (450, 916)
+PASS Store-name-detail top fixed buttons stay within (450, 916)
+PASS Store-name-detail top scrolling controls fit within reachable content
+PASS Store-name-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name-detail top visible essential text fits without TMP truncation or overflow
+PASS Store-name-detail top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-store-name-detail 450x916
+PASS Player retains the existing non-skill upgrade description for tap-0
+PASS Player retains the existing non-skill upgrade description for profit-phuljhari-0
+PASS Player retains the existing non-skill upgrade description for all-0
+PASS Player retains the existing non-skill upgrade description for tap-1
+PASS Player retains the existing non-skill upgrade description for profit-phuljhari-1
+PASS Player retains the existing non-skill upgrade description for profit-anar-0
+PASS Player retains the existing non-skill upgrade description for all-1
+PASS Player retains the existing non-skill upgrade description for tap-2
+PASS Player retains the existing non-skill upgrade description for discount-phuljhari-0
+PASS Player retains the existing non-skill upgrade description for profit-anar-1
+PASS Later skill-upgrade fixture remains a valid isolated state at Legacy rank 1
+PASS Player skill-0-1 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-0-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-1 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-1-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-1 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-2-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-0-2 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-0-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-2 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-1-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-2 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-2-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-0-3 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-0-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-3 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-1-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-3 reports effective cooldown at Legacy rank 1 and (450, 916)
+PASS Player skill-2-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS All nine later skill upgrades are covered at Legacy rank 1 and (450, 916)
+PASS Player-skill-upgrades-rank-1 top fixed buttons stay within (450, 916)
+PASS Player-skill-upgrades-rank-1 top scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-1 top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-1 top visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-1 top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player-skill-upgrades-rank-1 450x916
+PASS Player-skill-upgrades-rank-1 bottom fixed buttons stay within (450, 916)
+PASS Player-skill-upgrades-rank-1 bottom scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-1 bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-1 bottom visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-1 bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player-skill-upgrades-rank-1-bottom 450x916
+PASS Later skill-upgrade fixture remains a valid isolated state at Legacy rank 5
+PASS Player skill-0-1 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-0-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-1 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-1-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-1 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-2-1 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-0-2 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-0-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-2 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-1-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-2 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-2-2 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-0-3 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-0-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-1-3 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-1-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS Player skill-2-3 reports effective cooldown at Legacy rank 5 and (450, 916)
+PASS Player skill-2-3 complete skill effect/cooldown fits its pooled text box at (450, 916)
+PASS All nine later skill upgrades are covered at Legacy rank 5 and (450, 916)
+PASS Player-skill-upgrades-rank-5 top fixed buttons stay within (450, 916)
+PASS Player-skill-upgrades-rank-5 top scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-5 top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-5 top visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-5 top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player-skill-upgrades-rank-5 450x916
+PASS Player-skill-upgrades-rank-5 bottom fixed buttons stay within (450, 916)
+PASS Player-skill-upgrades-rank-5 bottom scrolling controls fit within reachable content
+PASS Player-skill-upgrades-rank-5 bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player-skill-upgrades-rank-5 bottom visible essential text fits without TMP truncation or overflow
+PASS Player-skill-upgrades-rank-5 bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-450x916-player-skill-upgrades-rank-5-bottom 450x916
+PASS Quality viewport activated: 540x1200
+PASS Home fixed buttons stay within (540, 1200)
+PASS Home scrolling controls fit within reachable content
+PASS Home fully visible enabled buttons receive the frontmost pointer hit
+PASS Home visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-home 540x1200
+PASS Products top fixed buttons stay within (540, 1200)
+PASS Products top scrolling controls fit within reachable content
+PASS Products top fully visible enabled buttons receive the frontmost pointer hit
+PASS Products top visible essential text fits without TMP truncation or overflow
+PASS Products top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-products 540x1200
+PASS Products bottom fixed buttons stay within (540, 1200)
+PASS Products bottom scrolling controls fit within reachable content
+PASS Products bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Products bottom visible essential text fits without TMP truncation or overflow
+PASS Products bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-products-bottom 540x1200
+PASS Player top fixed buttons stay within (540, 1200)
+PASS Player top scrolling controls fit within reachable content
+PASS Player top fully visible enabled buttons receive the frontmost pointer hit
+PASS Player top visible essential text fits without TMP truncation or overflow
+PASS Player top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-player 540x1200
+PASS Player bottom fixed buttons stay within (540, 1200)
+PASS Player bottom scrolling controls fit within reachable content
+PASS Player bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Player bottom visible essential text fits without TMP truncation or overflow
+PASS Player bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-player-bottom 540x1200
+PASS Legacy top fixed buttons stay within (540, 1200)
+PASS Legacy top scrolling controls fit within reachable content
+PASS Legacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy top visible essential text fits without TMP truncation or overflow
+PASS Legacy top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-legacy 540x1200
+PASS Legacy bottom fixed buttons stay within (540, 1200)
+PASS Legacy bottom scrolling controls fit within reachable content
+PASS Legacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Legacy bottom visible essential text fits without TMP truncation or overflow
+PASS Legacy bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-legacy-bottom 540x1200
+PASS Settings top fixed buttons stay within (540, 1200)
+PASS Settings top scrolling controls fit within reachable content
+PASS Settings top fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-settings 540x1200
+PASS Settings bottom fixed buttons stay within (540, 1200)
+PASS Settings bottom scrolling controls fit within reachable content
+PASS Settings bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Settings bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-settings-bottom 540x1200
+PASS Privacy top fixed buttons stay within (540, 1200)
+PASS Privacy top scrolling controls fit within reachable content
+PASS Privacy top fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-privacy 540x1200
+PASS Privacy bottom fixed buttons stay within (540, 1200)
+PASS Privacy bottom scrolling controls fit within reachable content
+PASS Privacy bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Privacy bottom visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-privacy-bottom 540x1200
+PASS Statistics top fixed buttons stay within (540, 1200)
+PASS Statistics top scrolling controls fit within reachable content
+PASS Statistics top fully visible enabled buttons receive the frontmost pointer hit
+PASS Statistics top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-statistics 540x1200
+PASS Skills top fixed buttons stay within (540, 1200)
+PASS Skills top scrolling controls fit within reachable content
+PASS Skills top fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills top visible essential text fits without TMP truncation or overflow
+PASS Skills top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-skills 540x1200
+PASS Skills bottom fixed buttons stay within (540, 1200)
+PASS Skills bottom scrolling controls fit within reachable content
+PASS Skills bottom fully visible enabled buttons receive the frontmost pointer hit
+PASS Skills bottom visible essential text fits without TMP truncation or overflow
+PASS Skills bottom reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-skills-bottom 540x1200
+PASS Product-detail top fixed buttons stay within (540, 1200)
+PASS Product-detail top scrolling controls fit within reachable content
+PASS Product-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Product-detail top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-product-detail 540x1200
+PASS Prestige top fixed buttons stay within (540, 1200)
+PASS Prestige top scrolling controls fit within reachable content
+PASS Prestige top fully visible enabled buttons receive the frontmost pointer hit
+PASS Prestige top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-prestige 540x1200
+PASS Sponsor top fixed buttons stay within (540, 1200)
+PASS Sponsor top scrolling controls fit within reachable content
+PASS Sponsor top fully visible enabled buttons receive the frontmost pointer hit
+PASS Sponsor top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-sponsor 540x1200
+PASS Offline top fixed buttons stay within (540, 1200)
+PASS Offline top scrolling controls fit within reachable content
+PASS Offline top fully visible enabled buttons receive the frontmost pointer hit
+PASS Offline top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-offline 540x1200
+PASS Save-recovery top fixed buttons stay within (540, 1200)
+PASS Save-recovery top scrolling controls fit within reachable content
+PASS Save-recovery top fully visible enabled buttons receive the frontmost pointer hit
+PASS Save-recovery top visible essential text fits without TMP truncation or overflow
+CAPTURE quality-540x1200-save-recovery 540x1200
+PASS Store-name top fixed buttons stay within (540, 1200)
+PASS Store-name top scrolling controls fit within reachable content
+PASS Store-name top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name top visible essential text fits without TMP truncation or overflow
+PASS Store-name top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-store-name 540x1200
+PASS Store-name-detail top fixed buttons stay within (540, 1200)
+PASS Store-name-detail top scrolling controls fit within reachable content
+PASS Store-name-detail top fully visible enabled buttons receive the frontmost pointer hit
+PASS Store-name-detail top visible essential text fits without TMP truncation or overflow
+PASS Store-name-detail top reviewed body/status copy renders at least 12 screen pixels
+CAPTURE quality-540x1200-store-name-detail 540x1200
+LIMIT Geometry and pixels are desktop Game View evidence, not Android dp/sp or device accessibility validation.
+LIMIT Native captures cover the fourteen Main screen presenters plus store-name detail; Bootstrap scene and real ads/cloud are not loaded.
+LIMIT Contrast checks cover authored solid input colors; sprite gradients and global text contrast require visual review.
+SMOKE SUCCEEDED

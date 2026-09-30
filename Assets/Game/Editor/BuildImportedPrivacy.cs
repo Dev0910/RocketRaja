@@ -138,6 +138,7 @@ namespace RocketRaja.EditorTools
             serialized.FindProperty("closeButton").objectReferenceValue = closeButton;
             serialized.FindProperty("backButton").objectReferenceValue = backButton;
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            ApplyReadability(canvasObject);
 
 
             var eventSystem = new GameObject("Privacy EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
@@ -251,6 +252,40 @@ namespace RocketRaja.EditorTools
             AssetDatabase.SaveAssets();
         }
 
+
+        /// <summary>Keeps the complete account explanation readable in saved privacy cards.</summary>
+        public static void ApplyReadability(GameObject root)
+        {
+            foreach (var label in root.GetComponentsInChildren<TMP_Text>(true))
+            {
+                if (label.name != "Description") continue;
+                var paper = label.transform.parent as RectTransform;
+                var card = paper != null ? paper.parent : null;
+                var layout = card != null ? card.GetComponent<LayoutElement>() : null;
+                if (layout == null) continue;
+                float height = card.name.StartsWith("Progress") ? 500 :
+                    card.name.StartsWith("Optional") ? 260 : 340;
+                layout.preferredHeight = height;
+                var heading = paper.Find("Heading").GetComponent<TMP_Text>();
+                PlaceCopy(heading, 26, 66, 40);
+                PlaceCopy(label, 110, height - 136, 36);
+                EditorUtility.SetDirty(layout);
+            }
+        }
+
+        static void PlaceCopy(TMP_Text text, float top, float height, float size)
+        {
+            var rect = text.rectTransform;
+            rect.anchorMin = new Vector2(0, 1);
+            rect.anchorMax = Vector2.one;
+            rect.pivot = new Vector2(.5f, 1);
+            rect.offsetMin = new Vector2(32, -top - height);
+            rect.offsetMax = new Vector2(-25, -top);
+            text.fontSize = size;
+            text.enableAutoSizing = false;
+            text.textWrappingMode = TextWrappingModes.Normal;
+            EditorUtility.SetDirty(text);
+        }
 
         static TMP_FontAsset LoadOrCreateFont() => GameTypography.Body;
 

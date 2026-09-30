@@ -55,10 +55,10 @@ namespace RocketRaja.EditorTools
 
             var header = Top(panel, "Header", 144);
             Image(header, IvoryColor);
-            Text(Stretch(header, "Title", 28, 170, 15, 10), "Legacy", 58,
+            Text(Stretch(header, "Title", 28, 300, 15, 10), "Legacy", 58,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            var collapse = InvisibleButton(Stretch(header, "collapse-Legacy", 905, 20, 15, 12));
-            Text(Fill(collapse.transform, "Collapse Icon"), "v", 63, Ink, TextAlignmentOptions.Center, true);
+            var collapse = InvisibleButton(Stretch(header, "collapse-Legacy", 800, 20, 5, 5));
+            Text(Fill(collapse.transform, "Collapse Icon"), "← Shop", 42, Ink, TextAlignmentOptions.Center, true);
             Image(Bottom(header, "Double Rule", 5), Hex("255883"));
 
             var body = Stretch(panel, "Scroll Body", 0, 0, 0, 144);
@@ -127,6 +127,7 @@ namespace RocketRaja.EditorTools
             Assign(serialized, "effects", effects);
             Assign(serialized, "purchaseLabels", labels);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            UiCompactTypography.Apply(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();

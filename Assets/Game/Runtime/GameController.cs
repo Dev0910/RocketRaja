@@ -129,13 +129,35 @@ namespace RocketRaja
         {
             if (!CanPlay || suspended || adShowing || modalPaused || saveBlocked) return;
             Engine.Tap(); View.TapFeedback();
-            if (Engine.State.onboarding == 0) { Engine.State.onboarding = 1; Save(); }
+            if (Engine.State.onboarding == 0)
+            {
+                Engine.State.onboarding = 1;
+                Save();
+                View.RefreshNow();
+            }
         }
         public void Save()
         {
             if (Engine == null || saveBlocked) return;
             try { session.Save(true); SaveWarning = null; }
             catch (Exception ex) { SaveWarning = "Saving failed. Please check device storage."; View?.Notice(SaveWarning); Debug.LogError("Save failed: " + ex.Message); }
+        }
+        /// <summary>Applies the same purchase, onboarding, save, and feedback from every product entry point.</summary>
+        public bool PurchaseProduct(int index, int quantity)
+        {
+            if (!CanPlay || suspended || adShowing || Engine == null || View == null ||
+                index < 0 || index >= Engine.Data.products.Length || quantity <= 0)
+                return false;
+
+            int tier = Engine.VisualTier(index);
+            if (!Engine.BuyProduct(index, quantity)) return false;
+            if (Engine.State.onboarding < 3) Engine.State.onboarding = 3;
+            Save();
+            string productName = Engine.Data.products[index].name;
+            View.Notice(Engine.VisualTier(index) > tier
+                ? productName + " display upgraded!" : productName + " stocked.");
+            View.RefreshNow();
+            return true;
         }
         public void SetSetting(string setting)
         {

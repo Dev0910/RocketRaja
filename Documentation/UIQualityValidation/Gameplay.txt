@@ -1,0 +1,158 @@
+PASS Main scene booted
+PASS Authored catalog loaded
+PASS All thirteen HTML screens bound in Main
+PASS Saved UI boots without generated canvas
+PASS No obsolete UI copies remain in the shipped scene
+PASS Home wallet supports rupee glyph
+CAPTURE 01-home 644x641
+PASS Saved stall tap target present
+PASS Stall tap earns exactly once
+PASS Stall drag earns no tap income
+PASS Products opens saved panel
+PASS Product purchase 0
+PASS Product purchase 1
+PASS Product purchase 2
+PASS Product purchase 3
+PASS Product purchase 4
+PASS Product purchase 5
+PASS Product purchase 6
+PASS Product purchase 7
+CAPTURE 02-products 644x641
+PASS Product reaches unlockable milestone 0
+PASS Product reaches unlockable milestone 1
+PASS Product reaches unlockable milestone 2
+PASS Product reaches unlockable milestone 3
+PASS Product reaches unlockable milestone 4
+PASS Product reaches unlockable milestone 5
+PASS Product reaches unlockable milestone 6
+PASS Product reaches unlockable milestone 7
+PASS All product shelves owned
+PASS All run unlockables purchased
+PASS Player opens saved panel
+CAPTURE 03-player 644x641
+PASS Player scroll survives navigation without taps
+PASS Prestige dialog opens
+CAPTURE 04-prestige 644x641
+PASS Prestige confirmation ready
+PASS Prestige reset and reward applied
+PASS Prestige routes to saved Legacy panel
+PASS Legacy perk affordable
+PASS Legacy purchase deducts reputation and persists rank
+CAPTURE 05-legacy 644x641
+PASS Offline dialog opens
+CAPTURE 06-offline 644x641
+PASS Test rewarded callback grants offline bonus once
+PASS Test rewarded ads adapter active
+PASS Cancelled sponsor grants no bonus
+PASS Completed sponsor activates boost
+PASS Statistics opens
+PASS Skills opens
+PASS Product detail opens
+PASS Settings opens
+PASS Sponsor opens
+PASS Privacy opens
+PASS Save recovery opens as blocking screen
+PASS Requested review viewport is actually active: 540x900
+CAPTURE home-540x900 540x900
+PASS Requested review viewport is actually active: 540x1200
+CAPTURE home-540x1200 540x1200
+PASS No runtime canvas created during play
+PASS ImportedSettingsCanvas opens with a real, interactive CanvasGroup
+PASS ImportedSettingsCanvas close control receives pointer input
+PASS ImportedSettingsCanvas closes through its button and releases the game
+PASS ImportedStatisticsCanvas opens with a real, interactive CanvasGroup
+PASS ImportedStatisticsCanvas close control receives pointer input
+PASS ImportedStatisticsCanvas closes through its button and releases the game
+PASS ImportedSkillsCanvas opens with a real, interactive CanvasGroup
+PASS ImportedSkillsCanvas close control receives pointer input
+PASS ImportedSkillsCanvas closes through its button and releases the game
+PASS ImportedProductDetailCanvas opens with a real, interactive CanvasGroup
+PASS ImportedProductDetailCanvas close control receives pointer input
+PASS ImportedProductDetailCanvas closes through its button and releases the game
+PASS ImportedPrestigeCanvas opens with a real, interactive CanvasGroup
+PASS ImportedPrestigeCanvas close control receives pointer input
+PASS ImportedPrestigeCanvas closes through its button and releases the game
+PASS ImportedSponsorCanvas opens with a real, interactive CanvasGroup
+PASS ImportedSponsorCanvas close control receives pointer input
+PASS ImportedSponsorCanvas closes through its button and releases the game
+PASS ImportedOfflineCanvas opens with a real, interactive CanvasGroup
+PASS ImportedOfflineCanvas close control receives pointer input
+PASS ImportedOfflineCanvas closes through its button and releases the game
+PASS ImportedPrivacyCanvas opens with a real, interactive CanvasGroup
+PASS ImportedPrivacyCanvas close control receives pointer input
+PASS ImportedPrivacyCanvas closes through its button and releases the game
+PASS ImportedSaveRecoveryCanvas opens with a real, interactive CanvasGroup
+PASS ImportedSaveRecoveryCanvas close control receives pointer input
+PASS ImportedSaveRecoveryCanvas closes through its button and releases the game
+PASS Opening modal blocks input and pauses economy
+PASS Opening modal prevents shop income
+PASS Modal opens while time scale is zero
+PASS Modal stays visible and blocks interaction through closing animation
+PASS Closing animation releases modal pause
+PASS Reopening a closing modal cancels stale close completion
+PASS Settings to Privacy handoff retains the modal pause
+PASS Privacy returns to Settings after closing
+PASS Nested modal handoff leaves no stale pause
+PASS Rapid navigation settles on only the selected panel
+PASS Animated product purchase commits immediately
+PASS Repeated purchase feedback returns to its authored scale
+PASS Quantity menu remains usable after leaving during its opening animation
+PASS Resize during panel animation preserves the browsing layout position
+PASS Enabling Reduced Motion mid-transition completes the modal
+PASS Reduced Motion closes immediately and releases input
+PASS Repeated prestige confirm awards exactly once during exit
+PASS Animated prestige completes on Legacy without a modal lock
+PASS Reward toast renders above the active lower panel
+CAPTURE 07-prestige-celebration 540x900
+PASS HTML button reaches .98 scale and 1px press displacement in 120ms
+PASS Button release restores exact authored geometry
+PASS Keyboard submit releases using unscaled time
+PASS Reduced Motion cancels held-button transform
+PASS Selected navigation icon uses HTML width/height ratios
+PASS Leaving navigation restores icon size
+PASS Toast begins transparent and never intercepts input
+PASS Toast finishes the 180ms HTML reveal
+PASS Toast hides immediately as in HTML
+PASS Inline messages reveal on a child host without changing row layout
+PASS All Home feedback targets were authored before Play Mode
+PASS Detail progress reveal starts from zero
+PASS Progress is between endpoints halfway through its 360ms transition
+PASS Periodic refresh does not restart the progress transition
+PASS Rapid progress retargeting finishes at the latest authoritative value
+PASS Reduced Motion snaps an active progress transition
+PASS All eight product rows have saved, bound progress fills
+PASS Cooldown shows the authoritative remaining half and cannot intercept taps
+PASS Ready skill clears the radial cover
+PASS HTML skill press scales only its disc to .93 in 140ms
+PASS Pointer exit restores skill disc
+PASS Skill active ring completes its 180ms state-color transition
+PASS Reduced Motion settles the skill ring immediately
+PASS Every tap immediately shows its reward without blocking input
+PASS Tap earnings rise briefly within the counter lane
+PASS Tap earnings remain readable during the rise
+CAPTURE 08-tap-mid 540x900
+PASS Tap earnings fade only near the end of feedback
+PASS Tap earnings disappear promptly after feedback
+PASS Rapid taps aggregate in one authored label without growing the hierarchy
+PASS Enabling Reduced Motion cancels flying tap labels
+PASS Reduced Motion keeps tap income readable without moving or fading
+PASS Static reduced-motion tap labels hide after 650ms
+PASS Celebration host and renderer are saved and non-interactive
+PASS Celebration uses twelve stars
+CAPTURE 09-celebration-mid 540x900
+PASS Repeated celebrations restart the bounded star group without adding objects
+PASS Celebration clears after 850ms
+PASS Reduced Motion cancels an active celebration
+PASS Reduced Motion suppresses future decorative stars
+PASS Keeper motion uses a saved non-interactive component
+PASS Keeper matches bottom pivot, .7-degree extremes and four-second HTML loop
+PASS Keeper stays at the original lower-right counter position after the pivot change
+PASS Decorative visitors are removed
+PASS Keeper motion advances without visitors
+PASS Opening a modal freezes both ambient loops
+PASS Ambient loops resume after modal release
+PASS Background application focus pauses ambient motion
+PASS Returning application focus resumes ambient motion
+CAPTURE 10-ambient 540x900
+PASS Reduced Motion hides visitors and restores the keeper's authored pose
+SMOKE SUCCEEDED

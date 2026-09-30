@@ -20,7 +20,8 @@ namespace RocketRaja.EditorTools
         static readonly Color Muted = Hex("375A77");
         static readonly Color IvoryColor = Hex("FFF4DB");
         static readonly string[] ProductIds = { "phuljhari", "anar", "chakri", "rockets", "small-crackers", "cracker-strings", "aerial-shots", "gift-boxes" };
-        static readonly string[] ProductNames = { "Phuljhari", "Anar", "Chakri", "Rockets", "Small crackers", "Cracker strings", "Aerial shots", "Celebration boxes" };
+        // Shelf tags are narrow on phones; full product names remain in Products and the goal card.
+        static readonly string[] ProductNames = { "Phuljhari", "Anar", "Chakri", "Rockets", "Crackers", "Strings", "Aerial", "Gift boxes" };
 
         public static void Build()
         {
@@ -81,10 +82,14 @@ namespace RocketRaja.EditorTools
                 Hex("FFE3A6"), TextAlignmentOptions.Center, true);
             var cashCaption = Text(Region(world, "Cash Caption", .24f, .833f, .76f, .885f), "CASH BALANCE", 40,
                 Color.white, TextAlignmentOptions.Center, true);
-            var shopSign = Text(Region(world, "Shop Sign", .25f, .672f, .75f, .744f), RocketRaja.Core.GameState.DefaultStoreName, 48,
+            var shopSign = Text(Region(world, "Shop Sign", .29f, .660f, .71f, .756f), RocketRaja.Core.GameState.DefaultStoreName, 48,
                 IvoryColor, TextAlignmentOptions.Center, true);
 
-            shopSign.richText = false; shopSign.enableAutoSizing = true; shopSign.fontSizeMin = 20; shopSign.fontSizeMax = 48;
+            shopSign.richText = false; shopSign.enableAutoSizing = true; shopSign.fontSizeMin = 36; shopSign.fontSizeMax = 48;
+            shopSign.textWrappingMode = TextWrappingModes.NoWrap; shopSign.overflowMode = TextOverflowModes.Ellipsis;
+            // The painted sign is too short to be a touch target on compact phones.
+            // Its transparent hit area fits between the top shelf row and cash controls.
+            var inspectSign = InvisibleButton(Region(world, "inspect-store-name", .22f, .658f, .78f, .870f));
             var displays = new Image[8];
             var emptyMarks = new TMP_Text[8];
             var names = new TMP_Text[8];
@@ -102,10 +107,12 @@ namespace RocketRaja.EditorTools
                 emptyMarks[i] = Text(Fill(art, "Empty Mark"), "+", 90,
                     Hex("D4AD70"), TextAlignmentOptions.Center);
                 var label = Region(world, "shelf-name-" + ProductIds[i], center - .105f,
-                    row == 0 ? .464f : .305f, center + .105f, row == 0 ? .506f : .345f);
-                names[i] = Text(label, ProductNames[i], 26, Hex("422B20"), TextAlignmentOptions.Center, true);
+                    row == 0 ? .445f : .285f, center + .105f, row == 0 ? .525f : .365f);
+                names[i] = Text(label, ProductNames[i], 38, Hex("422B20"), TextAlignmentOptions.Center, true);
+                names[i].textWrappingMode = TextWrappingModes.NoWrap;
+                names[i].overflowMode = TextOverflowModes.Ellipsis;
                 var clickRect = Region(world, "open-" + ProductIds[i], center - .105f,
-                    row == 0 ? .463f : .282f, center + .105f, row == 0 ? .625f : .445f);
+                    row == 0 ? .445f : .235f, center + .105f, row == 0 ? .655f : .445f);
                 shelfButtons[i] = InvisibleButton(clickRect);
             }
             var keeperRect = Region(world, "Shopkeeper", .79f, .078f, 1, .239f);
@@ -114,7 +121,7 @@ namespace RocketRaja.EditorTools
             keeperImage.preserveAspect = true;
             var hint = Region(world, "Tap Hint", .185f, .035f, .815f, .085f);
             Image(hint, Hex("FFF4DB"), false);
-            var hintText = Text(Fill(hint, "Hint Text"), "Tap to earn", 32,
+            var hintText = Text(Fill(hint, "Hint Text"), "Tap to earn", 39,
                 Hex("4A291B"), TextAlignmentOptions.Center, true);
 
             var popupRects = new RectTransform[12];
@@ -139,14 +146,24 @@ namespace RocketRaja.EditorTools
             navCanvas.sortingOrder = 15;
             navRoot.gameObject.AddComponent<GraphicRaycaster>();
             var navButtons = new Button[3];
+            var navLabels = new TMP_Text[3];
+            var navIndicators = new Image[3];
+            string[] navNames = { "Player", "Products", "Legacy" };
             for (int i = 0; i < 3; i++)
             {
-                var buttonRect = Region(navRoot, new[] { "nav-Player", "nav-Products", "nav-Legacy" }[i],
-                    i / 3f + .018f, .07f, (i + 1) / 3f - .018f, .94f);
+                var buttonRect = Region(navRoot, "nav-" + navNames[i],
+                    i / 3f + .018f, .005f, (i + 1) / 3f - .018f, .995f);
                 navButtons[i] = Button(buttonRect, Blue);
-                var icon = Image(Stretch(buttonRect, "Icon", 95, 95, 20, 20), Color.white, false, navArt[i]);
+                var icon = Image(Region(buttonRect, "Icon", .28f, .50f, .72f, .99f), Color.white, false, navArt[i]);
                 icon.type = UnityEngine.UI.Image.Type.Simple;
                 icon.preserveAspect = true;
+                // Baloo's 1.6x line height needs more vertical room than its point size suggests.
+                navLabels[i] = Text(Region(buttonRect, "Label", .05f, .06f, .95f, .50f), navNames[i], 35,
+                    Color.white, TextAlignmentOptions.Center);
+                navLabels[i].textWrappingMode = TextWrappingModes.NoWrap;
+                navIndicators[i] = Image(Region(buttonRect, "Selected Underline", .31f, .005f, .69f, .045f),
+                    Hex("FFE3A6"));
+                navIndicators[i].enabled = false;
             }
 
             var panel = Stretch(safe, "Home Panel", 0, 0, 145, 1400);
@@ -215,10 +232,12 @@ namespace RocketRaja.EditorTools
                 icon.type = UnityEngine.UI.Image.Type.Simple;
                 icon.preserveAspect = true;
                 skillImages[i] = icon;
-                Text(Stretch(box, "Name", 4, 4, 57, 137), skillNames[i], 31,
+                var skillName = Text(Stretch(box, "Name", 4, 4, 50, 125), skillNames[i], 36,
                     Ink, TextAlignmentOptions.Center, true);
-                skillStatus[i] = Text(Stretch(box, "Status", 4, 4, 16, 180), "READY", 28,
+                skillName.textWrappingMode = TextWrappingModes.NoWrap;
+                skillStatus[i] = Text(Stretch(box, "Status", 4, 4, 8, 172), "READY", 34,
                     Ink, TextAlignmentOptions.Center, true);
+                skillStatus[i].textWrappingMode = TextWrappingModes.NoWrap;
             }
 
             var sponsor = FramedCard(content, "Sponsor", 136);
@@ -231,7 +250,25 @@ namespace RocketRaja.EditorTools
             sponsorIcon.type = UnityEngine.UI.Image.Type.Simple;
             sponsorIcon.preserveAspect = true;
 
-            var notice = Region(safe, "Notice", .07f, .46f, .93f, .53f);
+            var nextAction = FramedCard(content, "Next Action", 140);
+            Text(Region(nextAction, "Next Action Kicker", .035f, .65f, .65f, .95f), "STARTER OFFER", 32,
+                Muted, TextAlignmentOptions.MidlineLeft, true);
+            var nextGoal = Text(Region(nextAction, "Next Goal", .035f, .30f, .65f, .70f), "Stock Phuljhari", 38,
+                Ink, TextAlignmentOptions.MidlineLeft, true);
+            nextGoal.textWrappingMode = TextWrappingModes.NoWrap;
+            nextGoal.enableAutoSizing = true;
+            nextGoal.fontSizeMin = 26;
+            nextGoal.fontSizeMax = 38;
+            var nextProgress = Text(Region(nextAction, "Next Progress", .035f, .07f, .65f, .37f), "Earn ₹30", 32,
+                Muted, TextAlignmentOptions.MidlineLeft);
+            nextProgress.textWrappingMode = TextWrappingModes.NoWrap;
+            var nextProductsButton = Button(Region(nextAction, "Next Products Button", .69f, .12f, .975f, .88f), Blue);
+            Text(Fill(nextProductsButton.transform, "Label"), "Tap to earn", 33,
+                Color.white, TextAlignmentOptions.Center, true);
+
+            var notice = Region(safe, "Notice", .07f, 0, .93f, 0);
+            notice.offsetMin = new Vector2(0, 165);
+            notice.offsetMax = new Vector2(0, 255);
             var noticeCanvas = notice.gameObject.AddComponent<Canvas>();
             noticeCanvas.overrideSorting = true;
             noticeCanvas.sortingOrder = 16;
@@ -245,7 +282,10 @@ namespace RocketRaja.EditorTools
             data.FindProperty("homePanel").objectReferenceValue = panel.gameObject;
             data.FindProperty("stallTap").objectReferenceValue = tap;
             data.FindProperty("settingsButton").objectReferenceValue = settings;
+            data.FindProperty("inspectSignButton").objectReferenceValue = inspectSign;
             Assign(data, "navigationButtons", navButtons);
+            Assign(data, "navigationLabels", navLabels);
+            Assign(data, "navigationIndicators", navIndicators);
             Assign(data, "shelfButtons", shelfButtons);
             Assign(data, "skillButtons", skillButtons);
             data.FindProperty("sponsorButton").objectReferenceValue = sponsorButton;
@@ -261,6 +301,10 @@ namespace RocketRaja.EditorTools
             data.FindProperty("tapLabel").objectReferenceValue = tapLabel;
             data.FindProperty("sponsorLabel").objectReferenceValue = sponsorLabel;
             data.FindProperty("tapHintLabel").objectReferenceValue = hintText;
+            data.FindProperty("nextActionLayout").objectReferenceValue = nextAction.GetComponent<LayoutElement>();
+            data.FindProperty("nextGoalLabel").objectReferenceValue = nextGoal;
+            data.FindProperty("nextProgressLabel").objectReferenceValue = nextProgress;
+            data.FindProperty("nextProductsButton").objectReferenceValue = nextProductsButton;
             data.FindProperty("counterLabel").objectReferenceValue = shopSign;
             data.FindProperty("noticeLabel").objectReferenceValue = noticeText;
             data.FindProperty("noticeRoot").objectReferenceValue = notice.gameObject;

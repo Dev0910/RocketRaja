@@ -51,10 +51,10 @@ namespace RocketRaja.EditorTools
 
             var header = Top(panel, "Header", 144);
             Image(header, IvoryColor);
-            Text(Stretch(header, "Title", 28, 170, 15, 10), "Player", 58,
+            Text(Stretch(header, "Title", 28, 300, 15, 10), "Player", 58,
                 Ink, TextAlignmentOptions.MidlineLeft, true);
-            var collapse = InvisibleButton(Stretch(header, "collapse-Player", 905, 20, 15, 12));
-            Text(Fill(collapse.transform, "Collapse Icon"), "v", 63, Ink, TextAlignmentOptions.Center, true);
+            var collapse = InvisibleButton(Stretch(header, "collapse-Player", 800, 20, 5, 5));
+            Text(Fill(collapse.transform, "Collapse Icon"), "← Shop", 42, Ink, TextAlignmentOptions.Center, true);
             Image(Bottom(header, "Double Rule", 5), Hex("255883"));
 
             var body = Stretch(panel, "Scroll Body", 0, 0, 0, 144);
@@ -92,9 +92,11 @@ namespace RocketRaja.EditorTools
             Icon(Stretch(skills.transform, "Skills Icon", 45, 45, 80, 12), skillsIcon);
             Text(Stretch(skills.transform, "Skills Label", 8, 8, 4, 112), "Skills", 32,
                 Ink, TextAlignmentOptions.Center, true);
-            var quantity = Button(Region(toolbar, "buy-quantity", .70f, .10f, .99f, .92f), Blue);
-            var quantityText = Text(Fill(quantity.transform, "Quantity Label"), "Buy ×1", 41,
-                Color.white, TextAlignmentOptions.Center, true);
+            var quantity = Button(Region(toolbar, "buy-quantity", .70f, .10f, .99f, .92f), Sand);
+            var quantityText = Text(Stretch(quantity.transform, "Quantity Label", 8, 43, 4, 4), "Qty ×1", 40,
+                Ink, TextAlignmentOptions.Center, true);
+            Text(Stretch(quantity.transform, "Quantity Arrow", 247, 10, 4, 4), "v", 38,
+                Ink, TextAlignmentOptions.Center, true);
 
             var tap = FramedCard(content, "Salesmanship", 175);
             Icon(Stretch(tap, "Tap Icon", 35, 855, 28, 28), tapIcon);
@@ -150,20 +152,24 @@ namespace RocketRaja.EditorTools
             menu.anchorMin = menu.anchorMax = new Vector2(1, 1);
             menu.pivot = new Vector2(1, 1);
             menu.anchoredPosition = new Vector2(-35, -150);
-            menu.sizeDelta = new Vector2(305, 470);
+            menu.sizeDelta = new Vector2(365, 568);
             Image(menu, IvoryColor, true);
             var choices = new Button[4];
-            string[] labels = { "Buy ×1", "Buy ×10", "Buy ×100", "Buy MAX" };
+            string[] objectNames = { "Buy ×1", "Buy ×10", "Buy ×100", "Buy MAX" };
+            string[] labels = { "×1", "×10", "×100", "Max affordable" };
             for (int i = 0; i < 4; i++)
             {
-                var rect = New("Quantity " + labels[i], menu).GetComponent<RectTransform>();
+                var rect = New("Quantity " + objectNames[i], menu).GetComponent<RectTransform>();
                 rect.anchorMin = new Vector2(0, 1);
                 rect.anchorMax = new Vector2(1, 1);
                 rect.pivot = new Vector2(.5f, 1);
-                rect.offsetMin = new Vector2(12, -(20 + (i + 1) * 108));
-                rect.offsetMax = new Vector2(-12, -(20 + i * 108));
-                choices[i] = Button(rect, Blue);
-                Text(Fill(rect, "Label"), labels[i], 32, Color.white, TextAlignmentOptions.Center, true);
+                rect.offsetMin = new Vector2(12, -(20 + (i + 1) * 132));
+                rect.offsetMax = new Vector2(-12, -(20 + i * 132));
+                choices[i] = Button(rect, Sand);
+                var mark = Image(Stretch(rect, "Selected Mark", 17, 309, 36, 36), Ink);
+                mark.gameObject.SetActive(i == 0);
+                Text(Stretch(rect, "Label", 38, 12, 6, 6), labels[i] + (i == 0 ? "\nSelected" : ""), 33,
+                    Ink, TextAlignmentOptions.Center, true);
             }
             menu.gameObject.SetActive(false);
 
@@ -191,6 +197,8 @@ namespace RocketRaja.EditorTools
             Assign(serialized, "upgradeEffects", effects);
             Assign(serialized, "upgradePrices", prices);
             serialized.ApplyModifiedPropertiesWithoutUndo();
+            UiQuantityAuthoring.Apply(root);
+            UiCompactTypography.Apply(root);
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();

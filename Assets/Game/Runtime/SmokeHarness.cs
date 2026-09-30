@@ -90,9 +90,12 @@ namespace RocketRaja
             if (motionStage == "celebration") { yield return HtmlCelebrationChecks(); Finish(); yield break; }
             if (motionStage == "ambient") { yield return HtmlAmbientChecks(); Finish(); yield break; }
             if (motionStage == "ui-bugs") { yield return UiBugChecks(); Finish(); yield break; }
+            if (motionStage == "store-glyphs") { yield return StoreNameGlyphChecks(); Finish(); yield break; }
+            if (motionStage == "detail-purchase") { yield return DetailPurchaseChecks(); Finish(); yield break; }
             if (motionStage == "max-purchase") { yield return MaxPurchaseChecks(); Finish(); yield break; }
             if (motionStage == "milestones") { yield return MilestoneChecks(); Finish(); yield break; }
             if (motionStage == "unlockables") { yield return UnlockableChecks(); Finish(); yield break; }
+            if (motionStage == "quality") { yield return QualityChecks(); Finish(); yield break; }
 #endif
             var e = game.Engine;
             e.State.reducedMotion = true;
@@ -308,9 +311,9 @@ namespace RocketRaja
             game.View.Switch("Products");
             ResizeForReview(540, 900);
             yield return new WaitForSecondsRealtime(.5f);
-            float fittedTop = -ImportedPanelFit.WorldHeight(((RectTransform)productPanel.parent).rect.height);
+            float fittedTop = -ImportedPanelFit.BrowsePanelTop(((RectTransform)productPanel.parent).rect.height);
             Check(Mathf.Abs(productPanel.offsetMax.y - fittedTop) < .1f,
-                "Resize during panel animation preserves the fitted layout position");
+                "Resize during panel animation preserves the browsing layout position");
 
             game.View.ShowSkills();
             state.reducedMotion = true;

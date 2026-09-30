@@ -76,7 +76,7 @@ namespace RocketRaja
                     "5% shorter skill cooldowns per rank";
                 purchaseLabels[i].text = rank >= 5 ? "Mastered" :
                     cost + " reputation\nImprove perk";
-                purchaseButtons[i].interactable = rank < 5 && state.reputation >= cost;
+                purchaseButtons[i].interactable = engine.CanMutate && rank < 5 && state.reputation >= cost;
             }
         }
 

@@ -1,0 +1,169 @@
+PASS Home Screen has a transition profile
+PASS Home Screen every saved graphic has a renderer
+PASS Home Screen all controls have saved feedback references
+PASS Home effect hosts are preauthored exactly once
+PASS Three saved cooldown overlays and state rings
+PASS Keeper preserves the protected stretched illustration offsets
+PASS Home Screen/Home Panel saved motion references
+PASS Home Panel HTML timings
+PASS Home Panel opens from transparent
+PASS Home Panel HTML travel distance
+PASS Home Panel opening restores authored geometry
+PASS Home Panel directional panel has no scaling
+PASS Home Panel exit becomes transparent
+PASS Home Screen/Notice saved motion references
+PASS Notice HTML timings
+PASS Notice opens from transparent
+PASS Notice HTML travel distance
+PASS Notice opening restores authored geometry
+PASS Notice exit becomes transparent
+PASS Legacy Screen has a transition profile
+PASS Legacy Screen every saved graphic has a renderer
+PASS Legacy Screen all controls have saved feedback references
+PASS Legacy Screen/Legacy Screen saved motion references
+PASS Legacy Screen HTML timings
+PASS Legacy Screen opens from transparent
+PASS Legacy Screen HTML travel distance
+PASS Legacy Screen opening restores authored geometry
+PASS Legacy Screen directional panel has no scaling
+PASS Legacy Screen exit becomes transparent
+PASS Offline Screen has a transition profile
+PASS Offline Screen every saved graphic has a renderer
+PASS Offline Screen all controls have saved feedback references
+PASS Offline Screen/Offline Screen saved motion references
+PASS Offline Screen HTML timings
+PASS Offline Screen opens from transparent
+PASS Offline Screen HTML travel distance
+PASS Offline Screen opening restores authored geometry
+PASS Offline Screen exit becomes transparent
+PASS Offline Screen/offline-message saved motion references
+PASS offline-message HTML timings
+PASS offline-message opens from transparent
+PASS offline-message HTML travel distance
+PASS offline-message opening restores authored geometry
+PASS offline-message exit becomes transparent
+PASS Player Screen has a transition profile
+PASS Player Screen every saved graphic has a renderer
+PASS Player Screen all controls have saved feedback references
+PASS Player Screen/Player Screen saved motion references
+PASS Player Screen HTML timings
+PASS Player Screen opens from transparent
+PASS Player Screen HTML travel distance
+PASS Player Screen opening restores authored geometry
+PASS Player Screen directional panel has no scaling
+PASS Player Screen exit becomes transparent
+PASS Player Screen/Quantity Menu saved motion references
+PASS Quantity Menu HTML timings
+PASS Quantity Menu opens from transparent
+PASS Quantity Menu HTML travel distance
+PASS Quantity Menu opening restores authored geometry
+PASS Quantity Menu exit becomes transparent
+PASS Prestige Screen has a transition profile
+PASS Prestige Screen every saved graphic has a renderer
+PASS Prestige Screen all controls have saved feedback references
+PASS Prestige Screen/Prestige Screen saved motion references
+PASS Prestige Screen HTML timings
+PASS Prestige Screen opens from transparent
+PASS Prestige Screen HTML travel distance
+PASS Prestige Screen opening restores authored geometry
+PASS Prestige Screen exit becomes transparent
+PASS Prestige Screen/prestige-failure saved motion references
+PASS prestige-failure HTML timings
+PASS prestige-failure opens from transparent
+PASS prestige-failure HTML travel distance
+PASS prestige-failure opening restores authored geometry
+PASS prestige-failure exit becomes transparent
+PASS Privacy Screen has a transition profile
+PASS Privacy Screen every saved graphic has a renderer
+PASS Privacy Screen all controls have saved feedback references
+PASS Privacy Screen/Privacy Screen saved motion references
+PASS Privacy Screen HTML timings
+PASS Privacy Screen opens from transparent
+PASS Privacy Screen HTML travel distance
+PASS Privacy Screen opening restores authored geometry
+PASS Privacy Screen exit becomes transparent
+PASS Product Detail Screen has a transition profile
+PASS Product Detail Screen every saved graphic has a renderer
+PASS Product Detail Screen all controls have saved feedback references
+PASS Product Detail Screen/Product Detail Screen saved motion references
+PASS Product Detail Screen HTML timings
+PASS Product Detail Screen opens from transparent
+PASS Product Detail Screen HTML travel distance
+PASS Product Detail Screen opening restores authored geometry
+PASS Product Detail Screen exit becomes transparent
+PASS Products Screen has a transition profile
+PASS Products Screen every saved graphic has a renderer
+PASS Products Screen all controls have saved feedback references
+PASS Products Screen/Products Screen saved motion references
+PASS Products Screen HTML timings
+PASS Products Screen opens from transparent
+PASS Products Screen HTML travel distance
+PASS Products Screen opening restores authored geometry
+PASS Products Screen directional panel has no scaling
+PASS Products Screen exit becomes transparent
+PASS Products Screen/Quantity Menu saved motion references
+PASS Quantity Menu HTML timings
+PASS Quantity Menu opens from transparent
+PASS Quantity Menu HTML travel distance
+PASS Quantity Menu opening restores authored geometry
+PASS Quantity Menu exit becomes transparent
+PASS Save Recovery Screen has a transition profile
+PASS Save Recovery Screen every saved graphic has a renderer
+PASS Save Recovery Screen all controls have saved feedback references
+PASS Save Recovery Screen/Save Recovery Screen saved motion references
+PASS Save Recovery Screen HTML timings
+PASS Save Recovery Screen opens from transparent
+PASS Save Recovery Screen HTML travel distance
+PASS Save Recovery Screen opening restores authored geometry
+PASS Save Recovery Screen exit becomes transparent
+PASS Settings Screen has a transition profile
+PASS Settings Screen every saved graphic has a renderer
+PASS Settings Screen all controls have saved feedback references
+PASS Settings Screen/Settings Screen saved motion references
+PASS Settings Screen HTML timings
+PASS Settings Screen opens from transparent
+PASS Settings Screen HTML travel distance
+PASS Settings Screen opening restores authored geometry
+PASS Settings Screen exit becomes transparent
+PASS Skills Screen has a transition profile
+PASS Skills Screen every saved graphic has a renderer
+PASS Skills Screen all controls have saved feedback references
+PASS Skills Screen/Skills Screen saved motion references
+PASS Skills Screen HTML timings
+PASS Skills Screen opens from transparent
+PASS Skills Screen HTML travel distance
+PASS Skills Screen opening restores authored geometry
+PASS Skills Screen exit becomes transparent
+PASS Sponsor Screen has a transition profile
+PASS Sponsor Screen every saved graphic has a renderer
+PASS Sponsor Screen all controls have saved feedback references
+PASS Sponsor Screen/Sponsor Screen saved motion references
+PASS Sponsor Screen HTML timings
+PASS Sponsor Screen opens from transparent
+PASS Sponsor Screen HTML travel distance
+PASS Sponsor Screen opening restores authored geometry
+PASS Sponsor Screen exit becomes transparent
+PASS Sponsor Screen/sponsor-message saved motion references
+PASS sponsor-message HTML timings
+PASS sponsor-message opens from transparent
+PASS sponsor-message HTML travel distance
+PASS sponsor-message opening restores authored geometry
+PASS sponsor-message exit becomes transparent
+PASS Statistics Screen has a transition profile
+PASS Statistics Screen every saved graphic has a renderer
+PASS Statistics Screen all controls have saved feedback references
+PASS Statistics Screen/Statistics Screen saved motion references
+PASS Statistics Screen HTML timings
+PASS Statistics Screen opens from transparent
+PASS Statistics Screen HTML travel distance
+PASS Statistics Screen opening restores authored geometry
+PASS Statistics Screen exit becomes transparent
+PASS Store Name Screen has a transition profile
+PASS Store Name Screen every saved graphic has a renderer
+PASS Store Name Screen all controls have saved feedback references
+PASS Store Name Screen/Store Name Screen saved motion references
+PASS Store Name Screen HTML timings
+PASS Store Name Screen opens from transparent
+PASS Store Name Screen HTML travel distance
+PASS Store Name Screen opening restores authored geometry
+PASS Store Name Screen exit becomes transparent

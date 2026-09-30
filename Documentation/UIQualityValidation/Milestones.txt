@@ -1,0 +1,922 @@
+PASS Main scene booted
+PASS Product-specific reward preview 0/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 0
+PASS Immediate interval reset product 0 level 0 reduced True
+PASS Detail interval product 0 level 0
+PASS Products interval matches detail 0/0
+PASS Product-specific reward preview 0/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 1 reduced True
+PASS Detail interval product 0 level 1
+PASS Products interval matches detail 0/1
+PASS Product-specific reward preview 0/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 24
+PASS Products interval matches detail 0/24
+PASS Product-specific reward preview 0/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 25 reduced True
+PASS Detail interval product 0 level 25
+PASS Products interval matches detail 0/25
+PASS Product-specific reward preview 0/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 49
+PASS Products interval matches detail 0/49
+PASS Product-specific reward preview 0/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 50 reduced True
+PASS Detail interval product 0 level 50
+PASS Products interval matches detail 0/50
+PASS Product-specific reward preview 0/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 75
+PASS Products interval matches detail 0/75
+PASS Product-specific reward preview 0/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 99
+PASS Products interval matches detail 0/99
+PASS Product-specific reward preview 0/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 100 reduced True
+PASS Detail interval product 0 level 100
+PASS Products interval matches detail 0/100
+PASS Product-specific reward preview 0/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 199
+PASS Products interval matches detail 0/199
+PASS Product-specific reward preview 0/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 200 reduced True
+PASS Detail interval product 0 level 200
+PASS Products interval matches detail 0/200
+PASS Product-specific reward preview 0/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 0
+PASS Immediate interval reset product 0 level 100000 reduced True
+PASS Detail interval product 0 level 100000
+PASS Products interval matches detail 0/100000
+PASS Product-specific reward preview 1/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 1
+PASS Immediate interval reset product 1 level 0 reduced True
+PASS Detail interval product 1 level 0
+PASS Products interval matches detail 1/0
+PASS Product-specific reward preview 1/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 1 reduced True
+PASS Detail interval product 1 level 1
+PASS Products interval matches detail 1/1
+PASS Product-specific reward preview 1/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 24
+PASS Products interval matches detail 1/24
+PASS Product-specific reward preview 1/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 25 reduced True
+PASS Detail interval product 1 level 25
+PASS Products interval matches detail 1/25
+PASS Product-specific reward preview 1/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 49
+PASS Products interval matches detail 1/49
+PASS Product-specific reward preview 1/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 50 reduced True
+PASS Detail interval product 1 level 50
+PASS Products interval matches detail 1/50
+PASS Product-specific reward preview 1/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 75
+PASS Products interval matches detail 1/75
+PASS Product-specific reward preview 1/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 99
+PASS Products interval matches detail 1/99
+PASS Product-specific reward preview 1/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 100 reduced True
+PASS Detail interval product 1 level 100
+PASS Products interval matches detail 1/100
+PASS Product-specific reward preview 1/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 199
+PASS Products interval matches detail 1/199
+PASS Product-specific reward preview 1/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 200 reduced True
+PASS Detail interval product 1 level 200
+PASS Products interval matches detail 1/200
+PASS Product-specific reward preview 1/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 1
+PASS Immediate interval reset product 1 level 100000 reduced True
+PASS Detail interval product 1 level 100000
+PASS Products interval matches detail 1/100000
+PASS Product-specific reward preview 2/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 2
+PASS Immediate interval reset product 2 level 0 reduced True
+PASS Detail interval product 2 level 0
+PASS Products interval matches detail 2/0
+PASS Product-specific reward preview 2/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 1 reduced True
+PASS Detail interval product 2 level 1
+PASS Products interval matches detail 2/1
+PASS Product-specific reward preview 2/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 24
+PASS Products interval matches detail 2/24
+PASS Product-specific reward preview 2/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 25 reduced True
+PASS Detail interval product 2 level 25
+PASS Products interval matches detail 2/25
+PASS Product-specific reward preview 2/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 49
+PASS Products interval matches detail 2/49
+PASS Product-specific reward preview 2/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 50 reduced True
+PASS Detail interval product 2 level 50
+PASS Products interval matches detail 2/50
+PASS Product-specific reward preview 2/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 75
+PASS Products interval matches detail 2/75
+PASS Product-specific reward preview 2/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 99
+PASS Products interval matches detail 2/99
+PASS Product-specific reward preview 2/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 100 reduced True
+PASS Detail interval product 2 level 100
+PASS Products interval matches detail 2/100
+PASS Product-specific reward preview 2/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 199
+PASS Products interval matches detail 2/199
+PASS Product-specific reward preview 2/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 200 reduced True
+PASS Detail interval product 2 level 200
+PASS Products interval matches detail 2/200
+PASS Product-specific reward preview 2/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 2
+PASS Immediate interval reset product 2 level 100000 reduced True
+PASS Detail interval product 2 level 100000
+PASS Products interval matches detail 2/100000
+PASS Product-specific reward preview 3/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 3
+PASS Immediate interval reset product 3 level 0 reduced True
+PASS Detail interval product 3 level 0
+PASS Products interval matches detail 3/0
+PASS Product-specific reward preview 3/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 1 reduced True
+PASS Detail interval product 3 level 1
+PASS Products interval matches detail 3/1
+PASS Product-specific reward preview 3/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 24
+PASS Products interval matches detail 3/24
+PASS Product-specific reward preview 3/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 25 reduced True
+PASS Detail interval product 3 level 25
+PASS Products interval matches detail 3/25
+PASS Product-specific reward preview 3/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 49
+PASS Products interval matches detail 3/49
+PASS Product-specific reward preview 3/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 50 reduced True
+PASS Detail interval product 3 level 50
+PASS Products interval matches detail 3/50
+PASS Product-specific reward preview 3/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 75
+PASS Products interval matches detail 3/75
+PASS Product-specific reward preview 3/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 99
+PASS Products interval matches detail 3/99
+PASS Product-specific reward preview 3/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 100 reduced True
+PASS Detail interval product 3 level 100
+PASS Products interval matches detail 3/100
+PASS Product-specific reward preview 3/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 199
+PASS Products interval matches detail 3/199
+PASS Product-specific reward preview 3/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 200 reduced True
+PASS Detail interval product 3 level 200
+PASS Products interval matches detail 3/200
+PASS Product-specific reward preview 3/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 3
+PASS Immediate interval reset product 3 level 100000 reduced True
+PASS Detail interval product 3 level 100000
+PASS Products interval matches detail 3/100000
+PASS Product-specific reward preview 4/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 4
+PASS Immediate interval reset product 4 level 0 reduced True
+PASS Detail interval product 4 level 0
+PASS Products interval matches detail 4/0
+PASS Product-specific reward preview 4/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 1 reduced True
+PASS Detail interval product 4 level 1
+PASS Products interval matches detail 4/1
+PASS Product-specific reward preview 4/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 24
+PASS Products interval matches detail 4/24
+PASS Product-specific reward preview 4/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 25 reduced True
+PASS Detail interval product 4 level 25
+PASS Products interval matches detail 4/25
+PASS Product-specific reward preview 4/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 49
+PASS Products interval matches detail 4/49
+PASS Product-specific reward preview 4/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 50 reduced True
+PASS Detail interval product 4 level 50
+PASS Products interval matches detail 4/50
+PASS Product-specific reward preview 4/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 75
+PASS Products interval matches detail 4/75
+PASS Product-specific reward preview 4/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 99
+PASS Products interval matches detail 4/99
+PASS Product-specific reward preview 4/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 100 reduced True
+PASS Detail interval product 4 level 100
+PASS Products interval matches detail 4/100
+PASS Product-specific reward preview 4/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 199
+PASS Products interval matches detail 4/199
+PASS Product-specific reward preview 4/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 200 reduced True
+PASS Detail interval product 4 level 200
+PASS Products interval matches detail 4/200
+PASS Product-specific reward preview 4/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 4
+PASS Immediate interval reset product 4 level 100000 reduced True
+PASS Detail interval product 4 level 100000
+PASS Products interval matches detail 4/100000
+PASS Product-specific reward preview 5/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 5
+PASS Immediate interval reset product 5 level 0 reduced True
+PASS Detail interval product 5 level 0
+PASS Products interval matches detail 5/0
+PASS Product-specific reward preview 5/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 1 reduced True
+PASS Detail interval product 5 level 1
+PASS Products interval matches detail 5/1
+PASS Product-specific reward preview 5/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 24
+PASS Products interval matches detail 5/24
+PASS Product-specific reward preview 5/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 25 reduced True
+PASS Detail interval product 5 level 25
+PASS Products interval matches detail 5/25
+PASS Product-specific reward preview 5/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 49
+PASS Products interval matches detail 5/49
+PASS Product-specific reward preview 5/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 50 reduced True
+PASS Detail interval product 5 level 50
+PASS Products interval matches detail 5/50
+PASS Product-specific reward preview 5/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 75
+PASS Products interval matches detail 5/75
+PASS Product-specific reward preview 5/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 99
+PASS Products interval matches detail 5/99
+PASS Product-specific reward preview 5/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 100 reduced True
+PASS Detail interval product 5 level 100
+PASS Products interval matches detail 5/100
+PASS Product-specific reward preview 5/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 199
+PASS Products interval matches detail 5/199
+PASS Product-specific reward preview 5/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 200 reduced True
+PASS Detail interval product 5 level 200
+PASS Products interval matches detail 5/200
+PASS Product-specific reward preview 5/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 5
+PASS Immediate interval reset product 5 level 100000 reduced True
+PASS Detail interval product 5 level 100000
+PASS Products interval matches detail 5/100000
+PASS Product-specific reward preview 6/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 6
+PASS Immediate interval reset product 6 level 0 reduced True
+PASS Detail interval product 6 level 0
+PASS Products interval matches detail 6/0
+PASS Product-specific reward preview 6/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 1 reduced True
+PASS Detail interval product 6 level 1
+PASS Products interval matches detail 6/1
+PASS Product-specific reward preview 6/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 24
+PASS Products interval matches detail 6/24
+PASS Product-specific reward preview 6/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 25 reduced True
+PASS Detail interval product 6 level 25
+PASS Products interval matches detail 6/25
+PASS Product-specific reward preview 6/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 49
+PASS Products interval matches detail 6/49
+PASS Product-specific reward preview 6/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 50 reduced True
+PASS Detail interval product 6 level 50
+PASS Products interval matches detail 6/50
+PASS Product-specific reward preview 6/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 75
+PASS Products interval matches detail 6/75
+PASS Product-specific reward preview 6/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 99
+PASS Products interval matches detail 6/99
+PASS Product-specific reward preview 6/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 100 reduced True
+PASS Detail interval product 6 level 100
+PASS Products interval matches detail 6/100
+PASS Product-specific reward preview 6/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 199
+PASS Products interval matches detail 6/199
+PASS Product-specific reward preview 6/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 200 reduced True
+PASS Detail interval product 6 level 200
+PASS Products interval matches detail 6/200
+PASS Product-specific reward preview 6/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 6
+PASS Immediate interval reset product 6 level 100000 reduced True
+PASS Detail interval product 6 level 100000
+PASS Products interval matches detail 6/100000
+PASS Product-specific reward preview 7/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 7
+PASS Immediate interval reset product 7 level 0 reduced True
+PASS Detail interval product 7 level 0
+PASS Products interval matches detail 7/0
+PASS Product-specific reward preview 7/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 1 reduced True
+PASS Detail interval product 7 level 1
+PASS Products interval matches detail 7/1
+PASS Product-specific reward preview 7/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 24
+PASS Products interval matches detail 7/24
+PASS Product-specific reward preview 7/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 25 reduced True
+PASS Detail interval product 7 level 25
+PASS Products interval matches detail 7/25
+PASS Product-specific reward preview 7/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 49
+PASS Products interval matches detail 7/49
+PASS Product-specific reward preview 7/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 50 reduced True
+PASS Detail interval product 7 level 50
+PASS Products interval matches detail 7/50
+PASS Product-specific reward preview 7/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 75
+PASS Products interval matches detail 7/75
+PASS Product-specific reward preview 7/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 99
+PASS Products interval matches detail 7/99
+PASS Product-specific reward preview 7/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 100 reduced True
+PASS Detail interval product 7 level 100
+PASS Products interval matches detail 7/100
+PASS Product-specific reward preview 7/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 199
+PASS Products interval matches detail 7/199
+PASS Product-specific reward preview 7/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 200 reduced True
+PASS Detail interval product 7 level 200
+PASS Products interval matches detail 7/200
+PASS Product-specific reward preview 7/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 7
+PASS Immediate interval reset product 7 level 100000 reduced True
+PASS Detail interval product 7 level 100000
+PASS Products interval matches detail 7/100000
+PASS Product-specific reward preview 0/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 0
+PASS Immediate interval reset product 0 level 0 reduced False
+PASS Detail interval product 0 level 0
+PASS Products interval matches detail 0/0
+PASS Product-specific reward preview 0/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 1 reduced False
+PASS Detail interval product 0 level 1
+PASS Products interval matches detail 0/1
+PASS Product-specific reward preview 0/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 24
+PASS Products interval matches detail 0/24
+PASS Product-specific reward preview 0/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 25 reduced False
+PASS Detail interval product 0 level 25
+PASS Products interval matches detail 0/25
+PASS Product-specific reward preview 0/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 49
+PASS Products interval matches detail 0/49
+PASS Product-specific reward preview 0/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 50 reduced False
+PASS Detail interval product 0 level 50
+PASS Products interval matches detail 0/50
+PASS Product-specific reward preview 0/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 75
+PASS Products interval matches detail 0/75
+PASS Product-specific reward preview 0/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 99
+PASS Products interval matches detail 0/99
+PASS Product-specific reward preview 0/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 100 reduced False
+PASS Detail interval product 0 level 100
+PASS Products interval matches detail 0/100
+PASS Product-specific reward preview 0/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 0 level 199
+PASS Products interval matches detail 0/199
+PASS Product-specific reward preview 0/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 0 level 200 reduced False
+PASS Detail interval product 0 level 200
+PASS Products interval matches detail 0/200
+PASS Product-specific reward preview 0/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 0
+PASS Immediate interval reset product 0 level 100000 reduced False
+PASS Detail interval product 0 level 100000
+PASS Products interval matches detail 0/100000
+PASS Product-specific reward preview 1/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 1
+PASS Immediate interval reset product 1 level 0 reduced False
+PASS Detail interval product 1 level 0
+PASS Products interval matches detail 1/0
+PASS Product-specific reward preview 1/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 1 reduced False
+PASS Detail interval product 1 level 1
+PASS Products interval matches detail 1/1
+PASS Product-specific reward preview 1/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 24
+PASS Products interval matches detail 1/24
+PASS Product-specific reward preview 1/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 25 reduced False
+PASS Detail interval product 1 level 25
+PASS Products interval matches detail 1/25
+PASS Product-specific reward preview 1/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 49
+PASS Products interval matches detail 1/49
+PASS Product-specific reward preview 1/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 50 reduced False
+PASS Detail interval product 1 level 50
+PASS Products interval matches detail 1/50
+PASS Product-specific reward preview 1/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 75
+PASS Products interval matches detail 1/75
+PASS Product-specific reward preview 1/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 99
+PASS Products interval matches detail 1/99
+PASS Product-specific reward preview 1/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 100 reduced False
+PASS Detail interval product 1 level 100
+PASS Products interval matches detail 1/100
+PASS Product-specific reward preview 1/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 1 level 199
+PASS Products interval matches detail 1/199
+PASS Product-specific reward preview 1/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 1 level 200 reduced False
+PASS Detail interval product 1 level 200
+PASS Products interval matches detail 1/200
+PASS Product-specific reward preview 1/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 1
+PASS Immediate interval reset product 1 level 100000 reduced False
+PASS Detail interval product 1 level 100000
+PASS Products interval matches detail 1/100000
+PASS Product-specific reward preview 2/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 2
+PASS Immediate interval reset product 2 level 0 reduced False
+PASS Detail interval product 2 level 0
+PASS Products interval matches detail 2/0
+PASS Product-specific reward preview 2/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 1 reduced False
+PASS Detail interval product 2 level 1
+PASS Products interval matches detail 2/1
+PASS Product-specific reward preview 2/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 24
+PASS Products interval matches detail 2/24
+PASS Product-specific reward preview 2/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 25 reduced False
+PASS Detail interval product 2 level 25
+PASS Products interval matches detail 2/25
+PASS Product-specific reward preview 2/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 49
+PASS Products interval matches detail 2/49
+PASS Product-specific reward preview 2/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 50 reduced False
+PASS Detail interval product 2 level 50
+PASS Products interval matches detail 2/50
+PASS Product-specific reward preview 2/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 75
+PASS Products interval matches detail 2/75
+PASS Product-specific reward preview 2/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 99
+PASS Products interval matches detail 2/99
+PASS Product-specific reward preview 2/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 100 reduced False
+PASS Detail interval product 2 level 100
+PASS Products interval matches detail 2/100
+PASS Product-specific reward preview 2/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 2 level 199
+PASS Products interval matches detail 2/199
+PASS Product-specific reward preview 2/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 2 level 200 reduced False
+PASS Detail interval product 2 level 200
+PASS Products interval matches detail 2/200
+PASS Product-specific reward preview 2/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 2
+PASS Immediate interval reset product 2 level 100000 reduced False
+PASS Detail interval product 2 level 100000
+PASS Products interval matches detail 2/100000
+PASS Product-specific reward preview 3/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 3
+PASS Immediate interval reset product 3 level 0 reduced False
+PASS Detail interval product 3 level 0
+PASS Products interval matches detail 3/0
+PASS Product-specific reward preview 3/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 1 reduced False
+PASS Detail interval product 3 level 1
+PASS Products interval matches detail 3/1
+PASS Product-specific reward preview 3/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 24
+PASS Products interval matches detail 3/24
+PASS Product-specific reward preview 3/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 25 reduced False
+PASS Detail interval product 3 level 25
+PASS Products interval matches detail 3/25
+PASS Product-specific reward preview 3/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 49
+PASS Products interval matches detail 3/49
+PASS Product-specific reward preview 3/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 50 reduced False
+PASS Detail interval product 3 level 50
+PASS Products interval matches detail 3/50
+PASS Product-specific reward preview 3/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 75
+PASS Products interval matches detail 3/75
+PASS Product-specific reward preview 3/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 99
+PASS Products interval matches detail 3/99
+PASS Product-specific reward preview 3/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 100 reduced False
+PASS Detail interval product 3 level 100
+PASS Products interval matches detail 3/100
+PASS Product-specific reward preview 3/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 3 level 199
+PASS Products interval matches detail 3/199
+PASS Product-specific reward preview 3/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 3 level 200 reduced False
+PASS Detail interval product 3 level 200
+PASS Products interval matches detail 3/200
+PASS Product-specific reward preview 3/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 3
+PASS Immediate interval reset product 3 level 100000 reduced False
+PASS Detail interval product 3 level 100000
+PASS Products interval matches detail 3/100000
+PASS Product-specific reward preview 4/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 4
+PASS Immediate interval reset product 4 level 0 reduced False
+PASS Detail interval product 4 level 0
+PASS Products interval matches detail 4/0
+PASS Product-specific reward preview 4/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 1 reduced False
+PASS Detail interval product 4 level 1
+PASS Products interval matches detail 4/1
+PASS Product-specific reward preview 4/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 24
+PASS Products interval matches detail 4/24
+PASS Product-specific reward preview 4/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 25 reduced False
+PASS Detail interval product 4 level 25
+PASS Products interval matches detail 4/25
+PASS Product-specific reward preview 4/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 49
+PASS Products interval matches detail 4/49
+PASS Product-specific reward preview 4/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 50 reduced False
+PASS Detail interval product 4 level 50
+PASS Products interval matches detail 4/50
+PASS Product-specific reward preview 4/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 75
+PASS Products interval matches detail 4/75
+PASS Product-specific reward preview 4/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 99
+PASS Products interval matches detail 4/99
+PASS Product-specific reward preview 4/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 100 reduced False
+PASS Detail interval product 4 level 100
+PASS Products interval matches detail 4/100
+PASS Product-specific reward preview 4/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 4 level 199
+PASS Products interval matches detail 4/199
+PASS Product-specific reward preview 4/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 4 level 200 reduced False
+PASS Detail interval product 4 level 200
+PASS Products interval matches detail 4/200
+PASS Product-specific reward preview 4/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 4
+PASS Immediate interval reset product 4 level 100000 reduced False
+PASS Detail interval product 4 level 100000
+PASS Products interval matches detail 4/100000
+PASS Product-specific reward preview 5/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 5
+PASS Immediate interval reset product 5 level 0 reduced False
+PASS Detail interval product 5 level 0
+PASS Products interval matches detail 5/0
+PASS Product-specific reward preview 5/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 1 reduced False
+PASS Detail interval product 5 level 1
+PASS Products interval matches detail 5/1
+PASS Product-specific reward preview 5/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 24
+PASS Products interval matches detail 5/24
+PASS Product-specific reward preview 5/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 25 reduced False
+PASS Detail interval product 5 level 25
+PASS Products interval matches detail 5/25
+PASS Product-specific reward preview 5/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 49
+PASS Products interval matches detail 5/49
+PASS Product-specific reward preview 5/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 50 reduced False
+PASS Detail interval product 5 level 50
+PASS Products interval matches detail 5/50
+PASS Product-specific reward preview 5/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 75
+PASS Products interval matches detail 5/75
+PASS Product-specific reward preview 5/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 99
+PASS Products interval matches detail 5/99
+PASS Product-specific reward preview 5/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 100 reduced False
+PASS Detail interval product 5 level 100
+PASS Products interval matches detail 5/100
+PASS Product-specific reward preview 5/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 5 level 199
+PASS Products interval matches detail 5/199
+PASS Product-specific reward preview 5/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 5 level 200 reduced False
+PASS Detail interval product 5 level 200
+PASS Products interval matches detail 5/200
+PASS Product-specific reward preview 5/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 5
+PASS Immediate interval reset product 5 level 100000 reduced False
+PASS Detail interval product 5 level 100000
+PASS Products interval matches detail 5/100000
+PASS Product-specific reward preview 6/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 6
+PASS Immediate interval reset product 6 level 0 reduced False
+PASS Detail interval product 6 level 0
+PASS Products interval matches detail 6/0
+PASS Product-specific reward preview 6/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 1 reduced False
+PASS Detail interval product 6 level 1
+PASS Products interval matches detail 6/1
+PASS Product-specific reward preview 6/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 24
+PASS Products interval matches detail 6/24
+PASS Product-specific reward preview 6/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 25 reduced False
+PASS Detail interval product 6 level 25
+PASS Products interval matches detail 6/25
+PASS Product-specific reward preview 6/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 49
+PASS Products interval matches detail 6/49
+PASS Product-specific reward preview 6/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 50 reduced False
+PASS Detail interval product 6 level 50
+PASS Products interval matches detail 6/50
+PASS Product-specific reward preview 6/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 75
+PASS Products interval matches detail 6/75
+PASS Product-specific reward preview 6/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 99
+PASS Products interval matches detail 6/99
+PASS Product-specific reward preview 6/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 100 reduced False
+PASS Detail interval product 6 level 100
+PASS Products interval matches detail 6/100
+PASS Product-specific reward preview 6/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 6 level 199
+PASS Products interval matches detail 6/199
+PASS Product-specific reward preview 6/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 6 level 200 reduced False
+PASS Detail interval product 6 level 200
+PASS Products interval matches detail 6/200
+PASS Product-specific reward preview 6/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 6
+PASS Immediate interval reset product 6 level 100000 reduced False
+PASS Detail interval product 6 level 100000
+PASS Products interval matches detail 6/100000
+PASS Product-specific reward preview 7/0
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 7
+PASS Immediate interval reset product 7 level 0 reduced False
+PASS Detail interval product 7 level 0
+PASS Products interval matches detail 7/0
+PASS Product-specific reward preview 7/1
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 1 reduced False
+PASS Detail interval product 7 level 1
+PASS Products interval matches detail 7/1
+PASS Product-specific reward preview 7/24
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 24
+PASS Products interval matches detail 7/24
+PASS Product-specific reward preview 7/25
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 25 reduced False
+PASS Detail interval product 7 level 25
+PASS Products interval matches detail 7/25
+PASS Product-specific reward preview 7/49
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 49
+PASS Products interval matches detail 7/49
+PASS Product-specific reward preview 7/50
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 50 reduced False
+PASS Detail interval product 7 level 50
+PASS Products interval matches detail 7/50
+PASS Product-specific reward preview 7/75
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 75
+PASS Products interval matches detail 7/75
+PASS Product-specific reward preview 7/99
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 99
+PASS Products interval matches detail 7/99
+PASS Product-specific reward preview 7/100
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 100 reduced False
+PASS Detail interval product 7 level 100
+PASS Products interval matches detail 7/100
+PASS Product-specific reward preview 7/199
+PASS Obsolete popup sections removed
+PASS Detail interval product 7 level 199
+PASS Products interval matches detail 7/199
+PASS Product-specific reward preview 7/200
+PASS Obsolete popup sections removed
+PASS Immediate interval reset product 7 level 200 reduced False
+PASS Detail interval product 7 level 200
+PASS Products interval matches detail 7/200
+PASS Product-specific reward preview 7/100000
+PASS Obsolete popup sections removed
+PASS Unowned/completed reward 7
+PASS Immediate interval reset product 7 level 100000 reduced False
+PASS Detail interval product 7 level 100000
+PASS Products interval matches detail 7/100000
+CAPTURE milestones-products-360 360x640
+CAPTURE milestones-detail-360 360x640
+PASS Product detail blocks gameplay (360, 640)
+PASS Return to Products (360, 640)
+CAPTURE milestones-products-450 450x1000
+CAPTURE milestones-detail-450 450x1000
+PASS Product detail blocks gameplay (450, 1000)
+PASS Return to Products (450, 1000)
+SMOKE SUCCEEDED
