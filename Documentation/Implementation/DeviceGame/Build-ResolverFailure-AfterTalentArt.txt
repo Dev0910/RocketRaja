@@ -1,0 +1,4 @@
+RUNNING 2026-10-02T00:13:22.8693604Z
+Full native Bootstrap/Main; separate development package; no real billing or live cloud.
+FAIL UnityEditor.Build.BuildFailedException: Android dependency resolution must succeed before building the playtest
+  at RocketRaja.Editor.BuildRedesignDeviceGame.Build () [0x000df] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\BuildRedesignDeviceGame.cs:51 

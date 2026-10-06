@@ -122,19 +122,10 @@ namespace RocketRaja.EditorTools
             lead.AddComponent<LayoutElement>().preferredHeight = 76;
             Text(Fill(lead.transform, "Lead Text"), "Guest saves stay local. Google sync is optional.", 38, Ink, TextAlignmentOptions.Center, false);
             Card(contentRect, "Progress and your account", "Guests stay on this device. Google players sync progress and basic profile data to Firebase. One device plays at a time. Analytics and crash collection are off by default.", 370);
-            Card(contentRect, "Optional videos", "Optional videos use Google’s advertising and consent services.", 245);
-            Card(contentRect, "Development build", "This is a test build. Production privacy information and advertiser configuration must be supplied before release.", 295);
-
-            var consentRow = New("Consent Required", contentRect);
-            consentRow.AddComponent<LayoutElement>().preferredHeight = 130;
-            var consentButton = Button(Stretch(consentRow.transform, "Advertising Privacy Choices", 0, 0, 0, 0), Paper, Blue);
-            Text(Fill(consentButton.transform, "Button Label"), "Advertising privacy choices", 39, Ink, TextAlignmentOptions.Center, true);
-            consentRow.SetActive(false);
+            Card(contentRect, "Development build", "This is a test build. Production privacy information must be supplied before release.", 295);
 
             var presenter = canvasObject.AddComponent<ImportedPrivacyScreen>();
             var serialized = new SerializedObject(presenter);
-            serialized.FindProperty("consentRow").objectReferenceValue = consentRow;
-            serialized.FindProperty("consentButton").objectReferenceValue = consentButton;
             serialized.FindProperty("closeButton").objectReferenceValue = closeButton;
             serialized.FindProperty("backButton").objectReferenceValue = backButton;
             serialized.ApplyModifiedPropertiesWithoutUndo();

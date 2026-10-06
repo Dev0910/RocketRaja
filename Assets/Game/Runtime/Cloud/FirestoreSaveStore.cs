@@ -11,11 +11,17 @@ namespace RocketRaja.Cloud
     public sealed class FirestoreSaveStore : ICloudSaveStore
     {
         readonly FirebaseFirestore db;
-        public FirestoreSaveStore(FirebaseFirestore db) { this.db = db; }
+        readonly string collection;
+        public const string RedesignCollection = "redesignUser";
+        public FirestoreSaveStore(FirebaseFirestore db, string collection = "user")
+        {
+            if (collection != "user" && collection != RedesignCollection) throw new ArgumentException("Unsupported save namespace");
+            this.db = db; this.collection = collection;
+        }
         DocumentReference Doc(string uid)
         {
             if (string.IsNullOrEmpty(uid) || uid.Contains("/")) throw new ArgumentException("Invalid account ID.");
-            return db.Collection("user").Document(uid);
+            return db.Collection(collection).Document(uid);
         }
         static Dictionary<string, object> Payload(SavePayload p)
         {

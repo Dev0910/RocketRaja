@@ -1,0 +1,13 @@
+PASS Main authoring can run again without replacing the saved native owner
+PASS Saved application starts a fresh isolated Home
+PASS Fresh integrated startup preserves the manual opening grant
+PASS Every native and retained text has four serialized material slots
+PASS Search and naming both have saved input carets
+PASS Retained copies contain no old controller-bound presenters
+PASS Two audio sources are serialized with the new driver
+PASS Account entry explains the isolated development scope
+PASS Privacy returns to Settings without closing the input gate
+PASS Saved naming controls accept supported literal punctuation
+PASS Recovery Retry and Exit have separate non-overlapping saved touch targets
+PASS Utility navigation/rendering preserves all authored UI objects
+PASS Unity compilation succeeds

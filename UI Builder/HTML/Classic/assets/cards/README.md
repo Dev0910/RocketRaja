@@ -1,0 +1,14 @@
+# Folk Print card frames
+
+Generated with the built-in image_gen tool from the user-selected Folk Print concept. Reusable backgrounds for Common, Rare and Legendary. Artwork and card labels are rendered separately in HTML. Unity integration is pending clarification of the user's HTML-first approval scope.
+
+## Generation prompts
+
+Common
+Generate a SINGLE reusable Common card background asset based on the COMMON card in the supplied Folk Print reference. Preserve its painted folk style and colors exactly. Remove ALL product illustration, lettering, numbers, labels, and shadows inside: empty warm ivory parchment image area and empty ivory nameplate near bottom. No text at all. Single upright card, no board or other cards, tightly filling the entire canvas bounds, front facing. Match source border: indigo blue block print with simple corner leaf stamps. Proportions compact portrait 4:5 for mobile cards. Large image area top 65%; empty nameplate bottom 28%, broad enough for two short lines. Opaque ivory interior, transparent outside rounded corners. No empty surrounding margins, frame outer edges at canvas edges. Production game UI background only.
+
+Rare
+Generate a SINGLE reusable Rare card background asset based on the RARE card in the supplied Folk Print reference. Preserve its painted folk style and colors exactly. Remove ALL product illustration, lettering, numbers, labels, and shadows inside: empty warm ivory parchment image area and empty ivory nameplate near bottom. No text at all. Single upright card, no board or other cards, tightly filling the entire canvas bounds, front facing. Match source border: deep plum with salmon pink double border and floral corner stamps. Proportions compact portrait 4:5 for mobile cards. Large image area top 65%; empty nameplate bottom 28%, broad enough for two short lines. Opaque ivory interior, transparent outside rounded corners. No empty surrounding margins, frame outer edges at canvas edges. Production game UI background only.
+
+Legendary
+Generate a SINGLE reusable Legendary card background asset based on the LEGENDARY card in the supplied Folk Print reference. Preserve its painted folk style and colors exactly. Remove ALL product illustration, lettering, numbers, labels, and shadows inside: empty warm ivory parchment image area and empty ivory nameplate near bottom. No text at all. Single upright card, no board or other cards, tightly filling the entire canvas bounds, front facing. Match source border: raspberry red and saffron gold with sunburst corner stamps and small lotus crest. Proportions compact portrait 4:5 for mobile cards. Large image area top 65%; empty nameplate bottom 28%, broad enough for two short lines. Opaque ivory interior, transparent outside rounded corners. No empty surrounding margins, frame outer edges at canvas edges. Production game UI background only.

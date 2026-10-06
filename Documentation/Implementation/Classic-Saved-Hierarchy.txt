@@ -1,0 +1,1 @@
+Main saved Classic objects=2352; missing scripts=0; fixed particles=64; active roots=Main Camera,Imported Event System,ClassicProductionCanvas; production binding=True; preview sessions=0; Play override=none; enabled build scenes=Assets/Scenes/Bootstrap.unity,Assets/Scenes/Main.unity

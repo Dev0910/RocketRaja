@@ -1,0 +1,7 @@
+PASS source-matching AAR and aar packaging: firebase-analytics-unity
+PASS source-matching AAR and aar packaging: firebase-app-unity
+PASS source-matching AAR and aar packaging: firebase-appcheck-unity
+PASS source-matching AAR and aar packaging: firebase-auth-unity
+PASS source-matching AAR and aar packaging: firebase-config-unity
+PASS source-matching AAR and aar packaging: firebase-crashlytics-unity
+PASS source-matching AAR and aar packaging: firebase-firestore-unity

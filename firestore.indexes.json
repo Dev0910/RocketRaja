@@ -1,4 +1,7 @@
 {
   "indexes": [],
-  "fieldOverrides": [{ "collectionGroup": "user", "fieldPath": "save", "indexes": [] }]
+  "fieldOverrides": [
+    { "collectionGroup": "user", "fieldPath": "save", "indexes": [] },
+    { "collectionGroup": "redesignUser", "fieldPath": "save", "indexes": [] }
+  ]
 }

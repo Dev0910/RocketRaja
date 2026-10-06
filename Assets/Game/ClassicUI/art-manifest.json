@@ -1,0 +1,340 @@
+{
+  "assets": [
+    {
+      "key": "stall",
+      "source": "UI Builder/HTML/Home/assets/gouache-stall.png",
+      "sha256": "470bee58694ea934f4a9c976c7838dc0e20ca21f3845f4a30d81ce4e9320dc73",
+      "path": "Assets/Game/ImportedUI/Art/Stall Background.png",
+      "imported": false
+    },
+    {
+      "key": "shopkeeper",
+      "source": "UI Builder/HTML/Home/assets/gouache-shopkeeper.png",
+      "sha256": "a36a51a16a1a9b2cf5fc80ab823f72c4a531c927165500bef0dd0eda4027e024",
+      "path": "Assets/Game/ImportedUI/Art/Shopkeeper.png",
+      "imported": false
+    },
+    {
+      "key": "product-sparklers",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/sparklers.png",
+      "sha256": "8afc0597b84cd9398e69f3f57d079de4130cef9a662df18e720184e074611e68",
+      "path": "Assets/Game/ClassicUI/Art/product-sparklers.png",
+      "imported": true
+    },
+    {
+      "key": "product-anar",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/anar.png",
+      "sha256": "5500e352571a151e55ea4365d77e3030eaf1f17f8309802ff4c1bdbd52d6d40e",
+      "path": "Assets/Game/ClassicUI/Art/product-anar.png",
+      "imported": true
+    },
+    {
+      "key": "product-chakri",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/chakri.png",
+      "sha256": "fd827cbf6f80646de2b6d42c0448ef68ddc241eba11acf07c4277f3a1b2fa8b3",
+      "path": "Assets/Game/ClassicUI/Art/product-chakri.png",
+      "imported": true
+    },
+    {
+      "key": "product-rockets",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/rockets.png",
+      "sha256": "11f42e76bbbad9b09c4ec726e6eb0c1dfd324ac3179234307caf76199b974352",
+      "path": "Assets/Game/ClassicUI/Art/product-rockets.png",
+      "imported": true
+    },
+    {
+      "key": "product-small-crackers",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/small-crackers.png",
+      "sha256": "7505ba58dcab39f34d73c884a4175322ae28f7e04cb33f0f941d7cc7af739c21",
+      "path": "Assets/Game/ClassicUI/Art/product-small-crackers.png",
+      "imported": true
+    },
+    {
+      "key": "product-cracker-strings",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/cracker-strings.png",
+      "sha256": "42398a7fe5efec92523a7650cd675274eba7488b13fa22e9aee25b118fc274d7",
+      "path": "Assets/Game/ClassicUI/Art/product-cracker-strings.png",
+      "imported": true
+    },
+    {
+      "key": "product-aerial",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/aerial.png",
+      "sha256": "2a996f0f28a188a1f8f6aee6e6171d86d620067640b71e4b9157cf5d19082f63",
+      "path": "Assets/Game/ClassicUI/Art/product-aerial.png",
+      "imported": true
+    },
+    {
+      "key": "product-gift-boxes",
+      "source": "UI Builder/HTML/Classic/assets/products/icons/gift-boxes.png",
+      "sha256": "be6dadef65a8f4a33db786eaf2ca13958a0a46305b1801cfbed545c79bb12239",
+      "path": "Assets/Game/ClassicUI/Art/product-gift-boxes.png",
+      "imported": true
+    },
+    {
+      "key": "folk-common",
+      "source": "UI Builder/HTML/Classic/assets/cards/folk-common.png",
+      "sha256": "fcb28261b5b5923bc45796c67a3aae304ce27bf32476226254e5ab37506b7651",
+      "path": "Assets/Game/ClassicUI/Art/folk-common.png",
+      "imported": true
+    },
+    {
+      "key": "folk-rare",
+      "source": "UI Builder/HTML/Classic/assets/cards/folk-rare.png",
+      "sha256": "ee39bb523b2b52b682935574131c96c34a94c312800d59b34cde22c55f1f3f3d",
+      "path": "Assets/Game/ClassicUI/Art/folk-rare.png",
+      "imported": true
+    },
+    {
+      "key": "folk-legendary",
+      "source": "UI Builder/HTML/Classic/assets/cards/folk-legendary.png",
+      "sha256": "df5b271fb539bcd8cf09765fe1b7d9acb4de652a3f0b4dd80f9ec3565518055f",
+      "path": "Assets/Game/ClassicUI/Art/folk-legendary.png",
+      "imported": true
+    },
+    {
+      "key": "shared-card-back",
+      "source": "UI Builder/HTML/Classic/assets/cards/shared-card-back.png",
+      "sha256": "bc1d359f9095c9ffe5fd36e5ac25dc81cda7db25f30322cf49b0ae65c2a0e44d",
+      "path": "Assets/Game/ClassicUI/Art/shared-card-back.png",
+      "imported": true
+    },
+    {
+      "key": "full-outer-border",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-outer-border.png",
+      "sha256": "842985907c4026c6533ff7d3995fa6957865c93a9fb81f7ba55840cd1844746a",
+      "path": "Assets/Game/ClassicUI/Art/full-outer-border.png",
+      "imported": true
+    },
+    {
+      "key": "full-inner-border",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-inner-border.png",
+      "sha256": "0f82496e78655eeaee7ef93941a803f7514821c17a5e9a1b34a30635e0e296d3",
+      "path": "Assets/Game/ClassicUI/Art/full-inner-border.png",
+      "imported": true
+    },
+    {
+      "key": "full-rare-outer",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-rare-outer.png",
+      "sha256": "f0d2e5442595c02def6fa1456bd65ab5fb2d868e6dee33d3c719f9f5d93e5ba3",
+      "path": "Assets/Game/ClassicUI/Art/full-rare-outer.png",
+      "imported": true
+    },
+    {
+      "key": "full-rare-inner",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-rare-inner.png",
+      "sha256": "8083811c834209d77984ab6286d3ea8e9ad10b2d5dba8bdb59955de01abadd4d",
+      "path": "Assets/Game/ClassicUI/Art/full-rare-inner.png",
+      "imported": true
+    },
+    {
+      "key": "full-legendary-outer",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-legendary-outer.png",
+      "sha256": "2f0aaafa2ec6a11eb091738e1a2d2c14a00b3b3500a82f6e638b7e16e1cfc26a",
+      "path": "Assets/Game/ClassicUI/Art/full-legendary-outer.png",
+      "imported": true
+    },
+    {
+      "key": "full-legendary-inner",
+      "source": "UI Builder/HTML/Classic/assets/cards/full-legendary-inner.png",
+      "sha256": "f17ab5aaa833dafc01b98d554f99dd3e8609854e4b458b9627886c1a55991651",
+      "path": "Assets/Game/ClassicUI/Art/full-legendary-inner.png",
+      "imported": true
+    },
+    {
+      "key": "C01",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C01.png",
+      "sha256": "224a8c03ab92ae6e726e25f7fae2bf8dfafefabc694955752bc594eaf365e26d",
+      "path": "Assets/Game/ClassicUI/Art/C01.png",
+      "imported": true
+    },
+    {
+      "key": "C02",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C02.png",
+      "sha256": "8504c5dc24a0fcd8edb4256a567adf4cc752da137ed968f7cd1e8c910e289568",
+      "path": "Assets/Game/ClassicUI/Art/C02.png",
+      "imported": true
+    },
+    {
+      "key": "C03",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C03.png",
+      "sha256": "22f74879dd47dfb20e8f9155a60891c584b97f4989f791c9e56f755f30a9c1cf",
+      "path": "Assets/Game/ClassicUI/Art/C03.png",
+      "imported": true
+    },
+    {
+      "key": "C04",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C04.png",
+      "sha256": "fdd9e1c002ec9f8cbf2b130fbf12b28a81ff04d403010915cc2b6ae2c456ab16",
+      "path": "Assets/Game/ClassicUI/Art/C04.png",
+      "imported": true
+    },
+    {
+      "key": "C05",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C05.png",
+      "sha256": "4f32b86e848cf4dab075a752d9e8e333e483077893a9924aadd6695fd8d22e3b",
+      "path": "Assets/Game/ClassicUI/Art/C05.png",
+      "imported": true
+    },
+    {
+      "key": "C06",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C06.png",
+      "sha256": "15140b79ca2517ac9f74d8dac9d31cebdac95e6a970582c0ed8a1ec56c9ff27f",
+      "path": "Assets/Game/ClassicUI/Art/C06.png",
+      "imported": true
+    },
+    {
+      "key": "C07",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C07.png",
+      "sha256": "bb116514ba69a0662ffc9128ed35dad6ce1418f772c96b2a5883ac83b7dc8756",
+      "path": "Assets/Game/ClassicUI/Art/C07.png",
+      "imported": true
+    },
+    {
+      "key": "C08",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C08.png",
+      "sha256": "6effb1a68d2347c5e9fbf43b753b3863b1c9eb8a0a21f2a4929c1c978ed5f264",
+      "path": "Assets/Game/ClassicUI/Art/C08.png",
+      "imported": true
+    },
+    {
+      "key": "C09",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C09.png",
+      "sha256": "f4f60ba698776d155280b67c7e19c56efaa2ddb9e749967e4dda9a04a259ab21",
+      "path": "Assets/Game/ClassicUI/Art/C09.png",
+      "imported": true
+    },
+    {
+      "key": "C10",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C10.png",
+      "sha256": "b865c3ca8ae993efdd9bbd73b5646271f08338324298c781a821de18666f4b13",
+      "path": "Assets/Game/ClassicUI/Art/C10.png",
+      "imported": true
+    },
+    {
+      "key": "C11",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C11.png",
+      "sha256": "e7e99519d3966324fefde164d56e558cc56631194d911d56009b25f1f2cffe49",
+      "path": "Assets/Game/ClassicUI/Art/C11.png",
+      "imported": true
+    },
+    {
+      "key": "C12",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C12.png",
+      "sha256": "4d6eeda0cec32707b3fe5ba391247e59128ca040e69cf528ca76ec03cc06c57c",
+      "path": "Assets/Game/ClassicUI/Art/C12.png",
+      "imported": true
+    },
+    {
+      "key": "C13",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C13.png",
+      "sha256": "706c76d598cbd0868125fa239e142cce5dbe6d2f15ad08b3c3f45554ca3db1e1",
+      "path": "Assets/Game/ClassicUI/Art/C13.png",
+      "imported": true
+    },
+    {
+      "key": "C14",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C14.png",
+      "sha256": "4589dee4002259d03e2f0aebf8d900bd9be8b543f5eede097c3a868186509a76",
+      "path": "Assets/Game/ClassicUI/Art/C14.png",
+      "imported": true
+    },
+    {
+      "key": "C15",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C15.png",
+      "sha256": "4de84b7afcb8f39dc3c5f41ecd6e36de7ec1872d710f7ba24eab77dc2f37ff1a",
+      "path": "Assets/Game/ClassicUI/Art/C15.png",
+      "imported": true
+    },
+    {
+      "key": "C16",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/C16.png",
+      "sha256": "1f9023735a31ffec9af146e6e78ac30254914e03fa6624ba87111836522b83e7",
+      "path": "Assets/Game/ClassicUI/Art/C16.png",
+      "imported": true
+    },
+    {
+      "key": "L01",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/L01.png",
+      "sha256": "5ca6558df8311626490b1ee7446b5cbe5c95d591159ce61ebbc15f62135b39c5",
+      "path": "Assets/Game/ClassicUI/Art/L01.png",
+      "imported": true
+    },
+    {
+      "key": "L02",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/L02.png",
+      "sha256": "0a0a4a1465ad46dc69d333541d204c346fc61b1e031095acd2b8703ab9b1e825",
+      "path": "Assets/Game/ClassicUI/Art/L02.png",
+      "imported": true
+    },
+    {
+      "key": "R01",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R01.png",
+      "sha256": "2839e97c5a5e23a0d2198cdc237371b9fc4f06fa0976334799e2f09b4d2ed85c",
+      "path": "Assets/Game/ClassicUI/Art/R01.png",
+      "imported": true
+    },
+    {
+      "key": "R02",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R02.png",
+      "sha256": "2c81fe082b4bd1edae67e71d56c87dd927ce06ab0b4ad1a84cf30868827531bb",
+      "path": "Assets/Game/ClassicUI/Art/R02.png",
+      "imported": true
+    },
+    {
+      "key": "R03",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R03.png",
+      "sha256": "3cee2466cea0ee28aebd0a8326019d19fd01b283cb490396d1d0b70c5b0c2ecb",
+      "path": "Assets/Game/ClassicUI/Art/R03.png",
+      "imported": true
+    },
+    {
+      "key": "R04",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R04.png",
+      "sha256": "b68085e9470cf7c7c4ce79a5dafd15357d961a719b7799932694ddc70fc69a18",
+      "path": "Assets/Game/ClassicUI/Art/R04.png",
+      "imported": true
+    },
+    {
+      "key": "R05",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R05.png",
+      "sha256": "45039240c60da8e9df20e10aa46520a517ad8c2daacb2cc92116fca6b753e2d7",
+      "path": "Assets/Game/ClassicUI/Art/R05.png",
+      "imported": true
+    },
+    {
+      "key": "R06",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R06.png",
+      "sha256": "2b52b605be0559136e7ce225dee532e859988cd8434e921b3c83e95af6a4eea2",
+      "path": "Assets/Game/ClassicUI/Art/R06.png",
+      "imported": true
+    },
+    {
+      "key": "R07",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R07.png",
+      "sha256": "4b806bc31f1a1e1ffe83f028fc3a0d05625daa7b2f079d7be8f60771aa78f18b",
+      "path": "Assets/Game/ClassicUI/Art/R07.png",
+      "imported": true
+    },
+    {
+      "key": "R08",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R08.png",
+      "sha256": "a4363af9f7492b532c704ae36977f1701d01b5f22cfd89ea188907eb2c1f16d0",
+      "path": "Assets/Game/ClassicUI/Art/R08.png",
+      "imported": true
+    },
+    {
+      "key": "R09",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R09.png",
+      "sha256": "f889c2c243f0aedca65c6d9f1b7082cbed990bab5b48e07340eb11364822a3e1",
+      "path": "Assets/Game/ClassicUI/Art/R09.png",
+      "imported": true
+    },
+    {
+      "key": "R10",
+      "source": "UI Builder/HTML/Classic/assets/cards/art/R10.png",
+      "sha256": "4ef03e6a87b85ca6f71de1eae399eaef8c1c25e6e181d517151151243d727a15",
+      "path": "Assets/Game/ClassicUI/Art/R10.png",
+      "imported": true
+    }
+  ]
+}

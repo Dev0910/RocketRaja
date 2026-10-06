@@ -8,7 +8,7 @@ using UnityEngine.UI;
 namespace RocketRaja.Cloud
 {
     /// <summary>Behavior for the separately reviewed, editor-authored startup canvas. Creates no UI at runtime.</summary>
-    public sealed class BootstrapController : MonoBehaviour
+    public sealed partial class BootstrapController : MonoBehaviour
     {
         [SerializeField] TMP_Text heading, description, progress, comparison;
         [SerializeField] Button primaryButton, secondaryButton, tertiaryButton;
@@ -23,7 +23,8 @@ namespace RocketRaja.Cloud
         float busyStarted;
         void Awake()
         {
-            host = PlayerSessionHost.Ensure();
+            redesignMode = true;
+            if (redesignMode) redesignHost = RedesignSessionHost.Ensure(); else host = PlayerSessionHost.Ensure();
             Application.targetFrameRate = 60; Screen.orientation = ScreenOrientation.Portrait;
             if (heading == null || description == null || progress == null || comparison == null ||
                 primaryButton == null || secondaryButton == null || tertiaryButton == null || primaryLabel == null || secondaryLabel == null || tertiaryLabel == null ||
@@ -34,6 +35,7 @@ namespace RocketRaja.Cloud
         }
         void Start()
         {
+            if (redesignMode) { StartRedesign(); return; }
 #if UNITY_EDITOR
             if (UnityEditor.SessionState.GetBool("RocketRaja.BootstrapPreview", false)) return;
             if (GameController.SmokeMode && UnityEditor.SessionState.GetBool("RocketRaja.BootstrapButtonSmoke", false)) { Welcome(); return; }
@@ -91,15 +93,19 @@ namespace RocketRaja.Cloud
                 // configuration too. Do not silently make the button appear to do nothing.
                 if (this != null)
                 {
-                    Welcome();
+                    if (redesignMode) RedesignWelcome(); else Welcome();
                     description.text = "Google sign-in did not finish. Please try again, or play as guest.";
                 }
                 Debug.LogWarning("Google sign-in did not finish. If account selection was completed, verify this APK's package name and signing SHA-1 in Firebase.");
             }
             catch (Exception ex)
             {
-                if (this != null) Error(ex is CloudConflictException || ex is NotSupportedException || ex is System.IO.InvalidDataException
-                    ? ex.Message : "We could not connect to your Google save. Check your connection and try again.");
+                if (this != null)
+                {
+                    string message = ex is CloudConflictException || ex is NotSupportedException || ex is System.IO.InvalidDataException
+                        ? ex.Message : "We could not connect to your Google save. Check your connection and try again.";
+                    if (redesignMode) RedesignError(message); else Error(message);
+                }
                 Debug.LogWarning("Cloud startup failed (" + ex.GetType().Name + "). Check the Firebase setup and connection.");
             }
             finally
@@ -183,7 +189,7 @@ namespace RocketRaja.Cloud
         void Update()
         {
             if (busy && Time.realtimeSinceStartup - busyStarted > 15) progress.text = "Still connecting… Your saved progress is protected.";
-            if (loadingGroup.activeSelf && !(host?.Session?.State?.reducedMotion ?? host?.GuestState?.reducedMotion ?? false))
+            if (loadingGroup.activeSelf && !(redesignMode ? redesignHost?.Account?.State?.reducedMotion ?? redesignHost?.Coordinator?.GuestState?.reducedMotion ?? false : host?.Session?.State?.reducedMotion ?? host?.GuestState?.reducedMotion ?? false))
                 spinner.Rotate(0, 0, -300 * Time.unscaledDeltaTime);
         }
         void Primary() { if (!busy) primary?.Invoke(); }

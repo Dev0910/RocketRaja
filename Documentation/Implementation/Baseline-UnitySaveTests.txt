@@ -1,0 +1,7 @@
+PASS Legacy command saves immediately through Unity JsonUtility
+PASS Large numbers roundtrip through Unity codec
+PASS All stable upgrade IDs survive Unity serialization
+PASS Active skill cooldown saved immediately
+PASS Reload and repeated offline reconciliation never duplicate income
+PASS Prestige atomically persists reset and retained Legacy
+PASS Unity save loads validated backup after main corruption

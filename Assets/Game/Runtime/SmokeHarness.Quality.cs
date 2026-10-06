@@ -153,10 +153,6 @@ namespace RocketRaja
                 game.View.ShowPrestige();
                 yield return QualityReviewScreen(game.PrestigeScreen.gameObject, "Prestige", prefix, size);
                 QualityCloseModals();
-                state.sponsorUntil = 0;
-                game.View.ShowSponsor();
-                yield return QualityReviewScreen(game.SponsorScreen.gameObject, "Sponsor", prefix, size);
-                QualityCloseModals();
                 state.pendingOfflineId = "quality-viewport-" + size.x + "-" + size.y;
                 state.pendingOfflineReward = new Amount(12345);
                 game.View.ShowOffline();
@@ -181,7 +177,7 @@ namespace RocketRaja
             QualityCloseModals();
             game.View.Switch("Home");
             checks.Add("LIMIT Geometry and pixels are desktop Game View evidence, not Android dp/sp or device accessibility validation.");
-            checks.Add("LIMIT Native captures cover the fourteen Main screen presenters plus store-name detail; Bootstrap scene and real ads/cloud are not loaded.");
+            checks.Add("LIMIT Native captures cover the remaining Main screen presenters plus store-name detail; Bootstrap scene and real cloud are not loaded.");
             checks.Add("LIMIT Contrast checks cover authored solid input colors; sprite gradients and global text contrast require visual review.");
         }
 
@@ -198,7 +194,7 @@ namespace RocketRaja
         {
             foreach (var root in new[] { game.SettingsScreen.gameObject, game.PrivacyScreen.gameObject,
                          game.StatisticsScreen.gameObject, game.SkillsScreen.gameObject, game.ProductDetailScreen.gameObject,
-                         game.PrestigeScreen.gameObject, game.SponsorScreen.gameObject, game.OfflineScreen.gameObject,
+                         game.PrestigeScreen.gameObject, game.OfflineScreen.gameObject,
                          game.SaveRecoveryScreen.gameObject, game.StoreNameScreen.gameObject })
                 root.SetActive(false);
             game.ModalPaused = false;
@@ -206,62 +202,23 @@ namespace RocketRaja
 
         IEnumerator QualityRewardRetryChecks()
         {
-            var adapter = game.Ads as TestRewardedAds;
-            Check(adapter != null, "Quality reward checks use only the deterministic test ad adapter");
-            if (adapter == null) yield break;
             var state = game.Engine.State;
-            state.cash = 100000;
-            state.pendingOfflineId = "quality-retry";
+            state.pendingOfflineId = "quality-retired-ad";
             state.pendingOfflineReward = new Amount(500);
-            adapter.Ready = true; adapter.Success = false;
-            game.View.ShowOffline();
-            game.OfflineScreen.RequestVideo();
-            var offlineButton = QualityField<Button>(game.OfflineScreen, "videoButton");
-            var offlineMessage = QualityField<TMP_Text>(game.OfflineScreen, "messageText");
-            Check(state.pendingOfflineId == "quality-retry" && offlineButton.interactable && offlineMessage.text.Contains("try again"),
-                "Cancelled offline video preserves its offer and exposes retry");
-            adapter.Ready = false; yield return null;
-            Check(!offlineButton.interactable && offlineMessage.text.Contains("No video is available"),
-                "Cancelled offline offer follows later ad unavailability");
-            adapter.Ready = true; yield return null;
-            Check(offlineButton.interactable && offlineMessage.text.Contains("try again"),
-                "Cancelled offline offer re-enables retry when a video becomes ready");
-            adapter.Success = true;
             var cash = state.cash;
             int receipts = state.claimedRewards.Count;
-            game.OfflineScreen.RequestVideo();
-            Check(state.cash.CompareTo(cash + new Amount(500)) == 0 && state.claimedRewards.Count == receipts + 1 &&
-                  string.IsNullOrEmpty(state.pendingOfflineId) && !offlineButton.interactable,
-                "Successful offline retry awards exactly one bonus and consumes its offer");
-            cash = state.cash; receipts = state.claimedRewards.Count;
-            game.OfflineScreen.RequestVideo();
-            Check(state.cash.CompareTo(cash) == 0 && state.claimedRewards.Count == receipts,
-                "Consumed offline offer cannot award again through repeated invocation");
+            game.View.ShowOffline();
+            game.OfflineScreen.RequestVideo(); game.OfflineScreen.RequestVideo();
+            Check(state.cash.CompareTo(cash) == 0 && state.claimedRewards.Count == receipts && state.pendingOfflineId == "quality-retired-ad",
+                "Retired offline events cannot add a bonus or consume the return summary");
+            var close = QualityField<Button>(game.OfflineScreen, "closeButton");
+            var exit = QualityField<Button>(game.OfflineScreen, "continueButton");
+            Check(close.interactable && exit.interactable, "Return summary never waits for an ad callback");
             game.OfflineScreen.Dismiss();
-
-            state.sponsorUntil = 0;
-            adapter.Success = false;
-            game.View.ShowSponsor(); game.SponsorScreen.RequestVideo();
-            var sponsorButton = QualityField<Button>(game.SponsorScreen, "videoButton");
-            var sponsorMessage = QualityField<TMP_Text>(game.SponsorScreen, "messageText");
-            Check(state.sponsorUntil == 0 && sponsorButton.interactable && sponsorMessage.text.Contains("try again"),
-                "Cancelled sponsor video awards no boost and exposes retry");
-            adapter.Ready = false; yield return null;
-            Check(!sponsorButton.interactable && sponsorMessage.text.Contains("No video is available"),
-                "Cancelled sponsor offer follows later ad unavailability");
-            adapter.Ready = true; yield return null;
-            Check(sponsorButton.interactable && sponsorMessage.text.Contains("try again"),
-                "Cancelled sponsor offer re-enables retry when a video becomes ready");
-            adapter.Success = true; receipts = state.claimedRewards.Count;
-            game.SponsorScreen.RequestVideo();
-            double until = state.sponsorUntil;
-            Check(until > state.now && state.claimedRewards.Count == receipts + 1 && !sponsorButton.interactable,
-                "Successful sponsor retry awards one boost and shows its active state");
-            game.SponsorScreen.RequestVideo();
-            Check(state.sponsorUntil == until && state.claimedRewards.Count == receipts + 1,
-                "Active sponsor cannot extend its boost through repeated invocation");
-            game.SponsorScreen.Close();
-            state.sponsorUntil = 0;
+            Check(state.cash.CompareTo(cash) == 0 && string.IsNullOrEmpty(state.pendingOfflineId), "Closing keeps all settled offline cash");
+            game.View.ShowSponsor();
+            Check(game.SponsorScreen == null || !game.SponsorScreen.gameObject.activeSelf, "Retired Sponsor cannot open");
+            yield return null;
         }
 
         static T QualityField<T>(object owner, string name) =>

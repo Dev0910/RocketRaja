@@ -1,0 +1,13 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "file": "full-outer-border.png",
+      "prompt": "Extract and faithfully recreate ONLY the OUTERMOST full card frame from this Classic Card reference as a standalone game UI border asset. Portrait 3:5 rectangle with gently rounded corners. Thick distressed navy blue gouache outer edge, warm ivory paper band, small navy dots running along all four sides, three-leaf navy block-print stamps in each corner, fine indigo inner keyline. Frame fits tightly edge-to-edge, no margins. ALL of the large center inside the border must be genuinely transparent, as must outside rounded corners. Border width about 6% of total width. NO paper filling the center, NO inner artwork frame, NO text, NO artwork, NO UI, NO background, NO close button. Retain tactile painted grain from source. Single complete continuous border only."
+    },
+    {
+      "file": "full-inner-border.png",
+      "prompt": "Extract and faithfully recreate ONLY the INNER illustration frame from the Classic Card reference: standalone nearly SQUARE game UI frame. Distressed navy gouache rounded rectangular outer outline, ivory narrow corner panels with navy three-leaf folk stamps at all four corners, thin scalloped indigo inner outline curving around those corners. Frame fills image edge-to-edge with no margins. ALL of central image opening must be genuinely TRANSPARENT, outside rounded corners transparent too. Border width about 7% of width. NO center paper, NO artwork, NO lettering, NO dots along sides (dots belong to outer frame), NO entire card, NO background. Tactile hand-painted folk block print matching the source. One complete frame only."
+    }
+  ]
+}

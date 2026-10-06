@@ -1,0 +1,181 @@
+PASS Main scene booted
+PASS Redesign smoke owns a newly created disposable profile
+PASS Main selects 1,000 cash upgrades and 28 Talent cards, with no legacy engine
+PASS Native input system and rupee glyph are present
+PASS Native control is active: offline-close
+PASS Startup return receipt is acknowledged before capturing Home
+CAPTURE redesign-01-home 1080x2400
+PASS Full native catalogue uses eight saved rows
+PASS Scrolling reaches the final catalogue item without constructing rows
+PASS Native game can review all 1,000 eligible first purchases
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Reviewed Buy All commits once and cannot replay
+PASS Full cash catalogue settles final permanent and run appearances
+CAPTURE redesign-02-complete-shop 1080x2400
+PASS Native control is active: Confirm prestige
+PASS First Prestige grants three free credits, clears the run and retains unique purchases
+PASS Native control is active: free-draw
+PASS Native free draw persists its result and spends one credit
+PASS Pending native reveal is already durable on disk
+CAPTURE redesign-03-reveal 1080x2400
+PASS Native control is active: reveal-done
+PASS Acknowledging the reveal cannot grant a second card
+PASS Native control is active: home-first-buy
+PASS Rebuild still requires a manual first purchase and menus never generate counter taps
+PASS Full redesigned state saves through the real driver store
+PASS Saved full-history payload remains valid and below the cloud payload guard
+PASS Cycle 1 staged fixture persists
+PASS Cycle 1 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 1 native batch finishes
+PASS Cycle 1 cached full-run income remains positive
+PASS Cycle 1 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 1 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 1 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 1 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 1 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 1 rebuilt run saves
+PASS Cycle 2 staged fixture persists
+PASS Cycle 2 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 2 native batch finishes
+PASS Cycle 2 cached full-run income remains positive
+PASS Cycle 2 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 2 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 2 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 2 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 2 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 2 rebuilt run saves
+PASS Cycle 3 staged fixture persists
+PASS Cycle 3 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 3 native batch finishes
+PASS Cycle 3 cached full-run income remains positive
+PASS Cycle 3 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 3 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 3 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 3 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 3 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 3 rebuilt run saves
+PASS Cycle 4 staged fixture persists
+PASS Cycle 4 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 4 native batch finishes
+PASS Cycle 4 cached full-run income remains positive
+PASS Cycle 4 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 4 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 4 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 4 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 4 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 4 rebuilt run saves
+PASS Cycle 5 staged fixture persists
+PASS Cycle 5 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 5 native batch finishes
+PASS Cycle 5 cached full-run income remains positive
+PASS Cycle 5 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 5 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 5 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 5 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 5 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 5 rebuilt run saves
+PASS Cycle 6 staged fixture persists
+PASS Cycle 6 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 6 native batch finishes
+PASS Cycle 6 cached full-run income remains positive
+PASS Cycle 6 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 6 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 6 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 6 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 6 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 6 rebuilt run saves
+PASS Cycle 7 staged fixture persists
+PASS Cycle 7 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 7 native batch finishes
+PASS Cycle 7 cached full-run income remains positive
+PASS Cycle 7 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 7 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 7 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 7 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 7 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 7 rebuilt run saves
+PASS Cycle 8 staged fixture persists
+PASS Cycle 8 reviews 1,000 rebuy entries
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Cycle 8 native batch finishes
+PASS Cycle 8 cached full-run income remains positive
+PASS Cycle 8 full-run payload roundtrips within cloud guard
+PASS Native control is active: Confirm prestige
+PASS Cycle 8 resets run and retains lifetime collection
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 8 reveal 1 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 8 reveal 2 acknowledges
+PASS Native control is active: free-draw
+PASS Native control is active: reveal-done
+PASS Cycle 8 reveal 3 acknowledges
+PASS Native control is active: home-first-buy
+PASS Cycle 8 rebuilt run saves
+PASS Scrolling, batch, Prestige and reveal preserve authored UI identities
+SCOPE Performance fixtures explicitly stage run resources for eight additional native Prestige/reveal cycles. Timings describe this Editor/development runtime, not earned pacing or release-device acceptance.
+SMOKE SUCCEEDED

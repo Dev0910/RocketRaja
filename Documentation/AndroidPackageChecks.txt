@@ -1,6 +1,6 @@
-APK: C:\Unity\Projects\Incremental game\Builds\Android\Diwali-test.apk
-Bytes: 50205075
-SHA256: EA1C9F87E8E5C2DFEE81F7C639524C0A05202854F45DD1E2AD2899BA86B39A86
+APK: C:\Unity\Projects\Incremental game\Builds\Android\RocketRaja-redesign-playtest.apk
+Bytes: 92895227
+SHA256: 5654A67542326E148D52487974E1A43F43562ACB23EF4F24B45DBE614AA3154D
 PASS APK ZIP alignment with 16 KB native-library pages
 Verifies
 Verified using v1 scheme (JAR signing): false
@@ -10,14 +10,27 @@ Verified using v3.1 scheme (APK Signature Scheme v3.1): false
 Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
-package: name='com.diwali.fireworkstycoon.dev' versionCode='1' versionName='0.1.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+package: name='com.diwali.rocketrajaredesign.playtest' versionCode='2' versionName='0.1.1' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
 minSdkVersion:'25'
 targetSdkVersion:'36'
-application-label:'Diwali Fireworks Tycoon'
+application-label:'Rocket Raja Playtest'
 native-code: 'arm64-v8a'
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAnalytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppApp-13_17_0.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAppCheck.so
 PASS 16 KB ELF load segments: lib/arm64-v8a/libc++_shared.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-common.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-handler.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-trampoline.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libdatastore_shared_counter.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAuth.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppCrashlytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppFirestore.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppRemoteConfig.so
 PASS 16 KB ELF load segments: lib/arm64-v8a/libgame.so
 PASS 16 KB ELF load segments: lib/arm64-v8a/libmain.so
-PASS 16 KB ELF load segments: lib/arm64-v8a/libswappywrapper.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/lib_burst_generated.so
 PASS 16 KB ELF load segments: lib/arm64-v8a/libunity.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libswappywrapper.so
 PASS 16 KB ELF load segments: lib/arm64-v8a/libil2cpp.so

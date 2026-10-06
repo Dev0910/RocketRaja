@@ -1,0 +1,35 @@
+Scope: isolated saved-native shop binding/rendering. Simulated purchases only; actual Play Mode, Main/device evidence is separate.
+PASS Browsing does not mark or grant; disposable guest may begin a test purchase
+PASS Native pack identity, quantity and example price: rr.kk.small.1000
+PASS Native pack identity, quantity and example price: rr.kk.festival.6000
+PASS Native pack identity, quantity and example price: rr.kk.celebration.13000
+PASS Native pack identity, quantity and example price: rr.kk.grand.28000
+PASS Loading simulation disables every pack
+PASS Late loading-state click cannot begin a transaction
+PASS Unavailable simulation disables every pack
+PASS Pack begins one saved pending operation without grant: rr.kk.small.1000
+PASS Repeated pending pack action retains operation: 0
+PASS Leave pending navigates without delivery or cancellation
+PASS Lost ownership blocks a stale simulated success callback
+PASS Failed persistence publishes no grant and exposes saving recovery
+PASS Retry saving retains the same pending operation
+PASS Success delivers exactly the chosen pack: rr.kk.small.1000
+PASS Duplicate success cannot grant again: 0
+PASS Pack begins one saved pending operation without grant: rr.kk.festival.6000
+PASS Repeated pending pack action retains operation: 1
+PASS Success delivers exactly the chosen pack: rr.kk.festival.6000
+PASS Duplicate success cannot grant again: 1
+PASS Pack begins one saved pending operation without grant: rr.kk.celebration.13000
+PASS Repeated pending pack action retains operation: 2
+PASS Success delivers exactly the chosen pack: rr.kk.celebration.13000
+PASS Duplicate success cannot grant again: 2
+PASS Pack begins one saved pending operation without grant: rr.kk.grand.28000
+PASS Repeated pending pack action retains operation: 3
+PASS Success delivers exactly the chosen pack: rr.kk.grand.28000
+PASS Duplicate success cannot grant again: 3
+PASS Pack delivery never spends KK, draws cards or changes cash progression
+PASS Cancellation delivers nothing
+PASS Failure delivers nothing and permits a fresh pack
+PASS Non-disposable or account binding cannot run test purchases
+PASS All shop states reuse the saved UI objects
+PASS Unity scripts compile

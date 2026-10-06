@@ -1,0 +1,20 @@
+{
+    "unity": "6000.4.9f1",
+    "device": "ROG Strix G713IH_G713IH (ASUSTeK COMPUTER INC.)",
+    "processor": "AMD Ryzen 7 4800H with Radeon Graphics ",
+    "package": "com.diwali.fireworkstycoon.dev",
+    "profile": "C:/Users/Dev/AppData/Local/Temp/Diwali Games/Rocket Raja\\RedesignSmoke-88bb1454afe044ed8bad6a9e741bbfbc",
+    "contentVersion": "2.0.0/cash-only-v1",
+    "width": 1080,
+    "height": 2400,
+    "saveBytes": 13709,
+    "activeRows": 8,
+    "scrollMedianMs": 21.448604583740236,
+    "scrollP95Ms": 27.92389488220215,
+    "scrollMaxMs": 36.13820266723633,
+    "quoteMedianMs": 8.3218,
+    "batchCommitMs": 78.0875,
+    "saveMs": 11.476600000000002,
+    "managedBefore": 111894528,
+    "managedAfter": 117645312
+}

@@ -1,0 +1,62 @@
+PASS Saved Bootstrap opens the initialized redesign Main; scene=Main; recovery=
+PASS Isolated startup never constructs the legacy/cloud session host
+PASS GameController delegates without running old economy calculations
+PASS Main starts with the exact saved UI object/component inventory
+PASS Main settles the capped absence before showing the return page or enabling input
+PASS Main startup receipt is already persisted
+PASS Active control: offline-close
+PASS Return close acknowledges once and reaches Home
+PASS Active control: settings
+PASS Physical topmost hit: settings
+PASS Settings blocks gameplay input without suspending simulation
+PASS Active control: Talent
+PASS Late background navigation cannot bypass a utility overlay
+PASS Actual Main frames keep production running while browsing Settings
+PASS Active control: Toggle Music
+PASS Physical topmost hit: Toggle Music
+PASS Active control: Toggle Sound
+PASS Active control: Toggle Reduced motion
+PASS Retained toggles execute durable new-economy commands
+PASS Active control: settings-privacy
+PASS Physical topmost hit: settings-privacy
+PASS Settings preserves the Privacy route
+PASS Back from Privacy returns to Settings
+PASS Active control: settings-rename-store
+PASS Retained naming dialog opens from Settings
+PASS Active control: save-store-name
+PASS Allowed punctuation is literal text, never formatting markup
+PASS Active control: Toggle Music
+PASS Failed real-file setting write opens recovery and publishes no toggle
+PASS Active control: recovery-start
+PASS Retry keeps the block while the storage failure remains
+PASS Active control: recovery-start
+PASS Retry recovers the same state when storage becomes writable
+PASS True app suspension blocks foreground time and commands
+PASS Repeated resume callbacks restore input without a second settlement
+PASS Active control: Prestige
+PASS Main prestige eligibility has no all-eight-products gate
+PASS Menu production preserves the reviewed prestige reward
+PASS Active control: Confirm prestige
+PASS Main prestige commits the first x6 Fame income and three free credits
+PASS Main rebuild resets products and freezes the next target
+PASS Active control: free-draw
+PASS Main Talent opens a durable free draw reveal
+PASS All Main routes preserve every saved UI object, including input caret and text material slots
+PASS No gameplay/runtime errors: 
+NOTE Known MCP path advisory count: 1
+PASS Saved Bootstrap opens the initialized redesign Main; scene=Main; recovery=
+PASS Isolated startup never constructs the legacy/cloud session host
+PASS GameController delegates without running old economy calculations
+PASS Main starts with the exact saved UI object/component inventory
+PASS Main relaunch prioritizes the exact durable reveal without another draw
+PASS Settings and literal store name survive actual Main relaunch
+PASS Persisted reduced motion settles the restored reveal immediately
+PASS Active control: reveal-done
+PASS Active control: Home
+PASS Completing the restored reveal spends no additional credit
+PASS Rebuild reaches Home with a manual first purchase still required
+PASS Active control: home-first-buy
+PASS Rebuilt first purchase works through Main without an input leak
+PASS All Main routes preserve every saved UI object, including input caret and text material slots
+PASS No gameplay/runtime errors: 
+NOTE Known MCP path advisory count: 1

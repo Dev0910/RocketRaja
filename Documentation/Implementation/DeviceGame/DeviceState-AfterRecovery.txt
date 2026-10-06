@@ -1,0 +1,4 @@
+Read-only check 2026-10-02T00:42:51.8894574Z
+mAwake=false mScreenOnEarly=false mScreenOnFully=false
+mShowingDream=false mDreamingLockscreen=true    mStatusBar=Window{f8dc68e mode=1 rootTaskId=1 u0 StatusBar}    mExpandedPanel=Window{65fc9d5 mode=1 rootTaskId=1 u0 NotificationShade} isKeyguardShowing=true
+Playtest package not installed.

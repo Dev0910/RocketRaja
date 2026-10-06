@@ -1,0 +1,4 @@
+PASS Assets/Scenes/Bootstrap.unity: 167 components; no missing scripts or serialized object references.
+PASS Assets/Scenes/Main.unity: 9366 components; no missing scripts or serialized object references.
+PASS remaining serialized project assets contain no deleted asset GUIDs.
+PASS scene inventory: Bootstrap.unity, Main.unity

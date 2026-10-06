@@ -1,0 +1,9 @@
+PASS Authored GameContent exists
+PASS Serialized content matches source (numeric tolerance 1e-14; authored price strings exact)
+PASS Simulator export matches Unity asset (numeric tolerance 1e-14)
+PASS Runtime manifest matches validated source version
+PASS Unity codec retains unbounded exact counters
+PASS Classic uses the selected persistent profile, never the disposable preview directory
+PASS Identity preferences isolated
+PASS Enabled cloud configuration must match this application
+PASS Unity reports no compilation failure

@@ -1,0 +1,9 @@
+<linker>
+  <!-- RedesignSearchInput binds TMP's private caret cache to an existing serialized renderer. -->
+  <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TMP_InputField" preserve="nothing">
+      <field name="m_CachedInputRenderer" />
+      <field name="caretRectTrans" />
+    </type>
+  </assembly>
+</linker>

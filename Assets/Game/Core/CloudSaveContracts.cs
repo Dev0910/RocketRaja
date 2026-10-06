@@ -59,6 +59,8 @@ namespace RocketRaja.Core
 
     public sealed class CloudConflictException : Exception
     { public CloudConflictException(string message) : base(message) { } }
+    public sealed class UnsupportedCheckpointException : IOException
+    { public UnsupportedCheckpointException() : base("This account checkpoint requires a newer app. All files were preserved.") { } }
 
     public interface IGoogleSignInProvider
     {
@@ -98,22 +100,43 @@ namespace RocketRaja.Core
     public sealed class CheckpointStore
     {
         readonly string file;
+        readonly string expectedUid;
+        bool beganFreshWrite;
         readonly Func<AccountCheckpoint, string> encode;
         readonly Func<string, AccountCheckpoint> decode;
-        public CheckpointStore(string root, string uid, Func<AccountCheckpoint, string> encode, Func<string, AccountCheckpoint> decode)
+        readonly Func<string, SaveVersionHeader> gameplayVersion;
+        public static CheckpointStore ForRedesign(string root, string uid, Func<AccountCheckpoint, string> encode, Func<string, AccountCheckpoint> decode, Func<string, SaveVersionHeader> gameplayVersion) =>
+            new CheckpointStore(Path.Combine(root, "economy-2"), uid, encode, decode, gameplayVersion ?? throw new ArgumentNullException(nameof(gameplayVersion)));
+        public CheckpointStore(string root, string uid, Func<AccountCheckpoint, string> encode, Func<string, AccountCheckpoint> decode, Func<string, SaveVersionHeader> gameplayVersion = null)
         {
             file = Path.Combine(root, "accounts", SavePayload.Digest(uid), "checkpoint.save");
+            expectedUid = uid;
             this.encode = encode; this.decode = decode;
+            this.gameplayVersion = gameplayVersion;
         }
         public AccountCheckpoint Load(string uid)
         {
-            foreach (var path in new[] { file, file + ".bak" })
+            if (uid != expectedUid) return null;
+            var main = Read(file, uid);
+            var backup = Read(file + ".bak", uid);
+            Read(file + ".tmp", uid); // Version guard only: an uncommitted write is never replayed.
+            if (main != null) return main;
+            if (backup != null) return backup;
+            if (File.Exists(file) || File.Exists(file + ".bak") || File.Exists(file + ".tmp"))
+                throw new InvalidDataException("Account checkpoint recovery is required. Existing files were preserved.");
+            return null;
+        }
+        AccountCheckpoint Read(string path, string uid)
+        {
+            if (!File.Exists(path)) return null;
+            try
             {
-                try
-                {
                     string raw = File.ReadAllText(path); int n = raw.IndexOf('\n');
-                    if (n < 1 || raw.Substring(0, n) != SavePayload.Digest(raw.Substring(n + 1))) continue;
+                    if (n < 1 || raw.Substring(0, n) != SavePayload.Digest(raw.Substring(n + 1))) return null;
                     var value = decode(raw.Substring(n + 1));
+                    if (value != null && (value.schema > 1 || value.save?.schema > 1 || value.followup?.schema > 1))
+                        throw new UnsupportedCheckpointException();
+                    CheckGameplayVersion(value?.save); CheckGameplayVersion(value?.followup);
                     if (value != null && value.Valid(uid))
                     {
                         // Unity serializes null inline classes as empty objects. A schema-1
@@ -124,30 +147,49 @@ namespace RocketRaja.Core
                         if (followup != null && (followup.schema == 0 || followup.schema == 1) &&
                             string.IsNullOrEmpty(followup.json) && string.IsNullOrEmpty(followup.checksum))
                             value.followup = null;
+                        if (value.followup != null && !value.followup.Valid()) return null;
                         return value;
                     }
-                }
-                catch (Exception) { /* Preserve unreadable evidence; try the last validated backup. */ }
             }
+            catch (UnsupportedCheckpointException) { throw; }
+            catch (Exception error) when (error is InvalidDataException || error is ArgumentException || error is FormatException || error is InvalidOperationException || error.GetType().Name == "JsonException") { }
+            // I/O/access failures propagate: a locked or unreadable file is not a missing checkpoint.
             return null;
         }
         public void Save(AccountCheckpoint value)
         {
-            if (!value.Valid(value.uid)) throw new InvalidDataException("Invalid account checkpoint.");
+            if (value == null || !value.Valid(expectedUid) || value.followup != null && !EmptyFollowup(value.followup) && !value.followup.Valid()) throw new InvalidDataException("Invalid account checkpoint.");
+            CheckGameplayVersion(value.save); CheckGameplayVersion(value.followup);
+            bool empty = !File.Exists(file) && !File.Exists(file + ".bak") && !File.Exists(file + ".tmp");
+            if (beganFreshWrite && !File.Exists(file) && !File.Exists(file + ".bak")) Read(file + ".tmp", expectedUid);
+            else Load(expectedUid); // Refuse incompatible or unrecoverable existing data before touching any bytes.
+            var previous = Read(file, expectedUid);
+            string json = encode(value);
+            var roundtrip = decode(json);
+            if (roundtrip == null || !roundtrip.Valid(expectedUid) || roundtrip.followup != null && !EmptyFollowup(roundtrip.followup) && !roundtrip.followup.Valid()) throw new InvalidDataException("Invalid checkpoint codec output.");
+            if (empty) beganFreshWrite = true;
             Directory.CreateDirectory(Path.GetDirectoryName(file));
-            string json = encode(value), raw = SavePayload.Digest(json) + "\n" + json;
+            string raw = SavePayload.Digest(json) + "\n" + json;
+            RedesignSaveStore.PreserveInterrupted(file);
             using (var stream = new FileStream(file + ".tmp", FileMode.Create, FileAccess.Write, FileShare.None))
             { var bytes = Encoding.UTF8.GetBytes(raw); stream.Write(bytes, 0, bytes.Length); stream.Flush(true); }
             if (File.Exists(file))
             {
                 // Never rotate an invalid main file over a valid backup.
-                string existing = File.ReadAllText(file); int n = existing.IndexOf('\n');
-                bool valid = n > 0 && existing.Substring(0, n) == SavePayload.Digest(existing.Substring(n + 1));
-                if (valid) File.Copy(file, file + ".bak", true);
-                else File.Copy(file, file + ".damaged", true);
+                if (previous != null) File.Copy(file, file + ".bak", true);
+                else File.Copy(file, file + ".damaged-" + Guid.NewGuid().ToString("N"), false);
                 File.Replace(file + ".tmp", file, null);
             }
             else File.Move(file + ".tmp", file);
+            beganFreshWrite = false;
+        }
+        static bool EmptyFollowup(SavePayload value) => (value.schema == 0 || value.schema == 1) && string.IsNullOrEmpty(value.json) && string.IsNullOrEmpty(value.checksum);
+        void CheckGameplayVersion(SavePayload payload)
+        {
+            if (gameplayVersion == null || payload == null || !payload.Valid()) return;
+            var header = gameplayVersion(payload.json);
+            if (header == null || header.schema < 1 || string.IsNullOrEmpty(header.economy) || header.schema >= 2 && string.IsNullOrEmpty(header.contentVersion)) throw new InvalidDataException("Missing checkpoint gameplay version.");
+            if (header.schema < 2 || header.schema > 3 || header.economy != RedesignCatalog.EconomyVersion || header.contentVersion != RedesignCatalog.ContentVersion) throw new UnsupportedCheckpointException();
         }
         public void Archive(string reason)
         {

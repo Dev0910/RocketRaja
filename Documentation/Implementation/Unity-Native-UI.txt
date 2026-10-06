@@ -1,0 +1,21 @@
+Scope: saved asset and isolated Edit Mode binding/rendering; Play Mode/Main/device acceptance remains open.
+PASS Native prefab exists on disk
+PASS Eight serialized row instances and references reload
+PASS Saved Buttons have disabled keyboard auto-navigation and target graphics
+PASS ScrollRect owns serialized content and viewport
+PASS All TMP text uses persistent font assets
+PASS Native pool binds full 1,000-entry catalogue
+PASS Details dispatches rebound stable ID
+PASS Native search rebinds the matching stable ID
+PASS Native row purchase calls actual core command
+PASS Native Buy All dispatches frozen category quote
+PASS Last authored choice reachable through saved pool
+PASS Empty search hides stale pool rows
+PASS Filtering/search/purchase/scroll preserve all serialized UI identities
+PASS Blocked session disables native cash mutations
+PASS Positive scroll viewport at (390, 844)
+PASS Positive scroll viewport at (360, 640)
+PASS Positive scroll viewport at (360, 540)
+PASS Positive scroll viewport at (450, 916)
+PASS Notched safe-area inset retains usable catalogue
+PASS Unity reports no script compilation failure

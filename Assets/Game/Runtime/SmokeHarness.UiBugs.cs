@@ -210,11 +210,11 @@ namespace RocketRaja
                 ((RectTransform)nextAction.transform).GetWorldCorners(targetCorners);
                 float offerHeight = Vector2.Distance(RectTransformUtility.WorldToScreenPoint(null, targetCorners[0]),
                     RectTransformUtility.WorldToScreenPoint(null, targetCorners[1]));
-                var sponsor = game.HomeScreen.GetComponentsInChildren<LayoutElement>(true).Single(x => x.name == "Sponsor");
-                Check(sponsor.gameObject.activeInHierarchy && offerHeight >= 44f,
-                    "Sponsor and next-goal action remain readable and tappable at " + size);
+                var sponsor = game.HomeScreen.GetComponentsInChildren<LayoutElement>(true).FirstOrDefault(x => x.name == "Sponsor");
+                Check((sponsor == null || !sponsor.gameObject.activeInHierarchy) && offerHeight >= 44f,
+                    "Ad-free next-goal action remains readable and tappable at " + size);
                 Check(nextCopy.All(x => x.fontSize * x.canvas.rootCanvas.scaleFactor * content.localScale.x >= 11.5f),
-                    "Sponsored next-goal copy remains legible at " + size +
+                    "Owned-product next-goal copy remains legible at " + size +
                     " (dashboard scale " + content.localScale.x.ToString("0.00") + ")");
                 Check(content.rect.height * content.localScale.y <= viewport.rect.height + 1,
                     "Owned-product Home dashboard still fits at " + size);
@@ -222,11 +222,8 @@ namespace RocketRaja
                 game.Engine.State.sponsorUntil = game.Engine.State.now + 300;
                 game.View.RefreshNow();
                 yield return new WaitForSecondsRealtime(.2f);
-                var sponsorStatus = sponsor.GetComponentsInChildren<TMP_Text>(true).Single(x => x.name == "sponsor-status");
-                sponsorStatus.ForceMeshUpdate();
-                Check(sponsorStatus.text.StartsWith("SPONSOR ×2") && !sponsorStatus.isTextTruncated,
-                    "Boosted Sponsor timer fits its compact row at " + size);
-                yield return Capture("ui-boosted-home-" + size.x, 0);
+                Check(sponsor == null || !sponsor.gameObject.activeInHierarchy,
+                    "Legacy sponsor timestamp cannot display a boost offer at " + size);
                 game.Engine.State.sponsorUntil = game.Engine.State.now;
                 game.Engine.State.products[0].level = oldLevel;
                 game.Engine.State.onboarding = oldOnboarding;

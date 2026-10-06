@@ -1,0 +1,8 @@
+PASS Missing asset regenerates all redesign content from source
+PASS New content asset never populates the retired Legacy or 96-entry catalogue
+PASS Repeated regeneration preserves the asset GUID and byte-identical unmodified file
+PASS Invalid authored content cannot partially replace an existing asset
+PASS Build validation rejects source drift even when counts and version strings still match
+PASS An incompatible asset at the target path is preserved for inspection
+PASS Prepare content updates the selected economy without regenerating legacy data or changing existing scenes
+PASS Repeated authoring keeps simulator export and runtime manifest identical

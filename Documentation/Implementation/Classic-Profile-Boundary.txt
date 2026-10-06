@@ -1,0 +1,6 @@
+PASS fixture blocks production initialization without rewriting files
+PASS development-shop blocks production initialization without rewriting files
+PASS converted blocks production initialization without rewriting files
+PASS future blocks production initialization without rewriting files
+PASS legacy blocks production initialization without rewriting files
+PASS non-development builds remain gated on release acceptance

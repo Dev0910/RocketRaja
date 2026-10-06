@@ -1,0 +1,40 @@
+PASS Saved preview has an unbound native Main owner
+PASS Main binds the owned account without enabling guest test grants
+PASS Native fixture constructs no legacy/Firebase session host and preserves isolation
+PASS Active native control: settings
+PASS Topmost native hit: settings; point=(945.69, 2278.15); hits=settings
+PASS Settings reports account status and blocks leaked gameplay taps
+PASS Active native control: Close Settings
+PASS Topmost native hit: Close Settings; point=(944.00, 1822.00); hits=Close Settings,SettingsDialog,DimBackdrop
+PASS Owned account accepts a foreground gameplay tap
+PASS Connection loss shows the actual account recovery reason
+PASS Blocked account cannot mutate through an existing screen context
+PASS Active native control: recovery-start
+PASS Topmost native hit: recovery-start; point=(540.00, 862.50); hits=recovery-start,SaveRecoveryDialog,DimBackdrop
+PASS Offline Retry preserves the blocked binding and does not create a guest save
+PASS Active native control: recovery-start
+PASS Topmost native hit: recovery-start; point=(540.00, 862.50); hits=recovery-start,SaveRecoveryDialog,DimBackdrop
+PASS Active native control: recovery-start
+PASS Topmost native hit: recovery-start; point=(540.00, 862.50); hits=recovery-start,SaveRecoveryDialog,DimBackdrop
+PASS Repeated Retry shares one in-flight renewal and keeps gameplay closed
+PASS Confirmed retry rebinds the saved screens to the recovered account engine
+PASS Old lifecycle and screen callbacks stay fenced after recovery
+PASS Pending account command survives reconnect exactly once and checkpoint acknowledgment is durable
+PASS Recovered Main displays its already-saved offline receipt
+PASS Active native control: offline-close
+PASS Topmost native hit: offline-close; point=(540.00, 389.13); hits=offline-close,Viewport
+PASS Native acknowledgment closes the recovered receipt once
+PASS Account profile cannot use simulated guest pack grants
+PASS Backgrounding saves and blocks account ownership until renewed
+PASS Foreground return cannot reopen an unconfirmed account session
+PASS Active native control: recovery-start
+PASS Topmost native hit: recovery-start; point=(540.00, 862.50); hits=recovery-start,SaveRecoveryDialog,DimBackdrop
+PASS Background retry binds the new server-timed absence receipt
+PASS Active native control: offline-close
+PASS Topmost native hit: offline-close; point=(540.00, 389.13); hits=offline-close,Viewport
+PASS Device takeover reaches native recovery and stops foreground play
+PASS Active native control: recovery-start
+PASS Topmost native hit: recovery-start; point=(540.00, 862.50); hits=recovery-start,SaveRecoveryDialog,DimBackdrop
+PASS Native Retry cannot take over or rewrite the other device even after expiry
+PASS Recovery and rebind retain every saved UI object identity
+PASS No runtime errors or exceptions during account recovery

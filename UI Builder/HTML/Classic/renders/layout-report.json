@@ -1,0 +1,1094 @@
+{
+  "status": "pass",
+  "results": [
+    {
+      "route": "Home",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Player",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Products",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Legacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Shop",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Upgrades",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "UpgradeDetail:PP-ANA-01",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "BuyAll",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "ProductDetail:0",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "TapTraining",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Skills",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SkillDetail:0",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Talent",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "CardDetail:0",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "DrawReveal",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Prestige",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Offline",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Statistics",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Settings",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Naming",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Privacy",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Account",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Welcome",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "AccountCompare",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Promote",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SignOut",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Handoff",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SaveRecovery",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryConfirm",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryExit",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Purchase",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Appearance",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Help",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Odds",
+      "viewport": [
+        390,
+        844
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Home",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Player",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Products",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Legacy",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Shop",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Upgrades",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "UpgradeDetail:PP-ANA-01",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "BuyAll",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "ProductDetail:0",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "TapTraining",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Skills",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SkillDetail:0",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Talent",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "CardDetail:0",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "DrawReveal",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Prestige",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Offline",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Statistics",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Settings",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Naming",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Privacy",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Account",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Welcome",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "AccountCompare",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Promote",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SignOut",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Handoff",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SaveRecovery",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryConfirm",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryExit",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Purchase",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Appearance",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Help",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Odds",
+      "viewport": [
+        360,
+        640
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Home",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Player",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Products",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Legacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Shop",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Upgrades",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "UpgradeDetail:PP-ANA-01",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "BuyAll",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "ProductDetail:0",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "TapTraining",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Skills",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SkillDetail:0",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Talent",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "CardDetail:0",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "DrawReveal",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Prestige",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Offline",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Statistics",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Settings",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Naming",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Privacy",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Account",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Welcome",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "AccountCompare",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Promote",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SignOut",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Handoff",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SaveRecovery",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryConfirm",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryExit",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Purchase",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Appearance",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Help",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Odds",
+      "viewport": [
+        360,
+        540
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Home",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Player",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Products",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Legacy",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Shop",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Upgrades",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "UpgradeDetail:PP-ANA-01",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "BuyAll",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "ProductDetail:0",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "TapTraining",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Skills",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SkillDetail:0",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Talent",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "CardDetail:0",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "DrawReveal",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Prestige",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Offline",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Statistics",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Settings",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Naming",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Privacy",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Account",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Welcome",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "AccountCompare",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Promote",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SignOut",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Handoff",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "SaveRecovery",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryConfirm",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "RecoveryExit",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Purchase",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Appearance",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Help",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    },
+    {
+      "route": "Odds",
+      "viewport": [
+        450,
+        916
+      ],
+      "smallControls": []
+    }
+  ],
+  "errors": []
+}

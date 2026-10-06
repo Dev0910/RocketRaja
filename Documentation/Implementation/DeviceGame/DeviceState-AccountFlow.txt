@@ -1,0 +1,9 @@
+Observed UTC: 2026-10-02T01:14:31.2912150Z
+device
+Playtest package:
+Original game package:
+package:/data/app/~~JLW5t0GkIrnEatYposzzMg==/com.diwali.fireworkstycoon.dev-fiZiutpjvsthzEM486qh0A==/base.apk
+Lock state:
+      showing=true
+        mIsShowing=true
+        mInputRestricted=true

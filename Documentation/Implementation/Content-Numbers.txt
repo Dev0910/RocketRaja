@@ -1,0 +1,54 @@
+PASS Authoritative 1,000 cash entries and 28 cards import
+PASS Stable-ID indexed authored first signature price
+PASS Full x31 late price range preserved
+PASS Final MIX membership changes to BOX+ROC
+PASS Duplicate IDs rejected
+PASS Unknown prerequisite rejected
+PASS Prerequisite cycles rejected
+PASS Nonpositive price rejected
+PASS Invalid product target rejected
+PASS Unsupported future content rejected
+PASS Price drift rejected
+PASS Unrecognized authored gate fails import instead of being ignored
+PASS Copies above double and long range increase by exactly one
+PASS Exact count roundtrips as decimal string
+PASS Malformed counters rejected
+PASS Reward boundary E/T=1, U=249
+PASS Reward boundary E/T=4, U=249
+PASS Reward boundary E/T=9, U=249
+PASS Reward boundary E/T=16, U=249
+PASS Reward boundary E/T=1, U=250
+PASS Reward boundary E/T=4, U=250
+PASS Reward boundary E/T=9, U=250
+PASS Reward boundary E/T=16, U=250
+PASS Reward boundary E/T=1, U=499
+PASS Reward boundary E/T=4, U=499
+PASS Reward boundary E/T=9, U=499
+PASS Reward boundary E/T=16, U=499
+PASS Reward boundary E/T=1, U=500
+PASS Reward boundary E/T=4, U=500
+PASS Reward boundary E/T=9, U=500
+PASS Reward boundary E/T=16, U=500
+PASS Reward boundary E/T=1, U=749
+PASS Reward boundary E/T=4, U=749
+PASS Reward boundary E/T=9, U=749
+PASS Reward boundary E/T=16, U=749
+PASS Reward boundary E/T=1, U=750
+PASS Reward boundary E/T=4, U=750
+PASS Reward boundary E/T=9, U=750
+PASS Reward boundary E/T=16, U=750
+PASS Reward boundary E/T=1, U=999
+PASS Reward boundary E/T=4, U=999
+PASS Reward boundary E/T=9, U=999
+PASS Reward boundary E/T=16, U=999
+PASS Reward boundary E/T=1, U=1000
+PASS Reward boundary E/T=4, U=1000
+PASS Reward boundary E/T=9, U=1000
+PASS Reward boundary E/T=16, U=1000
+PASS Below target grants nothing
+PASS Extreme earnings yield exact uncapped Fame and three first credits
+PASS Fame grants x6 then x9, without compounding x6
+PASS Target caps safely for unbounded prestige count
+PASS Unbounded card profit remains Amount
+PASS Exact duplicate benefit survives rounded display saturation
+All 53 redesign checks passed. Content SHA256=C0904702675993BCF0B3F647A8A1DC71E6A4FBFA5A455B97EFE58F43EFEFA5F7

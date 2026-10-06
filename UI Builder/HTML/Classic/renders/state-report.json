@@ -1,0 +1,306 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "screen": "Home",
+      "state": "new",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "opened",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "progressed",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "rebuilt",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "progressed",
+      "condition": "active",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Talent",
+      "state": "growing",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "SkillDetail:0",
+      "state": "progressed",
+      "condition": "active",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "SkillDetail:2",
+      "state": "progressed",
+      "condition": "cooldown",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "state": "prestige",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Upgrades",
+      "state": "progressed",
+      "condition": "empty",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "ProductDetail:0",
+      "state": "progressed",
+      "condition": "save-error",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "loading",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "unavailable",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "pending",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "DrawReveal",
+      "state": "progressed",
+      "condition": "normal",
+      "viewport": [
+        360,
+        540
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "new",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "opened",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "progressed",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "rebuilt",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Home",
+      "state": "progressed",
+      "condition": "active",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Talent",
+      "state": "growing",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "SkillDetail:0",
+      "state": "progressed",
+      "condition": "active",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "SkillDetail:2",
+      "state": "progressed",
+      "condition": "cooldown",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Prestige",
+      "state": "prestige",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Upgrades",
+      "state": "progressed",
+      "condition": "empty",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "ProductDetail:0",
+      "state": "progressed",
+      "condition": "save-error",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "loading",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "unavailable",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "Shop",
+      "state": "progressed",
+      "condition": "pending",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    },
+    {
+      "screen": "DrawReveal",
+      "state": "progressed",
+      "condition": "normal",
+      "viewport": [
+        390,
+        844
+      ],
+      "result": "pass"
+    }
+  ],
+  "errors": []
+}

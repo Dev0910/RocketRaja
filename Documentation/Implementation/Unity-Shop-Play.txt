@@ -1,0 +1,61 @@
+Scope: native saved preview, two Play Mode sessions and one disposable profile. Simulated shop only; no Google Play, network or charge. Main/device acceptance pending.
+PASS Only the saved preview and explicit disposable profile are used
+PASS Startup preserves every saved UI object and component
+PASS Actual driver loads the isolated test guest; load=Loaded; save=
+PASS Active control: Talent
+PASS Active control: KK shop
+PASS Talent opens the test shop with gameplay taps blocked
+PASS Opening the shop never grants or marks a purchase
+PASS Physical shop touch reaches topmost pack control; screen=1080x2400; point=(540.00, 1036.72)
+PASS Native purchase persists pending without delivering KK
+PASS Repeated native callback retains one pending operation
+PASS Active control: leave-pending
+PASS Active control: KK shop
+PASS Leaving and reopening keeps the same pending purchase
+PASS On-disk purchase is pending before application interruption
+PASS Purchase state changes create no UI objects
+PASS No gameplay/runtime errors in first session: 
+NOTE Known MCP path advisory count: 1
+PASS Only the saved preview and explicit disposable profile are used
+PASS Startup preserves every saved UI object and component
+PASS Actual driver loads the isolated test guest; load=Loaded; save=
+PASS Active control: Talent
+PASS Active control: KK shop
+PASS Talent opens the test shop with gameplay taps blocked
+PASS Second Play Mode session recovers the same undelivered purchase from disk
+PASS Active control: simulate-delivered
+PASS Native success delivers exact pack: rr.kk.small.1000
+PASS Duplicate success callback cannot redeliver pack 0
+PASS Active control: pack-1
+PASS Active control: simulate-delivered
+PASS Native success delivers exact pack: rr.kk.festival.6000
+PASS Duplicate success callback cannot redeliver pack 1
+PASS Active control: pack-2
+PASS Active control: simulate-delivered
+PASS Native success delivers exact pack: rr.kk.celebration.13000
+PASS Duplicate success callback cannot redeliver pack 2
+PASS Active control: pack-3
+PASS Active control: simulate-delivered
+PASS Native success delivers exact pack: rr.kk.grand.28000
+PASS Duplicate success callback cannot redeliver pack 3
+PASS All four packs total 48000 KK and never auto-draw
+PASS Active control: pack-0
+PASS Active control: Cancel test
+PASS Native cancellation grants nothing
+PASS Active control: pack-1
+PASS Active control: Simulate failure
+PASS Native failure grants nothing
+PASS Active control: test-shop-states
+PASS Active control: Loading
+PASS Native loading simulation disables pack controls
+PASS Active control: Unavailable
+PASS Native unavailable simulation disables pack controls
+PASS Active control: test-ready
+PASS Active control: shop-back
+PASS Active control: Draw · 100 KK
+PASS Explicit Talent action spends exactly 100 simulated KK for one actual card
+PASS Active control: reveal-done
+PASS Delivered packs and later spend remain consistent on disk
+PASS Shop, outcomes and draw navigation retain actual saved UI identities
+PASS No gameplay/runtime errors in recovered session: 
+NOTE Known MCP path advisory count: 1

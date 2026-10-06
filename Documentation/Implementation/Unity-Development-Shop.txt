@@ -1,0 +1,12 @@
+PASS JsonUtility empty inline test-shop object does not mark an ordinary guest save
+PASS Unity saves the explicit test marker
+PASS rr.kk.small.1000 pending operation survives Unity codec
+PASS rr.kk.small.1000 grant persists exactly once through Unity codec
+PASS rr.kk.festival.6000 pending operation survives Unity codec
+PASS rr.kk.festival.6000 grant persists exactly once through Unity codec
+PASS rr.kk.celebration.13000 pending operation survives Unity codec
+PASS rr.kk.celebration.13000 grant persists exactly once through Unity codec
+PASS rr.kk.grand.28000 pending operation survives Unity codec
+PASS rr.kk.grand.28000 grant persists exactly once through Unity codec
+PASS Unity test profile cannot prepare live premium ownership
+Scope: Unity editor/JsonUtility tests of simulated development purchases; no Google Play integration or native shop UI acceptance.

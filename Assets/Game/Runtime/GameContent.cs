@@ -7,5 +7,6 @@ namespace RocketRaja
     public sealed class GameContent : ScriptableObject
     {
         public Catalog catalog;
+        public RedesignContent redesign;
     }
 }

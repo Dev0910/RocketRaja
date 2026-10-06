@@ -9,6 +9,7 @@ namespace RocketRaja
 {
     public sealed class GameController : MonoBehaviour
     {
+        public RedesignApplication redesignApplication;
         [SerializeField] ImportedPrivacyScreen privacyScreen;
         public ImportedPrivacyScreen PrivacyScreen => privacyScreen;
         [SerializeField] ImportedSettingsScreen settingsScreen;
@@ -40,14 +41,14 @@ namespace RocketRaja
         public ImportedLegacyScreen LegacyScreen => legacyScreen;
         public GameEngine Engine { get; private set; }
         public GameView View { get; private set; }
-        public IRewardedAds Ads { get; private set; }
+        public IRewardedAds Ads { get; } = new DisabledRewardedAds();
         public string SaveWarning { get; private set; }
         IPlayerSession session;
         public bool CanPlay => session != null && session.CanPlay && !saveBlocked;
-        public bool IsAdShowing => adShowing;
+        public bool IsAdShowing => false;
         public double SessionUtc => (session as AccountSession)?.ServerNow ?? Utc;
         double accumulator, saveTimer;
-        bool suspended, adShowing, modalPaused, saveBlocked;
+        bool suspended, modalPaused, saveBlocked;
         readonly HashSet<UnityEngine.Object> modalOwners = new HashSet<UnityEngine.Object>();
         public void HoldModal(UnityEngine.Object owner) { modalOwners.Add(owner); ModalPaused = true; }
         public void ReleaseModal(UnityEngine.Object owner) { modalOwners.Remove(owner); ModalPaused = modalOwners.Count > 0; }
@@ -59,6 +60,9 @@ namespace RocketRaja
 #if UNITY_EDITOR
                 if (UnityEditor.SessionState.GetBool("RocketRaja.EditorSmoke", false)) return true;
 #endif
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+                if (Debug.isDebugBuild && RedesignSmokeProfile.AndroidRequested) return true;
+#endif
                 return Debug.isDebugBuild && Array.IndexOf(Environment.GetCommandLineArgs(), "--smoke") >= 0;
             }
         }
@@ -67,6 +71,11 @@ namespace RocketRaja
 
         void Awake()
         {
+            if (redesignApplication)
+            {
+                View = GetComponent<GameView>(); View.InitializeRedesign(redesignApplication.router);
+                enabled = false; return;
+            }
             Application.targetFrameRate = 60;
             Screen.orientation = ScreenOrientation.Portrait;
             var host = PlayerSessionHost.Ensure();
@@ -98,8 +107,6 @@ namespace RocketRaja
                 enabled = false;
                 return;
             }
-            Ads = SmokeMode ? (IRewardedAds)new TestRewardedAds() : new AdMobRewardedAds(this);
-            Ads.Initialize();
             gameObject.AddComponent<ShopAudio>().Initialize(this);
         }
         void BindEngine()
@@ -111,6 +118,7 @@ namespace RocketRaja
         }
         void Start()
         {
+            if (redesignApplication) return;
             if (saveBlocked) View.ShowSaveRecovery();
             else if (SaveWarning != null) View.Notice(SaveWarning);
             else if (!string.IsNullOrEmpty(Engine.State.pendingOfflineId)) View.ShowOffline();
@@ -118,8 +126,7 @@ namespace RocketRaja
         }
         void Update()
         {
-            Ads?.Tick();
-            if (!CanPlay || suspended || adShowing || modalPaused || saveBlocked) return;
+            if (!CanPlay || suspended || modalPaused || saveBlocked) return;
             accumulator += Time.unscaledDeltaTime;
             if (accumulator >= .1) { Engine.Advance(accumulator); accumulator = 0; }
             saveTimer += Time.unscaledDeltaTime;
@@ -127,7 +134,7 @@ namespace RocketRaja
         }
         public void Tap()
         {
-            if (!CanPlay || suspended || adShowing || modalPaused || saveBlocked) return;
+            if (!CanPlay || suspended || modalPaused || saveBlocked) return;
             Engine.Tap(); View.TapFeedback();
             if (Engine.State.onboarding == 0)
             {
@@ -145,7 +152,7 @@ namespace RocketRaja
         /// <summary>Applies the same purchase, onboarding, save, and feedback from every product entry point.</summary>
         public bool PurchaseProduct(int index, int quantity)
         {
-            if (!CanPlay || suspended || adShowing || Engine == null || View == null ||
+            if (!CanPlay || suspended || Engine == null || View == null ||
                 index < 0 || index >= Engine.Data.products.Length || quantity <= 0)
                 return false;
 
@@ -172,13 +179,12 @@ namespace RocketRaja
             if (Engine == null || suspended) return;
             if (!modalPaused && accumulator > 0) { Engine.Advance(accumulator); accumulator = 0; }
             suspended = true;
-            if (!adShowing) Save();
+            Save();
         }
         void Resume()
         {
             if (!suspended || Engine == null) return;
             suspended = false;
-            if (adShowing) return;
             if (session.IsAccount) { PlayerSessionHost.Ensure().OpenStartup("Syncing your account before resuming…"); return; }
             Engine.ResolveOffline(Utc);
             if (!string.IsNullOrEmpty(Engine.State.pendingOfflineId)) View.ShowOffline();
@@ -187,47 +193,8 @@ namespace RocketRaja
         void OnApplicationFocus(bool focused) { if (SmokeMode) return; if (!focused) Suspend(); else Resume(); }
         void OnApplicationQuit() { Save(); Ads?.Dispose(); }
         void OnDestroy() { Ads?.Dispose(); }
-        public void ShowAd(string placement, Action<bool> completed = null)
-        {
-            if (!CanPlay || adShowing || !Ads.Ready) { View.Notice("No video is available. You can keep playing."); completed?.Invoke(false); return; }
-            if (placement == "sponsor" && Engine.State.sponsorUntil > Engine.State.now) { completed?.Invoke(false); return; }
-            string offlineId = Engine.State.pendingOfflineId;
-            if (placement == "offline" && string.IsNullOrEmpty(offlineId)) { completed?.Invoke(false); return; }
-            if (accumulator > 0) Engine.Advance(accumulator);
-            accumulator = 0;
-            Save(); adShowing = true;
-            string runId = Engine.State.runId;
-            var accountAtStart = session as AccountSession;
-            long generation = accountAtStart?.Generation ?? 0;
-            Ads.Show(async (success, receipt) =>
-            {
-                if (this == null) return;
-                if (accountAtStart != null)
-                {
-                    try
-                    {
-                        await PlayerSessionHost.Ensure().ResumeAfterAdAsync(accountAtStart.Uid, generation);
-                        if (this == null || session != accountAtStart) return;
-                        suspended = false; BindEngine();
-                    }
-                    catch
-                    {
-                        adShowing = false; completed?.Invoke(false);
-                        PlayerSessionHost.Ensure().OpenStartup("Reconnect to continue your account. The video could not be rewarded.");
-                        return;
-                    }
-                }
-                if (!CanPlay) { adShowing = false; completed?.Invoke(false); return; }
-                // Ad time is neither online nor offline earning time. Reward is applied after advancing the clock.
-                Engine.State.now = Engine.State.savedAt = Math.Max(Engine.State.now, SessionUtc);
-                adShowing = false;
-                bool rewarded = success && Engine.State.runId == runId && Engine.RewardAd(receipt, placement, offlineId);
-                if (rewarded) { View.Notice("Your bonus is ready!"); HomeScreen?.RewardFeedback(); }
-                else View.Notice("Video closed without a reward. Your progress is safe.");
-                Save(); View.RefreshNow();
-                completed?.Invoke(rewarded);
-            });
-        }
+        // Compatibility entry point: even a stale event returns rejection synchronously.
+        public void ShowAd(string placement, Action<bool> completed = null) => completed?.Invoke(false);
         public bool StartFreshAfterDamagedSave()
         {
             // This action is only offered with explicit in-game confirmation. Damaged files remain archived.

@@ -1,0 +1,1 @@
+Saved Classic objects=2544; missingScripts=0; audioOwners=1; sources=2; listeners=1; fixedParticles=64; guidanceRows=14; decorationLayers=5; override=none

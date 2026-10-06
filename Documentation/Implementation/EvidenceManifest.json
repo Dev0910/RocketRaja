@@ -1,0 +1,4544 @@
+{
+  "generatedAt": "2026-10-02T01:14:32.254Z",
+  "hashFormat": "SHA256 of UTF-8 text, leading BOM removed and CRLF normalized to LF",
+  "economy": "2.0.0",
+  "content": "cash-only-v1",
+  "authoredSourceHash": "C0904702675993BCF0B3F647A8A1DC71E6A4FBFA5A455B97EFE58F43EFEFA5F7",
+  "status": "Reproducible implementation evidence. Ordered visual handoff complete with approval waiver; native integration and prototype device/player acceptance incomplete. Actual IAP linking deferred by user.",
+  "inputs": [
+    {
+      "path": ".gitattributes",
+      "sha256": "884D3DAC4D59F2F6E1422B20CAC2E1F88EAFFD8653D2DE03C7683674052CA5D8"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Fraunces ExtraBold SDF.asset",
+      "sha256": "6B343E27717BCE62799D2F4F6057257AC896C97DD453E131090BB9E9A0D0CAB8"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Fraunces ExtraBold SDF.asset.meta",
+      "sha256": "8D138147C0F38070A0FEE353215126AD8AC90A4A4B821872FF9184214448101E"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito ExtraBold SDF.asset",
+      "sha256": "6701E30C94CF98549EDCFB58FC86AE7FCA881F0F561CB06C6B17714C571CB571"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito ExtraBold SDF.asset.meta",
+      "sha256": "53825062B999D24E48F35F2D339AB3163FC23E024E6C93F775D1BD006F43B403"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito Medium SDF.asset",
+      "sha256": "2DB7640B7BADF0CB3EA0C771907C9680A946C5D33095ED4CA7804C861041E600"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito Medium SDF.asset.meta",
+      "sha256": "8409087760670FE7E760DC129BF591760BC50068776D51699D98177F7A1DCDF8"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildGame.cs",
+      "sha256": "CE5D30A8588843C6D7361A8C8DE67EBB97DBDE8A51E1F8656939357BF9D79BDF"
+    },
+    {
+      "path": "Assets/Game/Editor/ValidateGame.cs",
+      "sha256": "3ED9532107088C933EC0E51AE45977489883E8F5BE0BB32986530C100113BB55"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Baloo 2 Bold SDF.asset",
+      "sha256": "947658FBD1B6CD7FB76BC760B9AE9965C08CD5EE8237C8C27337B6C0FCCEB822"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Baloo 2 Bold SDF.asset.meta",
+      "sha256": "8A1CD951AA46A4DE76D4315B82708EC1E7FABB047AC90068005DB6081827BFBD"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Home Screen.prefab",
+      "sha256": "DACF74B17BA33BBE4445A46839C3FD78222E63908B091D0954E72056E5196BB7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Home Screen.prefab.meta",
+      "sha256": "85C0641B4616843C0CD7319455330B4C2423FB0415CACF417669F44DEDDDCA59"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Legacy Screen.prefab",
+      "sha256": "002DB0F2B9F63BC626DFC4ACAFB3AF7B2C132AE6131B9D937AFF15C8F2D11CF7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Legacy Screen.prefab.meta",
+      "sha256": "527BD9A00861274C3E86C3477EFD68F64987A4C51202F62442981A91C8D0AC76"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Noto Sans Rupee SDF.asset",
+      "sha256": "B372932EB9ED3F8949FF628A7465CB1A1A58C00D4417477099C7B57C79E433D4"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Noto Sans Rupee SDF.asset.meta",
+      "sha256": "F6ED83615C46F7DBFC7BCD151F9323CC9492B4F45D8957770D49F4071B587B8D"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito ExtraBold SDF.asset",
+      "sha256": "F9702BBFE57CC4D9EDAE70C684F5FB19B91B2A2BADF87AA9D967F9FD67EC1502"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito ExtraBold SDF.asset.meta",
+      "sha256": "E84B8A48BDB0B7ECA3D71C4FEBE70F5BE6DC7CBC4E5D9DB14D56EE058FA4D458"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito Medium SDF.asset",
+      "sha256": "0CFF741A51F55642C19159F8FC62A53192FC63051E35C7AFC2C25FC5593A59B1"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito Medium SDF.asset.meta",
+      "sha256": "257AEA3C1C3C9C06EBB1AF5F3D1B74CF6115CDA3F2A7D7BACBFA68D7E3EACBC6"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Offline Screen.prefab",
+      "sha256": "476873B80CDEB9C8346E784B0C5FCE781F9C62B563DAD493C3CFE5B0BDD61E47"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Offline Screen.prefab.meta",
+      "sha256": "56D2FCBD9D4C3728712957A710377FCB7B3708C83D7956BB1572017FC2630F5C"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Outfit SDF.asset",
+      "sha256": "42157A72EFC7D883C120216D6842B8F185E5E93AF06C657CB17B84813FD271B1"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Outfit SDF.asset.meta",
+      "sha256": "B99B59CF75233691CBD6DA1C91CA5AEB71F57DCC06382A613A3786A4791D89C2"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Player Screen.prefab",
+      "sha256": "72EBFC514B49DEE8A8B6FB86F19589A23886B20F4BDD495EC027583A48E217D9"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Player Screen.prefab.meta",
+      "sha256": "2956E01690FAB20FF9E4D930F7B2D97728A83F13FC352EEBC1D5A65BE66BCCE9"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Prestige Screen.prefab",
+      "sha256": "6BA05C76E6ABD1E5BCAA8200A61E29AE9396A04FB9F5D36D693640447CA53462"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Prestige Screen.prefab.meta",
+      "sha256": "56026606DD3A0359EBFA6C24BD6AA55B28A63124A5C711A87D0CC8FAC233EA7B"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Privacy Screen.prefab",
+      "sha256": "CD37EB3792355EF66C54D8D44C16391C1F5E1A603BE14BC5B5BA9FDA5D5CF6FB"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Privacy Screen.prefab.meta",
+      "sha256": "A9EFD81D9308A1C0542EFB680A4CB0C8949185EBB32277D7BC7EA50DEADA97A8"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Product Detail Screen.prefab",
+      "sha256": "587B0BE3580F49850B6E8FC35719476B5FF5A2E3A119D09E1C21E826B77CD0D8"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Product Detail Screen.prefab.meta",
+      "sha256": "CE68CE6C182A7A748CFDB4D0DE6E871F663AEB0914B4373527E3BF2EAC9E1A7D"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Products Screen.prefab",
+      "sha256": "89597036CF7B788A13DEF862F6A4680AEB74BBCEE154E77F3E499024411DCC3A"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Products Screen.prefab.meta",
+      "sha256": "94F8E89FAC22786A8B20FDC18449FC4640516D4DC7A339181908885657C91800"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Save Recovery Screen.prefab",
+      "sha256": "1E44B9950085887946DEF1A6E098E6E32A11EF4DCB49FFAA60C423F5EB675511"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Save Recovery Screen.prefab.meta",
+      "sha256": "C9FE8452A144B6E54D0D765DA059C7F000D9DCA976EF523FD163EC351009C764"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Settings Screen.prefab",
+      "sha256": "CD9AAC8CC0D93BC9030FCCF06F00E4413F9FF7BAAAD4303183E6D8225F17B6D0"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Settings Screen.prefab.meta",
+      "sha256": "B5514BFF185E057F316F6C8020CD8975B3BABAC94FB169FAFDBCD76A6F1F0AD7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Skills Screen.prefab",
+      "sha256": "33510F7B5F0FF05B66344DD6212686C244E8D8EA827FE2EE51FC65EEB4385C74"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Skills Screen.prefab.meta",
+      "sha256": "6DA15C3CB5A8408836561DF813B34999F421C03F18C351AE4626336D1E29173F"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Statistics Screen.prefab",
+      "sha256": "CC0887069938E79AD544E0687AB49FD1B803A154DDAA0473143A95453213CB78"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Statistics Screen.prefab.meta",
+      "sha256": "9CC4732918B59D06521C623F194024842C2035B297EEE43AFD61BDB6F96B9500"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Store Name Screen.prefab",
+      "sha256": "109B1DB51F7C8F59069E1F75A6D3B9773A3B659612644AAE3D31D51679A66A06"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Store Name Screen.prefab.meta",
+      "sha256": "9949215BC3242ADD287CD8C331384F32A4EFC95695EB96760335A2EC2469E06D"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Tap Reward Material.mat",
+      "sha256": "081EB751D7BC70E62AAA3FFE9838EEDA526D3680DD3B927C46C37866BA1E2165"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Tap Reward Material.mat.meta",
+      "sha256": "BC876DC4A710536BAD92B2DE09FA8C4BE5CF732840C8FD2B3D283D441C77D167"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameController.cs",
+      "sha256": "83A34324B10A2D85F25E9512D05B6FF91DA4B6D81E51438FBA4AE6D657FF4E72"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameView.cs",
+      "sha256": "8755BADF67B31573A44B9DDD6BE9EC8034E94EB8AA0C833A181D2788D5BC7935"
+    },
+    {
+      "path": "Assets/Plugins/Android/mainTemplate.gradle",
+      "sha256": "455DA418C17DBCD7CF18C317CD0788A3B5EA0C827655D7FA279F66941E118C2D"
+    },
+    {
+      "path": "Assets/Plugins/Android/settingsTemplate.gradle",
+      "sha256": "CE18591C637A07FF5FE4F804D6786BE06616BF7BD2FBB173545398B6BDED8F1E"
+    },
+    {
+      "path": "Assets/Resources/GameContent.asset",
+      "sha256": "2584351048AA601B3F82CCA720A5F4365D47EFAD843004169958B8879A41E7B9"
+    },
+    {
+      "path": "Assets/Resources/RedesignCloudSettings.asset",
+      "sha256": "868A26F27D9D49FBEC1756A4BF7118B4AEE3C1C3CBDC9CA711A1795A275559A0"
+    },
+    {
+      "path": "Assets/Resources/RedesignCloudSettings.asset.meta",
+      "sha256": "55E100CD760E64B0F22C46D79FE5FF984F8490DF05795212673276E94DA5FA59"
+    },
+    {
+      "path": "Assets/Resources/RedesignContentManifest.json",
+      "sha256": "5BB5D7C6AF1CFC5D7F587EEDDABA7EE4C3759412AA63B75D612B4849E9DE9C5A"
+    },
+    {
+      "path": "Assets/Scenes/Bootstrap.unity",
+      "sha256": "C2E7B62162DE24FA8DD808EB4AC3AE7CA493580C399D7E0D2F60B056C3C7CD08"
+    },
+    {
+      "path": "Assets/Scenes/HTML Importer.unity",
+      "sha256": "6466E26013F1FF7C818CD96E180628F68F12C82B8832C2F69FD74D7BA4B20C85"
+    },
+    {
+      "path": "Assets/Scenes/Main.unity",
+      "sha256": "232557128DB5C1F3AE4F43ED01831ED9B285DD05E1429B7796E86E98DE8AB1B3"
+    },
+    {
+      "path": "Assets/Scenes/Redesign UI Preview.unity",
+      "sha256": "47F63EB05F294EAA80310692C9FA5AB7A8508816E33967359AD269DACE388015"
+    },
+    {
+      "path": "Assets/Game/Core/AccountSession.cs",
+      "sha256": "DE7616E2BDB925ADD2DF3BDBD9A243B3B81634B47EE0977B796B903CF898CE10"
+    },
+    {
+      "path": "Assets/Game/Core/Amount.cs",
+      "sha256": "58870A9AC68DAD6E9E3165B661A93C25E00E62DA3EC0D2916F65433410DF9B49"
+    },
+    {
+      "path": "Assets/Game/Core/Catalog.cs",
+      "sha256": "2E99EE6497BE32520AFC10B3D95A6FA494EFCE82F31F0B60641A5CEA46B93E72"
+    },
+    {
+      "path": "Assets/Game/Core/CloudSaveContracts.cs",
+      "sha256": "94A0ED5D8F30AE7CBADDC7B898DB5C6916340E734BE106866FF6E30D55B9E7DC"
+    },
+    {
+      "path": "Assets/Game/Core/DevelopmentShop.cs",
+      "sha256": "288D4B760A4AE578C22524098EA1F5AEEF29A5674F0971FFFC7A30F2DDAF38DC"
+    },
+    {
+      "path": "Assets/Game/Core/DisposableFixtureMigration.cs",
+      "sha256": "A8420B2CBD5D2D76C3749DD4A78B8A622A57203D29E4EDC0A88C791ECD1FEBD6"
+    },
+    {
+      "path": "Assets/Game/Core/GameEngine.cs",
+      "sha256": "394DDABFA2E9C8177800857B9BB8DDFB922A490CF9FA3FAE5EF5D2D93091E213"
+    },
+    {
+      "path": "Assets/Game/Core/GameState.cs",
+      "sha256": "7C8F0DA05CBF83CFA3D78A7F047C2E334DBC16E32BD4D77AD8EF93FEB469844D"
+    },
+    {
+      "path": "Assets/Game/Core/PremiumAccountClient.cs",
+      "sha256": "A1190D3F1246413C8EE4CFFA816E25B6BED91CEB3423568E6896E2843CA79E01"
+    },
+    {
+      "path": "Assets/Game/Core/PremiumFulfillmentContracts.cs",
+      "sha256": "C9D145C7D75A9395B63C5A9983C19615BB500B25CE8E950D6C06CC0A884E6834"
+    },
+    {
+      "path": "Assets/Game/Core/PremiumHttpTransport.cs",
+      "sha256": "209E396638611E3F2748B9A71EAEBF31DF0257F04DCD105AC3D4D2384F915594"
+    },
+    {
+      "path": "Assets/Game/Core/PremiumWalletState.cs",
+      "sha256": "39AD57861ED2CC88B4101D1C25AA916187B5C9CD150CFDC0249E3171007AB40C"
+    },
+    {
+      "path": "Assets/Game/Core/ProductMilestones.cs",
+      "sha256": "1C71AB0C20298AF3CBC6D3AED132E71E3F67AF1A06BBB093BDAB57F34948D0AA"
+    },
+    {
+      "path": "Assets/Game/Core/ProgressionNumbers.cs",
+      "sha256": "83EB0385776A529161D237145ADCA497B26F746592F92A88342EF127B9B3D6E1"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignAccountCoordinator.cs",
+      "sha256": "7CD0D8998B20DD0B5CD214106C546F0AFD77ECFE62F5481A3EA48C72D71C6BC1"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignAccountSession.cs",
+      "sha256": "A84BCC3804781AFAF476645FA04F5EBDBEDF70D0BFAA37DE611CD327EBF45C34"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignAppearance.cs",
+      "sha256": "A130119FEEBCDC28BC895A9CB75FF1951ADA0680F72A534950BF810E7B4C122C"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignBuildSafety.cs",
+      "sha256": "732E73FC92CC84C6F3D3DC7B94321B642E3C6A9925F6E0293067C6FDC1BE28A8"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignCatalog.cs",
+      "sha256": "51E861BE40A917CFBE9B01D5F034C0EA5DD987D7948D3750ED95D9A8422841D1"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignEngine.cs",
+      "sha256": "4189CDF508CA8AC7A01C724CF8FFBD29F9292458F5FE56010894F16C60DAB3E9"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignGoals.cs",
+      "sha256": "9D822674D34C338A27FFBC970E5420010231471F8DA7FE280CE7D9EC489694EA"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignGuidance.cs",
+      "sha256": "91E72669B73278EE73D5B5DB1DA91BF707358E45D14A4CE7A75445671A6F48B3"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignLevelProjection.cs",
+      "sha256": "AF037C6FD389BC95363CA5FF21ABDF7FF7B2B45B4CC08A6A1B0D72E7EE99146D"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignLifecycle.cs",
+      "sha256": "3E557F38E4CA8BA013289915095849E02E21F6EB1711B2785421C845A718B08A"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignPreferences.cs",
+      "sha256": "04BABEE9BDE6EE035A05DC95F8D324DB75D850EA1647FFD7AD1BE08A37175460"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignPremiumEngine.cs",
+      "sha256": "6BFA28CC071E2045D82E35C77EA632EE75B931E2180935DA8B70447FA0B8A0BD"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignSaveStore.cs",
+      "sha256": "0C6BC0440B3464FBC35B0972B2BE18DFAFC9628EA2C931D562D9484F5111DEC7"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignShopProgress.cs",
+      "sha256": "94669E448AAF0E100DEE2E83CDE045AD67DF32A552490C7AD90B53AA6CE8CF50"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignSkillProjection.cs",
+      "sha256": "6B33DD463C19CED2165F93AC041664281B2F6C496FC5C94A32645C417C58909E"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignState.cs",
+      "sha256": "8C52F73CC72D91118E01F014C50077C43653148EE76C6532C23C6FD8F643FD1A"
+    },
+    {
+      "path": "Assets/Game/Core/RedesignUpgradeBrowser.cs",
+      "sha256": "E56EB26436500435C6D0CF7A0283950A9C007F4D3506B270462391D80035D2D0"
+    },
+    {
+      "path": "Assets/Game/Core/SaveStore.cs",
+      "sha256": "7889C3B612C590C4BF0657E51979933118227DD4DB72756B18A3DA26DBCEABB9"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildGame.cs",
+      "sha256": "CE5D30A8588843C6D7361A8C8DE67EBB97DBDE8A51E1F8656939357BF9D79BDF"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedHome.cs",
+      "sha256": "D5B3E0DB0EB739C89FBA221BE094DAE63D06671B1AEB93685CCEDBE9A7C06CD1"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedOffline.cs",
+      "sha256": "E91BF32A04BD1BB4CDB4E2DBEFB11DB1159F5A6EF111891BBA932539003C797B"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedPrestige.cs",
+      "sha256": "AAA2E0C7AF22A88712F0FD2A99681DB9AEC32113E418B745DE9126A180BEEE98"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedPrivacy.cs",
+      "sha256": "12A2CAC4E75674080423591527509113FBAF1CFD0E9C8F2140DB4A2FA0F8C6C2"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedSettings.cs",
+      "sha256": "1253B9956D0800E029E773D0B84A9F6B02C10D29B42E57D610F03EB6766C114E"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildImportedSponsor.cs",
+      "sha256": "EF49DB0CEC46804B0BE964D7CF42B1B689BD7ABB31E56EECE5F13A2A2C95CCCF"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignDetails.cs",
+      "sha256": "C158996200AD0BFFCC4DCF1C347EBE5C3A64299D04FB7245668E5D5DC4B9FF23"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignDeviceGame.cs",
+      "sha256": "2CB0769CB6D6BCB609D2013A30156748304BE8290D1B12A8EC11C274A6999B44"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignFeedback.cs",
+      "sha256": "4964BBC030D8DCEDE7FF3EBDA2F7A888FCDB13B3931AD920E7FBCE1D6F0CCB06"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignGuidance.cs",
+      "sha256": "65BECA5812802157CE5032C6E14665D74EBFF9C2AB5538608409B6859940E057"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignHome.cs",
+      "sha256": "8781A91E734BAE37E7726622EEB130A1D0C8E925BC4D838D71D4202CB854D89D"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignLevels.cs",
+      "sha256": "80978ED8826A098955673A22FFF8AF53CCCF90C618B0E863CC86B8F830F7C7AF"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignMain.cs",
+      "sha256": "76E39134337DDC7BBEBFD6BA10CDE6AAC9B4A06401A40E33E525A95060361BC7"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignProductArt.cs",
+      "sha256": "6C0DFAD7B99F59754264C70938AA0D7EF8A8C98E504548957A559D5982996728"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignReturnAndSkills.cs",
+      "sha256": "231E385ACC1F9B8DB4A990CD1C85BA1E8F0088850EE5B2A1672811515A847586"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignShop.cs",
+      "sha256": "8408B2BC7F904B789948F5C6FE8AB0793127F670447033FBD2D42D6329422A65"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignShopArt.cs",
+      "sha256": "AF185C41C81D2993DC99497435676C45FA2BE6F9CA90A0B00F5A330D2A3DCF10"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignTalent.cs",
+      "sha256": "4324F944AC3C67FB9ED4DFEB9F04F98A44E78CBA0FBC907939C7D3B022519951"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignText.cs",
+      "sha256": "BF3A87D1C67ACBA2C3BE8DFB139FF6D8BACA3C0D41D78FAE6D505FE723F02ADC"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildRedesignUI.cs",
+      "sha256": "9F11F1E5C116AAB18C9743FFFFD35DA179FD3EF9176F4E6B436890BB3F678AA0"
+    },
+    {
+      "path": "Assets/Game/Editor/HomePageAuthoring.cs",
+      "sha256": "1E1E527E05C6255242300CCB76C1A2F20037549A24ADA6977E126AE7CD02F3EC"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignAccountFlowValidation.cs",
+      "sha256": "97E7418918C3045B02707B017063BC96BB2A4599796AB7CDA806C7422D235BE8"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignAccountPlayValidation.cs",
+      "sha256": "6BCDB7B348194C33AF41E103579231D6BE12F8C665B83E8FCA2C1ECB34EDD86A"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignAdRetirement.cs",
+      "sha256": "7CFB0DCE9B8ECD4CB743A04B2BC0FEE42BCF8AB3FD151050CE00E6186F5E47E9"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignAuthoring.cs",
+      "sha256": "645784D6E62473026E855D02B8CEE06E88773ABFAB9687624090D627CAA19BC8"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignBuildValidation.cs",
+      "sha256": "8774562D782CEDC47DEA6CA96978E6AD1CCE258127DB654D4497121A112A922D"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignCataloguePlayValidation.cs",
+      "sha256": "67A410D2E049E5669C1922984475BF6CB50D6053B91B6E507B5C698FB136C149"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignContentImporter.cs",
+      "sha256": "F5EECEA64B3BD1B457A5B7CCA6437CA0ECA7437036D15CC864E282AE5AF15C8F"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignCoreValidation.cs",
+      "sha256": "2AF55A2AE3606AFFF7837B62678E6FEFB55884F97C3A7093860B174846839409"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignDetailsValidation.cs",
+      "sha256": "76BC859F30229C55EEB476BD6D85663337D72F6565DD08E4576C68BC60F294B8"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignDevelopmentShopValidation.cs",
+      "sha256": "6646242EB261B1B1AC2CC574759C2A8FF1EA3538171FE8FD311E690DC6AEAC87"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignFeedbackValidation.cs",
+      "sha256": "8D09D1BB0A0B275AA6FDE0677B8AD3EBBE911B788F730BFF530EB2BEF46766C4"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignGenerationValidation.cs",
+      "sha256": "49434B06EAACD44451DA192A1369AA906F801D7B5A71FC6B2628A23A2AC91F47"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignGuidancePlayValidation.cs",
+      "sha256": "3CC983FFBCA2E1EF9F60FFB8499FBEDF46AAA457882821589BA90F0B365BE6B0"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignGuidanceValidation.cs",
+      "sha256": "B6599B00903928864EF76658B0FF6424346C29AA71F9B88C97E662CE17A83BF7"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignHomePlayValidation.cs",
+      "sha256": "F13E12B43B5D37D931351FEA1311F2BF65A2BE1242F94210220AF5EFF810B8D4"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignHomeValidation.cs",
+      "sha256": "04B8B2DA688720C3E54A673143857F1AC74ADF19486AAE1C7D475DB0FE875BA0"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignLevelsValidation.cs",
+      "sha256": "75E06AF42359B09BC69DA03C5FF77EC14DEB752FDD22B83E514F874FC425CA52"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignMainPlayValidation.cs",
+      "sha256": "298A4400624EDFF4A80FFFCBC6E2CE7A272ED3798B1E11EA5C6A51CA8DD27D8A"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignMainValidation.cs",
+      "sha256": "8296F5B38210443723FAB0B064520FEB229ADDA7A177B3599C1CD6648859B073"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignNativeUiValidation.cs",
+      "sha256": "FA05C60E9C3161A386A33D1ECC2217A3C7484F214EF884AF088F5B94BF11E248"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignPerformanceValidation.cs",
+      "sha256": "E4E719B2AAEEECE6120EBD95797013307423155FF1E43FD90DAA9445FB557463"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignProductArtValidation.cs",
+      "sha256": "D703DBE781C4C19B7655F7DEF518CACF3CF51945138A6B78B4D4E64923183630"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignReleaseValidation.cs",
+      "sha256": "9065AAD14E2D19EBC698C583B342F5658BA02565E492F2A3BB5076ED491186E1"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignReturnPlayValidation.cs",
+      "sha256": "BDCAC462AF9AB599DE80429D0E7EF0E411104165933245CDD295FA731822B930"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignReturnValidation.cs",
+      "sha256": "B339C8FC3AB86D8C610858C440C308CA41F96A5A5EECCB92B5DC9899BFE9FEBC"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignShopArtValidation.cs",
+      "sha256": "C27025FE196295615C013E14682CB9B2F2B0D080E11ECC4AB72A464EEE730593"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignShopPlayValidation.cs",
+      "sha256": "B15185C8D8BA21E18B8C49C0D86194FF0DABF302CCD79C82050D48479B7EF350"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignShopValidation.cs",
+      "sha256": "2B99D13B6C85EEAF1DD5F982F7A5E8765795FBF5A81933B85E800C0F2EF6C6C1"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignSmokeValidation.cs",
+      "sha256": "02D27B8CED11FB130D5C60A538F2DC6D8D68F9694AB5B3796B1E13BFBD6F1897"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignStartupRecoveryValidation.cs",
+      "sha256": "8E9C1DD01F320A3A2B5B38AB33AAAFF3A28B7797AE4DC55425223924B6CFFCEA"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignTalentPlayValidation.cs",
+      "sha256": "A24543A2736EBA759C708470AE77C315CAADE3A1FB7B7FE9EA989F02BA947364"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignTalentValidation.cs",
+      "sha256": "F4E1AD16BC694AEC62BA908E3FA4AEE7909C21C6A2C5010B0E0E5442F422B174"
+    },
+    {
+      "path": "Assets/Game/Editor/RedesignVisualPlayValidation.cs",
+      "sha256": "AA0677D84DF5D444CBCB6467A1C2A4DCD734F3569C0F81A381F0B8AE2D130677"
+    },
+    {
+      "path": "Assets/Game/Editor/ValidateGame.cs",
+      "sha256": "3ED9532107088C933EC0E51AE45977489883E8F5BE0BB32986530C100113BB55"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Bulk Order.png",
+      "sha256": "38CAB4B49914BE219EA1A976FC216613121194B65E890D5A81204C3F925AB27B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Bulk Order.png.meta",
+      "sha256": "005F4B7F3A7AC7E6CA2ACF47BAB3BED5BF7C78405F8A05AFD7B9DA12BBB39209"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Burst.png",
+      "sha256": "EFA01497B772ABAFCC9252F68CD54DA41A32A22B62D155B2052573CDCC07E8E1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Burst.png.meta",
+      "sha256": "227BCB72B8D15079B60FC740215EDAEB784882D602D53A07CDD809AF82883AF2"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Helping Hands.png",
+      "sha256": "8B12DE338AAA34278AD1CC83611AE863A0FF9FF02713303A6384F408B3477BD2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Helping Hands.png.meta",
+      "sha256": "BFD24D6A9C219A9682ABB9FF24CC964F4A167078632F7B045123FA2595427680"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Icon Lock.png",
+      "sha256": "C5D3C9ECC539CCB9B6510F320F18E47DEEA8AB8C1E3E7E08042A0B4AFBF94A6B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Icon Lock.png.meta",
+      "sha256": "28EA5C92535253D0F3E1D7EB9FE9725144D6864F617C79B7A14CCCE22806E072"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product aerial-shots.png",
+      "sha256": "0A956A4C057B206F13E6215D5F5633C1E3210C1E0B79F19C3CA5DDD294510C9C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product aerial-shots.png.meta",
+      "sha256": "73FB68493CA6FCA888DB210A23AB402469E91668D8E245747F9C258DAA7928CA"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product anar.png",
+      "sha256": "83E3A64ED1726C32FB48B1D853FA45384FDE44189B5FB0B051CA36A1D0D21FD2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product anar.png.meta",
+      "sha256": "66AC465E717D29902B8F9467F8959D236C7F5632E8A22108A0AA02F777843EC2"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product chakri.png",
+      "sha256": "D72BF4E01D5DF6C6545E5E10A580DACECA7E11F2847A36B83C94E95EDAEC809C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product chakri.png.meta",
+      "sha256": "4B7377C4CFD6A6BADC4F0EC792EA8D9927C3DC54BE2956044746F10EB1CECF46"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product cracker-strings.png",
+      "sha256": "A21CC0A77D5FFD0C0CA89325D81752464605D84D23334CD6F5754A584F28807F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product cracker-strings.png.meta",
+      "sha256": "16FAB52733BE97536122BB083DACD6017C216E4EC473F831FB9BBB4F82D4D812"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product gift-boxes.png",
+      "sha256": "EE02E45799F3EAEC91E125EF24B44ED0E54FEA968962B2C671E64B4343D316A8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product gift-boxes.png.meta",
+      "sha256": "B4D992866C17CF4D587BF93747546C872E0EDCC5492CFC06922BF50403786A24"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product phuljhari.png",
+      "sha256": "9591C4E83E4FB246A33510D5DCF8C1336962C4698E92DDF1C0AA5B7B366B2DE9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product phuljhari.png.meta",
+      "sha256": "B857ED5AACE4E1972E629FB8D3BE0D9A0B60C01CD863921E32E166B8319231CD"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product rockets.png",
+      "sha256": "EA19303CF654C5C1E089EC22AD67FBCCE79C5C7A4F8E774F4D8D415CCB7DAFAF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product rockets.png.meta",
+      "sha256": "AF63B6F602D6380C70114B6F5F80E0A6E73ABF71AA3D50157463482FF9E8DEE6"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product small-crackers.png",
+      "sha256": "D0068E63E6278659A011BC853026C5F245AB3CB92EC3DAC166F25A06C3E5F706",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Product small-crackers.png.meta",
+      "sha256": "3454C40F191111995974438F464604AE759CEE2639400BED3F78F8960A5959F4"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Stall Background.png",
+      "sha256": "470BEE58694EA934F4A9C976C7838DC0E20CA21F3845F4A30D81CE4E9320DC73",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Art/Stall Background.png.meta",
+      "sha256": "AD28C33EAF7278B03EF70B01FB692FD59E6150008E3C65361D8227167AE2A47E"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Home Screen.prefab",
+      "sha256": "DACF74B17BA33BBE4445A46839C3FD78222E63908B091D0954E72056E5196BB7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Offline Screen.prefab",
+      "sha256": "476873B80CDEB9C8346E784B0C5FCE781F9C62B563DAD493C3CFE5B0BDD61E47"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Prestige Screen.prefab",
+      "sha256": "6BA05C76E6ABD1E5BCAA8200A61E29AE9396A04FB9F5D36D693640447CA53462"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Privacy Screen.prefab",
+      "sha256": "CD37EB3792355EF66C54D8D44C16391C1F5E1A603BE14BC5B5BA9FDA5D5CF6FB"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Settings Screen.prefab",
+      "sha256": "CD9AAC8CC0D93BC9030FCCF06F00E4413F9FF7BAAAD4303183E6D8225F17B6D0"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art.meta",
+      "sha256": "D4745FD2D76D9223C06B0E9E59214FD3A4829370124B1C1DA4F3A436FE77E91B"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration apron.asset",
+      "sha256": "2C0EB1E749C5FA265727F5485BB138F10B3995559A199FF1B712926B5568CBCB"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration apron.asset.meta",
+      "sha256": "83DF9DCD29AC33CDF7740604EEAA4D5E64FA0B0D1AFE0C1D6066D5F609280079"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration bunting.asset",
+      "sha256": "E351AE4972E02D30E7595618A323B7986B51E0FFD4F2E14FDA68AA3DB6F64FB9"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration bunting.asset.meta",
+      "sha256": "0A32ADD6241B409ECCA559AEC6B1953AD0569F9E95D89B9170CB607BF999E4EB"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration crest.asset",
+      "sha256": "6E06D2538851B118CDB4DFF322E8ADF908BAD4C22311AB5B74D7C3E06A8D6342"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration crest.asset.meta",
+      "sha256": "658E395C9EAA0E188C69ACA76735B17B61276F5409F5BDE1FF2CA03D396EE5BB"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration garland.asset",
+      "sha256": "15A6D046E57783847F8B1400A808C3863FA9A5CAA2E0BB52E15AE8B113FA7AE6"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration garland.asset.meta",
+      "sha256": "392CB3038D72E11254F7B9B923ADA345B22DADC16A037088669C399247E6E66A"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration lantern.asset",
+      "sha256": "A6E6B81F535A9543D1460CF50B51106B38E46420A5270CC769D8A0470EA51980"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Decoration lantern.asset.meta",
+      "sha256": "85E8D6BEB89E8FC160AA558749F245A93905CF7241C4ABD7F6E438AF3EBFB81E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Paper.png",
+      "sha256": "90977349D10E457BB5E4344E6BEFDD1165CA698C69C554102042650906CFAD1C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Paper.png.meta",
+      "sha256": "1363FFF3EE639576022A84CB8E71F1B1B98A343453AC027D3D7163E78C94A119"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Shop Decorations.png",
+      "sha256": "A114D37E292018C5AE5387516499D05CE9B34CEB5E33F2C72B3CE37EEFB8102C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Art/Shop Decorations.png.meta",
+      "sha256": "DC16AB9EE9B86E8E18D6C3D198FFA548DBC2407B743244A278E4979999E794CD"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Appearances.asset",
+      "sha256": "5C9DBA703BFF643999E7814FDB23D69A6B8A4B25408FEEB36920FDCBBA1F6E63"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Appearances.asset.meta",
+      "sha256": "C6731674792A3038623634602E884057DC3AFB234C0F6FCDBCDFC80C0F8991E8"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites.meta",
+      "sha256": "07D7EA7401BDF854C316BD9968289698499F838C50A3D4649944DD1D75037623"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-0.asset",
+      "sha256": "F36013B43FB2ED0B6227302126A843944B4A2E0E6F45C76358BA85856EFF5C55"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-0.asset.meta",
+      "sha256": "D6C362F843DF27B49B8F4C7D334C159A323CC855D42BF3D6403143DE240C8747"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-1.asset",
+      "sha256": "56B1A6B84834FEF81109A9D19A91089C1DFDE6DF89E54DD7F16AB78EAE6EE9A7"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-1.asset.meta",
+      "sha256": "FD31A1199C6B9A6E5C7D9F07FDF959D7663319190568540B3ED77D10FB1B38D1"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-2.asset",
+      "sha256": "79A5596A00C91D71AE55BC3EEF00A32E0D42C8D376665CFC1EFAAF85E4173C54"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-2.asset.meta",
+      "sha256": "079A49A1A09D258A39C1F891BCE6E283A33DE6D1E0D253A2A1E8E863418BDC23"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-3.asset",
+      "sha256": "D9608EBC6DE65AFDAF1EC156F77D5EB7EB2003796091010BF4AB725364E136EB"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/aerial-shots-3.asset.meta",
+      "sha256": "2E508C4C6CBD7D25F2BD9DDF4B9B9170A447D855B729791089E02AF316DD4D05"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-0.asset",
+      "sha256": "65C2A96187CB975102B2C4F4C80ACD89EB00F82F1B40EDBE82607BB906B6F7BE"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-0.asset.meta",
+      "sha256": "753AE5CB089566469F0C3CA5074DC4249D82C19E1A940717F5A3872FCEBB7871"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-1.asset",
+      "sha256": "F348AF54A148D1625ED5E272DC7A7EABB22C021252027F59B493BC16F0DC34B3"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-1.asset.meta",
+      "sha256": "7D0D98F588C38E82F993BF4C6D7251092EDABDB656AC61367A76DAA139E239CF"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-2.asset",
+      "sha256": "9B715CF2D7B761ABE2956551E96D8B07692DCFA237854247299A68E61065555E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-2.asset.meta",
+      "sha256": "B947DAD7E9FB072E46D19C008EA07D20AF95EC89899260730690C0C3C13CE2D6"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-3.asset",
+      "sha256": "9D44D4CA6A93D6404BF90B4556F805C53AF1E8EF8646696DCED24A45401D616B"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/anar-3.asset.meta",
+      "sha256": "50BE3EE97E368A381805451B24C28FD07DAC98C2C15574F61105F41F816BAC20"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-0.asset",
+      "sha256": "2DCE68AF3A4C4816534407E6B342162640D2CD8AE5969670B0FC96B9C5C1C717"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-0.asset.meta",
+      "sha256": "EEBA57E231D1CC30098F759B2B33249EC97D5DE4E5DBBA8396D2F789C08AF237"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-1.asset",
+      "sha256": "CE4E6AF3AE0B9D5AC36DD51F58FBDD8D52681A2EE2F5536447312F86424B9A2F"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-1.asset.meta",
+      "sha256": "13A2CD7534B57AF610D4BF476F85E10288E180ED372A73E0936A37B4D1F1CE26"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-2.asset",
+      "sha256": "1516FACCA2D392583F58E150F5A573C79ADE75586ACADC705407A839AE853962"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-2.asset.meta",
+      "sha256": "D508D02F5E77F86EDD366378E12819C4134A7EDB86E0FBF9FD17AA696C6425DF"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-3.asset",
+      "sha256": "745CFACFE0AF16F0C3E553F13B5419D1D5DEEE58BB9D40C62EC1433515B38AB3"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/chakri-3.asset.meta",
+      "sha256": "4E4AA0BA8A91476C0D3FD934F43B4E8DE52E6B9D1C19BCA6830FBF7B0FFC9C83"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-0.asset",
+      "sha256": "7D2A9081E81DB96D01E141EA45001586418D8C0FB2F3A87E3BE49BD6AED76C80"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-0.asset.meta",
+      "sha256": "888296CB2983E35B452337D7F305A0F6DE6347E02ECFED59E860F417DF5E2670"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-1.asset",
+      "sha256": "E5C484B09FF07D0239B979670DDF71B17F689E68B10AFA531E1094066BEC7DE6"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-1.asset.meta",
+      "sha256": "6BE4E60AB4EAD65C1E7710A498EC9469C292B1AFFF99A6C59E6F194BF0875843"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-2.asset",
+      "sha256": "F5A2297015204CA391ED49B42659EFE2974974AD8FFD7DF960424C0616ED8874"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-2.asset.meta",
+      "sha256": "5E8503E2EF54ED258120296A79B6A083494B2E824F87772DF87AE0ED69B35E22"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-3.asset",
+      "sha256": "5D7A0626A4F46D003F5C6BDF8703E46453806D7320A6EF93143862B9A3EDB3B4"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/cracker-strings-3.asset.meta",
+      "sha256": "77934D9C4869DEF3FA4394322E9E2F61734CDA533294E93D035F00E153596771"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-0.asset",
+      "sha256": "956736BC7257C4454E59C3E6F30E2A309580AE865C27CB456E0205D0F3383888"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-0.asset.meta",
+      "sha256": "FA246E72B1C2C2BB56025DC40B2E271727D045E3C3B13122D9589E1B311BDC6E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-1.asset",
+      "sha256": "6620BA98784B2D1F66FFFE5C026973678F7346A0381A4AD72D6366BCB0C8AD8B"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-1.asset.meta",
+      "sha256": "EAAE9F3DB888E75B49EB9E29E19FF0945ABAF03896ADA60D1A4183E4D5E2F0D8"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-2.asset",
+      "sha256": "EDA5C54A9936C193B929EA23E09390E0903A22CAB226614789AFBF2C80EF71E7"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-2.asset.meta",
+      "sha256": "29AC25C009F20ECB3C78DF4AEA7DDE4B480E01F600A00DA08166B66F1705B59D"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-3.asset",
+      "sha256": "64FF4C507D082C5E74ADC030C2DE10C611C27A95CA3750A84FC8A4F4E6426FF6"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/gift-boxes-3.asset.meta",
+      "sha256": "60E2A8A04F0BEFE9D4A0056E7DE3FA15007F9ABC64C64039DAD6CD7FB5175794"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-0.asset",
+      "sha256": "E7B405004F1277E71467FC25DC778DC2C4C6DD99FC9050D60BE5E91C1F853CD5"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-0.asset.meta",
+      "sha256": "EDCFD9A1ADD3DAC122DCC61EC60CF3AFD24E62189D9FDCB99A8B670CA2A6F1FD"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-1.asset",
+      "sha256": "00DA763540B5E8E85DB9E1806CD4C0D12AF22CB0D1B9E75C6786DD4CC99FB209"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-1.asset.meta",
+      "sha256": "3C8EDC80C31CAA993AFDA192051B224AADC16E9A95E8DDF01A07A3DD8A4FF829"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-2.asset",
+      "sha256": "8C2661C35BF052B66FA00BFFB6C6F9DBCF9CAC7A424E70E3F7B289BB1B7A74F2"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-2.asset.meta",
+      "sha256": "C7AA1FD237C1C5D207EA7EBBF0948C72D19728C8C9A23D9631448644C759060E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-3.asset",
+      "sha256": "CCAADFB637128908B69BE1418E47CF27F8F1073C58B7EA04C40644850B3E0D50"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/phuljhari-3.asset.meta",
+      "sha256": "0A33E69072DB6CD73E97F4B81C74BACD991E74E090B6C8B4755413CA540D7863"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-0.asset",
+      "sha256": "07ABC0CEFC5F3AB14768A1B7162C4AFC34050EFC21D842096BFEC322F8C00105"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-0.asset.meta",
+      "sha256": "1E5EC4C61B85D9F94331FC3D0D1A6BFF27BAEA4B3C7DF1129DE8C0CE4B6E3089"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-1.asset",
+      "sha256": "97E00A4018271FB2BD5E9B212FB0DADE394BE5543427AA7385FF8B4463A0521A"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-1.asset.meta",
+      "sha256": "0D2C9C31B5DEF99858FF502E865A2B5257A791815D607615421162A76C18167C"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-2.asset",
+      "sha256": "407AC144B006F55F82AA57A411D88F2D6B610C3EAAA0FCEDAF1500C86C6AE306"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-2.asset.meta",
+      "sha256": "EFD8E8C758D6AFE6A63FB60CAEA83E88BFDF0586940683051E7A1A5A5E19FCFB"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-3.asset",
+      "sha256": "4B5E0C3A3869793E20334DA25547EA872E74D8D30F3155F1C3B80FB923CC8806"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/rockets-3.asset.meta",
+      "sha256": "D8036C58E9364CBAD55CEC8A76D905A2962B5477C57DB668D438B6B025B2C7F8"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-0.asset",
+      "sha256": "0A2BE3E17F780178737B524262034AD7B51678B4C09F54CDBF3677C727E429F5"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-0.asset.meta",
+      "sha256": "969AF21CA671113CFA0B45012655A5D9C0D74FC6D12B166C307CBFB49F0E834F"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-1.asset",
+      "sha256": "8C92D5B9AE316D3629C4C43DA9CBBDA4365B31CF35A084E60AD4101371D4296E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-1.asset.meta",
+      "sha256": "5AE08A3F186135C4F4AD102C032687F1EB766E2FCC2C86855F4744DCA1932DB1"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-2.asset",
+      "sha256": "02D6C4EC7075DA8224AA877AC439BA457AB62A5AB1B477A5E6C3B51A02865A46"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-2.asset.meta",
+      "sha256": "F562FB25CDC3147EACC6C169B58B8B877CE441C17DDD8D785D2C91C129DD5A01"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-3.asset",
+      "sha256": "210F80E53692FBA200664D61608395F598D4144346A2AB7839D3B78E3DB9651B"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Product Sprites/small-crackers-3.asset.meta",
+      "sha256": "A87B2FF47FEC9C7DC660F02D8243CB96DD909E5FC5C8A348C50920466F6AB53E"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Redesign Canvas.prefab",
+      "sha256": "D626E9E167617DE6842CA73A3F5100762324200E91513035BBBD2355DD7ECFF1"
+    },
+    {
+      "path": "Assets/Game/RedesignUI/Redesign Canvas.prefab.meta",
+      "sha256": "4D475B981307CCC74C57288B70C5628F4311DCBDD97B8A3AAC49C8FA8C33CD0F"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/BootstrapButtonFeedback.cs",
+      "sha256": "5C83836B610DF7AAAF583EFA0A768EE30234BCAF34F02AB2BE753D5848229EAF"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/BootstrapController.Redesign.cs",
+      "sha256": "89968B06A65070A6A3533458D91C9D0EC26164C0FDCDB1AB8FA31D88D6247182"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "sha256": "EA8C0D95110503B49E9734E564F869E483BF98709969FE45024C6380D4EDA1D4"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/FirebaseAccountAuth.cs",
+      "sha256": "FF1BFF9C10504FA523323B96FCDF11A6004CA6B9FA9CC65E9494C0472048884F"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/FirebasePremiumConnection.cs",
+      "sha256": "459C970FD448FEA9187BE8B451D99B205EC175F414B7B78B53CE0F4E8A89076E"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/FirestoreSaveStore.cs",
+      "sha256": "846116FB24CE6DF42A9BE936AA1D5A5C451DF0E45E2BFDAA11C1B80D65D1391D"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/GoogleSignInBridge.cs",
+      "sha256": "A4F41D97E6C2A95EE20CB175DCA4649DA36006A4874DF816D6802F476F48A684"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/LocalProfiles.cs",
+      "sha256": "257B58EC674D79104193784A292F2B7ED80168386D91413DBB0345F480B51DAA"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/PlayerSessionHost.cs",
+      "sha256": "67DFF6D26496512ACB1A3E0A8F19372620CD6907B393B9B5AE69E3A48D170AFB"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/RedesignCloudSettings.cs",
+      "sha256": "B2B494EEF358D5133589C1448CB4818E454119DF06D1249923122E389F332427"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/RedesignSessionHost.cs",
+      "sha256": "44244900850D98246BDF74A7DC0EB27F48912C121D91AF91DE0082B755AC6D42"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameController.cs",
+      "sha256": "83A34324B10A2D85F25E9512D05B6FF91DA4B6D81E51438FBA4AE6D657FF4E72"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameView.cs",
+      "sha256": "8755BADF67B31573A44B9DDD6BE9EC8034E94EB8AA0C833A181D2788D5BC7935"
+    },
+    {
+      "path": "Assets/Game/Runtime/ImportedHomeScreen.cs",
+      "sha256": "902B9639FEBF0CD605DA197BBC9E51DFE476E6E249820C20CA0FCECD329655F5"
+    },
+    {
+      "path": "Assets/Game/Runtime/ImportedOfflineScreen.cs",
+      "sha256": "64F4428A4A445A29FAA00BA39ACFA2B2F2EDFB265844696A8BCFC5EB0467A581"
+    },
+    {
+      "path": "Assets/Game/Runtime/ImportedPrivacyScreen.cs",
+      "sha256": "6695DAE420F17D2CC1B44AB28950F090C7C1EB35BFA025A8DF709D6F4BFCA595"
+    },
+    {
+      "path": "Assets/Game/Runtime/ImportedSettingsScreen.cs",
+      "sha256": "CD55C7F3D3C5C0CAC2F4203F9BC981B412E2A90DFAACC70876A6BCAB65CC4B74"
+    },
+    {
+      "path": "Assets/Game/Runtime/ImportedSponsorScreen.cs",
+      "sha256": "3474736CEBEE04B92DEE7B68252998A8CD7F1C8E392CB6D69761A389C29E8DBE"
+    },
+    {
+      "path": "Assets/Game/Runtime/NativeText/link.xml",
+      "sha256": "A2BB5E2D349EB33A2E55DA77D4EA89FF47BE6E84EDD64523CE96970A004073D4"
+    },
+    {
+      "path": "Assets/Game/Runtime/NativeText/link.xml.meta",
+      "sha256": "4464F7BD7F35B1D8A19B8BE57DF314B538AC62B0D628B33FB54210816DA44D88"
+    },
+    {
+      "path": "Assets/Game/Runtime/ProductionConfig.cs",
+      "sha256": "05057EBFAE7FD39FA31D82AFA24E4D14552B8C6D087515571E2A05F3797032B8"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignApplication.cs",
+      "sha256": "B024B26D35E4CF68D6B67ABEE63F3F6FA72223A50CB28A68EE0E39B4BB1A3B70"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignAudio.cs",
+      "sha256": "B2612D48403CA0BCD48F1CD5D200A434966C371942CDAF3C0E82E897A17EA0AD"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignBatchScreen.cs",
+      "sha256": "883EB97A0CDECD08458A07D45711EC4CFC160723F1D593CED1005C20F16D548C"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignCardCopy.cs",
+      "sha256": "A0D5EF14E4DDDAF1034EA9A00924392B0AA17F7981DDBD8A455954578F34C320"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignCardDetailsScreen.cs",
+      "sha256": "BB205D45F3A4E6128345A34B1830E1D868590BEEA134A630B5BF67290E379F86"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignEnvironment.cs",
+      "sha256": "8308F4DBEF7A07DC038D8085DF34A7E4E84955E668E109E02D10C07B93B394E8"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignGoalsScreen.cs",
+      "sha256": "A489AAF99E2026F6D28A81B959744938E33EF08C02F9E6285243DC263E16F7D4"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignGuidanceView.cs",
+      "sha256": "B4D30A64C6680F18799509EC3C3F18D582FFC890EE895254D819E8AB4E445615"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignHomeScreen.cs",
+      "sha256": "000361A112EDE02D3063E35D0A89C6F350B3D131AE11B10573913CA629544545"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignLevelsScreen.cs",
+      "sha256": "D32EDCCD3D67EE2C1D7D49A71330F847D8F8C65A39E9FD9E4CC51C7CE79D9E2D"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignOfflineScreen.cs",
+      "sha256": "865DB4FFB4A4AD00DE20309C022B80C4C26E5C93A0915E5DE60BCBC43EE7DACE"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignPrestigeScreen.cs",
+      "sha256": "7F9BCFA15C4ABEFDBA92A941B049F67B1EC78887491581D256CC37469B625235"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignProductArt.cs",
+      "sha256": "D65D5D186F69823813A948E1088851B5C1F7375083D9AA529F8DD43D6DC2C559"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignPurchaseFeedback.cs",
+      "sha256": "F844D995805E469870969A9C26C23486205CE73899CC0AF3C5296B709680EA5C"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignRetainedUi.cs",
+      "sha256": "78B78CDA8AB9892B33AD8A38E80009AADF1473BF965DF11D7B25C291521445F0"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignRevealScreen.cs",
+      "sha256": "DB4D311FA3237D351AF446A6975EB424FC9BEE5CC2B636B8F2F9DF1BFFACBD7D"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignRuntimeContent.cs",
+      "sha256": "75088DA833767EA317799E272C11B7585F21AFA6F658EF2A012D759485BC5549"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignRuntimeDriver.cs",
+      "sha256": "1EA1BFFFD2FA327596180ECBFFB1F7C862BB4E6688EEEC2578582124BAED6636"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignSavedSubMesh.cs",
+      "sha256": "BD7958301444CAC7EABD8D2135524802B911B60E4AFF9BF0E392F89745F3516A"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignSavedText.cs",
+      "sha256": "DEFEB77ED436DFD5CD2BB0CD20B0C7B174EBF39AC5A4C828F9787B33414451B3"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "sha256": "9242C3AD13042C833939A7F2ADC8418BC359F6105EB76E5FB7FED1AA7D92D3DD"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignSearchInput.cs",
+      "sha256": "2AB3CCD8B712EB536A77B978EEACA3061368925599DE4E7DBC6051EB312C57A2"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignShopScreen.cs",
+      "sha256": "1CA910A530CC48C3E3FBE6CF20BDAFCCB07591CE1F544670DBB21691FC5E42F0"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignShopVisuals.cs",
+      "sha256": "2D367D431DD81BFC66B52821118AC5786785D81A3A698A5D4849CE20ABDCA6DC"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignSkillScreen.cs",
+      "sha256": "2776A19DB2962E0CDF0E7B80B1F8D69DAE9DAA547878A0E9FE81648A9BB628E8"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignSmokeProfile.cs",
+      "sha256": "96539B52EF4E5B15CC6671FE392F158D4048F418F382FA4A2742D45166FCD7EB"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignTalentScreen.cs",
+      "sha256": "7245A0D17F750AB99CAED9C7499031C563293A7066F2D3C89BE9CA5CA46CD75C"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignTapTarget.cs",
+      "sha256": "610729B7612DB8FAE6F7983AB550B6D412C7F34A123E199BD36F2A4554123CCB"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignUiContext.cs",
+      "sha256": "6194801BA917B0D078A59363A66D60D9BE55B72B49AF1877ECAB6FC8E5F959A0"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignUpgradeDetailsScreen.cs",
+      "sha256": "AAF46B83CECCD9A0136ABBBE33AAAC345F95A2A4D4048C9F635E4FFDE81B2D18"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignUpgradeRow.cs",
+      "sha256": "015DABA1A279B462027139985431FDECAB714E30F9CAEB5BCD799085700A5363"
+    },
+    {
+      "path": "Assets/Game/Runtime/RedesignUpgradesScreen.cs",
+      "sha256": "7FEC5B030F7087E30CCC8B9709C89DCF3ABAA4B9B30F87BC32BD548529C0538F"
+    },
+    {
+      "path": "Assets/Game/Runtime/RewardedAds.cs",
+      "sha256": "31F43010A8DE90EAB263BE8E8B1D905EB956F5F340B788F161C89B1C1BC9AF51"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.DetailPurchase.cs",
+      "sha256": "EE298CB1A5AE83DFC6C6145424776850C732E21D23E328AB0AA18F61BD1A6AD8"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.HomeCard.cs",
+      "sha256": "026BC8EA192AED1D69BC957F0AAB3F46A2B7497B9AF91AD8A1B9D6FC6D332DEC"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.HtmlMotion.cs",
+      "sha256": "C231AC03B96F81257F7AC4EAC6F99F9265E2806C3C230D78E0090E84DBCE1AA5"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.Milestones.cs",
+      "sha256": "CACB984A2235C3A651B2BD5AF9793A2176C421EF563BA400597B93656293803C"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.Quality.cs",
+      "sha256": "981F17DCA3BD1E00920F19511C5EC0DC469494F4BB58543EA0617AB62EBAC174"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.QualityPending.cs",
+      "sha256": "BE144C03C64F312BB9CECC93033C32EB741427FB091C64EC027C67EE4D789412"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.Redesign.cs",
+      "sha256": "423265A5E8039E6FBFAC82B8E682422D5627B864C7F87C6E32C41BA8B45487E3"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.RedesignPerformance.cs",
+      "sha256": "71E49E2C12FCD88F1D04A6A07A8CAFCF5F12465115BCC341582FE320C781E400"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.StoreNameGlyphs.cs",
+      "sha256": "57188ADA0161D328CAA50E8678FE5B4965B7696A0EC204A4C20788AE1D007193"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.UiBugs.cs",
+      "sha256": "A8A228F3DBE1C32A82F1D93D256A3A208B8C505AA2558EC52E869A955A34510A"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.Unlockables.cs",
+      "sha256": "9FD2208748544BCBB2937B4E3E2D66892CD92DD23B6989131B6873A01F8AB1D3"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.Viewports.cs",
+      "sha256": "1A10AFD41349445102ED2B218975F7EF7B4A61C90D033C1AECE1B9B581486600"
+    },
+    {
+      "path": "Assets/Game/Runtime/SmokeHarness.cs",
+      "sha256": "A3CC54656A56057EF32707910B6550DACC66E4DAEBB958C5082C4A379DE6F865"
+    },
+    {
+      "path": "Assets/Game/Runtime/UnityKajuPurchasing.cs",
+      "sha256": "D654FFDDB983159C533F24BA9D6F52C137A1629D6C9D32052BD9EE5103F4B746"
+    },
+    {
+      "path": "Assets/Resources/Art/aerial-shots.png",
+      "sha256": "A2BE59D3C30A34CD58501A97E100B7FFE497B7A349A4E156BADD14F505CC4F71",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/aerial-shots.png.meta",
+      "sha256": "7AE574EC3463C8F777EE025DD943967EE507DE25572C9A5A1D011FA97AC8C764"
+    },
+    {
+      "path": "Assets/Resources/Art/anar.png",
+      "sha256": "09EB03113804A010E506D9972B4E8D92B3DC9FFEA0C16416F0DCDD56EF13421D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/anar.png.meta",
+      "sha256": "9E567842D7CFDEDD0BBA378DF54BB2807E2AF09CA5B2F916C3CBDEE7959D4DAD"
+    },
+    {
+      "path": "Assets/Resources/Art/chakri.png",
+      "sha256": "40336C0122829647B3F233245869F4662280D1A06C17EA5574FAE16E0CD69224",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/chakri.png.meta",
+      "sha256": "4C4B6EAAFF6E173E2F753A72257CFA2C9B459EB9C10291BC3D87A6F90B073219"
+    },
+    {
+      "path": "Assets/Resources/Art/cracker-strings.png",
+      "sha256": "0D56B60571ABE100C8B08A70AAB1D412C2A851B037F3A27CF15660A78EE0EF19",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/cracker-strings.png.meta",
+      "sha256": "B23AA8D90FBAA60C42443D179EADED169796D81FAE73DE12D97AC92BCBE70CCB"
+    },
+    {
+      "path": "Assets/Resources/Art/gift-boxes.png",
+      "sha256": "C4E56F21BC4F7FEBF8DBEF6BF04F403C3A5A05D0085A4D0549BD550705C9A248",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/gift-boxes.png.meta",
+      "sha256": "C6645D7B1EE44400567D12E462E34168D439EFFA0E837EF6A6CCF00FEC23526A"
+    },
+    {
+      "path": "Assets/Resources/Art/phuljhari.png",
+      "sha256": "540F1DF66994D2718DDD3A6570D2356BE2655C6D4B25FD0FDE084869B45B3466",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/phuljhari.png.meta",
+      "sha256": "76D14F7FB1AA905E4DC390998F9972478AA8F65A62313B7CF5F54C068D3591D1"
+    },
+    {
+      "path": "Assets/Resources/Art/rockets.png",
+      "sha256": "EA38E392F7279ABB6197F000764EA7E71ECB9EA5F1AA9CFF061806B27C7CE6CF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/rockets.png.meta",
+      "sha256": "0E5C66D3106776F75E5BF490DEDCD3BE3200B5576DDD5CD63104BF60E19D97AB"
+    },
+    {
+      "path": "Assets/Resources/Art/small-crackers.png",
+      "sha256": "45EBB99494AFD20D99DDB6F3D260402AF3A6FF8876121F83FC592171165C649B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/small-crackers.png.meta",
+      "sha256": "FD8136B0BA6E1A7ACA4F4EEF78C5C8BAB28D97A8405214DC9780C9F4A263BDEB"
+    },
+    {
+      "path": "Assets/Resources/Art/stalls.png",
+      "sha256": "7D873F5156DA4E696886AC3659715104457AC2396AB55ECBACBE912DABFFAF49",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Assets/Resources/Art/stalls.png.meta",
+      "sha256": "349ED868261895DD095A30F07330026E9BE820374C01973D0CE1A2DD8BBB4E47"
+    },
+    {
+      "path": "Backend/Premium/authority.mjs",
+      "sha256": "043016213869EDFB7F8D23C58887D4C6943CF4CD12863025BFDC5A2796C66196"
+    },
+    {
+      "path": "Backend/Premium/authority.test.mjs",
+      "sha256": "DB0C3DB7849F0A8AD8EAD65BD80C08531179AF4A09B3DFB604DA491120F0902B"
+    },
+    {
+      "path": "Backend/Premium/firestore-store.mjs",
+      "sha256": "93E3D0F8824B326D4BABFBA9F788CC67AEB42414F1B358099946324C80EA25A8"
+    },
+    {
+      "path": "Backend/Premium/firestore.integration.test.mjs",
+      "sha256": "75A682670362AC43065A7F96AE6F383DE6589E33ED632F89112B507D16D5F00F"
+    },
+    {
+      "path": "Backend/Premium/google-play.mjs",
+      "sha256": "47DED77CCB295ED2284368AAEDFD48F3A20503160E3C5196E21E1ECA91664670"
+    },
+    {
+      "path": "Backend/Premium/hosting-config.mjs",
+      "sha256": "53065B3B22D9959719B36FBABAE608B3AA523378F52FD30E40D94097BD75D3A1"
+    },
+    {
+      "path": "Backend/Premium/http-handler.mjs",
+      "sha256": "A4CF6C52DFC9F9D43FE7FED47777105FBCCCC13F78E33430720B55C681176205"
+    },
+    {
+      "path": "Backend/Premium/index.mjs",
+      "sha256": "9EFE421F4D7462C977262CC870E7E28DC47ADA2C5DFB9695D8D7CF5CD56BE43F"
+    },
+    {
+      "path": "Backend/Premium/package-lock.json",
+      "sha256": "4CACBDAFBCAF5902E9E8E3CB604621835670BBCAC90033D3661B50E8F9364DE9"
+    },
+    {
+      "path": "Backend/Premium/package.json",
+      "sha256": "BF5EEB952F86D0791240A7F05BAB1597302BD3F2530C08BA62513BD5AD1D4CC1"
+    },
+    {
+      "path": "Backend/Premium/rate-limit.mjs",
+      "sha256": "98AFF0B1C551AA212B40AE9B41E68D05339752D16B6DC3F31541F60E8E817FF3"
+    },
+    {
+      "path": "Backend/Premium/refund-notifications.mjs",
+      "sha256": "4EBD5CFB0400E3D9E27705DA30823D59AE1B4D29FDB89D92025CE773A0C6F7DE"
+    },
+    {
+      "path": "Documentation/Architecture.md",
+      "sha256": "57F2A1E81904F6B04B861B428B83768C9B493E26061B3491BB8C0B3FD46B4C99"
+    },
+    {
+      "path": "Documentation/FirebaseSDK.md",
+      "sha256": "F881F832EBD138AE9827B9BBA53E7413054CE06C0C91CFFCC8601F9C5D8D1806"
+    },
+    {
+      "path": "Documentation/PrivacyPolicy-DRAFT.md",
+      "sha256": "38AED41F3821D5FFCA260FAD5DF04306EA5EEE24946C2AD0FA4579A8719606BB"
+    },
+    {
+      "path": "Documentation/RedesignContentCatalog.json",
+      "sha256": "73587612155D3634D4017346ECDE281B4828AA548FB0477E742CDFFB4D206999"
+    },
+    {
+      "path": "Documentation/ReleaseRunbook.md",
+      "sha256": "6E19DC0F6356660C60DCDEDCE1108961D87AA25B6101F0233E1D7C1331512058"
+    },
+    {
+      "path": "Game Design/1000 Unlockables Catalogue.md",
+      "sha256": "77E1B9A96461E8BDAE1B1C21C7310FC7D4D1CE14AA33380FFD0CEAA8B3083250"
+    },
+    {
+      "path": "Game Design/Economy Model v1.md",
+      "sha256": "61E440D738D8F0E5C267538AB1C22D5602FE556C72AD8D102E6EE43F97597DF2"
+    },
+    {
+      "path": "Game Design/Economy Simulation Report v1.md",
+      "sha256": "3DDDF150C34BC3CCA1C4005855FCC270266AAD2F8CC86213CB8D00ABA28C2BAB"
+    },
+    {
+      "path": "Game Design/Economy Specification v1.md",
+      "sha256": "229C888270DC750D873353B45702BD667B18316BA931BF8870944605DAFF12D9"
+    },
+    {
+      "path": "Game Design/Talent and Prestige Draft.md",
+      "sha256": "536D507EE68E9CBC394B600E3E7CB4889DF3B14410973D478E8615FD3C3CD86D"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "sha256": "156580175A3A1FEBB683B5AA76C697FB0935CFCDA8054628B797F8F5030DF772"
+    },
+    {
+      "path": "Packages/packages-lock.json",
+      "sha256": "E884287ED65E28AFD709F493CA03E2A027F7B2C048006FBA48E8C4BEE81E5E4B"
+    },
+    {
+      "path": "ProjectSettings/AndroidResolverDependencies.xml",
+      "sha256": "05201C09776F9AF9EF877026E364B42F328643A0F0F38CC436D1CCA47AE2A5C8"
+    },
+    {
+      "path": "Tools/EconomyLab/Program.cs",
+      "sha256": "2C831B866D6CD8D7D53752482533932FEA0B2162897294E5430C9DDA42BC29BD"
+    },
+    {
+      "path": "Tools/CloudSaveTests/package-lock.json",
+      "sha256": "454CF258126DE224F2D0885500BD7A47CC7848E21DAEF70A1CC904ABB68A6D86"
+    },
+    {
+      "path": "Tools/CloudSaveTests/package.json",
+      "sha256": "0EB73FC170B68BF90CCC50C7F40ABF04203A0DFFB3EE560665D410B28B258CC3"
+    },
+    {
+      "path": "Tools/CloudSaveTests/rules.test.cjs",
+      "sha256": "9F751C43082E46CC25C08FC9F98F0C4949899B2F0A28147F1250B10DC96C7E3C"
+    },
+    {
+      "path": "Tools/CloudSaveTests/run.ps1",
+      "sha256": "A50E5EB6433439FF60E68F4457B285A95ADCE878E3FA811C52672BF55F436B55"
+    },
+    {
+      "path": "Tools/RedesignDeviceQA/DeviceCoreProbe.cs",
+      "sha256": "BC8A299BC8CF13AF7C774D3E6720E6480E0DC8CC1FE65DAF8115FF1BE374E9F8"
+    },
+    {
+      "path": "Tools/RedesignDeviceQA/DeviceQABuild.cs",
+      "sha256": "45C5E3CF6968267F1D47EE37A68783EF8E5739E3FB107019C213E1C02A14F696"
+    },
+    {
+      "path": "Tools/RedesignDeviceQA/README.md",
+      "sha256": "11042A62F07F9FECEEC874933EDEC2B5FA5604A46D83C7AB7354988A29CA3EE7"
+    },
+    {
+      "path": "Tools/RedesignDeviceQA/build.ps1",
+      "sha256": "5A8002C316157C892C8E98928C6DD571FC745EA9E1357D75E068420EC9D49444"
+    },
+    {
+      "path": "Tools/RedesignLab/AccountCoordinatorChecks.cs",
+      "sha256": "D014A61A914410715FB5A894942A55B5D0178EDB7D00DEFEDBD8288A546C03EC"
+    },
+    {
+      "path": "Tools/RedesignLab/AppearanceChecks.cs",
+      "sha256": "08CC20D5D17A20D32184FB3BF98F77500660D2FFF685DE789072D05494D6FC80"
+    },
+    {
+      "path": "Tools/RedesignLab/BoundaryChecks.cs",
+      "sha256": "311ACF3E9C4904C319149C8A1B8850D093B917B0E92619D60C600CA5EDBEE4A6"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildFeedbackPreview.cjs",
+      "sha256": "8CD26BE6E49CA25C45FCCD1C2CDAF06B1510A5B21028B1C828E9F0480ACAC5CA"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildGuidancePreview.cjs",
+      "sha256": "D055A7570C8A78F59299FC2882D9EC263D26C1EE2818F110F87780297E87BDAA"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildPreview.cjs",
+      "sha256": "9FA38C8158530C0332C759CC218265EB77E9BC618F71654C32E9A3112DE82EF0"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildProductArtPreview.cjs",
+      "sha256": "46865BCA76A60506394DC6FBF2756946969ECDCDB9A00FAE0A2867DC16BFA221"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildShopPreview.cjs",
+      "sha256": "91F1BF93D1839714520D23CBB42088FCBBC08243466CC754F5BF846A3E2A9486"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildShopWireframe.cjs",
+      "sha256": "78706990AC294EB22F8F913816ADACB793D06DCB6CA13F9FAA9A2257AF2BA5F9"
+    },
+    {
+      "path": "Tools/RedesignLab/BuildTalentArtPreview.cjs",
+      "sha256": "53F952CF0E6860A670B7C2E1796E9FFC0DDADE301459A6AB6B704AD143D96793"
+    },
+    {
+      "path": "Tools/RedesignLab/CheckModelParity.cjs",
+      "sha256": "D7FAF6975381C408784457AFF89865196B6314E79D216291691084AD9D4EECC9"
+    },
+    {
+      "path": "Tools/RedesignLab/CheckReferenceReport.cjs",
+      "sha256": "A68DB718DC74BDE0C2573817273D28A49CEF7F9E412414DF63449B198F6F3AAD"
+    },
+    {
+      "path": "Tools/RedesignLab/CheckReleaseSymbols.cjs",
+      "sha256": "796E5FFCCBFCCB3ABD684D5B9E36A4AD47734FDFB6A7CD85E1E335F877268413"
+    },
+    {
+      "path": "Tools/RedesignLab/CloudChecks.cs",
+      "sha256": "75882AEFA849A503B663E25F3F4FC7E95BFA07990E8CD154561CD07F0A088628"
+    },
+    {
+      "path": "Tools/RedesignLab/DevelopmentShopChecks.cs",
+      "sha256": "68D8A0FE437CDCD5A073C24D819B30EF676E0670409197434C2F6A72FD1CCC92"
+    },
+    {
+      "path": "Tools/RedesignLab/DistributionChecks.cs",
+      "sha256": "DCDE9D678A2AB8E0B6F71FDE4A003F15F1629FE00D3388DD2CD2CE5193AC1D07"
+    },
+    {
+      "path": "Tools/RedesignLab/EngineChecks.cs",
+      "sha256": "5E8488184925D385C5081D00FD6310DC61885BA916650BB5314199ED3C32F64E"
+    },
+    {
+      "path": "Tools/RedesignLab/FakeCloud.cs",
+      "sha256": "90C26F6318EC228D2404C422B45F353D5B2BBE72129F420BAB942908A47EBF87"
+    },
+    {
+      "path": "Tools/RedesignLab/GoalChecks.cs",
+      "sha256": "BFA6669679305F6546720C4B2AB1CA098FB48354B4143D300BEC6F80C9A73B0B"
+    },
+    {
+      "path": "Tools/RedesignLab/GuidanceChecks.cs",
+      "sha256": "7DACE893D47130B9EEAE7C5D081D87937DB0E538F7AE7C72C3FFEB0F572437A4"
+    },
+    {
+      "path": "Tools/RedesignLab/InspectProductAtlas.cjs",
+      "sha256": "806CD653283178C642D8FC0372F4F0BAF7E28589C56211B1DC0FF85C48F38E74"
+    },
+    {
+      "path": "Tools/RedesignLab/LevelProjectionChecks.cs",
+      "sha256": "0506A6D2A0DEFC3B76219A9CA89773D80B21984FE1E9DE0E245027F2E3BAD587"
+    },
+    {
+      "path": "Tools/RedesignLab/LifecycleChecks.cs",
+      "sha256": "67BAEDE47FAE713C63A0D49ACB7ADA13CA47371C9BF2A05805A7E8CA31B6C998"
+    },
+    {
+      "path": "Tools/RedesignLab/ParityCases.cs",
+      "sha256": "8D00DF040111213A5ECBB8F458BA59F9CD0E9747985531B5A69F1B22C3922DF6"
+    },
+    {
+      "path": "Tools/RedesignLab/PreferenceChecks.cs",
+      "sha256": "12A85C7208690960619806FA00E78C213083FB3AF3DE3A40C67ACAC79B635662"
+    },
+    {
+      "path": "Tools/RedesignLab/PremiumAccountChecks.cs",
+      "sha256": "6984C573A252E981071C4B8B0A35CF6846EE8ACEB4A6E3E05F6F18AF2D3A0B7B"
+    },
+    {
+      "path": "Tools/RedesignLab/PremiumClientChecks.cs",
+      "sha256": "73BC0F6F5CC97A0BA2773EA97D4BFCA9457BABCD627FF500C046311D4DE6C937"
+    },
+    {
+      "path": "Tools/RedesignLab/PremiumHttpChecks.cs",
+      "sha256": "39CB81DB92EB7FADBD60676F1F2D84EA9C1F531E9C824D582F571E28B60B49B7"
+    },
+    {
+      "path": "Tools/RedesignLab/PremiumWalletChecks.cs",
+      "sha256": "82811CCEC01775DB744DC54BA4435C8F53AE5E67ABFD9BDF0AC2CD61FB651FB1"
+    },
+    {
+      "path": "Tools/RedesignLab/Program.cs",
+      "sha256": "38ADBB6BA3BBF659233D0B0CA99C229AD3B009F658A36691A936E9D3B0023009"
+    },
+    {
+      "path": "Tools/RedesignLab/PublishEvidence.cjs",
+      "sha256": "AB72CDF4FE1E9C20CA347B48DD7B34647FC4794126055192856CF748519F7C74"
+    },
+    {
+      "path": "Tools/RedesignLab/RedesignLab.csproj",
+      "sha256": "E4902AF6105B7692AE07BEE53EC556017956556EAE85929FA6EF34B538B19ABB"
+    },
+    {
+      "path": "Tools/RedesignLab/RunReferenceModel.cjs",
+      "sha256": "E697BF5988A1DD0882799BC5A2768DB9F0D809C8B9D43B6AC139AFA93EE4012E"
+    },
+    {
+      "path": "Tools/RedesignLab/ShopVisualChecks.cs",
+      "sha256": "F0A67B68997B45AD7D57008D880127F73128B870A87147D7EC43F847BFA93659"
+    },
+    {
+      "path": "Tools/RedesignLab/SkillProjectionChecks.cs",
+      "sha256": "6C13119AFED2183E6D20EAA5E5D51862CBBF89E0A56B370BF8B068D3AB5E312C"
+    },
+    {
+      "path": "Tools/RedesignLab/UpgradeBrowserChecks.cs",
+      "sha256": "DB771B9E692CCC420911FB662B7A07AF98E4D0234234D047ADDC1029F26868A0"
+    },
+    {
+      "path": "Tools/RedesignLab/VerifyFeedbackPreview.cjs",
+      "sha256": "9D52ED88C5747CE500785190C85589F5AE5DC81B7742F57B352BB6C66E16A00B"
+    },
+    {
+      "path": "Tools/RedesignLab/VerifyGuidancePreview.cjs",
+      "sha256": "95E457FD627404D62B79E409D747E2EFA7A079461279CA561D90E624F714C46D"
+    },
+    {
+      "path": "Tools/RedesignLab/VerifyProductArtPreview.cjs",
+      "sha256": "185869AABFBCEDC08267D3846BECB1A167AB672E6836167A24D805D57238BF3B"
+    },
+    {
+      "path": "Tools/RedesignLab/VerifyShopPreview.cjs",
+      "sha256": "38C074B65473DC46FB3C4173FE10ADD0318353E3978443523B95408CF3F3731B"
+    },
+    {
+      "path": "Tools/RedesignLab/VerifyTalentArtPreview.cjs",
+      "sha256": "C40F9D3612AA5AE28DA0040E8A60C887BC3627BE7A4A9040E335EF43E1E1665F"
+    },
+    {
+      "path": "Tools/RedesignLab/Wireframes.cjs",
+      "sha256": "1D40D311F5168CE049B81474ABBE679C1A363C991DB8F3503B20B57222DEE557"
+    },
+    {
+      "path": "UI Builder/HTML/Home/assets/gouache-paper.svg",
+      "sha256": "B58746766210E9858B3FD17DA478E1861CE3687D85377B278266C0AF4A3C6CE0"
+    },
+    {
+      "path": "UI Builder/HTML/Home/assets/gouache-products.png",
+      "sha256": "B2D43A930713252E4E68D0A19CD558E66768596422FD6D8C608F35AE6B2E3D6D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Home/assets/gouache-stall.png",
+      "sha256": "470BEE58694EA934F4A9C976C7838DC0E20CA21F3845F4A30D81CE4E9320DC73",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/guidance-topics.json",
+      "sha256": "1A26261D97F8E1DA8FC997FEF766BBA4D33BBF1FA6EA401B74A5C0278CB41034"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/product-appearances.json",
+      "sha256": "90F270DA547345E2C85961D529DCC1DBB2AF150E2EAF827FAB87BDAF63108200"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/shop-stages.json",
+      "sha256": "4555AA2121F44F20161CEF94DE95F63E465A8508A2F66134327EB2F940830BD9"
+    },
+    {
+      "path": "UI Builder/HTML/Shared/fonts/fraunces.ttf",
+      "sha256": "177FF6C0F14E5550A3C624247CD1189611D4EB65D000B14944C63D967958ABBB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Shared/fonts/nunito.ttf",
+      "sha256": "BB55A5CA5C2042335B3991AF27C4D0705D0EF41CAC6164AC737FD8F2A1E85207",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/ART-DIRECTION.md",
+      "sha256": "42311C075A0FA40C5E2FC838AAD851A5280500D5DCA7A2E1E4BFB0379CEF3B79"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/catalogue.js",
+      "sha256": "9C9268BEF8F0F726D1CF760255451E4FE1F5FD7ED8C13275B701BE9116A8C6A9"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/feedback.html",
+      "sha256": "81047DFDEA7DD40954268C79120C26DBB7911CE20E1D6E6D578A90B19D7B1AB3"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/guidance.html",
+      "sha256": "BF67E12B33BFB92B21F06F459626F824127FB9FE2C11CE7EFC5CA0C43D7F7343"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/preview.js",
+      "sha256": "B8220A48988B9C90BBD48313F77650E35BDC6C5F7B4C5460EF2B50F7ED6BD71D"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/product-appearances.html",
+      "sha256": "0111CD1CC7734373EFDC8CBE41325BD2C1ED77BEE7781D12707A9EF46A801FBA"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/redesign.css",
+      "sha256": "1678989A74847DE302E6ED61EC7E9EE3029E8C6E12635B430FDB3FF32F99C767"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/redesign.html",
+      "sha256": "364621F3DA118BDB25F2B55124A691637101462F2F487F542EB070C7E5D4D112"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/shop-stages.html",
+      "sha256": "FC6D49E2E07716A6DD6949D18B3CBED5D1A7F3548197280D3FA1597D9B7A1ADF"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/talent-art-reuse.html",
+      "sha256": "116D24DE68536B4853240C2557969EFA3B0184B88BA3FEC38FC6D7D259E03371"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/verify-preview.cjs",
+      "sha256": "14A64856705CCBB1B73DBA96A8E8E07226D016E7831B238B4E58A9EE8DF080ED"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/GENERATION.json",
+      "sha256": "CC4418E979338C25562CC1CD5C4A63C9713ECCCA5790580059967A58BF8EA787"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/buyall-v1.png",
+      "sha256": "F4DB9B5EACFFED82B87C4F00CE6027A179EBF720542AA77EA36F35E146C98506",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/carddetails-v1.png",
+      "sha256": "7310EA9AAE1A3D90CBBE9C499CF723AA5F21494FA05FB5EF40A8066552EA1B75",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/drawreveal-v1.png",
+      "sha256": "5BEEB3DEC2269B7467946A5CEC775ED49DBF036CDD50AFEFF5FE24DCA7B68320",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/feedback-reuse.md",
+      "sha256": "338314BFD0FBD63B9A581408A28E7FA950CE43140663761A4BF14D1083AB7D01"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/guidance-reuse.md",
+      "sha256": "EC2EF435C9822710B247A962DB3007199DF0AE0DB74BB1D42ED9FA055BF9B9CA"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/home-v1.png",
+      "sha256": "5DAF8657EEBFA3F7E5915E0B398379C42253346C9BF3042159DE2CDFE85E5778",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/kajushop-test-v1.png",
+      "sha256": "A8192C352E6FF85F073646D4A7D69341BD731B3F4E07732A847B72899F4E405C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/offline-v1.png",
+      "sha256": "E33D2DC4E079D74064E4D92852577982B35DC7B176368F2E8715C1DFBFD6C5B3",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/prestige-v1.png",
+      "sha256": "958FB6ACD3032112D049AA0747DC036253A3B857CA6B339EF6D89C24DB959567",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/productdetails-v1.png",
+      "sha256": "2F6F819EB47A113E4EEEC8BC9797162E80F82F591D0D90BFFD2371357212D1C4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/shop-decorations-prompt-v1.txt",
+      "sha256": "BF0D7C88FA0A94BCF052C426BA94A53341626256401E13FA3F3E92F3D2008802"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/shop-decorations-review.md",
+      "sha256": "40E87A9B260F62A2E89E0D4702362C29BF97D61C44E5B621CD36BFB8F6B10760"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/shop-decorations-v1.png",
+      "sha256": "A114D37E292018C5AE5387516499D05CE9B34CEB5E33F2C72B3CE37EEFB8102C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/skilldetails-v1.png",
+      "sha256": "1A3F230278DE369ACC256D8BE09E4841D3117CF81553DBE93AB056F713678D31",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/talent-art-reuse.md",
+      "sha256": "86721BF1FFD5E3B586EE9CA5AC27783D4D61A08825442C6CE885A9C97E64066F"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/talent-v1.png",
+      "sha256": "D84E81DE3B8F0666F279ABF8E73DEB645C233FC62420F3D4CF07056068388392",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/taptraining-v1.png",
+      "sha256": "D910F6169027707307DFE92974EA1E663682CC843C276C1D91351B81B0C5185D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/upgradedetails-v1.png",
+      "sha256": "DD5E28F00826D28DE448E46CD14F7EFFC2BD3342509FE4D21E2CDA6E64218C8D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Reference Images/Redesign/upgrades-v1.png",
+      "sha256": "C42D1B8C796BE019A1ACC98D3ED47D8A9D87A7184AE82504199023EB3903309F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/NOTES.md",
+      "sha256": "1E0A4C0EBEB3E6134DE0D79BF50E3C2E878A6142DB68C56CB30EA5F6FD547573"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/buyall-v1.png",
+      "sha256": "CA8048E55D1E176C41C76DB41DA6A2F86F865B4654ED6CF1A5B1280E87170960",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/buyall-v1.svg",
+      "sha256": "5B8B78338727176838BA4E72FE2FD577641E754B8092B0B15040E24C5D3634BF"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/carddetails-v1.png",
+      "sha256": "C165B2BB2054341BCFADF2CEB919FBD27F9200CD27AFEA465099D1A9F08FBD21",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/carddetails-v1.svg",
+      "sha256": "48B67FE8FDF48FC69BAC81DA1AE94F9C79FCB9F98B4028F011A88E9F50B39494"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/drawreveal-v1.png",
+      "sha256": "D3E4480E7041828075793323C71330131CD77B0BBDF27544A07812C177D1E8A6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/drawreveal-v1.svg",
+      "sha256": "F0975B28052057FF57F9656DAA15954A91A3AFDC889CFA51D60F5A9CDC0C35BC"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/feedback-v1.png",
+      "sha256": "4173F4B6118ACFB29AE882C5E6C6047E95C7DF53327DB6176C900A855A67FB31",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/feedback-v1.svg",
+      "sha256": "B224BBACB65C14C2C3CFEE3832AAD8C53A0387FBEA6A0B95FBA444688EB99F83"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/guidance-v1.png",
+      "sha256": "7D2572C424C49D7106415F7157991321BE8003E6E31C5F5C74A7A4ECF43552ED",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/guidance-v1.svg",
+      "sha256": "F03F3B5A37E76DEB3957D97E73777999EAB1951B567294FC8A73EABA5A3DE1C8"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/home-v1.png",
+      "sha256": "4BBD062192001E21B867EC6E294978A05FAEB1CDC0B92C450C31AD637696ACC1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/home-v1.svg",
+      "sha256": "6749782B51109F216139EF3818D3958E2F2984F6F3A3687C552465E7B3534ED8"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/kajushop-v1.png",
+      "sha256": "749C7D14D175F59F85FF6853C13EA1E679FD751DDEF6D5861B438778A7141698",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/kajushop-v1.svg",
+      "sha256": "365D32474940842B079CB1313ADF06C71B772CE14247D8D4A0FE7031F14A8604"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/offline-v1.png",
+      "sha256": "569CD72052680F58B301637CDA8F80F116F16E6DA594B02D53B72F0BB0AD2309",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/offline-v1.svg",
+      "sha256": "650BD85761384D0BD12F422B4B08CA5244034517ED3F0BFBB8200521EDCD7418"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/prestige-v1.png",
+      "sha256": "FEC0D305E92956F0D9125728DCD7BD1DFAC24533678F57E8279842B256BC2CD2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/prestige-v1.svg",
+      "sha256": "A4331178B14785516FB122694D5B9AA1F80D28A93782DD16FFCFEE247C2C8ADC"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/product-appearances-v1.svg",
+      "sha256": "EF5ED0167741D6ABB1730ABA1F088A50215965354E8875C646A4FD965F6F1427"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/productdetails-v1.png",
+      "sha256": "0891D1CE0F990738F53B778E73A22B0ABCF4691D2CA896474296B910D18F2051",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/productdetails-v1.svg",
+      "sha256": "F1632C81099E25639CA5CD6DF06BE13D37045E9778EF0570F9B6D988031C230B"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/review-board-v1.png",
+      "sha256": "2D63044F1EDC45864655DD273F70E04E4D451B1116F0F4D079CB3B8A59817EF6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/review-index.json",
+      "sha256": "FAD4B8C40ECD1E8D61CFE030EBF67A14451885D67F455A0B690ADA858037E672"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/shop-stages-v1.json",
+      "sha256": "2495B7A083F5ECFF16B97B4505379CB86108CB5B35F50539EF8FBEED2F8B571F"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/shop-stages-v1.png",
+      "sha256": "36FD9F34C2E2DE26BE31725E44BA4AF82049750FA3F04E07A37ADC4E9F0CEC00",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/shop-stages-v1.svg",
+      "sha256": "E8637654C53E143360EBDDFD05D1659CE695928E607879D8BBB38D7FC70444BE"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/skilldetails-v1.png",
+      "sha256": "A00E599C3BD0A0020D4A6DF381A73B37E30EAD90BA1B77062BC488330C62BD30",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/skilldetails-v1.svg",
+      "sha256": "45BE1F78D345B6F77AF9B30A9154A1B910E15FE66AE67065EE5EDFF84013E6AD"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/talent-v1.png",
+      "sha256": "3F650F7092B8DA9158012E01F2ECAE130DB17F16F1281607F979E0FE3920896E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/talent-v1.svg",
+      "sha256": "01FED32E58E687C3637E153F973EB8DFB6028F07431EBCCA9630126561AFFB02"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/taptraining-v1.png",
+      "sha256": "0372A88F6E1F1E5BE01223470DBB85357A2BF0E80BCCE92FAB1792CE2099030E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/taptraining-v1.svg",
+      "sha256": "C4F2043E34DD1E4A8666EFB889F7BC408281A67B394344A0F9992656E101C902"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/upgradedetails-v1.png",
+      "sha256": "96E84AC7150A1B182D313BB305B9EFFA22F737FB210F414CC68B51CE4065CC98",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/upgradedetails-v1.svg",
+      "sha256": "329702E9BD6254BAC1417B17AD914F4F226DA77D7867E9E5765291D38EE03381"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/upgrades-v1.png",
+      "sha256": "7598C4D7F79E4D33C8E6E67DFB5598D2ABAAEB042BCD8C49B575DE656C2581E2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/Wireframes/Redesign/upgrades-v1.svg",
+      "sha256": "D9459EDF6B00044868B16CEBFC4BF7E0119DB500569A95900F02A57BDFD5E0C8"
+    },
+    {
+      "path": "firebase.premium.review.json",
+      "sha256": "D59374908BF8BB0EFCECBE6432F563DA3567317B99B94FF9CC9D816CC8B9E722"
+    },
+    {
+      "path": "firestore.indexes.json",
+      "sha256": "83D8AF519D55F66A548BCE06E67D08AC6602D32C7787199BEA3974DDFA84B93E"
+    },
+    {
+      "path": "firestore.rules",
+      "sha256": "630E9B1C8CC28054CF2E33D27723679827FAEED5C4F0AA973ADCDAAA27F3D369"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "Documentation/Implementation/AccountFlow.md",
+      "sha256": "7240EBC2F3D1635F7CAA50F890CC4AC43470D7ACF0B7AE804A5A48F92347E418"
+    },
+    {
+      "path": "Documentation/Implementation/AccountRecovery.md",
+      "sha256": "7B1AC867344F4DF8DE508F69866B27D8DB2B9891F74CFDD7CFFC21C75945E279"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/README.md",
+      "sha256": "FDD1D02DEF9194D5EF56EA8C2B5A1B8463D3292B91D98866ABBBDE174A8093C8"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/01-home.png",
+      "sha256": "3C9E44A200A79B8E3E7A8EF5DE34971C2A73DD0BD5E292C992AEB48843C0E3F9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/02-products.png",
+      "sha256": "6250A68C4B2500B2B9EBBCBB54579D7F8974221B8290DBFF3F4682FEC5835AF2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/03-player.png",
+      "sha256": "8FDF57289E37073691CBEA7D92E06CBF0EF5C0A4F4B598604884E12CD6AF65F4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/04-prestige.png",
+      "sha256": "03235549BAE52439826A44DEC69FA853AADB217CEE043C3D0C625ACA57396E32",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/05-legacy.png",
+      "sha256": "26851261595A1AC1867C3D4B7167FA032C2457160CF7EC4721AD9A3AC8F74A13",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/06-offline.png",
+      "sha256": "491D3C5A39518064EDE82F5352BB8BDD63B4924FE7DC8061D3BA0BC967671B23",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/07-prestige-celebration.png",
+      "sha256": "C26CF5937A955ED89E141D225E6617B4B2F647A549DC2584FA590C2E11BAE33A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/08-tap-mid.png",
+      "sha256": "A9DF629F8DD8451284C2AE5E9EB6FE5BB6887E560E34257D945111279361558D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/09-celebration-mid.png",
+      "sha256": "0E8868A4A654FDA3D83CBF87E803BC3D101F49B7E66BF54C9A3AF3F07D7F0FEB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/10-ambient.png",
+      "sha256": "CF7BA77589B109BF49DD50E36911368A19723764720F690AF21C57BF2DC58E6C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/SmokeResults.txt",
+      "sha256": "FB217D0C20664F31CC62B197E6B1C39D34ECD783A41F2E759E117105BB9E234A"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/home-540x1200.png",
+      "sha256": "BE0798905D025A794FCB1EAD2E86D411C0EF8891671EDE2D9277BFA9EDA47A75",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression-Final/home-540x900.png",
+      "sha256": "C7B8E052467038A1BEA8771D2A283EC0408656CD807996E0DAB04547FE41A894",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/01-home.png",
+      "sha256": "3C9E44A200A79B8E3E7A8EF5DE34971C2A73DD0BD5E292C992AEB48843C0E3F9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/02-products.png",
+      "sha256": "6250A68C4B2500B2B9EBBCBB54579D7F8974221B8290DBFF3F4682FEC5835AF2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/03-player.png",
+      "sha256": "8FDF57289E37073691CBEA7D92E06CBF0EF5C0A4F4B598604884E12CD6AF65F4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/04-prestige.png",
+      "sha256": "099C8D9471C9DC035ED511CC3B884F8615DC762AD51835037B9F871AD3C10F23",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/05-legacy.png",
+      "sha256": "26851261595A1AC1867C3D4B7167FA032C2457160CF7EC4721AD9A3AC8F74A13",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/06-offline.png",
+      "sha256": "491D3C5A39518064EDE82F5352BB8BDD63B4924FE7DC8061D3BA0BC967671B23",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/SmokeResults.txt",
+      "sha256": "1DF5699EE5588B9C9DBE15914C336F651B9D370C194E1A0686E8377C15044DC0"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/home-540x1200.png",
+      "sha256": "98249F4C40A6D516F593F86725E1A822843FF049216032B0A2D2B21CC186D8B3",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Regression/home-540x900.png",
+      "sha256": "C7B8E052467038A1BEA8771D2A283EC0408656CD807996E0DAB04547FE41A894",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/SmokeResults.txt",
+      "sha256": "3CF9A40855EFC203DC4A745AD4DD2CA89833C0F3C739696DE8C8EB4C499F01E0"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/Unity-Assets.txt",
+      "sha256": "CA040B65B18A91EC94C916768A378ADB33404EAE41D1EF47DDDEC7F3390A6103"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/ad-free-home.png",
+      "sha256": "E55A14BA2EBA701A3BB435B782A762CB56412D33761122C7E6CBF6E5A56354AE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/AdRetirement/ad-free-offline.png",
+      "sha256": "F2C38E39A23C84D301E7CD9644D186611ECDD77B3A3B6D8B359AD1D602F7F20F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/Baseline-CloudSaveLab.txt",
+      "sha256": "10D4B8A0C11CC7CCEFFEB8D41A6212792FBE96EF6B3D84C6CA0B248C8BDA4AE2"
+    },
+    {
+      "path": "Documentation/Implementation/Baseline-EconomyLab.txt",
+      "sha256": "82253ADEF6A868753D392FA107DD999E8B8A7A6970959E694527291151D24AA6"
+    },
+    {
+      "path": "Documentation/Implementation/Baseline-UnitySaveTests.txt",
+      "sha256": "EC84A59B6C2AE2D1CF703F2D33D35CFA414E9B910E4F25F641442BF1CE085E81"
+    },
+    {
+      "path": "Documentation/Implementation/Content-Numbers.txt",
+      "sha256": "53BB77A43F7C4E71AC5F242EA61BFBD0D68259BB4B64C5509A0CFAEE65A06E37"
+    },
+    {
+      "path": "Documentation/Implementation/Core-Redesign.txt",
+      "sha256": "AC7591CF2D338A7571319B0761D77BE96C80F3CDEB752FF34DCCDD47A6EF72FE"
+    },
+    {
+      "path": "Documentation/Implementation/DevelopmentReleasePreparation.md",
+      "sha256": "D7344F27C91EF9E8B67FA647FE5C57A1F94E29DAF59EE1F2460525D1D3F94BF7"
+    },
+    {
+      "path": "Documentation/Implementation/DevelopmentShop.md",
+      "sha256": "E1166ACE075FD1BE0AD85A6D66EE7ED4CA6D9E376073335D50AE78590AE4F78C"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/apk-sha256.txt",
+      "sha256": "DC0C485AFDF3DC2AF0EA2B3349DE93B3C16068F0E408F666E0069EEC6C6B3F81"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/build-result.txt",
+      "sha256": "1F615C362F11A77D435FC6324B6D9103296EB0FC2CFDFB1CA2F451791309B489"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/install-result.txt",
+      "sha256": "9F883215B8A9CC008AE25B60223883DDF13A9BB608AB977564A05ADAC30C9BE0"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/install-retry-result.txt",
+      "sha256": "781A31C82430C97897AF612ECE5E0CA2205E301CB5FF121CE2660541EA5182C7"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/installed-game-after.txt",
+      "sha256": "2AE3E32CCE6EEC9DBB0F4453BBA31349F46AB5E2F2997E93B4C859FFDD5B91B0"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/installed-game-before.txt",
+      "sha256": "2AE3E32CCE6EEC9DBB0F4453BBA31349F46AB5E2F2997E93B4C859FFDD5B91B0"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/report-after.json",
+      "sha256": "794D90B9078363940BB57A6300594E37457E90E643E4C79C691BDEA51BFF9E50"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/report-before.json",
+      "sha256": "D0503D6298F072DBC4B9C2F2BE9F4A95F2681B2CF0AE388644BC52A82EDF5B87"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/2026-10-02/source-manifest.json",
+      "sha256": "5BABCBC6FA9E82F5CDCCC65CF342A238755B14D07EB05026906AA7E0343A5208"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/README.md",
+      "sha256": "109871BDA81C29EF01823EF60F3AF84BCE44A11B917C7BE69F6D3EAA716E1976"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/apk-sha256.txt",
+      "sha256": "4354409CE505DD7D464111A5CC51098BEC7CEACE774C6FF9705664866A45DC76"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/build-result.txt",
+      "sha256": "848622913A984852E48B72AE8FDA51C47A52EA9EB938FACC422ACB6B8BD78F59"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/install-result.txt",
+      "sha256": "71541D8D274F7BE91404797CA8F8A14E1075A6BB5452986F4ABCB719A3CDF844"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/installed-game-after.txt",
+      "sha256": "F9C62FA98179EB8BAD1DF8578004AA7A60D92831D8AFFF02DC0B8421482A53F4"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/installed-game-before.txt",
+      "sha256": "F9C62FA98179EB8BAD1DF8578004AA7A60D92831D8AFFF02DC0B8421482A53F4"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceCore/source-manifest.json",
+      "sha256": "C84884E0C8858652EF2C46CE268678CB2187BA9501C623DAF57BE7E1468461CB"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build-BeforeAccountFlow.txt",
+      "sha256": "A4AF18380727F4338E9203534DB349727EC6949034E68AC011C6ED98444BDFA4"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build-BeforeAccountRecovery.txt",
+      "sha256": "55AA4AB351235D0ED638454BE7A136DE1DAAEE0BA4891C17ACEFAFED2B924574"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build-BeforeTalentArt.txt",
+      "sha256": "9B6AF11907567A4725431809CB456A9FDDE3D572390D463000324CD5FD5D7E9F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build-InitialResolverFailure.txt",
+      "sha256": "C634EAADE4A21BEF0520A42C7DB718AA6A788CBA70EA242225A7EB9240406F58"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build-ResolverFailure-AfterTalentArt.txt",
+      "sha256": "775AAE7A039236746CF0FB372818AA7733053AFA8EEA3D903F821784C4BA7EE8"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Build.txt",
+      "sha256": "634230CFA10FC4D7C98DABB48827CE84C901FDA06F99A947D6FC995CF480F8F2"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/BuildWarnings-BeforeAccountFlow.md",
+      "sha256": "61CD07F299E0B7BAC38A1C2322F6952970DBB67B2F78C7102977BF5E7165E3AD"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/BuildWarnings-BeforeAccountFlow.txt",
+      "sha256": "7ADE6E27D087A95B57369127D8DF3B7740296709F20E3286C6D1E424CB28C27B"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/BuildWarnings.md",
+      "sha256": "F1E258DDB77997C6FFC616086DE72B91ACF73029DFF8FC5E29811F4FF398EAB5"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/BuildWarnings.txt",
+      "sha256": "7ADE6E27D087A95B57369127D8DF3B7740296709F20E3286C6D1E424CB28C27B"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Certificate-BeforeAccountFlow.txt",
+      "sha256": "A736E03D31E6CF50B1989F10CD861662E1843358D0673FAD451A5A459AA34E1F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Certificate.txt",
+      "sha256": "A736E03D31E6CF50B1989F10CD861662E1843358D0673FAD451A5A459AA34E1F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/DeviceState-AccountFlow.txt",
+      "sha256": "D3F7310A0A52525988684B0CA130C1C74E544F09C9C6F6532A8363B23540FAE8"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/DeviceState-AfterRecovery.txt",
+      "sha256": "7D3114FB6BA3123D5C0DC7BA737AC98B85A23D7089FA80B1B831C8D286B21BFA"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/FirebaseGeneratedArtifacts.txt",
+      "sha256": "7303AB0F71FFBAEE75DAB959E8EF3BA6EA4C7EFB6C20B5461AE819A644EE4DBB"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Install-AccountFlow-Retry.txt",
+      "sha256": "BABFD7F598EF2FBBA162DC4F608805AD9816FF3A4A05C3D556A1D6B4DF1EC764"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Install-Retry.txt",
+      "sha256": "B8707190950E337C5A64A982EF5E7CF5BB266C42351994C42C33174F22873D5F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/Install.txt",
+      "sha256": "B8707190950E337C5A64A982EF5E7CF5BB266C42351994C42C33174F22873D5F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/ManifestReview-BeforeAccountFlow.txt",
+      "sha256": "7976DDCBD583115A736593040ECFA9CB8083992742D7ECA6A43DAA8D1731D21F"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/ManifestReview.txt",
+      "sha256": "4D3F30A0A950368E95D345CED057535761DA405B8DFF14BA36DC58BCEF588EB6"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/PackageChecks-BeforeAccountFlow.txt",
+      "sha256": "7B33D41C3683FE0E021C824780A3C7A526CA4F9CF22F90109817FA9594790F9D"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/PackageChecks-BeforeAccountRecovery.txt",
+      "sha256": "37688A7DA8A7BA1B6EC17F764663A371DCE2CF1C559BA7EA4E5134A1949EC0D7"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/PackageChecks-Initial.txt",
+      "sha256": "784629BAB715A5236410435E6E2569E6D0637707FE819D31272A9AF1FF2FF2A3"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/PackageChecks.txt",
+      "sha256": "C05C134417949043B7DE3BBE9D7E9424E767A2AD5AD7F9E3553DCFB59737054E"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/README.md",
+      "sha256": "DC3EF90FBA5C7E0827A8C46AF5E2A9DBD60EA94367FC76D2CB3FF4DF701DEE02"
+    },
+    {
+      "path": "Documentation/Implementation/DeviceGame/ResolverRecovery.md",
+      "sha256": "FC459250D673462A5B6129358143243DD4C8E1BDE399891DAD9A2911DCA3B1A7"
+    },
+    {
+      "path": "Documentation/Implementation/Evidence.md",
+      "sha256": "86A713D73DEFEA8679AB3D04CC16E8459A799BE85C64302A4A63C5171DFB63CE"
+    },
+    {
+      "path": "Documentation/Implementation/Feedback-HTML.txt",
+      "sha256": "074F153590E45B2CCA65F1668B31CEC8356B0A9B6538E7E2D4123206A28DF330"
+    },
+    {
+      "path": "Documentation/Implementation/Feedback.md",
+      "sha256": "BBB82EB57D50C1B9AD92E7E486D58433E06438328095F673DD7A7540C80849B1"
+    },
+    {
+      "path": "Documentation/Implementation/Firestore-Rules.txt",
+      "sha256": "55A60191D725A9948A664B66FEFFB2403EBD2E28AFC85BA036C00D6B5204FDA1"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/README.md",
+      "sha256": "24E276AD053B330EB83ACC5A77FB40367357FB5551DE3A1F7B81CCC28A27FECC"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/confirmed.checkpoint",
+      "sha256": "6AE887AFE333D12392C1DF993A147911BED630B23D9427D43AD6F6EFD96DCBF8"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/guest.save",
+      "sha256": "6E87E22194196318B5C5509F99A3FC0C706CFBB018A9F2F7D484E9D3733283D3"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/guest.save.bak",
+      "sha256": "60A455141B3A591C7583225043B27B4247BD0A6932554E597A43B09F01569816"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/guest.save.pre-v2-989D984B24820772804CA5AED84B6AD963139BE04F15DE383943434E72A50C9B",
+      "sha256": "6E87E22194196318B5C5509F99A3FC0C706CFBB018A9F2F7D484E9D3733283D3"
+    },
+    {
+      "path": "Documentation/Implementation/Fixtures/Legacy/pending.checkpoint",
+      "sha256": "75A34B438B9A3FA488F3FAD52701C6F08306D67C8389EA7EAF52F031BA0784E3"
+    },
+    {
+      "path": "Documentation/Implementation/GoogleAccountActivation.md",
+      "sha256": "C71D2FA2434AA680741DDAF833220BC1B2C108236071A5A3518F7F172DAA91C5"
+    },
+    {
+      "path": "Documentation/Implementation/Guidance-HTML.txt",
+      "sha256": "BBFF963CF6AFE3529BD2002D63B90A247F3B6D25BB433F6B1C4B005002CE7920"
+    },
+    {
+      "path": "Documentation/Implementation/Guidance.md",
+      "sha256": "5FD158EAB8D1B0E2B53BB1EB6CB70514124364A955614C7ED215E572028AF1AC"
+    },
+    {
+      "path": "Documentation/Implementation/JavaTestRuntime.json",
+      "sha256": "8B7CA0B981587B5869F4AFF6C1533BC37A511B6A642B05CC6A0C4C28C920EF50"
+    },
+    {
+      "path": "Documentation/Implementation/Legacy-Inventory.md",
+      "sha256": "F031EECCD82E1ABE18B6A5E6D9917863BB28CA54B22F6160215E8C8A166A2DD7"
+    },
+    {
+      "path": "Documentation/Implementation/MainUI-Baseline.json",
+      "sha256": "6F7829EBA8034D8E931842713724AEC52DAFB2F8E4DB556D266D127B0F4E8E2C"
+    },
+    {
+      "path": "Documentation/Implementation/Model-Parity.json",
+      "sha256": "E3C43E809CFEAA31DB45F5CD097DBE000E29DA08D802131D221851772D2B9619"
+    },
+    {
+      "path": "Documentation/Implementation/Model-Parity.txt",
+      "sha256": "9CEC5140C809B611EB5D1B32BB6E4F7BBC6B94EAA16D8A17EA12EB4D53C4E589"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/README.md",
+      "sha256": "813B508EEC19C0C13DC4FD325E4308F2C22D39736CEF35F814C1BDCEC5665B96"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/RedesignSamples-SingleCycle.json",
+      "sha256": "B7115173A0D604916C4DB61A02D7075ED30B519A3C12830CE4EFEB7C87B85A94"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/RedesignSamples.json",
+      "sha256": "539B0C046835E804444D778562B9B90373C800C2CA162212254887046E865BFD"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/SmokeResults-SingleCycle.txt",
+      "sha256": "66FDFA47CA74DB23AC51D4B7F0723A93948EF458E386CA144192F7254A9A7AD1"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/SmokeResults.txt",
+      "sha256": "D6C4C2DF4D33EA322A815C20DC4DC3D136091B9500128081B52BCE1839B0BC99"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/redesign-01-home.png",
+      "sha256": "23A855986C98E11C22189CB39C1A7E48B475EADF559FF03EE4CD008F3241A602",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/redesign-02-complete-shop.png",
+      "sha256": "823BE0C4DD463CFE11D5A2984CF18F3412C8AB883A12D416AC098244601D81BB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeSmoke/redesign-03-reveal.png",
+      "sha256": "87F1FC25D1AE44CCDCB5BD9B76C1FC34C9AF2D6C6C894C406A5456C47AF6C94B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI-Baseline.json",
+      "sha256": "0B35E5243BEBDC0A5B8671226A933B8B207EF43277C175B2DFB233D649FA0585"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI.md",
+      "sha256": "0C0DD3B49DA52725597F2F16F28D69A08E46B9AF8A16079AAA233073CFBFE750"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/account-flow-compare.png",
+      "sha256": "05CFEC5736CDDC000AF0E282338F545555E35D0DD986BF77636C8238A7E400C5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/account-flow-handoff.png",
+      "sha256": "50F5CA05299A3770E1FC1F8F23BD257546033642DBFF63D31484569D1D99F30B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/account-flow-menu.png",
+      "sha256": "A89D7712B5C4D58E1D24C9D3C159E316CC627A1DDC04E516381C1B1CF8B162FF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/account-flow-promote.png",
+      "sha256": "409E854DA960FC1CA22D8313D9029F7E599CA1B413AD3F066C9A2EE3BD7B17D4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/buyall-360x540.png",
+      "sha256": "66E6432428DA0CF0E759BEF891B7E3689627B321824B9F8EF2ACE5915AB0D5F8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/buyall-390x844.png",
+      "sha256": "57486BAB3F2611D143A4FC9E457BB27EFE44118C6949264648982986B9373817",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/buyall-exact-360x540.png",
+      "sha256": "BF585ACAE9CCCC96916B0ACFF2FB60289F3B2F517BEF423B4F6B23BAFE3BB0F7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/card-detail-exact-360x540.png",
+      "sha256": "A5FC05FD2DB3B848E2895F80FF67FD8538B165F7EA3309C396313EA93BD7B73E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/draw-reveal-360x540.png",
+      "sha256": "EA6141DC48F6667A3BAEF3997472EA8C8CE25DE4E422A79FE1C832D0CD552507",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/draw-reveal-390x844.png",
+      "sha256": "BF5C631B31B9E0F125041A8DF9C05C7BAFAB4E14E52E07A13590EB4BC35DCD98",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/draw-reveal-actions-360x540.png",
+      "sha256": "3296E46032CA9830DE81AAAAA3991A5FA910047D31573B9BF9FAE79312A50346",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-0-360x540.png",
+      "sha256": "9F04A1112758D9E2B9487833C04FBEDF8091C0A89D54C3BD84587D56A3EF1687",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-0-390x844-notched.png",
+      "sha256": "56147C218E3E15FF7BF021AD0DF91A3B197B1E477C38E845C4B6663F608F11A2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-1-360x540.png",
+      "sha256": "92736E0FEA0AD2A5FAB107BD640D3B084B39568BBB9964E85D6B7902B928A22B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-1-390x844-notched.png",
+      "sha256": "3E0922D306BC16F77C84C4431B7B496229FE1C573FBCAF387DBF6A61CAEE0CD5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-2-360x540.png",
+      "sha256": "1640E05EFF6741C1A8D50ACF042F2016A8C3D01A6DED112D9C6849CF9643190B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-2-390x844-notched.png",
+      "sha256": "C8B9DCFF08E110D1E8C710946D7E6BA33A2B8038C823F03422C165787D34BD76",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-3-360x540.png",
+      "sha256": "43DC89629E354FCE5528466F029594A9575356715AE8947701936D0BC6DB95E2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-3-390x844-notched.png",
+      "sha256": "0C4AB8977E78610CF3CBE5111852D5F501CA667BD7DCE4BA31F12F9B0A9D8C15",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-4-360x540.png",
+      "sha256": "0FFD99BCABEA15179226E20C6FDE3ADECD733FE1AB39236350CC20FF70834503",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-4-390x844-notched.png",
+      "sha256": "C77A949488D8B5197503903C6BC0A5BED65DF47EACEB810E6667A5C2ED9513F6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-5-360x540.png",
+      "sha256": "62E0D33911747948958E51D24C72A50C23D2175CA94BA8D5813E23BBA14066A5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-5-390x844-notched.png",
+      "sha256": "CD8D40BB1C59691EC3290B156B7B189BF23E09B15CC77CF109E4B61286FE781F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-6-360x540.png",
+      "sha256": "337F3C84FC56136552C4FA3CCA71C90182F278962E2E65BB05B7225AB067A4D3",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-6-390x844-notched.png",
+      "sha256": "029F31197F30E87CFBF7889A69BAE708F779E9DB0C1E27BC4F2A5834EB8CF31B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/feedback-muted-reduced-360x540.png",
+      "sha256": "1640E05EFF6741C1A8D50ACF042F2016A8C3D01A6DED112D9C6849CF9643190B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-buy-all-360x540.png",
+      "sha256": "D46175363C8BA41733598916B62C239EB51E02C091787222D9131B88D02E5A23",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-buy-all-390x844-notched.png",
+      "sha256": "BCE01622A2C56895AC914D8B4982071A85EDFB12C91B366E50625CF79243CC01",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-buy-first-360x540.png",
+      "sha256": "E8A25D257DCBB938AC3E2F9B3D0B6CA35571E287922273DA52C5207709E43403",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-buy-first-390x844-notched.png",
+      "sha256": "F0EDD85CCD03C418DF5157A8A9387E2DEA3F182E36860864939712785F5E1D51",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-cash-and-talent-360x540.png",
+      "sha256": "74C3F8EE25CC421FD36DB6A9FB129C87FE4186FC4C294430885CD413FB36F5D1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-cash-and-talent-390x844-notched.png",
+      "sha256": "D312E5912D01F2CBB901861EA10B2311265C31F99E8418B111B6C78D5AE8268B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-catalogue-filters-360x540.png",
+      "sha256": "487CCBE186B8C7A85C111D1CD0D5BC7AD138E7B83AB4BFCD03CC3220BCE9D13C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-catalogue-filters-390x844-notched.png",
+      "sha256": "5E11F123257EADE6E2D87EAB162AB15C53CCEC8CB4EF768F405CF2D1F111A880",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-comebacks-360x540.png",
+      "sha256": "0E75D4F8C552E6381876B7E602FFED551E96FD86FB847E01D456C93D22C87BE4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-comebacks-390x844-notched.png",
+      "sha256": "610AC49043898F8FE033E2C1E3814B759ACC33A2B34E27E253506808E11ADAB0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-prestige-360x540.png",
+      "sha256": "895D306DDB66F127B25ABC21E89CA8C026CFAB5F67CBB1994BE0807E2077F91A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-prestige-390x844-notched.png",
+      "sha256": "0B2862C41BD475EFDFC1887F113DC935D2F18E37CB6A36B8F18ACCB58BFEA701",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-product-levels-360x540.png",
+      "sha256": "B8867B9AF64CB36342BB74FB7E9694D872CE1FDB53997DA2AFCDC260A32B581E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-product-levels-390x844-notched.png",
+      "sha256": "F70104B967B19C7EB8FAABF0D2A4C633D4425590CA7FE936B664D55F343EA808",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-rebuild-360x540.png",
+      "sha256": "F2276944F8B8EF48C269B4B18790015256CDA2E7A79CA151533366CB7DEB5560",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-rebuild-390x844-notched.png",
+      "sha256": "4FD043A25735304C1653E02036C5281FDC698D60BBBD681B235CDDA3C90076D4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-second-gift-360x540.png",
+      "sha256": "488B0C0B435B9E81E271E959A3C68830A8B7074E054FF9A8D92ABE169B29D4E7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-second-gift-390x844-notched.png",
+      "sha256": "E9F03D5BE112830882876368AFE8729CB772E96678830AF48427EAB18518229E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-skill-basics-360x540.png",
+      "sha256": "61307EB60F8A8B75366EB35CC2F6ED71E42DB051C5C7553B5B9422F54C44BC19",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-skill-basics-390x844-notched.png",
+      "sha256": "86B3BD91FAA5D5BA29071A835B17D71F193ADC723C0412F9DC9C8022F7C93C29",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-talent-duplicates-360x540.png",
+      "sha256": "5C60347F9DA119CF8BE0B428ECD8F2429DB8F2232412FF671F6DA12DDBA2E24A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-talent-duplicates-390x844-notched.png",
+      "sha256": "8F5A1B60228D478222B7FFEF5DE86F82BAD9D36B75A310C3222F9EB221C2A308",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-talent-free-360x540.png",
+      "sha256": "BBC37C33A5101F711308B00FE4B3E1FE8B71AE2A7FBEDEDD495935272277BC4C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-talent-free-390x844-notched.png",
+      "sha256": "B5CA7A63F6A1F695A9F9E248096DACD926BD8588F2A6196AF7F0653CA592F340",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-tap-counter-360x540.png",
+      "sha256": "6A6794B9C9E067E592528A8A73701C9DFA257E389B88C636FFBE61810F152400",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/guidance-tap-counter-390x844-notched.png",
+      "sha256": "721A61563A911B2056741E01C640E53D54D63D4E55F706825EFCD521DF56088B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-actions-360x540.png",
+      "sha256": "E7B28C7B882414663EE87AB64253ECEFA016C99989A0A880FF741133594AD7B6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-fresh-360x540.png",
+      "sha256": "58B2043A7740731F48FD3DD733CC16C0DBB1FF5483F317D9F4F4497F8363C1EB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-fresh-360x640.png",
+      "sha256": "A79FDC7229B18C76963063BB0FD2772193AD04D3278EE9ADCD4F7AF3A916D406",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-fresh-390x844.png",
+      "sha256": "B09DA5385415E3E4541657B9FF18A074784D260042E0AE89E462D977F956DBEB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-fresh-450x916.png",
+      "sha256": "2B7D72B1EF16A8B67161DB095AB47B138AA8E22D3F0C172022805856E8226252",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/home-progressed-390x844-notched.png",
+      "sha256": "DE4E73BC00AFA453E754B270EB6BBBDFA20EFD0D42076573697EB7A9EDABA4B7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-account-360x540.png",
+      "sha256": "C547F80E80CE5DFD062A9B3B46F14E01766ACE2FE45C045046D57FC73D5DEE11",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-name-360x540.png",
+      "sha256": "4BA91DF7C6E4CB9CB21D76A056565C709880B2BA278621441C46B5F2D40D0C63",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-privacy-390x844-notched.png",
+      "sha256": "72EC5D2157B10305B36720A7163B99C20AB013961BE6265A307760F535395E3B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-privacy-bottom-360x540.png",
+      "sha256": "E048687C7E9A957A09ED47A353E741BC58665112581C1CA336E81E7A49CA5E8A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-recovery-390x844-notched.png",
+      "sha256": "EE687211993128C8F55CFA938A166359837B660BA069EF5F4DD720F1107507F0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-recovery-bottom-360x540.png",
+      "sha256": "A8A253C1A9864A6C9E98C79A70564102D5EC0DB58AC2029836080D34877D69E7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-settings-360x540.png",
+      "sha256": "1D17E060F13F4CE68444B07DCB15FD66E13ADEC1583D2C54ADDEAB67E0744889",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-settings-360x640.png",
+      "sha256": "F5E2DFFFC5C774B1F1F275CE7BD762C728433A0176B3AC01BB5F44E6E65B85DC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-settings-390x844.png",
+      "sha256": "6921EE722792967E713B8B9DC183E557BB9A29479D40701783D0A68E16A4413C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-settings-450x916.png",
+      "sha256": "31D39D82ACCFA8F3E86F9EBC46DC1DC54CCF2361B2C791891EE0955DB19F0BD3",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/main-settings-bottom-390x844-notched.png",
+      "sha256": "4EFC9F156762BEB43AF9CDE66678734F008E2544ECC88D19644115F05DE9BDC1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/offline-360x540.png",
+      "sha256": "106C4A89A8F28E558309C7EF64669F32EE6F266C7B3FA5CDE65B05D66CFC5D10",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/offline-390x844.png",
+      "sha256": "E1B4FB32D6E32EC17EC60016FC108D92456DAC30E3B76DEAB042489259DA5254",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/offline-actions-360x540.png",
+      "sha256": "ED5FA5061AF345DA697133DF0CE1ED723153F48589C65D7E86F411A446AC18EF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/offline-actions-390x844.png",
+      "sha256": "2B43E613FABBDD509E0F24FB8626053369CF1E990FB2EE1A573218D27E3191C9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/offline-empty-actions-360x540.png",
+      "sha256": "4E70F77CEFE21F5617927EA58E02A4CD7AFA80CDA80FF40664F8F01C71D3871F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/prestige-actions-360x540.png",
+      "sha256": "80E60DC3A1041255700CD643E1FD6E08A361AB6E0E3D7779DE38D0109C37352C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/prestige-actions-390x844.png",
+      "sha256": "8C7E651B9C612D19B804A31536129881A02C78F94E21179398AB79813A1CFCC3",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/prestige-locked-390x844.png",
+      "sha256": "3D503F7B14B3536B77DF2BB2822BD2AAE89DFE57A276AB801DF766EEF0A3FA5B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/prestige-ready-360x540.png",
+      "sha256": "BA5B79E54676A9E6FD1D82F49DB511347288F4F4F75AFF01AF579E92F4EA518C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/prestige-ready-390x844.png",
+      "sha256": "FFC0666ABC8CFDBFAA513B75DBCACB709F4C00B4A4921026FC3379981EE96437",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-actions-360x540.png",
+      "sha256": "9050270043476173974FFC8B37E201CBA7354C41A6D5AD4BB0B883C0BBC78D09",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-actions-390x844.png",
+      "sha256": "1DDAF400E91DCD7EAABD90BAA564FC32BAD96C61B386F014DCA55DC287FA1E7A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-0-tier0-390x844-notched.png",
+      "sha256": "043F93DA21038ED4A7C33D5A7BC16EE126E054F4D1D4C10A3A112F03FCAB58CE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-0-tier1-390x844-notched.png",
+      "sha256": "5B972FBC87D4D4C1568A5740F7594A54578D366E53B5C10CDBA1A40164CF2DDC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-0-tier2-390x844-notched.png",
+      "sha256": "E35CA067EBC47437059BF0389131B4E85BB0003A26ADC1D164DBAD22C4FFF657",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-0-tier3-390x844-notched.png",
+      "sha256": "F96CBA120CC6CA63BE29C1D45FF22FC6C14152F5B9E0AD3772CA01EE2E7F06D1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-1-tier0-390x844-notched.png",
+      "sha256": "9895B5EDFC8F5A65C82654129BD4FB25EE84D4B31CA66E680197E2715880D3FD",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-1-tier1-390x844-notched.png",
+      "sha256": "F5FA4E54B4BA5A6B57B3EA2FF1713E2BC174EFD120D1D5833A6B957B9963132A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-1-tier2-390x844-notched.png",
+      "sha256": "AEB3E93448222EAEC7D8925D04E45A610A45CE4371642ECC1117D6740E6B692B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-1-tier3-390x844-notched.png",
+      "sha256": "C2A77B8163FC4B15BB039972A1B5955A14B65795E62A2246665C952238BDCCE8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-2-tier0-390x844-notched.png",
+      "sha256": "8B98B2F7A5BD880F037C04FF2FD2A6C4CD41BD4A2D20FAA5056234CAD5E6842C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-2-tier1-390x844-notched.png",
+      "sha256": "5EF0A778E27F7B3A436234BF0B77B8F891F392CFF1F3BD6FAE627D2E4A611FBE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-2-tier2-390x844-notched.png",
+      "sha256": "0D5CEA64D918EE5217473657EA52C9CFC377B94DC77DCE07AB7E3FB8506B3F55",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-2-tier3-390x844-notched.png",
+      "sha256": "8A3AA390D0968CBADB1C9FD99FDDF17596047C3CFE2F42A6284110DC94A9D6E9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-3-tier0-390x844-notched.png",
+      "sha256": "E058FAD1CB50790911E3E41FDFC49AEE9E0FD2B98D87FBFCA4FDCDBB33F1CA1A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-3-tier1-390x844-notched.png",
+      "sha256": "5C7A155A6D3367B303D8A2B269A41CE7647E79174FFBB06CBACAAF42ADD0213D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-3-tier2-390x844-notched.png",
+      "sha256": "759BDB46C5514C097BA4C25D4BA6878C62246D227F88071C75F77E9A8CB876FB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-3-tier3-390x844-notched.png",
+      "sha256": "3D1BC86B5BC4C5652F18734A86098420FAB9DFFDD766A73D83937E10F556B6D2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-4-tier0-390x844-notched.png",
+      "sha256": "9F9EAE57CADE399DC52D554D8A5389552C2860156F8AF6E5B9C28A8A4D7EB604",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-4-tier1-390x844-notched.png",
+      "sha256": "76666E4C019133F05BBD36927CDA04B03E11099CD23B2CE713B8005AFA7677F7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-4-tier2-390x844-notched.png",
+      "sha256": "0D7C4FE479B9A672C22ED7AF021E1C8A6A7CEE293C1F7F0C3FB8186611BDA020",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-4-tier3-390x844-notched.png",
+      "sha256": "90A2AD9AC91843A231C66FE23E6B7D02F4B3B8961DC4118BC90F6AD444D02F94",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-5-tier0-390x844-notched.png",
+      "sha256": "35CF76287DF6AB8D0C7469D44FC0A2D4F84BB0662EE7F0815A8CFDFF80AF406B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-5-tier1-390x844-notched.png",
+      "sha256": "59B67581E8B59B70B99BD792E2B0D41BA30A0D0F236D25D41B14C201884C9F2B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-5-tier2-390x844-notched.png",
+      "sha256": "DDE88F687D6D7805C044B0234763AF83888200985678813D7BA5368CAD759EB8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-5-tier3-390x844-notched.png",
+      "sha256": "031E313AE11790DD10DEE186DB7B231BF9F99D97427908541BD0138C55779F47",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-6-tier0-390x844-notched.png",
+      "sha256": "450F1F6C72040E9996FA2555F3BBF91674D714C03B001633739B825865141B5F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-6-tier1-390x844-notched.png",
+      "sha256": "38F1F30E199182DD022CFE209607A3D609BB6DF63B8D67BDBBE09F805DE9497F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-6-tier2-390x844-notched.png",
+      "sha256": "B540254E9CD3BFBA5A59F8F6F2C9B93CB2F0A7DB5AABB7866BE55D7F2EFBBB17",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-6-tier3-390x844-notched.png",
+      "sha256": "3C6EB801E0154B44DF3B5E74D513C809CF5AF305319CE03CE8C1BEE805CE8506",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-7-tier0-390x844-notched.png",
+      "sha256": "137B92F196E70B8E7B0C8191EE37C7B7139F54687F3076EA97A6D5BEE245F8FC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-7-tier1-390x844-notched.png",
+      "sha256": "F7E554F1BC0435C34DB8600A181653AE2B544CEFA14F350568642D5C151ADD27",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-7-tier2-390x844-notched.png",
+      "sha256": "693DEF66773F5AE196AEDFB9D1834D834DAB20211B8F54511F811E79AD1ED1DB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-7-tier3-390x844-notched.png",
+      "sha256": "57F503C9E6478B3A85B240EBC9A5E3F7F5C1498197CA99168D108298D9F5EC4E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-short-actions-360x540.png",
+      "sha256": "C03CA7D1BCD8472A94DCD527791DFAF53482B41671AD044FE36CF076E0B0088A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-detail-short-top-360x540.png",
+      "sha256": "7036F1327B5B00EDE92AEC8345E6249DF525E4208DCAC392D5D1B6894B181D7E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-details-360x540.png",
+      "sha256": "06399E8DE64EDD8564B7CA6B9DB4F4251AE1BF7D1867E04BA9132DA7BBD4CF47",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-details-390x844.png",
+      "sha256": "C0DF49E51D202422D2D2CD041CF825234A7838B35C4E52352797A4DCA4C172E2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-home-tier0-390x844-notched.png",
+      "sha256": "E63962207E395C994A4D0CFDE790ED00578142C62EB473CAFF099DCD204AF27D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-home-tier1-390x844-notched.png",
+      "sha256": "0B7F47FB57BDD25012946B600B662C2220AD1CFF7F517C65BB524ED825C565A6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-home-tier2-390x844-notched.png",
+      "sha256": "DD6C04B66FA854282B8FA5E144787F654396D58FCB3EAE7CC7B1C61CFBDC849A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-home-tier3-360x540.png",
+      "sha256": "6E98C18901B7B0BB286864C15C0DDA925CDBAF355DE53359AB9AA84CB7369A7A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-home-tier3-390x844-notched.png",
+      "sha256": "E03A6C88D8DD9DD8882D385F0231CF4936B4EC2C410FCFED89E67C55EE7A1C7A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/product-locked-360x540.png",
+      "sha256": "72348BFF7D1313D12A056055A7BC09F44C38E4DD6120F08F9743B1F9A279D1B4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/rocket-card-art-390x844.png",
+      "sha256": "EAEF5C4F3B8AC3145B8112E60F2968AEAEB1B1217333B145C027649ACDC2ACA2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-360x540.png",
+      "sha256": "B96841317AF82782733C9683CBBDBEA049946AE8AB8D44A81EF6F6D4BD3E466F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-360x640.png",
+      "sha256": "575F6A0E5800D88B76FAA1681811443919587638927A0B0F5501623B99D1200E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-390x844.png",
+      "sha256": "706283BE92F4A8947D1E07EBA05D4A487AE3ACECF2EBC40EDB127A4DFAFC7F74",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-450x916.png",
+      "sha256": "F7D84621FE6C767B7A0E7B83EA5BFCB927958CC9B13E79BCE7CC1218D1C52529",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-bottom-390x844-notched.png",
+      "sha256": "18749E2814470AC650FDB962FE130264F038184A9F9367A8B26DD35F780C6F55",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-failed-390x844.png",
+      "sha256": "994C4F974C32C2785612326F37E0A706F2FEC22220C28455378A5D53874B7A2E",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-pending-390x844.png",
+      "sha256": "F9E4B42741740A1DB09C156B79A7286817228A19845CC5D56BCA1CEA56258CA2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-pending-actions-360x540.png",
+      "sha256": "72AC14A4B7484D27B45E56B11AAD5397440F6993D805169550F660095BFB1EC0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-pending-short-360x540.png",
+      "sha256": "0E77E2C4C3539C43ED693A7C4D889EA93F4A6041B3B293C9712FF751224619CE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-0-360x540.png",
+      "sha256": "AF07FC42E22E762A6A2D96D6E2589FB10C1018A3315E338D8414CD346B308C22",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-1-360x540.png",
+      "sha256": "C366A73FAF069B729058C529B819762D4BCC825B9D71BA304786FA99DB9A23AF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-2-360x540.png",
+      "sha256": "8746AF2F3D9FFE13712A9D28BC7AB9D7CCC172131CB7FDDA4E5488B52791DBBF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-3-360x540.png",
+      "sha256": "50D280843C54204725271C8A8343DF39F863A2C7EF7AE6EDDB87464CAEE082C0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-4-360x540.png",
+      "sha256": "2B09B7BFFF835CE5E66C36332FB903F908D363424FB5F11CD8E1D9CF0CB49F32",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-progress-5-360x540.png",
+      "sha256": "3E69867C8C8FA96B2003C673070794247EC26DBE4400B838AE11C0B75C2ED578",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-0-390x844-notched.png",
+      "sha256": "A80F8C0C01F04C6EE4E3B22747DA618F0C0608F5D47AAD0D528A2B34D3EF1D8B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-1-390x844-notched.png",
+      "sha256": "49A8E42692A8D380F8B2C876484DF96D5E333A8BF7C4B423A5AE5134D22E9212",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-2-390x844-notched.png",
+      "sha256": "AB6FA62ECB78B1F0E5CBD8D7B89C9DEAC6130D8CF72C4905828A84970F8058D2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-3-390x844-notched.png",
+      "sha256": "75EC9274FAD4AB73BBC8575F5CE0E1BB37E70E76BB22A2A5930B5E025F1AA57D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-4-390x844-notched.png",
+      "sha256": "BDD4B4276AAEF306889DC84BE719BB807429A92330A9A130B5A6FBE45461BDD9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-stage-5-390x844-notched.png",
+      "sha256": "3489770358B4C3ED0D785F2416FD4E610FEB333798565824A5731296246CCF72",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/shop-unavailable-360x540.png",
+      "sha256": "54BA5E13E3E4D9345A69B856D0670BA39CCF2227ED40EBEB895296DCA01685B5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/skill-0-active-390x844.png",
+      "sha256": "0437BFDD40F5A94A82BCDAC2400B8ACBFAB48AB25DB9418C2854B57336F14FA7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/skill-1-active-390x844-notched.png",
+      "sha256": "C2BDB18364913716AB03A9FCB81B76767050C16870B837BB8D3592B037D38AF4",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/skill-2-active-390x844.png",
+      "sha256": "0E6F643D28780ACC31BC92E0845D4286078608586CC971878D9938FE6FDD0444",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/skill-locked-390x844.png",
+      "sha256": "CA4B13FC9354A9DB37A6380EE88C9FD43F3A5B89D35DE2C5DA3B54BDAC1BC6CA",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/skill-locked-actions-360x540.png",
+      "sha256": "49DCD63461C8E41E5D67B6A57834104F94D5D6A6ACC81F28B66A1C1D90091ABC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/talent-360x540.png",
+      "sha256": "D252D559A6EC8B96E3ACCB4132DB32FC4ADC4F5428BBFB246D7D3B433C8A1F16",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/talent-390x844.png",
+      "sha256": "BC5DB14F68E736D1FD2D1B6A80B68B79AED335B57AE3FB7DC5F16854E8D56630",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/talent-last-cards-390x844.png",
+      "sha256": "607B1067E487FFE84695A70B8B9576A9C7B47E85F183DC92A35C68D2E55365F0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/talent-locked-360x540.png",
+      "sha256": "910EBD52AFA57971085CCE7D140303F477B8C63D8A8E07E02852EC088B9F3C88",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/talent-odds-390x844-notched.png",
+      "sha256": "0BBD17DB65A870F984C270C764AD1BB1E8E48BCC0A724B9D1171DC4A6379324B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/tap-actions-360x540.png",
+      "sha256": "17EB2E12B822DC22C053445581295A54DC49CE3A3D44CF5484CF37067FFE6724",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/tap-actions-390x844.png",
+      "sha256": "F6FEE7F1DE88A7ECD2B3CBE3AD75359239510A476DEAED64EAACFA8E7AB052DC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/tap-exact-390x844-notched.png",
+      "sha256": "7C1B8FD663D4846FBA6D5D401D8A29EF5A72D205CBFA08B037C70E5CD522AB44",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/tap-training-360x540.png",
+      "sha256": "464F3B025ABF1EEE3BC77030C1E5DA7549B962B8BFE459D0AFA0BC65D818A0FF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/tap-training-390x844.png",
+      "sha256": "F6FEE7F1DE88A7ECD2B3CBE3AD75359239510A476DEAED64EAACFA8E7AB052DC",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-details-360x540.png",
+      "sha256": "FDFC4D6DD9DEA095752C9ED36EE8DA9770E77D1F2DD052C4F67E9CCBBE9B3C43",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-details-390x844.png",
+      "sha256": "CB60405D90027068221777BA477E36478F370F50EDA667BE5E52B8F88D079092",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-details-actions-360x540.png",
+      "sha256": "0625AA1CB14DD90C0BF81F3E69955ECF0C8CBD55DDEFC7EFBF9A858280D431E0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-details-actions-390x844.png",
+      "sha256": "9EE740EE2D9A7EA4624D36BA9A3F2C67FFCFB951FCE76C9CF5162E49B76E6F65",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-exact-360x540.png",
+      "sha256": "A19B161626E63965438E9722D0D91619B8D13AD9B867CE7B2D6B470A9E825D44",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrade-goals-390x844-notched.png",
+      "sha256": "6ED6B3703DD2BE51E201801573F5911DD71F78E5532166CDD9A898D52C4312AE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrades-360x540.png",
+      "sha256": "02B84217A2BFCA7D091E0F8E2DCEBF6279E742578A828D2F187A5FF61DEAF48C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrades-360x640.png",
+      "sha256": "49D6B5C126D02F2C7B333099A05DD3D8A90E345642DDE39223A29DC24EC2282F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrades-390x844-notched.png",
+      "sha256": "A0D06BD73C36D3B87DEB6230E616847A715CA36B24C9E9860DA978C10CC840CB",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrades-390x844.png",
+      "sha256": "331C51B562F34F90E9D8FDBD7CF405A40843F26FABC8419EB5C349BAC07B14B0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/NativeUI/upgrades-450x916.png",
+      "sha256": "11E98BFF68C187CFF7E46FA920D0BD6A2042EC135FEA9E6676D8124CDC51C659",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "Documentation/Implementation/Parity-Inputs.json",
+      "sha256": "C434C1EB843FB29EC4A19E2788618CBA57430447DEE03EFEEC0D97461F87A633"
+    },
+    {
+      "path": "Documentation/Implementation/PlatformReview-2026-10-02.md",
+      "sha256": "C6050CF90187ABB2A7372F2379E018F621AED75AA9329B09AD398DC17A705608"
+    },
+    {
+      "path": "Documentation/Implementation/PlayerObservation.md",
+      "sha256": "E456916C889F76710D78B9A6277900D50182F675B26452AB833B601675275480"
+    },
+    {
+      "path": "Documentation/Implementation/Premium-Authority-Tests.txt",
+      "sha256": "7C78F21BF824A4B0C8756DE2C9CFF1F79A389A0D324D6AF8697ABC6D216BB37A"
+    },
+    {
+      "path": "Documentation/Implementation/Premium-Dependency-Audit.json",
+      "sha256": "EA5A0BDD7D5E9556CC2811401A4277E15691B0E790949C38FC061B25B9A81E5C"
+    },
+    {
+      "path": "Documentation/Implementation/PremiumAuthority.md",
+      "sha256": "C9C95712D5293486982CA75F60506D81922A6087CFA0519B2B616ED3E555183C"
+    },
+    {
+      "path": "Documentation/Implementation/PremiumDeploymentReview.md",
+      "sha256": "A332E612934B620FECE3E084C688621B8C40D592CD20F096E3E0658241BEE943"
+    },
+    {
+      "path": "Documentation/Implementation/Product-Art-HTML.txt",
+      "sha256": "B4E529CA8D47E38799A3F786E32F433AB1586217C404E8FD0B20ED96E86B4ECE"
+    },
+    {
+      "path": "Documentation/Implementation/README.md",
+      "sha256": "365E3EAF0DD73C8AAD2A3596F46110E5508E9AF644152C703107CED4ADB7D28B"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel-Checks.txt",
+      "sha256": "333A5C33B4E95496744E994BF33F8856F971E394FD3284CF3629EAFBD7272C10"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel-Run.txt",
+      "sha256": "810A9F22D2F89524996DDF182C7DFE30EFF98969316CFF3E6B21850C4C13FB8F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/README.md",
+      "sha256": "C68A7DEBCB4C2FFA279447CA0793FAC66808B409FA4B0A278914F5CA626B2FAD"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/commonOnly.json",
+      "sha256": "9EB0BB7059FDB5EEA1E132BF312B231869FE5AA21A914587BD393C8B7AFB2F58"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/depth16.json",
+      "sha256": "24887A92A35499C689E1F7378D62A3AC5D12CD255D3897AD9F545ADD710B73E9"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/depth4.json",
+      "sha256": "B5C655C83B2DCB8063758802526BA0879DA1F435B170DDFE030EDA94F07C7A84"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-1.json",
+      "sha256": "6BF624B021D8000FF3D008FA7F04F5FEE5587E47769B8E15C1E967D3CA887D60"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-10.json",
+      "sha256": "093DD7F5A469B74A0FE5833F3D6C9F82C8C72A0900AAC5089635E13C1AC511CC"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-11.json",
+      "sha256": "C717A91466A9F5AB779A185A1701D32D80C47BAAF021517B721814597C40D263"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-12.json",
+      "sha256": "8D2B81ED82837DC0D50B703A6FD28E1921C22220AB174B794A47CF65252C206B"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-13.json",
+      "sha256": "73A3A70A5F5FED45976FC8146EEF8EDBEABED1B34F338389EF94EF63D859C450"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-14.json",
+      "sha256": "3FD6A6FEB4EF020758FB685DDB5B787655F1CE8E116ED3D6663170D09552B406"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-15.json",
+      "sha256": "46C915E7A644ABCC933751ABBE66C041D4422259669C6F249C4B02A4A10D4022"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-16.json",
+      "sha256": "6F441542FB2EA453BEA158520B31BB4F2EC8FB8C057302260802C1F4CCDE23A5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-17.json",
+      "sha256": "AB623062681FAA2D014CBCB79187D864D66C166FE06A8922CAC8445BD7EDEA3D"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-18.json",
+      "sha256": "F9B16C34FF13AD6E66C8AD84F9C6BC8220810901F220C540E2C9EC0001BB0398"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-19.json",
+      "sha256": "8A3A071FD66C1F75D9477EF560D286022E02099EEBC78F8EAE78DD9BB32C69C3"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-2.json",
+      "sha256": "82DF713EDD12F237A64499B20F21738D4C1921BE6AB17873D32FDFBA42254A70"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-20.json",
+      "sha256": "E271DACEF2BD92E1A586FBD9EBDDEF9866AE5AA3C0B86E5D415578CECA78939E"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-21.json",
+      "sha256": "6A745CF7801C22F265D6DA13D0B28A58544713F3477DCFAE1CF6137D79176C93"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-22.json",
+      "sha256": "9D0BAADF59CA6566A769EC8F437F7D9C4F193DFD54A46885E73F25CD2CAB5B3A"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-23.json",
+      "sha256": "7A4BE370E0E062DBC117DB9C30CDE943BD5E21E939EDDEDB9BC5735F05706EFA"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-24.json",
+      "sha256": "2161258E1E112D5869DDF7041B4D4E978EF79CA0AFE0988BF86C7C6843378F9F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-25.json",
+      "sha256": "BF73A6E038840044E720075CDB72B1AD6584F2C89B9BA45486A52053CA519FF4"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-26.json",
+      "sha256": "F9D5AAE632D7A25646D908AC65E515A243027C959E09101669773087352BD365"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-27.json",
+      "sha256": "D26A6F56C3F1234BC60D87DB8CE29470876841622984105CD2D50D4D9D8867F9"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-28.json",
+      "sha256": "52F6F9D0D448524AC7A0EA701D66E49E252C7967DC46BADAC4D2419F00D4F6BD"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-29.json",
+      "sha256": "FB5EEFA2A01E0B9F890F29A11E34D0BE05A9E9D022DEA2EC014C78B4B1295F6F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-3.json",
+      "sha256": "DA1C6EB8E38EBA1C2BF848DEEAC4229E61CA232F28F10C820E197DA3D6EE9990"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-30.json",
+      "sha256": "48CFAE83CF8E2483316E6BE209EA786A641034F3C6CD04BC62132E68F0693572"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-31.json",
+      "sha256": "B1D78FFBA1A8C56C486B41F827FED413DE0DAC8222B7CC9408A004CAFE2A1F51"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-32.json",
+      "sha256": "8CD3C810A6BB0205452FFE4479C3ED3FA4D7789BFC63388D90CEC5368ADC17EF"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-4.json",
+      "sha256": "6344409304748F561CE31FEEFC377310F64B62E898DA6367546EC57FCEF74B90"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-5.json",
+      "sha256": "8CB425AA56247110AC029E8C86D359E36DA11673A265C306D4F9DC83600F6B56"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-6.json",
+      "sha256": "9FE4A87515100776DEF8D1CA12973DDA145427E1C8B0598E4E5837EED6A70EB5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-7.json",
+      "sha256": "E5CBC9204D84CE986C02F053A7A4A6BBE3953B146AC8CD4146374319C9BA83DB"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-8.json",
+      "sha256": "9CCA2C950CE4251D58F207681CF2972FCBA68CEFAD254962093D01E8F5D64B92"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/free-9.json",
+      "sha256": "6FFDA33F4C45E7B34088D97C04FB5E96C1875534A57DBC85FA951AAD49F6CF7F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/levelsFirst.json",
+      "sha256": "CEF6C3CE95FCBD25E4FF373AA346C816ED890FDCC06866FD482CF9A768422175"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/manifest.json",
+      "sha256": "37C4B4450D136331BA44BF39278D4891AE248821A2979FC979E5CBA138C7C9C1"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/matchedMixedRebuild.json",
+      "sha256": "50994F300B12C139FB03C74A16BDB77C05E1261B0099A39F54F4DB76B21C6182"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/minutes15.json",
+      "sha256": "96DAB520D6A6910796336A14BFDFDFC38DEDE3FB84F619ADCD5C0FC0507F41D8"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/minutes25.json",
+      "sha256": "27409E754F6BD8400C6B2AA8DBA57BD9AFA36D4E6AF09C2CA601760129FFC274"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/neverPrestige.json",
+      "sha256": "26475941AA8CB2CF6A9A1E33D5F577108A148D986B9E8550E26AA4594D1D4217"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noCardEffects.json",
+      "sha256": "C1CFB6D2029FEE5EE32DB6EBC7F02B4F3C562F6E0D36BADC5F5CB37BEF49D07A"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-1.json",
+      "sha256": "A027645BAE9245EEF1D980494F24153436645F0BB6AEFB4F00C144479F952E7E"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-10.json",
+      "sha256": "186A6A973282129D953251F050F6F89D6C9E2BAC0903E4ED945F05230ACBE77D"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-11.json",
+      "sha256": "0E9AD78B81F7E6B03342374406E835AFA9F1EA52216017612FE2D5B824E92015"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-12.json",
+      "sha256": "C0B3B18F68B69758D828F9FDE6CDBA0BFE6733E92B8628EA60E5DDB53089A7E5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-13.json",
+      "sha256": "3091136399651C500EF56309BEFD9F7E657F594661BCC0D5BA07AA953DC54902"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-14.json",
+      "sha256": "4F247B20613B2224F19CDFCDDF98BBD7A0071FB18C8C37649B2C9E3BEEC977EB"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-15.json",
+      "sha256": "2C9A8D12F6CE7EDDCA19AA24AF7082CB0E8D8687FE02D31357A875E8631569CD"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-16.json",
+      "sha256": "15950A7F29B203D138765FE8A4A81D39461F6CB850D34AB133DD662AB808F637"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-2.json",
+      "sha256": "FFEB188C65285FF2897FA47D1347CE21BA56707DE7C77D1F8A174285FF7194D9"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-3.json",
+      "sha256": "5B328AA40FB0F17B577A1631B6887BCE6A78A6DB7176936A8449EB44F51502B3"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-4.json",
+      "sha256": "264B71CE938845A1465677190964C7AA2457D948DFD9A2F3109B4C9614130A99"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-5.json",
+      "sha256": "CA40CC0F9E247CBDE534B13CD90CFFC8B0B48DA155B93607DB6608E1F2FD3E46"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-6.json",
+      "sha256": "1CAB4B0A4823A13132BF15478E653675293B2504B624EA68E99F636CFC18D212"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-7.json",
+      "sha256": "E66E782026AE3A56535089B36CFD1A9F367DF14611BF54860A1DD20197E17319"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-8.json",
+      "sha256": "B30FA4CDDB40F0C89733399623514A381E35455F3101F03428DFD74949DB3A99"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noLegendary-9.json",
+      "sha256": "6C746127ABA7345F2670BFEC8A76B97E21F634A60A8F1ECF90114389EAC2AF43"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/noTap.json",
+      "sha256": "10186E110CE873FA9CFD3B91A454745FA92587B608AC19DE8AE2FAB024491B07"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/oneVisit.json",
+      "sha256": "0D4DD1D79D3C9C7C051A1930E608F25CDB9D7DDC6DC57F90F7983C85ACFF3AC8"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-1.json",
+      "sha256": "217AD5C7E80D622B2B98A2A2A0DBC401C1BDAE851CBC0C204C54849A927E7F51"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-10.json",
+      "sha256": "342A65878D61AAA4D3F433960D1F47EF62C699CB9C1AEA3B6A72FCF66D52D470"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-11.json",
+      "sha256": "806C6BD18FCFD4545D4C777218C0B4697FE768D2E92809290B0B469FA9F9FBDA"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-12.json",
+      "sha256": "94412C3025C2C61168562A27F225133FA86331F26B765C03A9D94A9309C45DD0"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-13.json",
+      "sha256": "399BC6FDA4C26D064732720B21FB6EE932FCCB12D1A6C41E9A93A36C19756691"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-14.json",
+      "sha256": "DCEB9793B410F39C1B27091DFF857E803F0D1B097D41CA6B5C7D294F7805DB2B"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-15.json",
+      "sha256": "AA849404ADBE4EFAAD36E0925D1B6AE62DBF72944A67605D549DD6095597F5CC"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-16.json",
+      "sha256": "40D2F97B6C85E10FB5ED69E15668734A39B187420972AA2C7802799D667E61A5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-2.json",
+      "sha256": "6D230998AD79DC425185AAA50E623440B7875103C437E6B6677C4249A54397DD"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-3.json",
+      "sha256": "D0BD58DAD775B892478A288A3C8F51F0FF89CA6FF42BAD20ECBD8DB29A7140B0"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-4.json",
+      "sha256": "41AA1AAD09FFF8B5FCDBCEFB15A6DBBD0DDAD40C42A91FFA1BD690DD9B39E6E8"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-5.json",
+      "sha256": "07397AAA34477295044CEA20A7DF3B9D98C89AB366EFC951A8B5E0C19699A158"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-6.json",
+      "sha256": "E060A5DF98866D195026071674B0339593FC018A8A156E622F603F1042AAC275"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-7.json",
+      "sha256": "EAF36B124B941FEFF9756F70BD7074D59E7405BF720AD73E00A34BDF1DDA53B5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-8.json",
+      "sha256": "B33B96A3E5C55C3AD5CC805861FE3F9E96BD2AC2F3F644AAF76565D07FEA0C17"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-10-9.json",
+      "sha256": "6E1BDDF1ABECBC9D3EA8EA4A47D528DB51B0CA0569F87C3EA371629B4792DAE5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-1.json",
+      "sha256": "BDF35CB9459343E43CAC35CDAF230E5BC38F0A8AA988437D9BDE312015491DB0"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-10.json",
+      "sha256": "B773F845B502A455B6EA02D5BE9B1FD5F8B998B636F1483DC033F283E4D1303C"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-11.json",
+      "sha256": "F0F89997A35307A21C8306197385B06B8C5A7D172710B1F6804A7BBCC45044B2"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-12.json",
+      "sha256": "BA675DB113FC55410AD6A9F9DEBE602BEF98D4D9105B1B85163CCDCE989BE626"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-13.json",
+      "sha256": "F878D0EE603D40E2FA90A4B3A25A65F7500190C976FF7CE2B6E85B581ACD2204"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-14.json",
+      "sha256": "B8CEA31CD4B8A7AF36D6457936654475B4C8313339B75453E5EF9CD6FDFD5058"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-15.json",
+      "sha256": "A83658D77B092CC4409618E1DBF8438465F8DCDBBA6E4C1ECE32D1CA7C1040F0"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-16.json",
+      "sha256": "C02D8875E288076088BEF548A8E645AF811D0EE8A52639074DE9AA339669E723"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-2.json",
+      "sha256": "CABAA2CBB8E89ECF081BF88E52B2C0F9A970FEBA660F87378C63CAF90071850A"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-3.json",
+      "sha256": "76B33D89BB57BB266F5DBA5F0D7F093CEA3B2F9BA7653EDB8525A9C230E0854B"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-4.json",
+      "sha256": "7708266931FDAC5A0AE88D6AA2B1721BE1F8EE858507462593E2F595F43586D2"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-5.json",
+      "sha256": "1C5E41C2A9C87D874C5824E4E3E32BA597C702B4312379F70045679704D1B849"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-6.json",
+      "sha256": "36FDCEB9E27A28CAFD1ED236134323E7A6BD4E88EF156DA8AB65698A9C8DC994"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-7.json",
+      "sha256": "F287666F449796674834E8D70C4C638AF04CC3B547F4771568F743B9241E24C5"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-8.json",
+      "sha256": "765B3DCBBF552E73F4025D239B27AF385E7B50ECFD9835C56190E7B41E13FCF6"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-130-9.json",
+      "sha256": "F393EB0280D0547E0478ACB158FFE6E40E3654C87A11D4B5C43C8A87329ECA20"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-1.json",
+      "sha256": "AF5095781EAEB756B4A47F0A26DABC5D6823FFDA2ABFE32CC0F92345E9CD91B4"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-10.json",
+      "sha256": "D413F6733696632702158E859D87B2BFFD3BB50065D5F20A6F2FE75654A310A7"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-11.json",
+      "sha256": "6CA92C1219BA2E4376E0B5BB7A9275E57DA267602BD63945C87C6974BEFE4A2C"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-12.json",
+      "sha256": "030447865B64F419104FA54D3FFB62EB9138F983D63E34EA6329A5D00E9E5197"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-13.json",
+      "sha256": "13B01A06522A7B3AF851DE78E9D4E956033F151C2BFA3CA56F30824B47A17C44"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-14.json",
+      "sha256": "8E782C1147314E4160AA88A25BA278083ADABCA33C6CAC8783649C047019B980"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-15.json",
+      "sha256": "500F444325E82A85E514930D4F34CC4B9CD7A3829AAB59520D68F4C48F18A75F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-16.json",
+      "sha256": "D89C98D2D88662C678C8EFC1FC68B58772D6FBF332F47931B1A18967EE9C86EF"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-2.json",
+      "sha256": "7E01F85F97F7C4BAA514734FE54B0BC95D00C3EF3547E64D92C9221E2BE7A9CC"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-3.json",
+      "sha256": "2BB974533466EDC269A1E5DD07BB72A8F9FA6C34756A4A903A8F67B9D5E1BB5E"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-4.json",
+      "sha256": "E855F527E096A6B918698894D7C4DB8ADF14B34D9C4E9CD5D5C44EDF97691C8F"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-5.json",
+      "sha256": "5DB15F771E718D8EEC96ABBE52C94B08338F39F2E1C13A4423F982877D13BD30"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-6.json",
+      "sha256": "2AF79CCF6030D5029D86B1EC153A1A299D444D0466FF766DF190146A6160546C"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-7.json",
+      "sha256": "278AF6D6E209BFA1AF7430BB65A256C6BAF982093CEAEAC758D7B7477B6C3D90"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-8.json",
+      "sha256": "F9DCB1ADA5AA98F568D1FA298BFB7ADE2029DC6EB6411164BF1155D24E961428"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-280-9.json",
+      "sha256": "2C09626E759AD789A8AA9C2838A7991E2DEA8D39A5A1A6DDFB7F9623C20D0DD4"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-1.json",
+      "sha256": "672826B2EA4CE0D3792A10E0D965DB4B7905BE77DCFBC1EB05A6A75B63089014"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-10.json",
+      "sha256": "2E2787175E38552990A95F6D5C056D01DE4B27BBA284CEFFF52E233F67CA8344"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-11.json",
+      "sha256": "F5ECE92EC67E89F5200545D264BF855362F08E1769F80EF379175A8C236822A1"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-12.json",
+      "sha256": "A5655974C0FF752ADBA684919F5A92CA72459A86D4904E6967D0D31BB10CC32E"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-13.json",
+      "sha256": "FE483132734572348C15F0A16024B4D44C7B1265A6B25FD67E122907A76D34FC"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-14.json",
+      "sha256": "015AE6F3AFDBFC0032A3F9DF80C1CCFA08EC5274335D8D6CABC7FA9A79DD2335"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-15.json",
+      "sha256": "C42A2128EC321C96C3387E0EC2D875EE6E9BD36306B6B20E156C538CBFA36902"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-16.json",
+      "sha256": "14DDA11EC66D05688213C4C5723AE72295728E5BAA1CF1F6A0B5262CF3D33121"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-2.json",
+      "sha256": "0E392F086E9515D1A53DBA99F99D205BE598F90324DD4AD95E8AC4501EDD6DAD"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-3.json",
+      "sha256": "75C194FCFFAAB520DDD3663F2CE380AF96B75EE0B565DF5E4AF92DC4AC3E7B38"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-4.json",
+      "sha256": "AE950CDDDF5C86A3F6E04D86F7C33AA4AE5AD0D0BAB1495864410666EEF22145"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-5.json",
+      "sha256": "1472D2F88E6A79FFF9372AD1C06498A04F7AC6C4F94A2D9B12035BDBA493426C"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-6.json",
+      "sha256": "97C635B6E54CC7154E15F380112295DA1B4F06C99FB73895401630E1EBC9C41A"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-7.json",
+      "sha256": "E9B65B811E436C95165A4BE8B2CA90648DD8CE81BC97000C2B385E09FC7EAEE4"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-8.json",
+      "sha256": "C65208CA594D990B9904D484D906DF14DE826150FB170047250BE5CEBB9DE987"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/pack-60-9.json",
+      "sha256": "1FA42D2F7956A8EF2CD9E1ED1AE32110434BC2DD9FF7DA5192EDCBAC30E2DA24"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/sustained.json",
+      "sha256": "F60599BA271580051451D1699EADE5DB8045E1017ED0DBAC410B5F77AAAA94F0"
+    },
+    {
+      "path": "Documentation/Implementation/ReferenceModel/twoVisits.json",
+      "sha256": "30DA16FC7412017F1ED9BBAEB8589C63D22A4725A32F0F97F1DE6246996B5551"
+    },
+    {
+      "path": "Documentation/Implementation/Regression-LegacyCloud-Current.txt",
+      "sha256": "EE285E834D122E6C56FE28DCB269C6B332D5B9091AE096AB01173ACEB52D1046"
+    },
+    {
+      "path": "Documentation/Implementation/Regression-LegacyCloud.txt",
+      "sha256": "F9D498BA9B7CA8B89B155B2ABF22853F7E47E688F87F43A1180232FDE4CD7D3D"
+    },
+    {
+      "path": "Documentation/Implementation/Regression-LegacyCore-AdRetirement.txt",
+      "sha256": "6E8ED2949E08B54CFA48C8A0BF23C378CBB5AB06820227F7F55E518150C8956D"
+    },
+    {
+      "path": "Documentation/Implementation/Regression-LegacyCore-Current.txt",
+      "sha256": "752681E21A555644CBBAAF798046FB2BAF3D2B30B72DA59F7E3DFC094095141A"
+    },
+    {
+      "path": "Documentation/Implementation/Regression-LegacyCore.txt",
+      "sha256": "AC1CA1DB51B634B5D04098E69CE656FF1B10F8FA1FD79E76CAD539800398E5F7"
+    },
+    {
+      "path": "Documentation/Implementation/RegressionContracts.md",
+      "sha256": "8F88BC9B765BF6F2B0E1309BCDD81C3609C88D1FBF55CCF00CA22BD35D63F2D1"
+    },
+    {
+      "path": "Documentation/Implementation/Release-Symbols.txt",
+      "sha256": "49F6C0C01470FA90CC01A9C5DD2769CCE6EFD97201D4F6F6D935BFD534A0E380"
+    },
+    {
+      "path": "Documentation/Implementation/RolloutRecovery.md",
+      "sha256": "15B4B1B52DDF7FD71FFAF87C12DD22E835C3D95CFE24DAAB8E6248B87CBF7945"
+    },
+    {
+      "path": "Documentation/Implementation/SaveTransition.md",
+      "sha256": "4D80FB40B98822D90129F4E624E057E78070AEA48E5D29965D86207E40372F62"
+    },
+    {
+      "path": "Documentation/Implementation/Shop-Stages-HTML.txt",
+      "sha256": "188B24ABF1ADD015034EC1C6F9562AB999177F634DF733EA67547213991B42AB"
+    },
+    {
+      "path": "Documentation/Implementation/Specification.md",
+      "sha256": "CDBC6904B969E608AC0F78FE8BC70454BE96821B8516363177F188F512EB6578"
+    },
+    {
+      "path": "Documentation/Implementation/Talent-Art-HTML.txt",
+      "sha256": "E9EA0813B647668AEA62C5EB761A627F7BEB790D71DCA5049945DE3C573EA819"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Account-Flow.txt",
+      "sha256": "F5B0C2AAC01E64FB30F9AB39457510F3B95CFF4ADC3A1B573305353C90E0B53B"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Account-Play.txt",
+      "sha256": "F3149E04EA5ADF64FACE8D73975C18D3B1C0171416A901130D8EC090AAE43D1A"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Catalogue-Play.txt",
+      "sha256": "542CA458836EB81A01894CFFF91232D88CAB64F073F59944A74C8A9DDAA12EAC"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Content-Isolation.txt",
+      "sha256": "66AFC0B1298989A278816365E01A961C0AD3C80DABF1193E13C80B3F4B28A138"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Core-Performance-Before.txt",
+      "sha256": "C1E4C206F50B41087AA8D147258F3DAC89F54D32654A4F5E6072504730A8D07C"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Core-Performance.txt",
+      "sha256": "6DD6E824F30535942B313E01EC1A130A65F8F14F33DACA973DA84CDB0AF14D82"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Core.txt",
+      "sha256": "1F579FEB0E86D201F8113B8FED6C71FE835A3D8645987709250F7BC41C0F0053"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Details-UI.txt",
+      "sha256": "A94268C44BD43837905A961E1AA3765EDC806BB31261F28C512C5B2F754888CC"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Development-Shop.txt",
+      "sha256": "17C2890BF9788D40E016F75D97ECE5B822903190AF4A9C93EE02A5DA2B3DDA5C"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Feedback-UI.txt",
+      "sha256": "E3611B700E7F39F0A70DD258D4AEC3151626A53F77D5E5DD183D48B108799C07"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Generation.txt",
+      "sha256": "56ECB5891CBFA1FA9C0E90B72CEBE270C89F21CF80FC3BEBBAE00C4C988C2234"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Guidance-Play.txt",
+      "sha256": "F78FEBDC057DA0E9FCF3439D5E3AFB88BB1D62101836B72404671942EE7C1A7B"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Guidance-UI.txt",
+      "sha256": "F8C415631A3231D8CC937F1A76C3504503A97251A8D3D39274C037AF65B68EC0"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Home-Play.txt",
+      "sha256": "1FBD8CB05E1CB6A6A549228EBD00E8A8D7E943BEDE89941A559FF1831D03847C"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Home-UI.txt",
+      "sha256": "AE0BADF317B8E81D76549FAF1649A2C702F763E0023A0A771E9192392D4F93E6"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Levels-UI.txt",
+      "sha256": "D0C29CB385C395F023E454370C59ADB09C05A20D1C2C9014480E7E24FAC65E73"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Main-Play.txt",
+      "sha256": "ACA4816986F66E707060C7B8452D6065C12B89A13CF107C765750ACC97847CA5"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Main-UI.txt",
+      "sha256": "1F2AF1EC7AAB33024D40210730D29DB5AF32F23382D1A40E709148EA337F13E6"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Native-UI.txt",
+      "sha256": "6D04AFD81CF5D9FB47EA9EA5EB214F28D5CC95E028C269C041723983DA14ED27"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Product-Art.txt",
+      "sha256": "2E8F5DB893DF709FE737F721E058F5E5F732C1DF3E71C35A56E76D69815C6EE1"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Release-Isolation.txt",
+      "sha256": "55BBF30E5D9742701E2FF53ADC8B8856B0D087328AD77DB6FA3013193C734688"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Return-Skills-Play.txt",
+      "sha256": "F31A985846C5A1439D0D1D2A2E1BCD4B8062E73098E84C05D5D2849B4A870D8E"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Return-Skills-UI.txt",
+      "sha256": "84DA1F0419598C7584F497701128696D592638087089A67FDF16128DFDCDD646"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Shop-Art.txt",
+      "sha256": "BC030FA1C12486AF2C92A9CAA904AEDC66BC7FEEE31FA47726B39F0687B47860"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Shop-Play.txt",
+      "sha256": "3AD7B534B7B57C467F3E33163040364082B22E29475DDE0492456CC7EEF119B5"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Shop-UI.txt",
+      "sha256": "7FC8979D810D1B19CEC5BCA7E85E1E13D965508304676BB5F72CB8340CE094FE"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Startup-Recovery.txt",
+      "sha256": "91B864A36452C2560CA2AAFE229B64F35C3006E7308A3A7A4D3B13AD0881BA51"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Talent-Play.txt",
+      "sha256": "F61D620CE74F379CE6D0DA7C4E6F9BE051A144725DD8E32512F9CF3658FD747B"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Talent-UI.txt",
+      "sha256": "840B9D66ACE687E5E35767F85F8D7FA996ED2F432D79CAF90132518DF7ABF02A"
+    },
+    {
+      "path": "Documentation/Implementation/Unity-Visual-Play.txt",
+      "sha256": "35A06FD8FAAC62BBB457CDC30ED80636E4F0AEBA54351AF95B318C14BA120753"
+    },
+    {
+      "path": "Documentation/Implementation/VisualReuse.md",
+      "sha256": "82BB7DC6CA8695A0FEAD0B614BB09451266BF87157D22644064B9575F2E17572"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/inspection.json",
+      "sha256": "D8800506B072409081B86B0DD6948965338E365898903AA1141C29F3CBE2C26A"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/buyall-360x540.png",
+      "sha256": "C5598C202244467946164BFB5C99434393318E8C04529A5B5C5EFBAA295B944B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/buyall-390x844.png",
+      "sha256": "D0651BCF1FC712326391A08A327384BCB78E9662255C734EEF8238C843CE435A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/buyall-stale-quote.png",
+      "sha256": "53D8941A5F58529383A6B23649D32D40EAFE90ABF0D219EE6D079117DFA6CF04",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/carddetails-360x540.png",
+      "sha256": "EB86F54AB6CD9C612F69B8A452DB94EE71946275176034A096C0889970B9D147",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/carddetails-390x844.png",
+      "sha256": "55742D2B6B2AA4D8DF5C884743E837F46D8C20EB57DFD0CA05D333446AE1C638",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/drawreveal-360x540.png",
+      "sha256": "D408D3B3BFCE9CD355C548B8D0AB4B14DBD539E30368892775F4E969123993D6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/drawreveal-390x844.png",
+      "sha256": "7CBAA777C2833AA948349CA0BC843F6D2CC1CB5F6B0B8AD9E1B110074D23D170",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-0-360x540.png",
+      "sha256": "F244762B74A792F9CF3A89D319D96B1787C8E1A4B472ED01E990ED6D4D5138F2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-0-390x844.png",
+      "sha256": "74101A9B9BCC8AB3C811FD3BE21FDF76ABFD7CD14BC1C3CCD02AB573A74759BA",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-1-360x540.png",
+      "sha256": "18317ADF3614FB89F47F6B2D119B46C784B6F1D65FE0428906F0E13AFE5E148F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-1-390x844.png",
+      "sha256": "673C14EF2D54E6E6F301CD4A52D1213CFA1019FE1B1793157399EF53288B8F6B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-2-360x540.png",
+      "sha256": "DAB7A1ED9AB175D4DB81958B555023D4F5E8F21046DE2B96C4989FF848122311",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-2-390x844.png",
+      "sha256": "81C5A34E326B0EF82E1A04025735669E505E116D7B0D8827B3B4BEDC3F45743F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-3-360x540.png",
+      "sha256": "B480FE48F1EC9018D38F924E2D93B96398BB2372197F0149CA4CAD39AEFE11F7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-3-390x844.png",
+      "sha256": "634F277FD8C6C68BCC2EE3C1257F569778F407DCBEBD5DC810D239D5B994B488",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-4-360x540.png",
+      "sha256": "69CE2EADBA76939753C01D275BC1637954CFC854F4E2CACBA5ADC8AA8EE1B643",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-4-390x844.png",
+      "sha256": "84DE993F9D2DE79314F0E52DC157FBF0F2500F4E88C2C7A507C80A11CDA801C8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-5-360x540.png",
+      "sha256": "DC7B94F7B15B016810A94E8725659F70FCD26ACEC4E9C9C203382531D8F82C55",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-5-390x844.png",
+      "sha256": "EFBE7501651D2B56E2DF690F95C7EA245A27B1426CB4B8A6C3A2C52293C4CBD1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-6-360x540.png",
+      "sha256": "BBC19B4CD242A4433D3B6775F539707D2C056CBE6E8AFBA0026DAAAAB7A82257",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/feedback-6-390x844.png",
+      "sha256": "CF32F7B6AA6147243C3F378E4A0530EC4B99FFA567A61A14027089CB8CAD76B0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-0-360x540.png",
+      "sha256": "44FB654849DA2A684B0302731341B5ED171F9B9B92F982CD4CB71EE852BAFE15",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-0-390x844.png",
+      "sha256": "7F13F2F8E69E4026E6F67814DA90B7B69D5A0C108BDE3CCA42547991D62B3EFA",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-1-360x540.png",
+      "sha256": "C50344E1EA270042DDBDF5640C516FC0AEDF91FC7242373221DD61500B92C5F8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-1-390x844.png",
+      "sha256": "E96E26117B0373FC0BF36B873563C4228C361A717A23298B6FE5CBC41A715A1A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-10-360x540.png",
+      "sha256": "F9B2922E665B3E565F1F0C611ADC347FFAEBC04028E47622AFD2FB97D321BEB2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-10-390x844.png",
+      "sha256": "5EB08C4C4CFCAC2AB3340F0576E2B557B00A10F56515B54A253042DA6E831EF9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-11-360x540.png",
+      "sha256": "B1F04BFDB8B60AB776F118F63872D8D9841E4C23B9434EAEF52C5B0799F7C39A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-11-390x844.png",
+      "sha256": "27118E3F3160549895E3450CFF2148BAA3ABF63895188760212BC31AA0D6CB21",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-12-360x540.png",
+      "sha256": "47C8BEBB9CA3533E4F09D8E1752C66F941F454A2E64374AF4401BE5AF2D558FE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-12-390x844.png",
+      "sha256": "648F3496DCC9FF74541AB03809316BFCDE724FECA1194C6CB4A2E34A6EDDDF04",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-2-360x540.png",
+      "sha256": "934CA817CFBF6587EA1B0BF561A2680D8CFF333ADA8670FDFD1DF062A758637A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-2-390x844.png",
+      "sha256": "E7DC33DA08BDDC3F2B0E23053B231D1A8EF62C73541C48225730D12C033C68B0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-3-360x540.png",
+      "sha256": "52B589A98D4E6213F3C78F55B98B39394EF7A2414D8B1CF517960B003A2D318C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-3-390x844.png",
+      "sha256": "F8016F8F950CBEFD0604E720012C69520B1FF7A04C72E7BDB94A55D4FB0B6F7F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-4-360x540.png",
+      "sha256": "F1BFC19DB89F5DF590F4CA403F0B2A888838214FB0DE85992F9590C7FCD7D499",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-4-390x844.png",
+      "sha256": "7F5B014401927C3B647ED4E050F366E5F0FB1ACA387D8B58F416C06DD37E775C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-5-360x540.png",
+      "sha256": "28E4A552FB77ABB128476AE5C3A5F88A8E05051BB7ECF0955351C8BF5EC81E56",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-5-390x844.png",
+      "sha256": "26391D4349026D2B2434F7F4E7A02E88DA423BEF0E813669CD86FFE2F704C361",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-6-360x540.png",
+      "sha256": "06FF3903624B2E04BEF81059CB8B79E5CE304D932F8D8A309FFF621F7868AC1D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-6-390x844.png",
+      "sha256": "C8B85321922B345FD898012ECF64063F57E233C1528E11BB176DA752B8650F2F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-7-360x540.png",
+      "sha256": "9F90F338141A1F8EC9DDAE1653BE0AE7B1AFE059D02D03F70C784E5A5D67EFD6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-7-390x844.png",
+      "sha256": "49A78898C2263586EBFECDB5A579DB408D13EE18CF496439CC96B561218E6095",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-8-360x540.png",
+      "sha256": "14767E62A21822CDF2F765FDE59E925C1741EFA8134D33933A3E1602230C2E89",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-8-390x844.png",
+      "sha256": "A57477308BF08BEF57CA31591BB9773A25F0A391DE04D3709C44D91ABBE5192D",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-9-360x540.png",
+      "sha256": "E0177F7FD7C68319921128BEACBCFEFCD5020D25F7774BC68052670C91556715",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/guidance-9-390x844.png",
+      "sha256": "D7DCDF3EF78C647CF9569C2D706C253719E72E0D097AC86908E71D46E71C2537",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/home-360x540.png",
+      "sha256": "589261EA184A100F0AAE0CC732673BC753969AACBD3959C4773B761E44D83F6C",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/home-390x844.png",
+      "sha256": "1B534F864894A353DC52026DE65F32E4F2BA2D8F5D8463FBA6C1F8C82E047B0B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/home-progressed.png",
+      "sha256": "F33A4C72AEFC4C370977691EA367540AD21FBF4888CE0E2264E234361E3B41E2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/home-save-error.png",
+      "sha256": "D25CE63BC659191B7211BBFD5D937E2C82414D9128DE8D52CC8989F9DB3640D0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/kajushop-360x540.png",
+      "sha256": "B468696B2908E45AC75DFE7ECD258C41D3B214B5FAE0BFC692233DE47C44FC03",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/kajushop-390x844.png",
+      "sha256": "792378BE770CBC1F0323058343B6BCBE47338240823DBAF5889F0503F5A65BFF",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/kajushop-loading.png",
+      "sha256": "A7993F2D435B76A4C55B8AEB4787AEAD132E1B44F50BD3F8ABC4C1961D7A8D4B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/kajushop-pending.png",
+      "sha256": "2DEB3DBE5CDDECBFCDC24799DFE974043E362BE14C9949B81BC9C274AB9135AA",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/kajushop-unavailable.png",
+      "sha256": "B7BA4D2129F6520E375B091D35D77E6ED7D50F8AC49A3F671DC377F6D7E64EC5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/offline-360x540.png",
+      "sha256": "0D92114C7CCBF10779E9B90010B969A81F96B74DF44A91DE1F9102AB173A8FFE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/offline-390x844.png",
+      "sha256": "4943366137E7D6EF3FCC1F803EFF484386AF701674E6A02474D044AD30963918",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/prestige-360x540.png",
+      "sha256": "DBA62E4F5CBED3FEDFBB8ED8A0E68BBF6FD84079B3BCDDC9BC14720186344923",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/prestige-390x844.png",
+      "sha256": "BB7197AC14B802AA680371B638BF0685268D6B6A8DCF4B708C62AB3543994C1F",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/prestige-below-target.png",
+      "sha256": "94F134CA67179D4212FED055F98E935DE0442B5A615AE2D293C0ABD277EDFE20",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/product-appearances-1100x850.png",
+      "sha256": "0F1942EF1D1E9B39AF8CB1303984FA54D8A6F49B0F861627806A3FF0D4469C20",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/product-appearances-360x540.png",
+      "sha256": "2F025A3D3D16AF12F831283E0F2AE1D643899B25226B54149D9FC3CB45C60234",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/product-appearances-390x844.png",
+      "sha256": "1260B4662300ED318533B3A3D7B38A9C739286B1C475A847EB22C15C114F0B54",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/productdetails-360x540.png",
+      "sha256": "7412A7C9C202D7E0CD8253A00E7EB0700AC0D7DD22238B9EE8B8E3E7ADC2F70B",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/productdetails-390x844.png",
+      "sha256": "EEF00AF818409244514B7693502E019211F5799FCE956A75E73C88295B918CF9",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/shop-stages-1200x1010.png",
+      "sha256": "F8E12ED0A8E4AF2EAC856892F1CA5CD18FFCB60A555221B40BFF62BC7A38AED2",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/shop-stages-360x540.png",
+      "sha256": "344544BCAB2FECCF67ACD75C5573BBE5B1D157D7448968EA8E5CB44D684D92DE",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/shop-stages-390x844.png",
+      "sha256": "DF6CED484E2D79AC79239B086BCB77C7E4C600302E54DF3A358206D3E8846224",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/skilldetails-360x540.png",
+      "sha256": "BA980A7EE04E5395A15D192800C783C3AC210C84F520F33A7C79711BCD50FD08",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/skilldetails-390x844.png",
+      "sha256": "F6678803292A23D799375BBC3BE78DF5D6171B37982C82D67A9FF7DB46225D20",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-360x540.png",
+      "sha256": "CDB7EE8AC81A3C8828653087B47C463C6EEBE6AE098C1024FE9DF4BDE67933A8",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-390x844.png",
+      "sha256": "B0697967E956C752A2007B70A39749F338116A10248D9C6D6C29759B89DF4B15",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-art-360x540.png",
+      "sha256": "891EEE14D7314751811631C7E6BA4530DD5EDD2C4F5BC6D2CF99C70FF7E585F5",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-art-390x844.png",
+      "sha256": "C15E6D703AF4B7ED469EA1981396578A87F31FF7D3883D0B8312AF038CE5431A",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-locked.png",
+      "sha256": "5C41C229BC3A8B954BEFBBEFD901A77F474CE73D4C16743BF2735FFF655BCBD6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/talent-zero.png",
+      "sha256": "8CFEA7FCCE2F47392D4231DA4CD9424F5B9EA68021A4717A581555E8E9F8B709",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/taptraining-360x540.png",
+      "sha256": "CA366D3EDAAB1809F25DCD1759CEBEAEAD702C0D2A076F26C056625FC01D4792",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/taptraining-390x844.png",
+      "sha256": "4911D796D75493AFC89DB96030DE46553A06EAEB02459366F16DF6B606A3C2D7",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/upgradedetails-360x540.png",
+      "sha256": "ED18AB1293717FDB75EB7FC24E89675C985D9BD2672E7DD487EBD060C14688C1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/upgradedetails-390x844.png",
+      "sha256": "89ECD711A3BAD4AF5C77E28714AAA08B5E1F36C9E85FD75039F249F96A9297F1",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/upgrades-360x540.png",
+      "sha256": "0C6C5BBA52336667F1292556CDA32598A9B48664D9745B5BE155EF27B670F3D6",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/upgrades-390x844.png",
+      "sha256": "DEAD21822F76BB47261D350819E74564C056D012FBC33AFA294341CE0946B458",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/upgrades-empty.png",
+      "sha256": "CC810F5FE447B6E018BEB8F4A315DAA83F8A6651B34B60D04FE1876EEF31D4E0",
+      "hashFormat": "SHA256 of exact binary bytes"
+    },
+    {
+      "path": "UI Builder/HTML/Redesign/renders/verification.json",
+      "sha256": "8D247D8FBA1DAC8A0DCF6ACC5E0EEB9AECDA86F901D7E1C3BAB37FCFFEAAC89A"
+    }
+  ]
+}

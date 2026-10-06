@@ -113,7 +113,7 @@ namespace RocketRaja.EditorTools
             Text(Stretch(reset, "Heading", 35, 35, 180, 20), "RESET", 43, RedInk,
                 TextAlignmentOptions.MidlineLeft, true);
             Text(Stretch(reset, "Description", 35, 35, 25, 82),
-                "Cash, shelves, product and tap levels, run upgrades, skills, stall appearance, sponsor and offline offer.",
+                "Cash, shelves, product and tap levels, run upgrades, skills, stall appearance and offline summary.",
                 34, Muted, TextAlignmentOptions.TopLeft);
             reset.gameObject.SetActive(false);
 

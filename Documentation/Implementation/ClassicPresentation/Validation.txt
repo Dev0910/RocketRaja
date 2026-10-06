@@ -1,0 +1,83 @@
+PASS Saved Classic guidance, artwork and audio bindings exist
+PASS Native journey starts unboosted
+PASS Contextual first purchase guidance
+PASS 48-unit minimum touch bounds on short-screen Home
+PASS 48-unit minimum touch bounds on short-screen Player
+PASS 48-unit minimum touch bounds on short-screen Products
+PASS 48-unit minimum touch bounds on short-screen Legacy
+PASS 48-unit minimum touch bounds on short-screen Shop
+PASS Acknowledged topic is saved and not repeated
+PASS Manual first purchase emits one purchase cue
+PASS First ownership introduces counter taps
+PASS Dragging the counter never earns cash
+PASS Stationary counter tap earns once with one cue
+PASS Modal blocks underlying gameplay tap
+PASS Actual UI raycast lands on modal before the gameplay surface
+PASS Interrupted close cannot dismiss reopened content
+PASS Unowned Talent controls disabled
+PASS Native run 1 unlocks all eight products using committed quotes
+PASS Earned lifetime discoveries activate saved decoration layers
+PASS Shelf and product row use engine appearance 0 run 1
+PASS Shelf and product row use engine appearance 1 run 1
+PASS Shelf and product row use engine appearance 2 run 1
+PASS Shelf and product row use engine appearance 3 run 1
+PASS Shelf and product row use engine appearance 4 run 1
+PASS Shelf and product row use engine appearance 5 run 1
+PASS Shelf and product row use engine appearance 6 run 1
+PASS Shelf and product row use engine appearance 7 run 1
+PASS Skill 0 emits committed feedback
+PASS Skill 1 emits committed feedback
+PASS Skill 2 emits committed feedback
+PASS Native prestige clears run products, upgrades and skills
+PASS Native prestige retains discoveries, decorations and learned guidance
+PASS Native prestige applies quoted Fame once and emits one cue
+PASS Native rebuild cash buys exactly the first product
+PASS Draw saves result and disables Continue during reveal
+PASS Settling animation changes no rewards or currency
+PASS Final Continue closes without replaying the reveal cue
+PASS Scene return has one audio owner and two saved sources
+PASS Earned prestige and learned guidance survive profile reload
+PASS Native run 2 unlocks all eight products using committed quotes
+PASS Earned lifetime discoveries activate saved decoration layers
+PASS Shelf and product row use engine appearance 0 run 2
+PASS Shelf and product row use engine appearance 1 run 2
+PASS Shelf and product row use engine appearance 2 run 2
+PASS Shelf and product row use engine appearance 3 run 2
+PASS Shelf and product row use engine appearance 4 run 2
+PASS Shelf and product row use engine appearance 5 run 2
+PASS Shelf and product row use engine appearance 6 run 2
+PASS Shelf and product row use engine appearance 7 run 2
+PASS Skill 0 emits committed feedback
+PASS Skill 1 emits committed feedback
+PASS Skill 2 emits committed feedback
+PASS Native prestige clears run products, upgrades and skills
+PASS Native prestige retains discoveries, decorations and learned guidance
+PASS Native prestige applies quoted Fame once and emits one cue
+PASS Native rebuild cash buys exactly the first product
+PASS Native second prestige grants 100 KK once
+PASS Scene return has one audio owner and two saved sources
+PASS Earned prestige and learned guidance survive profile reload
+PASS Persisted settings stop music, mute cues and reduce motion
+PASS Sound off suppresses playback
+PASS All three preferences persist after scene reload
+PASS Reduced-motion reveal settles immediately
+PASS Background pauses music and stops effects
+PASS Foreground resumes one music source
+PASS Settled offline receipt presents contextual return guidance
+PASS Return guidance acknowledgment and Continue retain the single settled receipt
+PASS Native x100 quantity commits the displayed count
+PASS Native Max quantity commits the exact affordable count
+PASS Passive affordability refresh updates button appearance
+PASS All eight product mappings select appearance tier 0
+PASS All eight product mappings select appearance tier 1
+PASS All eight product mappings select appearance tier 2
+PASS All eight product mappings select appearance tier 3
+PASS Saved decoration layers match stage 0
+PASS Saved decoration layers match stage 1
+PASS Saved decoration layers match stage 2
+PASS Saved decoration layers match stage 3
+PASS Saved decoration layers match stage 4
+PASS Saved decoration layers match stage 5
+PASS Saved component count and fixed 64-particle pool remain constant across scene cycles
+PASS No runtime errors during native unboosted journey and presentation checks
+Temporary earned profile: C:\Users\Dev\AppData\Local\Temp\ClassicPresentation-ad1d10e835ac459b843c0e3f6a864518. Clock advanced by test only; no cash, ownership or reward fields seeded.

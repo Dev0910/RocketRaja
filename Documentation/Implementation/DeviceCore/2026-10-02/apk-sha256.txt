@@ -1,0 +1,5 @@
+
+Algorithm : SHA256
+Hash      : 6D89ECD75123F7E2E4BF8B454CF0116C8138D56AF4AC0D2BCD742BA67763E360
+Path      : C:\Unity\Projects\Incremental game\Temp\RedesignDeviceQA-20261002-005107-7545630d\Build\RocketRaja-core-qa.apk
+

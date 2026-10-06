@@ -1,0 +1,6 @@
+Attempt UTC: 2026-10-02T01:13:39.5430294Z
+APK SHA256: 5654A67542326E148D52487974E1A43F43562ACB23EF4F24B45DBE614AA3154D
+Target: 31920616 / com.diwali.rocketrajaredesign.playtest
+Performing Streamed Install
+adb.exe: failed to install Builds/Android/RocketRaja-redesign-playtest.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+

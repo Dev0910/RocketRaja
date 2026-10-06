@@ -129,11 +129,6 @@ namespace RocketRaja.EditorTools
             var account = ActionRow(content, "Google account", "Guest · saved on this device", "settings-account", "Open");
             var privacy = ActionRow(content, "Privacy information", "Local guests or optional Google sync.",
                 "settings-privacy", "Open");
-            var consentContainer = New("settings-consent-row", content);
-            consentContainer.AddComponent<LayoutElement>().preferredHeight = 190;
-            var consent = ActionRow(consentContainer.transform, "Advertising privacy choices", "Manage your preferences.",
-                "settings-consent", "Open", true);
-            consentContainer.SetActive(false);
 
             var presenter = root.AddComponent<ImportedSettingsScreen>();
             var serialized = new SerializedObject(presenter);
@@ -142,8 +137,6 @@ namespace RocketRaja.EditorTools
             serialized.FindProperty("privacyButton").objectReferenceValue = privacy;
             serialized.FindProperty("accountButton").objectReferenceValue = account;
             serialized.FindProperty("accountStatus").objectReferenceValue = account.transform.parent.Find("Description").GetComponent<TMP_Text>();
-            serialized.FindProperty("consentButton").objectReferenceValue = consent;
-            serialized.FindProperty("consentRow").objectReferenceValue = consentContainer;
             serialized.FindProperty("enabledFace").objectReferenceValue = folkBlue;
             serialized.FindProperty("disabledFace").objectReferenceValue = folkIvory;
             SetArray(serialized.FindProperty("settingButtons"), buttons);

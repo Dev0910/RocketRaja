@@ -1,0 +1,117 @@
+{
+  "source": "Assets/Game/RedesignUI/Art/Shop Decorations.png",
+  "reference": "UI Builder/Reference Images/Redesign/shop-decorations-v1.png",
+  "sha256": "a114d37e292018c5ae5387516499d05ce9b34ceb5e33f2c72b3ce37eefb8102c",
+  "width": 1536,
+  "height": 1024,
+  "cells": [
+    {
+      "id": "garland",
+      "rect": {
+        "x": 22,
+        "yFromTop": 118,
+        "width": 796,
+        "height": 187
+      }
+    },
+    {
+      "id": "lantern",
+      "rect": {
+        "x": 1065,
+        "yFromTop": 8,
+        "width": 187,
+        "height": 460
+      }
+    },
+    {
+      "id": "apron",
+      "rect": {
+        "x": 20,
+        "yFromTop": 518,
+        "width": 769,
+        "height": 183
+      }
+    },
+    {
+      "id": "bunting",
+      "rect": {
+        "x": 809,
+        "yFromTop": 465,
+        "width": 711,
+        "height": 222
+      }
+    },
+    {
+      "id": "crest",
+      "rect": {
+        "x": 168,
+        "yFromTop": 734,
+        "width": 468,
+        "height": 267
+      }
+    }
+  ],
+  "stages": [
+    0,
+    100,
+    250,
+    500,
+    750,
+    1000
+  ],
+  "names": [
+    "Opening stall",
+    "Marigold welcome",
+    "Lantern glow",
+    "Embroidered counter",
+    "Festival bunting",
+    "Raja crest"
+  ],
+  "kits": [
+    {
+      "id": "garland",
+      "x": 0.06,
+      "y": 0.07,
+      "w": 0.88,
+      "h": 0.18
+    },
+    {
+      "id": "lantern-left",
+      "x": 0.005,
+      "y": 0.08,
+      "w": 0.09,
+      "h": 0.19
+    },
+    {
+      "id": "lantern-right",
+      "x": 0.905,
+      "y": 0.08,
+      "w": 0.09,
+      "h": 0.19
+    },
+    {
+      "id": "apron",
+      "x": 0.1,
+      "y": 0.895,
+      "w": 0.8,
+      "h": 0.1
+    },
+    {
+      "id": "bunting",
+      "x": 0.1,
+      "y": 0.005,
+      "w": 0.8,
+      "h": 0.12
+    },
+    {
+      "id": "crest",
+      "x": 0.4,
+      "y": 0.14,
+      "w": 0.2,
+      "h": 0.08
+    }
+  ],
+  "base": "Assets/Game/ImportedUI/Art/Stall Background.png",
+  "coordinates": "fraction of fixed stall bounds, top-origin",
+  "approval": "User explicitly waived UI approval pauses; this is not human approval."
+}

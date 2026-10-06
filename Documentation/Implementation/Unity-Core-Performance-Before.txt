@@ -1,0 +1,10 @@
+Unity editor CPU diagnostic; NOT phone performance or native list-scrolling acceptance.
+Unity=6000.4.9f1; processor=AMD Ryzen 7 4800H with Radeon Graphics ; content=C0904702675993BCF0B3F647A8A1DC71E6A4FBFA5A455B97EFE58F43EFEFA5F7
+QuoteBuyAll_1000: count=30; total_ms=4870.517; mean_ms=162.3506
+NormalIncome_cached: count=10000; total_ms=454.245; mean_ms=0.0454
+State_validation_1000: count=100; total_ms=3166.255; mean_ms=31.6625
+Full_run_save_utf8_bytes=24225; supported_limit=750000
+Json_encode_1000: count=100; total_ms=37.287; mean_ms=0.3729
+Json_decode_1000: count=100; total_ms=68.401; mean_ms=0.6840
+Prestige_three_draws_rebuild: count=50; total_ms=1912.032; mean_ms=38.2406
+Editor_managed_retained_byte_delta_after_GC=-155648; includes editor activity and is not a leak verdict

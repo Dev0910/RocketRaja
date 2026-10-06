@@ -1,12 +1,10 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using RocketRaja.Core;
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace RocketRaja.Editor
@@ -37,10 +35,7 @@ namespace RocketRaja.Editor
             }
             graphics.ApplyModifiedPropertiesWithoutUndo();
             if (Resources.Load<TMPro.TMP_Settings>("TMP Settings") == null) throw new BuildFailedException("TMP resources are still importing. Let import finish, then rerun Prepare/Build.");
-            var content = AssetDatabase.LoadAssetAtPath<GameContent>("Assets/Resources/GameContent.asset");
-            if (content == null) { content = ScriptableObject.CreateInstance<GameContent>(); content.catalog = Catalog.Create(); AssetDatabase.CreateAsset(content, "Assets/Resources/GameContent.asset"); }
-            if (content.catalog.skills == null || content.catalog.skills.Length != 3) { content.catalog.skills = Catalog.Create().skills; EditorUtility.SetDirty(content); }
-            if (content.catalog.legacy == null || content.catalog.legacy.Length != 12) { content.catalog.legacy = Catalog.Create().legacy; EditorUtility.SetDirty(content); }
+            PrepareContent();
             PlayerSettings.companyName = "Diwali Games"; PlayerSettings.productName = "Rocket Raja";
             var appIcon = AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/Branding/AppIcon.png");
             if (appIcon != null) PlayerSettings.SetIconsForTargetGroup(BuildTargetGroup.Unknown, new[] { appIcon });
@@ -68,28 +63,17 @@ namespace RocketRaja.Editor
                 importer.textureCompression = TextureImporterCompression.Compressed;
                 importer.SaveAndReimport();
             }
-            ConfigureTestAds();
             if (!File.Exists(Scene))
-            {
-                var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
-                var camera = new GameObject("Main Camera", typeof(Camera), typeof(AudioListener)); camera.tag = "MainCamera";
-                camera.GetComponent<Camera>().clearFlags = CameraClearFlags.SolidColor; camera.GetComponent<Camera>().backgroundColor = GameView.Navy;
-                new GameObject("Game", typeof(GameController)); EditorSceneManager.SaveScene(scene, Scene);
-            }
+                throw new BuildFailedException("The reviewed redesign scene is missing. Content is generated; finish the directed native screen integration before building the game.");
+            ClassicProductionAuthoring.Integrate();
             EditorBuildSettings.scenes = Scenes.Select(path => new EditorBuildSettingsScene(path, true)).ToArray();
-            File.WriteAllText("Documentation/ContentCatalog.json", JsonUtility.ToJson(content.catalog, true));
             AssetDatabase.SaveAssets(); ValidateGame.Run(); Debug.Log("DIWALI_PREPARE_OK");
         }
-        static void ConfigureTestAds()
+        internal static GameContent PrepareContent()
         {
-            // SDK's settings class is internal; SerializedObject keeps this adapter editor-only.
-            var type = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType("GoogleMobileAds.Editor.GoogleMobileAdsSettings")).FirstOrDefault(t => t != null);
-            if (type == null) throw new BuildFailedException("Google Mobile Ads package missing");
-            var settings = (UnityEngine.Object)type.GetMethod("LoadInstance", BindingFlags.Static | BindingFlags.NonPublic).Invoke(null, null);
-            var data = new SerializedObject(settings);
-            if (string.IsNullOrEmpty(data.FindProperty("adMobAndroidAppId").stringValue)) data.FindProperty("adMobAndroidAppId").stringValue = "ca-app-pub-3940256099942544~3347511713";
-            data.FindProperty("adMobIOSAppId").stringValue = "ca-app-pub-3940256099942544~1458002511";
-            data.ApplyModifiedPropertiesWithoutUndo(); EditorUtility.SetDirty(settings);
+            // Isolation chooses save/network targets, never which economy to regenerate.
+            RedesignAuthoring.Regenerate();
+            return AssetDatabase.LoadAssetAtPath<GameContent>("Assets/Resources/GameContent.asset");
         }
         [MenuItem("Rocket Raja/Build Windows Preview")]
         public static void Windows() { Prepare(); Build("Builds/Windows/RocketRaja.exe", BuildTarget.StandaloneWindows64, BuildOptions.Development); }
@@ -102,12 +86,12 @@ namespace RocketRaja.Editor
         [MenuItem("Rocket Raja/Build Production Bundle")]
         public static void Production()
         {
+            if (RedesignEnvironment.Isolated) throw new BuildFailedException("The isolated redesign is not approved for production rollout. Complete the implementation release acceptance first.");
             if (!File.Exists(Bootstrap)) throw new BuildFailedException("Complete the reviewed Bootstrap screen before building the cloud-save release.");
             var config = Resources.Load<ProductionConfig>("ProductionConfig");
-            if (config == null || !config.productionAds || string.IsNullOrWhiteSpace(config.rewardedAdUnitId) || config.rewardedAdUnitId.Contains("3940256099942544") || !Uri.TryCreate(config.privacyUrl, UriKind.Absolute, out var privacy) || privacy.Scheme != "https" || config.applicationId.EndsWith(".dev")) throw new BuildFailedException("Supply verified production application ID, rewarded unit and public HTTPS privacy URL in ProductionConfig.");
+            if (!config || !config.releaseAcceptanceComplete) throw new BuildFailedException("Complete Classic release acceptance, account/billing configuration and store-installed validation before production rollout.");
+            if (config == null || !Uri.TryCreate(config.privacyUrl, UriKind.Absolute, out var privacy) || privacy.Scheme != "https" || config.applicationId.EndsWith(".dev")) throw new BuildFailedException("Supply verified production application ID and public HTTPS privacy URL in ProductionConfig.");
             if (!PlayerSettings.Android.useCustomKeystore || string.IsNullOrEmpty(PlayerSettings.Android.keystoreName)) throw new BuildFailedException("Configure your owned upload key in Android Publishing Settings.");
-            var ads = Resources.Load<ScriptableObject>("GoogleMobileAdsSettings");
-            if (ads == null || new SerializedObject(ads).FindProperty("adMobAndroidAppId").stringValue.Contains("3940256099942544")) throw new BuildFailedException("Replace the sample AdMob application ID before production.");
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, config.applicationId);
             EditorUserBuildSettings.buildAppBundle = true;
             Build("Builds/Android/RocketRaja-release.aab", BuildTarget.Android, BuildOptions.None);

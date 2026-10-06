@@ -1,0 +1,6 @@
+PASS Home saved prefab has no missing scripts
+PASS Offline saved prefab has no missing scripts
+PASS Settings saved prefab has no missing scripts
+PASS Privacy saved prefab has no missing scripts
+PASS Prestige saved prefab has no missing scripts
+PASS Game scripts compile after AdMob package removal

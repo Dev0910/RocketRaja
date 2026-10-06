@@ -102,7 +102,6 @@ namespace RocketRaja.EditorTools
             Canvas.ForceUpdateCanvases();
             EditorSceneManager.SaveScene(scene,ScenePath);
             EditorBuildSettings.scenes = new[]{new EditorBuildSettingsScene(ScenePath,true)}.Concat(EditorBuildSettings.scenes.Where(s=>s.path!=ScenePath)).ToArray();
-            IntegrateSettingsAndPrivacy();
             Refine();
             AssetDatabase.SaveAssets();
             Debug.Log("BOOTSTRAP_AUTHORED " + ScenePath);
@@ -159,38 +158,6 @@ namespace RocketRaja.EditorTools
         static RectTransform At(Transform parent,string name,float left,float right,float top,float height){var r=Rect(name,parent);r.anchorMin=new Vector2(0,1);r.anchorMax=Vector2.one;r.pivot=new Vector2(.5f,1);r.offsetMin=new Vector2(left,-top-height);r.offsetMax=new Vector2(-right,-top);return r;}
         static Image Image(RectTransform r,Color c,Sprite sprite=null){var i=r.gameObject.AddComponent<Image>();i.color=c;i.raycastTarget=false;if(sprite!=null){i.sprite=sprite;i.type=UnityEngine.UI.Image.Type.Sliced;i.pixelsPerUnitMultiplier=.25f;}return i;}
         static TMP_Text Text(RectTransform r,string value,float size,Color c,TMP_FontAsset f,TextAlignmentOptions align=TextAlignmentOptions.Center){var t=r.gameObject.AddComponent<TextMeshProUGUI>();t.font=f;t.text=value;t.fontSize=size;t.color=c;t.alignment=align;t.raycastTarget=false;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Ellipsis;return t;}
-        public static void IntegrateSettingsAndPrivacy()
-        {
-            string path="Assets/Game/ImportedUI/Settings Screen.prefab";var root=PrefabUtility.LoadPrefabContents(path);
-            try
-            {
-                var presenter=root.GetComponent<ImportedSettingsScreen>();var content=root.GetComponentsInChildren<VerticalLayoutGroup>(true).First(x=>x.name=="Content").transform;
-                if(content.Find("Google account row")==null)
-                {
-                    var row=Row(content,"Google account row",225);row.SetSiblingIndex(4);Image(row,C("FFF5DE"),rounded);
-                    var title=Text(At(row,"Account heading",24,230,15,48),"Google account",38,Ink,boldFont,TextAlignmentOptions.Left);
-                    var status=Text(At(row,"Account status",24,230,69,130),"Guest · saved on this device",31,Muted,bodyFont,TextAlignmentOptions.Left);
-                    var action=Rect("Account controls",row);action.anchorMin=new Vector2(1,0);action.anchorMax=Vector2.one;action.pivot=new Vector2(1,.5f);action.offsetMin=new Vector2(-210,30);action.offsetMax=new Vector2(-20,-30);
-                    Image(action,C("205685"),rounded).raycastTarget=true;var button=action.gameObject.AddComponent<Button>();button.targetGraphic=action.GetComponent<Image>();button.navigation=new Navigation{mode=Navigation.Mode.None};Text(Fill(action,"Label"),"Open",37,Color.white,boldFont);
-                    var so=new SerializedObject(presenter);so.FindProperty("accountButton").objectReferenceValue=button;so.FindProperty("accountStatus").objectReferenceValue=status;so.ApplyModifiedPropertiesWithoutUndo();
-                }
-                foreach(var t in root.GetComponentsInChildren<TMP_Text>(true))if(t.text=="Progress stays on this device.")t.text="Local guests or optional Google sync.";
-                PrefabUtility.SaveAsPrefabAsset(root,path);
-            }finally{PrefabUtility.UnloadPrefabContents(root);}
-            path="Assets/Game/ImportedUI/Privacy Screen.prefab";root=PrefabUtility.LoadPrefabContents(path);
-            try
-            {
-                foreach(var t in root.GetComponentsInChildren<TMP_Text>(true))
-                {
-                    if(t.text=="Your progress stays on this device.")t.text="Guest saves stay local. Google sync is optional.";
-                    if(t.text=="Local progress")t.text="Progress and your account";
-                    if(t.text=="There is no cloud account or cloud recovery.")t.text="Guests stay on this device. Google players sync progress and basic profile data to Firebase. One device plays at a time. Analytics and crash collection are off by default.";
-                }
-                var card=root.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault(t=>t.text.StartsWith("Guests stay on this device."));
-                if(card!=null){var e=card.GetComponentInParent<LayoutElement>();if(e!=null)e.preferredHeight=Mathf.Max(e.preferredHeight,370);}
-                PrefabUtility.SaveAsPrefabAsset(root,path);
-            }finally{PrefabUtility.UnloadPrefabContents(root);}
-        }
         public static void Refine()
         {
             var scene=SceneManager.GetSceneByPath(ScenePath);if(!scene.IsValid())throw new InvalidOperationException("Open Bootstrap first.");

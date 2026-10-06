@@ -1,0 +1,312 @@
+{
+  "absoluteLocalResources": [],
+  "advisoryAssetMismatches": [],
+  "assetParity": [],
+  "cssFiles": [
+    "redesign.css"
+  ],
+  "duplicateIds": [],
+  "errors": [],
+  "executableScripts": [
+    "redesign.html#script-2",
+    "redesign.html#script-3"
+  ],
+  "htmlFiles": [
+    "redesign.html"
+  ],
+  "inspectedCssFiles": [
+    "Redesign/redesign.css"
+  ],
+  "malformedJson": [],
+  "metadataBlocks": [
+    {
+      "html": "redesign.html",
+      "id": "unity-metadata"
+    }
+  ],
+  "metadataLocalResources": [],
+  "missingHtmlIds": [],
+  "missingLocalResources": [],
+  "missingUnityAssets": [],
+  "ok": true,
+  "outsidePackageResources": [],
+  "package": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Redesign",
+  "packageSymlinks": [],
+  "projectRoot": "C:\\Unity\\Projects\\Incremental game",
+  "referenceImages": [
+    {
+      "height": 540,
+      "path": "renders/buyall-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/buyall-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/buyall-stale-quote.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/carddetails-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/carddetails-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/drawreveal-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/drawreveal-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/home-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/home-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/home-progressed.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/home-save-error.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/kajushop-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/kajushop-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/kajushop-loading.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/kajushop-pending.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/kajushop-unavailable.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/offline-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/offline-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/prestige-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/prestige-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/prestige-below-target.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/productdetails-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/productdetails-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/skilldetails-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/skilldetails-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/talent-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/talent-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/talent-locked.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/talent-zero.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/taptraining-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/taptraining-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/upgradedetails-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/upgradedetails-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 540,
+      "path": "renders/upgrades-360x540.png",
+      "width": 360
+    },
+    {
+      "height": 844,
+      "path": "renders/upgrades-390x844.png",
+      "width": 390
+    },
+    {
+      "height": 844,
+      "path": "renders/upgrades-empty.png",
+      "width": 390
+    }
+  ],
+  "remoteResources": [],
+  "requiredAssetMismatches": [],
+  "resourceRoot": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML",
+  "schemaVersion": 1,
+  "screenHints": [
+    {
+      "html": "redesign.html",
+      "id": "screen-home",
+      "screen-id": "home",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-upgrades",
+      "screen-id": "upgrades",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-upgradedetails",
+      "screen-id": "upgradedetails",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-buyall",
+      "screen-id": "buyall",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-talent",
+      "screen-id": "talent",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-carddetails",
+      "screen-id": "carddetails",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-drawreveal",
+      "screen-id": "drawreveal",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-prestige",
+      "screen-id": "prestige",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-kajushop",
+      "screen-id": "kajushop",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-offline",
+      "screen-id": "offline",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-productdetails",
+      "screen-id": "productdetails",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-skilldetails",
+      "screen-id": "skilldetails",
+      "tag": "section"
+    },
+    {
+      "html": "redesign.html",
+      "id": "screen-taptraining",
+      "screen-id": "taptraining",
+      "tag": "section"
+    }
+  ],
+  "stateHints": [],
+  "unityAssetPaths": [
+    "Assets/Game/Core/RedesignEngine.cs"
+  ],
+  "unityAttributeCount": 542,
+  "unresolvedDynamicHtmlIds": [],
+  "unsafeUnityAssetPaths": [],
+  "warnings": [
+    "Executable script content is present; inspect it and apply the skill's local-preview rendering boundary before execution."
+  ]
+}

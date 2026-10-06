@@ -9,7 +9,7 @@ using static RocketRaja.EditorTools.ImportedUiKit;
 
 namespace RocketRaja.EditorTools
 {
-    /// <summary>Editor authoring for the HTML Offline offer and its states.</summary>
+    /// <summary>Editor authoring for the existing Offline summary.</summary>
     public static class BuildImportedOffline
     {
         const string ImporterPath = "Assets/Scenes/HTML Importer.unity";
@@ -41,7 +41,7 @@ namespace RocketRaja.EditorTools
             Image(Fill(root.transform, "DimBackdrop"), new Color(.035f, .07f, .13f, .76f), true);
             var safe = Fill(root.transform, "SafeArea");
             safe.gameObject.AddComponent<ImportedSafeArea>();
-            var dialog = Dialog(safe, "OfflineDialog", 1570);
+            var dialog = Dialog(safe, "OfflineDialog", 1270);
             var fit = dialog.gameObject.AddComponent<ImportedDialogFit>();
 
             var header = Top(dialog, "Header", 183);
@@ -57,18 +57,14 @@ namespace RocketRaja.EditorTools
             Text(Fill(closeRect, "Close Icon"), "×", 90, Color.white, TextAlignmentOptions.Center, true);
             Image(Bottom(header, "Double Rule", 5), Hex("255883"));
 
-            var footer = Bottom(dialog, "Footer", 360);
+            var footer = Bottom(dialog, "Footer", 180);
             Image(footer, IvoryColor);
             Image(Top(footer, "Footer Rule", 5), Hex("255883"));
-            var video = Button(Stretch(footer, "offline-video", 31, 31, 192, 27), Blue);
-            var videoFace = video.GetComponent<Image>();
-            Text(Fill(video.transform, "Video Label"), "Optional video · Double reward", 39,
-                Color.white, TextAlignmentOptions.Center, true);
-            var next = Button(Stretch(footer, "back-Offline", 31, 31, 28, 192), Ivory);
-            Text(Fill(next.transform, "Continue Label"), "Continue without video", 39,
+            var next = Button(Stretch(footer, "back-Offline", 31, 31, 28, 27), Ivory);
+            Text(Fill(next.transform, "Continue Label"), "Continue", 39,
                 Ink, TextAlignmentOptions.Center, true);
 
-            var body = Stretch(dialog, "Scroll Body", 5, 5, 360, 183);
+            var body = Stretch(dialog, "Scroll Body", 5, 5, 180, 183);
             var bodyImage = Image(body, IvoryColor, true);
             bodyImage.color = new Color(1, 1, 1, .001f);
             body.gameObject.AddComponent<RectMask2D>();
@@ -132,38 +128,19 @@ namespace RocketRaja.EditorTools
             var cap = Text(Stretch(sales, "offline-cap", 35, 35, 38, 158),
                 "Up to 8 hours while you are away.", 35, Muted, TextAlignmentOptions.MidlineLeft);
 
-            var offerRow = New("Offer Row", content);
-            offerRow.AddComponent<LayoutElement>().preferredHeight = 70;
-            var offer = Text(Fill(offerRow.transform, "offline-offer"),
-                "Watch an optional video to add another ₹24.8K.", 34, Ink, TextAlignmentOptions.Center);
-            var messageRow = New("offline-message", content);
-            messageRow.AddComponent<LayoutElement>().preferredHeight = 105;
-            var messageBackground = Image(Fill(messageRow.transform, "Message Background"), Hex("F9E5DC"));
-            messageBackground.color = new Color(249 / 255f, 229 / 255f, 220 / 255f, .5f);
-            var message = Text(Stretch(messageRow.transform, "Message Text", 28, 22, 12, 12), "", 31,
-                Hex("71364B"), TextAlignmentOptions.MidlineLeft);
-            messageRow.SetActive(false);
-
             var presenter = root.AddComponent<ImportedOfflineScreen>();
             var serialized = new SerializedObject(presenter);
             serialized.FindProperty("closeButton").objectReferenceValue = close;
-            serialized.FindProperty("videoButton").objectReferenceValue = video;
             serialized.FindProperty("continueButton").objectReferenceValue = next;
-            serialized.FindProperty("videoFace").objectReferenceValue = videoFace;
             serialized.FindProperty("rewardText").objectReferenceValue = reward;
             serialized.FindProperty("capText").objectReferenceValue = cap;
-            serialized.FindProperty("offerText").objectReferenceValue = offer;
-            serialized.FindProperty("messageRow").objectReferenceValue = messageRow;
-            serialized.FindProperty("messageText").objectReferenceValue = message;
-            serialized.FindProperty("enabledFace").objectReferenceValue = Blue;
-            serialized.FindProperty("disabledFace").objectReferenceValue = Sand;
             serialized.FindProperty("dialogFit").objectReferenceValue = fit;
             serialized.ApplyModifiedPropertiesWithoutUndo();
 
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();
-            Debug.Log("Authored Offline offer in " + ImporterPath);
+            Debug.Log("Authored Offline summary in " + ImporterPath);
         }
 
         public static void Integrate()

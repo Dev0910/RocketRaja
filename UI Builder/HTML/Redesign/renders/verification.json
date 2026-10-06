@@ -1,0 +1,490 @@
+{
+  "status": "PASS",
+  "scope": "Offline browser fixtures; not native, persistence or billing acceptance",
+  "browser": "154.0.4258.37",
+  "checks": [
+    {
+      "check": "Static metadata/IDs/action coverage",
+      "status": "PASS"
+    },
+    {
+      "screen": "home",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgrades",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgradedetails",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "buyall",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "talent",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "carddetails",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "drawreveal",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "prestige",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "kajushop",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "offline",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "productdetails",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "skilldetails",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "taptraining",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "home",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgrades",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgradedetails",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "buyall",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "talent",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "carddetails",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "drawreveal",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "prestige",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "kajushop",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "offline",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "productdetails",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "skilldetails",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "taptraining",
+      "viewport": [
+        360,
+        640
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "home",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgrades",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgradedetails",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "buyall",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "talent",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "carddetails",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "drawreveal",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "prestige",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "kajushop",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "offline",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "productdetails",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "skilldetails",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "taptraining",
+      "viewport": [
+        360,
+        540
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "home",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgrades",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "upgradedetails",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "buyall",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "talent",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "carddetails",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "drawreveal",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "prestige",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "kajushop",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "offline",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "productdetails",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "skilldetails",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "screen": "taptraining",
+      "viewport": [
+        450,
+        916
+      ],
+      "status": "PASS"
+    },
+    {
+      "check": "Search/empty/retention, quantity, input isolation/ceiling, simulated pending/success/duplicate/cancel/failure and draw",
+      "status": "PASS"
+    },
+    {
+      "check": "Selected product/card/skill identity and locked/ready skill action",
+      "status": "PASS"
+    },
+    {
+      "screen": "talent",
+      "state": "locked",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "talent",
+      "state": "zero",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "upgrades",
+      "state": "empty",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "kajushop",
+      "state": "loading",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "kajushop",
+      "state": "unavailable",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "kajushop",
+      "state": "pending",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "home",
+      "state": "save-error",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "buyall",
+      "state": "stale-quote",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "prestige",
+      "state": "below-target",
+      "status": "CAPTURED"
+    },
+    {
+      "screen": "home",
+      "state": "progressed",
+      "status": "CAPTURED"
+    },
+    {
+      "check": "Reduced motion and browser errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,20 @@
+RUNNING
+Package: com.diwali.fireworkstycoon.dev
+Scenes: Bootstrap, Main
+No preview defines or boosted profile
+Succeeded
+Errors: 0
+Warnings: 22
+Duration: 00:02:44.1677123
+Bytes: 997662266
+Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.probuilder/Runtime/com.IvanMurzak.Unity.MCP.ProBuilder.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
+Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.particlesystem/Runtime/com.IvanMurzak.Unity.MCP.ParticleSystem.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
+Warning: Assets\Game\Runtime\Cloud\PlayerSessionHost.cs(173,34): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Warning: Assets\Game\Runtime\SmokeHarness.Quality.cs(431,77): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'Object'
+Warning: Assets\Game\Runtime\SmokeHarness.Quality.cs(438,77): warning CS0252: Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'Object'
+Warning: Assets\Game\Runtime\SmokeHarness.cs(84,20): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
+Warning: Assets\Game\Runtime\SmokeHarness.cs(118,78): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Warning: Assets\Game\Runtime\SmokeHarness.cs(118,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Warning: Assets\Game\Runtime\SmokeHarness.cs(398,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
+Warning: Assets\Game\Runtime\SmokeHarness.cs(398,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Warning: Compressed texture AppIcon is used as icon. This might compromise visual quality of the final image. Uncompressed format might be considered as better import option.

@@ -1,0 +1,82 @@
+{
+  "topics": [
+    {
+      "id": "buy-first",
+      "title": "Your first purchase",
+      "brief": "Buy one Phuljhari yourself.",
+      "body": "Use the opening cash to buy your first Phuljhari manually. Buying starts its normal sales; your opening grant is not run earnings."
+    },
+    {
+      "id": "tap-counter",
+      "title": "A useful tap",
+      "brief": "Only the counter earns tap cash.",
+      "body": "Tap the stall counter to earn cash. Up to three full-value taps count per second. Scrolling or using menus never earns a tap."
+    },
+    {
+      "id": "product-levels",
+      "title": "Choose your quantity",
+      "brief": "Review x1, x10, x100 or Max.",
+      "body": "Product levels raise normal sales. Choose x1, x10, x100 or Max, then review the exact count and cost before buying. Tap training has its own level quote."
+    },
+    {
+      "id": "catalogue-filters",
+      "title": "Find the next upgrade",
+      "brief": "Use categories, views and search.",
+      "body": "Cash buys run upgrades here. Filter by category or product, search by name, or switch Available, Upcoming and Owned views. Details show exact effects and requirements."
+    },
+    {
+      "id": "buy-all",
+      "title": "Review before buying",
+      "brief": "Buy All buys only its reviewed list.",
+      "body": "Buy All buys affordable eligible cash upgrades in your selected scope. Review its count and price. It does not buy product levels, Talent cards or spend KK."
+    },
+    {
+      "id": "skill-basics",
+      "title": "Skills for this run",
+      "brief": "Buy the base skill, then activate it.",
+      "body": "Base skills must be bought again each run. Activate a ready skill; its cooldown starts immediately. Reading menus does not pause sales or skill timers."
+    },
+    {
+      "id": "comebacks",
+      "title": "An earlier shelf can grow",
+      "brief": "Compare its normal income and share.",
+      "body": "Earlier products can become useful again through signatures and other cash upgrades. Compare the before/after income and shop share in these details."
+    },
+    {
+      "id": "prestige",
+      "title": "Know what stays",
+      "brief": "Fame, cards and shop progress stay.",
+      "body": "Run earnings fill the Prestige target. Reset rebuilds products and cash upgrades. Fame, Talent, unique purchases and decorations stay. First Prestige grants three free draws."
+    },
+    {
+      "id": "rebuild",
+      "title": "A new run, familiar shop",
+      "brief": "Buy the first product manually again.",
+      "body": "Your opening cash is ready for a manual first purchase. Fame and cards improve this rebuild. Product displays and skills return only after you buy their run requirements."
+    },
+    {
+      "id": "cash-and-talent",
+      "title": "Two kinds of upgrades",
+      "brief": "Cash is for the run; Talent stays.",
+      "body": "Cash upgrades improve this run. Talent cards unlock after your first Prestige and remain through resets. Fame raises income; free draw credits and KK are separate balances."
+    },
+    {
+      "id": "talent-free",
+      "title": "Your free draws",
+      "brief": "Use a free credit without spending KK.",
+      "body": "Choose the free-draw action to use one credit. Each draw saves its random card before the reveal. Skip animation keeps the same result. Unused credits stay."
+    },
+    {
+      "id": "talent-duplicates",
+      "title": "Duplicates improve a card",
+      "brief": "The same card gains one level.",
+      "body": "A duplicate adds one level to that card and improves its effect. Rarity stays the same. Compare the exact effect before and after; your card levels survive Prestige."
+    },
+    {
+      "id": "second-gift",
+      "title": "Your second-Prestige gift",
+      "brief": "100 Kaju Katli is yours to keep.",
+      "body": "The second Prestige grants 100 KK once. A KK draw costs 100; free draws use separate credits. You can keep the gift for later. Opening this page never spends it."
+    }
+  ]
+}

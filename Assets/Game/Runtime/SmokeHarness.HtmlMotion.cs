@@ -45,13 +45,8 @@ namespace RocketRaja
             Check(notice.GetComponent<CanvasGroup>().alpha == 1, "Toast finishes the 180ms HTML reveal");
             UiMotion.Hide(notice.gameObject, game);
             Check(!notice.gameObject.activeSelf, "Toast hides immediately as in HTML");
-            (game.Ads as TestRewardedAds).Ready = false;
-            game.View.ShowSponsor(); yield return new WaitForSecondsRealtime(.3f);
-            var inline = game.SponsorScreen.GetComponentsInChildren<UiMotion>().FirstOrDefault(x => x.Profile == UiMotion.Kind.Notice);
-            Check(inline != null && inline.Surface.name == "Message Motion Host" && inline.GetComponent<CanvasGroup>().alpha == 1,
-                "Inline messages reveal on a child host without changing row layout");
-            game.SponsorScreen.Close(); yield return new WaitForSecondsRealtime(.2f);
-            (game.Ads as TestRewardedAds).Ready = true;
+            game.View.ShowSponsor();
+            Check(game.SponsorScreen == null || !game.SponsorScreen.gameObject.activeSelf, "Retired Sponsor has no animation or input surface");
             var all = game.HomeScreen.GetComponentsInChildren<UiFeedback>(true);
             Check(all.All(x => x.Target != null), "All Home feedback targets were authored before Play Mode");
             yield return HtmlMeterChecks();

@@ -240,16 +240,6 @@ namespace RocketRaja.EditorTools
                 skillStatus[i].textWrappingMode = TextWrappingModes.NoWrap;
             }
 
-            var sponsor = FramedCard(content, "Sponsor", 136);
-            var sponsorButton = InvisibleButton(Fill(sponsor, "sponsor-open"));
-            var sponsorLabel = Text(Stretch(sponsor, "sponsor-status", 105, 20, 46, 15),
-                "SPONSOR ACTIVE · 03:42", 38, Ink, TextAlignmentOptions.MidlineLeft, true);
-            Text(Stretch(sponsor, "Sponsor Caption", 105, 20, 12, 80),
-                "×2 sales · Available offer expiry", 30, Muted, TextAlignmentOptions.MidlineLeft);
-            var sponsorIcon = Image(Stretch(sponsor, "Sponsor Icon", 15, 920, 20, 20), Color.white, false, skillArt[0]);
-            sponsorIcon.type = UnityEngine.UI.Image.Type.Simple;
-            sponsorIcon.preserveAspect = true;
-
             var nextAction = FramedCard(content, "Next Action", 140);
             Text(Region(nextAction, "Next Action Kicker", .035f, .65f, .65f, .95f), "STARTER OFFER", 32,
                 Muted, TextAlignmentOptions.MidlineLeft, true);
@@ -288,7 +278,6 @@ namespace RocketRaja.EditorTools
             Assign(data, "navigationIndicators", navIndicators);
             Assign(data, "shelfButtons", shelfButtons);
             Assign(data, "skillButtons", skillButtons);
-            data.FindProperty("sponsorButton").objectReferenceValue = sponsorButton;
             Assign(data, "shelfArt", displays);
             Assign(data, "emptyShelfMarks", emptyMarks);
             Assign(data, "shelfNames", names);
@@ -299,7 +288,6 @@ namespace RocketRaja.EditorTools
             data.FindProperty("cashLabel").objectReferenceValue = cash;
             data.FindProperty("incomeLabel").objectReferenceValue = income;
             data.FindProperty("tapLabel").objectReferenceValue = tapLabel;
-            data.FindProperty("sponsorLabel").objectReferenceValue = sponsorLabel;
             data.FindProperty("tapHintLabel").objectReferenceValue = hintText;
             data.FindProperty("nextActionLayout").objectReferenceValue = nextAction.GetComponent<LayoutElement>();
             data.FindProperty("nextGoalLabel").objectReferenceValue = nextGoal;

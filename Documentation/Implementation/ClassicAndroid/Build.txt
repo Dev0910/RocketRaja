@@ -1,0 +1,11 @@
+RUNNING 2026-10-06T14:01:30.1137311Z
+Request: classic-android-20261006-01
+Scene: Assets/Scenes/HTML Importer.unity
+Succeeded
+errors=0
+warnings=30
+duration=00:06:08.4470119
+bytes=955139910
+package=com.diwali.rocketrajaclassic.playtest
+apk=Builds/Android/RocketRaja-classic-playtest.apk
+Original app identity/signing/bundle settings restored.

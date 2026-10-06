@@ -25,10 +25,10 @@ namespace RocketRaja
             var nextProgress = home.GetComponentsInChildren<TMP_Text>(true).Single(x => x.name == "Next Progress");
             var nextProducts = home.GetComponentsInChildren<Button>(true).Single(x => x.name == "Next Products Button");
             var nextActionText = nextProducts.GetComponentInChildren<TMP_Text>(true);
-            var sponsor = home.GetComponentsInChildren<Transform>(true).Single(x => x.name == "Sponsor").gameObject;
-            var ads = (TestRewardedAds)game.Ads;
-            ads.Ready = true; home.Refresh();
-            Check(!sponsor.activeSelf, "Fresh Home defers Sponsor until after the first shelf");
+            var sponsor = home.GetComponentsInChildren<Transform>(true).FirstOrDefault(x => x.name == "Sponsor")?.gameObject;
+
+            home.Refresh();
+            Check(sponsor == null || !sponsor.activeSelf, "Home has no active Sponsor offer");
             Check(e.ProductCost(0, 1).CompareTo(new Amount(30)) == 0, "First Phuljhari costs the introductory ₹30");
             var introBulk = new Amount(30) + new Amount(120) * Catalog.Growth;
             Check(System.Math.Abs(Amount.Ratio(e.ProductCost(0, 2), introBulk) - 1) < 1e-8,
@@ -236,13 +236,9 @@ namespace RocketRaja
             e.SetStoreName(savedNameBeforeOrdering);
             Check(!home.GetComponentsInChildren<Transform>(true).Any(x => x.name == "Next Display" || x.name == "home-normal" || x.name == "home-run" || x.name == "Counter Message"), "Removed Home sections are absent");
             Check(!home.GetComponentInChildren<ShopAmbient>(true).VisitorsVisible, "No decorative visitors");
-            var sponsorButton = sponsor.GetComponentInChildren<Button>(true);
-            ads.Ready = false; home.Refresh(); Check(!sponsor.activeSelf, "Unavailable Sponsor collapses");
-            ads.Ready = true; home.Refresh(); Check(sponsor.activeSelf && sponsorButton.interactable, "Ready Sponsor offer is enabled");
-            e.MutationAllowed = () => false; home.Refresh(); Check(!sponsorButton.interactable, "Read-only session disables Sponsor"); e.MutationAllowed = null;
             s.sponsorUntil = s.now + 300; home.Refresh();
-            Check(sponsor.activeSelf && !sponsorButton.interactable && sponsor.GetComponent<LayoutElement>().preferredHeight == 100, "Active Sponsor uses compact timer");
-            s.sponsorUntil = s.now; ads.Ready = false; home.Refresh(); Check(!sponsor.activeSelf, "Expired unavailable Sponsor collapses");
+            Check(sponsor == null || !sponsor.activeSelf, "Legacy sponsor timestamp never reopens a retired offer");
+            s.sponsorUntil = 0;
             var skill = home.GetComponentsInChildren<Button>(true).Single(x => x.name == "home-skill-0");
             var status = skill.GetComponentsInChildren<TMP_Text>(true).Single(x => x.name == "Status");
             var notice = home.GetComponentsInChildren<TMP_Text>(true).Single(x => x.name == "Notice Text");

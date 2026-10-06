@@ -1,0 +1,40 @@
+PASS Exact Resources content validated against authored design and manifest: 1,000 upgrades / eight products / 28 cards
+PASS Fresh unboosted starting state
+PASS Manual first purchase and sequential product unlock
+PASS Opening grant is spent, never counted as earnings
+PASS Guidance, accessibility and name saved through commands
+PASS Run 1 unlocks all products and repurchases all base skills
+PASS Run 1 activates skill 0
+PASS Run 1 activates skill 1
+PASS Run 1 activates skill 2
+Run 1: 230 decisions, 8635.83 simulated seconds, 144 lifetime discoveries, +1 Fame, +3 credits
+PASS Reviewed prestige commits run 1
+PASS Prestige clears run fields and skill timers
+PASS Prestige retains lifetime discoveries, learned topics, preferences, cards and decorations
+PASS Fame and credits equal authoritative reviewed rewards
+PASS Next opening cash exactly funds one manual Phuljhari
+PASS First prestige grants three free credits and no KK
+PASS Earned free draw persists before dismissal
+PASS Durable retained checkpoint
+PASS Returning progress loads from normal save codec
+PASS Rebuild starts with basic art and retains discovery count
+PASS Signature repurchase changes run art without counting a new discovery
+PASS Run 2 unlocks all products and repurchases all base skills
+PASS Run 2 activates skill 0
+PASS Run 2 activates skill 1
+PASS Run 2 activates skill 2
+Run 2: 239 decisions, 1458.07 simulated seconds, 145 lifetime discoveries, +1 Fame, +1 credits
+PASS Reviewed prestige commits run 2
+PASS Prestige clears run fields and skill timers
+PASS Prestige retains lifetime discoveries, learned topics, preferences, cards and decorations
+PASS Fame and credits equal authoritative reviewed rewards
+PASS Next opening cash exactly funds one manual Phuljhari
+PASS Second prestige grants the one-time 100 KK gift
+PASS Durable retained checkpoint
+PASS Returning progress loads from normal save codec
+PASS Rebuild starts with basic art and retains discovery count
+PASS Signature repurchase changes run art without counting a new discovery
+Earned checkpoint: C:\Users\Dev\AppData\Local\Temp\ClassicJourney-e703872369a8445a9970c001d36e84fb
+Assets/Resources/GameContent.asset SHA256=2584351048AA601B3F82CCA720A5F4365D47EFAD843004169958B8879A41E7B9
+Assets/Resources/RedesignContentManifest.json SHA256=5BB5D7C6AF1CFC5D7F587EEDDABA7EE4C3759412AA63B75D612B4849E9DE9C5A
+No development grants, direct cash changes, ownership seeds, or real player files. Simulated time is not human-play balance evidence.

@@ -1,8 +1,8 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /user/{uid} {
-      function signedIn() { return request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider == 'google.com'; }
+    match /{saveCollection}/{uid} {
+      function signedIn() { return saveCollection in ['user', 'redesignUser'] && request.auth != null && request.auth.uid == uid && request.auth.token.firebase.sign_in_provider == 'google.com'; }
       function validSave(s) { return s is map && s.keys().hasAll(['schema','json','checksum']) && s.keys().hasOnly(['schema','json','checksum']) && s.schema == 1 && s.json is string && s.json.size() > 0 && s.json.size() <= 750000 && s.checksum is string && s.checksum.matches('^[A-F0-9]{64}$'); }
       function valid(d) {
         return d.keys().hasAll(['profile','save','revision','generation','owner','handoff','commitId','createdAt','updatedAt','heartbeatAt'])

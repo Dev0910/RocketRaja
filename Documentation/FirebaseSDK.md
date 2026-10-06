@@ -25,7 +25,7 @@ The project already includes `Assets/google-services.json`; do not replace it wi
 
 ## Dependency manager
 
-External Dependency Manager **1.2.189** is shared with AdMob as an embedded UPM package at `Packages/com.google.external-dependency-manager`. Firebase unitypackages also bundle a copy under `Assets/ExternalDependencyManager`; exclude that copy on future imports to avoid duplicate editor assemblies. Redundant initial imports were moved to `Temp/FirebaseImportBackup*` outside the asset database.
+External Dependency Manager **1.2.189** remains an embedded UPM package at `Packages/com.google.external-dependency-manager`. AdMob/UMP were removed for the ad-free redesign on 1 October 2026; the shared resolver remains required by Firebase and Google identity dependencies. Firebase unitypackages also bundle a copy under `Assets/ExternalDependencyManager`; exclude that copy on future imports to avoid duplicate editor assemblies. Redundant initial imports were moved to `Temp/FirebaseImportBackup*` outside the asset database.
 
 After removing a duplicate installation, refresh the asset database and force a recursive reimport of `Packages/com.google.external-dependency-manager`. Unity can otherwise retain stale GUID-to-path mappings to the removed DLLs, causing AdMob's editor scripts to report CS0246 for `GooglePlayServices` even though the shared resolver DLL exists and is enabled.
 
@@ -45,3 +45,5 @@ The console configuration download did not complete in the automation browser, s
 ## Android repository paths containing spaces (Gradle)
 
 EDM4U generates a `file:///` repository URL containing the Unity project path. Gradle 9 rejects the unescaped space in `Incremental game`. The settings template encodes spaces as `%20`, and `Assets/Editor/FirebaseRepositoryUriFix.cs` reapplies this correction to generated Gradle settings before building if dependency resolution has regenerated the template. Keep this callback while using the current resolver version.
+
+On 2 October, forced regeneration of the generated Maven repository also encountered Windows mapped-file write errors while importing/patching POM metadata. The [recovery record](Implementation/DeviceGame/ResolverRecovery.md) preserves the failed build, isolated diagnosis and source-hash checks. Existing generated POM repair used the resolver's own patch method after releasing cached handles; SDK source files and Firebase configuration were preserved. The native playtest builder resolves before scene serialization and validates all generated packaging/artifacts before requiring a zero-error build report. This does not establish that the upstream force-regeneration race is permanently fixed.

@@ -1,0 +1,41 @@
+{
+    "phase": "before-force-stop",
+    "result": "PASS",
+    "failure": "",
+    "unity": "6000.4.9f1",
+    "model": "Xiaomi POCO X2",
+    "processor": "ARM64 FP ASIMD AES",
+    "graphics": "Adreno (TM) 618",
+    "operatingSystem": "Android OS 11 / API-30 (RKQ1.200826.002/V12.5.7.0.RGHINXM)",
+    "contentHash": "C0904702675993BCF0B3F647A8A1DC71E6A4FBFA5A455B97EFE58F43EFEFA5F7",
+    "checks": [
+        "Diagnostic profile starts without damaged or incompatible input",
+        "Manual first purchase roundtrips through Android file I/O and JsonUtility",
+        "Full catalogue purchase reaches all 1000 authored IDs on IL2CPP",
+        "Full catalogue state validates on ARM64",
+        "Full collection fits the gameplay cloud payload limit",
+        "Full collection survives real Android atomic replacement",
+        "Repeated isolated reset/draw cycles preserve their source snapshot",
+        "First prestige delivers exactly one Fame and three free credits",
+        "Secure live random source produces a valid free draw on IL2CPP",
+        "Reopened draw replays persisted card and dismisses without spending again",
+        "Offline cap settlement persists on Android",
+        "Repeated offline settlement cannot deliver again",
+        "Synthetic authoritative component activates schema 3 through Android codec",
+        "Pending currency operation is durable before forced process termination"
+    ],
+    "measurements": [
+        "BuyAll_quote_1000: count=10; mean_ms=5.2991",
+        "NormalIncome_cached: count=2000; mean_ms=0.0226",
+        "State_validation_1000: count=20; mean_ms=0.7296",
+        "full_run_save_utf8_bytes=24541",
+        "Json_encode_1000: count=20; mean_ms=0.6031",
+        "Json_decode_1000: count=20; mean_ms=1.6961",
+        "Atomic_save_1000: count=5; mean_ms=15.8761",
+        "Prestige_three_draws_rebuild: count=20; mean_ms=7.4629",
+        "managed_retained_byte_delta_after_GC=0"
+    ],
+    "development": true,
+    "pointerBytes": 8,
+    "systemMemoryMiB": 5568
+}

@@ -1,0 +1,28 @@
+PASS Fresh Classic manual purchase is persisted
+PASS Classic autosave persists passive earnings
+PASS Real atomic-replace failure rejects a Classic command
+PASS Save recovery rolls back command and blocks gameplay
+PASS Retry while storage is locked stays blocked
+PASS Storage retry preserves the saved UI hierarchy
+PASS ENOSPC injection reaches Classic storage recovery without changing progress
+PASS Storage retry commits the retained state before reopening Classic
+PASS Classic resumes after a ten-hour simulated absence
+PASS Eight-hour cap and receipt are durable before showing the return dialog
+PASS Duplicate resume and backward clock cannot replay the displayed receipt
+PASS Continue acknowledges offline credit without charging or replaying it
+PASS Earned free draw persists debit and reward before reveal
+PASS Reload restores the exact pending reveal without another charge or grant
+PASS Continue dismisses the stored reveal without rewards
+PASS Acknowledged reveal stays dismissed after another reload
+PASS Future save reaches blocked Classic recovery, never a fresh game
+PASS Future-version retry preserves main and backup bytes
+PASS Compatible file restored externally retries the same selected profile
+PASS Classic backup recovery durably fences further card draws
+PASS Recovered backup cannot spend rolled-back credits or reroll cards
+PASS Talent explains why backup recovery has paused drawing
+PASS Classic recovery preserves damaged source bytes
+PASS Orphan first write stays in visible recovery with no fresh replacement
+PASS Restoring committed files enables normal retry after an interrupted first write
+PASS No runtime errors during Classic durability acceptance
+Disposable Editor profile: C:\Users\Dev\AppData\Local\Temp\ClassicRecovery-baba9186fd4541e2959727c173f1a36b
+Low storage is an ENOSPC injection; no physical device disk was filled. No player files or live Firebase used.
