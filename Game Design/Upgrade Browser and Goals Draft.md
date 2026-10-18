@@ -1,4 +1,6 @@
-# Rocket Raja: upgrade browser and next-goal design
+# Rocket Raja: historical upgrade browser and next-goal proposal
+
+**Superseded by the accepted Classic implementation — 7 October 2026.** See [Current Implementation Design](Current%20Implementation%20Design.md). Current behavior: next ten price-sorted upgrades plus a paged full catalogue; search/category/view controls only; immediate global Buy All; no product/skill selector, named-upgrade details or pin/goal-selection flow. The detailed filtered-review and pinned-goal proposal below is retained as history, not required work.
 
 Version 0.1, 1 October 2026. Planning only; no Unity implementation.
 

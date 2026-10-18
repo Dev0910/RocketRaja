@@ -1,0 +1,5570 @@
+[
+  {
+    "screen": "Home",
+    "w": 360,
+    "h": 540,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 101.28125,
+          "bottom": 141.9375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 177.203125,
+          "bottom": 141.9375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 253.125,
+          "bottom": 141.9375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 329.046875,
+          "bottom": 141.9375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 101.28125,
+          "bottom": 188.984375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 177.203125,
+          "bottom": 188.984375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 253.125,
+          "bottom": 188.984375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 329.046875,
+          "bottom": 188.984375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 205.203125,
+          "width": 360,
+          "height": 64.796875,
+          "top": 205.203125,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        }
+      },
+      {
+        "id": "Home-Navigate-Products-0",
+        "text": "NEXT DISPLAY\nPhuljhari · discover your next signature",
+        "r": {
+          "x": 9,
+          "y": 274,
+          "width": 342,
+          "height": 48,
+          "top": 274,
+          "right": 351,
+          "bottom": 322,
+          "left": 9
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-0-1",
+        "text": "Festival Rush\nREADY",
+        "r": {
+          "x": 9,
+          "y": 401,
+          "width": 111.328125,
+          "height": 73.59375,
+          "top": 401,
+          "right": 120.328125,
+          "bottom": 474.59375,
+          "left": 9
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-1-2",
+        "text": "Helping Hands\nREADY",
+        "r": {
+          "x": 124.328125,
+          "y": 401,
+          "width": 111.328125,
+          "height": 73.59375,
+          "top": 401,
+          "right": 235.65625,
+          "bottom": 474.59375,
+          "left": 124.328125
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-2-3",
+        "text": "Bulk Order\nREADY",
+        "r": {
+          "x": 239.65625,
+          "y": 401,
+          "width": 111.34375,
+          "height": 73.59375,
+          "top": 401,
+          "right": 351,
+          "bottom": 474.59375,
+          "left": 239.65625
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 89.75,
+          "bottom": 537,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 177.5,
+          "bottom": 537,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 265.25,
+          "bottom": 537,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 353,
+          "bottom": 537,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "NEXT DISPLAY",
+        "size": "8px"
+      },
+      {
+        "text": "AUTOMATIC SALES",
+        "size": "8px"
+      },
+      {
+        "text": "/ SECOND",
+        "size": "8px"
+      },
+      {
+        "text": "Normal sales",
+        "size": "9px"
+      },
+      {
+        "text": "PER TAP",
+        "size": "8px"
+      },
+      {
+        "text": "Counter taps",
+        "size": "9px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Player",
+    "w": 360,
+    "h": 540,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 101.28125,
+          "bottom": 141.9375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 177.203125,
+          "bottom": 141.9375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 253.125,
+          "bottom": 141.9375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 329.046875,
+          "bottom": 141.9375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 101.28125,
+          "bottom": 188.984375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 177.203125,
+          "bottom": 188.984375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 253.125,
+          "bottom": 188.984375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 329.046875,
+          "bottom": 188.984375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 205.203125,
+          "width": 360,
+          "height": 64.796875,
+          "top": 205.203125,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Player",
+        "text": "",
+        "r": {
+          "x": 304,
+          "y": 273,
+          "width": 48,
+          "height": 48,
+          "top": 273,
+          "right": 352,
+          "bottom": 321,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-Navigate-Statistics-0",
+        "text": "Stats",
+        "r": {
+          "x": 10,
+          "y": 330,
+          "width": 48,
+          "height": 49,
+          "top": 330,
+          "right": 58,
+          "bottom": 379,
+          "left": 10
+        }
+      },
+      {
+        "id": "Player-Navigate-Skills-1",
+        "text": "Skills",
+        "r": {
+          "x": 65,
+          "y": 330,
+          "width": 48,
+          "height": 49,
+          "top": 330,
+          "right": 113,
+          "bottom": 379,
+          "left": 65
+        }
+      },
+      {
+        "id": "Player-Quantity-tap-cycle-2",
+        "text": "Buy Max",
+        "r": {
+          "x": 255,
+          "y": 330.5,
+          "width": 95,
+          "height": 48,
+          "top": 330.5,
+          "right": 350,
+          "bottom": 378.5,
+          "left": 255
+        }
+      },
+      {
+        "id": "Player-Navigate-TapTraining-3",
+        "text": "₹1.16M\nTrain tapping",
+        "r": {
+          "x": 243,
+          "y": 393,
+          "width": 98,
+          "height": 48,
+          "top": 393,
+          "right": 341,
+          "bottom": 441,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-Navigate-Prestige-4",
+        "text": "View prestige",
+        "r": {
+          "x": 243,
+          "y": 462,
+          "width": 98,
+          "height": 48,
+          "top": 462,
+          "right": 341,
+          "bottom": 510,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyAllUpgrades--5",
+        "text": "Buy all Upgrades",
+        "r": {
+          "x": 10,
+          "y": 566,
+          "width": 340,
+          "height": 48,
+          "top": 566,
+          "right": 350,
+          "bottom": 614,
+          "left": 10
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ANA-01-6",
+        "text": "₹28.67\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 633.5,
+          "width": 98,
+          "height": 48,
+          "top": 633.5,
+          "right": 341,
+          "bottom": 681.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-001-7",
+        "text": "₹41.1\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 715.5,
+          "width": 98,
+          "height": 48,
+          "top": 715.5,
+          "right": 341,
+          "bottom": 763.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-GP-01-8",
+        "text": "₹58.92\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 797.5,
+          "width": 98,
+          "height": 48,
+          "top": 797.5,
+          "right": 341,
+          "bottom": 845.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-PHU-01-9",
+        "text": "₹84.48\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 879.5,
+          "width": 98,
+          "height": 48,
+          "top": 879.5,
+          "right": 341,
+          "bottom": 927.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-CHA-01-10",
+        "text": "₹173.74\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 961.5,
+          "width": 98,
+          "height": 48,
+          "top": 961.5,
+          "right": 341,
+          "bottom": 1009.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ROC-01-11",
+        "text": "₹249.18\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1043.5,
+          "width": 98,
+          "height": 48,
+          "top": 1043.5,
+          "right": 341,
+          "bottom": 1091.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-002-12",
+        "text": "₹357.43\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1125.5,
+          "width": 98,
+          "height": 48,
+          "top": 1125.5,
+          "right": 341,
+          "bottom": 1173.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-UC-01-13",
+        "text": "₹512.75\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1207.5,
+          "width": 98,
+          "height": 48,
+          "top": 1207.5,
+          "right": 341,
+          "bottom": 1255.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-ANA-01-14",
+        "text": "₹735.63\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1289.5,
+          "width": 98,
+          "height": 48,
+          "top": 1289.5,
+          "right": 341,
+          "bottom": 1337.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-SMC-01-15",
+        "text": "₹1.51K\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1371.5,
+          "width": 98,
+          "height": 48,
+          "top": 1371.5,
+          "right": 341,
+          "bottom": 1419.5,
+          "left": 243
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 89.75,
+          "bottom": 537,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 177.5,
+          "bottom": 537,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 265.25,
+          "bottom": 537,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 353,
+          "bottom": 537,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "Level 12",
+        "size": "9px"
+      },
+      {
+        "text": "Train tapping",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Products",
+    "w": 360,
+    "h": 540,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 101.28125,
+          "bottom": 141.9375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 177.203125,
+          "bottom": 141.9375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 253.125,
+          "bottom": 141.9375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 99.890625,
+          "width": 69.96875,
+          "height": 42.046875,
+          "top": 99.890625,
+          "right": 329.046875,
+          "bottom": 141.9375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 101.28125,
+          "bottom": 188.984375,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 177.203125,
+          "bottom": 188.984375,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 253.125,
+          "bottom": 188.984375,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 146.921875,
+          "width": 69.96875,
+          "height": 42.0625,
+          "top": 146.921875,
+          "right": 329.046875,
+          "bottom": 188.984375,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 205.203125,
+          "width": 360,
+          "height": 64.796875,
+          "top": 205.203125,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Products",
+        "text": "",
+        "r": {
+          "x": 304,
+          "y": 273,
+          "width": 48,
+          "height": 48,
+          "top": 273,
+          "right": 352,
+          "bottom": 321,
+          "left": 304
+        }
+      },
+      {
+        "id": "Products-Quantity-products-cycle-0",
+        "text": "Buy Max",
+        "r": {
+          "x": 255,
+          "y": 332,
+          "width": 95,
+          "height": 48,
+          "top": 332,
+          "right": 350,
+          "bottom": 380,
+          "left": 255
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-0-1",
+        "text": "Phuljhari\n₹1.22K/s",
+        "r": {
+          "x": 19,
+          "y": 396,
+          "width": 175.875,
+          "height": 62,
+          "top": 396,
+          "right": 194.875,
+          "bottom": 458,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-0-2",
+        "text": "₹1.22M\nUpgrade ×50",
+        "r": {
+          "x": 241,
+          "y": 401.5,
+          "width": 100,
+          "height": 51,
+          "top": 401.5,
+          "right": 341,
+          "bottom": 452.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-1-3",
+        "text": "Anar\n₹459/s",
+        "r": {
+          "x": 19,
+          "y": 483,
+          "width": 175.875,
+          "height": 62,
+          "top": 483,
+          "right": 194.875,
+          "bottom": 545,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-1-4",
+        "text": "₹1.11M\nUpgrade ×33",
+        "r": {
+          "x": 241,
+          "y": 488.5,
+          "width": 100,
+          "height": 51,
+          "top": 488.5,
+          "right": 341,
+          "bottom": 539.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-2-5",
+        "text": "Chakri\n₹1.07K/s",
+        "r": {
+          "x": 19,
+          "y": 570,
+          "width": 175.875,
+          "height": 62,
+          "top": 570,
+          "right": 194.875,
+          "bottom": 632,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-2-6",
+        "text": "₹1.12M\nUpgrade ×17",
+        "r": {
+          "x": 241,
+          "y": 575.5,
+          "width": 100,
+          "height": 51,
+          "top": 575.5,
+          "right": 341,
+          "bottom": 626.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-3-7",
+        "text": "Rockets\n₹637.5/s",
+        "r": {
+          "x": 19,
+          "y": 657,
+          "width": 181.875,
+          "height": 62,
+          "top": 657,
+          "right": 200.875,
+          "bottom": 719,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-3-8",
+        "text": "₹974.13K\nUpgrade ×4",
+        "r": {
+          "x": 241,
+          "y": 662.5,
+          "width": 100,
+          "height": 51,
+          "top": 662.5,
+          "right": 341,
+          "bottom": 713.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-4-9",
+        "text": "Small crackers\n₹996.09/s",
+        "r": {
+          "x": 19,
+          "y": 744,
+          "width": 181.875,
+          "height": 62,
+          "top": 744,
+          "right": 200.875,
+          "bottom": 806,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-4-10",
+        "text": "₹2.03M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 749.5,
+          "width": 100,
+          "height": 51,
+          "top": 749.5,
+          "right": 341,
+          "bottom": 800.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-5-11",
+        "text": "Cracker strings\n₹1.49K/s",
+        "r": {
+          "x": 19,
+          "y": 831,
+          "width": 181.875,
+          "height": 62,
+          "top": 831,
+          "right": 200.875,
+          "bottom": 893,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-5-12",
+        "text": "₹22.67M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 836.5,
+          "width": 100,
+          "height": 51,
+          "top": 836.5,
+          "right": 341,
+          "bottom": 887.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-6-13",
+        "text": "Aerial shots\n₹1.25K/s",
+        "r": {
+          "x": 19,
+          "y": 918,
+          "width": 181.875,
+          "height": 62,
+          "top": 918,
+          "right": 200.875,
+          "bottom": 980,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-6-14",
+        "text": "₹252.99M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 923.5,
+          "width": 100,
+          "height": 51,
+          "top": 923.5,
+          "right": 341,
+          "bottom": 974.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-7-15",
+        "text": "Celebration boxes\n₹3.11K/s",
+        "r": {
+          "x": 19,
+          "y": 1005,
+          "width": 181.875,
+          "height": 62,
+          "top": 1005,
+          "right": 200.875,
+          "bottom": 1067,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-7-16",
+        "text": "₹3.54B\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 1010.5,
+          "width": 100,
+          "height": 51,
+          "top": 1010.5,
+          "right": 341,
+          "bottom": 1061.5,
+          "left": 241
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 89.75,
+          "bottom": 537,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 177.5,
+          "bottom": 537,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 265.25,
+          "bottom": 537,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 479,
+          "width": 82.75,
+          "height": 58,
+          "top": 479,
+          "right": 353,
+          "bottom": 537,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "Upgrade ×50",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×33",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×17",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×4",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Home",
+    "w": 360,
+    "h": 640,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 101.28125,
+          "bottom": 171.578125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 177.203125,
+          "bottom": 171.578125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 253.125,
+          "bottom": 171.578125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 329.046875,
+          "bottom": 171.578125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 101.28125,
+          "bottom": 228.453125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 177.203125,
+          "bottom": 228.453125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 253.125,
+          "bottom": 228.453125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 329.046875,
+          "bottom": 228.453125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 248.0625,
+          "width": 360,
+          "height": 78.328125,
+          "top": 248.0625,
+          "right": 360,
+          "bottom": 326.390625,
+          "left": 0
+        }
+      },
+      {
+        "id": "Home-Navigate-Products-0",
+        "text": "NEXT DISPLAY\nPhuljhari · discover your next signature",
+        "r": {
+          "x": 10,
+          "y": 333.390625,
+          "width": 340,
+          "height": 48,
+          "top": 333.390625,
+          "right": 350,
+          "bottom": 381.390625,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-0-1",
+        "text": "Festival Rush\nREADY",
+        "r": {
+          "x": 10,
+          "y": 495,
+          "width": 110.65625,
+          "height": 74,
+          "top": 495,
+          "right": 120.65625,
+          "bottom": 569,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-1-2",
+        "text": "Helping Hands\nREADY",
+        "r": {
+          "x": 124.65625,
+          "y": 495,
+          "width": 110.671875,
+          "height": 74,
+          "top": 495,
+          "right": 235.328125,
+          "bottom": 569,
+          "left": 124.65625
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-2-3",
+        "text": "Bulk Order\nREADY",
+        "r": {
+          "x": 239.328125,
+          "y": 495,
+          "width": 110.65625,
+          "height": 74,
+          "top": 495,
+          "right": 349.984375,
+          "bottom": 569,
+          "left": 239.328125
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 89.75,
+          "bottom": 637,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 177.5,
+          "bottom": 637,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 265.25,
+          "bottom": 637,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 353,
+          "bottom": 637,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "NEXT DISPLAY",
+        "size": "8px"
+      },
+      {
+        "text": "AUTOMATIC SALES",
+        "size": "8px"
+      },
+      {
+        "text": "/ SECOND",
+        "size": "8px"
+      },
+      {
+        "text": "Normal sales",
+        "size": "9px"
+      },
+      {
+        "text": "PER TAP",
+        "size": "8px"
+      },
+      {
+        "text": "Counter taps",
+        "size": "9px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Player",
+    "w": 360,
+    "h": 640,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 101.28125,
+          "bottom": 171.578125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 177.203125,
+          "bottom": 171.578125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 253.125,
+          "bottom": 171.578125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 329.046875,
+          "bottom": 171.578125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 101.28125,
+          "bottom": 228.453125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 177.203125,
+          "bottom": 228.453125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 253.125,
+          "bottom": 228.453125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 329.046875,
+          "bottom": 228.453125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 248.0625,
+          "width": 360,
+          "height": 78.328125,
+          "top": 248.0625,
+          "right": 360,
+          "bottom": 326.390625,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Player",
+        "text": "",
+        "r": {
+          "x": 304,
+          "y": 329.390625,
+          "width": 48,
+          "height": 48,
+          "top": 329.390625,
+          "right": 352,
+          "bottom": 377.390625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-Navigate-Statistics-0",
+        "text": "Stats",
+        "r": {
+          "x": 10,
+          "y": 386.390625,
+          "width": 48,
+          "height": 49,
+          "top": 386.390625,
+          "right": 58,
+          "bottom": 435.390625,
+          "left": 10
+        }
+      },
+      {
+        "id": "Player-Navigate-Skills-1",
+        "text": "Skills",
+        "r": {
+          "x": 65,
+          "y": 386.390625,
+          "width": 48,
+          "height": 49,
+          "top": 386.390625,
+          "right": 113,
+          "bottom": 435.390625,
+          "left": 65
+        }
+      },
+      {
+        "id": "Player-Quantity-tap-cycle-2",
+        "text": "Buy Max",
+        "r": {
+          "x": 255,
+          "y": 386.890625,
+          "width": 95,
+          "height": 48,
+          "top": 386.890625,
+          "right": 350,
+          "bottom": 434.890625,
+          "left": 255
+        }
+      },
+      {
+        "id": "Player-Navigate-TapTraining-3",
+        "text": "₹1.16M\nTrain tapping",
+        "r": {
+          "x": 243,
+          "y": 449.390625,
+          "width": 98,
+          "height": 48,
+          "top": 449.390625,
+          "right": 341,
+          "bottom": 497.390625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-Navigate-Prestige-4",
+        "text": "View prestige",
+        "r": {
+          "x": 243,
+          "y": 518.390625,
+          "width": 98,
+          "height": 48,
+          "top": 518.390625,
+          "right": 341,
+          "bottom": 566.390625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyAllUpgrades--5",
+        "text": "Buy all Upgrades",
+        "r": {
+          "x": 10,
+          "y": 622.390625,
+          "width": 340,
+          "height": 48,
+          "top": 622.390625,
+          "right": 350,
+          "bottom": 670.390625,
+          "left": 10
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ANA-01-6",
+        "text": "₹28.67\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 689.890625,
+          "width": 98,
+          "height": 48,
+          "top": 689.890625,
+          "right": 341,
+          "bottom": 737.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-001-7",
+        "text": "₹41.1\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 771.890625,
+          "width": 98,
+          "height": 48,
+          "top": 771.890625,
+          "right": 341,
+          "bottom": 819.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-GP-01-8",
+        "text": "₹58.92\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 853.890625,
+          "width": 98,
+          "height": 48,
+          "top": 853.890625,
+          "right": 341,
+          "bottom": 901.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-PHU-01-9",
+        "text": "₹84.48\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 935.890625,
+          "width": 98,
+          "height": 48,
+          "top": 935.890625,
+          "right": 341,
+          "bottom": 983.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-CHA-01-10",
+        "text": "₹173.74\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1017.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1017.890625,
+          "right": 341,
+          "bottom": 1065.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ROC-01-11",
+        "text": "₹249.18\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1099.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1099.890625,
+          "right": 341,
+          "bottom": 1147.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-002-12",
+        "text": "₹357.43\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1181.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1181.890625,
+          "right": 341,
+          "bottom": 1229.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-UC-01-13",
+        "text": "₹512.75\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1263.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1263.890625,
+          "right": 341,
+          "bottom": 1311.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-ANA-01-14",
+        "text": "₹735.63\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1345.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1345.890625,
+          "right": 341,
+          "bottom": 1393.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-SMC-01-15",
+        "text": "₹1.51K\nBuy upgrade",
+        "r": {
+          "x": 243,
+          "y": 1427.890625,
+          "width": 98,
+          "height": 48,
+          "top": 1427.890625,
+          "right": 341,
+          "bottom": 1475.890625,
+          "left": 243
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 89.75,
+          "bottom": 637,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 177.5,
+          "bottom": 637,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 265.25,
+          "bottom": 637,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 353,
+          "bottom": 637,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "Level 12",
+        "size": "9px"
+      },
+      {
+        "text": "Train tapping",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Products",
+    "w": 360,
+    "h": 640,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8,
+          "y": 9,
+          "width": 48,
+          "height": 48,
+          "top": 9,
+          "right": 56,
+          "bottom": 57,
+          "left": 8
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 31.3125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 101.28125,
+          "bottom": 171.578125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 107.234375,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 177.203125,
+          "bottom": 171.578125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 183.15625,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 253.125,
+          "bottom": 171.578125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 259.078125,
+          "y": 120.75,
+          "width": 69.96875,
+          "height": 50.828125,
+          "top": 120.75,
+          "right": 329.046875,
+          "bottom": 171.578125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 31.3125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 101.28125,
+          "bottom": 228.453125,
+          "left": 31.3125
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 107.234375,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 177.203125,
+          "bottom": 228.453125,
+          "left": 107.234375
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 183.15625,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 253.125,
+          "bottom": 228.453125,
+          "left": 183.15625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 259.078125,
+          "y": 177.609375,
+          "width": 69.96875,
+          "height": 50.84375,
+          "top": 177.609375,
+          "right": 329.046875,
+          "bottom": 228.453125,
+          "left": 259.078125
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 248.0625,
+          "width": 360,
+          "height": 78.328125,
+          "top": 248.0625,
+          "right": 360,
+          "bottom": 326.390625,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Products",
+        "text": "",
+        "r": {
+          "x": 304,
+          "y": 329.390625,
+          "width": 48,
+          "height": 48,
+          "top": 329.390625,
+          "right": 352,
+          "bottom": 377.390625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Products-Quantity-products-cycle-0",
+        "text": "Buy Max",
+        "r": {
+          "x": 255,
+          "y": 388.390625,
+          "width": 95,
+          "height": 48,
+          "top": 388.390625,
+          "right": 350,
+          "bottom": 436.390625,
+          "left": 255
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-0-1",
+        "text": "Phuljhari\n₹1.22K/s",
+        "r": {
+          "x": 19,
+          "y": 452.390625,
+          "width": 175.875,
+          "height": 62,
+          "top": 452.390625,
+          "right": 194.875,
+          "bottom": 514.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-0-2",
+        "text": "₹1.22M\nUpgrade ×50",
+        "r": {
+          "x": 241,
+          "y": 457.890625,
+          "width": 100,
+          "height": 51,
+          "top": 457.890625,
+          "right": 341,
+          "bottom": 508.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-1-3",
+        "text": "Anar\n₹459/s",
+        "r": {
+          "x": 19,
+          "y": 539.390625,
+          "width": 175.875,
+          "height": 62,
+          "top": 539.390625,
+          "right": 194.875,
+          "bottom": 601.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-1-4",
+        "text": "₹1.11M\nUpgrade ×33",
+        "r": {
+          "x": 241,
+          "y": 544.890625,
+          "width": 100,
+          "height": 51,
+          "top": 544.890625,
+          "right": 341,
+          "bottom": 595.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-2-5",
+        "text": "Chakri\n₹1.07K/s",
+        "r": {
+          "x": 19,
+          "y": 626.390625,
+          "width": 175.875,
+          "height": 62,
+          "top": 626.390625,
+          "right": 194.875,
+          "bottom": 688.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-2-6",
+        "text": "₹1.12M\nUpgrade ×17",
+        "r": {
+          "x": 241,
+          "y": 631.890625,
+          "width": 100,
+          "height": 51,
+          "top": 631.890625,
+          "right": 341,
+          "bottom": 682.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-3-7",
+        "text": "Rockets\n₹637.5/s",
+        "r": {
+          "x": 19,
+          "y": 713.390625,
+          "width": 181.875,
+          "height": 62,
+          "top": 713.390625,
+          "right": 200.875,
+          "bottom": 775.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-3-8",
+        "text": "₹974.13K\nUpgrade ×4",
+        "r": {
+          "x": 241,
+          "y": 718.890625,
+          "width": 100,
+          "height": 51,
+          "top": 718.890625,
+          "right": 341,
+          "bottom": 769.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-4-9",
+        "text": "Small crackers\n₹996.09/s",
+        "r": {
+          "x": 19,
+          "y": 800.390625,
+          "width": 181.875,
+          "height": 62,
+          "top": 800.390625,
+          "right": 200.875,
+          "bottom": 862.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-4-10",
+        "text": "₹2.03M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 805.890625,
+          "width": 100,
+          "height": 51,
+          "top": 805.890625,
+          "right": 341,
+          "bottom": 856.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-5-11",
+        "text": "Cracker strings\n₹1.49K/s",
+        "r": {
+          "x": 19,
+          "y": 887.390625,
+          "width": 181.875,
+          "height": 62,
+          "top": 887.390625,
+          "right": 200.875,
+          "bottom": 949.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-5-12",
+        "text": "₹22.67M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 892.890625,
+          "width": 100,
+          "height": 51,
+          "top": 892.890625,
+          "right": 341,
+          "bottom": 943.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-6-13",
+        "text": "Aerial shots\n₹1.25K/s",
+        "r": {
+          "x": 19,
+          "y": 974.390625,
+          "width": 181.875,
+          "height": 62,
+          "top": 974.390625,
+          "right": 200.875,
+          "bottom": 1036.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-6-14",
+        "text": "₹252.99M\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 979.890625,
+          "width": 100,
+          "height": 51,
+          "top": 979.890625,
+          "right": 341,
+          "bottom": 1030.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-7-15",
+        "text": "Celebration boxes\n₹3.11K/s",
+        "r": {
+          "x": 19,
+          "y": 1061.390625,
+          "width": 181.875,
+          "height": 62,
+          "top": 1061.390625,
+          "right": 200.875,
+          "bottom": 1123.390625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-7-16",
+        "text": "₹3.54B\nUpgrade ×1",
+        "r": {
+          "x": 241,
+          "y": 1066.890625,
+          "width": 100,
+          "height": 51,
+          "top": 1066.890625,
+          "right": 341,
+          "bottom": 1117.890625,
+          "left": 241
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 89.75,
+          "bottom": 637,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 94.75,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 177.5,
+          "bottom": 637,
+          "left": 94.75
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 182.5,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 265.25,
+          "bottom": 637,
+          "left": 182.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 270.25,
+          "y": 579,
+          "width": 82.75,
+          "height": 58,
+          "top": 579,
+          "right": 353,
+          "bottom": 637,
+          "left": 270.25
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8px"
+      },
+      {
+        "text": "Anar",
+        "size": "8px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8px"
+      },
+      {
+        "text": "Upgrade ×50",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×33",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×17",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×4",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Home",
+    "w": 390,
+    "h": 844,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8.65625,
+          "y": 9.75,
+          "width": 52,
+          "height": 52,
+          "top": 9.75,
+          "right": 60.65625,
+          "bottom": 61.75,
+          "left": 8.65625
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 33.921875,
+          "y": 159.25,
+          "width": 75.796875,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 109.71875,
+          "bottom": 226.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 116.15625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 191.96875,
+          "bottom": 226.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 198.40625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 274.21875,
+          "bottom": 226.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 280.65625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 356.46875,
+          "bottom": 226.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 33.921875,
+          "y": 234.234375,
+          "width": 75.796875,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 109.71875,
+          "bottom": 301.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 116.15625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 191.96875,
+          "bottom": 301.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 198.40625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 274.21875,
+          "bottom": 301.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 280.65625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 356.46875,
+          "bottom": 301.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 327.140625,
+          "width": 390,
+          "height": 103.296875,
+          "top": 327.140625,
+          "right": 390,
+          "bottom": 430.4375,
+          "left": 0
+        }
+      },
+      {
+        "id": "Home-Navigate-Products-0",
+        "text": "NEXT DISPLAY\nPhuljhari · discover your next signature",
+        "r": {
+          "x": 10,
+          "y": 437.4375,
+          "width": 370,
+          "height": 48,
+          "top": 437.4375,
+          "right": 380,
+          "bottom": 485.4375,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-0-1",
+        "text": "Festival Rush\nREADY",
+        "r": {
+          "x": 10,
+          "y": 693.671875,
+          "width": 120.65625,
+          "height": 74,
+          "top": 693.671875,
+          "right": 130.65625,
+          "bottom": 767.671875,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-1-2",
+        "text": "Helping Hands\nREADY",
+        "r": {
+          "x": 134.65625,
+          "y": 693.671875,
+          "width": 120.671875,
+          "height": 74,
+          "top": 693.671875,
+          "right": 255.328125,
+          "bottom": 767.671875,
+          "left": 134.65625
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-2-3",
+        "text": "Bulk Order\nREADY",
+        "r": {
+          "x": 259.328125,
+          "y": 693.671875,
+          "width": 120.65625,
+          "height": 74,
+          "top": 693.671875,
+          "right": 379.984375,
+          "bottom": 767.671875,
+          "left": 259.328125
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 97.25,
+          "bottom": 841,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 102.25,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 192.5,
+          "bottom": 841,
+          "left": 102.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 197.5,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 287.75,
+          "bottom": 841,
+          "left": 197.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 292.75,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 383,
+          "bottom": 841,
+          "left": 292.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Anar",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8.66667px"
+      },
+      {
+        "text": "NEXT DISPLAY",
+        "size": "8px"
+      },
+      {
+        "text": "AUTOMATIC SALES",
+        "size": "8px"
+      },
+      {
+        "text": "/ SECOND",
+        "size": "8px"
+      },
+      {
+        "text": "Normal sales",
+        "size": "9px"
+      },
+      {
+        "text": "PER TAP",
+        "size": "8px"
+      },
+      {
+        "text": "Counter taps",
+        "size": "9px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Player",
+    "w": 390,
+    "h": 844,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8.65625,
+          "y": 9.75,
+          "width": 52,
+          "height": 52,
+          "top": 9.75,
+          "right": 60.65625,
+          "bottom": 61.75,
+          "left": 8.65625
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 33.921875,
+          "y": 159.25,
+          "width": 75.796875,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 109.71875,
+          "bottom": 226.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 116.15625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 191.96875,
+          "bottom": 226.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 198.40625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 274.21875,
+          "bottom": 226.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 280.65625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 356.46875,
+          "bottom": 226.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 33.921875,
+          "y": 234.234375,
+          "width": 75.796875,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 109.71875,
+          "bottom": 301.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 116.15625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 191.96875,
+          "bottom": 301.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 198.40625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 274.21875,
+          "bottom": 301.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 280.65625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 356.46875,
+          "bottom": 301.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 327.140625,
+          "width": 390,
+          "height": 103.296875,
+          "top": 327.140625,
+          "right": 390,
+          "bottom": 430.4375,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Player",
+        "text": "",
+        "r": {
+          "x": 333.34375,
+          "y": 433.4375,
+          "width": 48,
+          "height": 48,
+          "top": 433.4375,
+          "right": 381.34375,
+          "bottom": 481.4375,
+          "left": 333.34375
+        }
+      },
+      {
+        "id": "Player-Navigate-Statistics-0",
+        "text": "Stats",
+        "r": {
+          "x": 10.828125,
+          "y": 490.84375,
+          "width": 48,
+          "height": 51.40625,
+          "top": 490.84375,
+          "right": 58.828125,
+          "bottom": 542.25,
+          "left": 10.828125
+        }
+      },
+      {
+        "id": "Player-Navigate-Skills-1",
+        "text": "Skills",
+        "r": {
+          "x": 65.828125,
+          "y": 490.84375,
+          "width": 48,
+          "height": 51.40625,
+          "top": 490.84375,
+          "right": 113.828125,
+          "bottom": 542.25,
+          "left": 65.828125
+        }
+      },
+      {
+        "id": "Player-Quantity-tap-cycle-2",
+        "text": "Buy Max",
+        "r": {
+          "x": 284.171875,
+          "y": 492.546875,
+          "width": 95,
+          "height": 48,
+          "top": 492.546875,
+          "right": 379.171875,
+          "bottom": 540.546875,
+          "left": 284.171875
+        }
+      },
+      {
+        "id": "Player-Navigate-TapTraining-3",
+        "text": "₹1.16M\nTrain tapping",
+        "r": {
+          "x": 263.359375,
+          "y": 557.203125,
+          "width": 106.15625,
+          "height": 48,
+          "top": 557.203125,
+          "right": 369.515625,
+          "bottom": 605.203125,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-Navigate-Prestige-4",
+        "text": "View prestige",
+        "r": {
+          "x": 263.359375,
+          "y": 628.6875,
+          "width": 106.15625,
+          "height": 48,
+          "top": 628.6875,
+          "right": 369.515625,
+          "bottom": 676.6875,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyAllUpgrades--5",
+        "text": "Buy all Upgrades",
+        "r": {
+          "x": 10.828125,
+          "y": 738.453125,
+          "width": 368.34375,
+          "height": 48,
+          "top": 738.453125,
+          "right": 379.171875,
+          "bottom": 786.453125,
+          "left": 10.828125
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ANA-01-6",
+        "text": "₹28.67\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 806.953125,
+          "width": 106.15625,
+          "height": 48,
+          "top": 806.953125,
+          "right": 369.515625,
+          "bottom": 854.953125,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-001-7",
+        "text": "₹41.1\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 890.53125,
+          "width": 106.15625,
+          "height": 48,
+          "top": 890.53125,
+          "right": 369.515625,
+          "bottom": 938.53125,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-GP-01-8",
+        "text": "₹58.92\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 974.109375,
+          "width": 106.15625,
+          "height": 48,
+          "top": 974.109375,
+          "right": 369.515625,
+          "bottom": 1022.109375,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-PHU-01-9",
+        "text": "₹84.48\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1057.6875,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1057.6875,
+          "right": 369.515625,
+          "bottom": 1105.6875,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-CHA-01-10",
+        "text": "₹173.74\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1141.265625,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1141.265625,
+          "right": 369.515625,
+          "bottom": 1189.265625,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ROC-01-11",
+        "text": "₹249.18\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1224.84375,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1224.84375,
+          "right": 369.515625,
+          "bottom": 1272.84375,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-002-12",
+        "text": "₹357.43\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1308.421875,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1308.421875,
+          "right": 369.515625,
+          "bottom": 1356.421875,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-UC-01-13",
+        "text": "₹512.75\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1392,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1392,
+          "right": 369.515625,
+          "bottom": 1440,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-ANA-01-14",
+        "text": "₹735.63\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1475.578125,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1475.578125,
+          "right": 369.515625,
+          "bottom": 1523.578125,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-SMC-01-15",
+        "text": "₹1.51K\nBuy upgrade",
+        "r": {
+          "x": 263.359375,
+          "y": 1559.15625,
+          "width": 106.15625,
+          "height": 48,
+          "top": 1559.15625,
+          "right": 369.515625,
+          "bottom": 1607.15625,
+          "left": 263.359375
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 97.25,
+          "bottom": 841,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 102.25,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 192.5,
+          "bottom": 841,
+          "left": 102.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 197.5,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 287.75,
+          "bottom": 841,
+          "left": 197.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 292.75,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 383,
+          "bottom": 841,
+          "left": 292.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Anar",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Level 12",
+        "size": "9.75px"
+      },
+      {
+        "text": "Train tapping",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "Buy upgrade",
+        "size": "9.75px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Products",
+    "w": 390,
+    "h": 844,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 8.65625,
+          "y": 9.75,
+          "width": 52,
+          "height": 52,
+          "top": 9.75,
+          "right": 60.65625,
+          "bottom": 61.75,
+          "left": 8.65625
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 33.921875,
+          "y": 159.25,
+          "width": 75.796875,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 109.71875,
+          "bottom": 226.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 116.15625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 191.96875,
+          "bottom": 226.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 198.40625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 274.21875,
+          "bottom": 226.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 280.65625,
+          "y": 159.25,
+          "width": 75.8125,
+          "height": 67.03125,
+          "top": 159.25,
+          "right": 356.46875,
+          "bottom": 226.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 33.921875,
+          "y": 234.234375,
+          "width": 75.796875,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 109.71875,
+          "bottom": 301.28125,
+          "left": 33.921875
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 116.15625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 191.96875,
+          "bottom": 301.28125,
+          "left": 116.15625
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 198.40625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 274.21875,
+          "bottom": 301.28125,
+          "left": 198.40625
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 280.65625,
+          "y": 234.234375,
+          "width": 75.8125,
+          "height": 67.046875,
+          "top": 234.234375,
+          "right": 356.46875,
+          "bottom": 301.28125,
+          "left": 280.65625
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 327.140625,
+          "width": 390,
+          "height": 103.296875,
+          "top": 327.140625,
+          "right": 390,
+          "bottom": 430.4375,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Products",
+        "text": "",
+        "r": {
+          "x": 333.34375,
+          "y": 433.4375,
+          "width": 48,
+          "height": 48,
+          "top": 433.4375,
+          "right": 381.34375,
+          "bottom": 481.4375,
+          "left": 333.34375
+        }
+      },
+      {
+        "id": "Products-Quantity-products-cycle-0",
+        "text": "Buy Max",
+        "r": {
+          "x": 285,
+          "y": 492.4375,
+          "width": 95,
+          "height": 48,
+          "top": 492.4375,
+          "right": 380,
+          "bottom": 540.4375,
+          "left": 285
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-0-1",
+        "text": "Phuljhari\n₹1.22K/s",
+        "r": {
+          "x": 19,
+          "y": 557.0625,
+          "width": 205.875,
+          "height": 62,
+          "top": 557.0625,
+          "right": 224.875,
+          "bottom": 619.0625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-0-2",
+        "text": "₹1.22M\nUpgrade ×50",
+        "r": {
+          "x": 271,
+          "y": 560.4375,
+          "width": 100,
+          "height": 55.25,
+          "top": 560.4375,
+          "right": 371,
+          "bottom": 615.6875,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-1-3",
+        "text": "Anar\n₹459/s",
+        "r": {
+          "x": 19,
+          "y": 645.890625,
+          "width": 205.875,
+          "height": 62,
+          "top": 645.890625,
+          "right": 224.875,
+          "bottom": 707.890625,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-1-4",
+        "text": "₹1.11M\nUpgrade ×33",
+        "r": {
+          "x": 271,
+          "y": 649.265625,
+          "width": 100,
+          "height": 55.25,
+          "top": 649.265625,
+          "right": 371,
+          "bottom": 704.515625,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-2-5",
+        "text": "Chakri\n₹1.07K/s",
+        "r": {
+          "x": 19,
+          "y": 734.71875,
+          "width": 205.875,
+          "height": 62,
+          "top": 734.71875,
+          "right": 224.875,
+          "bottom": 796.71875,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-2-6",
+        "text": "₹1.12M\nUpgrade ×17",
+        "r": {
+          "x": 271,
+          "y": 738.09375,
+          "width": 100,
+          "height": 55.25,
+          "top": 738.09375,
+          "right": 371,
+          "bottom": 793.34375,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-3-7",
+        "text": "Rockets\n₹637.5/s",
+        "r": {
+          "x": 19,
+          "y": 823.546875,
+          "width": 211.875,
+          "height": 62,
+          "top": 823.546875,
+          "right": 230.875,
+          "bottom": 885.546875,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-3-8",
+        "text": "₹974.13K\nUpgrade ×4",
+        "r": {
+          "x": 271,
+          "y": 826.921875,
+          "width": 100,
+          "height": 55.25,
+          "top": 826.921875,
+          "right": 371,
+          "bottom": 882.171875,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-4-9",
+        "text": "Small crackers\n₹996.09/s",
+        "r": {
+          "x": 19,
+          "y": 912.375,
+          "width": 211.875,
+          "height": 62,
+          "top": 912.375,
+          "right": 230.875,
+          "bottom": 974.375,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-4-10",
+        "text": "₹2.03M\nUpgrade ×1",
+        "r": {
+          "x": 271,
+          "y": 915.75,
+          "width": 100,
+          "height": 55.25,
+          "top": 915.75,
+          "right": 371,
+          "bottom": 971,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-5-11",
+        "text": "Cracker strings\n₹1.49K/s",
+        "r": {
+          "x": 19,
+          "y": 1001.203125,
+          "width": 211.875,
+          "height": 62,
+          "top": 1001.203125,
+          "right": 230.875,
+          "bottom": 1063.203125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-5-12",
+        "text": "₹22.67M\nUpgrade ×1",
+        "r": {
+          "x": 271,
+          "y": 1004.578125,
+          "width": 100,
+          "height": 55.25,
+          "top": 1004.578125,
+          "right": 371,
+          "bottom": 1059.828125,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-6-13",
+        "text": "Aerial shots\n₹1.25K/s",
+        "r": {
+          "x": 19,
+          "y": 1090.03125,
+          "width": 211.875,
+          "height": 62,
+          "top": 1090.03125,
+          "right": 230.875,
+          "bottom": 1152.03125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-6-14",
+        "text": "₹252.99M\nUpgrade ×1",
+        "r": {
+          "x": 271,
+          "y": 1093.40625,
+          "width": 100,
+          "height": 55.25,
+          "top": 1093.40625,
+          "right": 371,
+          "bottom": 1148.65625,
+          "left": 271
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-7-15",
+        "text": "Celebration boxes\n₹3.11K/s",
+        "r": {
+          "x": 19,
+          "y": 1178.859375,
+          "width": 211.875,
+          "height": 62,
+          "top": 1178.859375,
+          "right": 230.875,
+          "bottom": 1240.859375,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-7-16",
+        "text": "₹3.54B\nUpgrade ×1",
+        "r": {
+          "x": 271,
+          "y": 1182.234375,
+          "width": 100,
+          "height": 55.25,
+          "top": 1182.234375,
+          "right": 371,
+          "bottom": 1237.484375,
+          "left": 271
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 97.25,
+          "bottom": 841,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 102.25,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 192.5,
+          "bottom": 841,
+          "left": 102.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 197.5,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 287.75,
+          "bottom": 841,
+          "left": 197.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 292.75,
+          "y": 777.671875,
+          "width": 90.25,
+          "height": 63.328125,
+          "top": 777.671875,
+          "right": 383,
+          "bottom": 841,
+          "left": 292.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Phuljhari",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Anar",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Chakri",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Rockets",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Small crackers",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Cracker strings",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Aerial shots",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "PATAAKHEIN, ROSHAN DIL",
+        "size": "8.66667px"
+      },
+      {
+        "text": "Upgrade ×50",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×33",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×17",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×4",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Home",
+    "w": 450,
+    "h": 916,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 10,
+          "y": 11.25,
+          "width": 60,
+          "height": 60,
+          "top": 11.25,
+          "right": 70,
+          "bottom": 71.25,
+          "left": 10
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 39.140625,
+          "y": 172.84375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 126.59375,
+          "bottom": 245.609375,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 134.03125,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 221.5,
+          "bottom": 245.609375,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 228.9375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 316.40625,
+          "bottom": 245.609375,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 323.84375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 411.3125,
+          "bottom": 245.609375,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 39.140625,
+          "y": 254.234375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 126.59375,
+          "bottom": 327,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 134.03125,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 221.5,
+          "bottom": 327,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 228.9375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 316.40625,
+          "bottom": 327,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 323.84375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 411.3125,
+          "bottom": 327,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 355.046875,
+          "width": 450,
+          "height": 112.109375,
+          "top": 355.046875,
+          "right": 450,
+          "bottom": 467.15625,
+          "left": 0
+        }
+      },
+      {
+        "id": "Home-Navigate-Products-0",
+        "text": "NEXT DISPLAY\nPhuljhari · discover your next signature",
+        "r": {
+          "x": 10,
+          "y": 474.15625,
+          "width": 430,
+          "height": 48,
+          "top": 474.15625,
+          "right": 440,
+          "bottom": 522.15625,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-0-1",
+        "text": "Festival Rush\nREADY",
+        "r": {
+          "x": 10,
+          "y": 755,
+          "width": 140.65625,
+          "height": 74,
+          "top": 755,
+          "right": 150.65625,
+          "bottom": 829,
+          "left": 10
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-1-2",
+        "text": "Helping Hands\nREADY",
+        "r": {
+          "x": 154.65625,
+          "y": 755,
+          "width": 140.671875,
+          "height": 74,
+          "top": 755,
+          "right": 295.328125,
+          "bottom": 829,
+          "left": 154.65625
+        }
+      },
+      {
+        "id": "Home-Navigate-SkillDetail-2-3",
+        "text": "Bulk Order\nREADY",
+        "r": {
+          "x": 299.328125,
+          "y": 755,
+          "width": 140.671875,
+          "height": 74,
+          "top": 755,
+          "right": 440,
+          "bottom": 829,
+          "left": 299.328125
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 112.25,
+          "bottom": 913,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 117.25,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 222.5,
+          "bottom": 913,
+          "left": 117.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 227.5,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 332.75,
+          "bottom": 913,
+          "left": 227.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 337.75,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 443,
+          "bottom": 913,
+          "left": 337.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "NEXT DISPLAY",
+        "size": "8px"
+      },
+      {
+        "text": "AUTOMATIC SALES",
+        "size": "8px"
+      },
+      {
+        "text": "/ SECOND",
+        "size": "8px"
+      },
+      {
+        "text": "Normal sales",
+        "size": "9px"
+      },
+      {
+        "text": "PER TAP",
+        "size": "8px"
+      },
+      {
+        "text": "Counter taps",
+        "size": "9px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      },
+      {
+        "text": "READY",
+        "size": "8px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Player",
+    "w": 450,
+    "h": 916,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 10,
+          "y": 11.25,
+          "width": 60,
+          "height": 60,
+          "top": 11.25,
+          "right": 70,
+          "bottom": 71.25,
+          "left": 10
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 39.140625,
+          "y": 172.84375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 126.59375,
+          "bottom": 245.609375,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 134.03125,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 221.5,
+          "bottom": 245.609375,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 228.9375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 316.40625,
+          "bottom": 245.609375,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 323.84375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 411.3125,
+          "bottom": 245.609375,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 39.140625,
+          "y": 254.234375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 126.59375,
+          "bottom": 327,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 134.03125,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 221.5,
+          "bottom": 327,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 228.9375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 316.40625,
+          "bottom": 327,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 323.84375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 411.3125,
+          "bottom": 327,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 355.046875,
+          "width": 450,
+          "height": 112.109375,
+          "top": 355.046875,
+          "right": 450,
+          "bottom": 467.15625,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Player",
+        "text": "",
+        "r": {
+          "x": 392,
+          "y": 470.15625,
+          "width": 48,
+          "height": 48,
+          "top": 470.15625,
+          "right": 440,
+          "bottom": 518.15625,
+          "left": 392
+        }
+      },
+      {
+        "id": "Player-Navigate-Statistics-0",
+        "text": "Stats",
+        "r": {
+          "x": 12.5,
+          "y": 528.40625,
+          "width": 48,
+          "height": 56.25,
+          "top": 528.40625,
+          "right": 60.5,
+          "bottom": 584.65625,
+          "left": 12.5
+        }
+      },
+      {
+        "id": "Player-Navigate-Skills-1",
+        "text": "Skills",
+        "r": {
+          "x": 67.5,
+          "y": 528.40625,
+          "width": 48,
+          "height": 56.25,
+          "top": 528.40625,
+          "right": 115.5,
+          "bottom": 584.65625,
+          "left": 67.5
+        }
+      },
+      {
+        "id": "Player-Quantity-tap-cycle-2",
+        "text": "Buy Max",
+        "r": {
+          "x": 342.5,
+          "y": 532.53125,
+          "width": 95,
+          "height": 48,
+          "top": 532.53125,
+          "right": 437.5,
+          "bottom": 580.53125,
+          "left": 342.5
+        }
+      },
+      {
+        "id": "Player-Navigate-TapTraining-3",
+        "text": "₹1.16M\nTrain tapping",
+        "r": {
+          "x": 304,
+          "y": 603.53125,
+          "width": 122.5,
+          "height": 50,
+          "top": 603.53125,
+          "right": 426.5,
+          "bottom": 653.53125,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-Navigate-Prestige-4",
+        "text": "View prestige",
+        "r": {
+          "x": 304,
+          "y": 686.03125,
+          "width": 122.5,
+          "height": 50,
+          "top": 686.03125,
+          "right": 426.5,
+          "bottom": 736.03125,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyAllUpgrades--5",
+        "text": "Buy all Upgrades",
+        "r": {
+          "x": 12.5,
+          "y": 808.40625,
+          "width": 425,
+          "height": 48,
+          "top": 808.40625,
+          "right": 437.5,
+          "bottom": 856.40625,
+          "left": 12.5
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ANA-01-6",
+        "text": "₹28.67\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 877.90625,
+          "width": 122.5,
+          "height": 50,
+          "top": 877.90625,
+          "right": 426.5,
+          "bottom": 927.90625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-001-7",
+        "text": "₹41.1\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 964.65625,
+          "width": 122.5,
+          "height": 50,
+          "top": 964.65625,
+          "right": 426.5,
+          "bottom": 1014.65625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-GP-01-8",
+        "text": "₹58.92\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1051.40625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1051.40625,
+          "right": 426.5,
+          "bottom": 1101.40625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-PHU-01-9",
+        "text": "₹84.48\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1138.15625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1138.15625,
+          "right": 426.5,
+          "bottom": 1188.15625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-CHA-01-10",
+        "text": "₹173.74\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1224.90625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1224.90625,
+          "right": 426.5,
+          "bottom": 1274.90625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-ROC-01-11",
+        "text": "₹249.18\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1311.65625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1311.65625,
+          "right": 426.5,
+          "bottom": 1361.65625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-TP-002-12",
+        "text": "₹357.43\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1398.40625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1398.40625,
+          "right": 426.5,
+          "bottom": 1448.40625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-UC-01-13",
+        "text": "₹512.75\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1485.15625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1485.15625,
+          "right": 426.5,
+          "bottom": 1535.15625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PC-ANA-01-14",
+        "text": "₹735.63\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1571.90625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1571.90625,
+          "right": 426.5,
+          "bottom": 1621.90625,
+          "left": 304
+        }
+      },
+      {
+        "id": "Player-BuyUpgrade-PP-SMC-01-15",
+        "text": "₹1.51K\nBuy upgrade",
+        "r": {
+          "x": 304,
+          "y": 1658.65625,
+          "width": 122.5,
+          "height": 50,
+          "top": 1658.65625,
+          "right": 426.5,
+          "bottom": 1708.65625,
+          "left": 304
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 112.25,
+          "bottom": 913,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 117.25,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 222.5,
+          "bottom": 913,
+          "left": 117.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 227.5,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 332.75,
+          "bottom": 913,
+          "left": 227.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 337.75,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 443,
+          "bottom": 913,
+          "left": 337.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      },
+      {
+        "text": "First purchase",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  },
+  {
+    "screen": "Products",
+    "w": 450,
+    "h": 916,
+    "buttons": [
+      {
+        "id": "settings-button",
+        "text": "",
+        "r": {
+          "x": 10,
+          "y": 11.25,
+          "width": 60,
+          "height": 60,
+          "top": 11.25,
+          "right": 70,
+          "bottom": 71.25,
+          "left": 10
+        }
+      },
+      {
+        "id": "display-phuljhari",
+        "text": "Phuljhari",
+        "r": {
+          "x": 39.140625,
+          "y": 172.84375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 126.59375,
+          "bottom": 245.609375,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-anar",
+        "text": "Anar",
+        "r": {
+          "x": 134.03125,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 221.5,
+          "bottom": 245.609375,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-chakri",
+        "text": "Chakri",
+        "r": {
+          "x": 228.9375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 316.40625,
+          "bottom": 245.609375,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-rockets",
+        "text": "Rockets",
+        "r": {
+          "x": 323.84375,
+          "y": 172.84375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 172.84375,
+          "right": 411.3125,
+          "bottom": 245.609375,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "display-small-crackers",
+        "text": "Small crackers",
+        "r": {
+          "x": 39.140625,
+          "y": 254.234375,
+          "width": 87.453125,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 126.59375,
+          "bottom": 327,
+          "left": 39.140625
+        }
+      },
+      {
+        "id": "display-cracker-strings",
+        "text": "Cracker strings",
+        "r": {
+          "x": 134.03125,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 221.5,
+          "bottom": 327,
+          "left": 134.03125
+        }
+      },
+      {
+        "id": "display-aerial-shots",
+        "text": "Aerial shots",
+        "r": {
+          "x": 228.9375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 316.40625,
+          "bottom": 327,
+          "left": 228.9375
+        }
+      },
+      {
+        "id": "display-gift-boxes",
+        "text": "Celebration boxes",
+        "r": {
+          "x": 323.84375,
+          "y": 254.234375,
+          "width": 87.46875,
+          "height": 72.765625,
+          "top": 254.234375,
+          "right": 411.3125,
+          "bottom": 327,
+          "left": 323.84375
+        }
+      },
+      {
+        "id": "stall-tap",
+        "text": "",
+        "r": {
+          "x": 0,
+          "y": 355.046875,
+          "width": 450,
+          "height": 112.109375,
+          "top": 355.046875,
+          "right": 450,
+          "bottom": 467.15625,
+          "left": 0
+        }
+      },
+      {
+        "id": "collapse-Products",
+        "text": "",
+        "r": {
+          "x": 392,
+          "y": 470.15625,
+          "width": 48,
+          "height": 48,
+          "top": 470.15625,
+          "right": 440,
+          "bottom": 518.15625,
+          "left": 392
+        }
+      },
+      {
+        "id": "Products-Quantity-products-cycle-0",
+        "text": "Buy Max",
+        "r": {
+          "x": 345,
+          "y": 529.15625,
+          "width": 95,
+          "height": 48,
+          "top": 529.15625,
+          "right": 440,
+          "bottom": 577.15625,
+          "left": 345
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-0-1",
+        "text": "Phuljhari\n₹1.22K/s",
+        "r": {
+          "x": 19,
+          "y": 600.03125,
+          "width": 265.875,
+          "height": 62,
+          "top": 600.03125,
+          "right": 284.875,
+          "bottom": 662.03125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-0-2",
+        "text": "₹1.22M\nUpgrade ×50",
+        "r": {
+          "x": 331,
+          "y": 599.15625,
+          "width": 100,
+          "height": 63.75,
+          "top": 599.15625,
+          "right": 431,
+          "bottom": 662.90625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-1-3",
+        "text": "Anar\n₹459/s",
+        "r": {
+          "x": 19,
+          "y": 702.53125,
+          "width": 265.875,
+          "height": 62,
+          "top": 702.53125,
+          "right": 284.875,
+          "bottom": 764.53125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-1-4",
+        "text": "₹1.11M\nUpgrade ×33",
+        "r": {
+          "x": 331,
+          "y": 701.65625,
+          "width": 100,
+          "height": 63.75,
+          "top": 701.65625,
+          "right": 431,
+          "bottom": 765.40625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-2-5",
+        "text": "Chakri\n₹1.07K/s",
+        "r": {
+          "x": 19,
+          "y": 805.03125,
+          "width": 265.875,
+          "height": 62,
+          "top": 805.03125,
+          "right": 284.875,
+          "bottom": 867.03125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-2-6",
+        "text": "₹1.12M\nUpgrade ×17",
+        "r": {
+          "x": 331,
+          "y": 804.15625,
+          "width": 100,
+          "height": 63.75,
+          "top": 804.15625,
+          "right": 431,
+          "bottom": 867.90625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-3-7",
+        "text": "Rockets\n₹637.5/s",
+        "r": {
+          "x": 19,
+          "y": 907.53125,
+          "width": 271.875,
+          "height": 62,
+          "top": 907.53125,
+          "right": 290.875,
+          "bottom": 969.53125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-3-8",
+        "text": "₹974.13K\nUpgrade ×4",
+        "r": {
+          "x": 331,
+          "y": 906.65625,
+          "width": 100,
+          "height": 63.75,
+          "top": 906.65625,
+          "right": 431,
+          "bottom": 970.40625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-4-9",
+        "text": "Small crackers\n₹996.09/s",
+        "r": {
+          "x": 19,
+          "y": 1010.03125,
+          "width": 271.875,
+          "height": 62,
+          "top": 1010.03125,
+          "right": 290.875,
+          "bottom": 1072.03125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-4-10",
+        "text": "₹2.03M\nUpgrade ×1",
+        "r": {
+          "x": 331,
+          "y": 1009.15625,
+          "width": 100,
+          "height": 63.75,
+          "top": 1009.15625,
+          "right": 431,
+          "bottom": 1072.90625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-5-11",
+        "text": "Cracker strings\n₹1.49K/s",
+        "r": {
+          "x": 19,
+          "y": 1112.53125,
+          "width": 271.875,
+          "height": 62,
+          "top": 1112.53125,
+          "right": 290.875,
+          "bottom": 1174.53125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-5-12",
+        "text": "₹22.67M\nUpgrade ×1",
+        "r": {
+          "x": 331,
+          "y": 1111.65625,
+          "width": 100,
+          "height": 63.75,
+          "top": 1111.65625,
+          "right": 431,
+          "bottom": 1175.40625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-6-13",
+        "text": "Aerial shots\n₹1.25K/s",
+        "r": {
+          "x": 19,
+          "y": 1215.03125,
+          "width": 271.875,
+          "height": 62,
+          "top": 1215.03125,
+          "right": 290.875,
+          "bottom": 1277.03125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-6-14",
+        "text": "₹252.99M\nUpgrade ×1",
+        "r": {
+          "x": 331,
+          "y": 1214.15625,
+          "width": 100,
+          "height": 63.75,
+          "top": 1214.15625,
+          "right": 431,
+          "bottom": 1277.90625,
+          "left": 331
+        }
+      },
+      {
+        "id": "Products-Navigate-ProductDetail-7-15",
+        "text": "Celebration boxes\n₹3.11K/s",
+        "r": {
+          "x": 19,
+          "y": 1317.53125,
+          "width": 271.875,
+          "height": 62,
+          "top": 1317.53125,
+          "right": 290.875,
+          "bottom": 1379.53125,
+          "left": 19
+        }
+      },
+      {
+        "id": "Products-BuyLevels-7-16",
+        "text": "₹3.54B\nUpgrade ×1",
+        "r": {
+          "x": 331,
+          "y": 1316.65625,
+          "width": 100,
+          "height": 63.75,
+          "top": 1316.65625,
+          "right": 431,
+          "bottom": 1380.40625,
+          "left": 331
+        }
+      },
+      {
+        "id": "nav-Player",
+        "text": "Player",
+        "r": {
+          "x": 7,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 112.25,
+          "bottom": 913,
+          "left": 7
+        }
+      },
+      {
+        "id": "nav-Products",
+        "text": "Products",
+        "r": {
+          "x": 117.25,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 222.5,
+          "bottom": 913,
+          "left": 117.25
+        }
+      },
+      {
+        "id": "nav-Legacy",
+        "text": "Legacy",
+        "r": {
+          "x": 227.5,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 332.75,
+          "bottom": 913,
+          "left": 227.5
+        }
+      },
+      {
+        "id": "nav-Shop",
+        "text": "Shop",
+        "r": {
+          "x": 337.75,
+          "y": 839,
+          "width": 105.25,
+          "height": 74,
+          "top": 839,
+          "right": 443,
+          "bottom": 913,
+          "left": 337.75
+        }
+      }
+    ],
+    "tinyText": [
+      {
+        "text": "Celebration boxes",
+        "size": "6px"
+      },
+      {
+        "text": "Upgrade ×50",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×33",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×17",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×4",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      },
+      {
+        "text": "Upgrade ×1",
+        "size": "9px"
+      }
+    ],
+    "images": []
+  }
+]

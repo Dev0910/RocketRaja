@@ -1,0 +1,1382 @@
+{
+  "revision": "tap-balance-2026-10-15",
+  "tapFameScales": [
+    1,
+    5.3,
+    2,
+    2,
+    5,
+    2,
+    5,
+    5,
+    3.2,
+    4.4,
+    0.75,
+    2,
+    1.5,
+    1,
+    6.5,
+    1.95,
+    3,
+    4.7,
+    2,
+    3,
+    2,
+    3,
+    1.5,
+    0.3,
+    0.03,
+    0.95,
+    0.6,
+    3,
+    1.5,
+    2,
+    0.6,
+    0.6,
+    2,
+    0.55,
+    0.55
+  ],
+  "targetOffsetLogs": [
+    0.0,
+    -0.29,
+    -0.67,
+    0.13,
+    0.0,
+    0.53,
+    -0.08,
+    1.26,
+    2.2,
+    0.4,
+    0.43,
+    -0.37,
+    0.13,
+    -0.47,
+    -0.01,
+    -1.13,
+    0.21,
+    0.99,
+    1.2,
+    0.41,
+    0.37,
+    0.04,
+    -0.54,
+    -0.03,
+    -1.64,
+    0.75,
+    -0.05,
+    0.42,
+    0.27,
+    0.03,
+    0.02,
+    -0.45,
+    1.89,
+    -1.48,
+    -1.48
+  ],
+  "fits": [
+    {
+      "fame": 0,
+      "current": 21.778151250383644,
+      "targetLog": 21.778151250383644,
+      "tapScale": 1,
+      "loss": 0,
+      "comparisons": [
+        {
+          "activeSeconds": 1666,
+          "passiveSeconds": 2021,
+          "speedup": 0.17565561603166746,
+          "products": 0.997909039170641
+        }
+      ]
+    },
+    {
+      "fame": 1,
+      "current": 23.477121254719663,
+      "targetLog": 23.187121254719663,
+      "tapScale": 5.3,
+      "loss": 0.029,
+      "comparisons": [
+        {
+          "activeSeconds": 641,
+          "passiveSeconds": 729,
+          "speedup": 0.12071330589849105,
+          "products": 0.9709529306307767
+        },
+        {
+          "activeSeconds": 632,
+          "passiveSeconds": 722,
+          "speedup": 0.1246537396121884,
+          "products": 0.7873234599734616
+        },
+        {
+          "activeSeconds": 621,
+          "passiveSeconds": 775,
+          "speedup": 0.19870967741935486,
+          "products": 0.9874598165054345
+        },
+        {
+          "activeSeconds": 632,
+          "passiveSeconds": 726,
+          "speedup": 0.12947658402203854,
+          "products": 0.78522357369482
+        },
+        {
+          "activeSeconds": 618,
+          "passiveSeconds": 722,
+          "speedup": 0.14404432132963985,
+          "products": 0.6990718356277175
+        }
+      ]
+    },
+    {
+      "fame": 2,
+      "current": 28.477121254719663,
+      "targetLog": 27.80712125471966,
+      "tapScale": 2,
+      "loss": 0.067,
+      "comparisons": [
+        {
+          "activeSeconds": 1126,
+          "passiveSeconds": 1261,
+          "speedup": 0.10705789056304515,
+          "products": 0.7364840594416272
+        },
+        {
+          "activeSeconds": 1106,
+          "passiveSeconds": 1243,
+          "speedup": 0.11021721641190663,
+          "products": 0.7375817803857583
+        },
+        {
+          "activeSeconds": 1075,
+          "passiveSeconds": 1218,
+          "speedup": 0.11740558292282433,
+          "products": 0.7176622639417801
+        },
+        {
+          "activeSeconds": 1116,
+          "passiveSeconds": 1241,
+          "speedup": 0.10072522159548747,
+          "products": 0.7409096245276101
+        },
+        {
+          "activeSeconds": 1109,
+          "passiveSeconds": 1261,
+          "speedup": 0.12053925455987313,
+          "products": 0.7371592424446712
+        }
+      ]
+    },
+    {
+      "fame": 3,
+      "current": 33.47712125471966,
+      "targetLog": 33.607121254719665,
+      "tapScale": 2,
+      "loss": 0.013000000000000001,
+      "comparisons": [
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1533,
+          "speedup": 0.19047619047619047,
+          "products": 0.9217682482780346
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1488,
+          "speedup": 0.1928763440860215,
+          "products": 0.9340239037269153
+        },
+        {
+          "activeSeconds": 1141,
+          "passiveSeconds": 1269,
+          "speedup": 0.10086682427107962,
+          "products": 0.9459587222570951
+        },
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1501,
+          "speedup": 0.17321785476349105,
+          "products": 0.9211650515146352
+        },
+        {
+          "activeSeconds": 1239,
+          "passiveSeconds": 1493,
+          "speedup": 0.17012726054922978,
+          "products": 0.9006793014479156
+        }
+      ]
+    },
+    {
+      "fame": 4,
+      "current": 38.47712125471966,
+      "targetLog": 38.47712125471966,
+      "tapScale": 5,
+      "loss": 0,
+      "comparisons": [
+        {
+          "activeSeconds": 1013,
+          "passiveSeconds": 1212,
+          "speedup": 0.16419141914191415,
+          "products": 0.6058817221930656
+        },
+        {
+          "activeSeconds": 1004,
+          "passiveSeconds": 1196,
+          "speedup": 0.1605351170568562,
+          "products": 0.6056136104178281
+        },
+        {
+          "activeSeconds": 1002,
+          "passiveSeconds": 1141,
+          "speedup": 0.12182296231375989,
+          "products": 0.5528165892637773
+        },
+        {
+          "activeSeconds": 1013,
+          "passiveSeconds": 1207,
+          "speedup": 0.16072908036454014,
+          "products": 0.6059780485183436
+        },
+        {
+          "activeSeconds": 1007,
+          "passiveSeconds": 1181,
+          "speedup": 0.14733276883996616,
+          "products": 0.6145259231558257
+        }
+      ]
+    },
+    {
+      "fame": 5,
+      "current": 43.47712125471966,
+      "targetLog": 44.007121254719664,
+      "tapScale": 2,
+      "loss": 0.053,
+      "comparisons": [
+        {
+          "activeSeconds": 1450,
+          "passiveSeconds": 1781,
+          "speedup": 0.18585064570466026,
+          "products": 0.9034011790775575
+        },
+        {
+          "activeSeconds": 1426,
+          "passiveSeconds": 1781,
+          "speedup": 0.19932622122403143,
+          "products": 0.9045040764957509
+        },
+        {
+          "activeSeconds": 1347,
+          "passiveSeconds": 1679,
+          "speedup": 0.19773674806432395,
+          "products": 0.8278678745467005
+        },
+        {
+          "activeSeconds": 1438,
+          "passiveSeconds": 1781,
+          "speedup": 0.19258843346434584,
+          "products": 0.8981070014227671
+        },
+        {
+          "activeSeconds": 1425,
+          "passiveSeconds": 1781,
+          "speedup": 0.19988770353733853,
+          "products": 0.8991999016038204
+        }
+      ]
+    },
+    {
+      "fame": 6,
+      "current": 48.47712125471966,
+      "targetLog": 48.397121254719664,
+      "tapScale": 5,
+      "loss": 0.008,
+      "comparisons": [
+        {
+          "activeSeconds": 1114,
+          "passiveSeconds": 1242,
+          "speedup": 0.1030595813204509,
+          "products": 0.6245856829320376
+        },
+        {
+          "activeSeconds": 1061,
+          "passiveSeconds": 1201,
+          "speedup": 0.11656952539550369,
+          "products": 0.6562701916000987
+        },
+        {
+          "activeSeconds": 1035,
+          "passiveSeconds": 1184,
+          "speedup": 0.12584459459459463,
+          "products": 0.6055750395059724
+        },
+        {
+          "activeSeconds": 1055,
+          "passiveSeconds": 1200,
+          "speedup": 0.12083333333333335,
+          "products": 0.6518991578215951
+        },
+        {
+          "activeSeconds": 1075,
+          "passiveSeconds": 1201,
+          "speedup": 0.10491257285595335,
+          "products": 0.6550819651834607
+        }
+      ]
+    },
+    {
+      "fame": 7,
+      "current": 53.47712125471966,
+      "targetLog": 54.73712125471966,
+      "tapScale": 5,
+      "loss": 0.126,
+      "comparisons": [
+        {
+          "activeSeconds": 1468,
+          "passiveSeconds": 1834,
+          "speedup": 0.1995637949836423,
+          "products": 0.7718785660145969
+        },
+        {
+          "activeSeconds": 1459,
+          "passiveSeconds": 1762,
+          "speedup": 0.17196367763904652,
+          "products": 0.7848886984104619
+        },
+        {
+          "activeSeconds": 1338,
+          "passiveSeconds": 1661,
+          "speedup": 0.1944611679711018,
+          "products": 0.7406646550487799
+        },
+        {
+          "activeSeconds": 1444,
+          "passiveSeconds": 1772,
+          "speedup": 0.1851015801354402,
+          "products": 0.7637031893972469
+        },
+        {
+          "activeSeconds": 1458,
+          "passiveSeconds": 1760,
+          "speedup": 0.17159090909090913,
+          "products": 0.7857872774319618
+        }
+      ]
+    },
+    {
+      "fame": 8,
+      "current": 58.47712125471966,
+      "targetLog": 60.677121254719665,
+      "tapScale": 3.2,
+      "loss": 0.22,
+      "comparisons": [
+        {
+          "activeSeconds": 1781,
+          "passiveSeconds": 1983,
+          "speedup": 0.10186585980837115,
+          "products": 0.9634104396415797
+        },
+        {
+          "activeSeconds": 1533,
+          "passiveSeconds": 1781,
+          "speedup": 0.13924761370016847,
+          "products": 0.9459720276752048
+        },
+        {
+          "activeSeconds": 1467,
+          "passiveSeconds": 1736,
+          "speedup": 0.15495391705069128,
+          "products": 0.9190851711734055
+        },
+        {
+          "activeSeconds": 1355,
+          "passiveSeconds": 1647,
+          "speedup": 0.1772920461445051,
+          "products": 0.9360057423821336
+        },
+        {
+          "activeSeconds": 1535,
+          "passiveSeconds": 1781,
+          "speedup": 0.13812464907355415,
+          "products": 0.9449662097335878
+        }
+      ]
+    },
+    {
+      "fame": 9,
+      "current": 63.47712125471966,
+      "targetLog": 63.87712125471966,
+      "tapScale": 4.4,
+      "loss": 0.04,
+      "comparisons": [
+        {
+          "activeSeconds": 1337,
+          "passiveSeconds": 1596,
+          "speedup": 0.16228070175438591,
+          "products": 0.7653776432269416
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1335,
+          "speedup": 0.10037453183520595,
+          "products": 0.9014152414066915
+        },
+        {
+          "activeSeconds": 1175,
+          "passiveSeconds": 1312,
+          "speedup": 0.10442073170731703,
+          "products": 0.6675521912034519
+        },
+        {
+          "activeSeconds": 1227,
+          "passiveSeconds": 1466,
+          "speedup": 0.16302864938608463,
+          "products": 0.824911854563307
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1341,
+          "speedup": 0.1043997017151379,
+          "products": 0.9069773653757982
+        }
+      ]
+    },
+    {
+      "fame": 10,
+      "current": 68.47712125471966,
+      "targetLog": 68.90712125471967,
+      "tapScale": 0.75,
+      "loss": 0.043000000000000003,
+      "comparisons": [
+        {
+          "activeSeconds": 1626,
+          "passiveSeconds": 2009,
+          "speedup": 0.19064211050273772,
+          "products": 0.7402193181952538
+        },
+        {
+          "activeSeconds": 1460,
+          "passiveSeconds": 1781,
+          "speedup": 0.180235822571589,
+          "products": 0.7526072600982531
+        },
+        {
+          "activeSeconds": 1285,
+          "passiveSeconds": 1463,
+          "speedup": 0.12166780587833215,
+          "products": 0.7557195653330192
+        },
+        {
+          "activeSeconds": 1681,
+          "passiveSeconds": 1977,
+          "speedup": 0.14972180070814367,
+          "products": 0.7766452277732421
+        },
+        {
+          "activeSeconds": 1457,
+          "passiveSeconds": 1726,
+          "speedup": 0.15585168018539974,
+          "products": 0.7925048107714804
+        }
+      ]
+    },
+    {
+      "fame": 11,
+      "current": 73.47712125471966,
+      "targetLog": 73.10712125471966,
+      "tapScale": 2,
+      "loss": 0.037,
+      "comparisons": [
+        {
+          "activeSeconds": 1110,
+          "passiveSeconds": 1344,
+          "speedup": 0.1741071428571429,
+          "products": 0.8058859386666931
+        },
+        {
+          "activeSeconds": 988,
+          "passiveSeconds": 1113,
+          "speedup": 0.11230907457322548,
+          "products": 0.7127163120462985
+        },
+        {
+          "activeSeconds": 988,
+          "passiveSeconds": 1101,
+          "speedup": 0.1026339691189827,
+          "products": 0.7121108788311682
+        },
+        {
+          "activeSeconds": 1004,
+          "passiveSeconds": 1142,
+          "speedup": 0.12084063047285465,
+          "products": 0.8269705931829656
+        },
+        {
+          "activeSeconds": 983,
+          "passiveSeconds": 1120,
+          "speedup": 0.12232142857142858,
+          "products": 0.7535723135101489
+        }
+      ]
+    },
+    {
+      "fame": 12,
+      "current": 78.47712125471966,
+      "targetLog": 78.60712125471966,
+      "tapScale": 1.5,
+      "loss": 0.013000000000000001,
+      "comparisons": [
+        {
+          "activeSeconds": 1262,
+          "passiveSeconds": 1536,
+          "speedup": 0.17838541666666663,
+          "products": 0.9468299932359889
+        },
+        {
+          "activeSeconds": 1239,
+          "passiveSeconds": 1461,
+          "speedup": 0.15195071868583165,
+          "products": 0.9484307012422948
+        },
+        {
+          "activeSeconds": 1192,
+          "passiveSeconds": 1333,
+          "speedup": 0.10577644411102771,
+          "products": 0.949154617702233
+        },
+        {
+          "activeSeconds": 1163,
+          "passiveSeconds": 1421,
+          "speedup": 0.18156228008444752,
+          "products": 0.9326489292878508
+        },
+        {
+          "activeSeconds": 1227,
+          "passiveSeconds": 1422,
+          "speedup": 0.1371308016877637,
+          "products": 0.9570623436937002
+        }
+      ]
+    },
+    {
+      "fame": 13,
+      "current": 83.47712125471966,
+      "targetLog": 83.00712125471966,
+      "tapScale": 1,
+      "loss": 0.047,
+      "comparisons": [
+        {
+          "activeSeconds": 1033,
+          "passiveSeconds": 1150,
+          "speedup": 0.10173913043478255,
+          "products": 0.9331457362464983
+        },
+        {
+          "activeSeconds": 930,
+          "passiveSeconds": 1082,
+          "speedup": 0.14048059149722736,
+          "products": 0.9331323061320739
+        },
+        {
+          "activeSeconds": 918,
+          "passiveSeconds": 1101,
+          "speedup": 0.16621253405994552,
+          "products": 0.9125746488745327
+        },
+        {
+          "activeSeconds": 915,
+          "passiveSeconds": 1044,
+          "speedup": 0.12356321839080464,
+          "products": 0.9256344676988306
+        },
+        {
+          "activeSeconds": 913,
+          "passiveSeconds": 1130,
+          "speedup": 0.19203539823008853,
+          "products": 0.9362503155252935
+        }
+      ]
+    },
+    {
+      "fame": 14,
+      "current": 88.47712125471966,
+      "targetLog": 88.46712125471966,
+      "tapScale": 6.5,
+      "loss": 0.001,
+      "comparisons": [
+        {
+          "activeSeconds": 1129,
+          "passiveSeconds": 1402,
+          "speedup": 0.1947218259629101,
+          "products": 0.795750462439993
+        },
+        {
+          "activeSeconds": 966,
+          "passiveSeconds": 1181,
+          "speedup": 0.18204911092294662,
+          "products": 0.8192708669702501
+        },
+        {
+          "activeSeconds": 1014,
+          "passiveSeconds": 1131,
+          "speedup": 0.10344827586206895,
+          "products": 0.7389247476349986
+        },
+        {
+          "activeSeconds": 1097,
+          "passiveSeconds": 1269,
+          "speedup": 0.13553979511426317,
+          "products": 0.7535299267653264
+        },
+        {
+          "activeSeconds": 968,
+          "passiveSeconds": 1181,
+          "speedup": 0.18035563082133788,
+          "products": 0.8006565387966851
+        }
+      ]
+    },
+    {
+      "fame": 15,
+      "current": 93.47712125471966,
+      "targetLog": 92.34712125471967,
+      "tapScale": 1.95,
+      "loss": 0.113,
+      "comparisons": [
+        {
+          "activeSeconds": 1009,
+          "passiveSeconds": 1122,
+          "speedup": 0.10071301247771836,
+          "products": 0.7477860202895829
+        },
+        {
+          "activeSeconds": 918,
+          "passiveSeconds": 1058,
+          "speedup": 0.13232514177693766,
+          "products": 0.7697476030462759
+        },
+        {
+          "activeSeconds": 928,
+          "passiveSeconds": 1049,
+          "speedup": 0.11534795042897994,
+          "products": 0.6383589216074697
+        },
+        {
+          "activeSeconds": 971,
+          "passiveSeconds": 1086,
+          "speedup": 0.10589318600368325,
+          "products": 0.794578301807167
+        },
+        {
+          "activeSeconds": 924,
+          "passiveSeconds": 1114,
+          "speedup": 0.170556552962298,
+          "products": 0.6798892646851747
+        }
+      ]
+    },
+    {
+      "fame": 16,
+      "current": 98.47712125471966,
+      "targetLog": 98.68712125471966,
+      "tapScale": 3,
+      "loss": 0.021,
+      "comparisons": [
+        {
+          "activeSeconds": 1136,
+          "passiveSeconds": 1343,
+          "speedup": 0.15413253909158597,
+          "products": 0.5777875744868153
+        },
+        {
+          "activeSeconds": 984,
+          "passiveSeconds": 1161,
+          "speedup": 0.15245478036175708,
+          "products": 0.7821761545725229
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1205,
+          "speedup": 0.10290456431535266,
+          "products": 0.8045100115060279
+        },
+        {
+          "activeSeconds": 1103,
+          "passiveSeconds": 1327,
+          "speedup": 0.1688018085908063,
+          "products": 0.6363752260295179
+        },
+        {
+          "activeSeconds": 1120,
+          "passiveSeconds": 1325,
+          "speedup": 0.15471698113207544,
+          "products": 0.7348593696680227
+        }
+      ]
+    },
+    {
+      "fame": 17,
+      "current": 103.47712125471966,
+      "targetLog": 104.46712125471966,
+      "tapScale": 4.7,
+      "loss": 0.099,
+      "comparisons": [
+        {
+          "activeSeconds": 1410,
+          "passiveSeconds": 1701,
+          "speedup": 0.17107583774250446,
+          "products": 0.843994748850587
+        },
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1403,
+          "speedup": 0.17248752672843903,
+          "products": 0.877520997285053
+        },
+        {
+          "activeSeconds": 1254,
+          "passiveSeconds": 1561,
+          "speedup": 0.19666880204996795,
+          "products": 0.8600019912152591
+        },
+        {
+          "activeSeconds": 1310,
+          "passiveSeconds": 1621,
+          "speedup": 0.19185687847008015,
+          "products": 0.8453854930073272
+        },
+        {
+          "activeSeconds": 1170,
+          "passiveSeconds": 1416,
+          "speedup": 0.17372881355932202,
+          "products": 0.8754200894062634
+        }
+      ]
+    },
+    {
+      "fame": 18,
+      "current": 108.47712125471966,
+      "targetLog": 109.67712125471967,
+      "tapScale": 2,
+      "loss": 0.12,
+      "comparisons": [
+        {
+          "activeSeconds": 1377,
+          "passiveSeconds": 1675,
+          "speedup": 0.17791044776119402,
+          "products": 0.72723768263786
+        },
+        {
+          "activeSeconds": 1087,
+          "passiveSeconds": 1338,
+          "speedup": 0.18759342301943194,
+          "products": 0.5505019729425439
+        },
+        {
+          "activeSeconds": 1320,
+          "passiveSeconds": 1561,
+          "speedup": 0.1543882126841768,
+          "products": 0.8210960006781921
+        },
+        {
+          "activeSeconds": 1182,
+          "passiveSeconds": 1328,
+          "speedup": 0.10993975903614461,
+          "products": 0.9289700086981186
+        },
+        {
+          "activeSeconds": 1249,
+          "passiveSeconds": 1402,
+          "speedup": 0.10912981455064197,
+          "products": 0.9342875594321004
+        }
+      ]
+    },
+    {
+      "fame": 19,
+      "current": 113.47712125471966,
+      "targetLog": 113.88712125471966,
+      "tapScale": 3,
+      "loss": 0.041,
+      "comparisons": [
+        {
+          "activeSeconds": 1376,
+          "passiveSeconds": 1638,
+          "speedup": 0.15995115995115994,
+          "products": 0.7871351974487749
+        },
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1427,
+          "speedup": 0.18640504555010506,
+          "products": 0.7670433586319055
+        },
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1541,
+          "speedup": 0.19467878001297856,
+          "products": 0.7409967663621789
+        },
+        {
+          "activeSeconds": 1226,
+          "passiveSeconds": 1430,
+          "speedup": 0.14265734265734265,
+          "products": 0.7565139595606544
+        },
+        {
+          "activeSeconds": 1255,
+          "passiveSeconds": 1483,
+          "speedup": 0.15374241402562372,
+          "products": 0.7840484021244811
+        }
+      ]
+    },
+    {
+      "fame": 20,
+      "current": 118.47712125471966,
+      "targetLog": 118.84712125471967,
+      "tapScale": 2,
+      "loss": 0.037,
+      "comparisons": [
+        {
+          "activeSeconds": 1363,
+          "passiveSeconds": 1701,
+          "speedup": 0.19870664315108755,
+          "products": 0.8224129059011569
+        },
+        {
+          "activeSeconds": 1093,
+          "passiveSeconds": 1361,
+          "speedup": 0.19691403379867745,
+          "products": 0.794963059691253
+        },
+        {
+          "activeSeconds": 1153,
+          "passiveSeconds": 1322,
+          "speedup": 0.12783661119515888,
+          "products": 0.7626600156461711
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1304,
+          "speedup": 0.17101226993865026,
+          "products": 0.747682235045401
+        },
+        {
+          "activeSeconds": 1181,
+          "passiveSeconds": 1381,
+          "speedup": 0.14482259232440264,
+          "products": 0.809553602803072
+        }
+      ]
+    },
+    {
+      "fame": 21,
+      "current": 123.47712125471966,
+      "targetLog": 123.51712125471967,
+      "tapScale": 3,
+      "loss": 0.004,
+      "comparisons": [
+        {
+          "activeSeconds": 1151,
+          "passiveSeconds": 1339,
+          "speedup": 0.14040328603435404,
+          "products": 0.821644074918949
+        },
+        {
+          "activeSeconds": 934,
+          "passiveSeconds": 1161,
+          "speedup": 0.1955211024978467,
+          "products": 0.843134107983632
+        },
+        {
+          "activeSeconds": 1041,
+          "passiveSeconds": 1289,
+          "speedup": 0.19239720713731578,
+          "products": 0.8594481920625365
+        },
+        {
+          "activeSeconds": 1025,
+          "passiveSeconds": 1265,
+          "speedup": 0.18972332015810278,
+          "products": 0.7918289143538965
+        },
+        {
+          "activeSeconds": 1031,
+          "passiveSeconds": 1237,
+          "speedup": 0.16653193209377526,
+          "products": 0.847495160537799
+        }
+      ]
+    },
+    {
+      "fame": 22,
+      "current": 128.47712125471966,
+      "targetLog": 127.93712125471966,
+      "tapScale": 1.5,
+      "loss": 0.054,
+      "comparisons": [
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1450,
+          "speedup": 0.19931034482758625,
+          "products": 0.8097857462074546
+        },
+        {
+          "activeSeconds": 1057,
+          "passiveSeconds": 1291,
+          "speedup": 0.18125484120836566,
+          "products": 0.5998001494771147
+        },
+        {
+          "activeSeconds": 1077,
+          "passiveSeconds": 1342,
+          "speedup": 0.19746646795827127,
+          "products": 0.8345438952747751
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1339,
+          "speedup": 0.19268110530246452,
+          "products": 0.8289006978475822
+        },
+        {
+          "activeSeconds": 1100,
+          "passiveSeconds": 1341,
+          "speedup": 0.17971662938105892,
+          "products": 0.6317656203794856
+        }
+      ]
+    },
+    {
+      "fame": 23,
+      "current": 133.47712125471966,
+      "targetLog": 133.44712125471966,
+      "tapScale": 0.3,
+      "loss": 0.006333333333333333,
+      "comparisons": [
+        {
+          "activeSeconds": 1801,
+          "passiveSeconds": 2056,
+          "speedup": 0.1240272373540856,
+          "products": 0.841561326941765
+        },
+        {
+          "activeSeconds": 1441,
+          "passiveSeconds": 1661,
+          "speedup": 0.13245033112582782,
+          "products": 0.8676900254738525
+        },
+        {
+          "activeSeconds": 1521,
+          "passiveSeconds": 1700,
+          "speedup": 0.10529411764705887,
+          "products": 0.8845898263921652
+        },
+        {
+          "activeSeconds": 1559,
+          "passiveSeconds": 1859,
+          "speedup": 0.16137708445400756,
+          "products": 0.7789342544215837
+        },
+        {
+          "activeSeconds": 1660,
+          "passiveSeconds": 1871,
+          "speedup": 0.11277391769107425,
+          "products": 0.8297153860934784
+        }
+      ]
+    },
+    {
+      "fame": 24,
+      "current": 138.47712125471966,
+      "targetLog": 136.83712125471968,
+      "tapScale": 0.03,
+      "loss": 0.164,
+      "comparisons": [
+        {
+          "activeSeconds": 1318,
+          "passiveSeconds": 1557,
+          "speedup": 0.15350032113037893,
+          "products": 0.9456751127193558
+        },
+        {
+          "activeSeconds": 1293,
+          "passiveSeconds": 1463,
+          "speedup": 0.11619958988380041,
+          "products": 0.923636369313146
+        },
+        {
+          "activeSeconds": 1156,
+          "passiveSeconds": 1290,
+          "speedup": 0.10387596899224805,
+          "products": 0.9543902657380843
+        },
+        {
+          "activeSeconds": 1233,
+          "passiveSeconds": 1384,
+          "speedup": 0.10910404624277459,
+          "products": 0.9433563794362984
+        },
+        {
+          "activeSeconds": 1141,
+          "passiveSeconds": 1304,
+          "speedup": 0.125,
+          "products": 0.9588228499067216
+        }
+      ]
+    },
+    {
+      "fame": 25,
+      "current": 143.47712125471966,
+      "targetLog": 144.22712125471966,
+      "tapScale": 0.95,
+      "loss": 0.075,
+      "comparisons": [
+        {
+          "activeSeconds": 1542,
+          "passiveSeconds": 1906,
+          "speedup": 0.1909758656873033,
+          "products": 0.5583328183229312
+        },
+        {
+          "activeSeconds": 1396,
+          "passiveSeconds": 1713,
+          "speedup": 0.18505545826036196,
+          "products": 0.7761203421939457
+        },
+        {
+          "activeSeconds": 1521,
+          "passiveSeconds": 1803,
+          "speedup": 0.1564059900166389,
+          "products": 0.8172470415494512
+        },
+        {
+          "activeSeconds": 1446,
+          "passiveSeconds": 1680,
+          "speedup": 0.13928571428571423,
+          "products": 0.6790226468463465
+        },
+        {
+          "activeSeconds": 1432,
+          "passiveSeconds": 1784,
+          "speedup": 0.19730941704035876,
+          "products": 0.760501894980246
+        }
+      ]
+    },
+    {
+      "fame": 26,
+      "current": 148.47712125471966,
+      "targetLog": 148.42712125471965,
+      "tapScale": 0.6,
+      "loss": 0.005,
+      "comparisons": [
+        {
+          "activeSeconds": 1311,
+          "passiveSeconds": 1613,
+          "speedup": 0.18722876627402352,
+          "products": 0.8697457117815411
+        },
+        {
+          "activeSeconds": 1063,
+          "passiveSeconds": 1323,
+          "speedup": 0.19652305366591083,
+          "products": 0.8588027394232708
+        },
+        {
+          "activeSeconds": 1041,
+          "passiveSeconds": 1301,
+          "speedup": 0.1998462720983859,
+          "products": 0.9180684078486939
+        },
+        {
+          "activeSeconds": 1193,
+          "passiveSeconds": 1452,
+          "speedup": 0.17837465564738297,
+          "products": 0.8652094254624784
+        },
+        {
+          "activeSeconds": 1141,
+          "passiveSeconds": 1360,
+          "speedup": 0.16102941176470587,
+          "products": 0.8843330094171883
+        }
+      ]
+    },
+    {
+      "fame": 27,
+      "current": 153.47712125471966,
+      "targetLog": 153.89712125471965,
+      "tapScale": 3,
+      "loss": 0.042,
+      "comparisons": [
+        {
+          "activeSeconds": 1527,
+          "passiveSeconds": 1831,
+          "speedup": 0.16602949208083018,
+          "products": 0.6199969249167214
+        },
+        {
+          "activeSeconds": 1165,
+          "passiveSeconds": 1449,
+          "speedup": 0.1959972394755003,
+          "products": 0.6900295868329552
+        },
+        {
+          "activeSeconds": 1309,
+          "passiveSeconds": 1542,
+          "speedup": 0.15110246433203633,
+          "products": 0.7032427873906352
+        },
+        {
+          "activeSeconds": 1191,
+          "passiveSeconds": 1446,
+          "speedup": 0.17634854771784236,
+          "products": 0.5737772440745911
+        },
+        {
+          "activeSeconds": 1304,
+          "passiveSeconds": 1621,
+          "speedup": 0.19555829734731645,
+          "products": 0.7049073313282889
+        }
+      ]
+    },
+    {
+      "fame": 28,
+      "current": 158.47712125471966,
+      "targetLog": 158.74712125471967,
+      "tapScale": 1.5,
+      "loss": 0.027,
+      "comparisons": [
+        {
+          "activeSeconds": 1421,
+          "passiveSeconds": 1621,
+          "speedup": 0.12338062924120918,
+          "products": 0.9091906885472153
+        },
+        {
+          "activeSeconds": 975,
+          "passiveSeconds": 1121,
+          "speedup": 0.13024085637823368,
+          "products": 0.8975163955045184
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1247,
+          "speedup": 0.1331194867682438,
+          "products": 0.90877526531955
+        },
+        {
+          "activeSeconds": 1165,
+          "passiveSeconds": 1454,
+          "speedup": 0.19876203576341123,
+          "products": 0.8613982580640119
+        },
+        {
+          "activeSeconds": 1127,
+          "passiveSeconds": 1320,
+          "speedup": 0.14621212121212124,
+          "products": 0.9059225912113767
+        }
+      ]
+    },
+    {
+      "fame": 29,
+      "current": 163.47712125471966,
+      "targetLog": 163.50712125471966,
+      "tapScale": 2,
+      "loss": 0.003,
+      "comparisons": [
+        {
+          "activeSeconds": 1121,
+          "passiveSeconds": 1392,
+          "speedup": 0.19468390804597702,
+          "products": 0.8381398145568818
+        },
+        {
+          "activeSeconds": 993,
+          "passiveSeconds": 1121,
+          "speedup": 0.11418376449598577,
+          "products": 0.759766240479581
+        },
+        {
+          "activeSeconds": 1021,
+          "passiveSeconds": 1135,
+          "speedup": 0.10044052863436126,
+          "products": 0.9067412872074577
+        },
+        {
+          "activeSeconds": 1061,
+          "passiveSeconds": 1230,
+          "speedup": 0.13739837398373989,
+          "products": 0.8014469699501502
+        },
+        {
+          "activeSeconds": 1121,
+          "passiveSeconds": 1301,
+          "speedup": 0.13835511145272872,
+          "products": 0.8407048431662606
+        }
+      ]
+    },
+    {
+      "fame": 30,
+      "current": 168.47712125471966,
+      "targetLog": 168.49712125471967,
+      "tapScale": 0.6,
+      "loss": 0.002,
+      "comparisons": [
+        {
+          "activeSeconds": 1581,
+          "passiveSeconds": 1766,
+          "speedup": 0.10475651189127977,
+          "products": 0.7926523697386318
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1293,
+          "speedup": 0.1639597834493426,
+          "products": 0.803199183562195
+        },
+        {
+          "activeSeconds": 1237,
+          "passiveSeconds": 1461,
+          "speedup": 0.1533196440793977,
+          "products": 0.8313080597402419
+        },
+        {
+          "activeSeconds": 1318,
+          "passiveSeconds": 1501,
+          "speedup": 0.12191872085276478,
+          "products": 0.7390872620342307
+        },
+        {
+          "activeSeconds": 1282,
+          "passiveSeconds": 1527,
+          "speedup": 0.16044531761624103,
+          "products": 0.8378605303760733
+        }
+      ]
+    },
+    {
+      "fame": 31,
+      "current": 173.47712125471966,
+      "targetLog": 173.02712125471967,
+      "tapScale": 0.6,
+      "loss": 0.12833333333333333,
+      "comparisons": [
+        {
+          "activeSeconds": 1111,
+          "passiveSeconds": 1310,
+          "speedup": 0.15190839694656488,
+          "products": 0.6296952066726749
+        },
+        {
+          "activeSeconds": 875,
+          "passiveSeconds": 1054,
+          "speedup": 0.16982922201138517,
+          "products": 0.662660170945608
+        },
+        {
+          "activeSeconds": 1001,
+          "passiveSeconds": 1233,
+          "speedup": 0.18815896188158965,
+          "products": 0.7032743025879085
+        },
+        {
+          "activeSeconds": 978,
+          "passiveSeconds": 1201,
+          "speedup": 0.18567860116569523,
+          "products": 0.560921113805661
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1298,
+          "speedup": 0.16718027734976892,
+          "products": 0.6968547127822291
+        }
+      ]
+    },
+    {
+      "fame": 32,
+      "current": 178.47712125471966,
+      "targetLog": 180.36712125471965,
+      "tapScale": 2,
+      "loss": 0.189,
+      "comparisons": [
+        {
+          "activeSeconds": 1533,
+          "passiveSeconds": 1909,
+          "speedup": 0.1969617600838135,
+          "products": 0.6652329665423714
+        },
+        {
+          "activeSeconds": 1038,
+          "passiveSeconds": 1293,
+          "speedup": 0.19721577726218098,
+          "products": 0.6073551269655633
+        },
+        {
+          "activeSeconds": 1318,
+          "passiveSeconds": 1521,
+          "speedup": 0.13346482577251806,
+          "products": 0.6826494381155287
+        },
+        {
+          "activeSeconds": 1165,
+          "passiveSeconds": 1450,
+          "speedup": 0.19655172413793098,
+          "products": 0.7659375711548195
+        },
+        {
+          "activeSeconds": 1308,
+          "passiveSeconds": 1541,
+          "speedup": 0.15120051914341337,
+          "products": 0.7340213903497164
+        }
+      ]
+    },
+    {
+      "fame": 33,
+      "current": 183.47712125471966,
+      "targetLog": 181.99712125471967,
+      "tapScale": 0.55,
+      "loss": 5.927999999999999,
+      "comparisons": [
+        {
+          "activeSeconds": 573,
+          "passiveSeconds": 709,
+          "speedup": 0.19181946403385053,
+          "products": 0.9511271372572483
+        },
+        {
+          "activeSeconds": 540,
+          "passiveSeconds": 643,
+          "speedup": 0.1601866251944012,
+          "products": 0.8840979145437382
+        },
+        {
+          "activeSeconds": 561,
+          "passiveSeconds": 700,
+          "speedup": 0.19857142857142862,
+          "products": 0.9948387112231453
+        },
+        {
+          "activeSeconds": 529,
+          "passiveSeconds": 643,
+          "speedup": 0.17729393468118193,
+          "products": 0.9549583132174162
+        },
+        {
+          "activeSeconds": 563,
+          "passiveSeconds": 703,
+          "speedup": 0.19914651493598867,
+          "products": 0.9661275051500656
+        }
+      ]
+    }
+  ],
+  "catalogueCompletionException": "The Fame-33 catalogue-completion run is intentionally faster than the usual 15–30 minute target, avoiding a long wait after the last catalogue purchase."
+}

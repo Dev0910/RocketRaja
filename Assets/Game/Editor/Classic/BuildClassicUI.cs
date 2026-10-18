@@ -74,6 +74,30 @@ namespace RocketRaja.Editor
             blue=Sprite("Folk Blue");ivory=Sprite("Folk Ivory");sand=Sprite("Folk Sand");row=Sprite("Ivory Row Frame");rounded=AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UISprite.psd");
         }
         static Sprite Sprite(string name)=>AssetDatabase.LoadAssetAtPath<Sprite>(Shared+name+".png")??throw new InvalidOperationException("Missing shared art "+name);
+        public static void ConfigureProgressFill(Image image)
+        {
+            const string path = Local + "Solid Fill.png";
+            var sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path);
+            if (!sprite)
+            {
+                // Filled Images stretch the whole texture; the rounded UI skin adds shadows
+                // and transparent edges. A solid texel keeps the visible width proportional.
+                var texture = new Texture2D(4, 4, TextureFormat.RGBA32, false);
+                texture.SetPixels(Enumerable.Repeat(Color.white, 16).ToArray()); texture.Apply();
+                File.WriteAllBytes(path, texture.EncodeToPNG()); Object.DestroyImmediate(texture);
+                AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceSynchronousImport);
+                var importer = (TextureImporter)AssetImporter.GetAtPath(path);
+                importer.textureType = TextureImporterType.Sprite; importer.spriteImportMode = SpriteImportMode.Single;
+                importer.spriteBorder = Vector4.zero; importer.mipmapEnabled = false;
+                importer.textureCompression = TextureImporterCompression.Uncompressed;
+                importer.filterMode = FilterMode.Point; importer.wrapMode = TextureWrapMode.Clamp;
+                importer.SaveAndReimport(); sprite = AssetDatabase.LoadAssetAtPath<Sprite>(path);
+            }
+            image.sprite = sprite; image.overrideSprite = null;
+            image.type = Image.Type.Filled; image.fillMethod = Image.FillMethod.Horizontal;
+            image.fillOrigin = (int)Image.OriginHorizontal.Left;
+            image.preserveAspect = false; image.raycastTarget = false;
+        }
         public static string FinishAssets()
         {
             if(EditorApplication.isPlaying)throw new InvalidOperationException("Asset authoring requires Edit Mode");

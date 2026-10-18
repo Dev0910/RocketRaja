@@ -1,0 +1,73 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.25,
+  "profiles": [
+    "no-cards",
+    "tap-heavy",
+    "product-heavy",
+    "all-cards"
+  ],
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.25,
+    0.5,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    15,
+    20,
+    30
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 1,
+      "current": 23.477121254719663,
+      "targetLog": 23.437121254719663,
+      "tapScale": 4,
+      "incomeOffset": 0,
+      "loss": 1.3173333333333335,
+      "candidateCount": 7261,
+      "feasibleCount": 116,
+      "bestPassingBuilds": 4,
+      "comparisons": [
+        {
+          "activeSeconds": 666,
+          "passiveSeconds": 800,
+          "speedup": 0.16749999999999998,
+          "products": 0.823141042168344
+        },
+        {
+          "activeSeconds": 641,
+          "passiveSeconds": 798,
+          "speedup": 0.19674185463659144,
+          "products": 0.8269023538115535
+        },
+        {
+          "activeSeconds": 496,
+          "passiveSeconds": 587,
+          "speedup": 0.15502555366269166,
+          "products": 0.8186233821403238
+        },
+        {
+          "activeSeconds": 310,
+          "passiveSeconds": 363,
+          "speedup": 0.1460055096418733,
+          "products": 0.7552918422885146
+        }
+      ]
+    }
+  ]
+}

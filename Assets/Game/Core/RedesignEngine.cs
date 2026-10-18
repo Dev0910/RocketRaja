@@ -76,6 +76,7 @@ namespace RocketRaja.Core
         public Amount CurrentTarget { get; internal set; }
         public Amount NextTarget { get; internal set; }
         public Amount ResultingIncomeMultiplier { get; internal set; }
+        public Amount ResultingTapIncomeMultiplier { get; internal set; }
         public Amount NextFameEarnings { get; internal set; }
         public Amount NextDrawEarnings { get; internal set; }
         public Natural RunCredits { get; internal set; }
@@ -147,7 +148,6 @@ namespace RocketRaja.Core
         readonly IDrawRandom random;
         readonly string owner = Guid.NewGuid().ToString("N");
         readonly CashUpgrade[] cheapest;
-        readonly int[][] dependents;
         RunEffects cached;
         RunEffects Effects => cached ?? (cached = new RunEffects(Data, State));
         public RedesignEngine(RedesignCatalog data, RedesignState state, Action<RedesignState> persist, IDrawRandom random = null)
@@ -156,10 +156,6 @@ namespace RocketRaja.Core
             State = state.Copy(); this.persist = persist ?? throw new ArgumentNullException(nameof(persist));
             this.random = random ?? new SecureDrawRandom();
             cheapest = data.Upgrades.OrderBy(x => x.price).ThenBy(x => x.id, StringComparer.Ordinal).ToArray();
-            var position = cheapest.Select((u, i) => new { u.id, i }).ToDictionary(x => x.id, x => x.i, StringComparer.Ordinal);
-            var children = Enumerable.Range(0, cheapest.Length).Select(_ => new List<int>()).ToArray();
-            for (int i = 0; i < cheapest.Length; i++) foreach (string parent in cheapest[i].prerequisites) children[position[parent]].Add(i);
-            dependents = children.Select(x => x.ToArray()).ToArray();
         }
         bool Commit(Func<RedesignState, bool> change, bool structural = true)
         {
@@ -179,13 +175,12 @@ namespace RocketRaja.Core
             return true;
         }
         bool Same(string qOwner, string qSession, string qRun, string qCommand) => MutationAllowed() && qOwner == owner && qSession == SessionKey && qRun == State.runId && qCommand == State.commandRevision.digits;
-        static int Boosts(int level) => (level >= 25 ? 1 : 0) + (level >= 50 ? 1 : 0) + level / 100;
         static Amount Global(RedesignState s, RunEffects f) => f.global * ProgressionNumbers.FameMultiplier(s.fame) * ProgressionNumbers.CardMultiplier(CardEffect.GlobalProfit, s.cardLevels[26]);
-        Amount ProductIncome(int p, RedesignState s, RunEffects f) => new Amount(Data.Products[p].income) * s.products[p] * Amount.Pow10(Boosts(s.products[p]) * Math.Log10(2)) * f.profit[p] * ProgressionNumbers.CardMultiplier(CardEffect.ProductProfit, s.cardLevels[p]) * Global(s, f);
+        Amount ProductIncome(int p, RedesignState s, RunEffects f) => new Amount(Data.Products[p].income) * s.products[p] * EconomyBalance.MilestoneMultiplier(s.products[p]) * EconomyBalance.SynergyMultiplier(s.products.Min()) * f.profit[p] * ProgressionNumbers.CardMultiplier(CardEffect.ProductProfit, s.cardLevels[p]) * Global(s, f);
         Amount NormalIncome(RedesignState s, RunEffects f) { Amount sum = 0; for (int p = 0; p < 8; p++) sum += ProductIncome(p, s, f); return sum; }
         public Amount ProductIncome(int product) => ProductIncome(product, State, Effects);
         public Amount NormalIncome() => NormalIncome(State, Effects);
-        static Amount Geometric(double baseCost, int level, int count) => new Amount(baseCost) * Amount.Pow10(level * Math.Log10(1.12)) * (count == 1 ? new Amount(1) : (Amount.Pow10(count * Math.Log10(1.12)) - new Amount(1)) / .12);
+        static Amount Geometric(double baseCost, int level, int count) => new Amount(baseCost) * Amount.Pow10(level * Math.Log10(EconomyBalance.LevelGrowth)) * (count == 1 ? new Amount(1) : (Amount.Pow10(count * Math.Log10(EconomyBalance.LevelGrowth)) - new Amount(1)) / (EconomyBalance.LevelGrowth - 1));
         public bool ProductAvailable(int p) => p >= 0 && p < 8 && (p == 0 || State.products[p - 1] > 0);
         Amount ProductCost(int p, int q, RedesignState s, RunEffects f) => Geometric(Data.Products[p].cost, s.products[p], q) * f.productCost[p] * ProgressionNumbers.CardFactor(CardEffect.ProductCost, s.cardLevels[8 + p]);
         Amount TapCost(int q, RedesignState s, RunEffects f) => Geometric(40, s.tapLevel, q) * f.tapCost * ProgressionNumbers.CardFactor(CardEffect.TapCost, s.cardLevels[17]);
@@ -204,7 +199,7 @@ namespace RocketRaja.Core
                 count = lo;
             }
             else count = Math.Min(remaining, quantity);
-            return new Quote { quantity = count, cost = count == 0 ? Amount.Zero : Price(count), affordable = count > 0 && Price(count) <= State.cash };
+            return new Quote { quantity = count, cost = Price(Math.Max(1, count)), affordable = count > 0 && Price(count) <= State.cash };
         }
         public bool BuyLevels(int product, int quantity)
         {
@@ -213,8 +208,7 @@ namespace RocketRaja.Core
             if (!quote.affordable) return false;
             return Commit(s => { s.cash -= quote.cost; if (product == -1) s.tapLevel += quote.quantity; else s.products[product] += quote.quantity; return true; });
         }
-        bool Eligible(CashUpgrade u, RedesignState s, RunEffects f) => !f.owned.Contains(u.id) && u.prerequisites.All(f.owned.Contains) &&
-            s.products.Count(n => n > 0) >= u.requiredFamilies && u.productRequirements.All(r => s.products[r.product] >= r.level);
+        bool Eligible(CashUpgrade u, RedesignState s, RunEffects f) => !f.owned.Contains(u.id);
         Amount UpgradeCost(CashUpgrade u, RedesignState s, RunEffects f) => u.price * f.upgradeCost * ProgressionNumbers.CardFactor(CardEffect.UpgradeCost, s.cardLevels[27]);
         public bool Eligible(string id) => Data.TryUpgrade(id, out int i) && Eligible(Data.Upgrades[i], State, Effects);
         public Amount UpgradeCost(string id) => Data.TryUpgrade(id, out int i) ? UpgradeCost(Data.Upgrades[i], State, Effects) : throw new ArgumentException("Unknown upgrade");
@@ -249,8 +243,9 @@ namespace RocketRaja.Core
             s.cash -= price; s.upgrades.Add(u.id);
             if (s.pinnedUpgradeId == u.id) s.pinnedUpgradeId = "";
             if (f.ever.Add(u.id)) s.everPurchased.Add(u.id);
+            bool unlocksSkill = u.effect == CashEffect.SkillPower && f.skillPower[u.target] == 0;
             f.Add(u);
-            if (u.effect == CashEffect.SkillPower && u.rank == 1) { s.readyAt[u.target] = s.now; s.activeUntil[u.target] = 0; s.nextHandsAt[u.target] = 0; }
+            if (unlocksSkill) { s.readyAt[u.target] = s.now; s.activeUntil[u.target] = 0; s.nextHandsAt[u.target] = 0; }
             s.decorationStage = Math.Max(s.decorationStage, RedesignShopProgress.StageForUnique(s.UniqueCount));
         }
         public bool BuyUpgrade(string id)
@@ -265,27 +260,14 @@ namespace RocketRaja.Core
             var filter = (scope ?? new UpgradeScope()).Copy();
             var work = State.Copy(); var effects = new RunEffects(Data, work);
             var ids = new List<string>(); var prices = new List<Amount>(); Amount cost = 0; int before = work.UniqueCount;
-            // Fixed level/family gates do not change inside a cash-only batch. Track only the
-            // missing prerequisites and insert each newly eligible row into stable price order.
-            int families = work.products.Count(n => n > 0);
-            var missing = Enumerable.Repeat(-1, cheapest.Length).ToArray();
-            var ready = new SortedSet<int>();
-            for (int i = 0; i < cheapest.Length; i++)
+            foreach (var chosen in cheapest)
             {
-                var u = cheapest[i];
-                if (effects.owned.Contains(u.id) || !filter.Matches(u) || families < u.requiredFamilies || !u.productRequirements.All(r => work.products[r.product] >= r.level)) continue;
-                missing[i] = u.prerequisites.Count(id => !effects.owned.Contains(id));
-                if (missing[i] == 0) ready.Add(i);
-            }
-            while (ready.Count != 0)
-            {
-                int index = ready.Min; ready.Remove(index); var chosen = cheapest[index];
+                if (effects.owned.Contains(chosen.id) || !filter.Matches(chosen)) continue;
                 // Cash-upgrade discounts are uniform, so if the cheapest eligible row is
                 // unaffordable no more expensive row can be bought to change that discount.
                 if (UpgradeCost(chosen, work, effects) > work.cash) break;
                 var price = UpgradeCost(chosen, work, effects); ids.Add(chosen.id); prices.Add(price); cost += price;
                 ApplyPurchase(chosen, price, work, effects);
-                foreach (int child in dependents[index]) if (missing[child] > 0 && --missing[child] == 0) ready.Add(child);
             }
             return new CashBatchQuote { owner = owner, session = SessionKey, run = State.runId, command = State.commandRevision.digits, scope = filter, Ids = ids.AsReadOnly(), Prices = prices.AsReadOnly(), Budget = State.cash, Cost = cost, FirstPurchases = work.UniqueCount - before };
         }
@@ -308,16 +290,19 @@ namespace RocketRaja.Core
         }
         Amount BaseTapPayout(bool hands, RedesignState s, RunEffects f)
         {
-            Amount b = new Amount(.85) * (1 + 1.4 * s.tapLevel) * f.tapDirect * Global(s, f);
-            Amount value = (b + LinkedTapBase(hands, s, f)) * ProgressionNumbers.CardFactor(CardEffect.TapProfit, s.cardLevels[16]);
+            Amount b = new Amount(EconomyBalance.TapBase) * (1 + 1.4 * s.tapLevel) * EconomyBalance.MilestoneMultiplier(s.tapLevel) * f.tapDirect * Global(s, f);
+            Amount value = b * EconomyBalance.TapFameScale(s.fame) * ProgressionNumbers.CardFactor(CardEffect.TapProfit, s.cardLevels[16]);
+#if REDESIGN_LAB
+            if (hands) value *= EconomyBalance.HandsPayoutScale;
+#endif
             return value;
         }
         public Amount TapPayout(bool hands = false) => BaseTapPayout(hands, State, Effects) * (State.activeUntil[0] > State.now ? 1.25 : 1);
         static void Earn(RedesignState s, Amount amount) { s.cash += amount; s.eligibleEarnings += amount; s.lifetimeEarnings += amount; }
         public bool Tap()
         {
-            if (!MutationAllowed() || State.now < State.nextManualTapAt) return false;
-            Earn(State, TapPayout()); State.manualTaps += (Natural)1; State.nextManualTapAt = State.now + 1d / 3;
+            if (!MutationAllowed()) return false;
+            Earn(State, TapPayout()); State.manualTaps += (Natural)1;
             State.revision += (Natural)1;
             return true;
         }
@@ -342,6 +327,10 @@ namespace RocketRaja.Core
             if (!MutationAllowed() || seconds <= 0) return;
             if (double.IsNaN(seconds) || double.IsInfinity(seconds) || State.now + seconds >= 1e12) throw new ArgumentOutOfRangeException(nameof(seconds));
             double end = State.now + seconds;
+            // Ownership, levels and cards cannot change within this accrual call.
+            // Reuse their rates across the independent Helping Hands events;
+            // temporary Rush multipliers still change at their exact boundaries.
+            Amount normalRate = NormalIncome(), handsBase = BaseTapPayout(true, State, Effects);
             // Split exactly at temporary effect expiries and independent Helping Hands events.
             while (State.now < end)
             {
@@ -351,11 +340,11 @@ namespace RocketRaja.Core
                 if (hands) next = Math.Min(next, Math.Max(State.now, State.nextHandsAt[1]));
                 double dt = next - State.now;
                 double rush = State.activeUntil[0] > State.now && SkillOwned(0) ? RedesignCatalog.SkillPower[0][Effects.skillPower[0] - 1] : 1;
-                Earn(State, NormalIncome() * rush * dt); State.now = next; State.runSeconds += dt;
+                Earn(State, normalRate * rush * dt); State.now = next; State.runSeconds += dt;
                 double epsilon = Math.Max(1e-9, Math.Abs(State.now) * 1e-15);
                 if (hands && State.nextHandsAt[1] <= State.now + epsilon && State.now <= State.activeUntil[1] + epsilon)
                 {
-                    Earn(State, TapPayout(true));
+                    Earn(State, handsBase * (State.activeUntil[0] > State.now ? 1.25 : 1));
                     State.nextHandsAt[1] = State.now + 1 / RedesignCatalog.SkillPower[1][Effects.skillPower[1] - 1];
                 }
             }
@@ -390,7 +379,7 @@ namespace RocketRaja.Core
                 if (!State.completedPrestiges.IsZero) nextDraw = State.target * Amount.Pow10((exponent + 1) * Math.Log10(4));
             }
             if (State.completedPrestiges.IsZero) nextDraw = Amount.Zero; // First reward stays exactly three.
-            return new FameQuote { owner = owner, session = SessionKey, run = State.runId, command = State.commandRevision.digits, Fame = fame, Credits = credits, CurrentTarget = State.target, NextTarget = ProgressionNumbers.RunTarget(State.completedPrestiges + (Natural)1), ResultingIncomeMultiplier = ProgressionNumbers.FameMultiplier(State.fame + fame),
+            return new FameQuote { owner = owner, session = SessionKey, run = State.runId, command = State.commandRevision.digits, Fame = fame, Credits = credits, CurrentTarget = State.target, NextTarget = ProgressionNumbers.RunTarget(State.completedPrestiges + (Natural)1, State.fame + fame), ResultingIncomeMultiplier = ProgressionNumbers.FameMultiplier(State.fame + fame), ResultingTapIncomeMultiplier = ProgressionNumbers.TapFameMultiplier(State.fame + fame),
                 NextFameEarnings = State.target * nextFame.ToAmount() * nextFame.ToAmount(), NextDrawEarnings = nextDraw, RunCredits = credits - (Natural)catalogue, CatalogueCredits = catalogue, NextUniqueMilestone = State.UniqueCount >= 1000 ? 0 : (State.UniqueCount / 250 + 1) * 250 };
         }
         public bool CanCommitPrestige(FameQuote quote)
@@ -409,7 +398,7 @@ namespace RocketRaja.Core
                 if (s.completedPrestiges.Value == 2 && !s.secondPrestigeGift) { if (!s.HasPremium) s.kajuKatli += (Natural)100; s.secondPrestigeGift = true; }
                 s.runId = Guid.NewGuid().ToString("N"); s.products = new int[8]; s.tapLevel = 0; s.upgrades.Clear();
                 s.activeUntil = new double[3]; s.readyAt = new double[3]; s.nextHandsAt = new double[3]; s.nextManualTapAt = 0;
-                s.eligibleEarnings = 0; s.runSeconds = 0; s.departureRate = 0; s.target = ProgressionNumbers.RunTarget(s.completedPrestiges);
+                s.eligibleEarnings = 0; s.runSeconds = 0; s.departureRate = 0; s.target = ProgressionNumbers.RunTarget(s.completedPrestiges, s.fame);
                 s.cash = new Amount(30) * ProgressionNumbers.CardFactor(CardEffect.ProductCost, s.cardLevels[8]);
                 s.offline = OfflineReceipt.Empty();
                 return true;

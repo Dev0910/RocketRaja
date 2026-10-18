@@ -12,7 +12,7 @@ static partial class Program
         session.Tick(20);
         Check(Near(session.Engine.State.eligibleEarnings, .85 * 20) && disk.now == 1020, "Browsing overlays retains full production and autosave");
         session.GameplayInputEnabled = true;
-        Check(session.TapGameplaySurface() && !session.TapGameplaySurface(), "Gameplay input retains unbanked manual tap ceiling");
+        Check(session.TapGameplaySurface() && session.TapGameplaySurface(), "Gameplay input accepts consecutive taps without a cooldown");
         var before = session.Engine.State.cash;
         Check(session.Suspend() && session.Suspend(), "Repeated pause callbacks save departure once");
         session.Tick(100);

@@ -1,0 +1,148 @@
+ M Assets/Game/Core/Amount.cs
+ M Assets/Game/Core/ProgressionNumbers.cs
+ M Assets/Game/Core/RedesignCatalog.cs
+ M Assets/Game/Core/RedesignEngine.cs
+ M Assets/Game/Core/RedesignGoals.cs
+ M Assets/Game/Core/RedesignLevelProjection.cs
+ M Assets/Game/Core/RedesignSaveStore.cs
+ M Assets/Game/Core/RedesignState.cs
+ M Assets/Game/Editor/BuildGame.cs
+ M Assets/Game/Editor/Classic/BuildClassicDialogs.cs
+ M Assets/Game/Editor/Classic/BuildClassicPanels.cs
+ M Assets/Game/Editor/Classic/BuildClassicUI.cs
+ M Assets/Game/Editor/Classic/ClassicImportQA.cs
+ M Assets/Game/Editor/Classic/ClassicPresentationAuthoring.cs
+ M Assets/Game/Editor/RedesignBuildValidation.cs
+ M Assets/Game/Editor/RedesignContentImporter.cs
+ M Assets/Game/Editor/RedesignReleaseValidation.cs
+ M Assets/Game/Runtime/Classic/ClassicMotion.cs
+ M Assets/Game/Runtime/Classic/ClassicProgression.cs
+ M Assets/Game/Runtime/Classic/ClassicUI.Bindings.cs
+ M Assets/Game/Runtime/Classic/ClassicUI.cs
+ M Assets/Game/Runtime/RedesignLevelsScreen.cs
+ M Assets/Game/Runtime/RedesignPrestigeScreen.cs
+ M Assets/Game/Runtime/RedesignSkillScreen.cs
+ M Assets/Game/Runtime/RedesignTapTarget.cs
+ M Assets/Game/Runtime/RedesignUpgradeRow.cs
+ M Assets/Plugins/Android/FirebaseCrashlytics.androidlib/res/values/crashlytics_build_id.xml
+ M Assets/Resources/GameContent.asset
+ M Assets/Resources/RedesignContentManifest.json
+ M Assets/Scenes/Main.unity
+ M "Assets/Settings/Build Profiles/Android\342\204\242.asset"
+ M Documentation/Implementation/Classic-Production-Integration.md
+ M Documentation/RedesignContentCatalog.json
+ M "Game Design/1000 Unlockables Blueprint.md"
+ M "Game Design/1000 Unlockables Catalogue.md"
+ M "Game Design/Active Play and Skills Draft.md"
+ M "Game Design/Cash-only Economy Alternative v1.md"
+ M "Game Design/Cash-only Price Table v1.md"
+ M "Game Design/Collection Balance Study.md"
+ M "Game Design/Economy Model v1.md"
+ M "Game Design/Economy Simulation Report v1.md"
+ M "Game Design/Economy Specification v1.md"
+ M "Game Design/Final Release TODO.md"
+ M "Game Design/Implementation TODO.md"
+ M "Game Design/Onboarding and Return Flow Draft.md"
+ M "Game Design/Planning Decisions and Review v1.md"
+ M "Game Design/Premium Economy v1.md"
+ M "Game Design/Prestige and Talent Flow Draft.md"
+ M "Game Design/Product Progression Draft.md"
+ M "Game Design/README.md"
+ M "Game Design/Redesign Coverage Review.md"
+ M "Game Design/Redesign Working Plan.md"
+ M "Game Design/Talent and Prestige Draft.md"
+ M "Game Design/Upgrade Browser and Goals Draft.md"
+ M "Game Design/Visual Progression Draft.md"
+ M Tools/ClassicUiPreview/Program.cs
+ M Tools/RedesignLab/BoundaryChecks.cs
+ M Tools/RedesignLab/EngineChecks.cs
+ M Tools/RedesignLab/GoalChecks.cs
+ M Tools/RedesignLab/LevelProjectionChecks.cs
+ M Tools/RedesignLab/LifecycleChecks.cs
+ M Tools/RedesignLab/Program.cs
+ M Tools/RedesignLab/ShopVisualChecks.cs
+ M Tools/RedesignLab/UpgradeBrowserChecks.cs
+ D "UI Builder/HTML/Bootstrap/bootstrap.html"
+ M "UI Builder/HTML/Classic/classic.css"
+ M "UI Builder/HTML/Classic/classic.js"
+ M "UI Builder/HTML/Classic/content.js"
+ M "UI Builder/HTML/Classic/fixtures.js"
+ M "UI Builder/HTML/Classic/index.html"
+ D "UI Builder/HTML/Home/home.html"
+ D "UI Builder/HTML/Legacy/legacy.html"
+ D "UI Builder/HTML/Offline/offline.html"
+ D "UI Builder/HTML/Player/player.html"
+ D "UI Builder/HTML/Prestige/prestige.html"
+ D "UI Builder/HTML/Privacy/privacy.html"
+ D "UI Builder/HTML/ProductDetail/productdetail.html"
+ D "UI Builder/HTML/Products/products.html"
+ D "UI Builder/HTML/Redesign/feedback.html"
+ D "UI Builder/HTML/Redesign/guidance.html"
+ D "UI Builder/HTML/Redesign/product-appearances.html"
+ D "UI Builder/HTML/Redesign/redesign.html"
+ D "UI Builder/HTML/Redesign/shop-stages.html"
+ D "UI Builder/HTML/Redesign/talent-art-reuse.html"
+ D "UI Builder/HTML/SaveRecovery/saverecovery.html"
+ D "UI Builder/HTML/Settings/settings.html"
+ D "UI Builder/HTML/Shared/icon-catalogue.html"
+ D "UI Builder/HTML/Skills/skills.html"
+ D "UI Builder/HTML/Sponsor/sponsor.html"
+ D "UI Builder/HTML/Statistics/statistics.html"
+ D "UI Builder/HTML/font-review.html"
+ D "UI Builder/HTML/index.html"
+ D "UI Builder/HTML/state-gallery.html"
+ D "UI Builder/Reference Images/Home/Style Explorations/2026-09-17-scene-only/index.html"
+ D "UI Builder/Reference Images/Home/Style Explorations/2026-09-17/index.html"
+ D "UI Builder/Reviews/IconRefresh/screen-review.html"
+ D "UI Builder/Wireframes/Bootstrap/index.html"
+?? "Assets/Game/ClassicUI/Solid Fill.png"
+?? "Assets/Game/ClassicUI/Solid Fill.png.meta"
+?? Assets/Game/Core/EconomyBalance.cs
+?? Assets/Game/Core/EconomyBalance.cs.meta
+?? Assets/Game/Editor/Classic/ClassicBugRegression.cs
+?? Assets/Game/Editor/Classic/ClassicBugRegression.cs.meta
+?? "Assets/Game/ImportedUI/Art/Icon Skills.png"
+?? "Assets/Game/ImportedUI/Art/Icon Skills.png.meta"
+?? "Assets/Game/ImportedUI/Art/Icon Stats.png"
+?? "Assets/Game/ImportedUI/Art/Icon Stats.png.meta"
+?? Documentation/FasterStartAttentive.json
+?? Documentation/FasterStartBalanceReport.md
+?? Documentation/FasterStartCards.json
+?? Documentation/FasterStartCardsSeed2.json
+?? Documentation/FasterStartCardsSeed42.json
+?? Documentation/FasterStartCardsSeed7.json
+?? Documentation/FasterStartCoreChecks.txt
+?? Documentation/FasterStartFixedBulk.json
+?? Documentation/FasterStartLevelsFirst.json
+?? Documentation/FasterStartNoTap.json
+?? Documentation/FasterStartPaired.json
+?? Documentation/FasterStartPrestigeFit.json
+?? Documentation/FasterStartPush.json
+?? Documentation/FasterStartRelaxed.json
+?? Documentation/FasterStartSynergy.png
+?? Documentation/FasterStartUnityInteractionChecks.txt
+?? Documentation/FasterStartUnityUiChecks.txt
+?? Documentation/Implementation/Unity-Build-Policy.txt
+?? Documentation/Level100CardDiagnosis.md
+?? Documentation/TapBalanceAttentive.json
+?? Documentation/TapBalanceCalibration.json
+?? Documentation/TapBalanceExperiments/
+?? Documentation/TapBalanceExtended.json
+?? Documentation/TapBalanceMatrix.json
+?? Documentation/TapBalanceReport.md
+?? Documentation/TapBalanceStress.json
+?? Documentation/TapBalanceStressDiagnosis.json
+?? Documentation/TapCalibrationCoreChecks.txt
+?? Documentation/TapCalibrationPrestige.png
+?? Documentation/TapCalibrationUnityUiChecks.txt
+?? Documentation/TapStressCoreChecks.txt
+?? "Game Design/Current Implementation Design.md"
+?? "Game Design/Faster-start Economy.md"
+?? Tools/ClassicUiPreview/current-ui-check.cjs
+?? Tools/RedesignLab/BalanceSimulation.cs
+?? Tools/RedesignLab/CardExperimentChecks.cs
+?? Tools/RedesignLab/RebalanceChecks.cs
+?? Tools/RedesignLab/TapBalanceMatrix.cs
+?? Tools/RedesignLab/TapTargetCalibration.cs
+?? "UI Builder/HTML/Classic/renders/current-ui-player.png"
+?? "UI Builder/Reviews/ClassicGoal/"

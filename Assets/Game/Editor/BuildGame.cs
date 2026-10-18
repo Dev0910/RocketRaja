@@ -86,10 +86,9 @@ namespace RocketRaja.Editor
         [MenuItem("Rocket Raja/Build Production Bundle")]
         public static void Production()
         {
-            if (RedesignEnvironment.Isolated) throw new BuildFailedException("The isolated redesign is not approved for production rollout. Complete the implementation release acceptance first.");
+            RedesignBuildValidation.RequireProductionReady();
             if (!File.Exists(Bootstrap)) throw new BuildFailedException("Complete the reviewed Bootstrap screen before building the cloud-save release.");
             var config = Resources.Load<ProductionConfig>("ProductionConfig");
-            if (!config || !config.releaseAcceptanceComplete) throw new BuildFailedException("Complete Classic release acceptance, account/billing configuration and store-installed validation before production rollout.");
             if (config == null || !Uri.TryCreate(config.privacyUrl, UriKind.Absolute, out var privacy) || privacy.Scheme != "https" || config.applicationId.EndsWith(".dev")) throw new BuildFailedException("Supply verified production application ID and public HTTPS privacy URL in ProductionConfig.");
             if (!PlayerSettings.Android.useCustomKeystore || string.IsNullOrEmpty(PlayerSettings.Android.keystoreName)) throw new BuildFailedException("Configure your owned upload key in Android Publishing Settings.");
             PlayerSettings.SetApplicationIdentifier(NamedBuildTarget.Android, config.applicationId);

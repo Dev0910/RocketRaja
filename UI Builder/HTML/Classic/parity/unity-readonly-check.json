@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "verifiedFiles": 1385,
+  "changed": [],
+  "missing": [],
+  "added": [],
+  "scope": [
+    "Assets",
+    "Packages",
+    "ProjectSettings"
+  ]
+}

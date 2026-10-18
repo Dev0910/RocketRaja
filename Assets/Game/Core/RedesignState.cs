@@ -52,7 +52,8 @@ namespace RocketRaja.Core
         public int decorationStage, tapLevel;
         public int[] products;
         public Amount cash, eligibleEarnings, lifetimeEarnings, target, departureRate;
-        public double now, savedAt, runSeconds, nextManualTapAt;
+        public double now, savedAt, runSeconds;
+        public double nextManualTapAt; // Legacy save field; manual taps no longer have a cooldown.
         public double[] activeUntil, readyAt, nextHandsAt;
         public DrawReveal reveal;
         public OfflineReceipt offline;
@@ -68,7 +69,7 @@ namespace RocketRaja.Core
                 cardLevels = Enumerable.Range(0, 28).Select(_ => Natural.Zero).ToArray(),
                 everPurchased = new List<string>(), upgrades = new List<string>(), learnedTopics = new List<string>(),
                 music = true, sound = true, storeName = "", pinnedUpgradeId = "", products = new int[8], cash = 30,
-                target = new Amount(1, 10), now = now, savedAt = now, activeUntil = new double[3], readyAt = new double[3], nextHandsAt = new double[3],
+                target = ProgressionNumbers.RunTarget(0), now = now, savedAt = now, activeUntil = new double[3], readyAt = new double[3], nextHandsAt = new double[3],
                 reveal = DrawReveal.Empty(), offline = OfflineReceipt.Empty(), guestWallet = GuestWalletProvenance.Fresh()
             };
             return state;
@@ -107,7 +108,7 @@ namespace RocketRaja.Core
             // object nullness, is the authority boundary; an unbound local object contains no data.
             if (schema == 2 && premium != null && !premium.IsUnbound || schema == 3 && (premium == null || !premium.Valid(this))) return false;
             if (fame.CompareTo(completedPrestiges) < 0 || completedPrestiges.IsZero && (!fame.IsZero || !freeCredits.IsZero || cardLevels.Any(x => !x.IsZero)) ||
-                secondPrestigeGift != (completedPrestiges.Value >= 2) || Math.Abs(Amount.Ratio(target, ProgressionNumbers.RunTarget(completedPrestiges)) - 1) > 1e-12) return false;
+                secondPrestigeGift != (completedPrestiges.Value >= 2) || !ProgressionNumbers.ValidRunTarget(target, completedPrestiges, fame)) return false;
             if (!reveal.before.Valid || !reveal.after.Valid || reveal.operationId == null || reveal.cardId == null || reveal.payment == null) return false;
             if (reveal.operationId != "" && (!data.TryCard(reveal.cardId, out int ci) || reveal.after.Value != reveal.before.Value + 1 || cardLevels[ci].CompareTo(reveal.after) < 0 || reveal.payment != "credit" && reveal.payment != "kk")) return false;
             if (reveal.pending && reveal.operationId == "") return false;

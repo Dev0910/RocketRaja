@@ -19,7 +19,7 @@ namespace RocketRaja.Editor
             string[] names = { "Phuljhari", "Anar", "Chakri", "Rockets", "Small crackers", "Cracker strings", "Aerial shots", "Celebration boxes" };
             string[] descriptions = { "A little spark of celebration", "Fountains of festive colour", "A whirl of bright possibilities", "Send your ambitions skyward", "Little packs. Big excitement.", "A string of happy moments", "Paint the evening sky", "A whole festival in a box" };
             string[] colors = { "F3B544", "E66E45", "59AFA1", "789ADB", "D97491", "C594E3", "65B7CD", "E6BE6E" };
-            content.products = Enumerable.Range(0, 8).Select(i => new ProductDef { id = Catalog.ProductIds[i], name = names[i], subtitle = descriptions[i], color = colors[i], cost = 30 * Math.Pow(2, i), income = .85 * Math.Pow(1.6, i) }).ToArray();
+            content.products = Enumerable.Range(0, 8).Select(i => new ProductDef { id = Catalog.ProductIds[i], name = names[i], subtitle = descriptions[i], color = colors[i], cost = EconomyBalance.ProductCost(i), income = EconomyBalance.ProductIncome(i) }).ToArray();
             var rows = new List<CashUpgrade>();
             foreach (string line in catalogue.Split('\n').Where(x => Regex.IsMatch(x, @"^\| (PP|PC|TP|TC|GP|UC|SK|XL|PF)-")))
             {
@@ -31,38 +31,31 @@ namespace RocketRaja.Editor
                 string[] args = match.Groups[2].Value.Split(',');
                 int rank = int.Parse(args.Last(), CultureInfo.InvariantCulture);
                 var row = new CashUpgrade { id = cols[0], name = cols[1], effectText = cols[2], requirementText = cols[3], priceKey = cols[4], basePrice = cols[5], price = new Amount(double.Parse(cols[5], CultureInfo.InvariantCulture)), band = int.Parse(cols[4].Substring(1, 2)), position = int.Parse(cols[4].Substring(4)), rank = rank, signature = cols[1].Contains("Signature Breakthrough") };
+                var authoredFactor = Regex.Match(cols[2], @"factor=([0-9.Ee+-]+)");
+                if (!authoredFactor.Success) throw new InvalidDataException("Missing authored factor " + row.id);
                 var reqs = new List<ProductRequirement>();
                 void Product(int product, int level) { reqs.Add(new ProductRequirement { product = product, level = level }); }
                 switch (type)
                 {
-                    case "PP": row.effect = CashEffect.ProductProfit; row.target = ProductIndex(args[0]); row.factor = row.signature ? rank <= 6 ? 2 : 8 : row.band == 1 ? 1.2 : 1.6; Product(row.target, 1); break;
-                    case "PC": row.effect = CashEffect.ProductCost; row.target = ProductIndex(args[0]); row.factor = 1 - .35 * rank / 16; Product(row.target, 1); break;
-                    case "TD": row.effect = CashEffect.TapDirect; row.factor = 1.2; break;
-                    case "TL": row.effect = CashEffect.TapLinked; row.factor = .12 + .18 * (rank - 1) / 59; break;
-                    case "TC": row.effect = CashEffect.TapCost; row.factor = 1 - .35 * rank / 40; break;
-                    case "GP": row.effect = CashEffect.GlobalProfit; row.factor = 1.1; break;
-                    case "UC": row.effect = CashEffect.UpgradeCost; row.factor = 1 - .35 * rank / 32; break;
+                    case "PP": row.effect = CashEffect.ProductProfit; row.target = ProductIndex(args[0]); Product(row.target, 1); break;
+                    case "PC": row.effect = CashEffect.ProductCost; row.target = ProductIndex(args[0]); Product(row.target, 1); break;
+                    case "TD": row.effect = CashEffect.TapDirect; break;
+                    case "TC": row.effect = CashEffect.TapCost; break;
+                    case "GP": row.effect = CashEffect.GlobalProfit; break;
+                    case "UC": row.effect = CashEffect.UpgradeCost; break;
                     case "SP": case "SD": case "SC":
                         row.target = Array.IndexOf(RedesignCatalog.SkillKeys, args[0]);
                         if (row.target < 0) throw new InvalidDataException("Unknown skill " + row.id);
                         row.effect = type == "SP" ? CashEffect.SkillPower : type == "SD" ? CashEffect.SkillDuration : CashEffect.SkillCooldown;
-                        row.factor = type == "SP" ? RedesignCatalog.SkillPower[row.target][rank - 1] : type == "SD" ? 1 + rank / 16d : 1 - rank / (row.target == 2 ? 48d : 32d); break;
-                    case "XL": row.effect = CashEffect.Link; row.target = ProductIndex(args[0]); row.beneficiary = ProductIndex(args[1]); row.factor = 1.5; Product(row.target, new[] { 25, 100, 200, 300 }[rank - 1]); Product(row.beneficiary, 1); break;
-                    case "PF": row.effect = CashEffect.Group; row.factor = 1.3; row.group = cols[3].Split(' ')[0].Split('+').Select(ProductIndex).ToArray(); foreach (int p in row.group) Product(p, new[] { 25, 100, 200, 300 }[rank - 1]); break;
+                        break;
                     default: throw new InvalidDataException("Unsupported effect " + type);
                 }
+                row.factor = double.Parse(authoredFactor.Groups[1].Value, CultureInfo.InvariantCulture);
                 var family = Regex.Match(cols[3], @"Own (\d)\+ families");
                 if (family.Success) row.requiredFamilies = int.Parse(family.Groups[1].Value);
                 if ((type == "PP" || type == "PC") && !cols[3].Contains("Own " + content.products[row.target].name)) throw new InvalidDataException("Missing named family requirement " + row.id);
                 for (int i = 0; i < content.products.Length; i++)
                     if (cols[3].Contains("Own " + content.products[i].name) && !reqs.Any(r => r.product == i)) Product(i, 1);
-                if (type == "XL" || type == "PF")
-                {
-                    var level = Regex.Match(cols[3], @"level(?:s)? >= (\d+)");
-                    if (!level.Success) throw new InvalidDataException("Missing explicit level gate " + row.id);
-                    int required = int.Parse(level.Groups[1].Value, CultureInfo.InvariantCulture);
-                    foreach (var requirement in reqs) if (type == "PF" || requirement.product == row.target) requirement.level = required;
-                }
                 row.prerequisites = Regex.Matches(cols[3], @"\b(?:PP|PC|TP|TC|GP|UC|SK|XL|PF)-[A-Z0-9-]+\b").Cast<Match>().Select(x => x.Value).ToArray();
                 row.productRequirements = reqs.ToArray();
                 // Reject newly authored conditions until their semantics are deliberately supported.

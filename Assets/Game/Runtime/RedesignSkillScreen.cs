@@ -56,14 +56,14 @@ namespace RocketRaja
                 revision = s.commandRevision.digits; projection = e.PreviewSkill(target); itemName.text = Names[target]; artwork.sprite = sprites[target];
                 string prefix = projection.owned ? "" : "After buying the base skill:\n";
                 effect.text = prefix + (target == 0 ? "Products produce ×" + projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " income for " + Seconds(projection.duration) + ". Manual and Helping Hands taps receive ×1.25.\nTap links and Bulk Order use normal sales." :
-                    target == 1 ? projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) + ".\nLinked-income share is one quarter of the manual share. Hands has its own tap timing." :
+                    target == 1 ? projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) + ".\nHands uses the direct tap payout and its own tap timing." :
                     "Instantly earn " + RedesignUiContext.Cash(projection.orderPayout) + ".\nBase power: " + projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " seconds of normal sales, improved by your Bulk Order Talent card. Rush and other temporary effects do not boost this amount.");
                 timing.text = "Cooldown: " + Seconds(projection.cooldown) + "\nStarts on activation. Repurchased base skills start ready.";
             }
             double active = Math.Max(0, s.activeUntil[target] - s.now), wait = Math.Max(0, s.readyAt[target] - s.now);
             if (target == 1) effect.text = (projection.owned ? "" : "After buying the base skill:\n") + projection.power.ToString("0.###", CultureInfo.InvariantCulture) +
                 " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) +
-                ".\nLinked-income share is one quarter of the manual share. Hands has its own tap timing.";
+                ".\nHands uses the direct tap payout and its own tap timing.";
             status.text = !projection.owned ? "Locked this run · buy the base skill" : active > 0 ? "Active for " + Seconds(active) + " · ready again in " + Seconds(wait) : wait > 0 ? "Ready in " + Seconds(wait) : "Ready to activate";
             if (!context.CanMutate()) status.text += "\nSaving or ownership needs attention.";
             e.Data.TryUpgrade(projection.unlockId, out int i); var baseSkill = e.Data.Upgrades[i];

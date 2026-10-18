@@ -35,7 +35,11 @@ namespace RocketRaja.Core
                 if (header == null) throw new InvalidDataException("Missing version");
                 if (header.schema >= 1 && header.schema <= 3)
                     if (string.IsNullOrEmpty(header.economy) || header.schema >= 2 && string.IsNullOrEmpty(header.contentVersion)) throw new InvalidDataException("Missing version fields");
-                if (header.schema == 1 && header.economy == "1.0.0") return new RedesignLoadResult { status = RedesignLoadStatus.LegacyTransitionRequired, notice = "Your original game is preserved. A reviewed transition is required before using this progress in the redesign." };
+                // This release intentionally starts known older local economies afresh.
+                // Read remains side-effect free; the first durable v3 write makes this one-time.
+                // Authoritative wallets and unknown/future versions still require recovery.
+                if (header.schema == 1 && header.economy == "1.0.0" || header.schema == 2 && header.economy == "2.0.0" && header.contentVersion == "cash-only-v1")
+                    return new RedesignLoadResult { status = RedesignLoadStatus.Missing, notice = "Progress reset for the faster-start economy." };
                 if (header.schema > 3 || header.schema == 1 || header.schema >= 2 && (header.economy != RedesignCatalog.EconomyVersion || header.contentVersion != RedesignCatalog.ContentVersion)) return new RedesignLoadResult { status = RedesignLoadStatus.UnsupportedVersion, notice = "This save requires a different game version. No files were changed." };
                 var s = decode(json);
                 if (s == null) throw new InvalidDataException("Missing state");
@@ -60,9 +64,10 @@ namespace RocketRaja.Core
             {
                 if (interrupted.status != RedesignLoadStatus.Missing)
                     return new RedesignLoadResult { status = RedesignLoadStatus.Corrupt, notice = "An interrupted save is preserved. Recovery is required before starting or replacing this profile." };
-                // Detect the old sibling filename without ever rewriting it or creating a fresh save over it.
+                // Known old local sibling profiles are also superseded by the new economy.
                 string old = Path.Combine(Path.GetDirectoryName(file), "diwali-v1.save");
-                if (File.Exists(old) || File.Exists(old + ".bak")) return new RedesignLoadResult { status = RedesignLoadStatus.LegacyTransitionRequired, notice = "Legacy progress exists in this profile and remains unchanged." };
+                foreach (string path in new[] { old, old + ".bak" })
+                    if (File.Exists(path)) { var legacy = Read(path); if (!legacy.CanCreateFresh) return legacy; }
                 return main;
             }
             return new RedesignLoadResult { status = RedesignLoadStatus.Corrupt, notice = "No compatible valid save or backup. Original files preserved." };

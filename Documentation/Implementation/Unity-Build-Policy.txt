@@ -1,0 +1,2 @@
+PASS Ordinary builds validate content without requiring production acceptance or Development Build
+PASS Production readiness guard blocks the unapproved production bundle

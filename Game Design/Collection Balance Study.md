@@ -1,5 +1,7 @@
 # Rocket Raja: collection balance study
 
+**Historical reference — 7 October 2026:** preserve the original rationale, scenarios and results below. They do not define the current interaction/access rules or establish current pacing. See [Current Implementation Design](Current%20Implementation%20Design.md) for the user-confirmed implementation.
+
 Run: 1 October 2026. Planning study, version 0.1. No Unity changes.
 
 The fixed-draw findings below retain their original scope. The later [full economy report](Economy%20Simulation%20Report%20v1.md) now models prices, reward supply, elapsed progression, and card effects together for selected cash-only progression.

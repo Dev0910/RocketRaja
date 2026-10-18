@@ -7,7 +7,7 @@
 .app .world .shopkeeper{transform-origin:80% 100%;animation:shopkeeper-breathe 6.5s ease-in-out infinite}
 .app .world .product-art{transform-origin:50% 100%}
 .app button:not(:disabled):not(.stall-tap){transition:transform 120ms ease,filter 160ms ease,box-shadow 160ms ease}
-.app button:not(:disabled):not(.stall-tap):active{transform:translateY(1px) scale(.97)}
+.app button:not(:disabled):not(.stall-tap):not(.product):active{transform:translateY(1px)}
 .app .navigation button svg{transform-origin:50% 85%;transition:filter 180ms ease}
 .app .navigation button[aria-pressed=true] svg{filter:drop-shadow(0 2px 3px #bb80383d)}
 .app .product-milestone-bar>span,.app .product-overview-progress>span,.app .progress-fill{transform-origin:left center;transition:width 400ms ease-out}

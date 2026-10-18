@@ -41,7 +41,7 @@ Successful recovery rebinds the current account engine, clears stale purchase/dr
 | Account and recovery screens | Real Bootstrap/session operations, no preview outcomes |
 | Shop | Packs disabled and labeled unavailable; no sample prices or simulated success flow is reachable in production. Real storefront/fulfillment remains REL-17–21. |
 
-`ProductionConfig.releaseAcceptanceComplete` defaults false. Both the production menu and generic build preprocessor retain the non-development release gate. A scene build guard checks one active Classic driver, inactive legacy gameplay and no preview/probe in release scenes. Connecting the UI does not bypass final release acceptance.
+`ProductionConfig.releaseAcceptanceComplete` defaults false. Ordinary Build Profiles/BuildPipeline builds, including non-development APKs for manual installation, validate content without requiring this approval. The **Rocket Raja → Build Production Bundle** command retains release acceptance, production identity, privacy URL and signing checks. A scene build guard still checks one active Classic driver, inactive legacy gameplay and no preview/probe in non-development scenes. A manually installed APK does not establish store-release readiness.
 
 ## Verification
 

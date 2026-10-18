@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-19",
+  "selectedReference": "Hero skill card / concept 1",
+  "htmlStatus": "candidate-awaiting-review",
+  "removedAction": "View skill upgrades",
+  "viewports": [
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x540",
+      "skill": "Festival Rush",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x540",
+      "skill": "Helping Hands",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x540",
+      "skill": "Bulk Order",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x640",
+      "skill": "Festival Rush",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x640",
+      "skill": "Helping Hands",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 48,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "360x640",
+      "skill": "Bulk Order",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 52,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "390x844",
+      "skill": "Festival Rush",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 52,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "390x844",
+      "skill": "Helping Hands",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 52,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "390x844",
+      "skill": "Bulk Order",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 60,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "450x916",
+      "skill": "Festival Rush",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 60,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "450x916",
+      "skill": "Helping Hands",
+      "upgradeButtons": 0
+    },
+    {
+      "bodyScroll": 0,
+      "buttonHeight": 60,
+      "buttonVisible": true,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "size": "450x916",
+      "skill": "Bulk Order",
+      "upgradeButtons": 0
+    }
+  ],
+  "active": {
+    "button": "Active · 00:09",
+    "disabled": true,
+    "phase": "active",
+    "radial": "26.773 100",
+    "status": "ACTIVE · 00:09"
+  },
+  "cooldown": {
+    "disabled": true,
+    "label": "Ready in 09:51",
+    "phase": "cooldown"
+  },
+  "locked": {
+    "disabled": true,
+    "label": "Skill locked",
+    "phase": "locked"
+  },
+  "saveError": {
+    "disabled": true,
+    "errorVisible": true
+  },
+  "metadata": {
+    "blocks": 1,
+    "duplicateIds": [],
+    "primaryCount": 1,
+    "targetCount": 1,
+    "targetsExist": true,
+    "visibleUpgradeButtons": 0
+  },
+  "returnToList": {
+    "focus": "Details for Festival Rush",
+    "visibleSkills": true
+  },
+  "browserErrors": [],
+  "limitations": [
+    "HTML game preview only; no native Unity changes.",
+    "Existing disposable fixture clocks do not grant gameplay rewards or write saves."
+  ],
+  "syntax": "pass",
+  "assertions": "pass",
+  "nativeInventory": "2026-10-19-skill-hero-unity-readonly.json"
+}

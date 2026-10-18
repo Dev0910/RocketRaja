@@ -1,0 +1,47 @@
+/* User-selected Quick action list, 19 October 2026. Editable UI, shared game art. */
+html body .app .modal-layer[data-screen=Skills]{padding:calc(8px * var(--s)) calc(10px * var(--s));box-sizing:border-box}
+html body .app .modal-layer[data-screen=Skills] .modal-card{
+ --skills-gold:#c69843;--skills-ink:#164b80;
+ box-sizing:border-box;position:relative;width:100%;max-height:100%;padding:calc(5px * var(--s));
+ border:calc(3px * var(--s)) solid #174e7d;border-radius:calc(10px * var(--s));
+ background:#fff2d6 url('../Home/assets/gouache-paper.svg');
+ box-shadow:0 0 0 calc(2px * var(--s)) #e5b95c,inset 0 0 0 calc(2px * var(--s)) #dfb15c,0 8px 30px #101a2b66;
+ color:var(--skills-ink)
+}
+html body .app .modal-layer[data-screen=Skills] .modal-head{position:relative;display:block;flex:none;height:calc(68px * var(--s));min-height:calc(68px * var(--s));border:0;padding:0}
+html body .app .modal-layer[data-screen=Skills] .modal-head h2{position:absolute;inset:calc(5px * var(--s)) 0 auto;height:calc(36px * var(--s));display:flex;align-items:center;justify-content:center;margin:0;font:700 calc(27px * var(--s))/1 'Native Card Serif',Georgia,serif;letter-spacing:-.5px}
+html body .app .modal-layer[data-screen=Skills] .modal-head .close{box-sizing:border-box;position:absolute;right:calc(3px * var(--s));top:calc(2px * var(--s));width:calc(44px * var(--s));height:calc(44px * var(--s));min-width:48px;min-height:48px;padding:calc(12px * var(--s));z-index:1}
+html body .app .modal-layer[data-screen=Skills] .skills-subtitle{position:absolute;inset:auto 0 calc(7px * var(--s));margin:0;text-align:center;color:#52708b;font-size:calc(11px * var(--s));line-height:1.25}
+html body .app .modal-layer[data-screen=Skills] .modal-body{padding:calc(3px * var(--s)) calc(7px * var(--s)) calc(9px * var(--s));min-height:0}
+html body .app .modal-layer[data-screen=Skills] .skills-quick-list{display:grid;gap:calc(10px * var(--s))}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row{box-sizing:border-box;position:relative;display:grid;grid-template-columns:calc(53px * var(--s)) minmax(0,1fr) calc(76px * var(--s));align-items:center;gap:calc(8px * var(--s));min-height:calc(113px * var(--s));padding:calc(7px * var(--s));border:1px solid var(--skills-gold);border-radius:calc(7px * var(--s));background:linear-gradient(110deg,#fff9e97a,#f8e3ac26);isolation:isolate}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row:before{content:'';position:absolute;inset:3px;border:1px solid #d6b56c6b;border-radius:calc(5px * var(--s));pointer-events:none;z-index:-1}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row:after{content:'';position:absolute;width:calc(15px * var(--s));height:calc(12px * var(--s));bottom:calc(-7px * var(--s));left:calc(50% - 7px * var(--s));background:#fff2d6 url('../Shared/ivory/flower.svg') center/contain no-repeat;pointer-events:none}
+html body .app .modal-layer[data-screen=Skills] .skill-portrait{position:relative;box-sizing:border-box;display:grid;place-items:center;width:calc(53px * var(--s));height:calc(53px * var(--s));padding:calc(7px * var(--s));border-radius:50%;background:radial-gradient(circle at 40% 30%,#fff7db,#e3b867);box-shadow:0 0 0 calc(2px * var(--s)) #8b5b18,inset 0 0 0 calc(2px * var(--s)) #ffe3a0}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-skill-index="0"] .skill-portrait{background:radial-gradient(circle,#23537e,#142b52)}
+html body .app .modal-layer[data-screen=Skills] .skill-portrait>.game-icon{width:100%;height:100%}
+html body .app .modal-layer[data-screen=Skills] .skill-portrait>.skill-ring{position:absolute;inset:calc(-4px * var(--s));width:calc(100% + 8px * var(--s));height:calc(100% + 8px * var(--s));fill:none;stroke-width:3.5;overflow:visible;pointer-events:none}
+html body .app .modal-layer[data-screen=Skills] .skill-ring-track{stroke:#8e6b33}
+html body .app .modal-layer[data-screen=Skills] .skill-ring-progress{stroke:#ffd061;stroke-linecap:round;transition:stroke-dasharray 100ms linear}
+html body .app .modal-layer[data-screen=Skills] .skill-row-copy{min-width:0;align-self:center}
+html body .app .modal-layer[data-screen=Skills] .skill-row-copy h3{font:800 calc(15px * var(--s))/1.12 'Native Heading',sans-serif;margin:0 0 calc(3px * var(--s));letter-spacing:-.25px}
+html body .app .modal-layer[data-screen=Skills] .skill-row-state{box-sizing:border-box;display:inline-block;max-width:100%;padding:calc(1px * var(--s)) calc(5px * var(--s));border:1px solid #d8ad56;border-radius:3px;background:#fbe3aa;color:#75511e;font:800 calc(8px * var(--s))/1.25 var(--font-ui);white-space:nowrap;letter-spacing:.2px}
+html body .app .modal-layer[data-screen=Skills] .skill-effect{margin:calc(4px * var(--s)) 0;font-size:calc(10px * var(--s));line-height:1.25}
+html body .app .modal-layer[data-screen=Skills] .skill-timing{display:flex;flex-wrap:wrap;column-gap:calc(6px * var(--s));row-gap:1px;margin:0;color:#52708b;font-size:calc(8px * var(--s));line-height:1.3}
+html body .app .modal-layer[data-screen=Skills] .skill-timing span{white-space:nowrap}
+html body .app .modal-layer[data-screen=Skills] .skill-row-actions{display:flex;flex-direction:column;align-items:stretch;justify-content:center;min-width:0}
+html body .app .modal-layer[data-screen=Skills] .skill-activate{box-sizing:border-box;width:100%;height:calc(48px * var(--s));min-height:48px;margin:0;padding:calc(5px * var(--s));font-size:calc(11px * var(--s))}
+html body .app .modal-layer[data-screen=Skills] .skill-details{box-sizing:border-box;display:block;width:100%;height:calc(48px * var(--s));min-height:48px;margin:0;padding:0;border:0;background:none;box-shadow:none;color:#164b80;text-decoration:underline;text-underline-offset:3px;font:700 calc(10px * var(--s))/1 var(--font-ui);cursor:pointer}
+html body .app .modal-layer[data-screen=Skills] .skill-details:focus-visible{outline:2px solid #164b80;outline-offset:-3px;border-radius:3px}
+html body .app .modal-layer[data-screen=Skills] .modal-footer{box-sizing:border-box;flex:none;padding:calc(12px * var(--s)) calc(9px * var(--s)) calc(5px * var(--s));min-height:0;background:none}
+html body .app .modal-layer[data-screen=Skills] .skills-reset-note{margin:0;color:#52708b;text-align:center;font-size:calc(9px * var(--s));line-height:1.3}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=active] .skill-row-state{background:#fff0bd;border-color:#c7993f}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=cooldown] .skill-portrait{background:#667380;box-shadow:0 0 0 calc(2px * var(--s)) #91999e}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=cooldown] .skill-portrait>.game-icon{filter:grayscale(1);opacity:.6}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=cooldown] .skill-ring-track{stroke:#7f898f}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=cooldown] .skill-ring-progress{stroke:#c5cace}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row:is([data-state=cooldown],[data-state=locked]) .skill-row-state{background:#e7e4d9;color:#59666d;border-color:#bbb7a6}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=locked] .skill-portrait{filter:grayscale(.8)}
+html body .app .modal-layer[data-screen=Skills] .skill-quick-row[data-state=locked] .skill-ring{visibility:hidden}
+html body .app[data-reduced-motion=true] .modal-layer[data-screen=Skills] .skill-ring-progress{transition:none}
+@media(prefers-reduced-motion:reduce){html body .app .modal-layer[data-screen=Skills] .skill-ring-progress{transition:none}}

@@ -1,5 +1,7 @@
 # Rocket Raja — implementation TODO
 
+**7 October 2026 — current design:** the user confirmed the Unity implementation as intended. [Current Implementation Design](Current%20Implementation%20Design.md) takes precedence over conflicting passages below. Unrestricted cash upgrades, unlimited manual taps, immediate global Buy All, Classic browsing without product filters/pins, disabled transient notices and 1×/5× pulls are accepted.
+
 Created: 1 October 2026. Status: **implementation in progress**.
 
 **Final release follow-up — 6 October 2026:** [Final Release TODO](Final%20Release%20TODO.md) consolidates the remaining Classic/Bootstrap integration, services, game-design acceptance and Android release work. Completion marks below retain their original implementation scope; they do not establish that the approved Classic scene has inherited every feature or passed final release acceptance.

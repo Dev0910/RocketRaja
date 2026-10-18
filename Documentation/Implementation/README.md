@@ -1,5 +1,7 @@
 # Redesign validation evidence
 
+Current HTML revision tracking, 19 October 2026: [Classic HTML → Unity TODO](Classic-HTML-to-Unity-TODO.md) records the matching starting baseline and the subsequent HTML changes to implement in Unity.
+
 Latest Classic evidence, 6 October 2026: [production startup](Classic-Production-Integration.md), [game design/presentation](Classic-Presentation-Integration.md), and [save/account recovery](Classic-Save-Account-Integration.md). The connected development APK uses the existing package/signing identity. These newer reports supersede the historical separate-playtest delivery status below; live Google/store and two-device gates remain open.
 
 Current evidence index, 2 October 2026. The 13 redesign states, retained utilities, 32 product looks, six shop stages, compact milestone feedback and 13 contextual tips are integrated in Main; checklist 71/79. Integrated regression contracts pass; device/player acceptance and delivery remain open. The user waived UI approval pauses, authorized phone installation and deferred actual IAP linking in favor of a development test shop. No production deployment, real payment, final game commit or game replacement has occurred.

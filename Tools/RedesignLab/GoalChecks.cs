@@ -4,7 +4,7 @@ static partial class Program
 {
     static void GoalChecks(RedesignCatalog data)
     {
-        var state = RedesignState.Fresh(); state.cash = 2000; state.products[0] = 1;
+        var state = RedesignState.Fresh(); state.cash = data.Upgrades.Where(u => u.target == 0 && u.effect == CashEffect.ProductProfit && u.rank <= 3).Select(u => u.price).Aggregate(Amount.Zero, (a, b) => a + b) * 2; state.products[0] = 1;
         RedesignState saved = null;
         var engine = new RedesignEngine(data, state, value => saved = value.Copy());
         var scope = new UpgradeScope { category = UpgradeCategory.Products, product = 0 };
@@ -12,14 +12,14 @@ static partial class Program
         Check(engine.PinUpgrade("PP-PHU-03") && saved.pinnedUpgradeId == "PP-PHU-03", "Pin is durably saved before publication");
         Check(engine.State.commandRevision.CompareTo(revision) == 0 && engine.CanCommitBuyAll(quote), "Pin does not invalidate an economic quote");
         var requirements = engine.NextRequirement("PP-PHU-03");
-        Check(requirements.kind == GoalTargetKind.Upgrade && requirements.upgradeId == "PP-PHU-02", "Goal points to the next missing prerequisite upgrade");
+        Check(requirements == null, "Upgrade goal has no prerequisite upgrade gate");
         var needed = engine.NextRequirement("PP-ANA-01");
-        Check(needed.kind == GoalTargetKind.Product && needed.product == 1, "Unowned-product goal points to its product details");
+        Check(needed == null, "Upgrade goal has no product ownership gate");
         var alternatives = engine.GoalAlternatives();
         Check(alternatives.Length == 3 && alternatives.Any(x => x.kind == GoalTargetKind.Upgrade) && alternatives.Any(x => x.kind == GoalTargetKind.Product) && alternatives.Any(x => x.kind == GoalTargetKind.TapTraining), "Goal alternatives include cash upgrades, product levels and tap training");
         Check(alternatives.Single(x => x.kind == GoalTargetKind.Product).cost.CompareTo(engine.LevelQuote(0, 1).cost) == 0 && alternatives.Single(x => x.kind == GoalTargetKind.TapTraining).cost.CompareTo(engine.LevelQuote(-1, 1).cost) == 0, "Goal alternative prices come from engine quotes");
         Check(!engine.PinUpgrade("missing") && engine.State.pinnedUpgradeId == "PP-PHU-03", "Unknown goal cannot replace a valid pinned choice");
-        engine.Advance(90); Check(engine.CanCommitBuyAll(quote) && quote.Ids.Count == 3, "Passive income preserves the reviewed list and eligibility");
+        engine.Advance(90); Check(engine.CanCommitBuyAll(quote) && quote.Ids.Contains("PP-PHU-03"), "Passive income preserves the reviewed list and eligibility");
         var snapshot = quote.Selection; snapshot.product = 7;
         Check(quote.Selection.product == 0, "Batch scope exposed to presentation is a defensive copy");
         Check(engine.CommitBuyAll(quote) && engine.State.pinnedUpgradeId == "", "Buying a pinned choice in a batch clears the completed goal");

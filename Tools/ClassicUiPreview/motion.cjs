@@ -1,3 +1,4 @@
+const capture=require('./capture.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const {chromium}=require('C:/Users/Dev/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 (async()=>{
@@ -46,13 +47,13 @@ const {chromium}=require('C:/Users/Dev/.cache/codex-runtimes/codex-primary-runti
   check(await page.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length)===0,'In-game Reduced motion stops CSS and Web animations');
   await page.keyboard.press('Escape');await page.click('#nav-Legacy');await action('Draw','1').click();
   check(await action('Reveal','continue').isEnabled(),'Reduced-motion card reveal settles immediately');await action('Reveal','continue').click();
-  await page.evaluate(()=>classicPreview.navigate('Home'));await tap.click();check(await page.locator('#notice').textContent().then(t=>t.startsWith('+₹')),'Reduced-motion taps retain readable income feedback');
+  await page.evaluate(()=>classicPreview.navigate('Home'));const tapsBefore=(await snapshot()).events.filter(e=>e.action==='Tap').length;await tap.click();check((await snapshot()).events.filter(e=>e.action==='Tap').length===tapsBefore+1&&await page.locator('.tap-income strong').isVisible()&&await page.locator('.tap-income strong').innerText()!=='₹0','Reduced-motion taps retain the readable payout label and one input event');check(await page.locator('#notice').isHidden(),'Counter taps keep the current no-toast presentation');
   check(await page.locator('.motion-effects>*').count()===0,'Reduced motion suppresses decorative particles');
-  await page.evaluate(()=>classicPreview.navigate('Settings'));await action('Setting','motion').click();await page.keyboard.press('Escape');await reset('progressed','Legacy');await action('Draw','1').click();await page.emulateMedia({reducedMotion:'reduce'});
+  await page.evaluate(()=>classicPreview.navigate('Settings'));await action('Setting','motion').click();await page.keyboard.press('Escape');await reset('progressed','Legacy');await action('Draw','1').click();await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>matchMedia('(prefers-reduced-motion: reduce)').matches&&document.querySelector('#sheets .modal-layer:not([hidden]) [data-action=Reveal][data-param=continue]')?.disabled===false);
   check(await action('Reveal','continue').isEnabled(),'Changing OS motion preference mid-flip releases Continue');
   check(await page.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length)===0,'OS Reduced motion stops all running animations');
   await page.keyboard.press('Escape');await page.emulateMedia({reducedMotion:'no-preference'});await reset('progressed','Home');
-  await page.setViewportSize({width:360,height:540});await page.screenshot({path:'UI Builder/HTML/Classic/renders/motion-small-screen.png'});
+  await page.setViewportSize({width:360,height:540});await capture(page,'UI Builder/HTML/Classic/renders/motion-small-screen.png');
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Small-screen layout has no horizontal overflow');
   await page.click('#nav-Products');await page.locator('#scroll-Products').evaluate(e=>e.scrollTop=e.scrollHeight);check(await action('BuyLevels','7').isVisible(),'Last product remains reachable on a short screen');
   await page.evaluate(()=>classicPreview.navigate('Settings'));const buttons=page.locator('.modal-layer:not([data-motion-ghost]) button:not(:disabled)');await buttons.last().focus();await page.keyboard.press('Tab');check(await buttons.first().evaluate(e=>e===document.activeElement),'Animated dialog preserves keyboard focus trap');

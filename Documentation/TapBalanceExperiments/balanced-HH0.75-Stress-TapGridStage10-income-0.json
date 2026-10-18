@@ -1,0 +1,51 @@
+[
+  {
+    "fame": 10,
+    "current": 68.47712125471966,
+    "targetLog": 66.54712125471966,
+    "tapScale": 1.5,
+    "incomeOffset": 0,
+    "loss": 5.596333333333334,
+    "candidateCount": 5895,
+    "feasibleCount": 82,
+    "bestPassingBuilds": 4,
+    "comparisons": [
+      {
+        "activeSeconds": 557,
+        "passiveSeconds": 621,
+        "speedup": 0.1030595813204509,
+        "products": 0.850393310062325,
+        "passiveProducts": 0.9850080342228326,
+        "activeMaxGap": 20,
+        "passiveMaxGap": 60
+      },
+      {
+        "activeSeconds": 532,
+        "passiveSeconds": 621,
+        "speedup": 0.14331723027375198,
+        "products": 0.5947022905147665,
+        "passiveProducts": 0.9867191565119708,
+        "activeMaxGap": 20,
+        "passiveMaxGap": 60
+      },
+      {
+        "activeSeconds": 487,
+        "passiveSeconds": 584,
+        "speedup": 0.16609589041095896,
+        "products": 0.9247314221847359,
+        "passiveProducts": 0.9999999999867595,
+        "activeMaxGap": 20,
+        "passiveMaxGap": 40
+      },
+      {
+        "activeSeconds": 403,
+        "passiveSeconds": 479,
+        "speedup": 0.1586638830897703,
+        "products": 0.9634291325504605,
+        "passiveProducts": 0.9999999574250381,
+        "activeMaxGap": 20,
+        "passiveMaxGap": 60
+      }
+    ]
+  }
+]

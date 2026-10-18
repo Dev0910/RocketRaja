@@ -1,0 +1,1435 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "light",
+  "handsPayout": 0.5,
+  "profiles": null,
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.03,
+    0.1,
+    0.3,
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 0,
+      "current": 21.778151250383644,
+      "targetLog": 21.778151250383644,
+      "tapScale": 1,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 331,
+      "feasibleCount": 165,
+      "bestPassingBuilds": 1,
+      "comparisons": [
+        {
+          "activeSeconds": 1645,
+          "passiveSeconds": 2021,
+          "speedup": 0.18604651162790697,
+          "products": 0.9983064745195742
+        }
+      ]
+    },
+    {
+      "fame": 1,
+      "current": 23.477121254719663,
+      "targetLog": 23.317121254719662,
+      "tapScale": 1.5,
+      "incomeOffset": 0,
+      "loss": 0.256,
+      "candidateCount": 7222,
+      "feasibleCount": 94,
+      "bestPassingBuilds": 8,
+      "comparisons": [
+        {
+          "activeSeconds": 686,
+          "passiveSeconds": 764,
+          "speedup": 0.10209424083769636,
+          "products": 0.9934592616190626
+        },
+        {
+          "activeSeconds": 685,
+          "passiveSeconds": 763,
+          "speedup": 0.1022280471821756,
+          "products": 0.9935040268011964
+        },
+        {
+          "activeSeconds": 686,
+          "passiveSeconds": 763,
+          "speedup": 0.1009174311926605,
+          "products": 0.9936360616656185
+        },
+        {
+          "activeSeconds": 685,
+          "passiveSeconds": 767,
+          "speedup": 0.10691003911342889,
+          "products": 0.993441514372298
+        },
+        {
+          "activeSeconds": 685,
+          "passiveSeconds": 763,
+          "speedup": 0.1022280471821756,
+          "products": 0.9935987824510917
+        },
+        {
+          "activeSeconds": 661,
+          "passiveSeconds": 766,
+          "speedup": 0.13707571801566576,
+          "products": 0.9932039764030232
+        },
+        {
+          "activeSeconds": 624,
+          "passiveSeconds": 700,
+          "speedup": 0.10857142857142854,
+          "products": 0.8969442632467766
+        },
+        {
+          "activeSeconds": 528,
+          "passiveSeconds": 597,
+          "speedup": 0.11557788944723613,
+          "products": 0.8734615547581047
+        }
+      ]
+    },
+    {
+      "fame": 2,
+      "current": 28.477121254719663,
+      "targetLog": 28.477121254719663,
+      "tapScale": 0.5,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 6011,
+      "feasibleCount": 194,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1605,
+          "passiveSeconds": 1861,
+          "speedup": 0.1375604513702311,
+          "products": 0.9609791344797075
+        },
+        {
+          "activeSeconds": 1595,
+          "passiveSeconds": 1861,
+          "speedup": 0.14293390650188076,
+          "products": 0.962061195051814
+        },
+        {
+          "activeSeconds": 1605,
+          "passiveSeconds": 1861,
+          "speedup": 0.1375604513702311,
+          "products": 0.9612755459745633
+        },
+        {
+          "activeSeconds": 1599,
+          "passiveSeconds": 1861,
+          "speedup": 0.14078452444922085,
+          "products": 0.9613867595956783
+        },
+        {
+          "activeSeconds": 1595,
+          "passiveSeconds": 1861,
+          "speedup": 0.14293390650188076,
+          "products": 0.9622106831764052
+        }
+      ]
+    },
+    {
+      "fame": 3,
+      "current": 33.47712125471966,
+      "targetLog": 33.47712125471966,
+      "tapScale": 1.5,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 5708,
+      "feasibleCount": 607,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1478,
+          "speedup": 0.16035182679296345,
+          "products": 0.9535088481328554
+        },
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1472,
+          "speedup": 0.15692934782608692,
+          "products": 0.9523523027272002
+        },
+        {
+          "activeSeconds": 1221,
+          "passiveSeconds": 1440,
+          "speedup": 0.15208333333333335,
+          "products": 0.9581319182794185
+        },
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1478,
+          "speedup": 0.16035182679296345,
+          "products": 0.9623817378650659
+        },
+        {
+          "activeSeconds": 1240,
+          "passiveSeconds": 1472,
+          "speedup": 0.15760869565217395,
+          "products": 0.9204916108310137
+        }
+      ]
+    },
+    {
+      "fame": 4,
+      "current": 38.47712125471966,
+      "targetLog": 38.47712125471966,
+      "tapScale": 6,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 5525,
+      "feasibleCount": 381,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1090,
+          "passiveSeconds": 1325,
+          "speedup": 0.1773584905660377,
+          "products": 0.6584333361844561
+        },
+        {
+          "activeSeconds": 1088,
+          "passiveSeconds": 1350,
+          "speedup": 0.19407407407407407,
+          "products": 0.6585634520187651
+        },
+        {
+          "activeSeconds": 1079,
+          "passiveSeconds": 1288,
+          "speedup": 0.16226708074534157,
+          "products": 0.6434531900423869
+        },
+        {
+          "activeSeconds": 1087,
+          "passiveSeconds": 1352,
+          "speedup": 0.19600591715976334,
+          "products": 0.6540262424125566
+        },
+        {
+          "activeSeconds": 1087,
+          "passiveSeconds": 1348,
+          "speedup": 0.19362017804154308,
+          "products": 0.6585390307894663
+        }
+      ]
+    },
+    {
+      "fame": 5,
+      "current": 43.47712125471966,
+      "targetLog": 46.44712125471966,
+      "tapScale": 5,
+      "incomeOffset": 0,
+      "loss": 0.297,
+      "candidateCount": 6219,
+      "feasibleCount": 114,
+      "bestPassingBuilds": 8,
+      "comparisons": [
+        {
+          "activeSeconds": 1781,
+          "passiveSeconds": 2063,
+          "speedup": 0.13669413475521086,
+          "products": 0.9869512990825623
+        },
+        {
+          "activeSeconds": 1781,
+          "passiveSeconds": 2046,
+          "speedup": 0.1295210166177908,
+          "products": 0.9870946599451598
+        },
+        {
+          "activeSeconds": 1741,
+          "passiveSeconds": 1945,
+          "speedup": 0.10488431876606685,
+          "products": 0.975718195977367
+        },
+        {
+          "activeSeconds": 1781,
+          "passiveSeconds": 2047,
+          "speedup": 0.1299462628236444,
+          "products": 0.9869732657690199
+        },
+        {
+          "activeSeconds": 1770,
+          "passiveSeconds": 2063,
+          "speedup": 0.14202617547261265,
+          "products": 0.9569171778889746
+        },
+        {
+          "activeSeconds": 1481,
+          "passiveSeconds": 1784,
+          "speedup": 0.16984304932735428,
+          "products": 0.8864122397091122
+        },
+        {
+          "activeSeconds": 1400,
+          "passiveSeconds": 1747,
+          "speedup": 0.1986262163709216,
+          "products": 0.931159669087282
+        },
+        {
+          "activeSeconds": 900,
+          "passiveSeconds": 1121,
+          "speedup": 0.19714540588760032,
+          "products": 0.8968293558270467
+        }
+      ]
+    },
+    {
+      "fame": 6,
+      "current": 48.47712125471966,
+      "targetLog": 48.47712125471966,
+      "tapScale": 3,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 4042,
+      "feasibleCount": 707,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1359,
+          "speedup": 0.11626195732155997,
+          "products": 0.824123266141545
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1361,
+          "speedup": 0.11756061719324029,
+          "products": 0.825895945368961
+        },
+        {
+          "activeSeconds": 1206,
+          "passiveSeconds": 1358,
+          "speedup": 0.11192930780559651,
+          "products": 0.8085551222916181
+        },
+        {
+          "activeSeconds": 1213,
+          "passiveSeconds": 1358,
+          "speedup": 0.10677466863033869,
+          "products": 0.8260787842051425
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1345,
+          "speedup": 0.1070631970260223,
+          "products": 0.8215970059432427
+        }
+      ]
+    },
+    {
+      "fame": 7,
+      "current": 53.47712125471966,
+      "targetLog": 54.48712125471966,
+      "tapScale": 3,
+      "incomeOffset": 0,
+      "loss": 0.101,
+      "candidateCount": 5815,
+      "feasibleCount": 285,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1713,
+          "passiveSeconds": 1938,
+          "speedup": 0.11609907120743035,
+          "products": 0.8194660497359222
+        },
+        {
+          "activeSeconds": 1680,
+          "passiveSeconds": 1919,
+          "speedup": 0.12454403335070352,
+          "products": 0.8253633705381611
+        },
+        {
+          "activeSeconds": 1719,
+          "passiveSeconds": 2077,
+          "speedup": 0.17236398651901785,
+          "products": 0.8087361397490596
+        },
+        {
+          "activeSeconds": 1630,
+          "passiveSeconds": 2035,
+          "speedup": 0.19901719901719905,
+          "products": 0.8433561226225548
+        },
+        {
+          "activeSeconds": 1695,
+          "passiveSeconds": 1926,
+          "speedup": 0.1199376947040498,
+          "products": 0.8230912633463228
+        }
+      ]
+    },
+    {
+      "fame": 8,
+      "current": 58.47712125471966,
+      "targetLog": 58.37712125471966,
+      "tapScale": 2.5,
+      "incomeOffset": 0,
+      "loss": 0.01,
+      "candidateCount": 7366,
+      "feasibleCount": 347,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1499,
+          "speedup": 0.19879919946631086,
+          "products": 0.8622608939170506
+        },
+        {
+          "activeSeconds": 1231,
+          "passiveSeconds": 1496,
+          "speedup": 0.17713903743315507,
+          "products": 0.8530181423429302
+        },
+        {
+          "activeSeconds": 1215,
+          "passiveSeconds": 1491,
+          "speedup": 0.1851106639839034,
+          "products": 0.8426969295971336
+        },
+        {
+          "activeSeconds": 1113,
+          "passiveSeconds": 1309,
+          "speedup": 0.14973262032085566,
+          "products": 0.7846844215925821
+        },
+        {
+          "activeSeconds": 1201,
+          "passiveSeconds": 1489,
+          "speedup": 0.19341840161182,
+          "products": 0.8756423584205734
+        }
+      ]
+    },
+    {
+      "fame": 9,
+      "current": 63.47712125471966,
+      "targetLog": 63.47712125471966,
+      "tapScale": 2.5,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 4323,
+      "feasibleCount": 518,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1464,
+          "passiveSeconds": 1767,
+          "speedup": 0.1714770797962648,
+          "products": 0.8366820062342837
+        },
+        {
+          "activeSeconds": 1462,
+          "passiveSeconds": 1762,
+          "speedup": 0.17026106696935306,
+          "products": 0.8281890504232089
+        },
+        {
+          "activeSeconds": 1462,
+          "passiveSeconds": 1707,
+          "speedup": 0.143526654950205,
+          "products": 0.8240998047826339
+        },
+        {
+          "activeSeconds": 1463,
+          "passiveSeconds": 1741,
+          "speedup": 0.15967834577828832,
+          "products": 0.8218944385938571
+        },
+        {
+          "activeSeconds": 1241,
+          "passiveSeconds": 1487,
+          "speedup": 0.1654337592468057,
+          "products": 0.8851474809221552
+        }
+      ]
+    },
+    {
+      "fame": 10,
+      "found": false,
+      "candidateCount": 5525,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 7
+    },
+    {
+      "fame": 11,
+      "current": 73.47712125471966,
+      "targetLog": 71.83712125471966,
+      "tapScale": 2.5,
+      "incomeOffset": 0,
+      "loss": 3.7406666666666673,
+      "candidateCount": 9352,
+      "feasibleCount": 111,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 732,
+          "passiveSeconds": 828,
+          "speedup": 0.1159420289855072,
+          "products": 0.886571478884697
+        },
+        {
+          "activeSeconds": 657,
+          "passiveSeconds": 797,
+          "speedup": 0.1756587202007528,
+          "products": 0.7574396465655986
+        },
+        {
+          "activeSeconds": 656,
+          "passiveSeconds": 817,
+          "speedup": 0.19706242350061198,
+          "products": 0.7666481993350219
+        },
+        {
+          "activeSeconds": 726,
+          "passiveSeconds": 825,
+          "speedup": 0.12,
+          "products": 0.9001062976135736
+        },
+        {
+          "activeSeconds": 656,
+          "passiveSeconds": 808,
+          "speedup": 0.18811881188118806,
+          "products": 0.7753742029276476
+        }
+      ]
+    },
+    {
+      "fame": 12,
+      "current": 78.47712125471966,
+      "targetLog": 78.47712125471966,
+      "tapScale": 4,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 4191,
+      "feasibleCount": 138,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1176,
+          "passiveSeconds": 1450,
+          "speedup": 0.18896551724137933,
+          "products": 0.86160420083112
+        },
+        {
+          "activeSeconds": 1150,
+          "passiveSeconds": 1364,
+          "speedup": 0.156891495601173,
+          "products": 0.8440822638648446
+        },
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1406,
+          "speedup": 0.17425320056899007,
+          "products": 0.8893931550559838
+        },
+        {
+          "activeSeconds": 1146,
+          "passiveSeconds": 1325,
+          "speedup": 0.1350943396226415,
+          "products": 0.8399483445119986
+        },
+        {
+          "activeSeconds": 1174,
+          "passiveSeconds": 1407,
+          "speedup": 0.1656005685856432,
+          "products": 0.8431295439611316
+        }
+      ]
+    },
+    {
+      "fame": 13,
+      "current": 83.47712125471966,
+      "targetLog": 83.16712125471966,
+      "tapScale": 8,
+      "incomeOffset": 0,
+      "loss": 0.031,
+      "candidateCount": 6132,
+      "feasibleCount": 219,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1018,
+          "passiveSeconds": 1155,
+          "speedup": 0.11861471861471862,
+          "products": 0.6984944005817426
+        },
+        {
+          "activeSeconds": 1030,
+          "passiveSeconds": 1181,
+          "speedup": 0.12785774767146485,
+          "products": 0.7158818086331509
+        },
+        {
+          "activeSeconds": 1033,
+          "passiveSeconds": 1161,
+          "speedup": 0.1102497846683893,
+          "products": 0.6864578035659986
+        },
+        {
+          "activeSeconds": 1020,
+          "passiveSeconds": 1181,
+          "speedup": 0.13632514817950891,
+          "products": 0.673821836099417
+        },
+        {
+          "activeSeconds": 1004,
+          "passiveSeconds": 1181,
+          "speedup": 0.14987298899237933,
+          "products": 0.7030819291443371
+        }
+      ]
+    },
+    {
+      "fame": 14,
+      "current": 88.47712125471966,
+      "targetLog": 88.46712125471966,
+      "tapScale": 2.5,
+      "incomeOffset": 0,
+      "loss": 0.001,
+      "candidateCount": 4583,
+      "feasibleCount": 147,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1291,
+          "passiveSeconds": 1613,
+          "speedup": 0.19962802231866084,
+          "products": 0.9270721157996984
+        },
+        {
+          "activeSeconds": 1286,
+          "passiveSeconds": 1542,
+          "speedup": 0.16601815823605703,
+          "products": 0.9258383628607463
+        },
+        {
+          "activeSeconds": 1346,
+          "passiveSeconds": 1554,
+          "speedup": 0.13384813384813388,
+          "products": 0.9180415917732097
+        },
+        {
+          "activeSeconds": 1295,
+          "passiveSeconds": 1557,
+          "speedup": 0.16827231856133595,
+          "products": 0.9224088092153859
+        },
+        {
+          "activeSeconds": 1276,
+          "passiveSeconds": 1550,
+          "speedup": 0.17677419354838708,
+          "products": 0.9280234262744071
+        }
+      ]
+    },
+    {
+      "fame": 15,
+      "current": 93.47712125471966,
+      "targetLog": 93.47712125471966,
+      "tapScale": 2,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 6638,
+      "feasibleCount": 1034,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1181,
+          "passiveSeconds": 1419,
+          "speedup": 0.16772374911909793,
+          "products": 0.9293131962967869
+        },
+        {
+          "activeSeconds": 1181,
+          "passiveSeconds": 1418,
+          "speedup": 0.16713681241184764,
+          "products": 0.9304489945235092
+        },
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1312,
+          "speedup": 0.11509146341463417,
+          "products": 0.9247762879902419
+        },
+        {
+          "activeSeconds": 1181,
+          "passiveSeconds": 1400,
+          "speedup": 0.15642857142857147,
+          "products": 0.9266402533015984
+        },
+        {
+          "activeSeconds": 1181,
+          "passiveSeconds": 1325,
+          "speedup": 0.10867924528301887,
+          "products": 0.9318982888077162
+        }
+      ]
+    },
+    {
+      "fame": 16,
+      "current": 98.47712125471966,
+      "targetLog": 98.22712125471966,
+      "tapScale": 3,
+      "incomeOffset": 0,
+      "loss": 0.025,
+      "candidateCount": 5346,
+      "feasibleCount": 51,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 964,
+          "passiveSeconds": 1161,
+          "speedup": 0.16968130921619295,
+          "products": 0.6765692773865357
+        },
+        {
+          "activeSeconds": 1016,
+          "passiveSeconds": 1165,
+          "speedup": 0.1278969957081545,
+          "products": 0.6952722238084832
+        },
+        {
+          "activeSeconds": 1038,
+          "passiveSeconds": 1161,
+          "speedup": 0.10594315245478036,
+          "products": 0.6854924093085812
+        },
+        {
+          "activeSeconds": 943,
+          "passiveSeconds": 1161,
+          "speedup": 0.18776916451335057,
+          "products": 0.6614587757568237
+        },
+        {
+          "activeSeconds": 1042,
+          "passiveSeconds": 1161,
+          "speedup": 0.10249784668389317,
+          "products": 0.6956140554283345
+        }
+      ]
+    },
+    {
+      "fame": 17,
+      "current": 103.47712125471966,
+      "targetLog": 103.47712125471966,
+      "tapScale": 2,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 5940,
+      "feasibleCount": 147,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1267,
+          "passiveSeconds": 1500,
+          "speedup": 0.15533333333333332,
+          "products": 0.9177453609052544
+        },
+        {
+          "activeSeconds": 1267,
+          "passiveSeconds": 1435,
+          "speedup": 0.11707317073170731,
+          "products": 0.9095207935624194
+        },
+        {
+          "activeSeconds": 1265,
+          "passiveSeconds": 1496,
+          "speedup": 0.15441176470588236,
+          "products": 0.9143569232984442
+        },
+        {
+          "activeSeconds": 1232,
+          "passiveSeconds": 1468,
+          "speedup": 0.1607629427792916,
+          "products": 0.8721313358958114
+        },
+        {
+          "activeSeconds": 1256,
+          "passiveSeconds": 1492,
+          "speedup": 0.1581769436997319,
+          "products": 0.9163562180622353
+        }
+      ]
+    },
+    {
+      "fame": 18,
+      "found": false,
+      "candidateCount": 6990,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 4
+    },
+    {
+      "fame": 19,
+      "current": 113.47712125471966,
+      "targetLog": 113.47712125471966,
+      "tapScale": 4,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 5264,
+      "feasibleCount": 44,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1124,
+          "passiveSeconds": 1386,
+          "speedup": 0.189033189033189,
+          "products": 0.716765184125396
+        },
+        {
+          "activeSeconds": 1066,
+          "passiveSeconds": 1270,
+          "speedup": 0.16062992125984255,
+          "products": 0.7637362321201469
+        },
+        {
+          "activeSeconds": 1113,
+          "passiveSeconds": 1381,
+          "speedup": 0.19406227371469953,
+          "products": 0.7309736394820218
+        },
+        {
+          "activeSeconds": 1069,
+          "passiveSeconds": 1331,
+          "speedup": 0.1968444778362134,
+          "products": 0.7566828101369398
+        },
+        {
+          "activeSeconds": 1105,
+          "passiveSeconds": 1279,
+          "speedup": 0.13604378420641128,
+          "products": 0.7507052882942891
+        }
+      ]
+    },
+    {
+      "fame": 20,
+      "current": 118.47712125471966,
+      "targetLog": 118.58712125471966,
+      "tapScale": 4,
+      "incomeOffset": 0,
+      "loss": 2.3358327569699946,
+      "candidateCount": 5628,
+      "feasibleCount": 4,
+      "bestPassingBuilds": 8,
+      "comparisons": [
+        {
+          "activeSeconds": 1161,
+          "passiveSeconds": 1442,
+          "speedup": 0.19486823855755897,
+          "products": 0.711311787061029
+        },
+        {
+          "activeSeconds": 1132,
+          "passiveSeconds": 1315,
+          "speedup": 0.1391634980988593,
+          "products": 0.6979868774672752
+        },
+        {
+          "activeSeconds": 1121,
+          "passiveSeconds": 1395,
+          "speedup": 0.19641577060931903,
+          "products": 0.7371816747340022
+        },
+        {
+          "activeSeconds": 1079,
+          "passiveSeconds": 1336,
+          "speedup": 0.1923652694610778,
+          "products": 0.6431467223768572
+        },
+        {
+          "activeSeconds": 1136,
+          "passiveSeconds": 1319,
+          "speedup": 0.13874147081122057,
+          "products": 0.6419260433324852
+        },
+        {
+          "activeSeconds": 1064,
+          "passiveSeconds": 1270,
+          "speedup": 0.16220472440944878,
+          "products": 0.5305850057636334
+        },
+        {
+          "activeSeconds": 1100,
+          "passiveSeconds": 1237,
+          "speedup": 0.11075181891673402,
+          "products": 0.7789478810052545
+        },
+        {
+          "activeSeconds": 785,
+          "passiveSeconds": 966,
+          "speedup": 0.18737060041407871,
+          "products": 0.7693239722998818
+        }
+      ]
+    },
+    {
+      "fame": 21,
+      "current": 123.47712125471966,
+      "targetLog": 123.40712125471967,
+      "tapScale": 0.75,
+      "incomeOffset": 0,
+      "loss": 0.007,
+      "candidateCount": 5796,
+      "feasibleCount": 143,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1321,
+          "passiveSeconds": 1651,
+          "speedup": 0.19987886129618415,
+          "products": 0.9745518860236406
+        },
+        {
+          "activeSeconds": 1328,
+          "passiveSeconds": 1562,
+          "speedup": 0.14980793854033292,
+          "products": 0.9687251269994958
+        },
+        {
+          "activeSeconds": 1326,
+          "passiveSeconds": 1566,
+          "speedup": 0.15325670498084287,
+          "products": 0.9790178135477983
+        },
+        {
+          "activeSeconds": 1375,
+          "passiveSeconds": 1571,
+          "speedup": 0.1247612985359644,
+          "products": 0.9611693147681942
+        },
+        {
+          "activeSeconds": 1314,
+          "passiveSeconds": 1560,
+          "speedup": 0.1576923076923077,
+          "products": 0.9766795039982055
+        }
+      ]
+    },
+    {
+      "fame": 22,
+      "current": 128.47712125471966,
+      "targetLog": 129.02712125471967,
+      "tapScale": 1.5,
+      "incomeOffset": 0,
+      "loss": 0.055,
+      "candidateCount": 5811,
+      "feasibleCount": 673,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1469,
+          "passiveSeconds": 1784,
+          "speedup": 0.17656950672645744,
+          "products": 0.87627028799651
+        },
+        {
+          "activeSeconds": 1445,
+          "passiveSeconds": 1785,
+          "speedup": 0.19047619047619047,
+          "products": 0.8696247145350124
+        },
+        {
+          "activeSeconds": 1411,
+          "passiveSeconds": 1763,
+          "speedup": 0.1996596710153148,
+          "products": 0.8759015336394411
+        },
+        {
+          "activeSeconds": 1418,
+          "passiveSeconds": 1755,
+          "speedup": 0.19202279202279204,
+          "products": 0.8676526591002457
+        },
+        {
+          "activeSeconds": 1453,
+          "passiveSeconds": 1778,
+          "speedup": 0.18278965129358826,
+          "products": 0.8732768972378745
+        }
+      ]
+    },
+    {
+      "fame": 23,
+      "current": 133.47712125471966,
+      "targetLog": 133.20712125471965,
+      "tapScale": 0.3,
+      "incomeOffset": 0,
+      "loss": 0.027,
+      "candidateCount": 4965,
+      "feasibleCount": 62,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1762,
+          "passiveSeconds": 2201,
+          "speedup": 0.19945479327578375,
+          "products": 0.8813016194593724
+        },
+        {
+          "activeSeconds": 1661,
+          "passiveSeconds": 2069,
+          "speedup": 0.19719671338811018,
+          "products": 0.8800580174988146
+        },
+        {
+          "activeSeconds": 1732,
+          "passiveSeconds": 2098,
+          "speedup": 0.17445185891325077,
+          "products": 0.878959589780962
+        },
+        {
+          "activeSeconds": 1728,
+          "passiveSeconds": 2090,
+          "speedup": 0.17320574162679425,
+          "products": 0.8737630184695478
+        },
+        {
+          "activeSeconds": 1743,
+          "passiveSeconds": 2122,
+          "speedup": 0.17860508953817156,
+          "products": 0.8784980174543315
+        }
+      ]
+    },
+    {
+      "fame": 24,
+      "current": 138.47712125471966,
+      "targetLog": 137.41712125471966,
+      "tapScale": 0.5,
+      "incomeOffset": 0,
+      "loss": 0.106,
+      "candidateCount": 5845,
+      "feasibleCount": 24,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1780,
+          "passiveSeconds": 2128,
+          "speedup": 0.1635338345864662,
+          "products": 0.6100410437972943
+        },
+        {
+          "activeSeconds": 1661,
+          "passiveSeconds": 2062,
+          "speedup": 0.19447138700290978,
+          "products": 0.6323032889842125
+        },
+        {
+          "activeSeconds": 1637,
+          "passiveSeconds": 2044,
+          "speedup": 0.19911937377690803,
+          "products": 0.64358971902254
+        },
+        {
+          "activeSeconds": 1767,
+          "passiveSeconds": 2161,
+          "speedup": 0.18232299861175383,
+          "products": 0.6194841056170709
+        },
+        {
+          "activeSeconds": 1661,
+          "passiveSeconds": 2034,
+          "speedup": 0.1833824975417896,
+          "products": 0.6458863714945487
+        }
+      ]
+    },
+    {
+      "fame": 25,
+      "found": false,
+      "candidateCount": 5141,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 3
+    },
+    {
+      "fame": 26,
+      "current": 148.47712125471966,
+      "targetLog": 148.47712125471966,
+      "tapScale": 0.3,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 5194,
+      "feasibleCount": 106,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1661,
+          "passiveSeconds": 1919,
+          "speedup": 0.13444502344971343,
+          "products": 0.9558269530229158
+        },
+        {
+          "activeSeconds": 1535,
+          "passiveSeconds": 1721,
+          "speedup": 0.10807669959325972,
+          "products": 0.9533781043495935
+        },
+        {
+          "activeSeconds": 1529,
+          "passiveSeconds": 1702,
+          "speedup": 0.1016451233842538,
+          "products": 0.9562554579527743
+        },
+        {
+          "activeSeconds": 1536,
+          "passiveSeconds": 1850,
+          "speedup": 0.16972972972972977,
+          "products": 0.9505856852145507
+        },
+        {
+          "activeSeconds": 1550,
+          "passiveSeconds": 1763,
+          "speedup": 0.12081678956324449,
+          "products": 0.9502543209871105
+        }
+      ]
+    },
+    {
+      "fame": 27,
+      "current": 153.47712125471966,
+      "targetLog": 153.59712125471967,
+      "tapScale": 3,
+      "incomeOffset": 0,
+      "loss": 0.012,
+      "candidateCount": 5129,
+      "feasibleCount": 66,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1309,
+          "passiveSeconds": 1621,
+          "speedup": 0.19247378161628625,
+          "products": 0.8020520879664128
+        },
+        {
+          "activeSeconds": 1375,
+          "passiveSeconds": 1621,
+          "speedup": 0.15175817396668723,
+          "products": 0.7870881877947172
+        },
+        {
+          "activeSeconds": 1318,
+          "passiveSeconds": 1601,
+          "speedup": 0.17676452217364147,
+          "products": 0.7946803784779475
+        },
+        {
+          "activeSeconds": 1283,
+          "passiveSeconds": 1601,
+          "speedup": 0.19862585883822614,
+          "products": 0.7951479035249376
+        },
+        {
+          "activeSeconds": 1399,
+          "passiveSeconds": 1621,
+          "speedup": 0.13695249845774216,
+          "products": 0.7780834153402756
+        }
+      ]
+    },
+    {
+      "fame": 28,
+      "current": 158.47712125471966,
+      "targetLog": 158.45712125471965,
+      "tapScale": 0.75,
+      "incomeOffset": 0,
+      "loss": 0.002,
+      "candidateCount": 6812,
+      "feasibleCount": 153,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1427,
+          "passiveSeconds": 1604,
+          "speedup": 0.11034912718204493,
+          "products": 0.9551758855467593
+        },
+        {
+          "activeSeconds": 1249,
+          "passiveSeconds": 1525,
+          "speedup": 0.180983606557377,
+          "products": 0.9786543422935053
+        },
+        {
+          "activeSeconds": 1359,
+          "passiveSeconds": 1581,
+          "speedup": 0.1404174573055028,
+          "products": 0.9558236726491419
+        },
+        {
+          "activeSeconds": 1420,
+          "passiveSeconds": 1581,
+          "speedup": 0.10183428209993672,
+          "products": 0.9516573225855417
+        },
+        {
+          "activeSeconds": 1357,
+          "passiveSeconds": 1556,
+          "speedup": 0.127892030848329,
+          "products": 0.9561114464606163
+        }
+      ]
+    },
+    {
+      "fame": 29,
+      "current": 163.47712125471966,
+      "targetLog": 163.47712125471966,
+      "tapScale": 5,
+      "incomeOffset": 0,
+      "loss": 0,
+      "candidateCount": 4913,
+      "feasibleCount": 106,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1121,
+          "passiveSeconds": 1310,
+          "speedup": 0.14427480916030533,
+          "products": 0.7796280607525056
+        },
+        {
+          "activeSeconds": 1121,
+          "passiveSeconds": 1291,
+          "speedup": 0.13168086754453912,
+          "products": 0.7834954208507917
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1302,
+          "speedup": 0.1697388632872504,
+          "products": 0.7731806688836012
+        },
+        {
+          "activeSeconds": 1081,
+          "passiveSeconds": 1287,
+          "speedup": 0.16006216006216,
+          "products": 0.7546500374048412
+        },
+        {
+          "activeSeconds": 1093,
+          "passiveSeconds": 1308,
+          "speedup": 0.16437308868501532,
+          "products": 0.6915240240383204
+        }
+      ]
+    },
+    {
+      "fame": 30,
+      "current": 168.47712125471966,
+      "targetLog": 168.44712125471966,
+      "tapScale": 1.5,
+      "incomeOffset": 0,
+      "loss": 0.003,
+      "candidateCount": 5170,
+      "feasibleCount": 77,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1323,
+          "passiveSeconds": 1581,
+          "speedup": 0.1631878557874763,
+          "products": 0.6932738027690175
+        },
+        {
+          "activeSeconds": 1288,
+          "passiveSeconds": 1444,
+          "speedup": 0.10803324099722988,
+          "products": 0.7145522129076609
+        },
+        {
+          "activeSeconds": 1307,
+          "passiveSeconds": 1606,
+          "speedup": 0.18617683686176834,
+          "products": 0.7279239964001764
+        },
+        {
+          "activeSeconds": 1286,
+          "passiveSeconds": 1561,
+          "speedup": 0.17616912235746318,
+          "products": 0.6788643845803366
+        },
+        {
+          "activeSeconds": 1307,
+          "passiveSeconds": 1547,
+          "speedup": 0.15513897866839044,
+          "products": 0.6851107856950627
+        }
+      ]
+    },
+    {
+      "fame": 31,
+      "current": 173.47712125471966,
+      "targetLog": 173.11712125471965,
+      "tapScale": 0.3,
+      "incomeOffset": 0,
+      "loss": 0.036000000000000004,
+      "candidateCount": 6391,
+      "feasibleCount": 71,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1631,
+          "passiveSeconds": 2008,
+          "speedup": 0.1877490039840638,
+          "products": 0.8351667175755018
+        },
+        {
+          "activeSeconds": 1527,
+          "passiveSeconds": 1762,
+          "speedup": 0.13337116912599323,
+          "products": 0.8219980808317219
+        },
+        {
+          "activeSeconds": 1547,
+          "passiveSeconds": 1916,
+          "speedup": 0.19258872651356995,
+          "products": 0.8459635986429102
+        },
+        {
+          "activeSeconds": 1539,
+          "passiveSeconds": 1809,
+          "speedup": 0.14925373134328357,
+          "products": 0.8299430438715337
+        },
+        {
+          "activeSeconds": 1561,
+          "passiveSeconds": 1823,
+          "speedup": 0.1437191442676906,
+          "products": 0.8552159329187383
+        }
+      ]
+    },
+    {
+      "fame": 32,
+      "current": 178.47712125471966,
+      "targetLog": 178.38712125471966,
+      "tapScale": 1,
+      "incomeOffset": 0,
+      "loss": 0.009000000000000001,
+      "candidateCount": 6854,
+      "feasibleCount": 13,
+      "bestPassingBuilds": 5,
+      "comparisons": [
+        {
+          "activeSeconds": 1536,
+          "passiveSeconds": 1771,
+          "speedup": 0.13269339356295873,
+          "products": 0.878343539202495
+        },
+        {
+          "activeSeconds": 1291,
+          "passiveSeconds": 1597,
+          "speedup": 0.19160926737633066,
+          "products": 0.8858768665283782
+        },
+        {
+          "activeSeconds": 1526,
+          "passiveSeconds": 1791,
+          "speedup": 0.14796203238414296,
+          "products": 0.8887157737794547
+        },
+        {
+          "activeSeconds": 1422,
+          "passiveSeconds": 1774,
+          "speedup": 0.19842164599774526,
+          "products": 0.8880645624454364
+        },
+        {
+          "activeSeconds": 1508,
+          "passiveSeconds": 1760,
+          "speedup": 0.1431818181818182,
+          "products": 0.8876383600653741
+        }
+      ]
+    },
+    {
+      "fame": 33,
+      "current": 183.47712125471966,
+      "targetLog": 183.58712125471968,
+      "tapScale": 0.03,
+      "incomeOffset": 0,
+      "loss": 0.011,
+      "candidateCount": 4933,
+      "feasibleCount": 12,
+      "bestPassingBuilds": 8,
+      "comparisons": [
+        {
+          "activeSeconds": 1712,
+          "passiveSeconds": 1981,
+          "speedup": 0.13579000504795558,
+          "products": 0.9992728365797479
+        },
+        {
+          "activeSeconds": 1521,
+          "passiveSeconds": 1773,
+          "speedup": 0.14213197969543145,
+          "products": 0.9995624460118011
+        },
+        {
+          "activeSeconds": 1546,
+          "passiveSeconds": 1901,
+          "speedup": 0.18674381904260917,
+          "products": 0.999359208778285
+        },
+        {
+          "activeSeconds": 1657,
+          "passiveSeconds": 1932,
+          "speedup": 0.14233954451345754,
+          "products": 0.9994476295139637
+        },
+        {
+          "activeSeconds": 1560,
+          "passiveSeconds": 1937,
+          "speedup": 0.19463087248322153,
+          "products": 0.9993873972900571
+        },
+        {
+          "activeSeconds": 1682,
+          "passiveSeconds": 1981,
+          "speedup": 0.1509338717819283,
+          "products": 0.9989393150172499
+        },
+        {
+          "activeSeconds": 1521,
+          "passiveSeconds": 1709,
+          "speedup": 0.11000585137507313,
+          "products": 0.9996543797041636
+        },
+        {
+          "activeSeconds": 975,
+          "passiveSeconds": 1161,
+          "speedup": 0.16020671834625322,
+          "products": 0.9996017767711441
+        }
+      ]
+    }
+  ]
+}

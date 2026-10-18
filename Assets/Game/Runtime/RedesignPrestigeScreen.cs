@@ -49,7 +49,8 @@ namespace RocketRaja
             if (!quote.Eligible) { var current = e.PreviewPrestige(); if (current.Eligible) quote = current; }
             string Cash(Amount n) => RedesignUiContext.Cash(n, full);
             fame.text = "Fame " + RedesignCardCopy.Count(s.fame, full) + " → " + RedesignCardCopy.Count(s.fame + quote.Fame, full) + "\nGuaranteed gain: " + RedesignCardCopy.Count(quote.Fame, full) +
-                "\nFame income multiplier ×" + RedesignUiContext.Number(ProgressionNumbers.FameMultiplier(s.fame), full) + " → ×" + RedesignUiContext.Number(quote.ResultingIncomeMultiplier, full);
+                "\nProduct Fame multiplier ×" + RedesignUiContext.Number(ProgressionNumbers.FameMultiplier(s.fame), full) + " → ×" + RedesignUiContext.Number(quote.ResultingIncomeMultiplier, full) +
+                "\nTap Fame multiplier ×" + RedesignUiContext.Number(ProgressionNumbers.TapFameMultiplier(s.fame), full) + " → ×" + RedesignUiContext.Number(quote.ResultingTapIncomeMultiplier, full);
             credits.text = RedesignCardCopy.Count(quote.Credits, full) + " free draw credits\n" + (s.completedPrestiges.IsZero ? "First prestige: exactly 3 credits once eligible." : "Run reward: " + RedesignCardCopy.Count(quote.RunCredits, full) + " · Catalogue bonus: " + quote.CatalogueCredits) +
                 "\nCard results are random. Unused credits persist." + (s.completedPrestiges.Value == 1 ? "\nSecond prestige: one-time gift of 100 KK." : "");
             thresholds.text = "Earned this run: " + Cash(s.eligibleEarnings) + "\nCurrent target: " + Cash(quote.CurrentTarget) + "\nNext run target: " + Cash(quote.NextTarget) +

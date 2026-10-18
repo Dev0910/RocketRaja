@@ -13,7 +13,7 @@ static partial class Program
         }
         var retained = RedesignState.Fresh(); retained.decorationStage = 5;
         Check(new RedesignEngine(data, retained, _ => { }).ShopAppearance == 5, "Durable decoration stage is a retained presentation floor");
-        var rich = RedesignState.Fresh(); rich.cash = Amount.Pow10(100); rich.products = Enumerable.Repeat(300, 8).ToArray(); rich.eligibleEarnings = rich.target;
+        var rich = RedesignState.Fresh(); rich.cash = Amount.Pow10(250); rich.products = Enumerable.Repeat(300, 8).ToArray(); rich.eligibleEarnings = rich.target;
         RedesignState disk = null; var engine = new RedesignEngine(data, rich, s => disk = Clone(s)); var review = engine.QuoteBuyAll();
         Check(engine.CommitBuyAll(review) && engine.ShopAppearance == 5 && Enumerable.Range(0, 8).All(p => engine.ProductAppearance(p) == 3), "One real batch crosses every shop and product milestone to the final state");
         engine = new RedesignEngine(data, disk, s => disk = Clone(s));

@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-19",
+  "scope": "HTML-only Home changes H2U-001 through H2U-005",
+  "syntax": "pass",
+  "rate_window_checks": [
+    {
+      "name": "Idle total equals automatic income",
+      "passed": true
+    },
+    {
+      "name": "One accepted tap adds its earnings",
+      "passed": true
+    },
+    {
+      "name": "Tap is included before one second",
+      "passed": true
+    },
+    {
+      "name": "Tap expires exactly at one second",
+      "passed": true
+    },
+    {
+      "name": "Multiple taps accumulate",
+      "passed": true
+    },
+    {
+      "name": "Older taps expire independently",
+      "passed": true
+    },
+    {
+      "name": "Combined rate settles back to automatic income",
+      "passed": true
+    },
+    {
+      "name": "Reset clears the previous fixture sample",
+      "passed": true
+    },
+    {
+      "name": "Removed visible hint and preserved live browser controls/binding",
+      "passed": true
+    }
+  ],
+  "browser": {
+    "viewport": {
+      "width": 964,
+      "height": 884
+    },
+    "hint_removed": true,
+    "tap_button_preserved": true,
+    "icon": "gold rising earnings chart",
+    "layout": "automatic/sec and per-tap/tap stacked left; combined/sec right",
+    "single_tap_total": "10.24K/sec → 13.67K/sec → 10.24K/sec",
+    "festival_rush": "direct activation; 20.48K/sec automatic and 4.29K/tap; no sheet",
+    "helping_hands": "direct activation; no sheet",
+    "bulk_order": "direct activation to cooldown; no sheet",
+    "locked_skills": "all three disabled in new fixture",
+    "save_error": "all three disabled",
+    "overflow": false,
+    "home_skill_metadata_actions": [
+      "ActivateSkill:0",
+      "ActivateSkill:1",
+      "ActivateSkill:2"
+    ],
+    "home_total_binding_present": true,
+    "visible_sheets": 0
+  },
+  "limits": [
+    "Browser fixture demonstration; no real economy, cash persistence or Unity execution.",
+    "Phone-size matrix has not been rerun.",
+    "Rolling combined rate includes frozen automatic income and accepted manual preview taps; skill-generated income is not simulated."
+  ],
+  "unity_inventory": "2026-10-19-home-unity-readonly.json"
+}

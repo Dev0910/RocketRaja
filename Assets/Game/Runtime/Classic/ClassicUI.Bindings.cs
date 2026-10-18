@@ -17,12 +17,13 @@ namespace RocketRaja.Classic
             Text("home-income",Cash(s.activeUntil[0]>s.now?e.NormalIncome()*e.PreviewSkill(0).power:e.NormalIncome()));Text("home-tap",Cash(e.TapPayout()));
             Text("home-goal",s.products[0]==0?"Stock Phuljhari · "+Cash(e.LevelQuote(0,1).cost):"Phuljhari · discover your next signature");
             Text("product-total","Automatic sales · "+Cash(e.NormalIncome())+"/s");Text("quantity",quantity==int.MaxValue?"Buy Max":"Buy ×"+quantity);Text("tap-quantity",tapQuantity==int.MaxValue?"Buy Max":"Buy ×"+tapQuantity);
-            Text("tap-row-title","Salesmanship  ·  Level "+s.tapLevel);Text("tap-row-income",Cash(e.TapPayout())+" per tap");Text("tap-row-cost",Cash(e.LevelQuote(-1,tapQuantity).cost)+"\nBuy ×"+e.LevelQuote(-1,tapQuantity).quantity);Enable("BuyLevels","-1",can&&e.LevelQuote(-1,tapQuantity).affordable);
-            Text("fame",Count(s.fame)+" Fame · ×"+ProgressionNumbers.FameMultiplier(s.fame)+" permanent income");
+            var tapQuote=e.LevelQuote(-1,LevelQuantity(-1));
+            Text("tap-row-title","Salesmanship  ·  Level "+s.tapLevel);Text("tap-row-income",Cash(e.TapPayout())+" per tap");Text("tap-row-cost",s.tapLevel>=Catalog.MaxLevel?"Max level":Cash(tapQuote.cost)+"\nBuy ×"+Math.Max(1,tapQuote.quantity));Enable("BuyLevels","-1",can&&tapQuote.affordable);
+            Text("fame",Count(s.fame)+" Fame · products ×"+ProgressionNumbers.FameMultiplier(s.fame)+" · taps ×"+ProgressionNumbers.TapFameMultiplier(s.fame));
             for(int i=0;i<8;i++)
             {
-                var row=products[i];var q=e.LevelQuote(i,quantity);int n=s.products[i];row.name.text=e.Data.Products[i].name;row.level.text="Lvl : "+n;row.income.text=Cash(e.ProductIncome(i))+"/s";
-                row.cost.text=Cash(q.cost)+"\n"+(!e.ProductAvailable(i)?"Own "+e.Data.Products[i-1].name:n==0?"Stock shelf":"Upgrade ×"+q.quantity);row.buy.interactable=can&&q.affordable;
+                var row=products[i];var q=e.LevelQuote(i,LevelQuantity(i));int n=s.products[i];row.name.text=e.Data.Products[i].name;row.level.text="Lvl : "+n;row.income.text=Cash(e.ProductIncome(i))+"/s";
+                row.cost.text=n>=Catalog.MaxLevel?"Max level":Cash(q.cost)+"\n"+(!e.ProductAvailable(i)?"Own "+e.Data.Products[i-1].name:n==0?"Stock shelf":"Upgrade ×"+Math.Max(1,q.quantity));row.buy.interactable=can&&q.affordable;
                 ((UnityEngine.UI.Image)row.buy.targetGraphic).sprite=row.buy.interactable?blueButton:disabledButton;
                 motion.Fill(row.progress,MilestoneProgress(n));shelfProducts[i].SetActive(n>0);
             }
@@ -43,7 +44,7 @@ namespace RocketRaja.Classic
             {
                 lastRevision=s.commandRevision.digits;var eligible=e.Data.Upgrades.Where(u=>e.Eligible(u.id)).OrderBy(u=>e.UpgradeCost(u.id)).ThenBy(u=>u.id,StringComparer.Ordinal).Take(10).ToArray();
                 BindUpgrades(nextUpgrades,eligible);Text("upgrade-count",s.upgrades.Count+" / "+e.Data.Upgrades.Count);
-                Text("upgrade-empty",eligible.Length==0?"Grow your products to unlock more upgrades.":"");RefreshCatalogue();
+                Text("upgrade-empty",eligible.Length==0?"All upgrades purchased this run.":"");RefreshCatalogue();
             }
             foreach(var row in nextUpgrades.Concat(catalogueRows))if(row.root.activeSelf&&e.Data.TryUpgrade(row.control.parameter,out _))
             {
@@ -54,8 +55,8 @@ namespace RocketRaja.Classic
         }
         static string TimeLabel(double value)=>TimeSpan.FromSeconds(Math.Max(0,value)).ToString(@"mm\:ss");
         string SkillState(int i)=>!Engine.SkillOwned(i)?"LOCKED":Engine.State.activeUntil[i]>Engine.State.now?"ACTIVE":Engine.State.readyAt[i]>Engine.State.now?"COOLDOWN":"READY";
-        static int NextMilestone(int level)=>level<25?25:level<50?50:(level/100+1)*100;
-        static float MilestoneProgress(int level){if(level>=100000)return 1;int previous=level<25?0:level<50?25:level<100?50:level/100*100;return (float)(level-previous)/(NextMilestone(level)-previous);}
+        static int NextMilestone(int level)=>EconomyBalance.NextMilestone(level);
+        static float MilestoneProgress(int level){if(level>=100000)return 1;int previous=EconomyBalance.PreviousMilestone(level);return (float)(level-previous)/(NextMilestone(level)-previous);}
         void BindUpgrades(ClassicUpgradeRow[] rows,CashUpgrade[] upgrades)
         {
             for(int i=0;i<rows.Length;i++)
@@ -87,15 +88,19 @@ namespace RocketRaja.Classic
             {
                 case "ProductDetail":
                     var p=e.Data.Products[product];int level=s.products[product],next=NextMilestone(level);Text("product-title",p.name);Text("product-detail-name",p.name);Text("product-detail-level","Lvl : "+level);Text("product-subtitle",RedesignProductArt.Label(e.ProductAppearance(product)));Picture("product-detail-art",progression?progression.ProductSprite(product):productArt[product]);
-                    Text("product-earnings","Earns "+Cash(e.ProductIncome(product))+" / second");Text("product-milestone",level>=100000?"All milestones reached":"Next improvement at Lvl "+next);Text("product-progress-label","Lvl "+Math.Min(next,100000));motion.Fill(images["product-progress"],MilestoneProgress(level));
-                    var group=e.Data.Upgrades.FirstOrDefault(u=>u.effect==CashEffect.Group&&u.group.Contains(product)&&!s.upgrades.Contains(u.id));
-                    if(group==null){Text("synergy-title","Collection complete");Text("synergy-copy","All collection upgrades for this product are owned.");Text("synergy-reward","");Text("synergy-progress-label","");motion.Fill(images["synergy-progress"],1);}
-                    else{int met=group.productRequirements.Count(r=>s.products[r.product]>=r.level);Text("synergy-title","Next collection bonus");Text("synergy-progress-label",met+" / "+group.productRequirements.Length+" products ready");motion.Fill(images["synergy-progress"],group.productRequirements.Length==0?1:(float)met/group.productRequirements.Length);Text("synergy-reward","Reward: +"+Math.Round((group.factor-1)*100)+"% income");Text("synergy-copy","Reach "+string.Join(", ",group.productRequirements.Select(r=>e.Data.Products[r.product].name+" at Lvl "+r.level))+". Buy this upgrade in Player to apply the bonus.");}break;
-                case "TapTraining":var q=e.PreviewLevels(-1,tapQuantity);Text("tap-detail","Level "+q.beforeLevel+" → "+q.afterLevel+"\nPer tap "+Cash(q.tapBefore)+" → "+Cash(q.tapAfter));Text("tap-buy",Cash(q.quote.cost)+" · Train ×"+q.quote.quantity);Enable("BuyLevels","-1",driver.Session.CanMutate&&q.quote.affordable);break;
+                    Text("product-earnings","Earns "+Cash(e.ProductIncome(product))+" / second");Text("product-milestone",level>=100000?"All milestones reached":"Lvl "+next+" · profit ×"+EconomyBalance.MilestoneReward(next));Text("product-progress-label","Lvl "+(next==0?Catalog.MaxLevel:next));motion.Fill(images["product-progress"],MilestoneProgress(level));
+                    int minimum=s.products.Min(), synergy=EconomyBalance.NextSynergy(minimum);
+                    Text("synergy-title",synergy==0?"Synergy complete":"Next synergy bonus");
+                    Text("synergy-progress-label",synergy==0?"Complete":s.products.Count(n=>n>=synergy)+"/8 products at Lvl "+synergy);
+                    motion.Fill(images["synergy-progress"],synergy==0?1:(float)s.products.Count(n=>n>=synergy)/8);
+                    Text("synergy-reward","All products: ×"+EconomyBalance.SynergyMultiplier(minimum)+(synergy==0?"":" → another ×2"));
+                    Text("synergy-copy",synergy==0?"All synergy milestones reached.":string.Join(", ",Enumerable.Range(0,8).Where(i=>s.products[i]<synergy).Select(i=>e.Data.Products[i].name+" ("+s.products[i]+")")));
+                    break;
+                case "TapTraining":var q=e.PreviewLevels(-1,LevelQuantity(-1));Text("tap-detail","Level "+q.beforeLevel+" → "+q.afterLevel+"\nPer tap "+Cash(q.tapBefore)+" → "+Cash(q.tapAfter)+"\n"+(q.nextMilestone==0?"All milestones reached":"Next: Lvl "+q.nextMilestone+" · ×"+EconomyBalance.MilestoneReward(q.nextMilestone)));Text("tap-buy",s.tapLevel>=Catalog.MaxLevel?"Max level":Cash(q.quote.cost)+" · Train ×"+Math.Max(1,q.quote.quantity));Enable("BuyLevels","-1",driver.Session.CanMutate&&q.quote.affordable);break;
                 case "SkillDetail":var sk=e.PreviewSkill(skill);Text("skill-title",SkillNames[skill]);Picture("skill-art",skillArt[skill]);Text("skill-state",SkillState(skill));Text("skill-copy",skill==0?"×"+sk.power+" automatic sales for "+sk.duration+"s. Manual and Helping Hands taps receive ×1.25.":skill==1?sk.power+" automatic taps each second for "+sk.duration+"s.":"Pays "+Cash(sk.orderPayout)+" immediately ("+sk.power+" seconds of normal sales).");Text("skill-timing","Cooldown · "+Math.Round(sk.cooldown)+" seconds\nNormal sales are the base for tap links and Bulk Order.");Text("skill-activate",SkillState(skill)=="READY"?"Activate skill":SkillState(skill));Enable("ActivateSkill","",driver.Session.CanMutate&&SkillState(skill)=="READY");break;
                 case "CardDetail":var c=e.Data.Cards[selectedCard];int tier=(int)c.tier;Picture("full-outer",outerFrames[tier]);Picture("full-inner",innerFrames[tier]);Picture("full-art",cardArt[selectedCard]);Text("full-name",c.name);Text("full-level","Lvl "+Count(s.cardLevels[selectedCard]));Text("full-rarity","· "+c.tier.ToString().ToUpperInvariant()+" ·");Text("full-benefit",RedesignCardCopy.Effect(c,s.cardLevels[selectedCard]));Text("full-flavor",c.effect==CardEffect.ProductProfit?"A brighter display. A busier shop.":c.effect==CardEffect.ProductCost?"Stock up wisely. Grow your shop.":"A little talent. A brighter festival.");break;
                 case "DrawReveal":var r=s.reveal;if(!e.Data.TryCard(r.cardId,out int ci))break;var card=e.Data.Cards[ci];Text("reveal-progress",r.batch!=null&&r.batch.Length>0?"Card "+(r.batchIndex+1)+" / "+r.batch.Length:"Your card awaits");Text("reveal-name",card.name);Text("reveal-level","Lvl "+Count(r.after));Text("reveal-rarity",card.tier.ToString());Picture("reveal-frame",miniFrames[(int)card.tier]);Picture("reveal-art",cardArt[ci]);Text("reveal-result",r.before.IsZero?"New card discovered!":"Level "+Count(r.before)+" → "+Count(r.after));Text("reveal-effect",RedesignCardCopy.Effect(card,r.after));Text("reveal-continue",r.batch!=null&&r.batchIndex+1<r.batch.Length?"Next card":"Continue");break;
-                case "Prestige":var f=prestige??e.PreviewPrestige();Text("prestige-reward",f.Eligible?"+"+Count(f.Fame)+" Fame":Cash(s.eligibleEarnings)+" earned");Text("prestige-copy","Run target · "+Cash(f.CurrentTarget)+"\nPermanent income → ×"+f.ResultingIncomeMultiplier+"\n"+Count(f.Credits)+" free Talent draws\nNext run target · "+Cash(f.NextTarget));Enable("Prestige","",driver.Session.CanMutate&&e.CanCommitPrestige(f));break;
+                case "Prestige":var f=prestige??e.PreviewPrestige();Text("prestige-reward",f.Eligible?"+"+Count(f.Fame)+" Fame":Cash(s.eligibleEarnings)+" earned");Text("prestige-copy","Run target · "+Cash(f.CurrentTarget)+"\nProducts ×"+f.ResultingIncomeMultiplier+" · taps ×"+f.ResultingTapIncomeMultiplier+"\n"+Count(f.Credits)+" free Talent draws\nNext run target · "+Cash(f.NextTarget));Enable("Prestige","",driver.Session.CanMutate&&e.CanCommitPrestige(f));break;
                 case "Settings":Text("setting-music",s.music?"ON":"OFF");Text("setting-sound",s.sound?"ON":"OFF");Text("setting-motion",s.reducedMotion?"ON":"OFF");break;
                 case "Offline":Text("offline-amount",Cash(s.offline.amount));Text("offline-copy","Already added to your cash\nAway for "+TimeSpan.FromSeconds(s.offline.absence).TotalHours.ToString("0.0")+" hours\nCredited "+TimeSpan.FromSeconds(s.offline.creditedSeconds).TotalHours.ToString("0.0")+" hours at "+(s.offline.efficiency*100).ToString("0")+"% efficiency.");break;
                 case "Statistics":Text("stats-run","Earned this run: "+Cash(s.eligibleEarnings)+"\nNormal sales: "+Cash(e.NormalIncome())+" /s\nManual taps: "+Count(s.manualTaps)+"\nTap payout: "+Cash(e.TapPayout())+"\nOwned upgrades: "+s.upgrades.Count+" / 1,000");Text("stats-lifetime","Prestiges: "+Count(s.completedPrestiges)+"\nFame: "+Count(s.fame)+"\nDiscovered upgrades: "+s.UniqueCount+" / 1,000\nTalent cards: "+s.cardLevels.Count(n=>!n.IsZero)+" / 28\nLifetime earnings: "+Cash(s.lifetimeEarnings));break;

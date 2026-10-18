@@ -1,10 +1,12 @@
 # Rocket Raja: economy specification v1
 
-1 October 2026. Numerical planning candidate; no Unity implementation.
+Current economy: [Faster-start Economy](Faster-start%20Economy.md). Its rules supersede the numerical values and completion targets below.
+
+Updated 7 October 2026 to match the accepted Unity implementation. [Current Implementation Design](Current%20Implementation%20Design.md) defines the current presentation and supersedes earlier interaction drafts. The original simulation is historical, not current pacing validation.
 
 This document supplies the previously missing numerical definitions. It is the current source for candidate values, alongside [Premium Economy v1](Premium%20Economy%20v1.md), the [priced catalogue](1000%20Unlockables%20Catalogue.md), and [simulation report](Economy%20Simulation%20Report%20v1.md). Earlier numerical drafts remain design history where they differ.
 
-**Selected direction:** cash-only catalogue progression, India/INR first, and the **x6 minimum opening prestige bonus**. Catalogue access depends on cash, ownership, levels, and prior upgrades; it never requires a completed-prestige count. This specification and the main catalogue now use the selected cash-only price/Fame baseline. Numerical coefficients remain subject to prototype tuning; the rejected prestige-gated option is historical only.
+**Selected direction:** cash-only catalogue progression, India/INR first, and the **x6 minimum opening prestige bonus**. Buy any affordable cash entry not already owned this run. Product ownership, levels, family counts, prior upgrades and prestige counts do not gate cash purchases. The selected cash-only price/Fame coefficients remain in use.
 
 ## 1. Boundaries and units
 
@@ -69,11 +71,11 @@ manual payout per tap = C × (B + P × A × M/2)
 Helping Hands payout per tap = C × (B + 0.25 × P × A × M/2)
 ```
 
-Here j is owned TD count and k is owned TL count. A raw TD multiplier affects B only; its count also advances M. The benchmark uses two credited manual taps/second during tapping windows. Recommend a three-taps/second ceiling: permit one full-value tap per 1/3 second, with no accumulated allowance while idle. UI buttons never send gameplay taps. Input accessibility and device behavior still need a prototype; a high tap rate is not required.
+Here j is owned TD count and k is the highest purchased TL rank. A raw TD multiplier affects B only; its count also advances M. Every accepted manual gameplay tap earns full value, with no cooldown or per-second ceiling. The historical benchmark's two taps/second is a simulation input, not an input restriction. UI buttons never send gameplay taps.
 
 ## 4. All 1,000 cash effects
 
-Every catalogue row now includes a numerical base price, complete effect or cumulative target, and concrete prerequisites. IDs and counts remain unchanged.
+Every catalogue row includes a numerical base price, complete effect or cumulative target, and legacy prerequisite metadata that does not gate runtime purchases. IDs and counts remain unchanged.
 
 | Type | Count | v1 numerical effect |
 |---|---:|---|
@@ -85,10 +87,10 @@ Every catalogue row now includes a numerical base price, complete effect or cumu
 | GP | 80 | Normal products and independent tap B x1.10, once per entry. |
 | UC | 32 | Total run named-upgrade discount becomes 0.35 × rank/32. |
 | SK | 72 | The exact power/duration/cooldown values below. Includes three base unlocks. |
-| XL | 32 | Each purchase multiplies its named beneficiary by 1.50. Source level gates: 25 / 100 / 200 / 300 by rank; both families owned. |
-| PF | 16 | Each purchase multiplies every listed family by 1.30. Every listed family must meet 25 / 100 / 200 / 300 levels by rank. |
+| XL | 32 | Each purchase multiplies its named beneficiary by 1.50. No source-level or family-ownership gate. |
+| PF | 16 | Each purchase multiplies every listed family by 1.30. No family-level or ownership gate. |
 
-Cumulative discount targets replace the previous target for that chain; do not multiply all historical target percentages together. Multiply remaining factors between independent card and run sources. Product/tap maximum combined discount approaches 61%; named-cash discount approaches 67.5%. These are consequences of the chosen budgets, not hard clamps that erase later duplicate effects.
+Cumulative effects use the strongest purchased rank, including out-of-order purchases: PC/TC/UC use the largest discount; TL and skill power/duration/cooldown use the highest purchased rank. Lower ranks never downgrade these effects. In the cost formulas, PC/TC/UC refer to the highest purchased rank, not purchase count. Do not multiply historical discount targets together. Multiply remaining factors between independent card and run sources. Product/tap maximum combined discount approaches 61%; named-cash discount approaches 67.5%.
 
 XL links are PHU→ANA→CHA→ROC→SMC→STR→AER→BOX→PHU. PF membership is explicit per row; the MIX partner changes across its four entries. No income recursively depends on another product's already-boosted income.
 
@@ -132,7 +134,7 @@ Every price key is concrete in the main catalogue. The table shows rounded autho
 | 19 | 46 | 5.23745e+31 | 2.09498e+32 |
 | 20 | 58 | 1.62361e+33 | 6.49443e+33 |
 
-**No catalogue entry has a prestige-count requirement.** If the player can pay and meets the row's product, level, and prior-upgrade requirements, they can buy it. Prestige remains valuable through guaranteed income and free cards; a deep run may reach later entries before a frequently resetting player.
+**No catalogue entry has product, level, family-count, prior-upgrade or prestige-count requirements.** If the player can pay and does not own the entry this run, they can buy it. Prestige remains valuable through guaranteed income and free cards.
 
 U counts different cash entries ever purchased and determines the lifetime draw bonus. N counts completed prestiges and still advances the next-run earnings requirement T; it does not unlock or lock catalogue sections.
 
@@ -142,7 +144,7 @@ Band 1 is a cheap introductory set; band 2 starts much higher. The sustained ben
 
 ## 6. Skills
 
-Base cash skill unlocks are inside the 1,000 entries and reset each run. Skill cards persist but never unlock a skill for free. Cooldown starts at activation. Recommend that repurchased base skills start ready; no active skill carries through prestige.
+Skill power entries are inside the 1,000 purchases and reset each run. Any purchased power rank unlocks the skill, including a higher rank bought first; duration/cooldown entries alone do not. Skill cards never unlock skills for free. Cooldown starts at activation. The first owned power rank starts ready; buying lower ranks afterward does not reset timing or reduce power. No active skill carries through prestige.
 
 | Skill | Purchased power/payout ranks | Base duration | Base cooldown |
 |---|---|---:|---:|
@@ -206,7 +208,9 @@ Use the departure normal product rate, current card efficiency/storage, and elap
 
 Recommended reset: clear cash, product/tap levels, named run purchases, skill access, active effects, and run earnings; grant the manual opening cash and apply permanent gains. Retain cards, Fame, Kaju Katli, unused credits, lifetime unique purchases, completed prestiges, taught topics, and earned shop decorations. Product displays rebuild and earned decorations remain, as confirmed. The starting grant and manual first purchase are also confirmed; other detailed presentation behaviors remain prototype defaults.
 
-## 10. Session policies and interpretation
+## 10. Historical session policies and interpretation
+
+These policies and results predate unrestricted upgrades, unlimited manual taps and Classic's discounted 5× pulls. They are retained as historical benchmarks, not current balance validation.
 
 First-day mixed benchmark: visits at launch, +2h, +4h, +6h, +8h with 15/5/5/5/10 active minutes, totalling 40. This replaces the earlier 24-minute test proposal. The 15–25-minute user baseline applies after opening day; it did not prescribe a 24-minute opening.
 
@@ -214,8 +218,8 @@ Regular benchmark: 4/4/12-minute visits starting at day start, +8h, +14h. The ov
 
 The simulation assumes competent manual use of Buy All and quantity controls. It is not an implementation of auto-buy. Longer absences, reading time, misclicks, and human preferences can change results. See the report for variants and exact model limitations.
 
-## 11. Planning versus release readiness
+## 11. Implementation and release readiness
 
-The numerical candidate is now specified and executable outside Unity. Cash-only catalogue access is selected, and its complete numerical baseline is ready to review. It is not a play-tested or shipping economy.
+The Unity implementation is the accepted design as of 7 October 2026. See [Current Implementation Design](Current%20Implementation%20Design.md) for Classic browsing, immediate global Buy All, disabled notices and 1×/5× payment selection. Catalogue values and the formulas above remain in use.
 
-No mandatory design discussion items remain from the latest review. Use the remaining UX recommendations as prototype defaults in [Planning Decisions and Review v1](Planning%20Decisions%20and%20Review%20v1.md). During a separately authorized implementation phase, verify real UI timing, numeric boundaries, save migration, and platform purchase integration. Those activities were not performed during this planning-only work.
+Historical simulation timings require revalidation for the accepted access and input rules. Live billing, account-service acceptance, device coverage and player balance observation remain tracked in [Final Release TODO](Final%20Release%20TODO.md).

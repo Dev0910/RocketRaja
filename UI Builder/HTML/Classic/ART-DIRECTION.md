@@ -1,5 +1,68 @@
 # Classic UI / current functionality — candidate 1
 
+## Selected Hero skill detail card — 19 October 2026
+
+The user selected [Hero skill card](../../Reference%20Images/SkillDetail/Popup%20Variants/2026-10-19/01-hero-skill-card.png), requested implementation in the ongoing HTML preview, and explicitly removed **View skill upgrades**. The reference selection is confirmed; HTML remains a candidate awaiting review. Each individual skill now has a large painted medallion, gold/grey live ring and status, two skill-specific effect tiles, duration/cooldown panel, cooldown explanation, one activation button and close X. The large generic guidance banner and old overlapping information boxes are replaced. The Skills list and its Details links remain connected.
+
+`skill-hero.css` scopes the new presentation to SkillDetail. Existing local painted icons, fonts and paper texture are reused; no full-screen reference image is placed behind controls. Festival Rush shows its sales and tap multipliers; Helping Hands shows its automatic-tap rate and tap-linked effect; Bulk Order shows normal-sales seconds and its exported instant payout. Timers and command guards reuse the existing skill owners. Embedded `skillHeroCard` binding describes the pending native adaptation, including removal of upgrade navigation. No core values, Unity files or saves were changed. Handoff: H2U-011 in the [transfer tracker](../../../Documentation/Implementation/Classic-HTML-to-Unity-TODO.md).
+
+## Selected Skills Quick action list — 19 October 2026
+
+The user selected [generated concept 1](../../Reference%20Images/Skills/Popup%20Variants/2026-10-19/01-quick-action-list.png) and explicitly requested HTML implementation of the existing popup. The reference selection is confirmed; the resulting HTML is a candidate awaiting review. Three stacked rows replace the old oversized guidance/utility cards. Each has independent painted art, live status/effect/timing, direct Activate and Details. The header has a close X and subtitle; the compact footer explains the prestige reset. No new raster art was generated for implementation; existing local icons, native fonts and `Home/assets/gouache-paper.svg` are reused.
+
+| Element/state | Approved intent + source | Unity evidence | HTML evidence | Difference | Treatment |
+| --- | --- | --- | --- | --- | --- |
+| Three skill rows | User-selected Quick action list | Existing Classic Skills dialog authoring | `skills-popup.css`, `skills()` | New editable composition and direct actions | H2U-010; native adaptation pending |
+| Effects, duration, cooldown | Current core-exported skill data | `RedesignEngine.PreviewSkill` | Existing `fixtures.js`, `skillEffect`, `skillTiming` | No economy changes | Bind live values; fixture-only browser |
+| Activation and ready/locked guards | Existing selected direct activation | `RedesignEngine.ActivateSkill`, save/input ownership | Existing action metadata; per-row Activate controls | Additional presentation triggers | Native action adaptation pending |
+| Gold duration / grey cooldown | Existing H2U-007 | `activeUntil`, `readyAt` | Shared `skillPresentation`, `tickSkills`, per-row SVG ring | Same clocks in Home and popup | No independent gameplay timer |
+| Details, close and focus return | Selected reference and existing modal history | Existing Classic UI navigation owners | `Navigate`, `Close`, existing focus restoration | Compact note replaces Back and oversized guidance | Browser checked; native adaptation pending |
+
+All three ready rows fit without scrolling at 360×540, 360×640, 390×844 and 450×916, with buttons at least 48 px high. Direct activation, countdown, Bulk Order cooldown, Details/back, close/focus, locked and save-error cases were checked. Stable skill keys, action declarations and a new `skillsQuickList` binding remain in the single `unity-metadata` contract. Captures and check results are linked under H2U-010 in the [transfer tracker](../../../Documentation/Implementation/Classic-HTML-to-Unity-TODO.md). Unity remains read-only.
+
+## Home browser-comment revision — 19 October 2026
+
+Player follow-up: Stats and Skills now show only their icons/labels, preserving their button hit areas. Upgrade purchase buttons use a consistent right inset and border-box sizing so they remain inside their row frames, with text width reserved alongside them. The shared upgrade-row rule also applies in the catalogue. See H2U-008–009 in the tracker; Unity is unchanged.
+
+Latest follow-up: centered the shop name inside its painted plaque and added gold ready rings, draining gold duration clocks, grey cooldown rings/icons, live mm:ss labels and automatic return to ready. Each skill uses the exported native duration/cooldown; instant Bulk Order starts in cooldown. Cooldown deadlines are measured from activation, matching the existing engine. These presentation clocks grant no rewards or persistent progress. See H2U-006–007 in the linked tracker.
+
+After the matching baseline below, the user requested seven Home edits: remove the visible tap strip; replace the income coin stack with a gold earnings chart; use compact `/sec` and `/tap` values without the extra descriptions; stack those source rates on the left and show a combined rate on the right; and activate ready Home skills directly without a detail popup. These HTML changes are implemented and awaiting review. The combined rate samples manual preview tap earnings over the preceding second against the exported automatic-income rate. The browser remains a disposable fixture demonstration.
+
+The five native follow-up items, metric definition, checks and screenshot are recorded in [Classic HTML → Unity TODO](../../../Documentation/Implementation/Classic-HTML-to-Unity-TODO.md). The saved matching baseline remains unchanged; these latest HTML changes have not been brought into Unity.
+
+## Match the current Unity presentation — 19 October 2026
+
+Baseline user direction: **compare HTML with the current Unity game, make them look the same, and change only HTML**. The current saved Unity presentation is the authority for that baseline revision. This supersedes the compact painted header and other HTML-only visual changes described below. The earlier Gemini art pass remains reverted.
+
+The HTML now retains the complete stall on every tab, follows `ClassicLayout.Apply` at a 360-unit Canvas width, and uses Unity's actual icons, nine-sliced surfaces and fonts. The Home income/skills placement, native tap strip, Player/Products rows, Legacy frames, full cards, modal styling, guidance readers and production-disabled Shop follow their native owners. Product looks use the exact imported texture coordinates, including the Resources atlases' 1254→1024 NPOT scaling. Decorations follow the existing native thresholds. No Unity file was edited or imported.
+
+| Element/state | Unity evidence | HTML treatment and evidence |
+| --- | --- | --- |
+| Persistent stall, panel split and 64-unit navigation | `ClassicLayout.cs`, `BuildClassicPanels.cs`, saved `Main.unity` | `parity/native.css`; geometry checked at four phone sizes |
+| Art, fonts, borders and progressed merchandise | Existing PNG/TTF files, `.meta` PPU/NPOT settings and saved Sprite regions | Read-only copies/crops in `parity/assets`; `prepare_assets.py` writes only here |
+| Guidance and production Shop | `ClassicGuidance.cs`, saved scene topics, `ClassicUI.Bindings.cs` | Native copy, memory-only tip acknowledgements, disabled Unavailable pack buttons and no sample prices |
+| Cards and utility sheets | Saved native hierarchy and `BuildClassicDialogs.cs` | Native proportions, font files, footer ordering and presentation |
+| Startup/guest welcome | Current Bootstrap Game View, 1080×2400, captured read-only in Edit Mode | `parity/startup.css`; [side-by-side comparison](parity/renders/Bootstrap-comparison.png) |
+| Unity preservation | Before/after SHA-256 for Assets, Packages and ProjectSettings | [1,385 files unchanged](parity/unity-readonly-check.json); no additions or removals |
+
+Unity was stopped with a clean Bootstrap scene throughout. Main was compared with its current saved scene/layout/runtime presentation source and the existing native captures, without opening Main, entering Play Mode or loading a player's save. The startup comparison is a fresh screenshot of the current editor Game View. Its HTML status panel matches the native 1080×2400 rectangle `(49,1469,982,864)` to below 0.05 pixels. Font rasterization naturally differs between TextMeshPro and the browser.
+
+The browser continues to use the existing disposable exported fixtures, not the player's live cash, ownership, learned tips or account. No economy, content, save, authentication or store service was changed. Normal account entry uses the native startup presentation; additional review-only fixture conditions remain illustrative. The embedded functionality metadata is retained, with guidance owners and this reverse comparison recorded. Visual review remains candidate status.
+
+See [the comparison notes](parity/README.md), [HTML checks](parity/html-checks.json) and captures in `parity/renders/`. The preceding HTML source files are backed up in `parity/before/`. Do not run the historical HTML builder; the current editable source is still this package.
+
+## Current authoring and UI review — 16 October 2026
+
+The current `index.html`, `classic.css`, `classic.js`, `motion.css`, and `motion.js` are the editable Classic presentation source. Preserve the existing exported `content.js` and `fixtures.js` when polishing the interface. The historical generation steps below describe earlier revisions: **do not run `Tools/ClassicUiPreview/build.cjs` to rebuild this version**. It reads the removed `HTML/Player/player.html` and would replace later HTML changes. No deleted source page needs to be restored.
+
+For this UI goal, the user explicitly delegated wireframe and art-reference confirmation to three Audit/Fix/Review agents, all `gpt-6.1-sol` at high effort. This delegation is not final user visual approval. The HTML remains a candidate; Unity, backend, game rules, content, and economy are outside this presentation revision.
+
+The persistent screen, component, state, finding, and verification ledger is [Classic goal coverage](../../Reviews/ClassicGoal/COVERAGE.md), with screenshots and machine-readable evidence beside it. Existing product/card/icon artwork is retained unless that ledger records a specific replacement.
+
+This revision compacts the painted shop only while a tab is expanded, keeps artwork and live signage in the same width-based coordinate system, adds overflow cues and phone-local feedback, and improves popup dismissal, validation, focus and navigation states. Contextual upgrade lists match their quoted scope; the first-stock prompt leads to the existing Products purchase; stale quotes explain their guard before the list. All shelf hit areas are at least 48 logical pixels without overlapping each other or the stall tap area. Separate shelf visual layers preserve the original artwork coordinates.
+
+All existing raster artwork and exported content/fixture files are retained. The R5 header correction has zero decoded Home pixel changes at all four target sizes. Browser results and screenshots establish this editable HTML candidate only; final user acceptance and any native Unity reconstruction remain separate.
+
 ## Home revision — 6 October 2026
 
 At the user's request, removed the Home-only “Skill guide / While away / Shop stats” links and anchored the three skill icons, names and status labels at the bottom of the Home panel, directly above the four navigation tabs. Existing destination screens remain accessible through their other routes and review controls. HTML revision only; visual approval and Unity reconstruction remain pending.
@@ -112,3 +175,15 @@ The Classic HTML prototype now has a shared motion layer in motion.js and motion
 - Performance: transient particle groups are capped, removed after completion, and cancelled when motion is disabled. Hover effects apply only to mouse-like devices; undiscovered cards stay disabled.
 
 Validation: node Tools/ClassicUiPreview/motion.cjs passed 37 checks. Report: renders/motion-report.json. Checked 390x844 and 360x540 layouts. HTML review only.
+
+
+## Shared popup backdrop dismissal
+
+Click or tap outside the top popup card to close it and restore the previous popup or invoking screen with focus. Inside clicks remain interactive; the dismissal event cannot activate the stall or underlying navigation. Existing mandatory save-recovery choice guards remain. HTML revision H2U-012; Unity transfer is tracked separately.
+
+
+## All-popup generated-reference refresh — 19 October 2026
+
+Applied the user-directed chatgpt-ui-to-html pass to all 29 existing popup routes. Generated 26 distinct new ChatGPT image_gen references; Account shares Welcome, while Skills and SkillDetail preserve the previously selected list/Hero references. The shared local transparent painted frame, new Settings symbols, semantic flowing text, illustrated panels and readable action hierarchy carry the cream/cobalt/gold direction throughout. All action/parameter identities are retained except the expressly removed Settings bottom Back button. Outside close and required recovery guards remain.
+
+References, exact prompts, responsive captures and comparison gallery: `../../Reference Images/PopupRefresh/2026-10-19/README.md`. HTML is awaiting visual review. H2U-013 tracks the separate Unity transfer.

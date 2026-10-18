@@ -41,10 +41,7 @@ namespace RocketRaja
         }
         public static string Requirements(CashUpgrade item, RedesignCatalog catalog)
         {
-            string text = item.requirementText;
-            foreach (string id in item.prerequisites)
-                if (catalog.TryUpgrade(id, out int i)) text = text.Replace(id, catalog.Upgrades[i].name);
-            return text;
+            return "Purchase with cash. No other requirements.";
         }
         public static string Effect(CashUpgrade item, RedesignCatalog catalog)
         {
@@ -53,11 +50,11 @@ namespace RocketRaja
             {
                 case CashEffect.ProductProfit: return catalog.Products[item.target].name + " income ×" + factor;
                 case CashEffect.ProductCost: return catalog.Products[item.target].name + " level prices ×" + factor + " of run base";
-                case CashEffect.TapDirect: return "Direct tap profit ×" + factor + "; improves tap mastery";
+                case CashEffect.TapDirect: return "Tap profit ×" + factor;
                 case CashEffect.TapLinked: return "Add more normal shop income to each tap";
                 case CashEffect.TapCost: return "Tap level prices ×" + factor + " of run base";
-                case CashEffect.GlobalProfit: return "All normal product income ×" + factor;
-                case CashEffect.UpgradeCost: return "Cash upgrade prices ×" + factor + " of base";
+                case CashEffect.GlobalProfit: return "Global profit ×" + factor;
+                case CashEffect.UpgradeCost: return "Upgrade Price Discount: pay ×" + factor + " of base";
                 case CashEffect.SkillPower:
                     double power = RedesignCatalog.SkillPower[item.target][item.rank - 1];
                     return item.target == 0 ? "Rush product income ×" + power : item.target == 1 ? "Helping Hands: " + power + " taps/s" : "Bulk Order: " + power + " seconds of normal sales";

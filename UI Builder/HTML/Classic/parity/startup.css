@@ -1,0 +1,25 @@
+@font-face{font-family:'Native Brand';src:url('assets/fonts/brand.ttf') format('truetype');font-weight:800;font-display:swap}
+html body .app .modal-layer:is([data-screen=Welcome],[data-screen=Account]){padding:0;background:none}
+html body .app .modal-layer:is([data-screen=Welcome],[data-screen=Account]) .modal-card{position:absolute;inset:0;width:100%;height:100%;max-height:none;border-radius:0;box-shadow:none}
+.modal-layer:is([data-screen=Welcome],[data-screen=Account]) :is(.modal-head,.modal-footer){display:none!important}
+html body .app .modal-layer:is([data-screen=Welcome],[data-screen=Account]) .modal-body{position:absolute;inset:0;padding:0;overflow:hidden}
+.native-startup{--b:calc(var(--s) / 3);position:absolute;inset:0;isolation:isolate;background:#23333b;color:#173a45;font-family:var(--font-ui)}
+.native-startup>.startup-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
+.native-brand{position:absolute;top:calc(42px * var(--b));left:calc(49px * var(--b));right:calc(49px * var(--b));height:calc(280px * var(--b));text-align:center}
+.native-brand>.diamond{position:absolute;top:calc(14px * var(--b));left:calc(50% - 12px * var(--b));width:calc(24px * var(--b));height:calc(24px * var(--b));background:#c88a2c;transform:rotate(45deg)}
+.native-brand h1{position:absolute;top:calc(42px * var(--b));height:calc(185px * var(--b));width:100%;margin:0;display:flex;align-items:center;justify-content:center;font:800 calc(124px * var(--b))/1 'Native Brand',serif;white-space:nowrap;color:#7d1025}
+.native-brand>p{position:absolute;top:calc(223px * var(--b));height:calc(47px * var(--b));width:100%;margin:0;display:flex;align-items:center;justify-content:center;font-size:calc(30px * var(--b));font-weight:800;white-space:nowrap}
+.native-startup-card{position:absolute;left:calc(49px * var(--b));right:calc(49px * var(--b));bottom:calc(67px * var(--b));height:calc(864px * var(--b));background:#fff3db;border:0;box-shadow:inset 0 0 0 calc(4px * var(--b)) #c88a2c;border-radius:calc(24px * var(--b));padding:calc(36px * var(--b)) calc(65px * var(--b)) calc(30px * var(--b));display:grid;grid-template-rows:86fr 22fr 112fr 144fr 144fr 72fr 110fr;gap:calc(18px * var(--b));text-align:center}
+.native-startup-card>h2{font:800 calc(66px * var(--b))/1 'Native Brand',serif;color:#7d1025;white-space:nowrap;margin:0;display:flex;align-items:center;justify-content:center}
+.startup-divider{height:100%;position:relative}.startup-divider:before{content:'';position:absolute;left:22%;right:22%;top:50%;height:calc(2px * var(--b));background:#c88a2c}.startup-divider:after{content:'';position:absolute;left:calc(50% - 9px * var(--b));top:calc(50% - 9px * var(--b));width:calc(18px * var(--b));height:calc(18px * var(--b));background:#c88a2c;transform:rotate(45deg)}
+.native-startup-card>p{font-size:calc(39px * var(--b));line-height:1.25;display:flex;align-items:center;justify-content:center;margin:0}
+html body .app .native-startup-card>.startup-button{position:relative;width:100%;height:100%;min-height:0;background:white;border:calc(3px * var(--b)) solid #866333;border-radius:calc(23px * var(--b));color:#173a45;font-size:calc(44px * var(--b));font-weight:800;padding:calc(12px * var(--b));box-shadow:none;filter:none}
+.startup-button img{position:absolute;left:calc(18% - 31px * var(--b));top:calc(50% - 31px * var(--b));width:calc(62px * var(--b));height:calc(62px * var(--b))}.startup-button.google span{margin-left:calc(85px * var(--b));display:block}
+html body .app .native-startup-card>.startup-button.guest{background:#fff0cf}
+.native-startup-card>.startup-hint{font-size:calc(31px * var(--b));color:#4e646a}
+.startup-footer{position:relative;font-size:calc(27px * var(--b));color:#4e646a;line-height:1.25}.startup-footer>.startup-divider{height:calc(20px * var(--b))}.startup-footer p{margin:calc(14px * var(--b)) 0 0;font-size:inherit}
+html body .app .native-startup-card{grid-template-rows:calc(86px * var(--b)) calc(22px * var(--b)) calc(112px * var(--b)) calc(144px * var(--b)) calc(144px * var(--b)) calc(72px * var(--b)) calc(110px * var(--b))}
+html body .app .native-startup-card>*{min-height:0}
+html body .app .native-startup-card>p{font-size:calc(39px * var(--b));font-weight:500}
+html body .app .native-startup-card>.startup-hint{font-size:calc(31px * var(--b));font-weight:500}
+html body .app .startup-footer p{font-size:calc(27px * var(--b));font-weight:500;margin:calc(14px * var(--b)) 0 0}

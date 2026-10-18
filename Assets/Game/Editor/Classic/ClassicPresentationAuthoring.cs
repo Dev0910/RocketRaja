@@ -32,15 +32,7 @@ namespace RocketRaja.Editor
             ui.guidance.body.alignment=TextAlignmentOptions.TopLeft;
             ui.GetComponent<ClassicLayout>().touchGraphics=ui.GetComponentsInChildren<Button>(true).Select(b=>b.targetGraphic).Where(g=>g).Distinct().ToArray();
             ui.progression.counterSlogan=ui.transform.Find("SafeArea/Shop/Counter message").gameObject;
-            ui.progression.summary.fontSize=9.5f;
-            if(!ui.transform.Find("SafeArea/Shop/Shop stage background"))
-            {
-                var background=Region("Shop stage background",ui.transform.Find("SafeArea/Shop"),.18f,0,.82f,.038f);
-                Face(background,new Color32(16,53,67,245));background.SetSiblingIndex(ui.progression.summary.transform.GetSiblingIndex());
-            }
-            var stageRect=ui.progression.summary.rectTransform;stageRect.anchorMin=new Vector2(.18f,0);stageRect.anchorMax=new Vector2(.82f,.052f);stageRect.offsetMin=stageRect.offsetMax=Vector2.zero;
-            var stageBackground=(RectTransform)ui.transform.Find("SafeArea/Shop/Shop stage background");stageBackground.anchorMax=new Vector2(.82f,.052f);
-            var invitation=(RectTransform)ui.transform.Find("SafeArea/Shop/Tap invitation");invitation.anchorMin=new Vector2(.18f,.058f);invitation.anchorMax=new Vector2(.82f,.112f);
+            ApplyStallPrompt(ui);
             if(!ui.audioFeedback)
             {
                 var audio=new GameObject("Classic Audio",typeof(RedesignAudio));audio.transform.SetParent(ui.transform,false);
@@ -110,8 +102,25 @@ namespace RocketRaja.Editor
             Decoration("apron",shop.layers[2].transform,.11f,.106f,.79f,.22f);
             Decoration("bunting",shop.layers[3].transform,.15f,.77f,.90f,.84f);
             Decoration("crest",shop.layers[4].transform,.46f,.205f,.58f,.28f);
-            p.summary=Label("",Region("Shop stage",world,.18f,.005f,.82f,.037f),"Shop 1/6 · Opening stall",8,true,Cream,TextAlignmentOptions.Center);
+            p.summary=world.Find("Tap invitation").GetComponentInChildren<TMP_Text>(true);
             var stats=ui.dialogs.Single(v=>v.route=="Statistics");var info=Info(stats.scroll.content,"Your decorations","","",150);shop.progress=info.Find("Body").GetComponent<TMP_Text>();
+        }
+        public static void ApplyStallPrompt(ClassicUI target)
+        {
+            var world=target.transform.Find("SafeArea/Shop");
+            foreach(var oldName in new[]{"Shop stage","Shop stage background"})
+            {
+                var old=world.Find(oldName);if(old)old.gameObject.SetActive(false);
+            }
+            var invitation=(RectTransform)world.Find("Tap invitation");
+            invitation.anchorMin=new Vector2(.18f,0);invitation.anchorMax=new Vector2(.82f,.052f);
+            invitation.offsetMin=invitation.offsetMax=Vector2.zero;
+            var face=invitation.GetComponent<Image>();face.sprite=null;face.color=new Color32(16,53,67,245);face.raycastTarget=false;
+            var label=invitation.GetComponentInChildren<TMP_Text>(true);
+            label.text="TAP THE STALL TO EARN";label.color=Cream;
+            label.fontSize=label.fontSizeMax=9.5f;label.fontSizeMin=8;label.alignment=TextAlignmentOptions.Center;
+            target.progression.summary=label;target.motion.tapHint=invitation;target.motion.tapHintFace=face;
+            target.toast.SetActive(false);
         }
         static void Decoration(string key,Transform parent,float x0,float y0,float x1,float y1)
         {

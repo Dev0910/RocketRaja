@@ -1,0 +1,21 @@
+{
+  "nativeCapture": "Current Bootstrap Game View, read-only, Edit Mode",
+  "canvas": [
+    1080,
+    2400
+  ],
+  "illustrationMeanAbsoluteChannelDifference": 3.576185464859009,
+  "nativePanelRect": [
+    49,
+    1469,
+    982,
+    864
+  ],
+  "htmlPanelRect": [
+    48.984375,
+    1469.015625,
+    982.03125,
+    864
+  ],
+  "note": "Text rasterizers differ between TextMeshPro and browser fonts. Illustration comparison excludes text and controls."
+}

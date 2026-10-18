@@ -50,14 +50,28 @@ namespace RocketRaja.Core
             int even = value.exponent % 2 == 0 ? value.exponent : value.exponent - 1;
             return new Amount(Math.Sqrt(value.mantissa * (value.exponent == even ? 1 : 10)), even / 2);
         }
-        public static Amount FameMultiplier(Natural fame) => fame.IsZero ? new Amount(1) : new Amount(3) + Sqrt(fame.ToAmount()) * 3;
-        public static Amount RunTarget(Natural completedPrestiges)
+        public static Amount FameMultiplier(Natural fame)
         {
-            // The authored target cap is reached by N=148; compare exactly before a bounded conversion.
-            if (completedPrestiges.Value >= 148) return new Amount(1, 36);
-            var target = new Amount(1, 10) * Amount.Pow10((int)completedPrestiges.Value * Math.Log10(1.5));
-            return target > new Amount(1, 36) ? new Amount(1, 36) : target;
+            if (fame.IsZero) return new Amount(1);
+#if REDESIGN_LAB
+            if (!double.IsNaN(EconomyBalance.IncomeLog)) return Amount.Pow10(EconomyBalance.IncomeLog);
+#endif
+            return EconomyBalance.FameIncome(fame);
         }
+        public static Amount RunTarget(Natural completedPrestiges, Natural? totalFame = null)
+            => LegacyFasterStartTarget(completedPrestiges, totalFame) * Amount.Pow10(EconomyBalance.TargetOffset(totalFame ?? completedPrestiges));
+        // Keep an in-progress 3.0.0 run's original target valid. New targets apply
+        // on the next prestige; this balance patch never resets a player's save.
+        public static Amount LegacyFasterStartTarget(Natural completedPrestiges, Natural? totalFame = null)
+        {
+            if (completedPrestiges.IsZero) return EconomyBalance.FirstTarget;
+            double n = Math.Max(0, EconomyBalance.FameStage(totalFame ?? completedPrestiges) - 1);
+            return EconomyBalance.SecondTarget * Amount.Pow10(n * Math.Log10(EconomyBalance.TargetGrowth));
+        }
+        public static Amount TapFameMultiplier(Natural fame) => FameMultiplier(fame) * EconomyBalance.TapFameScale(fame);
+        public static bool ValidRunTarget(Amount target, Natural completedPrestiges, Natural fame) =>
+            Math.Abs(Amount.Ratio(target, RunTarget(completedPrestiges, fame)) - 1) <= 1e-12 ||
+            Math.Abs(Amount.Ratio(target, LegacyFasterStartTarget(completedPrestiges, fame)) - 1) <= 1e-12;
         public static void PrestigeRewards(Amount earned, Amount target, Natural prestiges, int unique, out Natural fame, out Natural credits)
         {
             fame = credits = Natural.Zero;
@@ -116,6 +130,10 @@ namespace RocketRaja.Core
         }
         public static Amount CardMultiplier(CardEffect effect, Natural level)
         {
+#if REDESIGN_LAB
+            if (EconomyBalance.CardCurve != "original" && (effect == CardEffect.ProductProfit || effect == CardEffect.GlobalProfit))
+                return new Amount(CardFactor(effect, level));
+#endif
             switch (effect)
             {
                 case CardEffect.ProductProfit: return new Amount(1) + level.ToAmount() * .2;
@@ -125,6 +143,22 @@ namespace RocketRaja.Core
         }
         public static double CardFactor(CardEffect effect, Natural level)
         {
+#if REDESIGN_LAB
+            if (EconomyBalance.CardCurve != "original")
+            {
+                double r = BoundedRatio(level, 5);
+                bool light = EconomyBalance.CardCurve == "light", moderate = EconomyBalance.CardCurve == "moderate", strong = EconomyBalance.CardCurve == "strong";
+                switch (effect)
+                {
+                    case CardEffect.ProductProfit: case CardEffect.TapProfit: return 1 + (light ? .25 : moderate ? .5 : 1) * r;
+                    case CardEffect.GlobalProfit: return 1 + (double.IsNaN(EconomyBalance.CardGlobalGainOverride) ? (light ? .5 : moderate || strong ? 1 : 2) : EconomyBalance.CardGlobalGainOverride) * r;
+                    case CardEffect.ProductCost: case CardEffect.TapCost: return 1 - (light || strong ? .1 : moderate ? .15 : .25) * r;
+                    case CardEffect.UpgradeCost: return 1 - (light || strong ? .1 : moderate ? .15 : .25) * r;
+                    case CardEffect.SkillCooldown: return 1 - (light || strong ? .1 : moderate ? .15 : .2) * r;
+                    case CardEffect.SkillDuration: return 1 + (light || strong ? .15 : moderate ? .25 : .4) * r;
+                }
+            }
+#endif
             switch (effect)
             {
                 case CardEffect.ProductCost: case CardEffect.TapCost: return 1 - .4 * BoundedRatio(level, 4);

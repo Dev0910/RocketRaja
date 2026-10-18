@@ -17,13 +17,22 @@ static partial class Program
         var opening = starter.PreviewLevels(0, int.MaxValue);
         Check(opening.quote.affordable && opening.quote.quantity == 1 && opening.quote.cost.CompareTo(starter.State.cash) == 0, "Opening manual first-purchase grant buys exactly one projected level");
         Check(starter.PreviewLevels(-1, int.MaxValue).quote.quantity == 0, "Unaffordable Max tap preview contains zero levels");
+        var poor = RedesignState.Fresh(); poor.cash = 0;
+        var poorEngine = new RedesignEngine(data, poor, _ => throw new Exception("Unaffordable purchase must not save"));
+        foreach (int target in new[] { -1, 0 })
+        {
+            var max = poorEngine.LevelQuote(target, int.MaxValue);
+            Check(max.quantity == 0 && !max.affordable && max.cost > Amount.Zero && max.cost.CompareTo(poorEngine.LevelQuote(target, 1).cost) == 0,
+                "Unaffordable Max displays next single level price: " + target);
+            Check(!poorEngine.BuyLevels(target, int.MaxValue), "Unaffordable Max never buys a level: " + target);
+        }
         state = RedesignState.Fresh(); state.products[0] = 10; state.cash = 5000;
-        state.upgrades.Add(data.Upgrades.First(u => u.effect == CashEffect.TapLinked).id);
+        state.upgrades.Add(data.Upgrades.First(u => u.effect == CashEffect.TapDirect).id);
         state.everPurchased.AddRange(state.upgrades);
         state.completedPrestiges = state.fame = (Natural)1; state.target = ProgressionNumbers.RunTarget(state.completedPrestiges);
         state.cardLevels[16] = (Natural)3; state.cardLevels[17] = (Natural)2;
         engine = new RedesignEngine(data, state, _ => { }); p = engine.PreviewLevels(-1, 10);
-        Check(p.linkedTapBefore > Amount.Zero && p.linkedTapAfter > p.linkedTapBefore, "Tap projection includes linked-income mastery before and after training");
+        Check(p.linkedTapBefore.mantissa == 0 && p.linkedTapAfter.mantissa == 0 && p.tapAfter > p.tapBefore, "Tap projection applies direct training and has no product-linked component");
         Check(engine.BuyLevels(-1, 10) && engine.TapPayout().CompareTo(p.tapAfter) == 0 && engine.NormalIncome().CompareTo(p.normalBefore) == 0, "Talent-adjusted projected tap payout matches actual training without changing normal sales");
         p = engine.PreviewLevels(0, int.MaxValue);
         Check(p.quote.quantity > 0 && p.quote.affordable && engine.LevelQuote(0, p.quote.quantity + 1).cost > engine.State.cash, "Projected Max stops at the actual affordability boundary");

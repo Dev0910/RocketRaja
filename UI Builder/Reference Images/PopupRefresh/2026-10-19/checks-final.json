@@ -1,0 +1,2804 @@
+[
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48.00000762939453,
+        "label": "Close Welcome",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 539,
+    "brokenImages": [],
+    "card": {
+      "h": 635.015625,
+      "w": 366,
+      "x": 12,
+      "y": 104.4847640991211
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Welcome",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48.00000762939453,
+        "label": "Close Account",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 539,
+    "brokenImages": [],
+    "card": {
+      "h": 635.015625,
+      "w": 366,
+      "x": 12,
+      "y": 104.50203704833984
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Account",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Upgrades",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Find the next upgradeThe next ten are ready in Player.i",
+        "param": "catalogue-filters"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 48,
+        "label": "Search upgrades",
+        "param": "search"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 47.99998474121094,
+        "label": "All",
+        "param": "category"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 47.99998474121094,
+        "label": "Available",
+        "param": "view"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹28.67Buy upgrade",
+        "param": "PP-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹41.1Buy upgrade",
+        "param": "TP-001"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹58.92Buy upgrade",
+        "param": "GP-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹84.48Buy upgrade",
+        "param": "PC-PHU-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹173.74Buy upgrade",
+        "param": "PP-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹249.18Buy upgrade",
+        "param": "PP-ROC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54.00006103515625,
+        "label": "₹357.43Buy upgrade",
+        "param": "TP-002"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹512.75Buy upgrade",
+        "param": "UC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹735.63Buy upgrade",
+        "param": "PC-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹1.51KBuy upgrade",
+        "param": "PP-SMC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹2.17KBuy upgrade",
+        "param": "PP-STR-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹3.12KBuy upgrade",
+        "param": "PP-AER-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹4.48KBuy upgrade",
+        "param": "PP-BOX-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹6.43KBuy upgrade",
+        "param": "TC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹9.23KBuy upgrade",
+        "param": "PP-PHU-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹13.25KBuy upgrade",
+        "param": "PP-ANA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹27.33KBuy upgrade",
+        "param": "PP-CHA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹39.25KBuy upgrade",
+        "param": "PP-ROC-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹56.38KBuy upgrade",
+        "param": "PC-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹81KBuy upgrade",
+        "param": "TP-003"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": true,
+        "height": 48,
+        "label": "Previous",
+        "param": "previous"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": false,
+        "height": 48,
+        "label": "Next",
+        "param": "next"
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Review Buy All",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 601,
+    "brokenImages": [],
+    "card": {
+      "h": 816,
+      "w": 366,
+      "x": 12,
+      "y": 14.46162223815918
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Upgrades",
+    "scroll": true,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close ProductDetail",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "An earlier shelf can growCompare its normal income and share.i",
+        "param": "comebacks"
+      }
+    ],
+    "bodyHeight": 625,
+    "brokenImages": [],
+    "card": {
+      "h": 718.6875,
+      "w": 366,
+      "x": 12,
+      "y": 62.65625
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "ProductDetail",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.99999237060547,
+        "label": "Close TapTraining",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Choose your quantityReview x1, x10, x100 or Max.i",
+        "param": "product-levels"
+      },
+      {
+        "action": "Quantity",
+        "disabled": false,
+        "height": 48,
+        "label": "Cycle quantity: 1 / 10 / 100 / Max",
+        "param": "tap:cycle"
+      },
+      {
+        "action": "BuyLevels",
+        "disabled": false,
+        "height": 48,
+        "label": "Train ×60 · ₹1.16M",
+        "param": "-1"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 425,
+    "brokenImages": [],
+    "card": {
+      "h": 639.578125,
+      "w": 366,
+      "x": 12,
+      "y": 102.21204376220705
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "TapTraining",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Skills",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 52,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 52,
+        "label": "Details for Festival Rush",
+        "param": "SkillDetail:0"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 52,
+        "label": "Activate Helping Hands",
+        "param": "1"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 52,
+        "label": "Details for Helping Hands",
+        "param": "SkillDetail:1"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 52,
+        "label": "Activate Bulk Order",
+        "param": "2"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 52,
+        "label": "Details for Bulk Order",
+        "param": "SkillDetail:2"
+      }
+    ],
+    "bodyHeight": 402,
+    "brokenImages": [],
+    "card": {
+      "h": 523.421875,
+      "w": 368.34375,
+      "x": 10.828125,
+      "y": 160.28125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Skills",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close SkillDetail",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 52,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      }
+    ],
+    "bodyHeight": 414,
+    "brokenImages": [],
+    "card": {
+      "h": 563.328125,
+      "w": 368.34375,
+      "x": 10.828125,
+      "y": 140.34573364257812
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SkillDetail",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close CardDetail",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 540,
+    "brokenImages": [],
+    "card": {
+      "h": 540,
+      "w": 351,
+      "x": 19.5,
+      "y": 152
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "CardDetail",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close DrawReveal",
+        "param": ""
+      },
+      {
+        "action": "Reveal",
+        "disabled": true,
+        "height": 48,
+        "label": "Continue",
+        "param": "continue"
+      }
+    ],
+    "bodyHeight": 427,
+    "brokenImages": [],
+    "card": {
+      "h": 601.28125,
+      "w": 366,
+      "x": 12,
+      "y": 121.38615417480467
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "DrawReveal",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Prestige",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Know what staysFame, cards and shop progress stay.i",
+        "param": "prestige"
+      },
+      {
+        "action": "Prestige",
+        "disabled": true,
+        "height": 48,
+        "label": "Begin again",
+        "param": "confirm"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep growing",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 586,
+    "brokenImages": [],
+    "card": {
+      "h": 815.984375,
+      "w": 366,
+      "x": 12,
+      "y": 14
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Prestige",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Offline",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Welcome backYour offline cash is already saved.i",
+        "param": "return-play"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "height": 48,
+        "label": "View your next step",
+        "param": "goal"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "height": 48,
+        "label": "Continue to your shop",
+        "param": "close"
+      }
+    ],
+    "bodyHeight": 525,
+    "brokenImages": [],
+    "card": {
+      "h": 739.96875,
+      "w": 366,
+      "x": 12,
+      "y": 52.015625
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Offline",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.999996185302734,
+        "label": "Close Statistics",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 642,
+    "brokenImages": [],
+    "card": {
+      "h": 816,
+      "w": 366,
+      "x": 12,
+      "y": 14.460346221923828
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Statistics",
+    "scroll": true,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.99999237060547,
+        "label": "Close Settings",
+        "param": ""
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 48,
+        "label": "Music",
+        "param": "music"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 48,
+        "label": "Sound effects",
+        "param": "sound"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 47.999969482421875,
+        "label": "Reduced motion",
+        "param": "motion"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Shop name›",
+        "param": "Naming"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Account & cloud save›",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Privacy›",
+        "param": "Privacy"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "How to play›",
+        "param": "Help"
+      }
+    ],
+    "bodyHeight": 542,
+    "brokenImages": [],
+    "card": {
+      "h": 630,
+      "w": 366,
+      "x": 12,
+      "y": 107.00037384033205
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Settings",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Naming",
+        "param": ""
+      },
+      {
+        "action": "Rename",
+        "disabled": false,
+        "height": 48,
+        "label": "Save shop name",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 340,
+    "brokenImages": [],
+    "card": {
+      "h": 554.59375,
+      "w": 366,
+      "x": 12,
+      "y": 144.703125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Naming",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Privacy",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 543,
+    "brokenImages": [],
+    "card": {
+      "h": 701.78125,
+      "w": 366,
+      "x": 12,
+      "y": 71.11817932128906
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Privacy",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close AccountCompare",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Use Google game",
+        "param": "cloud"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep this guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 392,
+    "brokenImages": [],
+    "card": {
+      "h": 622,
+      "w": 366,
+      "x": 12,
+      "y": 111
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "AccountCompare",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Promote",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Copy eligible guest progress",
+        "param": "copy"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Start a fresh Google game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 209,
+    "brokenImages": [],
+    "card": {
+      "h": 494.8125,
+      "w": 366,
+      "x": 12,
+      "y": 174.60267639160156
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Promote",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close SignOut",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Save and sign out",
+        "param": "confirm-signout"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 269,
+    "brokenImages": [],
+    "card": {
+      "h": 498.40625,
+      "w": 366,
+      "x": 12,
+      "y": 172.8057403564453
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SignOut",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Handoff",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Play here",
+        "param": "handoff"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 193,
+    "brokenImages": [],
+    "card": {
+      "h": 422.40625,
+      "w": 366,
+      "x": 12,
+      "y": 210.796875
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Handoff",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Try loading again",
+        "param": "retry"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Account options",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Start a new local game",
+        "param": "RecoveryConfirm"
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep files and leave",
+        "param": "exit"
+      }
+    ],
+    "bodyHeight": 414,
+    "brokenImages": [],
+    "card": {
+      "h": 516.40625,
+      "w": 366,
+      "x": 12,
+      "y": 163.82655334472656
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SaveRecovery",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close RecoveryConfirm",
+        "param": ""
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Confirm new local game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 209,
+    "brokenImages": [],
+    "card": {
+      "h": 438.8125,
+      "w": 366,
+      "x": 12,
+      "y": 202.596923828125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "RecoveryConfirm",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Return to welcome",
+        "param": "Welcome"
+      }
+    ],
+    "bodyHeight": 209,
+    "brokenImages": [],
+    "card": {
+      "h": 368,
+      "w": 366,
+      "x": 12,
+      "y": 238.02964782714844
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "RecoveryExit",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Purchase",
+        "param": ""
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview successful purchase",
+        "param": "delivered"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview pending purchase",
+        "param": "pending"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview cancellation",
+        "param": "cancelled"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview verification failure",
+        "param": "failed"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 657,
+    "brokenImages": [],
+    "card": {
+      "h": 816,
+      "w": 366,
+      "x": 12,
+      "y": 14
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Purchase",
+    "scroll": true,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48.000003814697266,
+        "label": "Close BuyAll",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Buy affordable upgradesBuy All spends cash on eligible upgrades.i",
+        "param": "buy-all"
+      },
+      {
+        "action": "ConfirmBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Buy reviewed upgrades",
+        "param": ""
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Refresh review",
+        "param": "refresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 530,
+    "brokenImages": [],
+    "card": {
+      "h": 816,
+      "w": 366,
+      "x": 12,
+      "y": 14.392621040344238
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "BuyAll",
+    "scroll": true,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Appearance",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 642,
+    "brokenImages": [],
+    "card": {
+      "h": 816,
+      "w": 366,
+      "x": 12,
+      "y": 14
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Appearance",
+    "scroll": true,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Help",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 564,
+    "brokenImages": [],
+    "card": {
+      "h": 722.78125,
+      "w": 366,
+      "x": 12,
+      "y": 60.609375
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Help",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Odds",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 412,
+    "brokenImages": [],
+    "card": {
+      "h": 586.1875,
+      "w": 366,
+      "x": 12,
+      "y": 128.90625
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Odds",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Exact",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 169,
+    "brokenImages": [],
+    "card": {
+      "h": 328,
+      "w": 366,
+      "x": 12,
+      "y": 258.0089111328125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 844,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Exact",
+    "scroll": false,
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "height": 47.99998474121094,
+        "label": "",
+        "param": ""
+      },
+      {
+        "action": "LearnTip",
+        "height": 48,
+        "label": "Got it",
+        "param": "buy-all"
+      }
+    ],
+    "bodyHeight": 249,
+    "cardFits": true,
+    "height": 844,
+    "overflow": false,
+    "route": "Guidance",
+    "width": 390
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Welcome",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 416,
+    "brokenImages": [],
+    "card": {
+      "h": 512,
+      "w": 336,
+      "x": 12,
+      "y": 14.00316047668457
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Welcome",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Account",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 50,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 416,
+    "brokenImages": [],
+    "card": {
+      "h": 512,
+      "w": 336,
+      "x": 12,
+      "y": 14
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Account",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Upgrades",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Find the next upgradeThe next ten are ready in Player.i",
+        "param": "catalogue-filters"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 48,
+        "label": "Search upgrades",
+        "param": "search"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 48,
+        "label": "All",
+        "param": "category"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "height": 48,
+        "label": "Available",
+        "param": "view"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹28.67Buy upgrade",
+        "param": "PP-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹41.1Buy upgrade",
+        "param": "TP-001"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹58.92Buy upgrade",
+        "param": "GP-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹84.48Buy upgrade",
+        "param": "PC-PHU-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹173.74Buy upgrade",
+        "param": "PP-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹249.18Buy upgrade",
+        "param": "PP-ROC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹357.43Buy upgrade",
+        "param": "TP-002"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹512.75Buy upgrade",
+        "param": "UC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹735.63Buy upgrade",
+        "param": "PC-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹1.51KBuy upgrade",
+        "param": "PP-SMC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹2.17KBuy upgrade",
+        "param": "PP-STR-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹3.12KBuy upgrade",
+        "param": "PP-AER-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹4.48KBuy upgrade",
+        "param": "PP-BOX-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹6.43KBuy upgrade",
+        "param": "TC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹9.23KBuy upgrade",
+        "param": "PP-PHU-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹13.25KBuy upgrade",
+        "param": "PP-ANA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹27.33KBuy upgrade",
+        "param": "PP-CHA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹39.25KBuy upgrade",
+        "param": "PP-ROC-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹56.38KBuy upgrade",
+        "param": "PC-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "height": 54,
+        "label": "₹81KBuy upgrade",
+        "param": "TP-003"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": true,
+        "height": 48,
+        "label": "Previous",
+        "param": "previous"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": false,
+        "height": 48,
+        "label": "Next",
+        "param": "next"
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Review Buy All",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 317,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.045259475708008
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Upgrades",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48.000003814697266,
+        "label": "Close ProductDetail",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "An earlier shelf can growCompare its normal income and share.i",
+        "param": "comebacks"
+      }
+    ],
+    "bodyHeight": 418,
+    "brokenImages": [],
+    "card": {
+      "h": 512,
+      "w": 336,
+      "x": 12,
+      "y": 14.01757526397705
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "ProductDetail",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close TapTraining",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Choose your quantityReview x1, x10, x100 or Max.i",
+        "param": "product-levels"
+      },
+      {
+        "action": "Quantity",
+        "disabled": false,
+        "height": 48,
+        "label": "Cycle quantity: 1 / 10 / 100 / Max",
+        "param": "tap:cycle"
+      },
+      {
+        "action": "BuyLevels",
+        "disabled": false,
+        "height": 48,
+        "label": "Train ×60 · ₹1.16M",
+        "param": "-1"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 317,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "TapTraining",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Skills",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 48,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Details for Festival Rush",
+        "param": "SkillDetail:0"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 48,
+        "label": "Activate Helping Hands",
+        "param": "1"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Details for Helping Hands",
+        "param": "SkillDetail:1"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 48,
+        "label": "Activate Bulk Order",
+        "param": "2"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Details for Bulk Order",
+        "param": "SkillDetail:2"
+      }
+    ],
+    "bodyHeight": 371,
+    "brokenImages": [],
+    "card": {
+      "h": 483.6875,
+      "w": 340,
+      "x": 10,
+      "y": 28.15625
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Skills",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close SkillDetail",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "height": 48,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      }
+    ],
+    "bodyHeight": 331,
+    "brokenImages": [],
+    "card": {
+      "h": 469.34375,
+      "w": 340,
+      "x": 10,
+      "y": 35.328125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SkillDetail",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.999996185302734,
+        "label": "Close CardDetail",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 476,
+    "brokenImages": [],
+    "card": {
+      "h": 475.984375,
+      "w": 309.390625,
+      "x": 25.296875,
+      "y": 32.03527069091797
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "CardDetail",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close DrawReveal",
+        "param": ""
+      },
+      {
+        "action": "Reveal",
+        "disabled": true,
+        "height": 48,
+        "label": "Continue",
+        "param": "continue"
+      }
+    ],
+    "bodyHeight": 352,
+    "brokenImages": [],
+    "card": {
+      "h": 508.5625,
+      "w": 340,
+      "x": 10,
+      "y": 15.71875
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "DrawReveal",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Prestige",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.390625,
+        "label": "Know what staysFame, cards and shop progress stay.i",
+        "param": "prestige"
+      },
+      {
+        "action": "Prestige",
+        "disabled": true,
+        "height": 48,
+        "label": "Begin again",
+        "param": "confirm"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep growing",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 309,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.000382423400879
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Prestige",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Offline",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.39063262939453,
+        "label": "Welcome backYour offline cash is already saved.i",
+        "param": "return-play"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "height": 48,
+        "label": "View your next step",
+        "param": "goal"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "height": 48,
+        "label": "Continue to your shop",
+        "param": "close"
+      }
+    ],
+    "bodyHeight": 317,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.017800331115724
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Offline",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Statistics",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 365,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.718186378479004
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Statistics",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Settings",
+        "param": ""
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 48,
+        "label": "Music",
+        "param": "music"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 48,
+        "label": "Sound effects",
+        "param": "sound"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "height": 47.99998474121094,
+        "label": "Reduced motion",
+        "param": "motion"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Shop name›",
+        "param": "Naming"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Account & cloud save›",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "Privacy›",
+        "param": "Privacy"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 65,
+        "label": "How to play›",
+        "param": "Help"
+      }
+    ],
+    "bodyHeight": 444,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Settings",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.999996185302734,
+        "label": "Close Naming",
+        "param": ""
+      },
+      {
+        "action": "Rename",
+        "disabled": false,
+        "height": 48,
+        "label": "Save shop name",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 317,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.0294828414917
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Naming",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Privacy",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 373,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.000372886657715
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Privacy",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close AccountCompare",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Use Google game",
+        "param": "cloud"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep this guest",
+        "param": "guest"
+      }
+    ],
+    "bodyHeight": 309,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.082674026489258
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "AccountCompare",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Promote",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Copy eligible guest progress",
+        "param": "copy"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Start a fresh Google game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 183,
+    "brokenImages": [],
+    "card": {
+      "h": 451.78125,
+      "w": 340,
+      "x": 10,
+      "y": 44.109375
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Promote",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close SignOut",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Save and sign out",
+        "param": "confirm-signout"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 243,
+    "brokenImages": [],
+    "card": {
+      "h": 455.375,
+      "w": 340,
+      "x": 10,
+      "y": 42.341888427734375
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SignOut",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Handoff",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "height": 48,
+        "label": "Play here",
+        "param": "handoff"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 190,
+    "brokenImages": [],
+    "card": {
+      "h": 394.59375,
+      "w": 340,
+      "x": 10,
+      "y": 72.703125
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Handoff",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Try loading again",
+        "param": "retry"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Account options",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Start a new local game",
+        "param": "RecoveryConfirm"
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Keep files and leave",
+        "param": "exit"
+      }
+    ],
+    "bodyHeight": 432,
+    "brokenImages": [],
+    "card": {
+      "h": 517.375,
+      "w": 340,
+      "x": 10,
+      "y": 11.342294692993164
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "SaveRecovery",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close RecoveryConfirm",
+        "param": ""
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "height": 48,
+        "label": "Confirm new local game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 183,
+    "brokenImages": [],
+    "card": {
+      "h": 395.78125,
+      "w": 340,
+      "x": 10,
+      "y": 72.109375
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "RecoveryConfirm",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "height": 48,
+        "label": "Return to welcome",
+        "param": "Welcome"
+      }
+    ],
+    "bodyHeight": 183,
+    "brokenImages": [],
+    "card": {
+      "h": 332,
+      "w": 340,
+      "x": 10,
+      "y": 104.00899505615234
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "RecoveryExit",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Purchase",
+        "param": ""
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview successful purchase",
+        "param": "delivered"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview pending purchase",
+        "param": "pending"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview cancellation",
+        "param": "cancelled"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "height": 48,
+        "label": "Preview verification failure",
+        "param": "failed"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 373,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Purchase",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close BuyAll",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "height": 61.39061737060547,
+        "label": "Buy affordable upgradesBuy All spends cash on eligible upgrades.i",
+        "param": "buy-all"
+      },
+      {
+        "action": "ConfirmBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Buy reviewed upgrades",
+        "param": ""
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "height": 48,
+        "label": "Refresh review",
+        "param": "refresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 253,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.537619590759276
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "BuyAll",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Appearance",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 373,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Appearance",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48.000003814697266,
+        "label": "Close Help",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 373,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.01754379272461
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Help",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 47.999996185302734,
+        "label": "Close Odds",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 365,
+    "brokenImages": [],
+    "card": {
+      "h": 522,
+      "w": 340,
+      "x": 10,
+      "y": 9.017535209655762
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Odds",
+    "scroll": true,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Close Exact",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "height": 48,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "bodyHeight": 166,
+    "brokenImages": [],
+    "card": {
+      "h": 315,
+      "w": 340,
+      "x": 10,
+      "y": 112.51763916015624
+    },
+    "cardFits": true,
+    "duplicateIds": [],
+    "height": 540,
+    "metadata": 1,
+    "overflow": false,
+    "route": "Exact",
+    "scroll": false,
+    "width": 360
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "height": 47.99999237060547,
+        "label": "",
+        "param": ""
+      },
+      {
+        "action": "LearnTip",
+        "height": 48,
+        "label": "Got it",
+        "param": "buy-all"
+      }
+    ],
+    "bodyHeight": 267,
+    "cardFits": true,
+    "height": 540,
+    "overflow": false,
+    "route": "Guidance",
+    "width": 360
+  }
+]

@@ -12,12 +12,8 @@ namespace RocketRaja.Core
 
     public sealed partial class RedesignEngine
     {
-        Amount LinkedTapBase(bool hands, RedesignState s, RunEffects f)
-        {
-            double mastery = 1 + .25 * s.tapLevel / (s.tapLevel + 100d) + .25 * f.directCount / 60;
-            double share = f.linkedCount == 0 ? 0 : .12 + .18 * (f.linkedCount - 1) / 59;
-            return NormalIncome(s, f) * share * mastery * (hands ? .25 : 1) / 2;
-        }
+        // Reserved projection fields remain zero for older presentation consumers.
+        Amount LinkedTapBase(bool hands, RedesignState s, RunEffects f) => Amount.Zero;
         public LevelProjection PreviewLevels(int product, int quantity)
         {
             if (product < -1 || product >= 8) throw new ArgumentOutOfRangeException(nameof(product));
@@ -25,7 +21,7 @@ namespace RocketRaja.Core
             var quote = LevelQuote(product, quantity); var after = State.Copy();
             int before = tap ? State.tapLevel : State.products[product];
             if (tap) after.tapLevel += quote.quantity; else after.products[product] += quote.quantity;
-            int milestone = before < 25 ? 25 : before < 50 ? 50 : (before / 100 + 1) * 100;
+            int milestone = EconomyBalance.NextMilestone(before);
             return new LevelProjection
             {
                 product = product, beforeLevel = before, afterLevel = before + quote.quantity,

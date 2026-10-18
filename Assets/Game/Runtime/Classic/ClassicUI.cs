@@ -52,12 +52,13 @@ namespace RocketRaja.Classic
         readonly Dictionary<string,Image> images=new Dictionary<string,Image>();
         readonly List<ClassicView> stack=new List<ClassicView>();
         readonly List<ClassicControl> controls=new List<ClassicControl>();
-        int quantity=1,tapQuantity=1,product,skill,selectedCard,pack,page;
+        int quantity=int.MaxValue,tapQuantity=int.MaxValue,product,skill,selectedCard,pack,page;
         string search="",view="Available",category="All",lastRevision="";
-        float refreshAt,toastUntil;bool closing,initialized;
+        float refreshAt;bool closing,initialized;
         CashBatchQuote batch;FameQuote prestige;ClassicDrawQuote five;TalentDrawQuote one;
         static readonly string[] SkillNames={"Festival Rush","Helping Hands","Bulk Order"};
         static readonly int[] Quantities={1,10,100,int.MaxValue};
+        int LevelQuantity(int index) => index < -1 || index >= 8 ? 1 : (index < 0 ? Engine.State.tapLevel : Engine.State.products[index]) == 0 ? 1 : index < 0 ? tapQuantity : quantity;
         void Awake()
         {
             if(!driver||!motion||products.Length!=8||cards.Length!=28||nextUpgrades.Length!=10||catalogueRows.Length!=20)throw new InvalidOperationException("Classic UI is missing its Editor-authored bindings");
@@ -76,7 +77,6 @@ namespace RocketRaja.Classic
         void Update()
         {
             if(!initialized)return;if(Time.unscaledTime>=refreshAt){refreshAt=Time.unscaledTime+.2f;Refresh();}
-            if(toast.activeSelf&&Time.unscaledTime>toastUntil)toast.SetActive(false);
             if(Input.GetKeyDown(KeyCode.Escape)){if(stack.Count>0)Close();else SetTab("Home");}
         }
         void Text(string key,string value){if(texts.TryGetValue(key,out var t)&&t.text!=value)t.text=value;}
@@ -87,15 +87,16 @@ namespace RocketRaja.Classic
         {
             foreach(var control in controls)if(control.action==action&&control.parameter==parameter){var b=control.GetComponent<Button>();b.interactable=enabled;if(b.targetGraphic is Image img&&control.action!="Card")img.sprite=enabled?(action=="Draw"&&parameter=="5"?redButton:blueButton):disabledButton;}
         }
-        public void Notice(string message){Text("toast",message);toast.SetActive(true);toastUntil=Time.unscaledTime+3.2f;motion.Enter((RectTransform)toast.transform,0,6);}
+        // Transient banners are disabled; retain this entry point for existing callers.
+        public void Notice(string message){if(toast)toast.SetActive(false);}
         bool Command(Func<RedesignEngine,bool> action){if(!driver.Command(action)){Notice(driver.RecoveryNotice??"This action is unavailable. Your progress has not changed.");return false;}return true;}
         public void SetTab(string tab)
         {
             if (!driver.Initialized || !driver.Session.CanMutate) return;
             if(!panels.Any(v=>v.route==tab))return;CloseAll();CurrentTab=tab;
             foreach(var v in panels){motion.ResetView(v.root.transform);v.root.SetActive(v.route==tab);}
-            for(int i=0;i<navigation.Length;i++)((Image)navigation[i].targetGraphic).sprite=panels[i+1].route==tab?ivoryButton:blueButton;
-            tapTarget.gameObject.SetActive(tab=="Home");driver.Session.GameplayInputEnabled=tab=="Home";motion.dialogOpen=false;
+            for(int i=0;i<navigation.Length;i++)((Image)navigation[i].targetGraphic).sprite=blueButton;
+            tapTarget.gameObject.SetActive(true);driver.Session.GameplayInputEnabled=true;motion.dialogOpen=false;
             var active=panels.First(v=>v.route==tab);Refresh();motion.Enter((RectTransform)active.root.transform,0,14);
             motion.Content(active.scroll?(RectTransform)active.scroll.transform:(RectTransform)active.root.transform);
             for(int i=0;i<navigation.Length;i++)if(panels[i+1].route==tab)motion.Pulse((RectTransform)navigation[i].transform.Find("Icon"));
@@ -145,15 +146,16 @@ namespace RocketRaja.Classic
             }
             var top=stack[stack.Count-1];closing=true;top.group.interactable=false;
             motion.Backdrop(top.root.GetComponent<Image>(),true);
-            motion.Exit(top.window,()=>{if(!this)return;top.root.SetActive(false);stack.Remove(top);closing=false;if(stack.Count>0){stack[stack.Count-1].root.SetActive(true);RefreshDialog();}motion.dialogOpen=stack.Count>0;driver.Session.GameplayInputEnabled=stack.Count==0&&CurrentTab=="Home";});
+            motion.Exit(top.window,()=>{if(!this)return;top.root.SetActive(false);stack.Remove(top);closing=false;if(stack.Count>0){stack[stack.Count-1].root.SetActive(true);RefreshDialog();}motion.dialogOpen=stack.Count>0;driver.Session.GameplayInputEnabled=stack.Count==0;});
         }
         void Search(string value){search=value;page=0;RefreshCatalogue();}
         void Tap()
         {
             if (!initialized || !driver.Initialized || !driver.Session.CanMutate) return;
-            if(CurrentTab!="Home"||stack.Count>0)return;var payout=Engine.TapPayout();if(!driver.TapGameplaySurface())return;
+            if(stack.Count>0)return;if(!driver.TapGameplaySurface())return;
             if(audioFeedback)audioFeedback.Feedback("tap");
-            Notice("+"+Cash(payout));motion.Burst((RectTransform)tapTarget.transform,0,7);motion.Coins((RectTransform)tapTarget.transform,texts["cash"].rectTransform);motion.Pulse(texts["cash"].rectTransform);motion.Pulse(motion.tapHint);
+            var origin=tapTarget.LastTapWorldPosition??tapTarget.transform.position;
+            motion.Burst(origin,0,7);motion.Coins(origin,texts["cash"].rectTransform);motion.Pulse(texts["cash"].rectTransform);motion.Pulse(motion.tapHint);
         }
         public void Handle(string action,string arg)
         {
@@ -175,7 +177,7 @@ namespace RocketRaja.Classic
                 case "Close":Close();break;
                 case "Card":if(int.TryParse(arg,out selectedCard)&&!Engine.State.cardLevels[selectedCard].IsZero)Open("CardDetail");break;
                 case "Quantity":if(arg=="tap")tapQuantity=Quantities[(Array.IndexOf(Quantities,tapQuantity)+1)%4];else quantity=Quantities[(Array.IndexOf(Quantities,quantity)+1)%4];Refresh();break;
-                case "BuyLevels":{int i=int.Parse(arg);bool fresh=Engine.State.products[0]==0;if(Command(e=>e.BuyLevels(i,i<0?tapQuantity:quantity))){if(i>=0){motion.Success(products[i].artFrame);motion.Pulse((RectTransform)shelfProducts[i].transform);}else motion.Success(texts["tap-row-cost"].rectTransform);Notice("Purchase complete");if(fresh&&i==0)SetTab("Home");}}break;
+                case "BuyLevels":{int i=int.Parse(arg);bool fresh=Engine.State.products[0]==0;if(Command(e=>e.BuyLevels(i,LevelQuantity(i)))){if(i>=0){motion.Success(products[i].artFrame);motion.Pulse((RectTransform)shelfProducts[i].transform);}else motion.Success(texts["tap-row-cost"].rectTransform);Notice("Purchase complete");if(fresh&&i==0)SetTab("Home");}}break;
                 case "BuyUpgrade":if(Command(e=>e.BuyUpgrade(arg))){Notice("Upgrade purchased");motion.Success(texts["upgrade-count"].rectTransform);}break;
                 case "BuyAll":batch=Engine.QuoteBuyAll();if(batch.Ids.Count>0&&Command(e=>e.CommitBuyAll(batch))){Notice(batch.Ids.Count+" upgrades purchased");motion.Success(texts["upgrade-count"].rectTransform,0,22);}break;
                 case "ReviewBatch":batch=Engine.QuoteBuyAll(new UpgradeScope{search=search});Open("BuyAll");break;

@@ -22,14 +22,7 @@ namespace RocketRaja.Core
         }
         public GoalTarget NextRequirement(string id)
         {
-            if (!Data.TryUpgrade(id, out int i) || State.upgrades.Contains(id)) return null;
-            var upgrade = Data.Upgrades[i];
-            foreach (string prerequisite in upgrade.prerequisites)
-                if (!State.upgrades.Contains(prerequisite)) return new GoalTarget { kind = GoalTargetKind.Upgrade, upgradeId = prerequisite, cost = UpgradeCost(prerequisite) };
-            foreach (var requirement in upgrade.productRequirements)
-                if (State.products[requirement.product] < requirement.level) return new GoalTarget { kind = GoalTargetKind.Product, product = requirement.product };
-            if (State.products.Count(x => x > 0) < upgrade.requiredFamilies)
-                for (int p = 0; p < 8; p++) if (State.products[p] == 0 && ProductAvailable(p)) return new GoalTarget { kind = GoalTargetKind.Product, product = p };
+            // Cash upgrades have no product, family or prerequisite purchase gates.
             return null;
         }
         public GoalTarget[] GoalAlternatives()

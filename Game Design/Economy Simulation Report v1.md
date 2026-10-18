@@ -1,5 +1,7 @@
 # Rocket Raja: cash-only economy simulation report v1
 
+**Historical reference — 7 October 2026:** preserve the original rationale, scenarios and results below. They do not define the current interaction/access rules or establish current pacing. See [Current Implementation Design](Current%20Implementation%20Design.md) for the user-confirmed implementation.
+
 Executed and selected 1 October 2026. Planning model, not Unity or human-player testing.
 
 **Current scope:** the user chose cash-only progression. The [specification](Economy%20Specification%20v1.md), all 1,000 [catalogue rows](1000%20Unlockables%20Catalogue.md), and [model defaults](Economy%20Model%20v1.md) now agree: no prestige-count access requirements, late price-band ratio x31, and Fame income 6+3×(sqrt(F)−1) above zero Fame. The prior gated option is superseded; its results remain only in the [decision record](Cash-only%20Economy%20Alternative%20v1.md).

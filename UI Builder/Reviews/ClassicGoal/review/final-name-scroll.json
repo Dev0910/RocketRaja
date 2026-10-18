@@ -1,0 +1,2049 @@
+{
+  "checks": [
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "wide",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · WWWWWWWWWWWWWWWWWWWWWWWW",
+      "rect": {
+        "x": 20,
+        "y": 385.6875,
+        "width": 320,
+        "height": 64.78125,
+        "top": 385.6875,
+        "right": 340,
+        "bottom": 450.46875,
+        "left": 20
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "wide",
+      "where": "Home",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 104.390625,
+          "y": 72.359375,
+          "width": 151.1875,
+          "height": 14.84375,
+          "top": 72.359375,
+          "right": 255.578125,
+          "bottom": 87.203125,
+          "left": 104.390625
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 540,
+        "top": 0,
+        "right": 360,
+        "bottom": 540,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "wide",
+      "where": "Products",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 540,
+        "top": 0,
+        "right": 360,
+        "bottom": 540,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "normal24",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · Festival Lights Bazaar26",
+      "rect": {
+        "x": 20,
+        "y": 253.6875,
+        "width": 320,
+        "height": 48,
+        "top": 253.6875,
+        "right": 340,
+        "bottom": 301.6875,
+        "left": 20
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "normal24",
+      "where": "Home",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 104.390625,
+          "y": 72.359375,
+          "width": 151.1875,
+          "height": 14.84375,
+          "top": 72.359375,
+          "right": 255.578125,
+          "bottom": 87.203125,
+          "left": 104.390625
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 540,
+        "top": 0,
+        "right": 360,
+        "bottom": 540,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "name": "normal24",
+      "where": "Products",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 540,
+        "top": 0,
+        "right": 360,
+        "bottom": 540,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Player",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 455.11492919921875,
+            "width": 92.015625,
+            "height": 21,
+            "top": 455.11492919921875,
+            "right": 226.0078125,
+            "bottom": 476.11492919921875,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 833,
+        "client": 309,
+        "total": 1142
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Products",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 455.0999450683594,
+            "width": 92.015625,
+            "height": 21,
+            "top": 455.0999450683594,
+            "right": 226.0078125,
+            "bottom": 476.0999450683594,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 476,
+        "client": 309,
+        "total": 785
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Legacy",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 455.441162109375,
+            "width": 92.015625,
+            "height": 21,
+            "top": 455.441162109375,
+            "right": 226.0078125,
+            "bottom": 476.441162109375,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1170,
+        "client": 309,
+        "total": 1479
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Shop",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 455.4544982910156,
+            "width": 92.015625,
+            "height": 21,
+            "top": 455.4544982910156,
+            "right": 226.0078125,
+            "bottom": 476.4544982910156,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 331,
+        "client": 309,
+        "total": 640
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Settings",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 440.30413818359375,
+            "width": 92.015625,
+            "height": 21,
+            "top": 440.30413818359375,
+            "right": 226.0078125,
+            "bottom": 461.30413818359375,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 132,
+        "client": 383,
+        "total": 515
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Statistics",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 439.39306640625,
+            "width": 92.015625,
+            "height": 21,
+            "top": 439.39306640625,
+            "right": 226.0078125,
+            "bottom": 460.39306640625,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 125,
+        "client": 383,
+        "total": 508
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Purchase",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 440.95318603515625,
+            "width": 92.015625,
+            "height": 21,
+            "top": 440.95318603515625,
+            "right": 226.0078125,
+            "bottom": 461.95318603515625,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 151,
+        "client": 383,
+        "total": 534
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "Upgrades",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 385.8656921386719,
+            "width": 92.015625,
+            "height": 21,
+            "top": 385.8656921386719,
+            "right": 226.0078125,
+            "bottom": 406.8656921386719,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1804,
+        "client": 328,
+        "total": 2132
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "where": "SkillDetail:0",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 385.866943359375,
+            "width": 92.015625,
+            "height": 21,
+            "top": 385.866943359375,
+            "right": 226.0078125,
+            "bottom": 406.866943359375,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 74,
+        "client": 328,
+        "total": 402
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "wide",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · WWWWWWWWWWWWWWWWWWWWWWWW",
+      "rect": {
+        "x": 27,
+        "y": 393.6875,
+        "width": 306,
+        "height": 64.78125,
+        "top": 393.6875,
+        "right": 333,
+        "bottom": 458.46875,
+        "left": 27
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "wide",
+      "where": "Home",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 104.390625,
+          "y": 87.46875,
+          "width": 151.1875,
+          "height": 17.9375,
+          "top": 87.46875,
+          "right": 255.578125,
+          "bottom": 105.40625,
+          "left": 104.390625
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 640,
+        "top": 0,
+        "right": 360,
+        "bottom": 640,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "wide",
+      "where": "Products",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 640,
+        "top": 0,
+        "right": 360,
+        "bottom": 640,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "normal24",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · Festival Lights Bazaar26",
+      "rect": {
+        "x": 27,
+        "y": 393.6875,
+        "width": 306,
+        "height": 48,
+        "top": 393.6875,
+        "right": 333,
+        "bottom": 441.6875,
+        "left": 27
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "normal24",
+      "where": "Home",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 104.390625,
+          "y": 87.46875,
+          "width": 151.1875,
+          "height": 17.9375,
+          "top": 87.46875,
+          "right": 255.578125,
+          "bottom": 105.40625,
+          "left": 104.390625
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 640,
+        "top": 0,
+        "right": 360,
+        "bottom": 640,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "name": "normal24",
+      "where": "Products",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 640,
+        "top": 0,
+        "right": 360,
+        "bottom": 640,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Player",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 556.0659790039062,
+            "width": 92.015625,
+            "height": 21,
+            "top": 556.0659790039062,
+            "right": 226.0078125,
+            "bottom": 577.0659790039062,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 733,
+        "client": 409,
+        "total": 1142
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Products",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 556.3645629882812,
+            "width": 92.015625,
+            "height": 21,
+            "top": 556.3645629882812,
+            "right": 226.0078125,
+            "bottom": 577.3645629882812,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 376,
+        "client": 409,
+        "total": 785
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Legacy",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 555.9429321289062,
+            "width": 92.015625,
+            "height": 21,
+            "top": 555.9429321289062,
+            "right": 226.0078125,
+            "bottom": 576.9429321289062,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1070,
+        "client": 409,
+        "total": 1479
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Shop",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 555.994384765625,
+            "width": 92.015625,
+            "height": 21,
+            "top": 555.994384765625,
+            "right": 226.0078125,
+            "bottom": 576.994384765625,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 231,
+        "client": 409,
+        "total": 640
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Settings",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 531.014892578125,
+            "width": 92.015625,
+            "height": 21,
+            "top": 531.014892578125,
+            "right": 226.0078125,
+            "bottom": 552.014892578125,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 53,
+        "client": 466,
+        "total": 519
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Statistics",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 531.46337890625,
+            "width": 92.015625,
+            "height": 21,
+            "top": 531.46337890625,
+            "right": 226.0078125,
+            "bottom": 552.46337890625,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 46,
+        "client": 466,
+        "total": 512
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Purchase",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 531.466552734375,
+            "width": 92.015625,
+            "height": 21,
+            "top": 531.466552734375,
+            "right": 226.0078125,
+            "bottom": 552.466552734375,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 72,
+        "client": 466,
+        "total": 538
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "Upgrades",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 133.9921875,
+            "y": 474.9537658691406,
+            "width": 92.015625,
+            "height": 21,
+            "top": 474.9537658691406,
+            "right": 226.0078125,
+            "bottom": 495.9537658691406,
+            "left": 133.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1780,
+        "client": 410,
+        "total": 2190
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "where": "SkillDetail:0",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 406,
+        "total": 406
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "wide",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · WWWWWWWWWWWWWWWWWWWWWWWW",
+      "rect": {
+        "x": 28.078125,
+        "y": 445.171875,
+        "width": 333.84375,
+        "height": 69.984375,
+        "top": 445.171875,
+        "right": 361.921875,
+        "bottom": 515.15625,
+        "left": 28.078125
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "wide",
+      "where": "Home",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 113.09375,
+          "y": 115.34375,
+          "width": 163.796875,
+          "height": 23.671875,
+          "top": 115.34375,
+          "right": 276.890625,
+          "bottom": 139.015625,
+          "left": 113.09375
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "wide",
+      "where": "Products",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "normal24",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · Festival Lights Bazaar26",
+      "rect": {
+        "x": 28.078125,
+        "y": 456.171875,
+        "width": 333.84375,
+        "height": 48,
+        "top": 456.171875,
+        "right": 361.921875,
+        "bottom": 504.171875,
+        "left": 28.078125
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "normal24",
+      "where": "Home",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 113.09375,
+          "y": 115.34375,
+          "width": 163.796875,
+          "height": 23.671875,
+          "top": 115.34375,
+          "right": 276.890625,
+          "bottom": 139.015625,
+          "left": 113.09375
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "name": "normal24",
+      "where": "Products",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 844,
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Player",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 148.9921875,
+            "y": 754.9420776367188,
+            "width": 92.015625,
+            "height": 21,
+            "top": 754.9420776367188,
+            "right": 241.0078125,
+            "bottom": 775.9420776367188,
+            "left": 148.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 572,
+        "client": 598,
+        "total": 1170
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Products",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 148.9921875,
+            "y": 755.1060791015625,
+            "width": 92.015625,
+            "height": 21,
+            "top": 755.1060791015625,
+            "right": 241.0078125,
+            "bottom": 776.1060791015625,
+            "left": 148.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 202,
+        "client": 598,
+        "total": 800
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Legacy",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 148.9921875,
+            "y": 754.4395751953125,
+            "width": 92.015625,
+            "height": 21,
+            "top": 754.4395751953125,
+            "right": 241.0078125,
+            "bottom": 775.4395751953125,
+            "left": 148.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 884,
+        "client": 598,
+        "total": 1482
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Shop",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 148.9921875,
+            "y": 754.7979125976562,
+            "width": 92.015625,
+            "height": 21,
+            "top": 754.7979125976562,
+            "right": 241.0078125,
+            "bottom": 775.7979125976562,
+            "left": 148.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 62,
+        "client": 598,
+        "total": 660
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Settings",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 538,
+        "total": 538
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Statistics",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 543,
+        "total": 543
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Purchase",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 554,
+        "total": 554
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "Upgrades",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 148.9921875,
+            "y": 675.2423706054688,
+            "width": 92.015625,
+            "height": 21,
+            "top": 675.2423706054688,
+            "right": 241.0078125,
+            "bottom": 696.2423706054688,
+            "left": 148.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1588,
+        "client": 609,
+        "total": 2197
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "where": "SkillDetail:0",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 423,
+        "total": 423
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "wide",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · WWWWWWWWWWWWWWWWWWWWWWWW",
+      "rect": {
+        "x": 30.25,
+        "y": 485.265625,
+        "width": 389.5,
+        "height": 80.5,
+        "top": 485.265625,
+        "right": 419.75,
+        "bottom": 565.765625,
+        "left": 30.25
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "wide",
+      "where": "Home",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 130.5,
+          "y": 125.1875,
+          "width": 189,
+          "height": 25.6875,
+          "top": 125.1875,
+          "right": 319.5,
+          "bottom": 150.875,
+          "left": 130.5
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 916,
+        "top": 0,
+        "right": 450,
+        "bottom": 916,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "wide",
+      "where": "Products",
+      "stored": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "sign": {
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "aria": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "hidden": null,
+        "title": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 916,
+        "top": 0,
+        "right": 450,
+        "bottom": 916,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "normal24",
+      "where": "Settings",
+      "focus": "Naming",
+      "text": "Shop name · Festival Lights Bazaar26",
+      "rect": {
+        "x": 30.25,
+        "y": 501.515625,
+        "width": 389.5,
+        "height": 48,
+        "top": 501.515625,
+        "right": 419.75,
+        "bottom": 549.515625,
+        "left": 30.25
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "normal24",
+      "where": "Home",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 130.5,
+          "y": 125.1875,
+          "width": 189,
+          "height": 25.6875,
+          "top": 125.1875,
+          "right": 319.5,
+          "bottom": 150.875,
+          "left": 130.5
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 916,
+        "top": 0,
+        "right": 450,
+        "bottom": 916,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "name": "normal24",
+      "where": "Products",
+      "stored": "Festival Lights Bazaar26",
+      "sign": {
+        "text": "Festival Lights Bazaar26",
+        "aria": "Shop name: Festival Lights Bazaar26",
+        "hidden": null,
+        "title": "Festival Lights Bazaar26",
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "overflow": "hidden",
+        "textOverflow": "ellipsis"
+      },
+      "app": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 916,
+        "top": 0,
+        "right": 450,
+        "bottom": 916,
+        "left": 0
+      },
+      "controls": [],
+      "documentOverflow": false
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Player",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 178.9921875,
+            "y": 815.67529296875,
+            "width": 92.015625,
+            "height": 21,
+            "top": 815.67529296875,
+            "right": 271.0078125,
+            "bottom": 836.67529296875,
+            "left": 178.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 595,
+        "client": 641,
+        "total": 1236
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Products",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 178.9921875,
+            "y": 816.8120727539062,
+            "width": 92.015625,
+            "height": 21,
+            "top": 816.8120727539062,
+            "right": 271.0078125,
+            "bottom": 837.8120727539062,
+            "left": 178.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 268,
+        "client": 641,
+        "total": 909
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Legacy",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 178.9921875,
+            "y": 816.3319702148438,
+            "width": 92.015625,
+            "height": 21,
+            "top": 816.3319702148438,
+            "right": 271.0078125,
+            "bottom": 837.3319702148438,
+            "left": 178.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 847,
+        "client": 641,
+        "total": 1488
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Shop",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 178.9921875,
+            "y": 816.4287719726562,
+            "width": 92.015625,
+            "height": 21,
+            "top": 816.4287719726562,
+            "right": 271.0078125,
+            "bottom": 837.4287719726562,
+            "left": 178.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 68,
+        "client": 641,
+        "total": 709
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Settings",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 576,
+        "total": 576
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Statistics",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 617,
+        "total": 617
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Purchase",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 588,
+        "total": 588
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "Upgrades",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": false,
+          "text": "More below ↓",
+          "rect": {
+            "x": 178.9921875,
+            "y": 727.7097778320312,
+            "width": 92.015625,
+            "height": 21,
+            "top": 727.7097778320312,
+            "right": 271.0078125,
+            "bottom": 748.7097778320312,
+            "left": 178.9921875
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 1686,
+        "client": 652,
+        "total": 2338
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "where": "SkillDetail:0",
+      "name": "scroll-end",
+      "before": [
+        {
+          "hidden": true,
+          "text": "More below ↓",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "after": [
+        {
+          "hidden": true,
+          "text": "More below ↓"
+        }
+      ],
+      "scroll": {
+        "top": 0,
+        "client": 458,
+        "total": 458
+      }
+    }
+  ],
+  "errors": []
+}

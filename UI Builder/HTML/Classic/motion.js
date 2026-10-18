@@ -23,7 +23,7 @@ function content(root){
 function panel(el,nav){enter(el,14);content(el.querySelector('.scroll-body'));if(nav)pulse(nav.querySelector('svg'));}
 function sheet(el){
  play(el,[{backgroundColor:'#10172a00'},{backgroundColor:'#10172ac9'}],{duration:220},'backdrop');
- play(el.querySelector('.modal-card'),[{opacity:0,transform:'translateY(20px) scale(.96)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:330});
+ play(el.querySelector('.modal-card'),[{opacity:0,transform:'translateY(20px)'},{opacity:1,transform:'translateY(0)'}],{duration:330});
  content(el.querySelector('.modal-body'));
 }
 function dismiss(el){

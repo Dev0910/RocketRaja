@@ -1,0 +1,55 @@
+{
+  "geometry": {
+    ".world": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 270,
+      "top": 0,
+      "right": 360,
+      "bottom": 270,
+      "left": 0
+    },
+    ".world .stall-art": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 270,
+      "top": 0,
+      "right": 360,
+      "bottom": 270,
+      "left": 0
+    },
+    ".shop-title": {
+      "x": 104.390625,
+      "y": 72.359375,
+      "width": 151.1875,
+      "height": 14.84375,
+      "top": 72.359375,
+      "right": 255.578125,
+      "bottom": 87.203125,
+      "left": 104.390625
+    },
+    "#cash-value": {
+      "x": 120.46875,
+      "y": 2.171875,
+      "width": 119.03125,
+      "height": 49,
+      "top": 2.171875,
+      "right": 239.5,
+      "bottom": 51.171875,
+      "left": 120.46875
+    },
+    "#stall-tap": {
+      "x": 0,
+      "y": 205.203125,
+      "width": 360,
+      "height": 64.796875,
+      "top": 205.203125,
+      "right": 360,
+      "bottom": 270,
+      "left": 0
+    }
+  },
+  "hash": "917b203654ddef2aa68025de0877f06f6f5ce79b9f64562a93a3abede23e4bf6"
+}

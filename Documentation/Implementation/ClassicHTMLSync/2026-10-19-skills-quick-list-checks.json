@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-19",
+  "selectedConcept": 1,
+  "htmlStatus": "candidate-awaiting-review",
+  "viewports": [
+    {
+      "allButtonsVisible": true,
+      "bodyScroll": 0,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "minTargetHeight": 48,
+      "rows": 3,
+      "size": "360x540"
+    },
+    {
+      "allButtonsVisible": true,
+      "bodyScroll": 0,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "minTargetHeight": 48,
+      "rows": 3,
+      "size": "360x640"
+    },
+    {
+      "allButtonsVisible": true,
+      "bodyScroll": 0,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "minTargetHeight": 48,
+      "rows": 3,
+      "size": "390x844"
+    },
+    {
+      "allButtonsVisible": true,
+      "bodyScroll": 0,
+      "horizontalOverflow": false,
+      "insideViewport": true,
+      "minTargetHeight": 55,
+      "rows": 3,
+      "size": "450x916"
+    }
+  ],
+  "locked": {
+    "activateDisabled": true,
+    "detailsEnabled": true,
+    "states": [
+      "locked",
+      "locked",
+      "locked"
+    ]
+  },
+  "saveError": {
+    "allBlocked": true,
+    "errorVisible": true
+  },
+  "metadata": {
+    "allBindingTargetsExist": true,
+    "allThreeReady": true,
+    "boundRows": 3,
+    "collectionKeys": [
+      "SK-FR-P-01",
+      "SK-HH-P-01",
+      "SK-BO-P-01"
+    ],
+    "duplicateIds": [],
+    "metadataBlocks": 1,
+    "undeclaredActions": []
+  },
+  "interactionChecks": {
+    "directActivation": true,
+    "liveCountdownAndRing": true,
+    "bulkOrderCooldown": true,
+    "detailsReturnsWithoutReset": true,
+    "detailsFocusRestored": true,
+    "closeRestoresPlayerSkillsFocus": true
+  },
+  "limits": [
+    "Disposable browser fixture clocks; no rewards or save writes.",
+    "Reference art selected; HTML visual acceptance and Unity implementation remain separate."
+  ],
+  "browserErrors": [],
+  "syntax": "pass",
+  "nativeInventory": "2026-10-19-skills-quick-list-unity-readonly.json",
+  "assertions": "pass"
+}

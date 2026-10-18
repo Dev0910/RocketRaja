@@ -1,5 +1,7 @@
 # Rocket Raja: recommendation coverage and remaining work
 
+**7 October 2026 — current design:** the user confirmed the Unity implementation as intended. [Current Implementation Design](Current%20Implementation%20Design.md) takes precedence over conflicting passages below. Unrestricted cash upgrades, unlimited manual taps, immediate global Buy All, Classic browsing without product filters/pins, disabled transient notices and 1×/5× pulls are accepted.
+
 Updated: 1 October 2026. Planning only; no Unity changes.
 
 This maps [Comparison and Recommendations](Comparison%20and%20Recommendations.md) and [Design Recovery Roadmap](Design%20Recovery%20Roadmap.md) to the redesign. Their implementation findings describe the earlier game. Current user decisions and the v1 redesign take precedence.

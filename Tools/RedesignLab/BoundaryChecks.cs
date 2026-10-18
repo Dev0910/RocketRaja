@@ -5,7 +5,7 @@ static partial class Program
     static void BoundaryChecks(RedesignCatalog data)
     {
         RedesignEngine Make(RedesignState s) => new(data, s, _ => { });
-        var rich = RedesignState.Fresh(1000); rich.cash = new Amount(1, 100); rich.products = Enumerable.Repeat(300, 8).ToArray();
+        var rich = RedesignState.Fresh(1000); rich.cash = new Amount(1, 250); rich.products = Enumerable.Repeat(300, 8).ToArray();
         var all = Make(rich); all.CommitBuyAll(all.QuoteBuyAll());
         var full = all.State.Copy(); full.completedPrestiges = full.fame = 1; full.target = ProgressionNumbers.RunTarget(1);
         var baseline = Make(full);
@@ -59,7 +59,7 @@ static partial class Program
             }
         var milestone = rich.Copy(); milestone.products[0] = 24; var one = Make(milestone); milestone.cash = one.LevelQuote(0, 1).cost;
         one = Make(milestone);
-        Check(one.LevelQuote(0, int.MaxValue).quantity == 1 && one.BuyLevels(0, int.MaxValue) && one.State.products[0] == 25 && Near(one.ProductIncome(0), .85 * 25 * 2), "Max crosses the level-25 milestone using exactly affordable cash");
+        Check(one.LevelQuote(0, int.MaxValue).quantity == 1 && one.BuyLevels(0, int.MaxValue) && one.State.products[0] == 25 && Near(one.ProductIncome(0), .85 * 25 * 4), "Max crosses the level-25 milestone using exactly affordable cash");
         var high = full.Copy(); high.products[0] = Catalog.MaxLevel - 1; var highest = Make(high); var price = highest.LevelQuote(0, 1).cost;
         Check(price.Valid && highest.LevelQuote(0, 100).quantity == 1 && highest.ProductIncome(0).Valid, "High levels retain finite large-number quotes and clamp bulk quantity at storage limit");
         var qState = rich.Copy(); qState.products[0] = 1; qState.cash = 500;

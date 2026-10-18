@@ -1,1174 +1,1107 @@
-# Rocket Raja: 1,000 priced cash unlockables — cash-only v1
+# Rocket Raja: 1,000 cash upgrades — faster-start v1
 
-Updated: 1 October 2026. Planning only; no Unity data written.
+Authoritative runtime catalogue. See [Faster-start Economy](Faster-start%20Economy.md) for rules, measured pacing and limitations.
 
-All 1,000 existing IDs and names are retained. This edition replaces the previous unpriced effect placeholders with numerical base prices, effects, and concrete level requirements. [Economy Specification v1](Economy%20Specification%20v1.md) defines stacking, geometric level costs, skill behavior, prestige, and rounding. [Economy Simulation Report v1](Economy%20Simulation%20Report%20v1.md) records the executed tests and their limits.
+All purchases are run-local, affordable and not already owned. Requirement cells retain descriptive family metadata only; they do not gate purchases. Bands are pages of 50 rows, never price tiers. Effects use the exact authored factor field. Strongest level/upgrade-price discounts win within each chain; cards stack separately.
 
-**Cash-only progression is selected.** All 1,000 rows below now use its steeper late-game prices and have no completed-prestige requirements. The previous milestone-gated option is superseded. The [price table](Cash-only%20Price%20Table%20v1.md) mirrors these values; the catalogue and specification are the current source of truth. Numerical values remain a planning baseline, not shipping validation.
+Inventory: 528 product profit (66/family), 128 product level cost, 120 direct tap profit, 40 tap level cost, 80 global profit, 32 Upgrade Price Discount, 72 skill entries. Total 1,000. The existing 80 signature identities and 28-card roster are preserved.
 
-All purchases are run-local; buy again after prestige. Every ID counts once toward lifetime U, including the three base skill unlocks. Cards and product/tap levels are outside this 1,000 count. Visibility alone and rebuys never increment U. Purchasing remains manual with scoped Buy All.
+## Page 1
 
-## Numerical conventions
-
-- Base cash prices are rounded to six significant digits at authoring. Apply current run/card named-cash discounts afterward, without refunding prior purchases.
-- A cumulative discount or duration/cooldown factor replaces that chain's previous factor. Ordinary profit multipliers stack across purchased entries.
-- PP signatures have one complete effect, not a supporting multiplier plus a second signature reward.
-- An XL source gate applies to the first family in its ID; the second benefits. PF level requirements apply to every listed family.
-- TD/TL effects use the exact formulas in the specification. Displayed percentages and duration/cooldown factors rounded in a row are explanatory, not replacements for the exact formula.
-- Meet each row's named ownership, level, and prior-upgrade prerequisites and afford its discounted price. No prestige-count, calendar, or premium-purchase requirement applies to catalogue access.
-- Key B03-007 identifies band 3, position 7. The price formula and all 20 opening values are in the specification.
-
-## Inventory
-
-| Type | Count |
-|---|---:|
-| Product profit | 480 |
-| Product level cost | 128 |
-| Tap profit (60 TD + 60 TL) | 120 |
-| Tap level cost | 40 |
-| Global profit | 80 |
-| Named-cash cost | 32 |
-| Skills | 72 |
-| Product links | 32 |
-| Product groups | 16 |
-| Total | 1,000 |
-
-## Band 01
-
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-01 | Aerial shots Signature Breakthrough I | PP(AER,1): multiply family normal profit by x2; complete signature effect | Own Aerial shots | B01-001 | 100 |
-| PP-ANA-01 | Anar: Gift Packaging I | PP(ANA,1): multiply family normal profit by x1.2 | Own Anar | B01-002 | 103.619 |
-| PP-BOX-01 | Celebration boxes: Gift Packaging I | PP(BOX,1): multiply family normal profit by x1.2 | Own Celebration boxes | B01-003 | 107.368 |
-| PP-CHA-01 | Chakri: Gift Packaging I | PP(CHA,1): multiply family normal profit by x1.2 | Own Chakri | B01-004 | 111.253 |
-| PP-PHU-01 | Phuljhari Signature Breakthrough I | PP(PHU,1): multiply family normal profit by x2; complete signature effect | Own Phuljhari | B01-005 | 115.279 |
-| PP-ROC-01 | Rockets: Gift Packaging I | PP(ROC,1): multiply family normal profit by x1.2 | Own Rockets | B01-006 | 119.45 |
-| PP-SMC-01 | Small crackers: Gift Packaging I | PP(SMC,1): multiply family normal profit by x1.2 | Own Small crackers | B01-007 | 123.773 |
-| PP-STR-01 | Cracker strings: Gift Packaging I | PP(STR,1): multiply family normal profit by x1.2 | Own Cracker strings | B01-008 | 128.251 |
-| PP-AER-02 | Aerial shots: Festival Display I | PP(AER,2): multiply family normal profit by x1.2 | Own Aerial shots; PP-AER-01 | B01-009 | 132.892 |
-| PP-ANA-02 | Anar: Festival Display I | PP(ANA,2): multiply family normal profit by x1.2 | Own Anar; PP-ANA-01 | B01-010 | 137.701 |
-| PP-BOX-02 | Celebration boxes: Festival Display I | PP(BOX,2): multiply family normal profit by x1.2 | Own Celebration boxes; PP-BOX-01 | B01-011 | 142.684 |
-| PP-CHA-02 | Chakri Signature Breakthrough I | PP(CHA,2): multiply family normal profit by x2; complete signature effect | Own Chakri; PP-CHA-01 | B01-012 | 147.847 |
-| PP-PHU-02 | Phuljhari: Festival Display I | PP(PHU,2): multiply family normal profit by x1.2 | Own Phuljhari; PP-PHU-01 | B01-013 | 153.197 |
-| PP-ROC-02 | Rockets: Festival Display I | PP(ROC,2): multiply family normal profit by x1.2 | Own Rockets; PP-ROC-01 | B01-014 | 158.74 |
-| PP-SMC-02 | Small crackers: Festival Display I | PP(SMC,2): multiply family normal profit by x1.2 | Own Small crackers; PP-SMC-01 | B01-015 | 164.484 |
-| PP-STR-02 | Cracker strings: Festival Display I | PP(STR,2): multiply family normal profit by x1.2 | Own Cracker strings; PP-STR-01 | B01-016 | 170.436 |
-| PP-AER-03 | Aerial shots: Regular Customers I | PP(AER,3): multiply family normal profit by x1.2 | Own Aerial shots; PP-AER-02 | B01-017 | 176.603 |
-| PP-ANA-03 | Anar: Regular Customers I | PP(ANA,3): multiply family normal profit by x1.2 | Own Anar; PP-ANA-02 | B01-018 | 182.994 |
-| PP-BOX-03 | Celebration boxes: Regular Customers I | PP(BOX,3): multiply family normal profit by x1.2 | Own Celebration boxes; PP-BOX-02 | B01-019 | 189.616 |
-| PP-CHA-03 | Chakri: Regular Customers I | PP(CHA,3): multiply family normal profit by x1.2 | Own Chakri; PP-CHA-02 | B01-020 | 196.477 |
-| PP-PHU-03 | Phuljhari: Regular Customers I | PP(PHU,3): multiply family normal profit by x1.2 | Own Phuljhari; PP-PHU-02 | B01-021 | 203.586 |
-| PP-ROC-03 | Rockets: Regular Customers I | PP(ROC,3): multiply family normal profit by x1.2 | Own Rockets; PP-ROC-02 | B01-022 | 210.953 |
-| PP-SMC-03 | Small crackers Signature Breakthrough I | PP(SMC,3): multiply family normal profit by x2; complete signature effect | Own Small crackers; PP-SMC-02 | B01-023 | 218.587 |
-| PP-STR-03 | Cracker strings: Regular Customers I | PP(STR,3): multiply family normal profit by x1.2 | Own Cracker strings; PP-STR-02 | B01-024 | 226.496 |
-| TP-001 | Sales Pitch I | TD(1): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families | B01-025 | 234.692 |
-| TP-002 | Counter Display I | TD(2): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-001 | B01-026 | 243.185 |
-| TP-003 | Shop Showmanship I | TL(1): linked share A becomes 12% | Own 2+ families; TP-002 | B01-027 | 251.984 |
-| TP-004 | Crowd Appeal I | TL(2): linked share A becomes 12.30508475% | Own 2+ families; TP-003 | B01-028 | 261.102 |
-| TP-005 | Festival Calls I | TD(3): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-004 | B01-029 | 270.55 |
-| TP-006 | Shop Reputation I | TL(3): linked share A becomes 12.61016949% | Own 2+ families; TP-005 | B01-030 | 280.34 |
-| TC-01 | Practice Routine I | TC(1): total run tap-level discount becomes 0.875% | Own 1+ families | B01-031 | 290.485 |
-| TC-02 | Counter Training I | TC(2): total run tap-level discount becomes 1.75% | Own 1+ families; TC-01 | B01-032 | 300.996 |
-| GP-01 | Festival Footfall I | GP(1): normal products and independent tap B x1.10, once | Own 1+ families | B01-033 | 311.887 |
-| GP-02 | Community Trust I | GP(2): normal products and independent tap B x1.10, once | Own 1+ families; GP-01 | B01-034 | 323.173 |
-| GP-03 | Local Advertising I | GP(3): normal products and independent tap B x1.10, once | Own 1+ families; GP-02 | B01-035 | 334.867 |
-| GP-04 | Shopfront Glow I | GP(4): normal products and independent tap B x1.10, once | Own 1+ families; GP-03 | B01-036 | 346.985 |
-| UC-01 | Supplier Network I | UC(1): total run named-cash discount becomes 1.09375% | Own 1+ families | B01-037 | 359.54 |
-| SK-BO-P-01 | Bulk Order: Unlock | SP(BO,1): 120 seconds of normal P; unlock skill | Own 3+ families | B01-038 | 372.55 |
-| SK-FR-P-01 | Festival Rush: Unlock | SP(FR,1): Rush product multiplier x2; unlock skill | Own 1+ families | B01-039 | 386.031 |
-| SK-HH-P-01 | Helping Hands: Unlock | SP(HH,1): 3 auto taps/s; unlock skill | Own 2+ families | B01-040 | 400 |
+| PP-PHU-01 | Phuljhari Signature Breakthrough I | PP(PHU,1): product profit x2; factor=2 | Own Phuljhari | B01-001 | 20.00000000000000 |
+| PP-ANA-01 | Anar: Gift Packaging I | PP(ANA,1): product profit x2; factor=2 | Own Anar | B01-002 | 28.66802165645520 |
+| TP-001 | Sales Pitch I | TD(1): tap profit x2; factor=2 |  | B01-003 | 41.09688276754839 |
+| GP-01 | Festival Footfall I | GP(1): global profit x2; factor=2 |  | B01-004 | 58.92009910114071 |
+| PC-PHU-01 | Phuljhari: Wholesale Deal I | PC(PHU,1): remaining cost x0.1; factor=0.1 | Own Phuljhari | B01-005 | 84.48147449266099 |
+| SK-FR-P-01 | Festival Rush: Unlock | SP(FR,1): skill effect x2; factor=2 |  | B01-006 | 121.1442850400089 |
+| PP-CHA-01 | Chakri: Gift Packaging I | PP(CHA,1): product profit x2; factor=2 | Own Chakri | B01-007 | 173.7351952384767 |
+| PP-ROC-01 | Rockets: Gift Packaging I | PP(ROC,1): product profit x2; factor=2 | Own Rockets | B01-008 | 249.1816811442093 |
+| TP-002 | Counter Display I | TD(2): tap profit x2; factor=2 |  | B01-009 | 357.4274032046640 |
+| UC-01 | Upgrade Price Discount 1 | UC(1): remaining cost x0.9; factor=0.9 |  | B01-010 | 512.7468602370325 |
+| PC-ANA-01 | Anar: Wholesale Deal I | PC(ANA,1): remaining cost x0.1; factor=0.1 | Own Anar | B01-011 | 735.6336771448832 |
+| SK-HH-P-01 | Helping Hands: Unlock | SP(HH,1): skill effect x3; factor=3 |  | B01-012 | 1055.513094894587 |
+| PP-SMC-01 | Small crackers: Gift Packaging I | PP(SMC,1): product profit x2; factor=2 | Own Small crackers | B01-013 | 1514.638799814731 |
+| PP-STR-01 | Cracker strings: Gift Packaging I | PP(STR,1): product profit x2; factor=2 | Own Cracker strings | B01-014 | 2173.691761421272 |
+| PP-AER-01 | Aerial shots Signature Breakthrough I | PP(AER,1): product profit x2; factor=2 | Own Aerial shots | B01-015 | 3119.825262274780 |
+| PP-BOX-01 | Celebration boxes: Gift Packaging I | PP(BOX,1): product profit x2; factor=2 | Own Celebration boxes | B01-016 | 4478.226039002880 |
+| TC-01 | Practice Routine I | TC(1): remaining cost x0.1; factor=0.1 |  | B01-017 | 6428.729919604863 |
+| PP-PHU-02 | Phuljhari: Festival Display I | PP(PHU,2): product profit x2; factor=2 | Own Phuljhari | B01-018 | 9229.704146848628 |
+| PP-ANA-02 | Anar: Festival Display I | PP(ANA,2): product profit x2; factor=2 | Own Anar | B01-019 | 13252.37782168433 |
+| SK-BO-P-01 | Bulk Order: Unlock | SP(BO,1): skill effect x120; factor=120 |  | B01-020 | 19030.19626242208 |
+| PP-CHA-02 | Chakri Signature Breakthrough I | PP(CHA,2): product profit x2; factor=2 | Own Chakri | B01-021 | 27329.78121416490 |
+| PP-ROC-02 | Rockets: Festival Display I | PP(ROC,2): product profit x2; factor=2 | Own Rockets | B01-022 | 39252.96546299934 |
+| PC-CHA-01 | Chakri: Wholesale Deal I | PC(CHA,1): remaining cost x0.1; factor=0.1 | Own Chakri | B01-023 | 56383.52436113716 |
+| TP-003 | Shop Showmanship I | TD(3): tap profit x2; factor=2 |  | B01-024 | 80998.20505174081 |
+| PP-SMC-02 | Small crackers: Festival Display I | PP(SMC,2): product profit x2; factor=2 | Own Small crackers | B01-025 | 116370.2588597519 |
+| GP-02 | Community Trust I | GP(2): global profit x3; factor=3 |  | B01-026 | 167206.0684537568 |
+| PP-STR-02 | Cracker strings: Festival Display I | PP(STR,2): product profit x2; factor=2 | Own Cracker strings | B01-027 | 240273.2925788799 |
+| PP-AER-02 | Aerial shots: Festival Display I | PP(AER,2): product profit x2; factor=2 | Own Aerial shots | B01-028 | 345304.6236586962 |
+| PP-BOX-02 | Celebration boxes: Festival Display I | PP(BOX,2): product profit x2; factor=2 | Own Celebration boxes | B01-029 | 496298.2192681034 |
+| PC-ROC-01 | Rockets: Wholesale Deal I | PC(ROC,1): remaining cost x0.1; factor=0.1 | Own Rockets | B01-030 | 713389.1005062775 |
+| PP-PHU-03 | Phuljhari: Regular Customers I | PP(PHU,3): product profit x4; factor=4 | Own Phuljhari | B01-031 | 1025542.474074002 |
+| TP-004 | Crowd Appeal I | TD(4): tap profit x2; factor=2 |  | B01-032 | 1474430.355578508 |
+| TC-02 | Counter Training I | TC(2): remaining cost x0.09426684551178853; factor=0.09426684551178853 |  | B01-033 | 2120011.929073847 |
+| PP-ANA-03 | Anar: Regular Customers I | PP(ANA,3): product profit x4; factor=4 | Own Anar | B01-034 | 3048567.217800355 |
+| UC-02 | Upgrade Price Discount 2 | UC(2): remaining cost x0.8830959895795005; factor=0.8830959895795005 |  | B01-035 | 4384263.775433579 |
+| PP-CHA-03 | Chakri: Regular Customers I | PP(CHA,3): product profit x4; factor=4 | Own Chakri | B01-036 | 6305811.796876461 |
+| SK-FR-C-01 | Festival Rush: Faster Recovery I | SC(FR,1): skill effect x0.96875; factor=0.96875 |  | B01-037 | 9070448.535856709 |
+| PP-ROC-03 | Rockets: Regular Customers I | PP(ROC,3): product profit x4; factor=4 | Own Rockets | B01-038 | 13048480.83119540 |
+| GP-03 | Local Advertising I | GP(3): global profit x4; factor=4 |  | B01-039 | 18773038.45178955 |
+| PC-SMC-01 | Small crackers: Wholesale Deal I | PC(SMC,1): remaining cost x0.1; factor=0.1 | Own Small crackers | B01-040 | 27011743.49194671 |
+| SK-FR-P-02 | Stronger Rush II | SP(FR,2): skill effect x2.25; factor=2.25 |  | B01-041 | 38869959.99212403 |
+| PP-SMC-03 | Small crackers Signature Breakthrough I | PP(SMC,3): product profit x4; factor=4 | Own Small crackers | B01-042 | 55939554.03779924 |
+| TP-005 | Festival Calls I | TD(5): tap profit x2; factor=2 |  | B01-043 | 80513245.84844607 |
+| PP-STR-03 | Cracker strings: Regular Customers I | PP(STR,3): product profit x4; factor=4 | Own Cracker strings | B01-044 | 115893505.7537341 |
+| PP-AER-03 | Aerial shots: Regular Customers I | PP(AER,3): product profit x4; factor=4 | Own Aerial shots | B01-045 | 166837738.7095051 |
+| PP-BOX-03 | Celebration boxes: Regular Customers I | PP(BOX,3): product profit x4; factor=4 | Own Celebration boxes | B01-046 | 240199953.3877133 |
+| PC-STR-01 | Cracker strings: Wholesale Deal I | PC(STR,1): remaining cost x0.1; factor=0.1 | Own Cracker strings | B01-047 | 345855727.5112634 |
+| PP-PHU-04 | Phuljhari: Signature Collection I | PP(PHU,4): product profit x8; factor=8 | Own Phuljhari | B01-048 | 498035677.2833204 |
+| TP-006 | Shop Reputation I | TD(6): tap profit x4; factor=4 |  | B01-049 | 717248035.2600250 |
+| PP-ANA-04 | Anar Signature Breakthrough I | PP(ANA,4): product profit x8; factor=8 | Own Anar | B01-050 | 1033050872.856235 |
 
-## Band 02
+## Page 2
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-04 | Aerial shots: Signature Collection I | PP(AER,4): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-03 | B02-001 | 3000000 |
-| PP-ANA-04 | Anar Signature Breakthrough I | PP(ANA,4): multiply family normal profit by x2; complete signature effect | Own Anar; PP-ANA-03 | B02-002 | 3084340 |
-| PP-BOX-04 | Celebration boxes Signature Breakthrough I | PP(BOX,4): multiply family normal profit by x2; complete signature effect | Own Celebration boxes; PP-BOX-03 | B02-003 | 3171050 |
-| PP-CHA-04 | Chakri: Signature Collection I | PP(CHA,4): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-03 | B02-004 | 3260200 |
-| PP-PHU-04 | Phuljhari: Signature Collection I | PP(PHU,4): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-03 | B02-005 | 3351860 |
-| PP-ROC-04 | Rockets: Signature Collection I | PP(ROC,4): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-03 | B02-006 | 3446100 |
-| PP-SMC-04 | Small crackers: Signature Collection I | PP(SMC,4): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-03 | B02-007 | 3542980 |
-| PP-STR-04 | Cracker strings: Signature Collection I | PP(STR,4): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-03 | B02-008 | 3642580 |
-| PP-AER-05 | Aerial shots: Celebration Specialist I | PP(AER,5): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-04 | B02-009 | 3744990 |
-| PP-ANA-05 | Anar: Celebration Specialist I | PP(ANA,5): multiply family normal profit by x1.6 | Own Anar; PP-ANA-04 | B02-010 | 3850280 |
-| PP-BOX-05 | Celebration boxes: Celebration Specialist I | PP(BOX,5): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-04 | B02-011 | 3958520 |
-| PP-CHA-05 | Chakri: Celebration Specialist I | PP(CHA,5): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-04 | B02-012 | 4069810 |
-| PP-PHU-05 | Phuljhari: Celebration Specialist I | PP(PHU,5): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-04 | B02-013 | 4184230 |
-| PP-ROC-05 | Rockets Signature Breakthrough I | PP(ROC,5): multiply family normal profit by x2; complete signature effect | Own Rockets; PP-ROC-04 | B02-014 | 4301870 |
-| PP-SMC-05 | Small crackers: Celebration Specialist I | PP(SMC,5): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-04 | B02-015 | 4422810 |
-| PP-STR-05 | Cracker strings: Celebration Specialist I | PP(STR,5): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-04 | B02-016 | 4547150 |
-| PP-AER-06 | Aerial shots: Premium Range I | PP(AER,6): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-05 | B02-017 | 4674990 |
-| PP-ANA-06 | Anar: Premium Range I | PP(ANA,6): multiply family normal profit by x1.6 | Own Anar; PP-ANA-05 | B02-018 | 4806420 |
-| PP-BOX-06 | Celebration boxes: Premium Range I | PP(BOX,6): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-05 | B02-019 | 4941550 |
-| PP-CHA-06 | Chakri: Premium Range I | PP(CHA,6): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-05 | B02-020 | 5080470 |
-| PP-PHU-06 | Phuljhari: Premium Range I | PP(PHU,6): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-05 | B02-021 | 5223300 |
-| PP-ROC-06 | Rockets: Premium Range I | PP(ROC,6): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-05 | B02-022 | 5370150 |
-| PP-SMC-06 | Small crackers: Premium Range I | PP(SMC,6): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-05 | B02-023 | 5521130 |
-| PP-STR-06 | Cracker strings Signature Breakthrough I | PP(STR,6): multiply family normal profit by x2; complete signature effect | Own Cracker strings; PP-STR-05 | B02-024 | 5676350 |
-| PC-AER-01 | Aerial shots: Wholesale Deal I | PC(AER,1): total run family-level discount becomes 2.1875% | Own Aerial shots | B02-025 | 5835930 |
-| PC-ANA-01 | Anar: Wholesale Deal I | PC(ANA,1): total run family-level discount becomes 2.1875% | Own Anar | B02-026 | 6000000 |
-| PC-BOX-01 | Celebration boxes: Wholesale Deal I | PC(BOX,1): total run family-level discount becomes 2.1875% | Own Celebration boxes | B02-027 | 6168680 |
-| PC-CHA-01 | Chakri: Wholesale Deal I | PC(CHA,1): total run family-level discount becomes 2.1875% | Own Chakri | B02-028 | 6342110 |
-| PC-PHU-01 | Phuljhari: Wholesale Deal I | PC(PHU,1): total run family-level discount becomes 2.1875% | Own Phuljhari | B02-029 | 6520410 |
-| PC-ROC-01 | Rockets: Wholesale Deal I | PC(ROC,1): total run family-level discount becomes 2.1875% | Own Rockets | B02-030 | 6703720 |
-| PC-SMC-01 | Small crackers: Wholesale Deal I | PC(SMC,1): total run family-level discount becomes 2.1875% | Own Small crackers | B02-031 | 6892190 |
-| PC-STR-01 | Cracker strings: Wholesale Deal I | PC(STR,1): total run family-level discount becomes 2.1875% | Own Cracker strings | B02-032 | 7085960 |
-| TP-007 | Sales Pitch II | TD(4): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-006 | B02-033 | 7285170 |
-| TP-008 | Counter Display II | TD(5): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-007 | B02-034 | 7489980 |
-| TP-009 | Shop Showmanship II | TL(4): linked share A becomes 12.91525424% | Own 2+ families; TP-008 | B02-035 | 7700560 |
-| TP-010 | Crowd Appeal II | TL(5): linked share A becomes 13.22033898% | Own 2+ families; TP-009 | B02-036 | 7917050 |
-| TP-011 | Festival Calls II | TD(6): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-010 | B02-037 | 8139630 |
-| TP-012 | Shop Reputation II | TL(6): linked share A becomes 13.52542373% | Own 2+ families; TP-011 | B02-038 | 8368460 |
-| TC-03 | Sales Coaching I | TC(3): total run tap-level discount becomes 2.625% | Own 1+ families; TC-02 | B02-039 | 8603730 |
-| TC-04 | Team Handbook I | TC(4): total run tap-level discount becomes 3.5% | Own 1+ families; TC-03 | B02-040 | 8845620 |
-| GP-05 | Delivery Reach I | GP(5): normal products and independent tap B x1.10, once | Own 1+ families; GP-04 | B02-041 | 9094300 |
-| GP-06 | Celebration Demand I | GP(6): normal products and independent tap B x1.10, once | Own 1+ families; GP-05 | B02-042 | 9349970 |
-| GP-07 | Brand Recognition I | GP(7): normal products and independent tap B x1.10, once | Own 1+ families; GP-06 | B02-043 | 9612840 |
-| GP-08 | Customer Loyalty I | GP(8): normal products and independent tap B x1.10, once | Own 1+ families; GP-07 | B02-044 | 9883090 |
-| UC-02 | Trade Association I | UC(2): total run named-cash discount becomes 2.1875% | Own 1+ families; UC-01 | B02-045 | 10160900 |
-| UC-03 | Procurement Office I | UC(3): total run named-cash discount becomes 3.28125% | Own 1+ families; UC-02 | B02-046 | 10446600 |
-| SK-FR-D-01 | Festival Rush: Longer Window I | SD(FR,1): cumulative run duration factor 1.0625 | SK-FR-P-01 | B02-047 | 10740300 |
-| SK-HH-D-01 | Helping Hands: Longer Window I | SD(HH,1): cumulative run duration factor 1.0625 | SK-HH-P-01 | B02-048 | 11042300 |
-| SK-BO-C-01 | Bulk Order: Faster Recovery I | SC(BO,1): cumulative run cooldown factor 0.97916667 | SK-BO-P-01 | B02-049 | 11352700 |
-| SK-FR-C-01 | Festival Rush: Faster Recovery I | SC(FR,1): cumulative run cooldown factor 0.96875 | SK-FR-P-01 | B02-050 | 11671900 |
-| SK-HH-C-01 | Helping Hands: Faster Recovery I | SC(HH,1): cumulative run cooldown factor 0.96875 | SK-HH-P-01 | B02-051 | 12000000 |
+| SK-FR-D-01 | Festival Rush: Longer Window I | SD(FR,1): skill effect x1.0625; factor=1.0625 |  | B02-001 | 1488049849.127633 |
+| GP-04 | Shopfront Glow I | GP(4): global profit x5; factor=5 |  | B02-002 | 2143663833.004799 |
+| PP-CHA-04 | Chakri: Signature Collection I | PP(CHA,4): product profit x8; factor=8 | Own Chakri | B02-003 | 3088441011.614775 |
+| PP-ROC-04 | Rockets: Signature Collection I | PP(ROC,4): product profit x8; factor=8 | Own Rockets | B02-004 | 4450054915.249804 |
+| PC-AER-01 | Aerial shots: Wholesale Deal I | PC(AER,1): remaining cost x0.1; factor=0.1 | Own Aerial shots | B02-005 | 6412610463.386230 |
+| PP-SMC-04 | Small crackers: Signature Collection I | PP(SMC,4): product profit x8; factor=8 | Own Small crackers | B02-006 | 9241612991.585371 |
+| PP-STR-04 | Cracker strings: Signature Collection I | PP(STR,4): product profit x8; factor=8 | Own Cracker strings | B02-007 | 13319996956.31824 |
+| TP-007 | Sales Pitch II | TD(7): tap profit x2; factor=2 |  | B02-008 | 19200118225.78178 |
+| TC-03 | Sales Coaching I | TC(3): remaining cost x0.08886238162743404; factor=0.08886238162743404 |  | B02-009 | 27678790572.57509 |
+| PP-AER-04 | Aerial shots: Signature Collection I | PP(AER,4): product profit x8; factor=8 | Own Aerial shots | B02-010 | 39905590888.86745 |
+| PP-BOX-04 | Celebration boxes Signature Breakthrough I | PP(BOX,4): product profit x8; factor=8 | Own Celebration boxes | B02-011 | 57539198961.55531 |
+| PP-PHU-05 | Phuljhari: Celebration Specialist I | PP(PHU,5): product profit x16; factor=16 | Own Phuljhari | B02-012 | 82973098151.94933 |
+| PC-BOX-01 | Celebration boxes: Wholesale Deal I | PC(BOX,1): remaining cost x0.1; factor=0.1 | Own Celebration boxes | B02-013 | 119661441749.6293 |
+| GP-05 | Delivery Reach I | GP(5): global profit x6; factor=6 |  | B02-014 | 172589585277.8204 |
+| PP-ANA-05 | Anar: Celebration Specialist I | PP(ANA,5): product profit x16; factor=16 | Own Anar | B02-015 | 248953575823.8318 |
+| TP-008 | Counter Display II | TD(8): tap profit x2; factor=2 |  | B02-016 | 359141491150.1584 |
+| PP-CHA-05 | Chakri: Celebration Specialist I | PP(CHA,5): product profit x16; factor=16 | Own Chakri | B02-017 | 518150860636.1296 |
+| UC-03 | Upgrade Price Discount 3 | UC(3): remaining cost x0.8665094742348858; factor=0.8665094742348858 |  | B02-018 | 747636155577.4183 |
+| PP-ROC-05 | Rockets Signature Breakthrough I | PP(ROC,5): product profit x16; factor=16 | Own Rockets | B02-019 | 1078866720818.121 |
+| PP-SMC-05 | Small crackers: Celebration Specialist I | PP(SMC,5): product profit x16; factor=16 | Own Small crackers | B02-020 | 1557000412252.522 |
+| PC-PHU-02 | Phuljhari: Trusted Supplier I | PC(PHU,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Phuljhari | B02-021 | 2247258789358.175 |
+| PP-STR-05 | Cracker strings: Celebration Specialist I | PP(STR,5): product profit x16; factor=16 | Own Cracker strings | B02-022 | 3243850848760.573 |
+| SK-HH-C-01 | Helping Hands: Faster Recovery I | SC(HH,1): skill effect x0.96875; factor=0.96875 |  | B02-023 | 4682869942832.781 |
+| PP-AER-05 | Aerial shots: Celebration Specialist I | PP(AER,5): product profit x16; factor=16 | Own Aerial shots | B02-024 | 6760934753398.582 |
+| TP-009 | Shop Showmanship II | TD(9): tap profit x2; factor=2 |  | B02-025 | 9762135303824.357 |
+| PP-BOX-05 | Celebration boxes: Celebration Specialist I | PP(BOX,5): product profit x16; factor=16 | Own Celebration boxes | B02-026 | 14096988001155.43 |
+| GP-06 | Celebration Demand I | GP(6): global profit x2; factor=2 |  | B02-027 | 20358757384523.21 |
+| PP-PHU-06 | Phuljhari: Premium Range I | PP(PHU,6): product profit x32; factor=32 | Own Phuljhari | B02-028 | 29404895015913.54 |
+| PC-ANA-02 | Anar: Trusted Supplier I | PC(ANA,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Anar | B02-029 | 42474808441046.77 |
+| SK-HH-P-02 | More Helping Hands II | SP(HH,2): skill effect x4; factor=4 |  | B02-030 | 61360184115032.93 |
+| PP-ANA-06 | Anar: Premium Range I | PP(ANA,6): product profit x32; factor=32 | Own Anar | B02-031 | 88651340850718.28 |
+| PP-CHA-06 | Chakri: Premium Range I | PP(CHA,6): product profit x32; factor=32 | Own Chakri | B02-032 | 128093588591835.9 |
+| TP-010 | Crowd Appeal II | TD(10): tap profit x2; factor=2 |  | B02-033 | 185102765052965.3 |
+| TC-04 | Team Handbook I | TC(4): remaining cost x0.0837677640068292; factor=0.0837677640068292 |  | B02-034 | 267511125901277.5 |
+| PP-ROC-06 | Rockets: Premium Range I | PP(ROC,6): product profit x32; factor=32 | Own Rockets | B02-035 | 386646623234188.7 |
+| PP-SMC-06 | Small crackers: Premium Range I | PP(SMC,6): product profit x32; factor=32 | Own Small crackers | B02-036 | 558894741530133.3 |
+| PC-CHA-02 | Chakri: Trusted Supplier I | PC(CHA,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Chakri | B02-037 | 807958873123018.0 |
+| PP-STR-06 | Cracker strings Signature Breakthrough I | PP(STR,6): product profit x32; factor=32 | Own Cracker strings | B02-038 | 1168131984725750 |
+| GP-07 | Brand Recognition I | GP(7): global profit x3; factor=3 |  | B02-039 | 1689032498053642 |
+| PP-AER-06 | Aerial shots: Premium Range I | PP(AER,6): product profit x32; factor=32 | Own Aerial shots | B02-040 | 2442460367604572 |
+| TP-011 | Festival Calls II | TD(11): tap profit x2; factor=2 |  | B02-041 | 3532323531541278 |
+| PP-BOX-06 | Celebration boxes: Premium Range I | PP(BOX,6): product profit x32; factor=32 | Own Celebration boxes | B02-042 | 5109011180009579 |
+| PP-PHU-07 | Phuljhari Signature Breakthrough II | PP(PHU,7): product profit x2; factor=2 | Own Phuljhari | B02-043 | 7390207984745520 |
+| PC-ROC-02 | Rockets: Trusted Supplier I | PC(ROC,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Rockets | B02-044 | 1.069103862250404e+16 |
+| PP-ANA-07 | Anar: Gift Packaging II | PP(ANA,7): product profit x2; factor=2 | Own Anar | B02-045 | 1.546772938813336e+16 |
+| PP-CHA-07 | Chakri: Gift Packaging II | PP(CHA,7): product profit x2; factor=2 | Own Chakri | B02-046 | 2.238085438980653e+16 |
+| PP-ROC-07 | Rockets: Gift Packaging II | PP(ROC,7): product profit x2; factor=2 | Own Rockets | B02-047 | 3.238696019410366e+16 |
+| TP-012 | Shop Reputation II | TD(12): tap profit x8; factor=8 |  | B02-048 | 4.687131550509727e+16 |
+| UC-04 | Upgrade Price Discount 4 | UC(4): remaining cost x0.8502344906994102; factor=0.8502344906994102 |  | B02-049 | 6.784026370542357e+16 |
+| PP-SMC-07 | Small crackers: Gift Packaging II | PP(SMC,7): product profit x2; factor=2 | Own Small crackers | B02-050 | 9.819996693438464e+16 |
 
-## Band 03
+## Page 3
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-07 | Aerial shots Signature Breakthrough II | PP(AER,7): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-06 | B03-001 | 72000000 |
-| PP-ANA-07 | Anar: Gift Packaging II | PP(ANA,7): multiply family normal profit by x1.6 | Own Anar; PP-ANA-06 | B03-002 | 73908100 |
-| PP-BOX-07 | Celebration boxes: Gift Packaging II | PP(BOX,7): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-06 | B03-003 | 75866800 |
-| PP-CHA-07 | Chakri: Gift Packaging II | PP(CHA,7): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-06 | B03-004 | 77877400 |
-| PP-PHU-07 | Phuljhari Signature Breakthrough II | PP(PHU,7): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-06 | B03-005 | 79941300 |
-| PP-ROC-07 | Rockets: Gift Packaging II | PP(ROC,7): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-06 | B03-006 | 82059800 |
-| PP-SMC-07 | Small crackers: Gift Packaging II | PP(SMC,7): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-06 | B03-007 | 84234500 |
-| PP-STR-07 | Cracker strings: Gift Packaging II | PP(STR,7): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-06 | B03-008 | 86466900 |
-| PP-AER-08 | Aerial shots: Festival Display II | PP(AER,8): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-07 | B03-009 | 88758400 |
-| PP-ANA-08 | Anar: Festival Display II | PP(ANA,8): multiply family normal profit by x1.6 | Own Anar; PP-ANA-07 | B03-010 | 91110600 |
-| PP-BOX-08 | Celebration boxes: Festival Display II | PP(BOX,8): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-07 | B03-011 | 93525200 |
-| PP-CHA-08 | Chakri Signature Breakthrough II | PP(CHA,8): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-07 | B03-012 | 96003800 |
-| PP-PHU-08 | Phuljhari: Festival Display II | PP(PHU,8): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-07 | B03-013 | 98548000 |
-| PP-ROC-08 | Rockets: Festival Display II | PP(ROC,8): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-07 | B03-014 | 101160000 |
-| PP-SMC-08 | Small crackers: Festival Display II | PP(SMC,8): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-07 | B03-015 | 103841000 |
-| PP-STR-08 | Cracker strings: Festival Display II | PP(STR,8): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-07 | B03-016 | 106593000 |
-| PP-AER-09 | Aerial shots: Regular Customers II | PP(AER,9): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-08 | B03-017 | 109417000 |
-| PP-ANA-09 | Anar: Regular Customers II | PP(ANA,9): multiply family normal profit by x1.6 | Own Anar; PP-ANA-08 | B03-018 | 112317000 |
-| PP-BOX-09 | Celebration boxes: Regular Customers II | PP(BOX,9): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-08 | B03-019 | 115294000 |
-| PP-CHA-09 | Chakri: Regular Customers II | PP(CHA,9): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-08 | B03-020 | 118349000 |
-| PP-PHU-09 | Phuljhari: Regular Customers II | PP(PHU,9): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-08 | B03-021 | 121486000 |
-| PP-ROC-09 | Rockets: Regular Customers II | PP(ROC,9): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-08 | B03-022 | 124705000 |
-| PP-SMC-09 | Small crackers Signature Breakthrough II | PP(SMC,9): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-08 | B03-023 | 128010000 |
-| PP-STR-09 | Cracker strings: Regular Customers II | PP(STR,9): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-08 | B03-024 | 131403000 |
-| PC-AER-02 | Aerial shots: Trusted Supplier I | PC(AER,2): total run family-level discount becomes 4.375% | Own Aerial shots; PC-AER-01 | B03-025 | 134885000 |
-| PC-ANA-02 | Anar: Trusted Supplier I | PC(ANA,2): total run family-level discount becomes 4.375% | Own Anar; PC-ANA-01 | B03-026 | 138460000 |
-| PC-BOX-02 | Celebration boxes: Trusted Supplier I | PC(BOX,2): total run family-level discount becomes 4.375% | Own Celebration boxes; PC-BOX-01 | B03-027 | 142129000 |
-| PC-CHA-02 | Chakri: Trusted Supplier I | PC(CHA,2): total run family-level discount becomes 4.375% | Own Chakri; PC-CHA-01 | B03-028 | 145896000 |
-| PC-PHU-02 | Phuljhari: Trusted Supplier I | PC(PHU,2): total run family-level discount becomes 4.375% | Own Phuljhari; PC-PHU-01 | B03-029 | 149762000 |
-| PC-ROC-02 | Rockets: Trusted Supplier I | PC(ROC,2): total run family-level discount becomes 4.375% | Own Rockets; PC-ROC-01 | B03-030 | 153731000 |
-| PC-SMC-02 | Small crackers: Trusted Supplier I | PC(SMC,2): total run family-level discount becomes 4.375% | Own Small crackers; PC-SMC-01 | B03-031 | 157805000 |
-| PC-STR-02 | Cracker strings: Trusted Supplier I | PC(STR,2): total run family-level discount becomes 4.375% | Own Cracker strings; PC-STR-01 | B03-032 | 161987000 |
-| TP-013 | Sales Pitch III | TD(7): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-012 | B03-033 | 166280000 |
-| TP-014 | Counter Display III | TD(8): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-013 | B03-034 | 170687000 |
-| TP-015 | Shop Showmanship III | TL(7): linked share A becomes 13.83050847% | Own 2+ families; TP-014 | B03-035 | 175210000 |
-| TP-016 | Crowd Appeal III | TL(8): linked share A becomes 14.13559322% | Own 2+ families; TP-015 | B03-036 | 179854000 |
-| TP-017 | Festival Calls III | TD(9): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-016 | B03-037 | 184620000 |
-| TP-018 | Shop Reputation III | TL(9): linked share A becomes 14.44067797% | Own 2+ families; TP-017 | B03-038 | 189513000 |
-| TC-05 | Customer Insight I | TC(5): total run tap-level discount becomes 4.375% | Own 1+ families; TC-04 | B03-039 | 194535000 |
-| TC-06 | Practice Routine II | TC(6): total run tap-level discount becomes 5.25% | Own 1+ families; TC-05 | B03-040 | 199691000 |
-| GP-09 | Festival Footfall II | GP(9): normal products and independent tap B x1.10, once | Own 1+ families; GP-08 | B03-041 | 204983000 |
-| GP-10 | Community Trust II | GP(10): normal products and independent tap B x1.10, once | Own 1+ families; GP-09 | B03-042 | 210415000 |
-| GP-11 | Local Advertising II | GP(11): normal products and independent tap B x1.10, once | Own 1+ families; GP-10 | B03-043 | 215991000 |
-| GP-12 | Shopfront Glow II | GP(12): normal products and independent tap B x1.10, once | Own 1+ families; GP-11 | B03-044 | 221716000 |
-| UC-04 | Distributor Alliance I | UC(4): total run named-cash discount becomes 4.375% | Own 1+ families; UC-03 | B03-045 | 227591000 |
-| SK-BO-P-02 | Larger Bulk Orders II | SP(BO,2): 135 seconds of normal P | Own 3+ families; SK-BO-P-01 | B03-046 | 233623000 |
-| XL-AER-BOX-01 | Aerial shots / Celebration boxes: Display Partnership I | XL(AER,BOX,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-047 | 239814000 |
-| XL-ANA-CHA-01 | Anar / Chakri: Display Partnership I | XL(ANA,CHA,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-048 | 246170000 |
-| XL-BOX-PHU-01 | Celebration boxes / Phuljhari: Display Partnership I | XL(BOX,PHU,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-049 | 252694000 |
-| XL-CHA-ROC-01 | Chakri / Rockets: Display Partnership I | XL(CHA,ROC,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-050 | 259390000 |
-| XL-PHU-ANA-01 | Phuljhari / Anar: Display Partnership I | XL(PHU,ANA,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-051 | 266265000 |
-| XL-ROC-SMC-01 | Rockets / Small crackers: Display Partnership I | XL(ROC,SMC,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-052 | 273321000 |
-| XL-SMC-STR-01 | Small crackers / Cracker strings: Display Partnership I | XL(SMC,STR,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-053 | 280565000 |
-| XL-STR-AER-01 | Cracker strings / Aerial shots: Display Partnership I | XL(STR,AER,1): beneficiary normal product profit x1.50 | Own both families; Source level >= 25 | B03-054 | 288000000 |
+| GP-08 | Customer Loyalty I | GP(8): global profit x4; factor=4 |  | B03-001 | 1.421603830928449e+17 |
+| PC-SMC-02 | Small crackers: Trusted Supplier I | PC(SMC,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Small crackers | B03-002 | 2.058207982199495e+17 |
+| PP-STR-07 | Cracker strings: Gift Packaging II | PP(STR,7): product profit x2; factor=2 | Own Cracker strings | B03-003 | 2.980185934371311e+17 |
+| PP-AER-07 | Aerial shots Signature Breakthrough II | PP(AER,7): product profit x2; factor=2 | Own Aerial shots | B03-004 | 4.315597099745869e+17 |
+| PP-BOX-07 | Celebration boxes: Gift Packaging II | PP(BOX,7): product profit x2; factor=2 | Own Celebration boxes | B03-005 | 6.250026430724006e+17 |
+| TP-013 | Sales Pitch III | TD(13): tap profit x2; factor=2 |  | B03-006 | 9.052452293428577e+17 |
+| SK-BO-C-01 | Bulk Order: Faster Recovery I | SC(BO,1): skill effect x0.9791666666666666; factor=0.9791666666666666 |  | B03-007 | 1.311275856705558e+18 |
+| TC-05 | Customer Insight I | TC(5): remaining cost x0.07896522868499728; factor=0.07896522868499728 |  | B03-008 | 1.899613794885145e+18 |
+| PP-PHU-08 | Phuljhari: Festival Display II | PP(PHU,8): product profit x2; factor=2 | Own Phuljhari | B03-009 | 2.752200021500511e+18 |
+| PC-STR-02 | Cracker strings: Trusted Supplier I | PC(STR,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Cracker strings | B03-010 | 3.987843464347811e+18 |
+| PP-ANA-08 | Anar: Festival Display II | PP(ANA,8): product profit x2; factor=2 | Own Anar | B03-011 | 5.778826299309747e+18 |
+| PP-CHA-08 | Chakri Signature Breakthrough II | PP(CHA,8): product profit x2; factor=2 | Own Chakri | B03-012 | 8.374995996332548e+18 |
+| SK-HH-D-01 | Helping Hands: Longer Window I | SD(HH,1): skill effect x1.0625; factor=1.0625 |  | B03-013 | 1.213872310947866e+19 |
+| GP-09 | Festival Footfall II | GP(9): global profit x5; factor=5 |  | B03-014 | 1.759563042057122e+19 |
+| PP-ROC-08 | Rockets: Festival Display II | PP(ROC,8): product profit x2; factor=2 | Own Rockets | B03-015 | 2.550821608449253e+19 |
+| TP-014 | Counter Display III | TD(14): tap profit x2; factor=2 |  | B03-016 | 3.698271345905408e+19 |
+| PP-SMC-08 | Small crackers: Festival Display II | PP(SMC,8): product profit x2; factor=2 | Own Small crackers | B03-017 | 5.362420755775169e+19 |
+| PC-AER-02 | Aerial shots: Trusted Supplier I | PC(AER,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Aerial shots | B03-018 | 7.776182267757960e+19 |
+| PP-STR-08 | Cracker strings: Festival Display II | PP(STR,8): product profit x2; factor=2 | Own Cracker strings | B03-019 | 1.127756672202287e+20 |
+| SK-BO-P-02 | Larger Bulk Orders II | SP(BO,2): skill effect x135; factor=135 |  | B03-020 | 1.635715647820165e+20 |
+| PP-AER-08 | Aerial shots: Festival Display II | PP(AER,8): product profit x2; factor=2 | Own Aerial shots | B03-021 | 2.372704428557874e+20 |
+| PP-BOX-08 | Celebration boxes: Festival Display II | PP(BOX,8): product profit x2; factor=2 | Own Celebration boxes | B03-022 | 3.442095399393817e+20 |
+| PP-PHU-09 | Phuljhari: Regular Customers II | PP(PHU,9): product profit x4; factor=4 | Own Phuljhari | B03-023 | 4.993966149861312e+20 |
+| TP-015 | Shop Showmanship III | TD(15): tap profit x2; factor=2 |  | B03-024 | 7.246223333858295e+20 |
+| PC-BOX-02 | Celebration boxes: Trusted Supplier I | PC(BOX,2): remaining cost x0.08576958985908942; factor=0.08576958985908942 | Own Celebration boxes | B03-025 | 1.051529026551742e+21 |
+| PP-ANA-09 | Anar: Regular Customers II | PP(ANA,9): product profit x4; factor=4 | Own Anar | B03-026 | 1.526069263380230e+21 |
+| GP-10 | Community Trust II | GP(10): global profit x6; factor=6 |  | B03-027 | 2.214984311613533e+21 |
+| PP-CHA-09 | Chakri: Regular Customers II | PP(CHA,9): product profit x4; factor=4 | Own Chakri | B03-028 | 3.215218508436228e+21 |
+| PP-ROC-09 | Rockets: Regular Customers II | PP(ROC,9): product profit x4; factor=4 | Own Rockets | B03-029 | 4.667601399016302e+21 |
+| UC-05 | Upgrade Price Discount 5 | UC(5): remaining cost x0.8342651877097981; factor=0.8342651877097981 |  | B03-030 | 6.776734309704595e+21 |
+| PP-SMC-09 | Small crackers Signature Breakthrough II | PP(SMC,9): product profit x4; factor=4 | Own Small crackers | B03-031 | 9.839897759141440e+21 |
+| TP-016 | Crowd Appeal III | TD(16): tap profit x32; factor=32 |  | B03-032 | 1.428907587753772e+22 |
+| PP-STR-09 | Cracker strings: Regular Customers II | PP(STR,9): product profit x4; factor=4 | Own Cracker strings | B03-033 | 2.075205588738900e+22 |
+| PC-PHU-03 | Phuljhari: Bulk Procurement I | PC(PHU,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Phuljhari | B03-034 | 3.014126974901313e+22 |
+| TC-06 | Practice Routine II | TC(6): remaining cost x0.07443803013251689; factor=0.07443803013251689 |  | B03-035 | 4.378298714932425e+22 |
+| PP-AER-09 | Aerial shots: Regular Customers II | PP(AER,9): product profit x4; factor=4 | Own Aerial shots | B03-036 | 6.360520589422538e+22 |
+| PP-BOX-09 | Celebration boxes: Regular Customers II | PP(BOX,9): product profit x4; factor=4 | Own Celebration boxes | B03-037 | 9.241093545074954e+22 |
+| GP-11 | Local Advertising II | GP(11): global profit x2; factor=2 |  | B03-038 | 1.342757230577175e+23 |
+| PP-PHU-10 | Phuljhari: Signature Collection II | PP(PHU,10): product profit x8; factor=8 | Own Phuljhari | B03-039 | 1.951259642795825e+23 |
+| PP-ANA-10 | Anar Signature Breakthrough II | PP(ANA,10): product profit x8; factor=8 | Own Anar | B03-040 | 2.835802978639737e+23 |
+| TP-017 | Festival Calls III | TD(17): tap profit x2.7648515; factor=2.7648515 |  | B03-041 | 4.121738888732336e+23 |
+| PC-ANA-03 | Anar: Bulk Procurement I | PC(ANA,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Anar | B03-042 | 5.991400161774181e+23 |
+| PP-CHA-10 | Chakri: Signature Collection II | PP(CHA,10): product profit x8; factor=8 | Own Chakri | B03-043 | 8.710029124777757e+23 |
+| SK-FR-C-02 | Festival Rush: Faster Recovery II | SC(FR,2): skill effect x0.9375; factor=0.9375 |  | B03-044 | 1.266351639782315e+24 |
+| PP-ROC-10 | Rockets: Signature Collection II | PP(ROC,10): product profit x8; factor=8 | Own Rockets | B03-045 | 1.841333507924802e+24 |
+| PP-SMC-10 | Small crackers: Signature Collection II | PP(SMC,10): product profit x8; factor=8 | Own Small crackers | B03-046 | 2.677651332177689e+24 |
+| PP-STR-10 | Cracker strings: Signature Collection II | PP(STR,10): product profit x8; factor=8 | Own Cracker strings | B03-047 | 3.894206912201434e+24 |
+| PC-CHA-03 | Chakri: Bulk Procurement I | PC(CHA,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Chakri | B03-048 | 5.664054857835836e+24 |
+| TP-018 | Shop Reputation III | TD(18): tap profit x5.52970299; factor=5.52970299 |  | B03-049 | 8.239091159794703e+24 |
+| PP-AER-10 | Aerial shots: Signature Collection II | PP(AER,10): product profit x8; factor=8 | Own Aerial shots | B03-050 | 1.198600886557886e+25 |
 
-## Band 04
+## Page 4
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-10 | Aerial shots: Signature Collection II | PP(AER,10): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-09 | B04-001 | 2232000000 |
-| PP-ANA-10 | Anar Signature Breakthrough II | PP(ANA,10): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-09 | B04-002 | 2291150000 |
-| PP-BOX-10 | Celebration boxes Signature Breakthrough II | PP(BOX,10): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-09 | B04-003 | 2351870000 |
-| PP-CHA-10 | Chakri: Signature Collection II | PP(CHA,10): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-09 | B04-004 | 2414200000 |
-| PP-PHU-10 | Phuljhari: Signature Collection II | PP(PHU,10): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-09 | B04-005 | 2478180000 |
-| PP-ROC-10 | Rockets: Signature Collection II | PP(ROC,10): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-09 | B04-006 | 2543850000 |
-| PP-SMC-10 | Small crackers: Signature Collection II | PP(SMC,10): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-09 | B04-007 | 2611270000 |
-| PP-STR-10 | Cracker strings: Signature Collection II | PP(STR,10): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-09 | B04-008 | 2680470000 |
-| PP-AER-11 | Aerial shots: Celebration Specialist II | PP(AER,11): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-10 | B04-009 | 2751510000 |
-| PP-ANA-11 | Anar: Celebration Specialist II | PP(ANA,11): multiply family normal profit by x1.6 | Own Anar; PP-ANA-10 | B04-010 | 2824430000 |
-| PP-BOX-11 | Celebration boxes: Celebration Specialist II | PP(BOX,11): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-10 | B04-011 | 2899280000 |
-| PP-CHA-11 | Chakri: Celebration Specialist II | PP(CHA,11): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-10 | B04-012 | 2976120000 |
-| PP-PHU-11 | Phuljhari: Celebration Specialist II | PP(PHU,11): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-10 | B04-013 | 3054990000 |
-| PP-ROC-11 | Rockets Signature Breakthrough II | PP(ROC,11): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-10 | B04-014 | 3135950000 |
-| PP-SMC-11 | Small crackers: Celebration Specialist II | PP(SMC,11): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-10 | B04-015 | 3219060000 |
-| PP-STR-11 | Cracker strings: Celebration Specialist II | PP(STR,11): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-10 | B04-016 | 3304370000 |
-| PP-AER-12 | Aerial shots: Premium Range II | PP(AER,12): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-11 | B04-017 | 3391940000 |
-| PP-ANA-12 | Anar: Premium Range II | PP(ANA,12): multiply family normal profit by x1.6 | Own Anar; PP-ANA-11 | B04-018 | 3481830000 |
-| PP-BOX-12 | Celebration boxes: Premium Range II | PP(BOX,12): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-11 | B04-019 | 3574110000 |
-| PP-CHA-12 | Chakri: Premium Range II | PP(CHA,12): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-11 | B04-020 | 3668830000 |
-| PP-PHU-12 | Phuljhari: Premium Range II | PP(PHU,12): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-11 | B04-021 | 3766050000 |
-| PP-ROC-12 | Rockets: Premium Range II | PP(ROC,12): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-11 | B04-022 | 3865860000 |
-| PP-SMC-12 | Small crackers: Premium Range II | PP(SMC,12): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-11 | B04-023 | 3968310000 |
-| PP-STR-12 | Cracker strings Signature Breakthrough II | PP(STR,12): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-11 | B04-024 | 4073480000 |
-| PC-AER-03 | Aerial shots: Bulk Procurement I | PC(AER,3): total run family-level discount becomes 6.5625% | Own Aerial shots; PC-AER-02 | B04-025 | 4181430000 |
-| PC-ANA-03 | Anar: Bulk Procurement I | PC(ANA,3): total run family-level discount becomes 6.5625% | Own Anar; PC-ANA-02 | B04-026 | 4292250000 |
-| PC-BOX-03 | Celebration boxes: Bulk Procurement I | PC(BOX,3): total run family-level discount becomes 6.5625% | Own Celebration boxes; PC-BOX-02 | B04-027 | 4406000000 |
-| PC-CHA-03 | Chakri: Bulk Procurement I | PC(CHA,3): total run family-level discount becomes 6.5625% | Own Chakri; PC-CHA-02 | B04-028 | 4522760000 |
-| PC-PHU-03 | Phuljhari: Bulk Procurement I | PC(PHU,3): total run family-level discount becomes 6.5625% | Own Phuljhari; PC-PHU-02 | B04-029 | 4642630000 |
-| PC-ROC-03 | Rockets: Bulk Procurement I | PC(ROC,3): total run family-level discount becomes 6.5625% | Own Rockets; PC-ROC-02 | B04-030 | 4765660000 |
-| PC-SMC-03 | Small crackers: Bulk Procurement I | PC(SMC,3): total run family-level discount becomes 6.5625% | Own Small crackers; PC-SMC-02 | B04-031 | 4891960000 |
-| PC-STR-03 | Cracker strings: Bulk Procurement I | PC(STR,3): total run family-level discount becomes 6.5625% | Own Cracker strings; PC-STR-02 | B04-032 | 5021600000 |
-| TP-019 | Sales Pitch IV | TD(10): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-018 | B04-033 | 5154680000 |
-| TP-020 | Counter Display IV | TD(11): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-019 | B04-034 | 5291290000 |
-| TP-021 | Shop Showmanship IV | TL(10): linked share A becomes 14.74576271% | Own 2+ families; TP-020 | B04-035 | 5431520000 |
-| TP-022 | Crowd Appeal IV | TL(11): linked share A becomes 15.05084746% | Own 2+ families; TP-021 | B04-036 | 5575460000 |
-| TP-023 | Festival Calls IV | TD(12): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-022 | B04-037 | 5723220000 |
-| TP-024 | Shop Reputation IV | TL(12): linked share A becomes 15.3559322% | Own 2+ families; TP-023 | B04-038 | 5874900000 |
-| TC-07 | Counter Training II | TC(7): total run tap-level discount becomes 6.125% | Own 1+ families; TC-06 | B04-039 | 6030590000 |
-| TC-08 | Sales Coaching II | TC(8): total run tap-level discount becomes 7% | Own 1+ families; TC-07 | B04-040 | 6190410000 |
-| GP-13 | Delivery Reach II | GP(13): normal products and independent tap B x1.10, once | Own 1+ families; GP-12 | B04-041 | 6354470000 |
-| GP-14 | Celebration Demand II | GP(14): normal products and independent tap B x1.10, once | Own 1+ families; GP-13 | B04-042 | 6522870000 |
-| GP-15 | Brand Recognition II | GP(15): normal products and independent tap B x1.10, once | Own 1+ families; GP-14 | B04-043 | 6695740000 |
-| GP-16 | Customer Loyalty II | GP(16): normal products and independent tap B x1.10, once | Own 1+ families; GP-15 | B04-044 | 6873180000 |
-| UC-05 | Supplier Network II | UC(5): total run named-cash discount becomes 5.46875% | Own 1+ families; UC-04 | B04-045 | 7055330000 |
-| UC-06 | Trade Association II | UC(6): total run named-cash discount becomes 6.5625% | Own 1+ families; UC-05 | B04-046 | 7242310000 |
-| SK-FR-P-02 | Stronger Rush II | SP(FR,2): Rush product multiplier x2.25 | Own 1+ families; SK-FR-P-01 | B04-047 | 7434240000 |
-| SK-HH-P-02 | More Helping Hands II | SP(HH,2): 4 auto taps/s | Own 2+ families; SK-HH-P-01 | B04-048 | 7631260000 |
-| SK-BO-P-03 | Larger Bulk Orders III | SP(BO,3): 150 seconds of normal P | Own 3+ families; SK-BO-P-02 | B04-049 | 7833500000 |
-| SK-BO-C-02 | Bulk Order: Faster Recovery II | SC(BO,2): cumulative run cooldown factor 0.95833333 | SK-BO-P-01; SK-BO-C-01 | B04-050 | 8041100000 |
-| PF-MIX-01 | Celebration Mix: Portfolio Milestone I | PF(MIX,1): each listed family's normal profit x1.30 | BOX+PHU levels >= 25 (every listed family) | B04-051 | 8254210000 |
-| PF-RHYTHM-01 | Sound and Rhythm: Portfolio Milestone I | PF(RHYTHM,1): each listed family's normal profit x1.30 | SMC+STR levels >= 25 (every listed family) | B04-052 | 8472960000 |
-| PF-SKY-01 | Skyline Collection: Portfolio Milestone I | PF(SKY,1): each listed family's normal profit x1.30 | ROC+AER levels >= 25 (every listed family) | B04-053 | 8697500000 |
-| PF-STREET-01 | Street Favourites: Portfolio Milestone I | PF(STREET,1): each listed family's normal profit x1.30 | PHU+ANA+CHA levels >= 25 (every listed family) | B04-054 | 8928000000 |
+| GP-12 | Shopfront Glow II | GP(12): global profit x3; factor=3 |  | B04-001 | 1.743866803975417e+25 |
+| PP-BOX-10 | Celebration boxes Signature Breakthrough II | PP(BOX,10): product profit x8; factor=8 | Own Celebration boxes | B04-002 | 2.537438096755011e+25 |
+| PP-PHU-11 | Phuljhari: Celebration Specialist II | PP(PHU,11): product profit x16; factor=16 | Own Phuljhari | B04-003 | 3.692504480037090e+25 |
+| PP-ANA-11 | Anar: Celebration Specialist II | PP(ANA,11): product profit x16; factor=16 | Own Anar | B04-004 | 5.373905625379004e+25 |
+| PC-ROC-03 | Rockets: Bulk Procurement I | PC(ROC,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Rockets | B04-005 | 7.821723672155454e+25 |
+| TP-019 | Sales Pitch IV | TD(19): tap profit x3.67294273; factor=3.67294273 |  | B04-006 | 1.138566318631049e+26 |
+| PP-CHA-11 | Chakri: Celebration Specialist II | PP(CHA,11): product profit x16; factor=16 | Own Chakri | B04-007 | 1.657515601509173e+26 |
+| SK-FR-P-03 | Stronger Rush III | SP(FR,3): skill effect x2.5; factor=2.5 |  | B04-008 | 2.413239065497830e+26 |
+| TC-07 | Counter Training II | TC(7): remaining cost x0.07017038286703829; factor=0.07017038286703829 |  | B04-009 | 3.513876541095649e+26 |
+| PP-ROC-11 | Rockets Signature Breakthrough II | PP(ROC,11): product profit x16; factor=16 | Own Rockets | B04-010 | 5.117007807963805e+26 |
+| PP-SMC-11 | Small crackers: Celebration Specialist II | PP(SMC,11): product profit x16; factor=16 | Own Small crackers | B04-011 | 7.452278732141064e+26 |
+| UC-06 | Upgrade Price Discount 6 | UC(6): remaining cost x0.8185958239025687; factor=0.8185958239025687 |  | B04-012 | 1.085439270555766e+27 |
+| GP-13 | Delivery Reach II | GP(13): global profit x4; factor=4 |  | B04-013 | 1.581122065006534e+27 |
+| PP-STR-11 | Cracker strings: Celebration Specialist II | PP(STR,11): product profit x16; factor=16 | Own Cracker strings | B04-014 | 2.303396476865059e+27 |
+| PC-SMC-03 | Small crackers: Bulk Procurement I | PC(SMC,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Small crackers | B04-015 | 3.355949573491329e+27 |
+| PP-AER-11 | Aerial shots: Celebration Specialist II | PP(AER,11): product profit x16; factor=16 | Own Aerial shots | B04-016 | 4.889963125763822e+27 |
+| TP-020 | Counter Display IV | TD(20): tap profit x3.35787034; factor=3.35787034 |  | B04-017 | 7.125890941189248e+27 |
+| PP-BOX-11 | Celebration boxes: Celebration Specialist II | PP(BOX,11): product profit x16; factor=16 | Own Celebration boxes | B04-018 | 1.038523164402410e+28 |
+| PP-PHU-12 | Phuljhari: Premium Range II | PP(PHU,12): product profit x32; factor=32 | Own Phuljhari | B04-019 | 1.513688927225590e+28 |
+| PP-ANA-12 | Anar: Premium Range II | PP(ANA,12): product profit x32; factor=32 | Own Anar | B04-020 | 2.206482612833595e+28 |
+| PC-STR-03 | Cracker strings: Bulk Procurement I | PC(STR,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Cracker strings | B04-021 | 3.216679671798276e+28 |
+| PP-CHA-12 | Chakri: Premium Range II | PP(CHA,12): product profit x32; factor=32 | Own Chakri | B04-022 | 4.689845641801393e+28 |
+| SK-FR-D-02 | Festival Rush: Longer Window II | SD(FR,2): skill effect x1.125; factor=1.125 |  | B04-023 | 6.838371850317828e+28 |
+| TP-021 | Shop Showmanship IV | TD(21): tap profit x3.35787034; factor=3.35787034 |  | B04-024 | 9.972184524187600e+28 |
+| PP-ROC-12 | Rockets: Premium Range II | PP(ROC,12): product profit x32; factor=32 | Own Rockets | B04-025 | 1.454358015402169e+29 |
+| GP-14 | Celebration Demand II | GP(14): global profit x5; factor=5 |  | B04-026 | 2.121269174405589e+29 |
+| PP-SMC-12 | Small crackers: Premium Range II | PP(SMC,12): product profit x32; factor=32 | Own Small crackers | B04-027 | 3.094308872653782e+29 |
+| SK-HH-C-02 | Helping Hands: Faster Recovery II | SC(HH,2): skill effect x0.9375; factor=0.9375 |  | B04-028 | 4.514139477222394e+29 |
+| PP-STR-12 | Cracker strings Signature Breakthrough II | PP(STR,12): product profit x32; factor=32 | Own Cracker strings | B04-029 | 6.586121135913611e+29 |
+| PC-AER-03 | Aerial shots: Bulk Procurement I | PC(AER,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Aerial shots | B04-030 | 9.610099499999437e+29 |
+| PP-AER-12 | Aerial shots: Premium Range II | PP(AER,12): product profit x32; factor=32 | Own Aerial shots | B04-031 | 1.402392187402448e+30 |
+| PP-BOX-12 | Celebration boxes: Premium Range II | PP(BOX,12): product profit x32; factor=32 | Own Celebration boxes | B04-032 | 2.046701522191442e+30 |
+| TP-022 | Crowd Appeal IV | TD(22): tap profit x13.43148136; factor=13.43148136 |  | B04-033 | 2.987328422271224e+30 |
+| TC-08 | Sales Coaching II | TC(8): remaining cost x0.0661474064123015; factor=0.0661474064123015 |  | B04-034 | 4.360686433010375e+30 |
+| PP-PHU-13 | Phuljhari Signature Breakthrough III | PP(PHU,13): product profit x2; factor=2 | Own Phuljhari | B04-035 | 6.366051914131409e+30 |
+| PP-ANA-13 | Anar: Gift Packaging III | PP(ANA,13): product profit x2; factor=2 | Own Anar | B04-036 | 9.294561867814193e+30 |
+| PC-BOX-03 | Celebration boxes: Bulk Procurement I | PC(BOX,3): remaining cost x0.07356422544596414; factor=0.07356422544596414 | Own Celebration boxes | B04-037 | 1.357160148864465e+31 |
+| PP-CHA-13 | Chakri: Gift Packaging III | PP(CHA,13): product profit x2; factor=2 | Own Chakri | B04-038 | 1.981877030289478e+31 |
+| GP-15 | Brand Recognition II | GP(15): global profit x6; factor=6 |  | B04-039 | 2.894447917419252e+31 |
+| PP-ROC-13 | Rockets: Gift Packaging III | PP(ROC,13): product profit x2; factor=2 | Own Rockets | B04-040 | 4.227641999662346e+31 |
+| TP-023 | Festival Calls IV | TD(23): tap profit x2; factor=2 |  | B04-041 | 6.175528035861869e+31 |
+| PP-SMC-13 | Small crackers: Gift Packaging III | PP(SMC,13): product profit x2; factor=2 | Own Small crackers | B04-042 | 9.021804691623853e+31 |
+| PP-STR-13 | Cracker strings: Gift Packaging III | PP(STR,13): product profit x2; factor=2 | Own Cracker strings | B04-043 | 1.318123715479414e+32 |
+| UC-07 | Upgrade Price Discount 7 | UC(7): remaining cost x0.8032207657498727; factor=0.8032207657498727 |  | B04-044 | 1.926026934082241e+32 |
+| PC-PHU-04 | Phuljhari: Factory Partnership I | PC(PHU,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Phuljhari | B04-045 | 2.814569439701268e+32 |
+| PP-AER-13 | Aerial shots Signature Breakthrough III | PP(AER,13): product profit x2; factor=2 | Own Aerial shots | B04-046 | 4.113438504118791e+32 |
+| SK-HH-P-03 | More Helping Hands III | SP(HH,3): skill effect x5; factor=5 |  | B04-047 | 6.012311585107077e+32 |
+| PP-BOX-13 | Celebration boxes: Gift Packaging III | PP(BOX,13): product profit x2; factor=2 | Own Celebration boxes | B04-048 | 8.788634017506147e+32 |
+| TP-024 | Shop Reputation IV | TD(24): tap profit x2; factor=2 |  | B04-049 | 1.284827161653057e+33 |
+| PP-PHU-14 | Phuljhari: Festival Display III | PP(PHU,14): product profit x2; factor=2 | Own Phuljhari | B04-050 | 1.878501162263256e+33 |
 
-## Band 05
+## Page 5
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-13 | Aerial shots Signature Breakthrough III | PP(AER,13): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-12 | B05-001 | 69192000000 |
-| PP-ANA-13 | Anar: Gift Packaging III | PP(ANA,13): multiply family normal profit by x1.6 | Own Anar; PP-ANA-12 | B05-002 | 71137300000 |
-| PP-BOX-13 | Celebration boxes: Gift Packaging III | PP(BOX,13): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-12 | B05-003 | 73137200000 |
-| PP-CHA-13 | Chakri: Gift Packaging III | PP(CHA,13): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-12 | B05-004 | 75193400000 |
-| PP-PHU-13 | Phuljhari Signature Breakthrough III | PP(PHU,13): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-12 | B05-005 | 77307300000 |
-| PP-ROC-13 | Rockets: Gift Packaging III | PP(ROC,13): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-12 | B05-006 | 79480700000 |
-| PP-SMC-13 | Small crackers: Gift Packaging III | PP(SMC,13): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-12 | B05-007 | 81715200000 |
-| PP-STR-13 | Cracker strings: Gift Packaging III | PP(STR,13): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-12 | B05-008 | 84012600000 |
-| PP-AER-14 | Aerial shots: Festival Display III | PP(AER,14): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-13 | B05-009 | 86374500000 |
-| PP-ANA-14 | Anar: Festival Display III | PP(ANA,14): multiply family normal profit by x1.6 | Own Anar; PP-ANA-13 | B05-010 | 88802800000 |
-| PP-BOX-14 | Celebration boxes: Festival Display III | PP(BOX,14): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-13 | B05-011 | 91299400000 |
-| PP-CHA-14 | Chakri Signature Breakthrough III | PP(CHA,14): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-13 | B05-012 | 93866200000 |
-| PP-PHU-14 | Phuljhari: Festival Display III | PP(PHU,14): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-13 | B05-013 | 96505100000 |
-| PP-ROC-14 | Rockets: Festival Display III | PP(ROC,14): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-13 | B05-014 | 99218200000 |
-| PP-SMC-14 | Small crackers: Festival Display III | PP(SMC,14): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-13 | B05-015 | 102008000000 |
-| PP-STR-14 | Cracker strings: Festival Display III | PP(STR,14): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-13 | B05-016 | 104875000000 |
-| PP-AER-15 | Aerial shots: Regular Customers III | PP(AER,15): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-14 | B05-017 | 107824000000 |
-| PP-ANA-15 | Anar: Regular Customers III | PP(ANA,15): multiply family normal profit by x1.6 | Own Anar; PP-ANA-14 | B05-018 | 110855000000 |
-| PP-BOX-15 | Celebration boxes: Regular Customers III | PP(BOX,15): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-14 | B05-019 | 113972000000 |
-| PP-CHA-15 | Chakri: Regular Customers III | PP(CHA,15): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-14 | B05-020 | 117176000000 |
-| PP-PHU-15 | Phuljhari: Regular Customers III | PP(PHU,15): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-14 | B05-021 | 120470000000 |
-| PP-ROC-15 | Rockets: Regular Customers III | PP(ROC,15): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-14 | B05-022 | 123857000000 |
-| PP-SMC-15 | Small crackers Signature Breakthrough III | PP(SMC,15): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-14 | B05-023 | 127339000000 |
-| PP-STR-15 | Cracker strings: Regular Customers III | PP(STR,15): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-14 | B05-024 | 130919000000 |
-| PC-AER-04 | Aerial shots: Factory Partnership I | PC(AER,4): total run family-level discount becomes 8.75% | Own Aerial shots; PC-AER-03 | B05-025 | 134600000000 |
-| PC-ANA-04 | Anar: Factory Partnership I | PC(ANA,4): total run family-level discount becomes 8.75% | Own Anar; PC-ANA-03 | B05-026 | 138384000000 |
-| PC-BOX-04 | Celebration boxes: Factory Partnership I | PC(BOX,4): total run family-level discount becomes 8.75% | Own Celebration boxes; PC-BOX-03 | B05-027 | 142275000000 |
-| PC-CHA-04 | Chakri: Factory Partnership I | PC(CHA,4): total run family-level discount becomes 8.75% | Own Chakri; PC-CHA-03 | B05-028 | 146274000000 |
-| PC-PHU-04 | Phuljhari: Factory Partnership I | PC(PHU,4): total run family-level discount becomes 8.75% | Own Phuljhari; PC-PHU-03 | B05-029 | 150387000000 |
-| PC-ROC-04 | Rockets: Factory Partnership I | PC(ROC,4): total run family-level discount becomes 8.75% | Own Rockets; PC-ROC-03 | B05-030 | 154615000000 |
-| PC-SMC-04 | Small crackers: Factory Partnership I | PC(SMC,4): total run family-level discount becomes 8.75% | Own Small crackers; PC-SMC-03 | B05-031 | 158961000000 |
-| PC-STR-04 | Cracker strings: Factory Partnership I | PC(STR,4): total run family-level discount becomes 8.75% | Own Cracker strings; PC-STR-03 | B05-032 | 163430000000 |
-| TP-025 | Sales Pitch V | TD(13): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-024 | B05-033 | 168025000000 |
-| TP-026 | Counter Display V | TD(14): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-025 | B05-034 | 172749000000 |
-| TP-027 | Shop Showmanship V | TL(13): linked share A becomes 15.66101695% | Own 2+ families; TP-026 | B05-035 | 177606000000 |
-| TP-028 | Crowd Appeal V | TL(14): linked share A becomes 15.96610169% | Own 2+ families; TP-027 | B05-036 | 182599000000 |
-| TP-029 | Festival Calls V | TD(15): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-028 | B05-037 | 187732000000 |
-| TP-030 | Shop Reputation V | TL(15): linked share A becomes 16.27118644% | Own 2+ families; TP-029 | B05-038 | 193010000000 |
-| TC-09 | Team Handbook II | TC(9): total run tap-level discount becomes 7.875% | Own 1+ families; TC-08 | B05-039 | 198436000000 |
-| TC-10 | Customer Insight II | TC(10): total run tap-level discount becomes 8.75% | Own 1+ families; TC-09 | B05-040 | 204015000000 |
-| GP-17 | Festival Footfall III | GP(17): normal products and independent tap B x1.10, once | Own 1+ families; GP-16 | B05-041 | 209751000000 |
-| GP-18 | Community Trust III | GP(18): normal products and independent tap B x1.10, once | Own 1+ families; GP-17 | B05-042 | 215648000000 |
-| GP-19 | Local Advertising III | GP(19): normal products and independent tap B x1.10, once | Own 1+ families; GP-18 | B05-043 | 221711000000 |
-| GP-20 | Shopfront Glow III | GP(20): normal products and independent tap B x1.10, once | Own 1+ families; GP-19 | B05-044 | 227944000000 |
-| UC-07 | Procurement Office II | UC(7): total run named-cash discount becomes 7.65625% | Own 1+ families; UC-06 | B05-045 | 234352000000 |
-| UC-08 | Distributor Alliance II | UC(8): total run named-cash discount becomes 8.75% | Own 1+ families; UC-07 | B05-046 | 240941000000 |
-| SK-FR-D-02 | Festival Rush: Longer Window II | SD(FR,2): cumulative run duration factor 1.125 | SK-FR-P-01; SK-FR-D-01 | B05-047 | 247714000000 |
-| SK-HH-D-02 | Helping Hands: Longer Window II | SD(HH,2): cumulative run duration factor 1.125 | SK-HH-P-01; SK-HH-D-01 | B05-048 | 254678000000 |
-| SK-FR-C-02 | Festival Rush: Faster Recovery II | SC(FR,2): cumulative run cooldown factor 0.9375 | SK-FR-P-01; SK-FR-C-01 | B05-049 | 261838000000 |
-| SK-HH-C-02 | Helping Hands: Faster Recovery II | SC(HH,2): cumulative run cooldown factor 0.9375 | SK-HH-P-01; SK-HH-C-01 | B05-050 | 269200000000 |
-| SK-BO-C-03 | Bulk Order: Faster Recovery III | SC(BO,3): cumulative run cooldown factor 0.9375 | SK-BO-P-01; SK-BO-C-02 | B05-051 | 276768000000 |
+| GP-16 | Customer Loyalty II | GP(16): global profit x2; factor=2 |  | B05-001 | 2.746765959080353e+33 |
+| PP-ANA-14 | Anar: Festival Display III | PP(ANA,14): product profit x2; factor=2 | Own Anar | B05-002 | 4.016754365443118e+33 |
+| PP-CHA-14 | Chakri Signature Breakthrough III | PP(CHA,14): product profit x2; factor=2 | Own Chakri | B05-003 | 5.874519119913073e+33 |
+| PC-ANA-04 | Anar: Factory Partnership I | PC(ANA,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Anar | B05-004 | 8.592366602547177e+33 |
+| PP-ROC-14 | Rockets: Festival Display III | PP(ROC,14): product profit x2; factor=2 | Own Rockets | B05-005 | 1.256888360918285e+34 |
+| PP-SMC-14 | Small crackers: Festival Display III | PP(SMC,14): product profit x2; factor=2 | Own Small crackers | B05-006 | 1.838755734744609e+34 |
+| TP-025 | Sales Pitch V | TD(25): tap profit x3.67074911; factor=3.67074911 |  | B05-007 | 2.690263412700039e+34 |
+| PP-STR-14 | Cracker strings: Festival Display III | PP(STR,14): product profit x2; factor=2 | Own Cracker strings | B05-008 | 3.936488616107401e+34 |
+| TC-09 | Team Handbook II | TC(9): remaining cost x0.06235507341273915; factor=0.06235507341273915 |  | B05-009 | 5.760585459151812e+34 |
+| PP-AER-14 | Aerial shots: Festival Display III | PP(AER,14): product profit x2; factor=2 | Own Aerial shots | B05-010 | 8.430778459971532e+34 |
+| PC-CHA-04 | Chakri: Factory Partnership I | PC(CHA,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Chakri | B05-011 | 1.233991477135951e+35 |
+| PP-BOX-14 | Celebration boxes: Festival Display III | PP(BOX,14): product profit x2; factor=2 | Own Celebration boxes | B05-012 | 1.806342384615106e+35 |
+| GP-17 | Festival Footfall III | GP(17): global profit x3; factor=3 |  | B05-013 | 2.644425974178297e+35 |
+| SK-BO-C-02 | Bulk Order: Faster Recovery II | SC(BO,2): skill effect x0.9583333333333334; factor=0.9583333333333334 |  | B05-014 | 3.871740001405306e+35 |
+| PP-PHU-15 | Phuljhari: Regular Customers III | PP(PHU,15): product profit x4; factor=4 | Own Phuljhari | B05-015 | 5.669234040540174e+35 |
+| TP-026 | Counter Display V | TD(26): tap profit x2; factor=2 |  | B05-016 | 8.302062839167845e+35 |
+| PP-ANA-15 | Anar: Regular Customers III | PP(ANA,15): product profit x4; factor=4 | Own Anar | B05-017 | 1.215881010766937e+36 |
+| PP-CHA-15 | Chakri: Regular Customers III | PP(CHA,15): product profit x4; factor=4 | Own Chakri | B05-018 | 1.780900126922101e+36 |
+| PC-ROC-04 | Rockets: Factory Partnership I | PC(ROC,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Rockets | B05-019 | 2.608744120820860e+36 |
+| PP-ROC-15 | Rockets: Regular Customers III | PP(ROC,15): product profit x4; factor=4 | Own Rockets | B05-020 | 3.821790101333793e+36 |
+| PP-SMC-15 | Small crackers Signature Breakthrough III | PP(SMC,15): product profit x4; factor=4 | Own Small crackers | B05-021 | 5.599453063663196e+36 |
+| PP-STR-15 | Cracker strings: Regular Customers III | PP(STR,15): product profit x4; factor=4 | Own Cracker strings | B05-022 | 8.204796528584634e+36 |
+| TP-027 | Shop Showmanship V | TD(27): tap profit x2; factor=2 |  | B05-023 | 1.202357043004539e+37 |
+| GP-18 | Community Trust III | GP(18): global profit x4; factor=4 |  | B05-024 | 1.762148552130457e+37 |
+| PP-AER-15 | Aerial shots: Regular Customers III | PP(AER,15): product profit x4; factor=4 | Own Aerial shots | B05-025 | 2.582825185016231e+37 |
+| UC-08 | Upgrade Price Discount 8 | UC(8): remaining cost x0.7881344855340977; factor=0.7881344855340977 |  | B05-026 | 3.786090032101901e+37 |
+| PC-SMC-04 | Small crackers: Factory Partnership I | PC(SMC,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Small crackers | B05-027 | 5.550476793317711e+37 |
+| PP-BOX-15 | Celebration boxes: Regular Customers III | PP(BOX,15): product profit x4; factor=4 | Own Celebration boxes | B05-028 | 8.137913600897887e+37 |
+| PP-PHU-16 | Phuljhari: Signature Collection III | PP(PHU,16): product profit x8; factor=8 | Own Phuljhari | B05-029 | 1.193271553721902e+38 |
+| PP-ANA-16 | Anar Signature Breakthrough III | PP(ANA,16): product profit x8; factor=8 | Own Anar | B05-030 | 1.749882669661891e+38 |
+| TP-028 | Crowd Appeal V | TD(28): tap profit x14.62594164; factor=14.62594164 |  | B05-031 | 2.566386144275266e+38 |
+| PP-CHA-16 | Chakri: Signature Collection III | PP(CHA,16): product profit x8; factor=8 | Own Chakri | B05-032 | 3.764250382294350e+38 |
+| TC-10 | Customer Insight II | TC(10): remaining cost x0.058780160722749136; factor=0.058780160722749136 |  | B05-033 | 5.521771539001722e+38 |
+| PC-STR-04 | Cracker strings: Factory Partnership I | PC(STR,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Cracker strings | B05-034 | 8.100685921665902e+38 |
+| SK-HH-D-02 | Helping Hands: Longer Window II | SD(HH,2): skill effect x1.125; factor=1.125 |  | B05-035 | 1.188525718191843e+39 |
+| PP-ROC-16 | Rockets: Signature Collection III | PP(ROC,16): product profit x8; factor=8 | Own Rockets | B05-036 | 1.743969168618718e+39 |
+| SK-BO-P-03 | Larger Bulk Orders III | SP(BO,3): skill effect x150; factor=150 |  | B05-037 | 2.559248464369752e+39 |
+| PP-SMC-16 | Small crackers: Signature Collection III | PP(SMC,16): product profit x8; factor=8 | Own Small crackers | B05-038 | 3.756034125068334e+39 |
+| GP-19 | Local Advertising III | GP(19): global profit x5; factor=5 |  | B05-039 | 5.513025950737006e+39 |
+| PP-STR-16 | Cracker strings: Signature Collection III | PP(STR,16): product profit x8; factor=8 | Own Cracker strings | B05-040 | 8.092709921913187e+39 |
+| TP-029 | Festival Calls V | TD(29): tap profit x2; factor=2 |  | B05-041 | 1.188068113380365e+40 |
+| PP-AER-16 | Aerial shots: Signature Collection III | PP(AER,16): product profit x8; factor=8 | Own Aerial shots | B05-042 | 1.744344000086718e+40 |
+| PC-AER-04 | Aerial shots: Factory Partnership I | PC(AER,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Aerial shots | B05-043 | 2.561334863868660e+40 |
+| PP-BOX-16 | Celebration boxes Signature Breakthrough III | PP(BOX,16): product profit x8; factor=8 | Own Celebration boxes | B05-044 | 3.761352325558835e+40 |
+| PP-PHU-17 | Phuljhari: Celebration Specialist III | PP(PHU,17): product profit x16; factor=16 | Own Phuljhari | B05-045 | 5.524145383899151e+40 |
+| PP-ANA-17 | Anar: Celebration Specialist III | PP(ANA,17): product profit x16; factor=16 | Own Anar | B05-046 | 8.113899297835088e+40 |
+| SK-FR-C-03 | Festival Rush: Faster Recovery III | SC(FR,3): skill effect x0.90625; factor=0.90625 |  | B05-047 | 1.191893788180943e+41 |
+| PP-CHA-17 | Chakri: Celebration Specialist III | PP(CHA,17): product profit x16; factor=16 | Own Chakri | B05-048 | 1.751011219558644e+41 |
+| TP-030 | Shop Reputation V | TD(30): tap profit x2; factor=2 |  | B05-049 | 2.572667917885455e+41 |
+| PC-BOX-04 | Celebration boxes: Factory Partnership I | PC(BOX,4): remaining cost x0.06309573444801933; factor=0.06309573444801933 | Own Celebration boxes | B05-050 | 3.780262534526376e+41 |
 
-## Band 06
+## Page 6
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-16 | Aerial shots: Signature Collection III | PP(AER,16): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-15 | B06-001 | 2144950000000 |
-| PP-ANA-16 | Anar Signature Breakthrough III | PP(ANA,16): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-15 | B06-002 | 2222570000000 |
-| PP-BOX-16 | Celebration boxes Signature Breakthrough III | PP(BOX,16): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-15 | B06-003 | 2302990000000 |
-| PP-CHA-16 | Chakri: Signature Collection III | PP(CHA,16): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-15 | B06-004 | 2386330000000 |
-| PP-PHU-16 | Phuljhari: Signature Collection III | PP(PHU,16): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-15 | B06-005 | 2472680000000 |
-| PP-ROC-16 | Rockets: Signature Collection III | PP(ROC,16): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-15 | B06-006 | 2562150000000 |
-| PP-SMC-16 | Small crackers: Signature Collection III | PP(SMC,16): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-15 | B06-007 | 2654860000000 |
-| PP-STR-16 | Cracker strings: Signature Collection III | PP(STR,16): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-15 | B06-008 | 2750930000000 |
-| PP-AER-17 | Aerial shots: Celebration Specialist III | PP(AER,17): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-16 | B06-009 | 2850470000000 |
-| PP-ANA-17 | Anar: Celebration Specialist III | PP(ANA,17): multiply family normal profit by x1.6 | Own Anar; PP-ANA-16 | B06-010 | 2953620000000 |
-| PP-BOX-17 | Celebration boxes: Celebration Specialist III | PP(BOX,17): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-16 | B06-011 | 3060500000000 |
-| PP-CHA-17 | Chakri: Celebration Specialist III | PP(CHA,17): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-16 | B06-012 | 3171240000000 |
-| PP-PHU-17 | Phuljhari: Celebration Specialist III | PP(PHU,17): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-16 | B06-013 | 3285990000000 |
-| PP-ROC-17 | Rockets Signature Breakthrough III | PP(ROC,17): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-16 | B06-014 | 3404900000000 |
-| PP-SMC-17 | Small crackers: Celebration Specialist III | PP(SMC,17): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-16 | B06-015 | 3528110000000 |
-| PP-STR-17 | Cracker strings: Celebration Specialist III | PP(STR,17): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-16 | B06-016 | 3655770000000 |
-| PP-AER-18 | Aerial shots: Premium Range III | PP(AER,18): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-17 | B06-017 | 3788060000000 |
-| PP-ANA-18 | Anar: Premium Range III | PP(ANA,18): multiply family normal profit by x1.6 | Own Anar; PP-ANA-17 | B06-018 | 3925130000000 |
-| PP-BOX-18 | Celebration boxes: Premium Range III | PP(BOX,18): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-17 | B06-019 | 4067160000000 |
-| PP-CHA-18 | Chakri: Premium Range III | PP(CHA,18): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-17 | B06-020 | 4214330000000 |
-| PP-PHU-18 | Phuljhari: Premium Range III | PP(PHU,18): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-17 | B06-021 | 4366830000000 |
-| PP-ROC-18 | Rockets: Premium Range III | PP(ROC,18): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-17 | B06-022 | 4524850000000 |
-| PP-SMC-18 | Small crackers: Premium Range III | PP(SMC,18): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-17 | B06-023 | 4688580000000 |
-| PP-STR-18 | Cracker strings Signature Breakthrough III | PP(STR,18): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-17 | B06-024 | 4858240000000 |
-| TP-031 | Sales Pitch VI | TD(16): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-030 | B06-025 | 5034030000000 |
-| TP-032 | Counter Display VI | TD(17): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-031 | B06-026 | 5216190000000 |
-| TP-033 | Shop Showmanship VI | TL(16): linked share A becomes 16.57627119% | Own 2+ families; TP-032 | B06-027 | 5404940000000 |
-| TP-034 | Crowd Appeal VI | TL(17): linked share A becomes 16.88135593% | Own 2+ families; TP-033 | B06-028 | 5600520000000 |
-| TP-035 | Festival Calls VI | TD(18): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-034 | B06-029 | 5803180000000 |
-| TP-036 | Shop Reputation VI | TL(18): linked share A becomes 17.18644068% | Own 2+ families; TP-035 | B06-030 | 6013170000000 |
-| TC-11 | Practice Routine III | TC(11): total run tap-level discount becomes 9.625% | Own 1+ families; TC-10 | B06-031 | 6230750000000 |
-| TC-12 | Counter Training III | TC(12): total run tap-level discount becomes 10.5% | Own 1+ families; TC-11 | B06-032 | 6456220000000 |
-| GP-21 | Delivery Reach III | GP(21): normal products and independent tap B x1.10, once | Own 1+ families; GP-20 | B06-033 | 6689840000000 |
-| GP-22 | Celebration Demand III | GP(22): normal products and independent tap B x1.10, once | Own 1+ families; GP-21 | B06-034 | 6931910000000 |
-| GP-23 | Brand Recognition III | GP(23): normal products and independent tap B x1.10, once | Own 1+ families; GP-22 | B06-035 | 7182740000000 |
-| GP-24 | Customer Loyalty III | GP(24): normal products and independent tap B x1.10, once | Own 1+ families; GP-23 | B06-036 | 7442650000000 |
-| UC-09 | Supplier Network III | UC(9): total run named-cash discount becomes 9.84375% | Own 1+ families; UC-08 | B06-037 | 7711970000000 |
-| SK-FR-P-03 | Stronger Rush III | SP(FR,3): Rush product multiplier x2.5 | Own 1+ families; SK-FR-P-02 | B06-038 | 7991030000000 |
-| SK-HH-P-03 | More Helping Hands III | SP(HH,3): 5 auto taps/s | Own 2+ families; SK-HH-P-02 | B06-039 | 8280190000000 |
-| SK-BO-P-04 | Larger Bulk Orders IV | SP(BO,4): 165 seconds of normal P | Own 3+ families; SK-BO-P-03 | B06-040 | 8579810000000 |
+| GP-20 | Shopfront Glow III | GP(20): global profit x6; factor=6 |  | B06-001 | 5.555250190093696e+41 |
+| PP-ROC-17 | Rockets Signature Breakthrough III | PP(ROC,17): product profit x16; factor=16 | Own Rockets | B06-002 | 8.164483452517582e+41 |
+| PP-SMC-17 | Small crackers: Celebration Specialist III | PP(SMC,17): product profit x16; factor=16 | Own Small crackers | B06-003 | 1.200044174025185e+42 |
+| PP-STR-17 | Cracker strings: Celebration Specialist III | PP(STR,17): product profit x16; factor=16 | Own Cracker strings | B06-004 | 1.764043060152705e+42 |
+| PP-AER-17 | Aerial shots: Celebration Specialist III | PP(AER,17): product profit x16; factor=16 | Own Aerial shots | B06-005 | 2.593370465676860e+42 |
+| TP-031 | Sales Pitch VI | TD(31): tap profit x4; factor=4 |  | B06-006 | 3.812969827578288e+42 |
+| UC-09 | Upgrade Price Discount 9 | UC(9): remaining cost x0.7733315593605161; factor=0.7733315593605161 |  | B06-007 | 5.606677890817361e+42 |
+| PC-PHU-05 | Phuljhari: Wholesale Deal II | PC(PHU,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Phuljhari | B06-008 | 8.245011640237373e+42 |
+| PP-BOX-17 | Celebration boxes: Celebration Specialist III | PP(BOX,17): product profit x16; factor=16 | Own Celebration boxes | B06-009 | 1.212607833608679e+43 |
+| TC-11 | Practice Routine III | TC(11): remaining cost x0.05541020330009492; factor=0.05541020330009492 |  | B06-010 | 1.783581238479547e+43 |
+| PP-PHU-18 | Phuljhari: Premium Range III | PP(PHU,18): product profit x32; factor=32 | Own Phuljhari | B06-011 | 2.623667832408761e+43 |
+| PP-ANA-18 | Anar: Premium Range III | PP(ANA,18): product profit x32; factor=32 | Own Anar | B06-012 | 3.859830516267368e+43 |
+| GP-21 | Delivery Reach III | GP(21): global profit x2; factor=2 |  | B06-013 | 5.678989288931789e+43 |
+| PP-CHA-18 | Chakri: Premium Range III | PP(CHA,18): product profit x32; factor=32 | Own Chakri | B06-014 | 8.356362918283695e+43 |
+| PC-ANA-05 | Anar: Wholesale Deal II | PC(ANA,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Anar | B06-015 | 1.229722066696853e+44 |
+| PP-ROC-18 | Rockets: Premium Range III | PP(ROC,18): product profit x32; factor=32 | Own Rockets | B06-016 | 1.809839526248402e+44 |
+| TP-032 | Counter Display VI | TD(32): tap profit x32; factor=32 |  | B06-017 | 2.663891921415623e+44 |
+| PP-SMC-18 | Small crackers: Premium Range III | PP(SMC,18): product profit x32; factor=32 | Own Small crackers | B06-018 | 3.921358625200538e+44 |
+| PP-STR-18 | Cracker strings Signature Breakthrough III | PP(STR,18): product profit x32; factor=32 | Own Cracker strings | B06-019 | 5.772978673060103e+44 |
+| PP-AER-18 | Aerial shots: Premium Range III | PP(AER,18): product profit x32; factor=32 | Own Aerial shots | B06-020 | 8.499762159045147e+44 |
+| PP-BOX-18 | Celebration boxes: Premium Range III | PP(BOX,18): product profit x32; factor=32 | Own Celebration boxes | B06-021 | 1.251575413822781e+45 |
+| PC-CHA-05 | Chakri: Wholesale Deal II | PC(CHA,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Chakri | B06-022 | 1.843107653021406e+45 |
+| TP-033 | Shop Showmanship VI | TD(33): tap profit x2; factor=2 |  | B06-023 | 2.714487281127593e+45 |
+| GP-22 | Celebration Demand III | GP(22): global profit x3; factor=3 |  | B06-024 | 3.998235300193387e+45 |
+| PP-PHU-19 | Phuljhari Signature Breakthrough IV | PP(PHU,19): product profit x2; factor=2 | Own Phuljhari | B06-025 | 5.889688375167131e+45 |
+| SK-FR-P-04 | Stronger Rush IV | SP(FR,4): skill effect x2.75; factor=2.75 |  | B06-026 | 8.676802531172830e+45 |
+| PP-ANA-19 | Anar: Gift Packaging IV | PP(ANA,19): product profit x2; factor=2 | Own Anar | B06-027 | 1.278411121870169e+46 |
+| PP-CHA-19 | Chakri: Gift Packaging IV | PP(CHA,19): product profit x2; factor=2 | Own Chakri | B06-028 | 1.883756639984283e+46 |
+| PP-ROC-19 | Rockets: Gift Packaging IV | PP(ROC,19): product profit x2; factor=2 | Own Rockets | B06-029 | 2.776019302104020e+46 |
+| PC-ROC-05 | Rockets: Wholesale Deal II | PC(ROC,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Rockets | B06-030 | 4.091321388822116e+46 |
+| TP-034 | Crowd Appeal VI | TD(34): tap profit x2; factor=2 |  | B06-031 | 6.030428055278020e+46 |
+| PP-SMC-19 | Small crackers: Gift Packaging IV | PP(SMC,19): product profit x2; factor=2 | Own Small crackers | B06-032 | 8.889475028126301e+46 |
+| SK-HH-C-03 | Helping Hands: Faster Recovery III | SC(HH,3): skill effect x0.90625; factor=0.90625 |  | B06-033 | 1.310531660820776e+47 |
+| TC-12 | Counter Training III | TC(12): remaining cost x0.05223345074266842; factor=0.05223345074266842 |  | B06-034 | 1.932245702350367e+47 |
+| PP-STR-19 | Cracker strings: Gift Packaging IV | PP(STR,19): product profit x2; factor=2 | Own Cracker strings | B06-035 | 2.849184755999560e+47 |
+| PP-AER-19 | Aerial shots Signature Breakthrough IV | PP(AER,19): product profit x2; factor=2 | Own Aerial shots | B06-036 | 4.201673519011035e+47 |
+| GP-23 | Brand Recognition III | GP(23): global profit x4; factor=4 |  | B06-037 | 6.196799213350271e+47 |
+| PP-BOX-19 | Celebration boxes: Gift Packaging IV | PP(BOX,19): product profit x2; factor=2 | Own Celebration boxes | B06-038 | 9.140205811058609e+47 |
+| PC-SMC-05 | Small crackers: Wholesale Deal II | PC(SMC,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Small crackers | B06-039 | 1.348304409193461e+48 |
+| UC-10 | Upgrade Price Discount 10 | UC(10): remaining cost x0.758806665207259; factor=0.758806665207259 |  | B06-040 | 1.989130900333496e+48 |
+| PP-PHU-20 | Phuljhari: Festival Display IV | PP(PHU,20): product profit x2; factor=2 | Own Phuljhari | B06-041 | 2.934824951723095e+48 |
+| TP-035 | Festival Calls VI | TD(35): tap profit x2; factor=2 |  | B06-042 | 4.330564096424935e+48 |
+| PP-ANA-20 | Anar: Festival Display IV | PP(ANA,20): product profit x2; factor=2 | Own Anar | B06-043 | 6.390725571058105e+48 |
+| PP-CHA-20 | Chakri Signature Breakthrough IV | PP(CHA,20): product profit x2; factor=2 | Own Chakri | B06-044 | 9.431902347281242e+48 |
+| PP-ROC-20 | Rockets: Festival Display IV | PP(ROC,20): product profit x2; factor=2 | Own Rockets | B06-045 | 1.392168657884107e+49 |
+| SK-FR-D-03 | Festival Rush: Longer Window III | SD(FR,3): skill effect x1.1875; factor=1.1875 |  | B06-046 | 2.055075766981210e+49 |
+| PC-STR-05 | Cracker strings: Wholesale Deal II | PC(STR,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Cracker strings | B06-047 | 3.033941856736617e+49 |
+| PP-SMC-20 | Small crackers: Festival Display IV | PP(SMC,20): product profit x2; factor=2 | Own Small crackers | B06-048 | 4.479505750742141e+49 |
+| TP-036 | Shop Reputation VI | TD(36): tap profit x2; factor=2 |  | B06-049 | 6.614490130680319e+49 |
+| PP-STR-20 | Cracker strings: Festival Display IV | PP(STR,20): product profit x2; factor=2 | Own Cracker strings | B06-050 | 9.768009573009526e+49 |
 
-## Band 07
+## Page 7
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-19 | Aerial shots Signature Breakthrough IV | PP(AER,19): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-18 | B07-001 | 66493500000000 |
-| PP-ANA-19 | Anar: Gift Packaging IV | PP(ANA,19): multiply family normal profit by x1.6 | Own Anar; PP-ANA-18 | B07-002 | 68362900000000 |
-| PP-BOX-19 | Celebration boxes: Gift Packaging IV | PP(BOX,19): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-18 | B07-003 | 70284800000000 |
-| PP-CHA-19 | Chakri: Gift Packaging IV | PP(CHA,19): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-18 | B07-004 | 72260800000000 |
-| PP-PHU-19 | Phuljhari Signature Breakthrough IV | PP(PHU,19): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-18 | B07-005 | 74292300000000 |
-| PP-ROC-19 | Rockets: Gift Packaging IV | PP(ROC,19): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-18 | B07-006 | 76381000000000 |
-| PP-SMC-19 | Small crackers: Gift Packaging IV | PP(SMC,19): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-18 | B07-007 | 78528300000000 |
-| PP-STR-19 | Cracker strings: Gift Packaging IV | PP(STR,19): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-18 | B07-008 | 80736100000000 |
-| PP-AER-20 | Aerial shots: Festival Display IV | PP(AER,20): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-19 | B07-009 | 83005900000000 |
-| PP-ANA-20 | Anar: Festival Display IV | PP(ANA,20): multiply family normal profit by x1.6 | Own Anar; PP-ANA-19 | B07-010 | 85339500000000 |
-| PP-BOX-20 | Celebration boxes: Festival Display IV | PP(BOX,20): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-19 | B07-011 | 87738700000000 |
-| PP-CHA-20 | Chakri Signature Breakthrough IV | PP(CHA,20): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-19 | B07-012 | 90205400000000 |
-| PP-PHU-20 | Phuljhari: Festival Display IV | PP(PHU,20): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-19 | B07-013 | 92741400000000 |
-| PP-ROC-20 | Rockets: Festival Display IV | PP(ROC,20): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-19 | B07-014 | 95348700000000 |
-| PP-SMC-20 | Small crackers: Festival Display IV | PP(SMC,20): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-19 | B07-015 | 98029300000000 |
-| PP-STR-20 | Cracker strings: Festival Display IV | PP(STR,20): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-19 | B07-016 | 100785000000000 |
-| PP-AER-21 | Aerial shots: Regular Customers IV | PP(AER,21): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-20 | B07-017 | 103619000000000 |
-| PP-ANA-21 | Anar: Regular Customers IV | PP(ANA,21): multiply family normal profit by x1.6 | Own Anar; PP-ANA-20 | B07-018 | 106532000000000 |
-| PP-BOX-21 | Celebration boxes: Regular Customers IV | PP(BOX,21): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-20 | B07-019 | 109527000000000 |
-| PP-CHA-21 | Chakri: Regular Customers IV | PP(CHA,21): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-20 | B07-020 | 112606000000000 |
-| PP-PHU-21 | Phuljhari: Regular Customers IV | PP(PHU,21): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-20 | B07-021 | 115772000000000 |
-| PP-ROC-21 | Rockets: Regular Customers IV | PP(ROC,21): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-20 | B07-022 | 119027000000000 |
-| PP-SMC-21 | Small crackers Signature Breakthrough IV | PP(SMC,21): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-20 | B07-023 | 122373000000000 |
-| PP-STR-21 | Cracker strings: Regular Customers IV | PP(STR,21): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-20 | B07-024 | 125813000000000 |
-| PC-AER-05 | Aerial shots: Wholesale Deal II | PC(AER,5): total run family-level discount becomes 10.9375% | Own Aerial shots; PC-AER-04 | B07-025 | 129350000000000 |
-| PC-ANA-05 | Anar: Wholesale Deal II | PC(ANA,5): total run family-level discount becomes 10.9375% | Own Anar; PC-ANA-04 | B07-026 | 132987000000000 |
-| PC-BOX-05 | Celebration boxes: Wholesale Deal II | PC(BOX,5): total run family-level discount becomes 10.9375% | Own Celebration boxes; PC-BOX-04 | B07-027 | 136726000000000 |
-| PC-CHA-05 | Chakri: Wholesale Deal II | PC(CHA,5): total run family-level discount becomes 10.9375% | Own Chakri; PC-CHA-04 | B07-028 | 140570000000000 |
-| PC-PHU-05 | Phuljhari: Wholesale Deal II | PC(PHU,5): total run family-level discount becomes 10.9375% | Own Phuljhari; PC-PHU-04 | B07-029 | 144522000000000 |
-| PC-ROC-05 | Rockets: Wholesale Deal II | PC(ROC,5): total run family-level discount becomes 10.9375% | Own Rockets; PC-ROC-04 | B07-030 | 148585000000000 |
-| PC-SMC-05 | Small crackers: Wholesale Deal II | PC(SMC,5): total run family-level discount becomes 10.9375% | Own Small crackers; PC-SMC-04 | B07-031 | 152762000000000 |
-| PC-STR-05 | Cracker strings: Wholesale Deal II | PC(STR,5): total run family-level discount becomes 10.9375% | Own Cracker strings; PC-STR-04 | B07-032 | 157057000000000 |
-| TP-037 | Sales Pitch VII | TD(19): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-036 | B07-033 | 161472000000000 |
-| TP-038 | Counter Display VII | TD(20): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-037 | B07-034 | 166012000000000 |
-| TP-039 | Shop Showmanship VII | TL(19): linked share A becomes 17.49152542% | Own 2+ families; TP-038 | B07-035 | 170679000000000 |
-| TP-040 | Crowd Appeal VII | TL(20): linked share A becomes 17.79661017% | Own 2+ families; TP-039 | B07-036 | 175477000000000 |
-| TP-041 | Festival Calls VII | TD(21): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-040 | B07-037 | 180411000000000 |
-| TP-042 | Shop Reputation VII | TL(21): linked share A becomes 18.10169492% | Own 2+ families; TP-041 | B07-038 | 185483000000000 |
-| TC-13 | Sales Coaching III | TC(13): total run tap-level discount becomes 11.375% | Own 1+ families; TC-12 | B07-039 | 190697000000000 |
-| TC-14 | Team Handbook III | TC(14): total run tap-level discount becomes 12.25% | Own 1+ families; TC-13 | B07-040 | 196059000000000 |
-| GP-25 | Festival Footfall IV | GP(25): normal products and independent tap B x1.10, once | Own 1+ families; GP-24 | B07-041 | 201571000000000 |
-| GP-26 | Community Trust IV | GP(26): normal products and independent tap B x1.10, once | Own 1+ families; GP-25 | B07-042 | 207238000000000 |
-| GP-27 | Local Advertising IV | GP(27): normal products and independent tap B x1.10, once | Own 1+ families; GP-26 | B07-043 | 213064000000000 |
-| GP-28 | Shopfront Glow IV | GP(28): normal products and independent tap B x1.10, once | Own 1+ families; GP-27 | B07-044 | 219054000000000 |
-| UC-10 | Trade Association III | UC(10): total run named-cash discount becomes 10.9375% | Own 1+ families; UC-09 | B07-045 | 225212000000000 |
-| UC-11 | Procurement Office III | UC(11): total run named-cash discount becomes 12.03125% | Own 1+ families; UC-10 | B07-046 | 231544000000000 |
-| SK-FR-D-03 | Festival Rush: Longer Window III | SD(FR,3): cumulative run duration factor 1.1875 | SK-FR-P-01; SK-FR-D-02 | B07-047 | 238053000000000 |
-| SK-HH-D-03 | Helping Hands: Longer Window III | SD(HH,3): cumulative run duration factor 1.1875 | SK-HH-P-01; SK-HH-D-02 | B07-048 | 244746000000000 |
-| SK-FR-C-03 | Festival Rush: Faster Recovery III | SC(FR,3): cumulative run cooldown factor 0.90625 | SK-FR-P-01; SK-FR-C-02 | B07-049 | 251627000000000 |
-| SK-HH-C-03 | Helping Hands: Faster Recovery III | SC(HH,3): cumulative run cooldown factor 0.90625 | SK-HH-P-01; SK-HH-C-02 | B07-050 | 258701000000000 |
-| SK-BO-C-04 | Bulk Order: Faster Recovery IV | SC(BO,4): cumulative run cooldown factor 0.91666667 | SK-BO-P-01; SK-BO-C-03 | B07-051 | 265974000000000 |
+| GP-24 | Customer Loyalty III | GP(24): global profit x5; factor=5 |  | B07-001 | 1.442644119370381e+50 |
+| PP-AER-20 | Aerial shots: Festival Display IV | PP(AER,20): product profit x2; factor=2 | Own Aerial shots | B07-002 | 2.130864197264123e+50 |
+| PP-BOX-20 | Celebration boxes: Festival Display IV | PP(BOX,20): product profit x2; factor=2 | Own Celebration boxes | B07-003 | 3.147717615963579e+50 |
+| PC-AER-05 | Aerial shots: Wholesale Deal II | PC(AER,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Aerial shots | B07-004 | 4.650280888257203e+50 |
+| PP-PHU-21 | Phuljhari: Regular Customers IV | PP(PHU,21): product profit x4; factor=4 | Own Phuljhari | B07-005 | 6.870779910297818e+50 |
+| TP-037 | Sales Pitch VII | TD(37): tap profit x2; factor=2 |  | B07-006 | 1.015257759862967e+51 |
+| PP-ANA-21 | Anar: Regular Customers IV | PP(ANA,21): product profit x4; factor=4 | Own Anar | B07-007 | 1.500341172918004e+51 |
+| PP-CHA-21 | Chakri: Regular Customers IV | PP(CHA,21): product profit x4; factor=4 | Own Chakri | B07-008 | 2.217415948710286e+51 |
+| TC-13 | Sales Coaching III | TC(13): remaining cost x0.04923882631706739; factor=0.04923882631706739 |  | B07-009 | 3.277538000217150e+51 |
+| PP-ROC-21 | Rockets: Regular Customers IV | PP(ROC,21): product profit x4; factor=4 | Own Rockets | B07-010 | 4.844977158373674e+51 |
+| GP-25 | Festival Footfall IV | GP(25): global profit x6; factor=6 |  | B07-011 | 7.162739581157192e+51 |
+| PC-BOX-05 | Celebration boxes: Wholesale Deal II | PC(BOX,5): remaining cost x0.05411695265464637; factor=0.05411695265464637 | Own Celebration boxes | B07-012 | 1.059034281702624e+52 |
+| PP-SMC-21 | Small crackers Signature Breakthrough IV | PP(SMC,21): product profit x4; factor=4 | Own Small crackers | B07-013 | 1.565973128132518e+52 |
+| SK-HH-P-04 | More Helping Hands IV | SP(HH,4): skill effect x6; factor=6 |  | B07-014 | 2.315805181996355e+52 |
+| PP-STR-21 | Cracker strings: Regular Customers IV | PP(STR,21): product profit x4; factor=4 | Own Cracker strings | B07-015 | 3.425020434122717e+52 |
+| TP-038 | Counter Display VII | TD(38): tap profit x5.30785352; factor=5.30785352 |  | B07-016 | 5.066029820003097e+52 |
+| PP-AER-21 | Aerial shots: Regular Customers IV | PP(AER,21): product profit x4; factor=4 | Own Aerial shots | B07-017 | 7.494035502849993e+52 |
+| SK-BO-C-03 | Bulk Order: Faster Recovery III | SC(BO,3): skill effect x0.9375; factor=0.9375 |  | B07-018 | 1.108682468346884e+53 |
+| PP-BOX-21 | Celebration boxes: Regular Customers IV | PP(BOX,21): product profit x4; factor=4 | Own Celebration boxes | B07-019 | 1.640370850898545e+53 |
+| PC-PHU-06 | Phuljhari: Trusted Supplier II | PC(PHU,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Phuljhari | B07-020 | 2.427282563237016e+53 |
+| PP-PHU-22 | Phuljhari: Signature Collection IV | PP(PHU,22): product profit x8; factor=8 | Own Phuljhari | B07-021 | 3.592047394703831e+53 |
+| UC-11 | Upgrade Price Discount 11 | UC(11): remaining cost x0.744554581011917; factor=0.744554581011917 |  | B07-022 | 5.316272207531748e+53 |
+| PP-ANA-22 | Anar Signature Breakthrough IV | PP(ANA,22): product profit x8; factor=8 | Own Anar | B07-023 | 7.868931975281370e+53 |
+| TP-039 | Shop Showmanship VII | TD(39): tap profit x2; factor=2 |  | B07-024 | 1.164844092492587e+54 |
+| PP-CHA-22 | Chakri: Signature Collection IV | PP(CHA,22): product profit x8; factor=8 | Own Chakri | B07-025 | 1.724500169830094e+54 |
+| GP-26 | Community Trust IV | GP(26): global profit x2; factor=2 |  | B07-026 | 2.553301561871031e+54 |
+| PP-ROC-22 | Rockets: Signature Collection IV | PP(ROC,22): product profit x8; factor=8 | Own Rockets | B07-027 | 3.780806141631095e+54 |
+| PC-ANA-06 | Anar: Trusted Supplier II | PC(ANA,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Anar | B07-028 | 5.598995753209219e+54 |
+| PP-SMC-22 | Small crackers: Signature Collection IV | PP(SMC,22): product profit x8; factor=8 | Own Small crackers | B07-029 | 8.292381915943014e+54 |
+| PP-STR-22 | Cracker strings: Signature Collection IV | PP(STR,22): product profit x8; factor=8 | Own Cracker strings | B07-030 | 1.228264452675369e+55 |
+| PP-AER-22 | Aerial shots: Signature Collection IV | PP(AER,22): product profit x8; factor=8 | Own Aerial shots | B07-031 | 1.819482570749832e+55 |
+| TP-040 | Crowd Appeal VII | TD(40): tap profit x2; factor=2 |  | B07-032 | 2.695549713489146e+55 |
+| PP-BOX-22 | Celebration boxes Signature Breakthrough IV | PP(BOX,22): product profit x8; factor=8 | Own Celebration boxes | B07-033 | 3.993835945377472e+55 |
+| TC-14 | Team Handbook III | TC(14): remaining cost x0.046415888336127795; factor=0.046415888336127795 |  | B07-034 | 5.918021333857091e+55 |
+| PC-CHA-06 | Chakri: Trusted Supplier II | PC(CHA,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Chakri | B07-035 | 8.770134642435550e+55 |
+| PP-PHU-23 | Phuljhari: Celebration Specialist IV | PP(PHU,23): product profit x16; factor=16 | Own Phuljhari | B07-036 | 1.299808655929048e+56 |
+| GP-27 | Local Advertising IV | GP(27): global profit x3; factor=3 |  | B07-037 | 1.926619795042100e+56 |
+| PP-ANA-23 | Anar: Celebration Specialist IV | PP(ANA,23): product profit x16; factor=16 | Own Anar | B07-038 | 2.855985781182600e+56 |
+| PP-CHA-23 | Chakri: Celebration Specialist IV | PP(CHA,23): product profit x16; factor=16 | Own Chakri | B07-039 | 4.234084228539665e+56 |
+| TP-041 | Festival Calls VII | TD(41): tap profit x11.47910817; factor=11.47910817 |  | B07-040 | 6.277784087394879e+56 |
+| PP-ROC-23 | Rockets Signature Breakthrough IV | PP(ROC,23): product profit x16; factor=16 | Own Rockets | B07-041 | 9.308864012822488e+56 |
+| PP-SMC-23 | Small crackers: Celebration Specialist IV | PP(SMC,23): product profit x16; factor=16 | Own Small crackers | B07-042 | 1.380480977538647e+57 |
+| PC-ROC-06 | Rockets: Trusted Supplier II | PC(ROC,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Rockets | B07-043 | 2.047423089458172e+57 |
+| PP-STR-23 | Cracker strings: Celebration Specialist IV | PP(STR,23): product profit x16; factor=16 | Own Cracker strings | B07-044 | 3.036883948819370e+57 |
+| PP-AER-23 | Aerial shots: Celebration Specialist IV | PP(AER,23): product profit x16; factor=16 | Own Aerial shots | B07-045 | 4.504973338736937e+57 |
+| TP-042 | Shop Reputation VII | TD(42): tap profit x4.92566367; factor=4.92566367 |  | B07-046 | 6.683434304618838e+57 |
+| PP-BOX-23 | Celebration boxes: Celebration Specialist IV | PP(BOX,23): product profit x16; factor=16 | Own Celebration boxes | B07-047 | 9.916320874263563e+57 |
+| GP-28 | Shopfront Glow IV | GP(28): global profit x4; factor=4 |  | B07-048 | 1.471447896884957e+58 |
+| PP-PHU-24 | Phuljhari: Premium Range IV | PP(PHU,24): product profit x32; factor=32 | Own Phuljhari | B07-049 | 2.183648015651293e+58 |
+| PC-SMC-06 | Small crackers: Trusted Supplier II | PC(SMC,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Small crackers | B07-050 | 3.240886423543248e+58 |
 
-## Band 08
+## Page 8
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-22 | Aerial shots: Signature Collection IV | PP(AER,22): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-21 | B08-001 | 2061300000000000 |
-| PP-ANA-22 | Anar Signature Breakthrough IV | PP(ANA,22): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-21 | B08-002 | 2115930000000000 |
-| PP-BOX-22 | Celebration boxes Signature Breakthrough IV | PP(BOX,22): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-21 | B08-003 | 2172000000000000 |
-| PP-CHA-22 | Chakri: Signature Collection IV | PP(CHA,22): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-21 | B08-004 | 2229560000000000 |
-| PP-PHU-22 | Phuljhari: Signature Collection IV | PP(PHU,22): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-21 | B08-005 | 2288650000000000 |
-| PP-ROC-22 | Rockets: Signature Collection IV | PP(ROC,22): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-21 | B08-006 | 2349300000000000 |
-| PP-SMC-22 | Small crackers: Signature Collection IV | PP(SMC,22): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-21 | B08-007 | 2411560000000000 |
-| PP-STR-22 | Cracker strings: Signature Collection IV | PP(STR,22): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-21 | B08-008 | 2475470000000000 |
-| PP-AER-23 | Aerial shots: Celebration Specialist IV | PP(AER,23): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-22 | B08-009 | 2541080000000000 |
-| PP-ANA-23 | Anar: Celebration Specialist IV | PP(ANA,23): multiply family normal profit by x1.6 | Own Anar; PP-ANA-22 | B08-010 | 2608420000000000 |
-| PP-BOX-23 | Celebration boxes: Celebration Specialist IV | PP(BOX,23): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-22 | B08-011 | 2677550000000000 |
-| PP-CHA-23 | Chakri: Celebration Specialist IV | PP(CHA,23): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-22 | B08-012 | 2748510000000000 |
-| PP-PHU-23 | Phuljhari: Celebration Specialist IV | PP(PHU,23): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-22 | B08-013 | 2821350000000000 |
-| PP-ROC-23 | Rockets Signature Breakthrough IV | PP(ROC,23): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-22 | B08-014 | 2896120000000000 |
-| PP-SMC-23 | Small crackers: Celebration Specialist IV | PP(SMC,23): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-22 | B08-015 | 2972870000000000 |
-| PP-STR-23 | Cracker strings: Celebration Specialist IV | PP(STR,23): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-22 | B08-016 | 3051650000000000 |
-| PP-AER-24 | Aerial shots: Premium Range IV | PP(AER,24): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-23 | B08-017 | 3132530000000000 |
-| PP-ANA-24 | Anar: Premium Range IV | PP(ANA,24): multiply family normal profit by x1.6 | Own Anar; PP-ANA-23 | B08-018 | 3215540000000000 |
-| PP-BOX-24 | Celebration boxes: Premium Range IV | PP(BOX,24): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-23 | B08-019 | 3300760000000000 |
-| PP-CHA-24 | Chakri: Premium Range IV | PP(CHA,24): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-23 | B08-020 | 3388240000000000 |
-| PP-PHU-24 | Phuljhari: Premium Range IV | PP(PHU,24): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-23 | B08-021 | 3478030000000000 |
-| PP-ROC-24 | Rockets: Premium Range IV | PP(ROC,24): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-23 | B08-022 | 3570200000000000 |
-| PP-SMC-24 | Small crackers: Premium Range IV | PP(SMC,24): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-23 | B08-023 | 3664820000000000 |
-| PP-STR-24 | Cracker strings Signature Breakthrough IV | PP(STR,24): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-23 | B08-024 | 3761940000000000 |
-| PC-AER-06 | Aerial shots: Trusted Supplier II | PC(AER,6): total run family-level discount becomes 13.125% | Own Aerial shots; PC-AER-05 | B08-025 | 3861640000000000 |
-| PC-ANA-06 | Anar: Trusted Supplier II | PC(ANA,6): total run family-level discount becomes 13.125% | Own Anar; PC-ANA-05 | B08-026 | 3963980000000000 |
-| PC-BOX-06 | Celebration boxes: Trusted Supplier II | PC(BOX,6): total run family-level discount becomes 13.125% | Own Celebration boxes; PC-BOX-05 | B08-027 | 4069030000000000 |
-| PC-CHA-06 | Chakri: Trusted Supplier II | PC(CHA,6): total run family-level discount becomes 13.125% | Own Chakri; PC-CHA-05 | B08-028 | 4176870000000000 |
-| PC-PHU-06 | Phuljhari: Trusted Supplier II | PC(PHU,6): total run family-level discount becomes 13.125% | Own Phuljhari; PC-PHU-05 | B08-029 | 4287560000000000 |
-| PC-ROC-06 | Rockets: Trusted Supplier II | PC(ROC,6): total run family-level discount becomes 13.125% | Own Rockets; PC-ROC-05 | B08-030 | 4401190000000000 |
-| PC-SMC-06 | Small crackers: Trusted Supplier II | PC(SMC,6): total run family-level discount becomes 13.125% | Own Small crackers; PC-SMC-05 | B08-031 | 4517830000000000 |
-| PC-STR-06 | Cracker strings: Trusted Supplier II | PC(STR,6): total run family-level discount becomes 13.125% | Own Cracker strings; PC-STR-05 | B08-032 | 4637560000000000 |
-| TP-043 | Sales Pitch VIII | TD(22): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-042 | B08-033 | 4760460000000000 |
-| TP-044 | Counter Display VIII | TD(23): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-043 | B08-034 | 4886620000000000 |
-| TP-045 | Shop Showmanship VIII | TL(22): linked share A becomes 18.40677966% | Own 2+ families; TP-044 | B08-035 | 5016120000000000 |
-| TP-046 | Crowd Appeal VIII | TL(23): linked share A becomes 18.71186441% | Own 2+ families; TP-045 | B08-036 | 5149060000000000 |
-| TP-047 | Festival Calls VIII | TD(24): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-046 | B08-037 | 5285520000000000 |
-| TP-048 | Shop Reputation VIII | TL(24): linked share A becomes 19.01694915% | Own 2+ families; TP-047 | B08-038 | 5425590000000000 |
-| TC-15 | Customer Insight III | TC(15): total run tap-level discount becomes 13.125% | Own 1+ families; TC-14 | B08-039 | 5569380000000000 |
-| TC-16 | Practice Routine IV | TC(16): total run tap-level discount becomes 14% | Own 1+ families; TC-15 | B08-040 | 5716970000000000 |
-| GP-29 | Delivery Reach IV | GP(29): normal products and independent tap B x1.10, once | Own 1+ families; GP-28 | B08-041 | 5868480000000000 |
-| GP-30 | Celebration Demand IV | GP(30): normal products and independent tap B x1.10, once | Own 1+ families; GP-29 | B08-042 | 6024010000000000 |
-| GP-31 | Brand Recognition IV | GP(31): normal products and independent tap B x1.10, once | Own 1+ families; GP-30 | B08-043 | 6183650000000000 |
-| GP-32 | Customer Loyalty IV | GP(32): normal products and independent tap B x1.10, once | Own 1+ families; GP-31 | B08-044 | 6347530000000000 |
-| UC-12 | Distributor Alliance III | UC(12): total run named-cash discount becomes 13.125% | Own 1+ families; UC-11 | B08-045 | 6515750000000000 |
-| SK-BO-P-05 | Larger Bulk Orders V | SP(BO,5): 180 seconds of normal P | Own 3+ families; SK-BO-P-04 | B08-046 | 6688430000000000 |
-| XL-AER-BOX-02 | Aerial shots / Celebration boxes: Display Partnership II | XL(AER,BOX,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-AER-BOX-01 | B08-047 | 6865680000000000 |
-| XL-ANA-CHA-02 | Anar / Chakri: Display Partnership II | XL(ANA,CHA,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-ANA-CHA-01 | B08-048 | 7047630000000000 |
-| XL-BOX-PHU-02 | Celebration boxes / Phuljhari: Display Partnership II | XL(BOX,PHU,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-BOX-PHU-01 | B08-049 | 7234410000000000 |
-| XL-CHA-ROC-02 | Chakri / Rockets: Display Partnership II | XL(CHA,ROC,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-CHA-ROC-01 | B08-050 | 7426130000000000 |
-| XL-PHU-ANA-02 | Phuljhari / Anar: Display Partnership II | XL(PHU,ANA,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-PHU-ANA-01 | B08-051 | 7622930000000000 |
-| XL-ROC-SMC-02 | Rockets / Small crackers: Display Partnership II | XL(ROC,SMC,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-ROC-SMC-01 | B08-052 | 7824950000000000 |
-| XL-SMC-STR-02 | Small crackers / Cracker strings: Display Partnership II | XL(SMC,STR,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-SMC-STR-01 | B08-053 | 8032330000000000 |
-| XL-STR-AER-02 | Cracker strings / Aerial shots: Display Partnership II | XL(STR,AER,2): beneficiary normal product profit x1.50 | Own both families; Source level >= 100; XL-STR-AER-01 | B08-054 | 8245200000000000 |
+| UC-12 | Upgrade Price Discount 12 | UC(12): remaining cost x0.7305701827940767; factor=0.7305701827940767 |  | B08-001 | 4.810480041662508e+58 |
+| PP-ANA-24 | Anar: Premium Range IV | PP(ANA,24): product profit x32; factor=32 | Own Anar | B08-002 | 7.140957563536520e+58 |
+| SK-FR-C-04 | Festival Rush: Faster Recovery IV | SC(FR,4): skill effect x0.875; factor=0.875 |  | B08-003 | 1.060151462328316e+59 |
+| SK-BO-P-04 | Larger Bulk Orders IV | SP(BO,4): skill effect x165; factor=165 |  | B08-004 | 1.574065537860865e+59 |
+| PP-CHA-24 | Chakri: Premium Range IV | PP(CHA,24): product profit x32; factor=32 | Own Chakri | B08-005 | 2.337335924302492e+59 |
+| PP-ROC-24 | Rockets: Premium Range IV | PP(ROC,24): product profit x32; factor=32 | Own Rockets | B08-006 | 3.471066123268818e+59 |
+| TP-043 | Sales Pitch VIII | TD(43): tap profit x4.92566367; factor=4.92566367 |  | B08-007 | 5.155230276087651e+59 |
+| SK-HH-D-03 | Helping Hands: Longer Window III | SD(HH,3): skill effect x1.1875; factor=1.1875 |  | B08-008 | 7.657317961798460e+59 |
+| PP-SMC-24 | Small crackers: Premium Range IV | PP(SMC,24): product profit x32; factor=32 | Own Small crackers | B08-009 | 1.137492972624365e+60 |
+| PC-STR-06 | Cracker strings: Trusted Supplier II | PC(STR,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Cracker strings | B08-010 | 1.689912401080281e+60 |
+| TC-15 | Customer Insight III | TC(15): remaining cost x0.04375479375074185; factor=0.04375479375074185 |  | B08-011 | 2.510863439804092e+60 |
+| PP-STR-24 | Cracker strings Signature Breakthrough IV | PP(STR,24): product profit x32; factor=32 | Own Cracker strings | B08-012 | 3.731001491177441e+60 |
+| GP-29 | Delivery Reach IV | GP(29): global profit x5; factor=5 |  | B08-013 | 5.544612268945488e+60 |
+| PP-AER-24 | Aerial shots: Premium Range IV | PP(AER,24): product profit x32; factor=32 | Own Aerial shots | B08-014 | 8.240629147933950e+60 |
+| PP-BOX-24 | Celebration boxes: Premium Range IV | PP(BOX,24): product profit x32; factor=32 | Own Celebration boxes | B08-015 | 1.224878433260040e+61 |
+| TP-044 | Counter Display VIII | TD(44): tap profit x7.23259119; factor=7.23259119 |  | B08-016 | 1.820828470191895e+61 |
+| PP-PHU-25 | Phuljhari Signature Breakthrough V | PP(PHU,25): product profit x2; factor=2 | Own Phuljhari | B08-017 | 2.707001597902053e+61 |
+| PC-AER-06 | Aerial shots: Trusted Supplier II | PC(AER,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Aerial shots | B08-018 | 4.024865929670885e+61 |
+| PP-ANA-25 | Anar: Gift Packaging V | PP(ANA,25): product profit x2; factor=2 | Own Anar | B08-019 | 5.984911793164897e+61 |
+| PP-CHA-25 | Chakri: Gift Packaging V | PP(CHA,25): product profit x2; factor=2 | Own Chakri | B08-020 | 8.900358892430159e+61 |
+| PP-ROC-25 | Rockets: Gift Packaging V | PP(ROC,25): product profit x2; factor=2 | Own Rockets | B08-021 | 1.323733969470887e+62 |
+| PP-SMC-25 | Small crackers: Gift Packaging V | PP(SMC,25): product profit x2; factor=2 | Own Small crackers | B08-022 | 1.968962014942479e+62 |
+| TP-045 | Shop Showmanship VIII | TD(45): tap profit x2; factor=2 |  | B08-023 | 2.928986644017563e+62 |
+| GP-30 | Celebration Demand IV | GP(30): global profit x6; factor=6 |  | B08-024 | 4.357534901584436e+62 |
+| PC-BOX-06 | Celebration boxes: Trusted Supplier II | PC(BOX,6): remaining cost x0.046415888336127795; factor=0.046415888336127795 | Own Celebration boxes | B08-025 | 6.483474195178919e+62 |
+| PP-STR-25 | Cracker strings: Gift Packaging V | PP(STR,25): product profit x2; factor=2 | Own Cracker strings | B08-026 | 9.647574223264269e+62 |
+| PP-AER-25 | Aerial shots Signature Breakthrough V | PP(AER,25): product profit x2; factor=2 | Own Aerial shots | B08-027 | 1.435727105952572e+63 |
+| PP-BOX-25 | Celebration boxes: Gift Packaging V | PP(BOX,25): product profit x2; factor=2 | Own Celebration boxes | B08-028 | 2.136825710379060e+63 |
+| PP-PHU-26 | Phuljhari: Festival Display V | PP(PHU,26): product profit x2; factor=2 | Own Phuljhari | B08-029 | 3.180604951210257e+63 |
+| TP-046 | Crowd Appeal VIII | TD(46): tap profit x2; factor=2 |  | B08-030 | 4.734714432669843e+63 |
+| PC-PHU-07 | Phuljhari: Bulk Procurement II | PC(PHU,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Phuljhari | B08-031 | 7.048898862641779e+63 |
+| PP-ANA-26 | Anar: Festival Display V | PP(ANA,26): product profit x2; factor=2 | Own Anar | B08-032 | 1.049523573773260e+64 |
+| UC-13 | Upgrade Price Discount 13 | UC(13): remaining cost x0.7168484428131242; factor=0.7168484428131242 |  | B08-033 | 1.562811311175176e+64 |
+| PP-CHA-26 | Chakri Signature Breakthrough V | PP(CHA,26): product profit x2; factor=2 | Own Chakri | B08-034 | 2.327364058805403e+64 |
+| TC-16 | Practice Routine IV | TC(16): remaining cost x0.04124626382901352; factor=0.04124626382901352 |  | B08-035 | 3.466295075363842e+64 |
+| GP-31 | Brand Recognition IV | GP(31): global profit x2; factor=2 |  | B08-036 | 5.163095599186901e+64 |
+| PP-ROC-26 | Rockets: Festival Display V | PP(ROC,26): product profit x2; factor=2 | Own Rockets | B08-037 | 7.691273095801053e+64 |
+| SK-HH-C-04 | Helping Hands: Faster Recovery IV | SC(HH,4): skill effect x0.875; factor=0.875 |  | B08-038 | 1.145855166956013e+65 |
+| PP-SMC-26 | Small crackers: Festival Display V | PP(SMC,26): product profit x2; factor=2 | Own Small crackers | B08-039 | 1.707279604111595e+65 |
+| PC-ANA-07 | Anar: Bulk Procurement II | PC(ANA,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Anar | B08-040 | 2.544034556564896e+65 |
+| TP-047 | Festival Calls VIII | TD(47): tap profit x2.10691651; factor=2.10691651 |  | B08-041 | 3.791270658275609e+65 |
+| PP-STR-26 | Cracker strings: Festival Display V | PP(STR,26): product profit x2; factor=2 | Own Cracker strings | B08-042 | 5.650540639236796e+65 |
+| PP-AER-26 | Aerial shots: Festival Display V | PP(AER,26): product profit x2; factor=2 | Own Aerial shots | B08-043 | 8.422453951306955e+65 |
+| SK-FR-P-05 | Stronger Rush V | SP(FR,5): skill effect x3; factor=3 |  | B08-044 | 1.255540473366516e+66 |
+| PP-BOX-26 | Celebration boxes: Festival Display V | PP(BOX,26): product profit x2; factor=2 | Own Celebration boxes | B08-045 | 1.871829202565102e+66 |
+| PP-PHU-27 | Phuljhari: Regular Customers V | PP(PHU,27): product profit x4; factor=4 | Own Phuljhari | B08-046 | 2.790905613863289e+66 |
+| PC-CHA-07 | Chakri: Bulk Procurement II | PC(CHA,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Chakri | B08-047 | 4.161668751176742e+66 |
+| PP-ANA-27 | Anar: Regular Customers V | PP(ANA,27): product profit x4; factor=4 | Own Anar | B08-048 | 6.206307638553051e+66 |
+| TP-048 | Shop Reputation VIII | TD(48): tap profit x9.74511637; factor=9.74511637 |  | B08-049 | 9.256408624910115e+66 |
+| GP-32 | Customer Loyalty IV | GP(32): global profit x3; factor=3 |  | B08-050 | 1.380686781259348e+67 |
 
-## Band 09
+## Page 9
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-25 | Aerial shots Signature Breakthrough V | PP(AER,25): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-24 | B09-001 | 63900300000000000 |
-| PP-ANA-25 | Anar: Gift Packaging V | PP(ANA,25): multiply family normal profit by x1.6 | Own Anar; PP-ANA-24 | B09-002 | 65626700000000000 |
-| PP-BOX-25 | Celebration boxes: Gift Packaging V | PP(BOX,25): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-24 | B09-003 | 67399800000000000 |
-| PP-CHA-25 | Chakri: Gift Packaging V | PP(CHA,25): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-24 | B09-004 | 69220800000000000 |
-| PP-PHU-25 | Phuljhari Signature Breakthrough V | PP(PHU,25): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-24 | B09-005 | 71091100000000000 |
-| PP-ROC-25 | Rockets: Gift Packaging V | PP(ROC,25): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-24 | B09-006 | 73011800000000000 |
-| PP-SMC-25 | Small crackers: Gift Packaging V | PP(SMC,25): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-24 | B09-007 | 74984400000000000 |
-| PP-STR-25 | Cracker strings: Gift Packaging V | PP(STR,25): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-24 | B09-008 | 77010400000000000 |
-| PP-AER-26 | Aerial shots: Festival Display V | PP(AER,26): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-25 | B09-009 | 79091000000000000 |
-| PP-ANA-26 | Anar: Festival Display V | PP(ANA,26): multiply family normal profit by x1.6 | Own Anar; PP-ANA-25 | B09-010 | 81227900000000000 |
-| PP-BOX-26 | Celebration boxes: Festival Display V | PP(BOX,26): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-25 | B09-011 | 83422500000000000 |
-| PP-CHA-26 | Chakri Signature Breakthrough V | PP(CHA,26): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-25 | B09-012 | 85676500000000000 |
-| PP-PHU-26 | Phuljhari: Festival Display V | PP(PHU,26): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-25 | B09-013 | 87991300000000000 |
-| PP-ROC-26 | Rockets: Festival Display V | PP(ROC,26): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-25 | B09-014 | 90368600000000000 |
-| PP-SMC-26 | Small crackers: Festival Display V | PP(SMC,26): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-25 | B09-015 | 92810200000000000 |
-| PP-STR-26 | Cracker strings: Festival Display V | PP(STR,26): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-25 | B09-016 | 95317800000000000 |
-| PP-AER-27 | Aerial shots: Regular Customers V | PP(AER,27): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-26 | B09-017 | 97893100000000000 |
-| PP-ANA-27 | Anar: Regular Customers V | PP(ANA,27): multiply family normal profit by x1.6 | Own Anar; PP-ANA-26 | B09-018 | 100538000000000000 |
-| PP-BOX-27 | Celebration boxes: Regular Customers V | PP(BOX,27): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-26 | B09-019 | 103254000000000000 |
-| PP-CHA-27 | Chakri: Regular Customers V | PP(CHA,27): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-26 | B09-020 | 106044000000000000 |
-| PP-PHU-27 | Phuljhari: Regular Customers V | PP(PHU,27): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-26 | B09-021 | 108909000000000000 |
-| PP-ROC-27 | Rockets: Regular Customers V | PP(ROC,27): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-26 | B09-022 | 111852000000000000 |
-| PP-SMC-27 | Small crackers Signature Breakthrough V | PP(SMC,27): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-26 | B09-023 | 114874000000000000 |
-| PP-STR-27 | Cracker strings: Regular Customers V | PP(STR,27): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-26 | B09-024 | 117977000000000000 |
-| PC-AER-07 | Aerial shots: Bulk Procurement II | PC(AER,7): total run family-level discount becomes 15.3125% | Own Aerial shots; PC-AER-06 | B09-025 | 121165000000000000 |
-| PC-ANA-07 | Anar: Bulk Procurement II | PC(ANA,7): total run family-level discount becomes 15.3125% | Own Anar; PC-ANA-06 | B09-026 | 124438000000000000 |
-| PC-BOX-07 | Celebration boxes: Bulk Procurement II | PC(BOX,7): total run family-level discount becomes 15.3125% | Own Celebration boxes; PC-BOX-06 | B09-027 | 127801000000000000 |
-| PC-CHA-07 | Chakri: Bulk Procurement II | PC(CHA,7): total run family-level discount becomes 15.3125% | Own Chakri; PC-CHA-06 | B09-028 | 131253000000000000 |
-| PC-PHU-07 | Phuljhari: Bulk Procurement II | PC(PHU,7): total run family-level discount becomes 15.3125% | Own Phuljhari; PC-PHU-06 | B09-029 | 134800000000000000 |
-| PC-ROC-07 | Rockets: Bulk Procurement II | PC(ROC,7): total run family-level discount becomes 15.3125% | Own Rockets; PC-ROC-06 | B09-030 | 138442000000000000 |
-| PC-SMC-07 | Small crackers: Bulk Procurement II | PC(SMC,7): total run family-level discount becomes 15.3125% | Own Small crackers; PC-SMC-06 | B09-031 | 142182000000000000 |
-| PC-STR-07 | Cracker strings: Bulk Procurement II | PC(STR,7): total run family-level discount becomes 15.3125% | Own Cracker strings; PC-STR-06 | B09-032 | 146024000000000000 |
-| TP-049 | Sales Pitch IX | TD(25): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-048 | B09-033 | 149969000000000000 |
-| TP-050 | Counter Display IX | TD(26): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-049 | B09-034 | 154021000000000000 |
-| TP-051 | Shop Showmanship IX | TL(25): linked share A becomes 19.3220339% | Own 2+ families; TP-050 | B09-035 | 158182000000000000 |
-| TP-052 | Crowd Appeal IX | TL(26): linked share A becomes 19.62711864% | Own 2+ families; TP-051 | B09-036 | 162456000000000000 |
-| TP-053 | Festival Calls IX | TD(27): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-052 | B09-037 | 166845000000000000 |
-| TP-054 | Shop Reputation IX | TL(27): linked share A becomes 19.93220339% | Own 2+ families; TP-053 | B09-038 | 171353000000000000 |
-| TC-17 | Counter Training IV | TC(17): total run tap-level discount becomes 14.875% | Own 1+ families; TC-16 | B09-039 | 175983000000000000 |
-| TC-18 | Sales Coaching IV | TC(18): total run tap-level discount becomes 15.75% | Own 1+ families; TC-17 | B09-040 | 180737000000000000 |
-| GP-33 | Festival Footfall V | GP(33): normal products and independent tap B x1.10, once | Own 1+ families; GP-32 | B09-041 | 185620000000000000 |
-| GP-34 | Community Trust V | GP(34): normal products and independent tap B x1.10, once | Own 1+ families; GP-33 | B09-042 | 190636000000000000 |
-| GP-35 | Local Advertising V | GP(35): normal products and independent tap B x1.10, once | Own 1+ families; GP-34 | B09-043 | 195786000000000000 |
-| GP-36 | Shopfront Glow V | GP(36): normal products and independent tap B x1.10, once | Own 1+ families; GP-35 | B09-044 | 201076000000000000 |
-| UC-13 | Supplier Network IV | UC(13): total run named-cash discount becomes 14.21875% | Own 1+ families; UC-12 | B09-045 | 206509000000000000 |
-| UC-14 | Trade Association IV | UC(14): total run named-cash discount becomes 15.3125% | Own 1+ families; UC-13 | B09-046 | 212088000000000000 |
-| SK-FR-P-04 | Stronger Rush IV | SP(FR,4): Rush product multiplier x2.75 | Own 1+ families; SK-FR-P-03 | B09-047 | 217818000000000000 |
-| SK-HH-P-04 | More Helping Hands IV | SP(HH,4): 6 auto taps/s | Own 2+ families; SK-HH-P-03 | B09-048 | 223703000000000000 |
-| SK-BO-C-05 | Bulk Order: Faster Recovery V | SC(BO,5): cumulative run cooldown factor 0.89583333 | SK-BO-P-01; SK-BO-C-04 | B09-049 | 229747000000000000 |
-| PF-MIX-02 | Celebration Mix: Portfolio Milestone II | PF(MIX,2): each listed family's normal profit x1.30 | BOX+ANA levels >= 100; PF-MIX-01 (every listed family) | B09-050 | 235955000000000000 |
-| PF-RHYTHM-02 | Sound and Rhythm: Portfolio Milestone II | PF(RHYTHM,2): each listed family's normal profit x1.30 | SMC+STR levels >= 100; PF-RHYTHM-01 (every listed family) | B09-051 | 242330000000000000 |
-| PF-SKY-02 | Skyline Collection: Portfolio Milestone II | PF(SKY,2): each listed family's normal profit x1.30 | ROC+AER levels >= 100; PF-SKY-01 (every listed family) | B09-052 | 248877000000000000 |
-| PF-STREET-02 | Street Favourites: Portfolio Milestone II | PF(STREET,2): each listed family's normal profit x1.30 | PHU+ANA+CHA levels >= 100; PF-STREET-01 (every listed family) | B09-053 | 255601000000000000 |
+| PP-CHA-27 | Chakri: Regular Customers V | PP(CHA,27): product profit x4; factor=4 | Own Chakri | B09-001 | 2.059639655432199e+67 |
+| PP-ROC-27 | Rockets: Regular Customers V | PP(ROC,27): product profit x4; factor=4 | Own Rockets | B09-002 | 3.072774941121240e+67 |
+| PP-SMC-27 | Small crackers Signature Breakthrough V | PP(SMC,27): product profit x4; factor=4 | Own Small crackers | B09-003 | 4.584729205263015e+67 |
+| PC-ROC-07 | Rockets: Bulk Procurement II | PC(ROC,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Rockets | B09-004 | 6.841322377229394e+67 |
+| PP-STR-27 | Cracker strings: Regular Customers V | PP(STR,27): product profit x4; factor=4 | Own Cracker strings | B09-005 | 1.020962643086086e+68 |
+| TP-049 | Sales Pitch IX | TD(49): tap profit x2; factor=2 |  | B09-006 | 1.523782834340480e+68 |
+| PP-AER-27 | Aerial shots: Regular Customers V | PP(AER,27): product profit x4; factor=4 | Own Aerial shots | B09-007 | 2.274467479274487e+68 |
+| PP-BOX-27 | Celebration boxes: Regular Customers V | PP(BOX,27): product profit x4; factor=4 | Own Celebration boxes | B09-008 | 3.395312995906361e+68 |
+| TC-17 | Counter Training IV | TC(17): remaining cost x0.03888155180308089; factor=0.03888155180308089 |  | B09-009 | 5.069012117300087e+68 |
+| PP-PHU-28 | Phuljhari: Signature Collection V | PP(PHU,28): product profit x8; factor=8 | Own Phuljhari | B09-010 | 7.568507967654578e+68 |
+| GP-33 | Festival Footfall V | GP(33): global profit x4; factor=4 |  | B09-011 | 1.130161854982363e+69 |
+| PP-ANA-28 | Anar Signature Breakthrough V | PP(ANA,28): product profit x8; factor=8 | Own Anar | B09-012 | 1.687774600865515e+69 |
+| PC-SMC-07 | Small crackers: Bulk Procurement II | PC(SMC,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Small crackers | B09-013 | 2.520761042607280e+69 |
+| PP-CHA-28 | Chakri: Signature Collection V | PP(CHA,28): product profit x8; factor=8 | Own Chakri | B09-014 | 3.765237186330156e+69 |
+| TP-050 | Counter Display IX | TD(50): tap profit x2; factor=2 |  | B09-015 | 5.624661997573701e+69 |
+| UC-14 | Upgrade Price Discount 14 | UC(14): remaining cost x0.7033844277606444; factor=0.7033844277606444 |  | B09-016 | 8.403185473220650e+69 |
+| PP-ROC-28 | Rockets: Signature Collection V | PP(ROC,28): product profit x8; factor=8 | Own Rockets | B09-017 | 1.255552561798298e+70 |
+| SK-FR-D-04 | Festival Rush: Longer Window IV | SD(FR,4): skill effect x1.25; factor=1.25 |  | B09-018 | 1.876157428118621e+70 |
+| PP-SMC-28 | Small crackers: Signature Collection V | PP(SMC,28): product profit x8; factor=8 | Own Small crackers | B09-019 | 2.803800347723039e+70 |
+| PP-STR-28 | Cracker strings: Signature Collection V | PP(STR,28): product profit x8; factor=8 | Own Cracker strings | B09-020 | 4.190523908605488e+70 |
+| PC-STR-07 | Cracker strings: Bulk Procurement II | PC(STR,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Cracker strings | B09-021 | 6.263729434131708e+70 |
+| PP-AER-28 | Aerial shots: Signature Collection V | PP(AER,28): product profit x8; factor=8 | Own Aerial shots | B09-022 | 9.363561909348073e+70 |
+| SK-BO-C-04 | Bulk Order: Faster Recovery IV | SC(BO,4): skill effect x0.9166666666666666; factor=0.9166666666666666 |  | B09-023 | 1.399885812754677e+71 |
+| TP-051 | Shop Showmanship IX | TD(51): tap profit x4.32229576; factor=4.32229576 |  | B09-024 | 2.093088384050574e+71 |
+| GP-34 | Community Trust V | GP(34): global profit x5; factor=5 |  | B09-025 | 3.129867498713862e+71 |
+| PP-BOX-28 | Celebration boxes Signature Breakthrough V | PP(BOX,28): product profit x8; factor=8 | Own Celebration boxes | B09-026 | 4.680667233260465e+71 |
+| PP-PHU-29 | Phuljhari: Celebration Specialist V | PP(PHU,29): product profit x16; factor=16 | Own Phuljhari | B09-027 | 7.000563676143813e+71 |
+| PP-ANA-29 | Anar: Celebration Specialist V | PP(ANA,29): product profit x16; factor=16 | Own Anar | B09-028 | 1.047132606857641e+72 |
+| PC-AER-07 | Aerial shots: Bulk Procurement II | PC(AER,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Aerial shots | B09-029 | 1.566440077152073e+72 |
+| PP-CHA-29 | Chakri: Celebration Specialist V | PP(CHA,29): product profit x16; factor=16 | Own Chakri | B09-030 | 2.343523527925536e+72 |
+| TP-052 | Crowd Appeal IX | TD(52): tap profit x3.09330049; factor=3.09330049 |  | B09-031 | 3.506455078473681e+72 |
+| PP-ROC-29 | Rockets Signature Breakthrough V | PP(ROC,29): product profit x16; factor=16 | Own Rockets | B09-032 | 5.246995242432463e+72 |
+| SK-HH-P-05 | More Helping Hands V | SP(HH,5): skill effect x8; factor=8 |  | B09-033 | 7.852292897378314e+72 |
+| PP-SMC-29 | Small crackers: Celebration Specialist V | PP(SMC,29): product profit x16; factor=16 | Own Small crackers | B09-034 | 1.175237770490336e+73 |
+| TC-18 | Sales Coaching IV | TC(18): remaining cost x0.03665241237079628; factor=0.03665241237079628 |  | B09-035 | 1.759131963781075e+73 |
+| PP-STR-29 | Cracker strings: Celebration Specialist V | PP(STR,29): product profit x16; factor=16 | Own Cracker strings | B09-036 | 2.633386037878067e+73 |
+| GP-35 | Local Advertising V | GP(35): global profit x6; factor=6 |  | B09-037 | 3.942521467497650e+73 |
+| PC-BOX-07 | Celebration boxes: Bulk Procurement II | PC(BOX,7): remaining cost x0.03981071705534973; factor=0.03981071705534973 | Own Celebration boxes | B09-038 | 5.903057783156589e+73 |
+| PP-AER-29 | Aerial shots: Celebration Specialist V | PP(AER,29): product profit x16; factor=16 | Own Aerial shots | B09-039 | 8.839413117199939e+73 |
+| PP-BOX-29 | Celebration boxes: Celebration Specialist V | PP(BOX,29): product profit x16; factor=16 | Own Celebration boxes | B09-040 | 1.323772204849659e+74 |
+| TP-053 | Festival Calls IX | TD(53): tap profit x3.09330049; factor=3.09330049 |  | B09-041 | 1.982652098214048e+74 |
+| PP-PHU-30 | Phuljhari: Premium Range V | PP(PHU,30): product profit x32; factor=32 | Own Phuljhari | B09-042 | 2.969772623068788e+74 |
+| PP-ANA-30 | Anar: Premium Range V | PP(ANA,30): product profit x32; factor=32 | Own Anar | B09-043 | 4.448804427018231e+74 |
+| PC-PHU-08 | Phuljhari: Factory Partnership II | PC(PHU,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Phuljhari | B09-044 | 6.665102897489946e+74 |
+| PP-CHA-30 | Chakri: Premium Range V | PP(CHA,30): product profit x32; factor=32 | Own Chakri | B09-045 | 9.986512094373029e+74 |
+| PP-ROC-30 | Rockets: Premium Range V | PP(ROC,30): product profit x32; factor=32 | Own Rockets | B09-046 | 1.496456977275937e+75 |
+| UC-15 | Upgrade Price Discount 15 | UC(15): remaining cost x0.6901732969867743; factor=0.6901732969867743 |  | B09-047 | 2.242632275632589e+75 |
+| TP-054 | Shop Reputation IX | TD(54): tap profit x8.64459148; factor=8.64459148 |  | B09-048 | 3.361207549023808e+75 |
+| GP-36 | Shopfront Glow V | GP(36): global profit x2; factor=2 |  | B09-049 | 5.038207172210962e+75 |
+| PP-SMC-30 | Small crackers: Premium Range V | PP(SMC,30): product profit x32; factor=32 | Own Small crackers | B09-050 | 7.552663624584290e+75 |
 
-## Band 10
+## Page 10
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-28 | Aerial shots: Signature Collection V | PP(AER,28): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-27 | B10-001 | 1980910000000000000 |
-| PP-ANA-28 | Anar Signature Breakthrough V | PP(ANA,28): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-27 | B10-002 | 2035490000000000000 |
-| PP-BOX-28 | Celebration boxes Signature Breakthrough V | PP(BOX,28): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-27 | B10-003 | 2091580000000000000 |
-| PP-CHA-28 | Chakri: Signature Collection V | PP(CHA,28): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-27 | B10-004 | 2149210000000000000 |
-| PP-PHU-28 | Phuljhari: Signature Collection V | PP(PHU,28): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-27 | B10-005 | 2208440000000000000 |
-| PP-ROC-28 | Rockets: Signature Collection V | PP(ROC,28): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-27 | B10-006 | 2269290000000000000 |
-| PP-SMC-28 | Small crackers: Signature Collection V | PP(SMC,28): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-27 | B10-007 | 2331820000000000000 |
-| PP-STR-28 | Cracker strings: Signature Collection V | PP(STR,28): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-27 | B10-008 | 2396070000000000000 |
-| PP-AER-29 | Aerial shots: Celebration Specialist V | PP(AER,29): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-28 | B10-009 | 2462100000000000000 |
-| PP-ANA-29 | Anar: Celebration Specialist V | PP(ANA,29): multiply family normal profit by x1.6 | Own Anar; PP-ANA-28 | B10-010 | 2529940000000000000 |
-| PP-BOX-29 | Celebration boxes: Celebration Specialist V | PP(BOX,29): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-28 | B10-011 | 2599650000000000000 |
-| PP-CHA-29 | Chakri: Celebration Specialist V | PP(CHA,29): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-28 | B10-012 | 2671290000000000000 |
-| PP-PHU-29 | Phuljhari: Celebration Specialist V | PP(PHU,29): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-28 | B10-013 | 2744890000000000000 |
-| PP-ROC-29 | Rockets Signature Breakthrough V | PP(ROC,29): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-28 | B10-014 | 2820530000000000000 |
-| PP-SMC-29 | Small crackers: Celebration Specialist V | PP(SMC,29): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-28 | B10-015 | 2898250000000000000 |
-| PP-STR-29 | Cracker strings: Celebration Specialist V | PP(STR,29): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-28 | B10-016 | 2978110000000000000 |
-| PP-AER-30 | Aerial shots: Premium Range V | PP(AER,30): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-29 | B10-017 | 3060170000000000000 |
-| PP-ANA-30 | Anar: Premium Range V | PP(ANA,30): multiply family normal profit by x1.6 | Own Anar; PP-ANA-29 | B10-018 | 3144500000000000000 |
-| PP-BOX-30 | Celebration boxes: Premium Range V | PP(BOX,30): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-29 | B10-019 | 3231140000000000000 |
-| PP-CHA-30 | Chakri: Premium Range V | PP(CHA,30): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-29 | B10-020 | 3320180000000000000 |
-| PP-PHU-30 | Phuljhari: Premium Range V | PP(PHU,30): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-29 | B10-021 | 3411660000000000000 |
-| PP-ROC-30 | Rockets: Premium Range V | PP(ROC,30): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-29 | B10-022 | 3505670000000000000 |
-| PP-SMC-30 | Small crackers: Premium Range V | PP(SMC,30): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-29 | B10-023 | 3602270000000000000 |
-| PP-STR-30 | Cracker strings Signature Breakthrough V | PP(STR,30): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-29 | B10-024 | 3701530000000000000 |
-| PC-AER-08 | Aerial shots: Factory Partnership II | PC(AER,8): total run family-level discount becomes 17.5% | Own Aerial shots; PC-AER-07 | B10-025 | 3803530000000000000 |
-| PC-ANA-08 | Anar: Factory Partnership II | PC(ANA,8): total run family-level discount becomes 17.5% | Own Anar; PC-ANA-07 | B10-026 | 3908340000000000000 |
-| PC-BOX-08 | Celebration boxes: Factory Partnership II | PC(BOX,8): total run family-level discount becomes 17.5% | Own Celebration boxes; PC-BOX-07 | B10-027 | 4016030000000000000 |
-| PC-CHA-08 | Chakri: Factory Partnership II | PC(CHA,8): total run family-level discount becomes 17.5% | Own Chakri; PC-CHA-07 | B10-028 | 4126690000000000000 |
-| PC-PHU-08 | Phuljhari: Factory Partnership II | PC(PHU,8): total run family-level discount becomes 17.5% | Own Phuljhari; PC-PHU-07 | B10-029 | 4240400000000000000 |
-| PC-ROC-08 | Rockets: Factory Partnership II | PC(ROC,8): total run family-level discount becomes 17.5% | Own Rockets; PC-ROC-07 | B10-030 | 4357250000000000000 |
-| PC-SMC-08 | Small crackers: Factory Partnership II | PC(SMC,8): total run family-level discount becomes 17.5% | Own Small crackers; PC-SMC-07 | B10-031 | 4477310000000000000 |
-| PC-STR-08 | Cracker strings: Factory Partnership II | PC(STR,8): total run family-level discount becomes 17.5% | Own Cracker strings; PC-STR-07 | B10-032 | 4600680000000000000 |
-| TP-055 | Sales Pitch X | TD(28): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-054 | B10-033 | 4727460000000000000 |
-| TP-056 | Counter Display X | TD(29): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-055 | B10-034 | 4857720000000000000 |
-| TP-057 | Shop Showmanship X | TL(28): linked share A becomes 20.23728814% | Own 2+ families; TP-056 | B10-035 | 4991580000000000000 |
-| TP-058 | Crowd Appeal X | TL(29): linked share A becomes 20.54237288% | Own 2+ families; TP-057 | B10-036 | 5129120000000000000 |
-| TP-059 | Festival Calls X | TD(30): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-058 | B10-037 | 5270450000000000000 |
-| TP-060 | Shop Reputation X | TL(30): linked share A becomes 20.84745763% | Own 2+ families; TP-059 | B10-038 | 5415680000000000000 |
-| TC-19 | Team Handbook IV | TC(19): total run tap-level discount becomes 16.625% | Own 1+ families; TC-18 | B10-039 | 5564910000000000000 |
-| TC-20 | Customer Insight IV | TC(20): total run tap-level discount becomes 17.5% | Own 1+ families; TC-19 | B10-040 | 5718250000000000000 |
-| GP-37 | Delivery Reach V | GP(37): normal products and independent tap B x1.10, once | Own 1+ families; GP-36 | B10-041 | 5875820000000000000 |
-| GP-38 | Celebration Demand V | GP(38): normal products and independent tap B x1.10, once | Own 1+ families; GP-37 | B10-042 | 6037730000000000000 |
-| GP-39 | Brand Recognition V | GP(39): normal products and independent tap B x1.10, once | Own 1+ families; GP-38 | B10-043 | 6204100000000000000 |
-| GP-40 | Customer Loyalty V | GP(40): normal products and independent tap B x1.10, once | Own 1+ families; GP-39 | B10-044 | 6375050000000000000 |
-| UC-15 | Procurement Office IV | UC(15): total run named-cash discount becomes 16.40625% | Own 1+ families; UC-14 | B10-045 | 6550710000000000000 |
-| UC-16 | Distributor Alliance IV | UC(16): total run named-cash discount becomes 17.5% | Own 1+ families; UC-15 | B10-046 | 6731220000000000000 |
-| SK-BO-P-06 | Larger Bulk Orders VI | SP(BO,6): 195 seconds of normal P | Own 3+ families; SK-BO-P-05 | B10-047 | 6916700000000000000 |
-| SK-FR-D-04 | Festival Rush: Longer Window IV | SD(FR,4): cumulative run duration factor 1.25 | SK-FR-P-01; SK-FR-D-03 | B10-048 | 7107290000000000000 |
-| SK-HH-D-04 | Helping Hands: Longer Window IV | SD(HH,4): cumulative run duration factor 1.25 | SK-HH-P-01; SK-HH-D-03 | B10-049 | 7303130000000000000 |
-| SK-FR-C-04 | Festival Rush: Faster Recovery IV | SC(FR,4): cumulative run cooldown factor 0.875 | SK-FR-P-01; SK-FR-C-03 | B10-050 | 7504370000000000000 |
-| SK-HH-C-04 | Helping Hands: Faster Recovery IV | SC(HH,4): cumulative run cooldown factor 0.875 | SK-HH-P-01; SK-HH-C-03 | B10-051 | 7711150000000000000 |
-| SK-BO-C-06 | Bulk Order: Faster Recovery VI | SC(BO,6): cumulative run cooldown factor 0.875 | SK-BO-P-01; SK-BO-C-05 | B10-052 | 7923630000000000000 |
+| PP-STR-30 | Cracker strings Signature Breakthrough V | PP(STR,30): product profit x32; factor=32 | Own Cracker strings | B10-001 | 1.132316128220889e+76 |
+| PC-ANA-08 | Anar: Factory Partnership II | PC(ANA,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Anar | B10-002 | 1.697769288238393e+76 |
+| PP-AER-30 | Aerial shots: Premium Range V | PP(AER,30): product profit x32; factor=32 | Own Aerial shots | B10-003 | 2.545851587474195e+76 |
+| PP-BOX-30 | Celebration boxes: Premium Range V | PP(BOX,30): product profit x32; factor=32 | Own Celebration boxes | B10-004 | 3.817956019577133e+76 |
+| TP-055 | Sales Pitch X | TD(55): tap profit x3.09330049; factor=3.09330049 |  | B10-005 | 5.726274850763280e+76 |
+| PP-PHU-31 | Phuljhari Signature Breakthrough VI | PP(PHU,31): product profit x2; factor=2 | Own Phuljhari | B10-006 | 8.589282507355239e+76 |
+| SK-FR-C-05 | Festival Rush: Faster Recovery V | SC(FR,5): skill effect x0.84375; factor=0.84375 |  | B10-007 | 1.288501754812180e+77 |
+| PP-ANA-31 | Anar: Gift Packaging VI | PP(ANA,31): product profit x2; factor=2 | Own Anar | B10-008 | 1.933110015546474e+77 |
+| PC-CHA-08 | Chakri: Factory Partnership II | PC(CHA,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Chakri | B10-009 | 2.900491232058426e+77 |
+| TC-19 | Team Handbook IV | TC(19): remaining cost x0.03455107294592219; factor=0.03455107294592219 |  | B10-010 | 4.352411733728196e+77 |
+| PP-CHA-31 | Chakri: Gift Packaging VI | PP(CHA,31): product profit x2; factor=2 | Own Chakri | B10-011 | 6.531784041960669e+77 |
+| GP-37 | Delivery Reach V | GP(37): global profit x3; factor=3 |  | B10-012 | 9.803408320441034e+77 |
+| PP-ROC-31 | Rockets: Gift Packaging VI | PP(ROC,31): product profit x2; factor=2 | Own Rockets | B10-013 | 1.471518734266986e+78 |
+| PP-SMC-31 | Small crackers: Gift Packaging VI | PP(SMC,31): product profit x2; factor=2 | Own Small crackers | B10-014 | 2.209011256165880e+78 |
+| TP-056 | Counter Display X | TD(56): tap profit x2; factor=2 |  | B10-015 | 3.316450286153531e+78 |
+| PP-STR-31 | Cracker strings: Gift Packaging VI | PP(STR,31): product profit x2; factor=2 | Own Cracker strings | B10-016 | 4.979577360264913e+78 |
+| PC-ROC-08 | Rockets: Factory Partnership II | PC(ROC,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Rockets | B10-017 | 7.477473892327783e+78 |
+| PP-AER-31 | Aerial shots Signature Breakthrough VI | PP(AER,31): product profit x2; factor=2 | Own Aerial shots | B10-018 | 1.122950871248719e+79 |
+| PP-BOX-31 | Celebration boxes: Gift Packaging VI | PP(BOX,31): product profit x2; factor=2 | Own Celebration boxes | B10-019 | 1.686592003622297e+79 |
+| SK-BO-P-05 | Larger Bulk Orders V | SP(BO,5): skill effect x180; factor=180 |  | B10-020 | 2.533394054008233e+79 |
+| PP-PHU-32 | Phuljhari: Festival Display VI | PP(PHU,32): product profit x2; factor=2 | Own Phuljhari | B10-021 | 3.805737996938915e+79 |
+| TP-057 | Shop Showmanship X | TD(57): tap profit x2.65964477; factor=2.65964477 |  | B10-022 | 5.717661693812904e+79 |
+| GP-38 | Celebration Demand V | GP(38): global profit x4; factor=4 |  | B10-023 | 8.590955184035147e+79 |
+| PP-ANA-32 | Anar: Festival Display VI | PP(ANA,32): product profit x2; factor=2 | Own Anar | B10-024 | 1.290945420469860e+80 |
+| PC-SMC-08 | Small crackers: Factory Partnership II | PC(SMC,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Small crackers | B10-025 | 1.940071511570855e+80 |
+| PP-CHA-32 | Chakri Signature Breakthrough VI | PP(CHA,32): product profit x2; factor=2 | Own Chakri | B10-026 | 2.915889252084647e+80 |
+| PP-ROC-32 | Rockets: Festival Display VI | PP(ROC,32): product profit x2; factor=2 | Own Rockets | B10-027 | 4.382962361559578e+80 |
+| UC-16 | Upgrade Price Discount 16 | UC(16): remaining cost x0.6772103007598688; factor=0.6772103007598688 |  | B10-028 | 6.588823694546850e+80 |
+| PP-SMC-32 | Small crackers: Festival Display VI | PP(SMC,32): product profit x2; factor=2 | Own Small crackers | B10-029 | 9.905843485092115e+80 |
+| SK-HH-D-04 | Helping Hands: Longer Window IV | SD(HH,4): skill effect x1.25; factor=1.25 |  | B10-030 | 1.489424406613322e+81 |
+| PP-STR-32 | Cracker strings: Festival Display VI | PP(STR,32): product profit x2; factor=2 | Own Cracker strings | B10-031 | 2.239695101131935e+81 |
+| TP-058 | Crowd Appeal X | TD(58): tap profit x2; factor=2 |  | B10-032 | 3.368237939606585e+81 |
+| PP-AER-32 | Aerial shots: Festival Display VI | PP(AER,32): product profit x2; factor=2 | Own Aerial shots | B10-033 | 5.065940168141377e+81 |
+| PC-STR-08 | Cracker strings: Factory Partnership II | PC(STR,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Cracker strings | B10-034 | 7.620101890274622e+81 |
+| PP-BOX-32 | Celebration boxes: Festival Display VI | PP(BOX,32): product profit x2; factor=2 | Own Celebration boxes | B10-035 | 1.146317520072338e+82 |
+| TC-20 | Customer Insight IV | TC(20): remaining cost x0.032570206556597835; factor=0.032570206556597835 |  | B10-036 | 1.724616398447655e+82 |
+| GP-39 | Brand Recognition V | GP(39): global profit x5; factor=5 |  | B10-037 | 2.594917302363970e+82 |
+| PP-PHU-33 | Phuljhari: Regular Customers VI | PP(PHU,33): product profit x4; factor=4 | Own Phuljhari | B10-038 | 3.904792512363571e+82 |
+| PP-ANA-33 | Anar: Regular Customers VI | PP(ANA,33): product profit x4; factor=4 | Own Anar | B10-039 | 5.876460636111398e+82 |
+| TP-059 | Festival Calls X | TD(59): tap profit x2.1608385; factor=2.1608385 |  | B10-040 | 8.844578284261404e+82 |
+| PP-CHA-33 | Chakri: Regular Customers VI | PP(CHA,33): product profit x4; factor=4 | Own Chakri | B10-041 | 1.331318167832514e+83 |
+| PC-AER-08 | Aerial shots: Factory Partnership II | PC(AER,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Aerial shots | B10-042 | 2.004149046680793e+83 |
+| PP-ROC-33 | Rockets: Regular Customers VI | PP(ROC,33): product profit x4; factor=4 | Own Rockets | B10-043 | 3.017321613867501e+83 |
+| SK-HH-C-05 | Helping Hands: Faster Recovery V | SC(HH,5): skill effect x0.84375; factor=0.84375 |  | B10-044 | 4.543145234176305e+83 |
+| PP-SMC-33 | Small crackers Signature Breakthrough VI | PP(SMC,33): product profit x4; factor=4 | Own Small crackers | B10-045 | 6.841243785221159e+83 |
+| PP-STR-33 | Cracker strings: Regular Customers VI | PP(STR,33): product profit x4; factor=4 | Own Cracker strings | B10-046 | 1.030283968744562e+84 |
+| TP-060 | Shop Reputation X | TD(60): tap profit x4.51587841; factor=4.51587841 |  | B10-047 | 1.551751762389488e+84 |
+| GP-40 | Customer Loyalty V | GP(40): global profit x6; factor=6 |  | B10-048 | 2.337388924343331e+84 |
+| PP-AER-33 | Aerial shots: Regular Customers VI | PP(AER,33): product profit x4; factor=4 | Own Aerial shots | B10-049 | 3.521138807179889e+84 |
+| PC-BOX-08 | Celebration boxes: Factory Partnership II | PC(BOX,8): remaining cost x0.03414548873833602; factor=0.03414548873833602 | Own Celebration boxes | B10-050 | 5.304918781009124e+84 |
 
-## Band 11
+## Page 11
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-31 | Aerial shots Signature Breakthrough VI | PP(AER,31): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-30 | B11-001 | 61408200000000000000 |
-| PP-ANA-31 | Anar: Gift Packaging VI | PP(ANA,31): multiply family normal profit by x1.6 | Own Anar; PP-ANA-30 | B11-002 | 63752600000000000000 |
-| PP-BOX-31 | Celebration boxes: Gift Packaging VI | PP(BOX,31): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-30 | B11-003 | 66186600000000000000 |
-| PP-CHA-31 | Chakri: Gift Packaging VI | PP(CHA,31): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-30 | B11-004 | 68713400000000000000 |
-| PP-PHU-31 | Phuljhari Signature Breakthrough VI | PP(PHU,31): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-30 | B11-005 | 71336800000000000000 |
-| PP-ROC-31 | Rockets: Gift Packaging VI | PP(ROC,31): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-30 | B11-006 | 74060300000000000000 |
-| PP-SMC-31 | Small crackers: Gift Packaging VI | PP(SMC,31): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-30 | B11-007 | 76887800000000000000 |
-| PP-STR-31 | Cracker strings: Gift Packaging VI | PP(STR,31): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-30 | B11-008 | 79823200000000000000 |
-| PP-AER-32 | Aerial shots: Festival Display VI | PP(AER,32): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-31 | B11-009 | 82870700000000000000 |
-| PP-ANA-32 | Anar: Festival Display VI | PP(ANA,32): multiply family normal profit by x1.6 | Own Anar; PP-ANA-31 | B11-010 | 86034600000000000000 |
-| PP-BOX-32 | Celebration boxes: Festival Display VI | PP(BOX,32): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-31 | B11-011 | 89319200000000000000 |
-| PP-CHA-32 | Chakri Signature Breakthrough VI | PP(CHA,32): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-31 | B11-012 | 92729300000000000000 |
-| PP-PHU-32 | Phuljhari: Festival Display VI | PP(PHU,32): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-31 | B11-013 | 96269500000000000000 |
-| PP-ROC-32 | Rockets: Festival Display VI | PP(ROC,32): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-31 | B11-014 | 99944900000000000000 |
-| PP-SMC-32 | Small crackers: Festival Display VI | PP(SMC,32): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-31 | B11-015 | 103761000000000000000 |
-| PP-STR-32 | Cracker strings: Festival Display VI | PP(STR,32): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-31 | B11-016 | 107722000000000000000 |
-| PP-AER-33 | Aerial shots: Regular Customers VI | PP(AER,33): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-32 | B11-017 | 111835000000000000000 |
-| PP-ANA-33 | Anar: Regular Customers VI | PP(ANA,33): multiply family normal profit by x1.6 | Own Anar; PP-ANA-32 | B11-018 | 116104000000000000000 |
-| PP-BOX-33 | Celebration boxes: Regular Customers VI | PP(BOX,33): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-32 | B11-019 | 120537000000000000000 |
-| PP-CHA-33 | Chakri: Regular Customers VI | PP(CHA,33): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-32 | B11-020 | 125139000000000000000 |
-| PP-PHU-33 | Phuljhari: Regular Customers VI | PP(PHU,33): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-32 | B11-021 | 129916000000000000000 |
-| PP-ROC-33 | Rockets: Regular Customers VI | PP(ROC,33): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-32 | B11-022 | 134876000000000000000 |
-| PP-SMC-33 | Small crackers Signature Breakthrough VI | PP(SMC,33): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-32 | B11-023 | 140026000000000000000 |
-| PP-STR-33 | Cracker strings: Regular Customers VI | PP(STR,33): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-32 | B11-024 | 145372000000000000000 |
-| TP-061 | Sales Pitch XI | TD(31): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-060 | B11-025 | 150922000000000000000 |
-| TP-062 | Counter Display XI | TD(32): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-061 | B11-026 | 156684000000000000000 |
-| TP-063 | Shop Showmanship XI | TL(31): linked share A becomes 21.15254237% | Own 2+ families; TP-062 | B11-027 | 162665000000000000000 |
-| TP-064 | Crowd Appeal XI | TL(32): linked share A becomes 21.45762712% | Own 2+ families; TP-063 | B11-028 | 168876000000000000000 |
-| TP-065 | Festival Calls XI | TD(33): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-064 | B11-029 | 175323000000000000000 |
-| TP-066 | Shop Reputation XI | TL(33): linked share A becomes 21.76271186% | Own 2+ families; TP-065 | B11-030 | 182017000000000000000 |
-| TC-21 | Practice Routine V | TC(21): total run tap-level discount becomes 18.375% | Own 1+ families; TC-20 | B11-031 | 188966000000000000000 |
-| TC-22 | Counter Training V | TC(22): total run tap-level discount becomes 19.25% | Own 1+ families; TC-21 | B11-032 | 196180000000000000000 |
-| GP-41 | Festival Footfall VI | GP(41): normal products and independent tap B x1.10, once | Own 1+ families; GP-40 | B11-033 | 203670000000000000000 |
-| GP-42 | Community Trust VI | GP(42): normal products and independent tap B x1.10, once | Own 1+ families; GP-41 | B11-034 | 211446000000000000000 |
-| GP-43 | Local Advertising VI | GP(43): normal products and independent tap B x1.10, once | Own 1+ families; GP-42 | B11-035 | 219518000000000000000 |
-| GP-44 | Shopfront Glow VI | GP(44): normal products and independent tap B x1.10, once | Own 1+ families; GP-43 | B11-036 | 227899000000000000000 |
-| UC-17 | Supplier Network V | UC(17): total run named-cash discount becomes 18.59375% | Own 1+ families; UC-16 | B11-037 | 236600000000000000000 |
-| SK-BO-P-07 | Larger Bulk Orders VII | SP(BO,7): 210 seconds of normal P | Own 3+ families; SK-BO-P-06 | B11-038 | 245633000000000000000 |
+| PP-BOX-33 | Celebration boxes: Regular Customers VI | PP(BOX,33): product profit x4; factor=4 | Own Celebration boxes | B11-001 | 7.993146300497194e+84 |
+| PP-PHU-34 | Phuljhari: Signature Collection VI | PP(PHU,34): product profit x8; factor=8 | Own Phuljhari | B11-002 | 1.204481723040374e+85 |
+| PP-ANA-34 | Anar Signature Breakthrough VI | PP(ANA,34): product profit x8; factor=8 | Own Anar | B11-003 | 1.815206742711991e+85 |
+| PP-CHA-34 | Chakri: Signature Collection VI | PP(CHA,34): product profit x8; factor=8 | Own Chakri | B11-004 | 2.735869685507747e+85 |
+| TP-061 | Sales Pitch XI | TD(61): tap profit x2.1608385; factor=2.1608385 |  | B11-005 | 4.123900212389189e+85 |
+| PC-PHU-09 | Phuljhari: Wholesale Deal III | PC(PHU,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Phuljhari | B11-006 | 6.216763098099799e+85 |
+| PP-ROC-34 | Rockets: Signature Collection VI | PP(ROC,34): product profit x8; factor=8 | Own Rockets | B11-007 | 9.372682760209776e+85 |
+| PP-SMC-34 | Small crackers: Signature Collection VI | PP(SMC,34): product profit x8; factor=8 | Own Small crackers | B11-008 | 1.413210796271947e+86 |
+| GP-41 | Festival Footfall VI | GP(41): global profit x2; factor=2 |  | B11-009 | 2.131048849365430e+86 |
+| SK-FR-P-06 | Stronger Rush VI | SP(FR,6): skill effect x3.25; factor=3.25 |  | B11-010 | 3.213832904468596e+86 |
+| TC-21 | Practice Routine V | TC(21): remaining cost x0.0307029062975785; factor=0.0307029062975785 |  | B11-011 | 4.847263292326885e+86 |
+| UC-17 | Upgrade Price Discount 17 | UC(17): remaining cost x0.6644907785588527; factor=0.6644907785588527 |  | B11-012 | 7.311615705375554e+86 |
+| PP-STR-34 | Cracker strings: Signature Collection VI | PP(STR,34): product profit x8; factor=8 | Own Cracker strings | B11-013 | 1.102994973420571e+87 |
+| PP-AER-34 | Aerial shots: Signature Collection VI | PP(AER,34): product profit x8; factor=8 | Own Aerial shots | B11-014 | 1.664091257382195e+87 |
+| PC-ANA-09 | Anar: Wholesale Deal III | PC(ANA,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Anar | B11-015 | 2.510869689754658e+87 |
+| TP-062 | Counter Display XI | TD(62): tap profit x2.1608385; factor=2.1608385 |  | B11-016 | 3.788913047371432e+87 |
+| PP-BOX-34 | Celebration boxes Signature Breakthrough VI | PP(BOX,34): product profit x8; factor=8 | Own Celebration boxes | B11-017 | 5.718057690175932e+87 |
+| PP-PHU-35 | Phuljhari: Celebration Specialist VI | PP(PHU,35): product profit x16; factor=16 | Own Phuljhari | B11-018 | 8.630299276127945e+87 |
+| PP-ANA-35 | Anar: Celebration Specialist VI | PP(ANA,35): product profit x16; factor=16 | Own Anar | B11-019 | 1.302706586932373e+88 |
+| PP-CHA-35 | Chakri: Celebration Specialist VI | PP(CHA,35): product profit x16; factor=16 | Own Chakri | B11-020 | 1.966576256819201e+88 |
+| PC-CHA-09 | Chakri: Wholesale Deal III | PC(CHA,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Chakri | B11-021 | 2.969056097695816e+88 |
+| PP-ROC-35 | Rockets Signature Breakthrough VI | PP(ROC,35): product profit x16; factor=16 | Own Rockets | B11-022 | 4.483007284453513e+88 |
+| GP-42 | Community Trust VI | GP(42): global profit x3; factor=3 |  | B11-023 | 6.769614142347507e+88 |
+| TP-063 | Shop Showmanship XI | TD(63): tap profit x4.52888237; factor=4.52888237 |  | B11-024 | 1.022355212134530e+89 |
+| PP-SMC-35 | Small crackers: Celebration Specialist VI | PP(SMC,35): product profit x16; factor=16 | Own Small crackers | B11-025 | 1.544127455483544e+89 |
+| PP-STR-35 | Cracker strings: Celebration Specialist VI | PP(STR,35): product profit x16; factor=16 | Own Cracker strings | B11-026 | 2.332426162019932e+89 |
+| SK-BO-C-05 | Bulk Order: Faster Recovery V | SC(BO,5): skill effect x0.8958333333333334; factor=0.8958333333333334 |  | B11-027 | 3.523514739884740e+89 |
+| PP-AER-35 | Aerial shots: Celebration Specialist VI | PP(AER,35): product profit x16; factor=16 | Own Aerial shots | B11-028 | 5.323382965796705e+89 |
+| PC-ROC-09 | Rockets: Wholesale Deal III | PC(ROC,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Rockets | B11-029 | 8.043457250806819e+89 |
+| PP-BOX-35 | Celebration boxes: Celebration Specialist VI | PP(BOX,35): product profit x16; factor=16 | Own Celebration boxes | B11-030 | 1.215461577820685e+90 |
+| TP-064 | Crowd Appeal XI | TD(64): tap profit x32; factor=32 |  | B11-031 | 1.836889963058812e+90 |
+| PP-PHU-36 | Phuljhari: Premium Range VI | PP(PHU,36): product profit x32; factor=32 | Own Phuljhari | B11-032 | 2.776313321052805e+90 |
+| PP-ANA-36 | Anar: Premium Range VI | PP(ANA,36): product profit x32; factor=32 | Own Anar | B11-033 | 4.196596770513556e+90 |
+| GP-43 | Local Advertising VI | GP(43): global profit x4; factor=4 |  | B11-034 | 6.344091479600098e+90 |
+| TC-22 | Counter Training V | TC(22): remaining cost x0.028942661247167514; factor=0.028942661247167514 |  | B11-035 | 9.591467527989590e+90 |
+| PP-CHA-36 | Chakri: Premium Range VI | PP(CHA,36): product profit x32; factor=32 | Own Chakri | B11-036 | 1.450254141530946e+91 |
+| PC-SMC-09 | Small crackers: Wholesale Deal III | PC(SMC,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Small crackers | B11-037 | 2.193040223629405e+91 |
+| PP-ROC-36 | Rockets: Premium Range VI | PP(ROC,36): product profit x32; factor=32 | Own Rockets | B11-038 | 3.316595520264682e+91 |
+| TP-065 | Festival Calls XI | TD(65): tap profit x5.72256985; factor=5.72256985 |  | B11-039 | 5.016280942817698e+91 |
+| PP-SMC-36 | Small crackers: Premium Range VI | PP(SMC,36): product profit x32; factor=32 | Own Small crackers | B11-040 | 7.587778122710920e+91 |
+| SK-FR-D-05 | Festival Rush: Longer Window V | SD(FR,5): skill effect x1.3125; factor=1.3125 |  | B11-041 | 1.147865026329931e+92 |
+| PP-STR-36 | Cracker strings Signature Breakthrough VI | PP(STR,36): product profit x32; factor=32 | Own Cracker strings | B11-042 | 1.736642615744556e+92 |
+| UC-18 | Upgrade Price Discount 18 | UC(18): remaining cost x0.6520101573976476; factor=0.6520101573976476 |  | B11-043 | 2.627686281462552e+92 |
+| PP-AER-36 | Aerial shots: Premium Range VI | PP(AER,36): product profit x32; factor=32 | Own Aerial shots | B11-044 | 3.976307870845345e+92 |
+| PC-STR-09 | Cracker strings: Wholesale Deal III | PC(STR,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Cracker strings | B11-045 | 6.017691524587971e+92 |
+| PP-BOX-36 | Celebration boxes: Premium Range VI | PP(BOX,36): product profit x32; factor=32 | Own Celebration boxes | B11-046 | 9.108005190653199e+92 |
+| PP-PHU-37 | Phuljhari Signature Breakthrough VII | PP(PHU,37): product profit x2; factor=2 | Own Phuljhari | B11-047 | 1.378669115966304e+93 |
+| GP-44 | Shopfront Glow VI | GP(44): global profit x5; factor=5 |  | B11-048 | 2.087085562519345e+93 |
+| TP-066 | Shop Reputation XI | TD(66): tap profit x2.5271444; factor=2.5271444 |  | B11-049 | 3.159831252633979e+93 |
+| PP-ANA-37 | Anar: Gift Packaging VII | PP(ANA,37): product profit x2; factor=2 | Own Anar | B11-050 | 4.784438274944343e+93 |
 
-## Band 12
+## Page 12
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-34 | Aerial shots: Signature Collection VI | PP(AER,34): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-33 | B12-001 | 1.90365e+21 |
-| PP-ANA-34 | Anar Signature Breakthrough VI | PP(ANA,34): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-33 | B12-002 | 1.95509e+21 |
-| PP-BOX-34 | Celebration boxes Signature Breakthrough VI | PP(BOX,34): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-33 | B12-003 | 2.00791e+21 |
-| PP-CHA-34 | Chakri: Signature Collection VI | PP(CHA,34): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-33 | B12-004 | 2.06216e+21 |
-| PP-PHU-34 | Phuljhari: Signature Collection VI | PP(PHU,34): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-33 | B12-005 | 2.11787e+21 |
-| PP-ROC-34 | Rockets: Signature Collection VI | PP(ROC,34): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-33 | B12-006 | 2.17509e+21 |
-| PP-SMC-34 | Small crackers: Signature Collection VI | PP(SMC,34): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-33 | B12-007 | 2.23386e+21 |
-| PP-STR-34 | Cracker strings: Signature Collection VI | PP(STR,34): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-33 | B12-008 | 2.29422e+21 |
-| PP-AER-35 | Aerial shots: Celebration Specialist VI | PP(AER,35): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-34 | B12-009 | 2.3562e+21 |
-| PP-ANA-35 | Anar: Celebration Specialist VI | PP(ANA,35): multiply family normal profit by x1.6 | Own Anar; PP-ANA-34 | B12-010 | 2.41986e+21 |
-| PP-BOX-35 | Celebration boxes: Celebration Specialist VI | PP(BOX,35): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-34 | B12-011 | 2.48524e+21 |
-| PP-CHA-35 | Chakri: Celebration Specialist VI | PP(CHA,35): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-34 | B12-012 | 2.55239e+21 |
-| PP-PHU-35 | Phuljhari: Celebration Specialist VI | PP(PHU,35): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-34 | B12-013 | 2.62135e+21 |
-| PP-ROC-35 | Rockets Signature Breakthrough VI | PP(ROC,35): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-34 | B12-014 | 2.69217e+21 |
-| PP-SMC-35 | Small crackers: Celebration Specialist VI | PP(SMC,35): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-34 | B12-015 | 2.76491e+21 |
-| PP-STR-35 | Cracker strings: Celebration Specialist VI | PP(STR,35): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-34 | B12-016 | 2.83961e+21 |
-| PP-AER-36 | Aerial shots: Premium Range VI | PP(AER,36): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-35 | B12-017 | 2.91633e+21 |
-| PP-ANA-36 | Anar: Premium Range VI | PP(ANA,36): multiply family normal profit by x1.6 | Own Anar; PP-ANA-35 | B12-018 | 2.99513e+21 |
-| PP-BOX-36 | Celebration boxes: Premium Range VI | PP(BOX,36): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-35 | B12-019 | 3.07605e+21 |
-| PP-CHA-36 | Chakri: Premium Range VI | PP(CHA,36): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-35 | B12-020 | 3.15916e+21 |
-| PP-PHU-36 | Phuljhari: Premium Range VI | PP(PHU,36): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-35 | B12-021 | 3.24451e+21 |
-| PP-ROC-36 | Rockets: Premium Range VI | PP(ROC,36): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-35 | B12-022 | 3.33217e+21 |
-| PP-SMC-36 | Small crackers: Premium Range VI | PP(SMC,36): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-35 | B12-023 | 3.4222e+21 |
-| PP-STR-36 | Cracker strings Signature Breakthrough VI | PP(STR,36): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-35 | B12-024 | 3.51466e+21 |
-| PC-AER-09 | Aerial shots: Wholesale Deal III | PC(AER,9): total run family-level discount becomes 19.6875% | Own Aerial shots; PC-AER-08 | B12-025 | 3.60962e+21 |
-| PC-ANA-09 | Anar: Wholesale Deal III | PC(ANA,9): total run family-level discount becomes 19.6875% | Own Anar; PC-ANA-08 | B12-026 | 3.70715e+21 |
-| PC-BOX-09 | Celebration boxes: Wholesale Deal III | PC(BOX,9): total run family-level discount becomes 19.6875% | Own Celebration boxes; PC-BOX-08 | B12-027 | 3.80731e+21 |
-| PC-CHA-09 | Chakri: Wholesale Deal III | PC(CHA,9): total run family-level discount becomes 19.6875% | Own Chakri; PC-CHA-08 | B12-028 | 3.91017e+21 |
-| PC-PHU-09 | Phuljhari: Wholesale Deal III | PC(PHU,9): total run family-level discount becomes 19.6875% | Own Phuljhari; PC-PHU-08 | B12-029 | 4.01582e+21 |
-| PC-ROC-09 | Rockets: Wholesale Deal III | PC(ROC,9): total run family-level discount becomes 19.6875% | Own Rockets; PC-ROC-08 | B12-030 | 4.12432e+21 |
-| PC-SMC-09 | Small crackers: Wholesale Deal III | PC(SMC,9): total run family-level discount becomes 19.6875% | Own Small crackers; PC-SMC-08 | B12-031 | 4.23575e+21 |
-| PC-STR-09 | Cracker strings: Wholesale Deal III | PC(STR,9): total run family-level discount becomes 19.6875% | Own Cracker strings; PC-STR-08 | B12-032 | 4.35019e+21 |
-| TP-067 | Sales Pitch XII | TD(34): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-066 | B12-033 | 4.46772e+21 |
-| TP-068 | Counter Display XII | TD(35): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-067 | B12-034 | 4.58843e+21 |
-| TP-069 | Shop Showmanship XII | TL(34): linked share A becomes 22.06779661% | Own 2+ families; TP-068 | B12-035 | 4.7124e+21 |
-| TP-070 | Crowd Appeal XII | TL(35): linked share A becomes 22.37288136% | Own 2+ families; TP-069 | B12-036 | 4.83972e+21 |
-| TP-071 | Festival Calls XII | TD(36): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-070 | B12-037 | 4.97048e+21 |
-| TP-072 | Shop Reputation XII | TL(36): linked share A becomes 22.6779661% | Own 2+ families; TP-071 | B12-038 | 5.10477e+21 |
-| TC-23 | Sales Coaching V | TC(23): total run tap-level discount becomes 20.125% | Own 1+ families; TC-22 | B12-039 | 5.2427e+21 |
-| TC-24 | Team Handbook V | TC(24): total run tap-level discount becomes 21% | Own 1+ families; TC-23 | B12-040 | 5.38434e+21 |
-| GP-45 | Delivery Reach VI | GP(45): normal products and independent tap B x1.10, once | Own 1+ families; GP-44 | B12-041 | 5.52982e+21 |
-| GP-46 | Celebration Demand VI | GP(46): normal products and independent tap B x1.10, once | Own 1+ families; GP-45 | B12-042 | 5.67922e+21 |
-| GP-47 | Brand Recognition VI | GP(47): normal products and independent tap B x1.10, once | Own 1+ families; GP-46 | B12-043 | 5.83266e+21 |
-| GP-48 | Customer Loyalty VI | GP(48): normal products and independent tap B x1.10, once | Own 1+ families; GP-47 | B12-044 | 5.99025e+21 |
-| UC-18 | Trade Association V | UC(18): total run named-cash discount becomes 19.6875% | Own 1+ families; UC-17 | B12-045 | 6.1521e+21 |
-| UC-19 | Procurement Office V | UC(19): total run named-cash discount becomes 20.78125% | Own 1+ families; UC-18 | B12-046 | 6.31831e+21 |
-| SK-FR-P-05 | Stronger Rush V | SP(FR,5): Rush product multiplier x3 | Own 1+ families; SK-FR-P-04 | B12-047 | 6.48902e+21 |
-| SK-HH-P-05 | More Helping Hands V | SP(HH,5): 8 auto taps/s | Own 2+ families; SK-HH-P-04 | B12-048 | 6.66434e+21 |
-| SK-FR-D-05 | Festival Rush: Longer Window V | SD(FR,5): cumulative run duration factor 1.3125 | SK-FR-P-01; SK-FR-D-04 | B12-049 | 6.8444e+21 |
-| SK-HH-D-05 | Helping Hands: Longer Window V | SD(HH,5): cumulative run duration factor 1.3125 | SK-HH-P-01; SK-HH-D-04 | B12-050 | 7.02932e+21 |
-| SK-FR-C-05 | Festival Rush: Faster Recovery V | SC(FR,5): cumulative run cooldown factor 0.84375 | SK-FR-P-01; SK-FR-C-04 | B12-051 | 7.21924e+21 |
-| SK-HH-C-05 | Helping Hands: Faster Recovery V | SC(HH,5): cumulative run cooldown factor 0.84375 | SK-HH-P-01; SK-HH-C-04 | B12-052 | 7.41429e+21 |
-| SK-BO-C-07 | Bulk Order: Faster Recovery VII | SC(BO,7): cumulative run cooldown factor 0.85416667 | SK-BO-P-01; SK-BO-C-06 | B12-053 | 7.61461e+21 |
+| SK-HH-P-06 | More Helping Hands VI | SP(HH,6): skill effect x10; factor=10 |  | B12-001 | 7.245051072612789e+93 |
+| PP-CHA-37 | Chakri: Gift Packaging VII | PP(CHA,37): product profit x2; factor=2 | Own Chakri | B12-002 | 1.097224195756693e+94 |
+| PP-ROC-37 | Rockets: Gift Packaging VII | PP(ROC,37): product profit x2; factor=2 | Own Rockets | B12-003 | 1.661853477360006e+94 |
+| PC-AER-09 | Aerial shots: Wholesale Deal III | PC(AER,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Aerial shots | B12-004 | 2.517291525653902e+94 |
+| PP-SMC-37 | Small crackers: Gift Packaging VII | PP(SMC,37): product profit x2; factor=2 | Own Small crackers | B12-005 | 3.813447105182810e+94 |
+| TP-067 | Sales Pitch XII | TD(67): tap profit x5.05428878; factor=5.05428878 |  | B12-006 | 5.777572039792071e+94 |
+| PP-STR-37 | Cracker strings: Gift Packaging VII | PP(STR,37): product profit x2; factor=2 | Own Cracker strings | B12-007 | 8.754199535216203e+94 |
+| PP-AER-37 | Aerial shots Signature Breakthrough VII | PP(AER,37): product profit x2; factor=2 | Own Aerial shots | B12-008 | 1.326572355284330e+95 |
+| GP-45 | Delivery Reach VI | GP(45): global profit x6; factor=6 |  | B12-009 | 2.010429617174413e+95 |
+| PP-BOX-37 | Celebration boxes: Gift Packaging VII | PP(BOX,37): product profit x2; factor=2 | Own Celebration boxes | B12-010 | 3.047124744040106e+95 |
+| TC-23 | Sales Coaching V | TC(23): remaining cost x0.027283333764867686; factor=0.027283333764867686 |  | B12-011 | 4.618862391283050e+95 |
+| PC-BOX-09 | Celebration boxes: Wholesale Deal III | PC(BOX,9): remaining cost x0.02928644564625237; factor=0.02928644564625237 | Own Celebration boxes | B12-012 | 7.002018321367282e+95 |
+| PP-PHU-38 | Phuljhari: Festival Display VII | PP(PHU,38): product profit x2; factor=2 | Own Phuljhari | B12-013 | 1.061585288544410e+96 |
+| SK-FR-C-06 | Festival Rush: Faster Recovery VI | SC(FR,6): skill effect x0.8125; factor=0.8125 |  | B12-014 | 1.609644498332726e+96 |
+| PP-ANA-38 | Anar: Festival Display VII | PP(ANA,38): product profit x2; factor=2 | Own Anar | B12-015 | 2.440891511469671e+96 |
+| TP-068 | Counter Display XII | TD(68): tap profit x2; factor=2 |  | B12-016 | 3.701778375203089e+96 |
+| PP-CHA-38 | Chakri Signature Breakthrough VII | PP(CHA,38): product profit x2; factor=2 | Own Chakri | B12-017 | 5.614560687992620e+96 |
+| PP-ROC-38 | Rockets: Festival Display VII | PP(ROC,38): product profit x2; factor=2 | Own Rockets | B12-018 | 8.516567176774345e+96 |
+| PC-PHU-10 | Phuljhari: Trusted Supplier III | PC(PHU,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Phuljhari | B12-019 | 1.291983007432066e+97 |
+| PP-SMC-38 | Small crackers: Festival Display VII | PP(SMC,38): product profit x2; factor=2 | Own Small crackers | B12-020 | 1.960164215461597e+97 |
+| PP-STR-38 | Cracker strings: Festival Display VII | PP(STR,38): product profit x2; factor=2 | Own Cracker strings | B12-021 | 2.974209392119384e+97 |
+| GP-46 | Celebration Demand VI | GP(46): global profit x2; factor=2 |  | B12-022 | 4.513298464878879e+97 |
+| TP-069 | Shop Showmanship XII | TD(69): tap profit x2; factor=2 |  | B12-023 | 6.849517782847424e+97 |
+| UC-19 | Upgrade Price Discount 19 | UC(19): remaining cost x0.6397639501810682; factor=0.6397639501810682 |  | B12-024 | 1.039607418978338e+98 |
+| PP-AER-38 | Aerial shots: Festival Display VII | PP(AER,38): product profit x2; factor=2 | Own Aerial shots | B12-025 | 1.578055132675521e+98 |
+| PP-BOX-38 | Celebration boxes: Festival Display VII | PP(BOX,38): product profit x2; factor=2 | Own Celebration boxes | B12-026 | 2.395622611526727e+98 |
+| PC-ANA-10 | Anar: Trusted Supplier III | PC(ANA,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Anar | B12-027 | 3.637123638761893e+98 |
+| PP-PHU-39 | Phuljhari: Regular Customers VII | PP(PHU,39): product profit x4; factor=4 | Own Phuljhari | B12-028 | 5.522569052807289e+98 |
+| PP-ANA-39 | Anar: Regular Customers VII | PP(ANA,39): product profit x4; factor=4 | Own Anar | B12-029 | 8.386247486159476e+98 |
+| TP-070 | Crowd Appeal XII | TD(70): tap profit x2.20600226; factor=2.20600226 |  | B12-030 | 1.273613412397401e+99 |
+| PP-CHA-39 | Chakri: Regular Customers VII | PP(CHA,39): product profit x4; factor=4 | Own Chakri | B12-031 | 1.934421019817322e+99 |
+| PP-ROC-39 | Rockets: Regular Customers VII | PP(ROC,39): product profit x4; factor=4 | Own Rockets | B12-032 | 2.938378995275712e+99 |
+| PC-CHA-10 | Chakri: Trusted Supplier III | PC(CHA,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Chakri | B12-033 | 4.463834130057307e+99 |
+| GP-47 | Brand Recognition VI | GP(47): global profit x3; factor=3 |  | B12-034 | 6.781905211632607e+99 |
+| PP-SMC-39 | Small crackers Signature Breakthrough VII | PP(SMC,39): product profit x4; factor=4 | Own Small crackers | B12-035 | 1.030478208041868e+100 |
+| TC-24 | Team Handbook V | TC(24): remaining cost x0.025719138090593452; factor=0.025719138090593452 |  | B12-036 | 1.565919159812202e+100 |
+| PP-STR-39 | Cracker strings: Regular Customers VII | PP(STR,39): product profit x4; factor=4 | Own Cracker strings | B12-037 | 2.379815524938896e+100 |
+| SK-BO-P-06 | Larger Bulk Orders VI | SP(BO,6): skill effect x195; factor=195 |  | B12-038 | 3.617101354026145e+100 |
+| PP-AER-39 | Aerial shots: Regular Customers VII | PP(AER,39): product profit x4; factor=4 | Own Aerial shots | B12-039 | 5.498212141158810e+100 |
+| TP-071 | Festival Calls XII | TD(71): tap profit x2; factor=2 |  | B12-040 | 8.358449757114369e+100 |
+| PP-BOX-39 | Celebration boxes: Regular Customers VII | PP(BOX,39): product profit x4; factor=4 | Own Celebration boxes | B12-041 | 1.270788890387298e+101 |
+| PC-ROC-10 | Rockets: Trusted Supplier III | PC(ROC,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Rockets | B12-042 | 1.932255321714653e+101 |
+| PP-PHU-40 | Phuljhari: Signature Collection VII | PP(PHU,40): product profit x8; factor=8 | Own Phuljhari | B12-043 | 2.938319681790985e+101 |
+| PP-ANA-40 | Anar Signature Breakthrough VII | PP(ANA,40): product profit x8; factor=8 | Own Anar | B12-044 | 4.468656844046319e+101 |
+| PP-CHA-40 | Chakri: Signature Collection VII | PP(CHA,40): product profit x8; factor=8 | Own Chakri | B12-045 | 6.796704627767606e+101 |
+| GP-48 | Customer Loyalty VI | GP(48): global profit x4; factor=4 |  | B12-046 | 1.033863533491816e+102 |
+| TP-072 | Shop Reputation XII | TD(72): tap profit x2.23124949; factor=2.23124949 |  | B12-047 | 1.572792635775317e+102 |
+| SK-HH-C-06 | Helping Hands: Faster Recovery VI | SC(HH,6): skill effect x0.8125; factor=0.8125 |  | B12-048 | 2.392892267734650e+102 |
+| PP-ROC-40 | Rockets: Signature Collection VII | PP(ROC,40): product profit x8; factor=8 | Own Rockets | B12-049 | 3.640979679519331e+102 |
+| PC-SMC-10 | Small crackers: Trusted Supplier III | PC(SMC,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Small crackers | B12-050 | 5.540599944690331e+102 |
 
-## Band 13
+## Page 13
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-37 | Aerial shots Signature Breakthrough VII | PP(AER,37): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-36 | B13-001 | 5.90132e+22 |
-| PP-ANA-37 | Anar: Gift Packaging VII | PP(ANA,37): multiply family normal profit by x1.6 | Own Anar; PP-ANA-36 | B13-002 | 6.05478e+22 |
-| PP-BOX-37 | Celebration boxes: Gift Packaging VII | PP(BOX,37): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-36 | B13-003 | 6.21224e+22 |
-| PP-CHA-37 | Chakri: Gift Packaging VII | PP(CHA,37): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-36 | B13-004 | 6.37378e+22 |
-| PP-PHU-37 | Phuljhari Signature Breakthrough VII | PP(PHU,37): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-36 | B13-005 | 6.53953e+22 |
-| PP-ROC-37 | Rockets: Gift Packaging VII | PP(ROC,37): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-36 | B13-006 | 6.70959e+22 |
-| PP-SMC-37 | Small crackers: Gift Packaging VII | PP(SMC,37): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-36 | B13-007 | 6.88407e+22 |
-| PP-STR-37 | Cracker strings: Gift Packaging VII | PP(STR,37): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-36 | B13-008 | 7.06308e+22 |
-| PP-AER-38 | Aerial shots: Festival Display VII | PP(AER,38): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-37 | B13-009 | 7.24675e+22 |
-| PP-ANA-38 | Anar: Festival Display VII | PP(ANA,38): multiply family normal profit by x1.6 | Own Anar; PP-ANA-37 | B13-010 | 7.4352e+22 |
-| PP-BOX-38 | Celebration boxes: Festival Display VII | PP(BOX,38): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-37 | B13-011 | 7.62855e+22 |
-| PP-CHA-38 | Chakri Signature Breakthrough VII | PP(CHA,38): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-37 | B13-012 | 7.82693e+22 |
-| PP-PHU-38 | Phuljhari: Festival Display VII | PP(PHU,38): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-37 | B13-013 | 8.03046e+22 |
-| PP-ROC-38 | Rockets: Festival Display VII | PP(ROC,38): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-37 | B13-014 | 8.23929e+22 |
-| PP-SMC-38 | Small crackers: Festival Display VII | PP(SMC,38): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-37 | B13-015 | 8.45355e+22 |
-| PP-STR-38 | Cracker strings: Festival Display VII | PP(STR,38): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-37 | B13-016 | 8.67338e+22 |
-| PP-AER-39 | Aerial shots: Regular Customers VII | PP(AER,39): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-38 | B13-017 | 8.89893e+22 |
-| PP-ANA-39 | Anar: Regular Customers VII | PP(ANA,39): multiply family normal profit by x1.6 | Own Anar; PP-ANA-38 | B13-018 | 9.13034e+22 |
-| PP-BOX-39 | Celebration boxes: Regular Customers VII | PP(BOX,39): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-38 | B13-019 | 9.36777e+22 |
-| PP-CHA-39 | Chakri: Regular Customers VII | PP(CHA,39): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-38 | B13-020 | 9.61137e+22 |
-| PP-PHU-39 | Phuljhari: Regular Customers VII | PP(PHU,39): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-38 | B13-021 | 9.86131e+22 |
-| PP-ROC-39 | Rockets: Regular Customers VII | PP(ROC,39): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-38 | B13-022 | 1.01177e+23 |
-| PP-SMC-39 | Small crackers Signature Breakthrough VII | PP(SMC,39): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-38 | B13-023 | 1.03809e+23 |
-| PP-STR-39 | Cracker strings: Regular Customers VII | PP(STR,39): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-38 | B13-024 | 1.06508e+23 |
-| PC-AER-10 | Aerial shots: Trusted Supplier III | PC(AER,10): total run family-level discount becomes 21.875% | Own Aerial shots; PC-AER-09 | B13-025 | 1.09278e+23 |
-| PC-ANA-10 | Anar: Trusted Supplier III | PC(ANA,10): total run family-level discount becomes 21.875% | Own Anar; PC-ANA-09 | B13-026 | 1.12119e+23 |
-| PC-BOX-10 | Celebration boxes: Trusted Supplier III | PC(BOX,10): total run family-level discount becomes 21.875% | Own Celebration boxes; PC-BOX-09 | B13-027 | 1.15035e+23 |
-| PC-CHA-10 | Chakri: Trusted Supplier III | PC(CHA,10): total run family-level discount becomes 21.875% | Own Chakri; PC-CHA-09 | B13-028 | 1.18026e+23 |
-| PC-PHU-10 | Phuljhari: Trusted Supplier III | PC(PHU,10): total run family-level discount becomes 21.875% | Own Phuljhari; PC-PHU-09 | B13-029 | 1.21096e+23 |
-| PC-ROC-10 | Rockets: Trusted Supplier III | PC(ROC,10): total run family-level discount becomes 21.875% | Own Rockets; PC-ROC-09 | B13-030 | 1.24245e+23 |
-| PC-SMC-10 | Small crackers: Trusted Supplier III | PC(SMC,10): total run family-level discount becomes 21.875% | Own Small crackers; PC-SMC-09 | B13-031 | 1.27476e+23 |
-| PC-STR-10 | Cracker strings: Trusted Supplier III | PC(STR,10): total run family-level discount becomes 21.875% | Own Cracker strings; PC-STR-09 | B13-032 | 1.30791e+23 |
-| TP-073 | Sales Pitch XIII | TD(37): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-072 | B13-033 | 1.34192e+23 |
-| TP-074 | Counter Display XIII | TD(38): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-073 | B13-034 | 1.37681e+23 |
-| TP-075 | Shop Showmanship XIII | TL(37): linked share A becomes 22.98305085% | Own 2+ families; TP-074 | B13-035 | 1.41262e+23 |
-| TP-076 | Crowd Appeal XIII | TL(38): linked share A becomes 23.28813559% | Own 2+ families; TP-075 | B13-036 | 1.44935e+23 |
-| TP-077 | Festival Calls XIII | TD(39): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-076 | B13-037 | 1.48704e+23 |
-| TP-078 | Shop Reputation XIII | TL(39): linked share A becomes 23.59322034% | Own 2+ families; TP-077 | B13-038 | 1.52571e+23 |
-| TC-25 | Customer Insight V | TC(25): total run tap-level discount becomes 21.875% | Own 1+ families; TC-24 | B13-039 | 1.56539e+23 |
-| TC-26 | Practice Routine VI | TC(26): total run tap-level discount becomes 22.75% | Own 1+ families; TC-25 | B13-040 | 1.60609e+23 |
-| GP-49 | Festival Footfall VII | GP(49): normal products and independent tap B x1.10, once | Own 1+ families; GP-48 | B13-041 | 1.64786e+23 |
-| GP-50 | Community Trust VII | GP(50): normal products and independent tap B x1.10, once | Own 1+ families; GP-49 | B13-042 | 1.69071e+23 |
-| GP-51 | Local Advertising VII | GP(51): normal products and independent tap B x1.10, once | Own 1+ families; GP-50 | B13-043 | 1.73468e+23 |
-| GP-52 | Shopfront Glow VII | GP(52): normal products and independent tap B x1.10, once | Own 1+ families; GP-51 | B13-044 | 1.77979e+23 |
-| UC-20 | Distributor Alliance V | UC(20): total run named-cash discount becomes 21.875% | Own 1+ families; UC-19 | B13-045 | 1.82607e+23 |
-| SK-BO-P-08 | Larger Bulk Orders VIII | SP(BO,8): 225 seconds of normal P | Own 3+ families; SK-BO-P-07 | B13-046 | 1.87355e+23 |
-| SK-BO-C-08 | Bulk Order: Faster Recovery VIII | SC(BO,8): cumulative run cooldown factor 0.83333333 | SK-BO-P-01; SK-BO-C-07 | B13-047 | 1.92227e+23 |
-| XL-AER-BOX-03 | Aerial shots / Celebration boxes: Display Partnership III | XL(AER,BOX,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-AER-BOX-02 | B13-048 | 1.97226e+23 |
-| XL-ANA-CHA-03 | Anar / Chakri: Display Partnership III | XL(ANA,CHA,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-ANA-CHA-02 | B13-049 | 2.02355e+23 |
-| XL-BOX-PHU-03 | Celebration boxes / Phuljhari: Display Partnership III | XL(BOX,PHU,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-BOX-PHU-02 | B13-050 | 2.07617e+23 |
-| XL-CHA-ROC-03 | Chakri / Rockets: Display Partnership III | XL(CHA,ROC,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-CHA-ROC-02 | B13-051 | 2.13016e+23 |
-| XL-PHU-ANA-03 | Phuljhari / Anar: Display Partnership III | XL(PHU,ANA,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-PHU-ANA-02 | B13-052 | 2.18555e+23 |
-| XL-ROC-SMC-03 | Rockets / Small crackers: Display Partnership III | XL(ROC,SMC,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-ROC-SMC-02 | B13-053 | 2.24239e+23 |
-| XL-SMC-STR-03 | Small crackers / Cracker strings: Display Partnership III | XL(SMC,STR,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-SMC-STR-02 | B13-054 | 2.3007e+23 |
-| XL-STR-AER-03 | Cracker strings / Aerial shots: Display Partnership III | XL(STR,AER,3): beneficiary normal product profit x1.50 | Own both families; Source level >= 200; XL-STR-AER-02 | B13-055 | 2.36053e+23 |
+| PP-SMC-40 | Small crackers: Signature Collection VII | PP(SMC,40): product profit x8; factor=8 | Own Small crackers | B13-001 | 8.432158492416658e+102 |
+| PP-STR-40 | Cracker strings: Signature Collection VII | PP(STR,40): product profit x8; factor=8 | Own Cracker strings | B13-002 | 1.283406274343587e+103 |
+| SK-HH-D-05 | Helping Hands: Longer Window V | SD(HH,5): skill effect x1.3125; factor=1.3125 |  | B13-003 | 1.953588026017885e+103 |
+| PP-AER-40 | Aerial shots: Signature Collection VII | PP(AER,40): product profit x8; factor=8 | Own Aerial shots | B13-004 | 2.974029285506768e+103 |
+| UC-20 | Upgrade Price Discount 20 | UC(20): remaining cost x0.6277477540916008; factor=0.6277477540916008 |  | B13-005 | 4.527942740480344e+103 |
+| TP-073 | Sales Pitch XIII | TD(73): tap profit x6.51684456; factor=6.51684456 |  | B13-006 | 6.894456584557502e+103 |
+| PP-BOX-40 | Celebration boxes Signature Breakthrough VII | PP(BOX,40): product profit x8; factor=8 | Own Celebration boxes | B13-007 | 1.049887065977796e+104 |
+| PC-STR-10 | Cracker strings: Trusted Supplier III | PC(STR,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Cracker strings | B13-008 | 1.598926716825280e+104 |
+| PP-PHU-41 | Phuljhari: Celebration Specialist VII | PP(PHU,41): product profit x16; factor=16 | Own Phuljhari | B13-009 | 2.435330806599025e+104 |
+| GP-49 | Festival Footfall VII | GP(49): global profit x5; factor=5 |  | B13-010 | 3.709631710086069e+104 |
+| PP-ANA-41 | Anar: Celebration Specialist VII | PP(ANA,41): product profit x16; factor=16 | Own Anar | B13-011 | 5.651283017787623e+104 |
+| TC-25 | Customer Insight V | TC(25): remaining cost x0.024244620170823284; factor=0.024244620170823284 |  | B13-012 | 8.610071323241644e+104 |
+| PP-CHA-41 | Chakri: Celebration Specialist VII | PP(CHA,41): product profit x16; factor=16 | Own Chakri | B13-013 | 1.311927604075849e+105 |
+| PP-ROC-41 | Rockets Signature Breakthrough VII | PP(ROC,41): product profit x16; factor=16 | Own Rockets | B13-014 | 1.999200816954411e+105 |
+| TP-074 | Counter Display XIII | TD(74): tap profit x5.47672465; factor=5.47672465 |  | B13-015 | 3.046817213440872e+105 |
+| PC-AER-10 | Aerial shots: Trusted Supplier III | PC(AER,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Aerial shots | B13-016 | 4.643867394068715e+105 |
+| PP-SMC-41 | Small crackers: Celebration Specialist VII | PP(SMC,41): product profit x16; factor=16 | Own Small crackers | B13-017 | 7.078751208578549e+105 |
+| PP-STR-41 | Cracker strings: Celebration Specialist VII | PP(STR,41): product profit x16; factor=16 | Own Cracker strings | B13-018 | 1.079137829374250e+106 |
+| PP-AER-41 | Aerial shots: Celebration Specialist VII | PP(AER,41): product profit x16; factor=16 | Own Aerial shots | B13-019 | 1.645283016930335e+106 |
+| PP-BOX-41 | Celebration boxes: Celebration Specialist VII | PP(BOX,41): product profit x16; factor=16 | Own Celebration boxes | B13-020 | 2.508694293967083e+106 |
+| GP-50 | Community Trust VII | GP(50): global profit x6; factor=6 |  | B13-021 | 3.825588899896970e+106 |
+| TP-075 | Shop Showmanship XIII | TD(75): tap profit x6.67227624; factor=6.67227624 |  | B13-022 | 5.834347394353589e+106 |
+| PP-PHU-42 | Phuljhari: Premium Range VII | PP(PHU,42): product profit x32; factor=32 | Own Phuljhari | B13-023 | 8.898764226880733e+106 |
+| PC-BOX-10 | Celebration boxes: Trusted Supplier III | PC(BOX,10): remaining cost x0.0251188643150958; factor=0.0251188643150958 | Own Celebration boxes | B13-024 | 1.357408440208573e+107 |
+| PP-ANA-42 | Anar: Premium Range VII | PP(ANA,42): product profit x32; factor=32 | Own Anar | B13-025 | 2.070784090405950e+107 |
+| PP-CHA-42 | Chakri: Premium Range VII | PP(CHA,42): product profit x32; factor=32 | Own Chakri | B13-026 | 3.159384793965218e+107 |
+| SK-FR-P-07 | Stronger Rush VII | SP(FR,7): skill effect x3.5; factor=3.5 |  | B13-027 | 4.820739421230186e+107 |
+| PP-ROC-42 | Rockets: Premium Range VII | PP(ROC,42): product profit x32; factor=32 | Own Rockets | B13-028 | 7.356448850692591e+107 |
+| PP-SMC-42 | Small crackers: Premium Range VII | PP(SMC,42): product profit x32; factor=32 | Own Small crackers | B13-029 | 1.122706435014249e+108 |
+| TP-076 | Crowd Appeal XIII | TD(76): tap profit x19.67007304; factor=19.67007304 |  | B13-030 | 1.713592819149751e+108 |
+| PC-PHU-11 | Phuljhari: Bulk Procurement III | PC(PHU,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Phuljhari | B13-031 | 2.615727418113285e+108 |
+| PP-STR-42 | Cracker strings Signature Breakthrough VII | PP(STR,42): product profit x32; factor=32 | Own Cracker strings | B13-032 | 3.993197267521754e+108 |
+| SK-BO-C-06 | Bulk Order: Faster Recovery VI | SC(BO,6): skill effect x0.875; factor=0.875 |  | B13-033 | 6.096667010899015e+108 |
+| PP-AER-42 | Aerial shots: Premium Range VII | PP(AER,42): product profit x32; factor=32 | Own Aerial shots | B13-034 | 9.309098266906257e+108 |
+| GP-51 | Local Advertising VII | GP(51): global profit x2; factor=2 |  | B13-035 | 1.421563236967777e+109 |
+| TC-26 | Practice Routine VI | TC(26): remaining cost x0.022854638641349904; factor=0.022854638641349904 |  | B13-036 | 2.171041784134257e+109 |
+| PP-BOX-42 | Celebration boxes: Premium Range VII | PP(BOX,42): product profit x32; factor=32 | Own Celebration boxes | B13-037 | 3.315993036175055e+109 |
+| UC-21 | Upgrade Price Discount 21 | UC(21): remaining cost x0.6159572490064791; factor=0.6159572490064791 |  | B13-038 | 5.065268449593287e+109 |
+| PP-PHU-43 | Phuljhari Signature Breakthrough VIII | PP(PHU,43): product profit x2; factor=2 | Own Phuljhari | B13-039 | 7.738107411340650e+109 |
+| PC-ANA-11 | Anar: Bulk Procurement III | PC(ANA,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Anar | B13-040 | 1.182253123115080e+110 |
+| TP-077 | Festival Calls XIII | TD(77): tap profit x2.45875913; factor=2.45875913 |  | B13-041 | 1.806465266041920e+110 |
+| PP-ANA-43 | Anar: Gift Packaging VIII | PP(ANA,43): product profit x2; factor=2 | Own Anar | B13-042 | 2.760528216503841e+110 |
+| PP-CHA-43 | Chakri: Gift Packaging VIII | PP(CHA,43): product profit x2; factor=2 | Own Chakri | B13-043 | 4.218889932226524e+110 |
+| PP-ROC-43 | Rockets: Gift Packaging VIII | PP(ROC,43): product profit x2; factor=2 | Own Rockets | B13-044 | 6.448335556232760e+110 |
+| PP-SMC-43 | Small crackers: Gift Packaging VIII | PP(SMC,43): product profit x2; factor=2 | Own Small crackers | B13-045 | 9.856903219773503e+110 |
+| PC-CHA-11 | Chakri: Bulk Procurement III | PC(CHA,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Chakri | B13-046 | 1.506873464889386e+111 |
+| GP-52 | Shopfront Glow VII | GP(52): global profit x3; factor=3 |  | B13-047 | 2.303862244228841e+111 |
+| TP-078 | Shop Reputation XIII | TD(78): tap profit x2; factor=2 |  | B13-048 | 3.522732444848322e+111 |
+| PP-STR-43 | Cracker strings: Gift Packaging VIII | PP(STR,43): product profit x2; factor=2 | Own Cracker strings | B13-049 | 5.386990882599294e+111 |
+| PP-AER-43 | Aerial shots Signature Breakthrough VIII | PP(AER,43): product profit x2; factor=2 | Own Aerial shots | B13-050 | 8.238653754084947e+111 |
 
-## Band 14
+## Page 14
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-40 | Aerial shots: Signature Collection VII | PP(AER,40): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-39 | B14-001 | 1.82941e+24 |
-| PP-ANA-40 | Anar Signature Breakthrough VII | PP(ANA,40): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-39 | B14-002 | 1.88191e+24 |
-| PP-BOX-40 | Celebration boxes Signature Breakthrough VII | PP(BOX,40): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-39 | B14-003 | 1.93591e+24 |
-| PP-CHA-40 | Chakri: Signature Collection VII | PP(CHA,40): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-39 | B14-004 | 1.99146e+24 |
-| PP-PHU-40 | Phuljhari: Signature Collection VII | PP(PHU,40): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-39 | B14-005 | 2.04861e+24 |
-| PP-ROC-40 | Rockets: Signature Collection VII | PP(ROC,40): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-39 | B14-006 | 2.10739e+24 |
-| PP-SMC-40 | Small crackers: Signature Collection VII | PP(SMC,40): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-39 | B14-007 | 2.16787e+24 |
-| PP-STR-40 | Cracker strings: Signature Collection VII | PP(STR,40): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-39 | B14-008 | 2.23008e+24 |
-| PP-AER-41 | Aerial shots: Celebration Specialist VII | PP(AER,41): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-40 | B14-009 | 2.29407e+24 |
-| PP-ANA-41 | Anar: Celebration Specialist VII | PP(ANA,41): multiply family normal profit by x1.6 | Own Anar; PP-ANA-40 | B14-010 | 2.3599e+24 |
-| PP-BOX-41 | Celebration boxes: Celebration Specialist VII | PP(BOX,41): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-40 | B14-011 | 2.42762e+24 |
-| PP-CHA-41 | Chakri: Celebration Specialist VII | PP(CHA,41): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-40 | B14-012 | 2.49728e+24 |
-| PP-PHU-41 | Phuljhari: Celebration Specialist VII | PP(PHU,41): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-40 | B14-013 | 2.56894e+24 |
-| PP-ROC-41 | Rockets Signature Breakthrough VII | PP(ROC,41): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-40 | B14-014 | 2.64266e+24 |
-| PP-SMC-41 | Small crackers: Celebration Specialist VII | PP(SMC,41): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-40 | B14-015 | 2.71849e+24 |
-| PP-STR-41 | Cracker strings: Celebration Specialist VII | PP(STR,41): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-40 | B14-016 | 2.7965e+24 |
-| PP-AER-42 | Aerial shots: Premium Range VII | PP(AER,42): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-41 | B14-017 | 2.87675e+24 |
-| PP-ANA-42 | Anar: Premium Range VII | PP(ANA,42): multiply family normal profit by x1.6 | Own Anar; PP-ANA-41 | B14-018 | 2.9593e+24 |
-| PP-BOX-42 | Celebration boxes: Premium Range VII | PP(BOX,42): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-41 | B14-019 | 3.04422e+24 |
-| PP-CHA-42 | Chakri: Premium Range VII | PP(CHA,42): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-41 | B14-020 | 3.13158e+24 |
-| PP-PHU-42 | Phuljhari: Premium Range VII | PP(PHU,42): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-41 | B14-021 | 3.22144e+24 |
-| PP-ROC-42 | Rockets: Premium Range VII | PP(ROC,42): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-41 | B14-022 | 3.31388e+24 |
-| PP-SMC-42 | Small crackers: Premium Range VII | PP(SMC,42): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-41 | B14-023 | 3.40897e+24 |
-| PP-STR-42 | Cracker strings Signature Breakthrough VII | PP(STR,42): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-41 | B14-024 | 3.5068e+24 |
-| PC-AER-11 | Aerial shots: Bulk Procurement III | PC(AER,11): total run family-level discount becomes 24.0625% | Own Aerial shots; PC-AER-10 | B14-025 | 3.60743e+24 |
-| PC-ANA-11 | Anar: Bulk Procurement III | PC(ANA,11): total run family-level discount becomes 24.0625% | Own Anar; PC-ANA-10 | B14-026 | 3.71095e+24 |
-| PC-BOX-11 | Celebration boxes: Bulk Procurement III | PC(BOX,11): total run family-level discount becomes 24.0625% | Own Celebration boxes; PC-BOX-10 | B14-027 | 3.81743e+24 |
-| PC-CHA-11 | Chakri: Bulk Procurement III | PC(CHA,11): total run family-level discount becomes 24.0625% | Own Chakri; PC-CHA-10 | B14-028 | 3.92698e+24 |
-| PC-PHU-11 | Phuljhari: Bulk Procurement III | PC(PHU,11): total run family-level discount becomes 24.0625% | Own Phuljhari; PC-PHU-10 | B14-029 | 4.03967e+24 |
-| PC-ROC-11 | Rockets: Bulk Procurement III | PC(ROC,11): total run family-level discount becomes 24.0625% | Own Rockets; PC-ROC-10 | B14-030 | 4.15559e+24 |
-| PC-SMC-11 | Small crackers: Bulk Procurement III | PC(SMC,11): total run family-level discount becomes 24.0625% | Own Small crackers; PC-SMC-10 | B14-031 | 4.27483e+24 |
-| PC-STR-11 | Cracker strings: Bulk Procurement III | PC(STR,11): total run family-level discount becomes 24.0625% | Own Cracker strings; PC-STR-10 | B14-032 | 4.3975e+24 |
-| TP-079 | Sales Pitch XIV | TD(40): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-078 | B14-033 | 4.52369e+24 |
-| TP-080 | Counter Display XIV | TD(41): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-079 | B14-034 | 4.6535e+24 |
-| TP-081 | Shop Showmanship XIV | TL(40): linked share A becomes 23.89830508% | Own 2+ families; TP-080 | B14-035 | 4.78704e+24 |
-| TP-082 | Crowd Appeal XIV | TL(41): linked share A becomes 24.20338983% | Own 2+ families; TP-081 | B14-036 | 4.92441e+24 |
-| TP-083 | Festival Calls XIV | TD(42): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-082 | B14-037 | 5.06572e+24 |
-| TP-084 | Shop Reputation XIV | TL(42): linked share A becomes 24.50847458% | Own 2+ families; TP-083 | B14-038 | 5.21108e+24 |
-| TC-27 | Counter Training VI | TC(27): total run tap-level discount becomes 23.625% | Own 1+ families; TC-26 | B14-039 | 5.36062e+24 |
-| TC-28 | Sales Coaching VI | TC(28): total run tap-level discount becomes 24.5% | Own 1+ families; TC-27 | B14-040 | 5.51444e+24 |
-| GP-53 | Delivery Reach VII | GP(53): normal products and independent tap B x1.10, once | Own 1+ families; GP-52 | B14-041 | 5.67269e+24 |
-| GP-54 | Celebration Demand VII | GP(54): normal products and independent tap B x1.10, once | Own 1+ families; GP-53 | B14-042 | 5.83547e+24 |
-| GP-55 | Brand Recognition VII | GP(55): normal products and independent tap B x1.10, once | Own 1+ families; GP-54 | B14-043 | 6.00292e+24 |
-| GP-56 | Customer Loyalty VII | GP(56): normal products and independent tap B x1.10, once | Own 1+ families; GP-55 | B14-044 | 6.17518e+24 |
-| UC-21 | Supplier Network VI | UC(21): total run named-cash discount becomes 22.96875% | Own 1+ families; UC-20 | B14-045 | 6.35238e+24 |
-| UC-22 | Trade Association VI | UC(22): total run named-cash discount becomes 24.0625% | Own 1+ families; UC-21 | B14-046 | 6.53467e+24 |
-| PF-MIX-03 | Celebration Mix: Portfolio Milestone III | PF(MIX,3): each listed family's normal profit x1.30 | BOX+CHA levels >= 200; PF-MIX-02 (every listed family) | B14-047 | 6.72218e+24 |
-| PF-RHYTHM-03 | Sound and Rhythm: Portfolio Milestone III | PF(RHYTHM,3): each listed family's normal profit x1.30 | SMC+STR levels >= 200; PF-RHYTHM-02 (every listed family) | B14-048 | 6.91508e+24 |
-| PF-SKY-03 | Skyline Collection: Portfolio Milestone III | PF(SKY,3): each listed family's normal profit x1.30 | ROC+AER levels >= 200; PF-SKY-02 (every listed family) | B14-049 | 7.11351e+24 |
-| PF-STREET-03 | Street Favourites: Portfolio Milestone III | PF(STREET,3): each listed family's normal profit x1.30 | PHU+ANA+CHA levels >= 200; PF-STREET-02 (every listed family) | B14-050 | 7.31764e+24 |
+| PP-BOX-43 | Celebration boxes: Gift Packaging VIII | PP(BOX,43): product profit x2; factor=2 | Own Celebration boxes | B14-001 | 1.260113578063165e+112 |
+| PP-PHU-44 | Phuljhari: Festival Display VIII | PP(PHU,44): product profit x2; factor=2 | Own Phuljhari | B14-002 | 1.927554031985353e+112 |
+| PC-ROC-11 | Rockets: Bulk Procurement III | PC(ROC,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Rockets | B14-003 | 2.948810469106227e+112 |
+| PP-ANA-44 | Anar: Festival Display VIII | PP(ANA,44): product profit x2; factor=2 | Own Anar | B14-004 | 4.511600001972596e+112 |
+| TP-079 | Sales Pitch XIV | TD(79): tap profit x2; factor=2 |  | B14-005 | 6.903315878149401e+112 |
+| PP-CHA-44 | Chakri Signature Breakthrough VIII | PP(CHA,44): product profit x2; factor=2 | Own Chakri | B14-006 | 1.056399856103497e+113 |
+| PP-ROC-44 | Rockets: Festival Display VIII | PP(ROC,44): product profit x2; factor=2 | Own Rockets | B14-007 | 1.616748066177829e+113 |
+| GP-53 | Delivery Reach VII | GP(53): global profit x4; factor=4 |  | B14-008 | 2.474570301090786e+113 |
+| PP-SMC-44 | Small crackers: Festival Display VIII | PP(SMC,44): product profit x2; factor=2 | Own Small crackers | B14-009 | 3.787918899420626e+113 |
+| TC-27 | Counter Training VI | TC(27): remaining cost x0.02154434690031884; factor=0.02154434690031884 |  | B14-010 | 5.798891422468773e+113 |
+| PC-SMC-11 | Small crackers: Bulk Procurement III | PC(SMC,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Small crackers | B14-011 | 8.878359200625764e+113 |
+| PP-STR-44 | Cracker strings: Festival Display VIII | PP(STR,44): product profit x2; factor=2 | Own Cracker strings | B14-012 | 1.359451993017682e+114 |
+| SK-FR-D-06 | Festival Rush: Longer Window VI | SD(FR,6): skill effect x1.375; factor=1.375 |  | B14-013 | 2.081797435501962e+114 |
+| TP-080 | Counter Display XIV | TD(80): tap profit x3.06726412; factor=3.06726412 |  | B14-014 | 3.188280273559045e+114 |
+| PP-AER-44 | Aerial shots: Festival Display VIII | PP(AER,44): product profit x2; factor=2 | Own Aerial shots | B14-015 | 4.883351037586631e+114 |
+| PP-BOX-44 | Celebration boxes: Festival Display VIII | PP(BOX,44): product profit x2; factor=2 | Own Celebration boxes | B14-016 | 7.480365633178809e+114 |
+| SK-HH-P-07 | More Helping Hands VII | SP(HH,7): skill effect x12; factor=12 |  | B14-017 | 1.145964429796348e+115 |
+| SK-FR-C-07 | Festival Rush: Faster Recovery VII | SC(FR,7): skill effect x0.78125; factor=0.78125 |  | B14-018 | 1.755750813231595e+115 |
+| PP-PHU-45 | Phuljhari: Regular Customers VIII | PP(PHU,45): product profit x4; factor=4 | Own Phuljhari | B14-019 | 2.690283502269501e+115 |
+| UC-22 | Upgrade Price Discount 22 | UC(22): remaining cost x0.6043881959444927; factor=0.6043881959444927 |  | B14-020 | 4.122651726404461e+115 |
+| PC-STR-11 | Cracker strings: Bulk Procurement III | PC(STR,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Cracker strings | B14-021 | 6.318277220075789e+115 |
+| PP-ANA-45 | Anar: Regular Customers VIII | PP(ANA,45): product profit x4; factor=4 | Own Anar | B14-022 | 9.684208597184273e+115 |
+| GP-54 | Celebration Demand VII | GP(54): global profit x5; factor=5 |  | B14-023 | 1.484475462936412e+116 |
+| PP-CHA-45 | Chakri: Regular Customers VIII | PP(CHA,45): product profit x4; factor=4 | Own Chakri | B14-024 | 2.275754136956370e+116 |
+| TP-081 | Shop Showmanship XIV | TD(81): tap profit x2; factor=2 |  | B14-025 | 3.489161628319284e+116 |
+| PP-ROC-45 | Rockets: Regular Customers VIII | PP(ROC,45): product profit x4; factor=4 | Own Rockets | B14-026 | 5.350079851147655e+116 |
+| PP-SMC-45 | Small crackers Signature Breakthrough VIII | PP(SMC,45): product profit x4; factor=4 | Own Small crackers | B14-027 | 8.204325262515122e+116 |
+| PC-AER-11 | Aerial shots: Bulk Procurement III | PC(AER,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Aerial shots | B14-028 | 1.258255695577569e+117 |
+| PP-STR-45 | Cracker strings: Regular Customers VIII | PP(STR,45): product profit x4; factor=4 | Own Cracker strings | B14-029 | 1.929915835179492e+117 |
+| PP-AER-45 | Aerial shots: Regular Customers VIII | PP(AER,45): product profit x4; factor=4 | Own Aerial shots | B14-030 | 2.960405917577532e+117 |
+| TP-082 | Crowd Appeal XIV | TD(82): tap profit x2; factor=2 |  | B14-031 | 4.541586467760826e+117 |
+| PP-BOX-45 | Celebration boxes: Regular Customers VIII | PP(BOX,45): product profit x4; factor=4 | Own Celebration boxes | B14-032 | 6.967987134996576e+117 |
+| PP-PHU-46 | Phuljhari: Signature Collection VIII | PP(PHU,46): product profit x8; factor=8 | Own Phuljhari | B14-033 | 1.069179252347435e+118 |
+| GP-55 | Brand Recognition VII | GP(55): global profit x6; factor=6 |  | B14-034 | 1.640730058256859e+118 |
+| PC-BOX-11 | Celebration boxes: Bulk Procurement III | PC(BOX,11): remaining cost x0.02154434690031884; factor=0.02154434690031884 | Own Celebration boxes | B14-035 | 2.518066387024599e+118 |
+| PP-ANA-46 | Anar Signature Breakthrough VIII | PP(ANA,46): product profit x8; factor=8 | Own Anar | B14-036 | 3.864921225212219e+118 |
+| TC-28 | Sales Coaching VI | TC(28): remaining cost x0.02030917620904736; factor=0.02030917620904736 |  | B14-037 | 5.932770474350773e+118 |
+| PP-CHA-46 | Chakri: Signature Collection VIII | PP(CHA,46): product profit x8; factor=8 | Own Chakri | B14-038 | 9.107892089557240e+118 |
+| TP-083 | Festival Calls XIV | TD(83): tap profit x3.10391175; factor=3.10391175 |  | B14-039 | 1.398368510265175e+119 |
+| PP-ROC-46 | Rockets: Signature Collection VIII | PP(ROC,46): product profit x8; factor=8 | Own Rockets | B14-040 | 2.147181833621093e+119 |
+| PP-SMC-46 | Small crackers: Signature Collection VIII | PP(SMC,46): product profit x8; factor=8 | Own Small crackers | B14-041 | 3.297307437074180e+119 |
+| PP-STR-46 | Cracker strings: Signature Collection VIII | PP(STR,46): product profit x8; factor=8 | Own Cracker strings | B14-042 | 5.063997581538908e+119 |
+| PC-PHU-12 | Phuljhari: Factory Partnership III | PC(PHU,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Phuljhari | B14-043 | 7.778054224741528e+119 |
+| PP-AER-46 | Aerial shots: Signature Collection VIII | PP(AER,46): product profit x8; factor=8 | Own Aerial shots | B14-044 | 1.194790808329816e+120 |
+| GP-56 | Customer Loyalty VII | GP(56): global profit x2; factor=2 |  | B14-045 | 1.835507691337050e+120 |
+| PP-BOX-46 | Celebration boxes Signature Breakthrough VIII | PP(BOX,46): product profit x8; factor=8 | Own Celebration boxes | B14-046 | 2.820096528330153e+120 |
+| TP-084 | Shop Reputation XIV | TD(84): tap profit x2.91573914; factor=2.91573914 |  | B14-047 | 4.333264197610200e+120 |
+| PP-PHU-47 | Phuljhari: Celebration Specialist VIII | PP(PHU,47): product profit x16; factor=16 | Own Phuljhari | B14-048 | 6.659011927211967e+120 |
+| UC-23 | Upgrade Price Discount 23 | UC(23): remaining cost x0.5930364355419675; factor=0.5930364355419675 |  | B14-049 | 1.023405735032594e+121 |
+| PP-ANA-47 | Anar: Celebration Specialist VIII | PP(ANA,47): product profit x16; factor=16 | Own Anar | B14-050 | 1.573002197794466e+121 |
 
-## Band 15
+## Page 15
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-43 | Aerial shots Signature Breakthrough VIII | PP(AER,43): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-42 | B15-001 | 5.67117e+25 |
-| PP-ANA-43 | Anar: Gift Packaging VIII | PP(ANA,43): multiply family normal profit by x1.6 | Own Anar; PP-ANA-42 | B15-002 | 5.82147e+25 |
-| PP-BOX-43 | Celebration boxes: Gift Packaging VIII | PP(BOX,43): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-42 | B15-003 | 5.97575e+25 |
-| PP-CHA-43 | Chakri: Gift Packaging VIII | PP(CHA,43): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-42 | B15-004 | 6.13411e+25 |
-| PP-PHU-43 | Phuljhari Signature Breakthrough VIII | PP(PHU,43): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-42 | B15-005 | 6.29668e+25 |
-| PP-ROC-43 | Rockets: Gift Packaging VIII | PP(ROC,43): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-42 | B15-006 | 6.46355e+25 |
-| PP-SMC-43 | Small crackers: Gift Packaging VIII | PP(SMC,43): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-42 | B15-007 | 6.63484e+25 |
-| PP-STR-43 | Cracker strings: Gift Packaging VIII | PP(STR,43): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-42 | B15-008 | 6.81068e+25 |
-| PP-AER-44 | Aerial shots: Festival Display VIII | PP(AER,44): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-43 | B15-009 | 6.99117e+25 |
-| PP-ANA-44 | Anar: Festival Display VIII | PP(ANA,44): multiply family normal profit by x1.6 | Own Anar; PP-ANA-43 | B15-010 | 7.17645e+25 |
-| PP-BOX-44 | Celebration boxes: Festival Display VIII | PP(BOX,44): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-43 | B15-011 | 7.36663e+25 |
-| PP-CHA-44 | Chakri Signature Breakthrough VIII | PP(CHA,44): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-43 | B15-012 | 7.56186e+25 |
-| PP-PHU-44 | Phuljhari: Festival Display VIII | PP(PHU,44): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-43 | B15-013 | 7.76226e+25 |
-| PP-ROC-44 | Rockets: Festival Display VIII | PP(ROC,44): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-43 | B15-014 | 7.96797e+25 |
-| PP-SMC-44 | Small crackers: Festival Display VIII | PP(SMC,44): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-43 | B15-015 | 8.17914e+25 |
-| PP-STR-44 | Cracker strings: Festival Display VIII | PP(STR,44): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-43 | B15-016 | 8.3959e+25 |
-| PP-AER-45 | Aerial shots: Regular Customers VIII | PP(AER,45): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-44 | B15-017 | 8.6184e+25 |
-| PP-ANA-45 | Anar: Regular Customers VIII | PP(ANA,45): multiply family normal profit by x1.6 | Own Anar; PP-ANA-44 | B15-018 | 8.8468e+25 |
-| PP-BOX-45 | Celebration boxes: Regular Customers VIII | PP(BOX,45): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-44 | B15-019 | 9.08126e+25 |
-| PP-CHA-45 | Chakri: Regular Customers VIII | PP(CHA,45): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-44 | B15-020 | 9.32193e+25 |
-| PP-PHU-45 | Phuljhari: Regular Customers VIII | PP(PHU,45): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-44 | B15-021 | 9.56897e+25 |
-| PP-ROC-45 | Rockets: Regular Customers VIII | PP(ROC,45): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-44 | B15-022 | 9.82256e+25 |
-| PP-SMC-45 | Small crackers Signature Breakthrough VIII | PP(SMC,45): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-44 | B15-023 | 1.00829e+26 |
-| PP-STR-45 | Cracker strings: Regular Customers VIII | PP(STR,45): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-44 | B15-024 | 1.03501e+26 |
-| PC-AER-12 | Aerial shots: Factory Partnership III | PC(AER,12): total run family-level discount becomes 26.25% | Own Aerial shots; PC-AER-11 | B15-025 | 1.06244e+26 |
-| PC-ANA-12 | Anar: Factory Partnership III | PC(ANA,12): total run family-level discount becomes 26.25% | Own Anar; PC-ANA-11 | B15-026 | 1.09059e+26 |
-| PC-BOX-12 | Celebration boxes: Factory Partnership III | PC(BOX,12): total run family-level discount becomes 26.25% | Own Celebration boxes; PC-BOX-11 | B15-027 | 1.1195e+26 |
-| PC-CHA-12 | Chakri: Factory Partnership III | PC(CHA,12): total run family-level discount becomes 26.25% | Own Chakri; PC-CHA-11 | B15-028 | 1.14917e+26 |
-| PC-PHU-12 | Phuljhari: Factory Partnership III | PC(PHU,12): total run family-level discount becomes 26.25% | Own Phuljhari; PC-PHU-11 | B15-029 | 1.17962e+26 |
-| PC-ROC-12 | Rockets: Factory Partnership III | PC(ROC,12): total run family-level discount becomes 26.25% | Own Rockets; PC-ROC-11 | B15-030 | 1.21088e+26 |
-| PC-SMC-12 | Small crackers: Factory Partnership III | PC(SMC,12): total run family-level discount becomes 26.25% | Own Small crackers; PC-SMC-11 | B15-031 | 1.24297e+26 |
-| PC-STR-12 | Cracker strings: Factory Partnership III | PC(STR,12): total run family-level discount becomes 26.25% | Own Cracker strings; PC-STR-11 | B15-032 | 1.27591e+26 |
-| TP-085 | Sales Pitch XV | TD(43): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-084 | B15-033 | 1.30973e+26 |
-| TP-086 | Counter Display XV | TD(44): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-085 | B15-034 | 1.34444e+26 |
-| TP-087 | Shop Showmanship XV | TL(43): linked share A becomes 24.81355932% | Own 2+ families; TP-086 | B15-035 | 1.38007e+26 |
-| TP-088 | Crowd Appeal XV | TL(44): linked share A becomes 25.11864407% | Own 2+ families; TP-087 | B15-036 | 1.41664e+26 |
-| TP-089 | Festival Calls XV | TD(45): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-088 | B15-037 | 1.45418e+26 |
-| TP-090 | Shop Reputation XV | TL(45): linked share A becomes 25.42372881% | Own 2+ families; TP-089 | B15-038 | 1.49272e+26 |
-| TC-29 | Team Handbook VI | TC(29): total run tap-level discount becomes 25.375% | Own 1+ families; TC-28 | B15-039 | 1.53228e+26 |
-| TC-30 | Customer Insight VI | TC(30): total run tap-level discount becomes 26.25% | Own 1+ families; TC-29 | B15-040 | 1.57289e+26 |
-| GP-57 | Festival Footfall VIII | GP(57): normal products and independent tap B x1.10, once | Own 1+ families; GP-56 | B15-041 | 1.61457e+26 |
-| GP-58 | Community Trust VIII | GP(58): normal products and independent tap B x1.10, once | Own 1+ families; GP-57 | B15-042 | 1.65736e+26 |
-| GP-59 | Local Advertising VIII | GP(59): normal products and independent tap B x1.10, once | Own 1+ families; GP-58 | B15-043 | 1.70128e+26 |
-| GP-60 | Shopfront Glow VIII | GP(60): normal products and independent tap B x1.10, once | Own 1+ families; GP-59 | B15-044 | 1.74637e+26 |
-| UC-23 | Procurement Office VI | UC(23): total run named-cash discount becomes 25.15625% | Own 1+ families; UC-22 | B15-045 | 1.79265e+26 |
-| UC-24 | Distributor Alliance VI | UC(24): total run named-cash discount becomes 26.25% | Own 1+ families; UC-23 | B15-046 | 1.84016e+26 |
-| SK-FR-P-06 | Stronger Rush VI | SP(FR,6): Rush product multiplier x3.25 | Own 1+ families; SK-FR-P-05 | B15-047 | 1.88893e+26 |
-| SK-HH-P-06 | More Helping Hands VI | SP(HH,6): 10 auto taps/s | Own 2+ families; SK-HH-P-05 | B15-048 | 1.93899e+26 |
-| SK-BO-P-09 | Larger Bulk Orders IX | SP(BO,9): 240 seconds of normal P | Own 3+ families; SK-BO-P-08 | B15-049 | 1.99037e+26 |
-| SK-FR-D-06 | Festival Rush: Longer Window VI | SD(FR,6): cumulative run duration factor 1.375 | SK-FR-P-01; SK-FR-D-05 | B15-050 | 2.04312e+26 |
-| SK-HH-D-06 | Helping Hands: Longer Window VI | SD(HH,6): cumulative run duration factor 1.375 | SK-HH-P-01; SK-HH-D-05 | B15-051 | 2.09727e+26 |
-| SK-FR-C-06 | Festival Rush: Faster Recovery VI | SC(FR,6): cumulative run cooldown factor 0.8125 | SK-FR-P-01; SK-FR-C-05 | B15-052 | 2.15285e+26 |
-| SK-HH-C-06 | Helping Hands: Faster Recovery VI | SC(HH,6): cumulative run cooldown factor 0.8125 | SK-HH-P-01; SK-HH-C-05 | B15-053 | 2.2099e+26 |
-| SK-BO-C-09 | Bulk Order: Faster Recovery IX | SC(BO,9): cumulative run cooldown factor 0.8125 | SK-BO-P-01; SK-BO-C-08 | B15-054 | 2.26847e+26 |
+| PC-ANA-12 | Anar: Factory Partnership III | PC(ANA,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Anar | B15-001 | 2.417988560667002e+121 |
+| PP-CHA-47 | Chakri: Celebration Specialist VIII | PP(CHA,47): product profit x16; factor=16 | Own Chakri | B15-002 | 3.717256964940762e+121 |
+| SK-HH-C-07 | Helping Hands: Faster Recovery VII | SC(HH,7): skill effect x0.78125; factor=0.78125 |  | B15-003 | 5.715238457793035e+121 |
+| PP-ROC-47 | Rockets Signature Breakthrough VIII | PP(ROC,47): product profit x16; factor=16 | Own Rockets | B15-004 | 8.787990041022780e+121 |
+| TP-085 | Sales Pitch XV | TD(85): tap profit x2.91573914; factor=2.91573914 |  | B15-005 | 1.351413292631021e+122 |
+| PP-SMC-47 | Small crackers: Celebration Specialist VIII | PP(SMC,47): product profit x16; factor=16 | Own Small crackers | B15-006 | 2.078405323508810e+122 |
+| SK-BO-P-07 | Larger Bulk Orders VII | SP(BO,7): skill effect x210; factor=210 |  | B15-007 | 3.196801978207009e+122 |
+| PP-STR-47 | Cracker strings: Celebration Specialist VIII | PP(STR,47): product profit x16; factor=16 | Own Cracker strings | B15-008 | 4.917503230795323e+122 |
+| PC-CHA-12 | Chakri: Factory Partnership III | PC(CHA,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Chakri | B15-009 | 7.565140566874205e+122 |
+| GP-57 | Festival Footfall VIII | GP(57): global profit x3; factor=3 |  | B15-010 | 1.163945858936556e+123 |
+| PP-AER-47 | Aerial shots: Celebration Specialist VIII | PP(AER,47): product profit x16; factor=16 | Own Aerial shots | B15-011 | 1.790985156625686e+123 |
+| TC-29 | Team Handbook VI | TC(29): remaining cost x0.019144819761699582; factor=0.019144819761699582 |  | B15-012 | 2.756097790498785e+123 |
+| PP-BOX-47 | Celebration boxes: Celebration Specialist VIII | PP(BOX,47): product profit x16; factor=16 | Own Celebration boxes | B15-013 | 4.241707223632212e+123 |
+| PP-PHU-48 | Phuljhari: Premium Range VIII | PP(PHU,48): product profit x32; factor=32 | Own Phuljhari | B15-014 | 6.528752183984852e+123 |
+| TP-086 | Counter Display XV | TD(86): tap profit x21.67697081; factor=21.67697081 |  | B15-015 | 1.004993166808390e+124 |
+| PP-ANA-48 | Anar: Premium Range VIII | PP(ANA,48): product profit x32; factor=32 | Own Anar | B15-016 | 1.547175084982042e+124 |
+| PC-ROC-12 | Rockets: Factory Partnership III | PC(ROC,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Rockets | B15-017 | 2.382095928309144e+124 |
+| PP-CHA-48 | Chakri: Premium Range VIII | PP(CHA,48): product profit x32; factor=32 | Own Chakri | B15-018 | 3.667942001668846e+124 |
+| PP-ROC-48 | Rockets: Premium Range VIII | PP(ROC,48): product profit x32; factor=32 | Own Rockets | B15-019 | 5.648447577122065e+124 |
+| GP-58 | Community Trust VIII | GP(58): global profit x4; factor=4 |  | B15-020 | 8.699197171740763e+124 |
+| PP-SMC-48 | Small crackers: Premium Range VIII | PP(SMC,48): product profit x32; factor=32 | Own Small crackers | B15-021 | 1.339900891014850e+125 |
+| TP-087 | Shop Showmanship XV | TD(87): tap profit x5.41924269; factor=5.41924269 |  | B15-022 | 2.063999590665440e+125 |
+| PP-STR-48 | Cracker strings Signature Breakthrough VIII | PP(STR,48): product profit x32; factor=32 | Own Cracker strings | B15-023 | 3.179727970605541e+125 |
+| PC-SMC-12 | Small crackers: Factory Partnership III | PC(SMC,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Small crackers | B15-024 | 4.899071264516704e+125 |
+| SK-HH-D-06 | Helping Hands: Longer Window VI | SD(HH,6): skill effect x1.375; factor=1.375 |  | B15-025 | 7.548853136696322e+125 |
+| PP-AER-48 | Aerial shots: Premium Range VIII | PP(AER,48): product profit x32; factor=32 | Own Aerial shots | B15-026 | 1.163299723673998e+126 |
+| PP-BOX-48 | Celebration boxes: Premium Range VIII | PP(BOX,48): product profit x32; factor=32 | Own Celebration boxes | B15-027 | 1.792857214180134e+126 |
+| PP-PHU-49 | Phuljhari Signature Breakthrough IX | PP(PHU,49): product profit x2; factor=2 | Own Phuljhari | B15-028 | 2.763396547586395e+126 |
+| TP-088 | Crowd Appeal XV | TD(88): tap profit x7.56326831; factor=7.56326831 |  | B15-029 | 4.259750354373038e+126 |
+| PP-ANA-49 | Anar: Gift Packaging IX | PP(ANA,49): product profit x2; factor=2 | Own Anar | B15-030 | 6.567022650248468e+126 |
+| UC-24 | Upgrade Price Discount 24 | UC(24): remaining cost x0.5818978865573705; factor=0.5818978865573705 |  | B15-031 | 1.012502980107406e+127 |
+| PC-STR-12 | Cracker strings: Factory Partnership III | PC(STR,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Cracker strings | B15-032 | 1.561232328081000e+127 |
+| PP-CHA-49 | Chakri: Gift Packaging IX | PP(CHA,49): product profit x2; factor=2 | Own Chakri | B15-033 | 2.407588112790117e+127 |
+| GP-59 | Local Advertising VIII | GP(59): global profit x5; factor=5 |  | B15-034 | 3.713131027083641e+127 |
+| PP-ROC-49 | Rockets: Gift Packaging IX | PP(ROC,49): product profit x2; factor=2 | Own Rockets | B15-035 | 5.727192601667047e+127 |
+| PP-SMC-49 | Small crackers: Gift Packaging IX | PP(SMC,49): product profit x2; factor=2 | Own Small crackers | B15-036 | 8.834596758055314e+127 |
+| TC-30 | Customer Insight VI | TC(30): remaining cost x0.018047217668271703; factor=0.018047217668271703 |  | B15-037 | 1.362934874147142e+128 |
+| SK-BO-C-07 | Bulk Order: Faster Recovery VII | SC(BO,7): skill effect x0.8541666666666666; factor=0.8541666666666666 |  | B15-038 | 2.102843276811606e+128 |
+| PP-STR-49 | Cracker strings: Gift Packaging IX | PP(STR,49): product profit x2; factor=2 | Own Cracker strings | B15-039 | 3.244756699540871e+128 |
+| TP-089 | Festival Calls XV | TD(89): tap profit x5.58252786; factor=5.58252786 |  | B15-040 | 5.007267566049307e+128 |
+| PC-AER-12 | Aerial shots: Factory Partnership III | PC(AER,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Aerial shots | B15-041 | 7.727924833246348e+128 |
+| PP-AER-49 | Aerial shots Signature Breakthrough IX | PP(AER,49): product profit x2; factor=2 | Own Aerial shots | B15-042 | 1.192802138517801e+129 |
+| PP-BOX-49 | Celebration boxes: Gift Packaging IX | PP(BOX,49): product profit x2; factor=2 | Own Celebration boxes | B15-043 | 1.841269496229341e+129 |
+| PP-PHU-50 | Phuljhari: Festival Display IX | PP(PHU,50): product profit x2; factor=2 | Own Phuljhari | B15-044 | 2.842560633103257e+129 |
+| SK-FR-P-08 | Stronger Rush VIII | SP(FR,8): skill effect x4; factor=4 |  | B15-045 | 4.388797525248039e+129 |
+| PP-ANA-50 | Anar: Festival Display IX | PP(ANA,50): product profit x2; factor=2 | Own Anar | B15-046 | 6.776801783564898e+129 |
+| GP-60 | Shopfront Glow VIII | GP(60): global profit x6; factor=6 |  | B15-047 | 1.046519801457711e+130 |
+| TP-090 | Shop Reputation XV | TD(90): tap profit x2.79126392; factor=2.79126392 |  | B15-048 | 1.616268640680970e+130 |
+| PC-BOX-12 | Celebration boxes: Factory Partnership III | PC(BOX,12): remaining cost x0.018478497974222914; factor=0.018478497974222914 | Own Celebration boxes | B15-049 | 2.496451152384776e+130 |
+| PP-CHA-50 | Chakri Signature Breakthrough IX | PP(CHA,50): product profit x2; factor=2 | Own Chakri | B15-050 | 3.856346313578030e+130 |
 
-## Band 16
+## Page 16
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-46 | Aerial shots: Signature Collection VIII | PP(AER,46): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-45 | B16-001 | 1.75806e+27 |
-| PP-ANA-46 | Anar Signature Breakthrough VIII | PP(ANA,46): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-45 | B16-002 | 1.82708e+27 |
-| PP-BOX-46 | Celebration boxes Signature Breakthrough VIII | PP(BOX,46): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-45 | B16-003 | 1.89881e+27 |
-| PP-CHA-46 | Chakri: Signature Collection VIII | PP(CHA,46): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-45 | B16-004 | 1.97336e+27 |
-| PP-PHU-46 | Phuljhari: Signature Collection VIII | PP(PHU,46): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-45 | B16-005 | 2.05083e+27 |
-| PP-ROC-46 | Rockets: Signature Collection VIII | PP(ROC,46): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-45 | B16-006 | 2.13135e+27 |
-| PP-SMC-46 | Small crackers: Signature Collection VIII | PP(SMC,46): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-45 | B16-007 | 2.21502e+27 |
-| PP-STR-46 | Cracker strings: Signature Collection VIII | PP(STR,46): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-45 | B16-008 | 2.30198e+27 |
-| PP-AER-47 | Aerial shots: Celebration Specialist VIII | PP(AER,47): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-46 | B16-009 | 2.39236e+27 |
-| PP-ANA-47 | Anar: Celebration Specialist VIII | PP(ANA,47): multiply family normal profit by x1.6 | Own Anar; PP-ANA-46 | B16-010 | 2.48628e+27 |
-| PP-BOX-47 | Celebration boxes: Celebration Specialist VIII | PP(BOX,47): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-46 | B16-011 | 2.58389e+27 |
-| PP-CHA-47 | Chakri: Celebration Specialist VIII | PP(CHA,47): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-46 | B16-012 | 2.68533e+27 |
-| PP-PHU-47 | Phuljhari: Celebration Specialist VIII | PP(PHU,47): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-46 | B16-013 | 2.79075e+27 |
-| PP-ROC-47 | Rockets Signature Breakthrough VIII | PP(ROC,47): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-46 | B16-014 | 2.90031e+27 |
-| PP-SMC-47 | Small crackers: Celebration Specialist VIII | PP(SMC,47): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-46 | B16-015 | 3.01418e+27 |
-| PP-STR-47 | Cracker strings: Celebration Specialist VIII | PP(STR,47): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-46 | B16-016 | 3.13251e+27 |
-| PP-AER-48 | Aerial shots: Premium Range VIII | PP(AER,48): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-47 | B16-017 | 3.25549e+27 |
-| PP-ANA-48 | Anar: Premium Range VIII | PP(ANA,48): multiply family normal profit by x1.6 | Own Anar; PP-ANA-47 | B16-018 | 3.3833e+27 |
-| PP-BOX-48 | Celebration boxes: Premium Range VIII | PP(BOX,48): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-47 | B16-019 | 3.51613e+27 |
-| PP-CHA-48 | Chakri: Premium Range VIII | PP(CHA,48): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-47 | B16-020 | 3.65417e+27 |
-| PP-PHU-48 | Phuljhari: Premium Range VIII | PP(PHU,48): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-47 | B16-021 | 3.79763e+27 |
-| PP-ROC-48 | Rockets: Premium Range VIII | PP(ROC,48): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-47 | B16-022 | 3.94672e+27 |
-| PP-SMC-48 | Small crackers: Premium Range VIII | PP(SMC,48): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-47 | B16-023 | 4.10166e+27 |
-| PP-STR-48 | Cracker strings Signature Breakthrough VIII | PP(STR,48): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-47 | B16-024 | 4.26269e+27 |
-| TP-091 | Sales Pitch XVI | TD(46): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-090 | B16-025 | 4.43004e+27 |
-| TP-092 | Counter Display XVI | TD(47): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-091 | B16-026 | 4.60396e+27 |
-| TP-093 | Shop Showmanship XVI | TL(46): linked share A becomes 25.72881356% | Own 2+ families; TP-092 | B16-027 | 4.78471e+27 |
-| TP-094 | Crowd Appeal XVI | TL(47): linked share A becomes 26.03389831% | Own 2+ families; TP-093 | B16-028 | 4.97255e+27 |
-| TP-095 | Festival Calls XVI | TD(48): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-094 | B16-029 | 5.16777e+27 |
-| TP-096 | Shop Reputation XVI | TL(48): linked share A becomes 26.33898305% | Own 2+ families; TP-095 | B16-030 | 5.37066e+27 |
-| TC-31 | Practice Routine VII | TC(31): total run tap-level discount becomes 27.125% | Own 1+ families; TC-30 | B16-031 | 5.5815e+27 |
-| TC-32 | Counter Training VII | TC(32): total run tap-level discount becomes 28% | Own 1+ families; TC-31 | B16-032 | 5.80063e+27 |
-| GP-61 | Delivery Reach VIII | GP(61): normal products and independent tap B x1.10, once | Own 1+ families; GP-60 | B16-033 | 6.02836e+27 |
-| GP-62 | Celebration Demand VIII | GP(62): normal products and independent tap B x1.10, once | Own 1+ families; GP-61 | B16-034 | 6.26503e+27 |
-| GP-63 | Brand Recognition VIII | GP(63): normal products and independent tap B x1.10, once | Own 1+ families; GP-62 | B16-035 | 6.51099e+27 |
-| GP-64 | Customer Loyalty VIII | GP(64): normal products and independent tap B x1.10, once | Own 1+ families; GP-63 | B16-036 | 6.7666e+27 |
-| UC-25 | Supplier Network VII | UC(25): total run named-cash discount becomes 27.34375% | Own 1+ families; UC-24 | B16-037 | 7.03225e+27 |
+| PP-ROC-50 | Rockets: Festival Display IX | PP(ROC,50): product profit x2; factor=2 | Own Rockets | B16-001 | 5.957614708818734e+130 |
+| PP-SMC-50 | Small crackers: Festival Display IX | PP(SMC,50): product profit x2; factor=2 | Own Small crackers | B16-002 | 9.204754870827773e+130 |
+| PP-STR-50 | Cracker strings: Festival Display IX | PP(STR,50): product profit x2; factor=2 | Own Cracker strings | B16-003 | 1.422313955306145e+131 |
+| PC-PHU-13 | Phuljhari: Wholesale Deal IV | PC(PHU,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Phuljhari | B16-004 | 2.197971943484046e+131 |
+| PP-AER-50 | Aerial shots: Festival Display IX | PP(AER,50): product profit x2; factor=2 | Own Aerial shots | B16-005 | 3.396974190220413e+131 |
+| TP-091 | Sales Pitch XVI | TD(91): tap profit x2; factor=2 |  | B16-006 | 5.250561857397866e+131 |
+| PP-BOX-50 | Celebration boxes: Festival Display IX | PP(BOX,50): product profit x2; factor=2 | Own Celebration boxes | B16-007 | 8.116386893831568e+131 |
+| GP-61 | Delivery Reach VIII | GP(61): global profit x2; factor=2 |  | B16-008 | 1.254767125932392e+132 |
+| PP-PHU-51 | Phuljhari: Regular Customers IX | PP(PHU,51): product profit x4; factor=4 | Own Phuljhari | B16-009 | 1.940023329153854e+132 |
+| PP-ANA-51 | Anar: Regular Customers IX | PP(ANA,51): product profit x4; factor=4 | Own Anar | B16-010 | 2.999813134835640e+132 |
+| TC-31 | Practice Routine VII | TC(31): remaining cost x0.017012542798525886; factor=0.017012542798525886 |  | B16-011 | 4.639005439556882e+132 |
+| PP-CHA-51 | Chakri: Regular Customers IX | PP(CHA,51): product profit x4; factor=4 | Own Chakri | B16-012 | 7.174621433268621e+132 |
+| PC-ANA-13 | Anar: Wholesale Deal IV | PC(ANA,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Anar | B16-013 | 1.109727961265103e+133 |
+| UC-25 | Upgrade Price Discount 25 | UC(25): remaining cost x0.5709685444040011; factor=0.5709685444040011 |  | B16-014 | 1.716633156524643e+133 |
+| TP-092 | Counter Display XVI | TD(92): tap profit x4.10079884; factor=4.10079884 |  | B16-015 | 2.655717612444234e+133 |
+| PP-ROC-51 | Rockets: Regular Customers IX | PP(ROC,51): product profit x4; factor=4 | Own Rockets | B16-016 | 4.108939250711094e+133 |
+| PP-SMC-51 | Small crackers Signature Breakthrough IX | PP(SMC,51): product profit x4; factor=4 | Own Small crackers | B16-017 | 6.358006630490238e+133 |
+| PP-STR-51 | Cracker strings: Regular Customers IX | PP(STR,51): product profit x4; factor=4 | Own Cracker strings | B16-018 | 9.839106512299886e+133 |
+| PP-AER-51 | Aerial shots: Regular Customers IX | PP(AER,51): product profit x4; factor=4 | Own Aerial shots | B16-019 | 1.522768123295778e+134 |
+| GP-62 | Celebration Demand VIII | GP(62): global profit x3; factor=3 |  | B16-020 | 2.356976874167249e+134 |
+| PC-CHA-13 | Chakri: Wholesale Deal IV | PC(CHA,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Chakri | B16-021 | 3.648549941477912e+134 |
+| TP-093 | Shop Showmanship XVI | TD(93): tap profit x2; factor=2 |  | B16-022 | 5.648442324404538e+134 |
+| PP-BOX-51 | Celebration boxes: Regular Customers IX | PP(BOX,51): product profit x4; factor=4 | Own Celebration boxes | B16-023 | 8.745417180392492e+134 |
+| SK-FR-C-08 | Festival Rush: Faster Recovery VIII | SC(FR,8): skill effect x0.75; factor=0.75 |  | B16-024 | 1.354178123466210e+135 |
+| PP-PHU-52 | Phuljhari: Signature Collection IX | PP(PHU,52): product profit x8; factor=8 | Own Phuljhari | B16-025 | 2.097077522150434e+135 |
+| PP-ANA-52 | Anar Signature Breakthrough IX | PP(ANA,52): product profit x8; factor=8 | Own Anar | B16-026 | 3.247854808090935e+135 |
+| PP-CHA-52 | Chakri: Signature Collection IX | PP(CHA,52): product profit x8; factor=8 | Own Chakri | B16-027 | 5.030627457420416e+135 |
+| PC-ROC-13 | Rockets: Wholesale Deal IV | PC(ROC,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Rockets | B16-028 | 7.792757053087068e+135 |
+| PP-ROC-52 | Rockets: Signature Collection IX | PP(ROC,52): product profit x8; factor=8 | Own Rockets | B16-029 | 1.207267602548339e+136 |
+| TP-094 | Crowd Appeal XVI | TD(94): tap profit x2; factor=2 |  | B16-030 | 1.870507204352628e+136 |
+| PP-SMC-52 | Small crackers: Signature Collection IX | PP(SMC,52): product profit x8; factor=8 | Own Small crackers | B16-031 | 2.898402219494343e+136 |
+| GP-63 | Brand Recognition VIII | GP(63): global profit x4; factor=4 |  | B16-032 | 4.491602877533132e+136 |
+| PP-STR-52 | Cracker strings: Signature Collection IX | PP(STR,52): product profit x8; factor=8 | Own Cracker strings | B16-033 | 6.961253970990831e+136 |
+| SK-HH-P-08 | More Helping Hands VIII | SP(HH,8): skill effect x16; factor=16 |  | B16-034 | 1.078989045069744e+137 |
+| PP-AER-52 | Aerial shots: Signature Collection IX | PP(AER,52): product profit x8; factor=8 | Own Aerial shots | B16-035 | 1.672592024066101e+137 |
+| SK-FR-D-07 | Festival Rush: Longer Window VII | SD(FR,7): skill effect x1.4375; factor=1.4375 |  | B16-036 | 2.593023406632272e+137 |
+| PC-SMC-13 | Small crackers: Wholesale Deal IV | PC(SMC,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Small crackers | B16-037 | 4.020372392817067e+137 |
+| TC-32 | Counter Training VII | TC(32): remaining cost x0.016037187437513308; factor=0.016037187437513308 |  | B16-038 | 6.234039598647113e+137 |
+| PP-BOX-52 | Celebration boxes Signature Breakthrough IX | PP(BOX,52): product profit x8; factor=8 | Own Celebration boxes | B16-039 | 9.667546296515989e+137 |
+| TP-095 | Festival Calls XVI | TD(95): tap profit x8.92824087; factor=8.92824087 |  | B16-040 | 1.499361634276744e+138 |
+| PP-PHU-53 | Phuljhari: Celebration Specialist IX | PP(PHU,53): product profit x16; factor=16 | Own Phuljhari | B16-041 | 2.325626442485396e+138 |
+| PP-ANA-53 | Anar: Celebration Specialist IX | PP(ANA,53): product profit x16; factor=16 | Own Anar | B16-042 | 3.607588127646906e+138 |
+| PP-CHA-53 | Chakri: Celebration Specialist IX | PP(CHA,53): product profit x16; factor=16 | Own Chakri | B16-043 | 5.596768851284060e+138 |
+| PC-STR-13 | Cracker strings: Wholesale Deal IV | PC(STR,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Cracker strings | B16-044 | 8.683628231672922e+138 |
+| UC-26 | Upgrade Price Discount 26 | UC(26): remaining cost x0.5602444797102426; factor=0.5602444797102426 |  | B16-045 | 1.347437104992707e+139 |
+| PP-ROC-53 | Rockets Signature Breakthrough IX | PP(ROC,53): product profit x16; factor=16 | Own Rockets | B16-046 | 2.091024939370074e+139 |
+| GP-64 | Customer Loyalty VIII | GP(64): global profit x5; factor=5 |  | B16-047 | 3.245288808848366e+139 |
+| TP-096 | Shop Reputation XVI | TD(96): tap profit x23.34420351; factor=23.34420351 |  | B16-048 | 5.037220024078905e+139 |
+| PP-SMC-53 | Small crackers: Celebration Specialist IX | PP(SMC,53): product profit x16; factor=16 | Own Small crackers | B16-049 | 7.819372805039721e+139 |
+| PP-STR-53 | Cracker strings: Celebration Specialist IX | PP(STR,53): product profit x16; factor=16 | Own Cracker strings | B16-050 | 1.213937555570868e+140 |
 
-## Band 17
+## Page 17
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-49 | Aerial shots Signature Breakthrough IX | PP(AER,49): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-48 | B17-001 | 5.45e+28 |
-| PP-ANA-49 | Anar: Gift Packaging IX | PP(ANA,49): multiply family normal profit by x1.6 | Own Anar; PP-ANA-48 | B17-002 | 5.59443e+28 |
-| PP-BOX-49 | Celebration boxes: Gift Packaging IX | PP(BOX,49): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-48 | B17-003 | 5.74269e+28 |
-| PP-CHA-49 | Chakri: Gift Packaging IX | PP(CHA,49): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-48 | B17-004 | 5.89488e+28 |
-| PP-PHU-49 | Phuljhari Signature Breakthrough IX | PP(PHU,49): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-48 | B17-005 | 6.05111e+28 |
-| PP-ROC-49 | Rockets: Gift Packaging IX | PP(ROC,49): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-48 | B17-006 | 6.21147e+28 |
-| PP-SMC-49 | Small crackers: Gift Packaging IX | PP(SMC,49): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-48 | B17-007 | 6.37608e+28 |
-| PP-STR-49 | Cracker strings: Gift Packaging IX | PP(STR,49): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-48 | B17-008 | 6.54506e+28 |
-| PP-AER-50 | Aerial shots: Festival Display IX | PP(AER,50): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-49 | B17-009 | 6.71851e+28 |
-| PP-ANA-50 | Anar: Festival Display IX | PP(ANA,50): multiply family normal profit by x1.6 | Own Anar; PP-ANA-49 | B17-010 | 6.89656e+28 |
-| PP-BOX-50 | Celebration boxes: Festival Display IX | PP(BOX,50): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-49 | B17-011 | 7.07933e+28 |
-| PP-CHA-50 | Chakri Signature Breakthrough IX | PP(CHA,50): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-49 | B17-012 | 7.26695e+28 |
-| PP-PHU-50 | Phuljhari: Festival Display IX | PP(PHU,50): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-49 | B17-013 | 7.45953e+28 |
-| PP-ROC-50 | Rockets: Festival Display IX | PP(ROC,50): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-49 | B17-014 | 7.65722e+28 |
-| PP-SMC-50 | Small crackers: Festival Display IX | PP(SMC,50): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-49 | B17-015 | 7.86015e+28 |
-| PP-STR-50 | Cracker strings: Festival Display IX | PP(STR,50): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-49 | B17-016 | 8.06846e+28 |
-| PP-AER-51 | Aerial shots: Regular Customers IX | PP(AER,51): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-50 | B17-017 | 8.28228e+28 |
-| PP-ANA-51 | Anar: Regular Customers IX | PP(ANA,51): multiply family normal profit by x1.6 | Own Anar; PP-ANA-50 | B17-018 | 8.50178e+28 |
-| PP-BOX-51 | Celebration boxes: Regular Customers IX | PP(BOX,51): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-50 | B17-019 | 8.72709e+28 |
-| PP-CHA-51 | Chakri: Regular Customers IX | PP(CHA,51): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-50 | B17-020 | 8.95837e+28 |
-| PP-PHU-51 | Phuljhari: Regular Customers IX | PP(PHU,51): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-50 | B17-021 | 9.19578e+28 |
-| PP-ROC-51 | Rockets: Regular Customers IX | PP(ROC,51): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-50 | B17-022 | 9.43948e+28 |
-| PP-SMC-51 | Small crackers Signature Breakthrough IX | PP(SMC,51): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-50 | B17-023 | 9.68965e+28 |
-| PP-STR-51 | Cracker strings: Regular Customers IX | PP(STR,51): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-50 | B17-024 | 9.94644e+28 |
-| PC-AER-13 | Aerial shots: Wholesale Deal IV | PC(AER,13): total run family-level discount becomes 28.4375% | Own Aerial shots; PC-AER-12 | B17-025 | 1.021e+29 |
-| PC-ANA-13 | Anar: Wholesale Deal IV | PC(ANA,13): total run family-level discount becomes 28.4375% | Own Anar; PC-ANA-12 | B17-026 | 1.04806e+29 |
-| PC-BOX-13 | Celebration boxes: Wholesale Deal IV | PC(BOX,13): total run family-level discount becomes 28.4375% | Own Celebration boxes; PC-BOX-12 | B17-027 | 1.07584e+29 |
-| PC-CHA-13 | Chakri: Wholesale Deal IV | PC(CHA,13): total run family-level discount becomes 28.4375% | Own Chakri; PC-CHA-12 | B17-028 | 1.10435e+29 |
-| PC-PHU-13 | Phuljhari: Wholesale Deal IV | PC(PHU,13): total run family-level discount becomes 28.4375% | Own Phuljhari; PC-PHU-12 | B17-029 | 1.13362e+29 |
-| PC-ROC-13 | Rockets: Wholesale Deal IV | PC(ROC,13): total run family-level discount becomes 28.4375% | Own Rockets; PC-ROC-12 | B17-030 | 1.16366e+29 |
-| PC-SMC-13 | Small crackers: Wholesale Deal IV | PC(SMC,13): total run family-level discount becomes 28.4375% | Own Small crackers; PC-SMC-12 | B17-031 | 1.1945e+29 |
-| PC-STR-13 | Cracker strings: Wholesale Deal IV | PC(STR,13): total run family-level discount becomes 28.4375% | Own Cracker strings; PC-STR-12 | B17-032 | 1.22615e+29 |
-| TP-097 | Sales Pitch XVII | TD(49): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-096 | B17-033 | 1.25865e+29 |
-| TP-098 | Counter Display XVII | TD(50): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-097 | B17-034 | 1.292e+29 |
-| TP-099 | Shop Showmanship XVII | TL(49): linked share A becomes 26.6440678% | Own 2+ families; TP-098 | B17-035 | 1.32624e+29 |
-| TP-100 | Crowd Appeal XVII | TL(50): linked share A becomes 26.94915254% | Own 2+ families; TP-099 | B17-036 | 1.36139e+29 |
-| TP-101 | Festival Calls XVII | TD(51): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-100 | B17-037 | 1.39747e+29 |
-| TP-102 | Shop Reputation XVII | TL(51): linked share A becomes 27.25423729% | Own 2+ families; TP-101 | B17-038 | 1.43451e+29 |
-| TC-33 | Sales Coaching VII | TC(33): total run tap-level discount becomes 28.875% | Own 1+ families; TC-32 | B17-039 | 1.47252e+29 |
-| TC-34 | Team Handbook VII | TC(34): total run tap-level discount becomes 29.75% | Own 1+ families; TC-33 | B17-040 | 1.51155e+29 |
-| GP-65 | Festival Footfall IX | GP(65): normal products and independent tap B x1.10, once | Own 1+ families; GP-64 | B17-041 | 1.5516e+29 |
-| GP-66 | Community Trust IX | GP(66): normal products and independent tap B x1.10, once | Own 1+ families; GP-65 | B17-042 | 1.59272e+29 |
-| GP-67 | Local Advertising IX | GP(67): normal products and independent tap B x1.10, once | Own 1+ families; GP-66 | B17-043 | 1.63493e+29 |
-| GP-68 | Shopfront Glow IX | GP(68): normal products and independent tap B x1.10, once | Own 1+ families; GP-67 | B17-044 | 1.67826e+29 |
-| UC-26 | Trade Association VII | UC(26): total run named-cash discount becomes 28.4375% | Own 1+ families; UC-25 | B17-045 | 1.72274e+29 |
-| UC-27 | Procurement Office VII | UC(27): total run named-cash discount becomes 29.53125% | Own 1+ families; UC-26 | B17-046 | 1.76839e+29 |
-| SK-FR-P-07 | Stronger Rush VII | SP(FR,7): Rush product multiplier x3.5 | Own 1+ families; SK-FR-P-06 | B17-047 | 1.81526e+29 |
-| SK-HH-P-07 | More Helping Hands VII | SP(HH,7): 12 auto taps/s | Own 2+ families; SK-HH-P-06 | B17-048 | 1.86337e+29 |
-| SK-BO-P-10 | Larger Bulk Orders X | SP(BO,10): 260 seconds of normal P | Own 3+ families; SK-BO-P-09 | B17-049 | 1.91275e+29 |
-| SK-FR-D-07 | Festival Rush: Longer Window VII | SD(FR,7): cumulative run duration factor 1.4375 | SK-FR-P-01; SK-FR-D-06 | B17-050 | 1.96344e+29 |
-| SK-HH-D-07 | Helping Hands: Longer Window VII | SD(HH,7): cumulative run duration factor 1.4375 | SK-HH-P-01; SK-HH-D-06 | B17-051 | 2.01547e+29 |
-| SK-FR-C-07 | Festival Rush: Faster Recovery VII | SC(FR,7): cumulative run cooldown factor 0.78125 | SK-FR-P-01; SK-FR-C-06 | B17-052 | 2.06889e+29 |
-| SK-HH-C-07 | Helping Hands: Faster Recovery VII | SC(HH,7): cumulative run cooldown factor 0.78125 | SK-HH-P-01; SK-HH-C-06 | B17-053 | 2.12372e+29 |
-| SK-BO-C-10 | Bulk Order: Faster Recovery X | SC(BO,10): cumulative run cooldown factor 0.79166667 | SK-BO-P-01; SK-BO-C-09 | B17-054 | 2.18e+29 |
+| PP-AER-53 | Aerial shots: Celebration Specialist IX | PP(AER,53): product profit x16; factor=16 | Own Aerial shots | B17-001 | 1.884795363232717e+140 |
+| PC-AER-13 | Aerial shots: Wholesale Deal IV | PC(AER,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Aerial shots | B17-002 | 2.926681696334784e+140 |
+| PP-BOX-53 | Celebration boxes: Celebration Specialist IX | PP(BOX,53): product profit x16; factor=16 | Own Celebration boxes | B17-003 | 4.544961489278713e+140 |
+| PP-PHU-54 | Phuljhari: Premium Range IX | PP(PHU,54): product profit x32; factor=32 | Own Phuljhari | B17-004 | 7.058758981436955e+140 |
+| TP-097 | Sales Pitch XVII | TD(97): tap profit x2.18942002; factor=2.18942002 |  | B17-005 | 1.096402276070734e+141 |
+| PP-ANA-54 | Anar: Premium Range IX | PP(ANA,54): product profit x32; factor=32 | Own Anar | B17-006 | 1.703157977118106e+141 |
+| SK-HH-C-08 | Helping Hands: Faster Recovery VIII | SC(HH,8): skill effect x0.75; factor=0.75 |  | B17-007 | 2.645960563518138e+141 |
+| GP-65 | Festival Footfall IX | GP(65): global profit x6; factor=6 |  | B17-008 | 4.111073396302434e+141 |
+| PP-CHA-54 | Chakri: Premium Range IX | PP(CHA,54): product profit x32; factor=32 | Own Chakri | B17-009 | 6.388082604022439e+141 |
+| PC-BOX-13 | Celebration boxes: Wholesale Deal IV | PC(BOX,13): remaining cost x0.015848931924611134; factor=0.015848931924611134 | Own Celebration boxes | B17-010 | 9.927256554578290e+141 |
+| PP-ROC-54 | Rockets: Premium Range IX | PP(ROC,54): product profit x32; factor=32 | Own Rockets | B17-011 | 1.542877328690027e+142 |
+| TC-33 | Sales Coaching VII | TC(33): remaining cost x0.015117750706156625; factor=0.015117750706156625 |  | B17-012 | 2.398153505195445e+142 |
+| PP-SMC-54 | Small crackers: Premium Range IX | PP(SMC,54): product profit x32; factor=32 | Own Small crackers | B17-013 | 3.727914896607255e+142 |
+| TP-098 | Counter Display XVII | TD(98): tap profit x2; factor=2 |  | B17-014 | 5.795600344461978e+142 |
+| PP-STR-54 | Cracker strings Signature Breakthrough IX | PP(STR,54): product profit x32; factor=32 | Own Cracker strings | B17-015 | 9.011027169526576e+142 |
+| PP-AER-54 | Aerial shots: Premium Range IX | PP(AER,54): product profit x32; factor=32 | Own Aerial shots | B17-016 | 1.401178930404035e+143 |
+| PC-PHU-14 | Phuljhari: Trusted Supplier IV | PC(PHU,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Phuljhari | B17-017 | 2.178995466470939e+143 |
+| PP-BOX-54 | Celebration boxes: Premium Range IX | PP(BOX,54): product profit x32; factor=32 | Own Celebration boxes | B17-018 | 3.388929112284751e+143 |
+| PP-PHU-55 | Phuljhari Signature Breakthrough X | PP(PHU,55): product profit x2; factor=2 | Own Phuljhari | B17-019 | 5.271231283547180e+143 |
+| GP-66 | Community Trust IX | GP(66): global profit x2; factor=2 |  | B17-020 | 8.199834534978292e+143 |
+| PP-ANA-55 | Anar: Gift Packaging X | PP(ANA,55): product profit x2; factor=2 | Own Anar | B17-021 | 1.275679378283927e+144 |
+| TP-099 | Shop Showmanship XVII | TD(99): tap profit x2; factor=2 |  | B17-022 | 1.984821295065087e+144 |
+| PP-CHA-55 | Chakri: Gift Packaging X | PP(CHA,55): product profit x2; factor=2 | Own Chakri | B17-023 | 3.088479449984996e+144 |
+| SK-BO-P-08 | Larger Bulk Orders VIII | SP(BO,8): skill effect x225; factor=225 |  | B17-024 | 4.806306368701282e+144 |
+| PC-ANA-14 | Anar: Trusted Supplier IV | PC(ANA,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Anar | B17-025 | 7.480344764324245e+144 |
+| PP-ROC-55 | Rockets: Gift Packaging X | PP(ROC,55): product profit x2; factor=2 | Own Rockets | B17-026 | 1.164327642389545e+145 |
+| UC-27 | Upgrade Price Discount 27 | UC(27): remaining cost x0.5497218369068545; factor=0.5497218369068545 |  | B17-027 | 1.812475860688917e+145 |
+| PP-SMC-55 | Small crackers: Gift Packaging X | PP(SMC,55): product profit x2; factor=2 | Own Small crackers | B17-028 | 2.821711990052562e+145 |
+| PP-STR-55 | Cracker strings: Gift Packaging X | PP(STR,55): product profit x2; factor=2 | Own Cracker strings | B17-029 | 4.393357712056416e+145 |
+| TP-100 | Crowd Appeal XVII | TD(100): tap profit x2; factor=2 |  | B17-030 | 6.841067518530268e+145 |
+| PP-AER-55 | Aerial shots Signature Breakthrough X | PP(AER,55): product profit x2; factor=2 | Own Aerial shots | B17-031 | 1.065355659957602e+146 |
+| GP-67 | Local Advertising IX | GP(67): global profit x3; factor=3 |  | B17-032 | 1.659238390897881e+146 |
+| PP-BOX-55 | Celebration boxes: Gift Packaging X | PP(BOX,55): product profit x2; factor=2 | Own Celebration boxes | B17-033 | 2.584439602929085e+146 |
+| PC-CHA-14 | Chakri: Trusted Supplier IV | PC(CHA,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Chakri | B17-034 | 4.025941096853187e+146 |
+| PP-PHU-56 | Phuljhari: Festival Display X | PP(PHU,56): product profit x2; factor=2 | Own Phuljhari | B17-035 | 6.272084129253713e+146 |
+| PP-ANA-56 | Anar: Festival Display X | PP(ANA,56): product profit x2; factor=2 | Own Anar | B17-036 | 9.772366877354238e+146 |
+| TC-34 | Team Handbook VII | TC(34): remaining cost x0.014251026703029981; factor=0.014251026703029981 |  | B17-037 | 1.522758668575657e+147 |
+| TP-101 | Festival Calls XVII | TD(101): tap profit x2; factor=2 |  | B17-038 | 2.373044199851879e+147 |
+| PP-CHA-56 | Chakri Signature Breakthrough X | PP(CHA,56): product profit x2; factor=2 | Own Chakri | B17-039 | 3.698486209737473e+147 |
+| PP-ROC-56 | Rockets: Festival Display X | PP(ROC,56): product profit x2; factor=2 | Own Rockets | B17-040 | 5.764818115437219e+147 |
+| PC-ROC-14 | Rockets: Trusted Supplier IV | PC(ROC,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Rockets | B17-041 | 8.986501367918603e+147 |
+| PP-SMC-56 | Small crackers: Festival Display X | PP(SMC,56): product profit x2; factor=2 | Own Small crackers | B17-042 | 1.401003142559124e+148 |
+| SK-BO-C-08 | Bulk Order: Faster Recovery VIII | SC(BO,8): skill effect x0.8333333333333334; factor=0.8333333333333334 |  | B17-043 | 2.184394143935864e+148 |
+| PP-STR-56 | Cracker strings: Festival Display X | PP(STR,56): product profit x2; factor=2 | Own Cracker strings | B17-044 | 3.406170059676423e+148 |
+| GP-68 | Shopfront Glow IX | GP(68): global profit x4; factor=4 |  | B17-045 | 5.311841164337622e+148 |
+| PP-AER-56 | Aerial shots: Festival Display X | PP(AER,56): product profit x2; factor=2 | Own Aerial shots | B17-046 | 8.284518320429993e+148 |
+| TP-102 | Shop Reputation XVII | TD(102): tap profit x2; factor=2 |  | B17-047 | 1.292209336565424e+149 |
+| SK-HH-D-07 | Helping Hands: Longer Window VII | SD(HH,7): skill effect x1.4375; factor=1.4375 |  | B17-048 | 2.015774356168584e+149 |
+| PP-BOX-56 | Celebration boxes: Festival Display X | PP(BOX,56): product profit x2; factor=2 | Own Celebration boxes | B17-049 | 3.144809819073535e+149 |
+| PC-SMC-14 | Small crackers: Trusted Supplier IV | PC(SMC,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Small crackers | B17-050 | 4.906708828895136e+149 |
 
-## Band 18
+## Page 18
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-52 | Aerial shots: Signature Collection IX | PP(AER,52): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-51 | B18-001 | 1.6895e+30 |
-| PP-ANA-52 | Anar Signature Breakthrough IX | PP(ANA,52): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-51 | B18-002 | 1.73343e+30 |
-| PP-BOX-52 | Celebration boxes Signature Breakthrough IX | PP(BOX,52): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-51 | B18-003 | 1.77851e+30 |
-| PP-CHA-52 | Chakri: Signature Collection IX | PP(CHA,52): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-51 | B18-004 | 1.82476e+30 |
-| PP-PHU-52 | Phuljhari: Signature Collection IX | PP(PHU,52): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-51 | B18-005 | 1.87221e+30 |
-| PP-ROC-52 | Rockets: Signature Collection IX | PP(ROC,52): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-51 | B18-006 | 1.9209e+30 |
-| PP-SMC-52 | Small crackers: Signature Collection IX | PP(SMC,52): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-51 | B18-007 | 1.97085e+30 |
-| PP-STR-52 | Cracker strings: Signature Collection IX | PP(STR,52): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-51 | B18-008 | 2.0221e+30 |
-| PP-AER-53 | Aerial shots: Celebration Specialist IX | PP(AER,53): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-52 | B18-009 | 2.07468e+30 |
-| PP-ANA-53 | Anar: Celebration Specialist IX | PP(ANA,53): multiply family normal profit by x1.6 | Own Anar; PP-ANA-52 | B18-010 | 2.12864e+30 |
-| PP-BOX-53 | Celebration boxes: Celebration Specialist IX | PP(BOX,53): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-52 | B18-011 | 2.18399e+30 |
-| PP-CHA-53 | Chakri: Celebration Specialist IX | PP(CHA,53): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-52 | B18-012 | 2.24078e+30 |
-| PP-PHU-53 | Phuljhari: Celebration Specialist IX | PP(PHU,53): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-52 | B18-013 | 2.29905e+30 |
-| PP-ROC-53 | Rockets Signature Breakthrough IX | PP(ROC,53): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-52 | B18-014 | 2.35884e+30 |
-| PP-SMC-53 | Small crackers: Celebration Specialist IX | PP(SMC,53): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-52 | B18-015 | 2.42018e+30 |
-| PP-STR-53 | Cracker strings: Celebration Specialist IX | PP(STR,53): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-52 | B18-016 | 2.48311e+30 |
-| PP-AER-54 | Aerial shots: Premium Range IX | PP(AER,54): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-53 | B18-017 | 2.54769e+30 |
-| PP-ANA-54 | Anar: Premium Range IX | PP(ANA,54): multiply family normal profit by x1.6 | Own Anar; PP-ANA-53 | B18-018 | 2.61394e+30 |
-| PP-BOX-54 | Celebration boxes: Premium Range IX | PP(BOX,54): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-53 | B18-019 | 2.68191e+30 |
-| PP-CHA-54 | Chakri: Premium Range IX | PP(CHA,54): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-53 | B18-020 | 2.75165e+30 |
-| PP-PHU-54 | Phuljhari: Premium Range IX | PP(PHU,54): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-53 | B18-021 | 2.82321e+30 |
-| PP-ROC-54 | Rockets: Premium Range IX | PP(ROC,54): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-53 | B18-022 | 2.89663e+30 |
-| PP-SMC-54 | Small crackers: Premium Range IX | PP(SMC,54): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-53 | B18-023 | 2.97195e+30 |
-| PP-STR-54 | Cracker strings Signature Breakthrough IX | PP(STR,54): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-53 | B18-024 | 3.04923e+30 |
-| PC-AER-14 | Aerial shots: Trusted Supplier IV | PC(AER,14): total run family-level discount becomes 30.625% | Own Aerial shots; PC-AER-13 | B18-025 | 3.12853e+30 |
-| PC-ANA-14 | Anar: Trusted Supplier IV | PC(ANA,14): total run family-level discount becomes 30.625% | Own Anar; PC-ANA-13 | B18-026 | 3.20988e+30 |
-| PC-BOX-14 | Celebration boxes: Trusted Supplier IV | PC(BOX,14): total run family-level discount becomes 30.625% | Own Celebration boxes; PC-BOX-13 | B18-027 | 3.29336e+30 |
-| PC-CHA-14 | Chakri: Trusted Supplier IV | PC(CHA,14): total run family-level discount becomes 30.625% | Own Chakri; PC-CHA-13 | B18-028 | 3.379e+30 |
-| PC-PHU-14 | Phuljhari: Trusted Supplier IV | PC(PHU,14): total run family-level discount becomes 30.625% | Own Phuljhari; PC-PHU-13 | B18-029 | 3.46687e+30 |
-| PC-ROC-14 | Rockets: Trusted Supplier IV | PC(ROC,14): total run family-level discount becomes 30.625% | Own Rockets; PC-ROC-13 | B18-030 | 3.55702e+30 |
-| PC-SMC-14 | Small crackers: Trusted Supplier IV | PC(SMC,14): total run family-level discount becomes 30.625% | Own Small crackers; PC-SMC-13 | B18-031 | 3.64952e+30 |
-| PC-STR-14 | Cracker strings: Trusted Supplier IV | PC(STR,14): total run family-level discount becomes 30.625% | Own Cracker strings; PC-STR-13 | B18-032 | 3.74442e+30 |
-| TP-103 | Sales Pitch XVIII | TD(52): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-102 | B18-033 | 3.8418e+30 |
-| TP-104 | Counter Display XVIII | TD(53): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-103 | B18-034 | 3.9417e+30 |
-| TP-105 | Shop Showmanship XVIII | TL(52): linked share A becomes 27.55932203% | Own 2+ families; TP-104 | B18-035 | 4.0442e+30 |
-| TP-106 | Crowd Appeal XVIII | TL(53): linked share A becomes 27.86440678% | Own 2+ families; TP-105 | B18-036 | 4.14937e+30 |
-| TP-107 | Festival Calls XVIII | TD(54): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-106 | B18-037 | 4.25727e+30 |
-| TP-108 | Shop Reputation XVIII | TL(54): linked share A becomes 28.16949153% | Own 2+ families; TP-107 | B18-038 | 4.36798e+30 |
-| TC-35 | Customer Insight VII | TC(35): total run tap-level discount becomes 30.625% | Own 1+ families; TC-34 | B18-039 | 4.48157e+30 |
-| TC-36 | Practice Routine VIII | TC(36): total run tap-level discount becomes 31.5% | Own 1+ families; TC-35 | B18-040 | 4.59811e+30 |
-| GP-69 | Delivery Reach IX | GP(69): normal products and independent tap B x1.10, once | Own 1+ families; GP-68 | B18-041 | 4.71768e+30 |
-| GP-70 | Celebration Demand IX | GP(70): normal products and independent tap B x1.10, once | Own 1+ families; GP-69 | B18-042 | 4.84036e+30 |
-| GP-71 | Brand Recognition IX | GP(71): normal products and independent tap B x1.10, once | Own 1+ families; GP-70 | B18-043 | 4.96623e+30 |
-| GP-72 | Customer Loyalty IX | GP(72): normal products and independent tap B x1.10, once | Own 1+ families; GP-71 | B18-044 | 5.09537e+30 |
-| UC-28 | Distributor Alliance VII | UC(28): total run named-cash discount becomes 30.625% | Own 1+ families; UC-27 | B18-045 | 5.22788e+30 |
-| SK-BO-P-11 | Larger Bulk Orders XI | SP(BO,11): 280 seconds of normal P | Own 3+ families; SK-BO-P-10 | B18-046 | 5.36382e+30 |
-| SK-BO-C-11 | Bulk Order: Faster Recovery XI | SC(BO,11): cumulative run cooldown factor 0.77083333 | SK-BO-P-01; SK-BO-C-10 | B18-047 | 5.50331e+30 |
-| XL-AER-BOX-04 | Aerial shots / Celebration boxes: Display Partnership IV | XL(AER,BOX,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-AER-BOX-03 | B18-048 | 5.64642e+30 |
-| XL-ANA-CHA-04 | Anar / Chakri: Display Partnership IV | XL(ANA,CHA,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-ANA-CHA-03 | B18-049 | 5.79325e+30 |
-| XL-BOX-PHU-04 | Celebration boxes / Phuljhari: Display Partnership IV | XL(BOX,PHU,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-BOX-PHU-03 | B18-050 | 5.9439e+30 |
-| XL-CHA-ROC-04 | Chakri / Rockets: Display Partnership IV | XL(CHA,ROC,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-CHA-ROC-03 | B18-051 | 6.09847e+30 |
-| XL-PHU-ANA-04 | Phuljhari / Anar: Display Partnership IV | XL(PHU,ANA,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-PHU-ANA-03 | B18-052 | 6.25706e+30 |
-| XL-ROC-SMC-04 | Rockets / Small crackers: Display Partnership IV | XL(ROC,SMC,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-ROC-SMC-03 | B18-053 | 6.41977e+30 |
-| XL-SMC-STR-04 | Small crackers / Cracker strings: Display Partnership IV | XL(SMC,STR,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-SMC-STR-03 | B18-054 | 6.58671e+30 |
-| XL-STR-AER-04 | Cracker strings / Aerial shots: Display Partnership IV | XL(STR,AER,4): beneficiary normal product profit x1.50 | Own both families; Source level >= 300; XL-STR-AER-03 | B18-055 | 6.758e+30 |
+| PP-PHU-57 | Phuljhari: Regular Customers X | PP(PHU,57): product profit x4; factor=4 | Own Phuljhari | B18-001 | 7.656488187316355e+149 |
+| PP-ANA-57 | Anar: Regular Customers X | PP(ANA,57): product profit x4; factor=4 | Own Anar | B18-002 | 1.194847215948888e+150 |
+| PP-CHA-57 | Chakri: Regular Customers X | PP(CHA,57): product profit x4; factor=4 | Own Chakri | B18-003 | 1.864827069088221e+150 |
+| TP-103 | Sales Pitch XVIII | TD(103): tap profit x2; factor=2 |  | B18-004 | 2.910771960271523e+150 |
+| PP-ROC-57 | Rockets: Regular Customers X | PP(ROC,57): product profit x4; factor=4 | Own Rockets | B18-005 | 4.543821165439755e+150 |
+| PC-STR-14 | Cracker strings: Trusted Supplier IV | PC(STR,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Cracker strings | B18-006 | 7.093779863086557e+150 |
+| PP-SMC-57 | Small crackers Signature Breakthrough X | PP(SMC,57): product profit x4; factor=4 | Own Small crackers | B18-007 | 1.107586397801199e+151 |
+| GP-69 | Delivery Reach IX | GP(69): global profit x5; factor=5 |  | B18-008 | 1.729501525519930e+151 |
+| UC-28 | Upgrade Price Discount 28 | UC(28): remaining cost x0.5393968328407993; factor=0.5393968328407993 |  | B18-009 | 2.700895086129304e+151 |
+| PP-STR-57 | Cracker strings: Regular Customers X | PP(STR,57): product profit x4; factor=4 | Own Cracker strings | B18-010 | 4.218304337133226e+151 |
+| PP-AER-57 | Aerial shots: Regular Customers X | PP(AER,57): product profit x4; factor=4 | Own Aerial shots | B18-011 | 6.588879023917057e+151 |
+| TC-35 | Customer Insight VII | TC(35): remaining cost x0.013433993325989003; factor=0.013433993325989003 |  | B18-012 | 1.029268276339574e+152 |
+| SK-BO-P-09 | Larger Bulk Orders IX | SP(BO,9): skill effect x240; factor=240 |  | B18-013 | 1.608011204104266e+152 |
+| PP-BOX-57 | Celebration boxes: Regular Customers X | PP(BOX,57): product profit x4; factor=4 | Own Celebration boxes | B18-014 | 2.512424287138880e+152 |
+| TP-104 | Counter Display XVIII | TD(104): tap profit x2; factor=2 |  | B18-015 | 3.925909870300719e+152 |
+| PC-AER-14 | Aerial shots: Trusted Supplier IV | PC(AER,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Aerial shots | B18-016 | 6.135233504360443e+152 |
+| PP-PHU-58 | Phuljhari: Signature Collection X | PP(PHU,58): product profit x8; factor=8 | Own Phuljhari | B18-017 | 9.588822895562163e+152 |
+| PP-ANA-58 | Anar Signature Breakthrough X | PP(ANA,58): product profit x8; factor=8 | Own Anar | B18-018 | 1.498797388384664e+153 |
+| PP-CHA-58 | Chakri: Signature Collection X | PP(CHA,58): product profit x8; factor=8 | Own Chakri | B18-019 | 2.342955216183788e+153 |
+| GP-70 | Celebration Demand IX | GP(70): global profit x6; factor=6 |  | B18-020 | 3.662928798083098e+153 |
+| PP-ROC-58 | Rockets: Signature Collection X | PP(ROC,58): product profit x8; factor=8 | Own Rockets | B18-021 | 5.727121482717676e+153 |
+| TP-105 | Shop Showmanship XVIII | TD(105): tap profit x3.29165013; factor=3.29165013 |  | B18-022 | 8.955456805773858e+153 |
+| PC-BOX-14 | Celebration boxes: Trusted Supplier IV | PC(BOX,14): remaining cost x0.013593563908785257; factor=0.013593563908785257 | Own Celebration boxes | B18-023 | 1.400498090773818e+154 |
+| PP-SMC-58 | Small crackers: Signature Collection X | PP(SMC,58): product profit x8; factor=8 | Own Small crackers | B18-024 | 2.190386369005520e+154 |
+| PP-STR-58 | Cracker strings: Signature Collection X | PP(STR,58): product profit x8; factor=8 | Own Cracker strings | B18-025 | 3.426118379146617e+154 |
+| PP-AER-58 | Aerial shots: Signature Collection X | PP(AER,58): product profit x8; factor=8 | Own Aerial shots | B18-026 | 5.359538938632129e+154 |
+| SK-BO-C-09 | Bulk Order: Faster Recovery IX | SC(BO,9): skill effect x0.8125; factor=0.8125 |  | B18-027 | 8.384862128220442e+154 |
+| PP-BOX-58 | Celebration boxes Signature Breakthrough X | PP(BOX,58): product profit x8; factor=8 | Own Celebration boxes | B18-028 | 1.311921504017233e+155 |
+| PC-PHU-15 | Phuljhari: Bulk Procurement IV | PC(PHU,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Phuljhari | B18-029 | 2.052878304723494e+155 |
+| TP-106 | Crowd Appeal XVIII | TD(106): tap profit x3.03320632; factor=3.03320632 |  | B18-030 | 3.212639455260296e+155 |
+| PP-PHU-59 | Phuljhari: Celebration Specialist X | PP(PHU,59): product profit x16; factor=16 | Own Phuljhari | B18-031 | 5.028103420733322e+155 |
+| PP-ANA-59 | Anar: Celebration Specialist X | PP(ANA,59): product profit x16; factor=16 | Own Anar | B18-032 | 7.870273857528880e+155 |
+| GP-71 | Brand Recognition IX | GP(71): global profit x2; factor=2 |  | B18-033 | 1.232023286709811e+156 |
+| PP-CHA-59 | Chakri: Celebration Specialist X | PP(CHA,59): product profit x16; factor=16 | Own Chakri | B18-034 | 1.928818745322943e+156 |
+| PP-ROC-59 | Rockets Signature Breakthrough X | PP(ROC,59): product profit x16; factor=16 | Own Rockets | B18-035 | 3.020002823991616e+156 |
+| TC-36 | Practice Routine VIII | TC(36): remaining cost x0.012663801734674032; factor=0.012663801734674032 |  | B18-036 | 4.728971639425962e+156 |
+| PC-ANA-15 | Anar: Bulk Procurement IV | PC(ANA,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Anar | B18-037 | 7.405757709203844e+156 |
+| PP-SMC-59 | Small crackers: Celebration Specialist X | PP(SMC,59): product profit x16; factor=16 | Own Small crackers | B18-038 | 1.159887100804272e+157 |
+| TP-107 | Festival Calls XVIII | TD(107): tap profit x6.33345493; factor=6.33345493 |  | B18-039 | 1.816792663194387e+157 |
+| PP-STR-59 | Cracker strings: Celebration Specialist X | PP(STR,59): product profit x16; factor=16 | Own Cracker strings | B18-040 | 2.846023262790005e+157 |
+| UC-29 | Upgrade Price Discount 29 | UC(29): remaining cost x0.5292657554151046; factor=0.5292657554151046 |  | B18-041 | 4.458768797228286e+157 |
+| PP-AER-59 | Aerial shots: Celebration Specialist X | PP(AER,59): product profit x16; factor=16 | Own Aerial shots | B18-042 | 6.986101487086911e+157 |
+| PP-BOX-59 | Celebration boxes: Celebration Specialist X | PP(BOX,59): product profit x16; factor=16 | Own Celebration boxes | B18-043 | 1.094707911826616e+158 |
+| GP-72 | Customer Loyalty IX | GP(72): global profit x3; factor=3 |  | B18-044 | 1.715556607593454e+158 |
+| PC-CHA-15 | Chakri: Bulk Procurement IV | PC(CHA,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Chakri | B18-045 | 2.688780057421740e+158 |
+| PP-PHU-60 | Phuljhari: Premium Range X | PP(PHU,60): product profit x32; factor=32 | Own Phuljhari | B18-046 | 4.214527900248164e+158 |
+| TP-108 | Shop Reputation XVIII | TD(108): tap profit x32; factor=32 |  | B18-047 | 6.606721768221156e+158 |
+| PP-ANA-60 | Anar: Premium Range X | PP(ANA,60): product profit x32; factor=32 | Own Anar | B18-048 | 1.035777639901712e+159 |
+| PP-CHA-60 | Chakri: Premium Range X | PP(CHA,60): product profit x32; factor=32 | Own Chakri | B18-049 | 1.624016639201451e+159 |
+| PP-ROC-60 | Rockets: Premium Range X | PP(ROC,60): product profit x32; factor=32 | Own Rockets | B18-050 | 2.546583068587714e+159 |
 
-## Band 19
+## Page 19
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-55 | Aerial shots Signature Breakthrough X | PP(AER,55): multiply family normal profit by x8; complete signature effect | Own Aerial shots; PP-AER-54 | B19-001 | 5.23745e+31 |
-| PP-ANA-55 | Anar: Gift Packaging X | PP(ANA,55): multiply family normal profit by x1.6 | Own Anar; PP-ANA-54 | B19-002 | 5.40131e+31 |
-| PP-BOX-55 | Celebration boxes: Gift Packaging X | PP(BOX,55): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-54 | B19-003 | 5.57029e+31 |
-| PP-CHA-55 | Chakri: Gift Packaging X | PP(CHA,55): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-54 | B19-004 | 5.74456e+31 |
-| PP-PHU-55 | Phuljhari Signature Breakthrough X | PP(PHU,55): multiply family normal profit by x8; complete signature effect | Own Phuljhari; PP-PHU-54 | B19-005 | 5.92429e+31 |
-| PP-ROC-55 | Rockets: Gift Packaging X | PP(ROC,55): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-54 | B19-006 | 6.10963e+31 |
-| PP-SMC-55 | Small crackers: Gift Packaging X | PP(SMC,55): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-54 | B19-007 | 6.30078e+31 |
-| PP-STR-55 | Cracker strings: Gift Packaging X | PP(STR,55): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-54 | B19-008 | 6.49791e+31 |
-| PP-AER-56 | Aerial shots: Festival Display X | PP(AER,56): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-55 | B19-009 | 6.7012e+31 |
-| PP-ANA-56 | Anar: Festival Display X | PP(ANA,56): multiply family normal profit by x1.6 | Own Anar; PP-ANA-55 | B19-010 | 6.91085e+31 |
-| PP-BOX-56 | Celebration boxes: Festival Display X | PP(BOX,56): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-55 | B19-011 | 7.12706e+31 |
-| PP-CHA-56 | Chakri Signature Breakthrough X | PP(CHA,56): multiply family normal profit by x8; complete signature effect | Own Chakri; PP-CHA-55 | B19-012 | 7.35004e+31 |
-| PP-PHU-56 | Phuljhari: Festival Display X | PP(PHU,56): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-55 | B19-013 | 7.58e+31 |
-| PP-ROC-56 | Rockets: Festival Display X | PP(ROC,56): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-55 | B19-014 | 7.81714e+31 |
-| PP-SMC-56 | Small crackers: Festival Display X | PP(SMC,56): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-55 | B19-015 | 8.06171e+31 |
-| PP-STR-56 | Cracker strings: Festival Display X | PP(STR,56): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-55 | B19-016 | 8.31393e+31 |
-| PP-AER-57 | Aerial shots: Regular Customers X | PP(AER,57): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-56 | B19-017 | 8.57404e+31 |
-| PP-ANA-57 | Anar: Regular Customers X | PP(ANA,57): multiply family normal profit by x1.6 | Own Anar; PP-ANA-56 | B19-018 | 8.84228e+31 |
-| PP-BOX-57 | Celebration boxes: Regular Customers X | PP(BOX,57): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-56 | B19-019 | 9.11892e+31 |
-| PP-CHA-57 | Chakri: Regular Customers X | PP(CHA,57): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-56 | B19-020 | 9.40422e+31 |
-| PP-PHU-57 | Phuljhari: Regular Customers X | PP(PHU,57): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-56 | B19-021 | 9.69844e+31 |
-| PP-ROC-57 | Rockets: Regular Customers X | PP(ROC,57): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-56 | B19-022 | 1.00019e+32 |
-| PP-SMC-57 | Small crackers Signature Breakthrough X | PP(SMC,57): multiply family normal profit by x8; complete signature effect | Own Small crackers; PP-SMC-56 | B19-023 | 1.03148e+32 |
-| PP-STR-57 | Cracker strings: Regular Customers X | PP(STR,57): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-56 | B19-024 | 1.06375e+32 |
-| PC-AER-15 | Aerial shots: Bulk Procurement IV | PC(AER,15): total run family-level discount becomes 32.8125% | Own Aerial shots; PC-AER-14 | B19-025 | 1.09703e+32 |
-| PC-ANA-15 | Anar: Bulk Procurement IV | PC(ANA,15): total run family-level discount becomes 32.8125% | Own Anar; PC-ANA-14 | B19-026 | 1.13135e+32 |
-| PC-BOX-15 | Celebration boxes: Bulk Procurement IV | PC(BOX,15): total run family-level discount becomes 32.8125% | Own Celebration boxes; PC-BOX-14 | B19-027 | 1.16675e+32 |
-| PC-CHA-15 | Chakri: Bulk Procurement IV | PC(CHA,15): total run family-level discount becomes 32.8125% | Own Chakri; PC-CHA-14 | B19-028 | 1.20325e+32 |
-| PC-PHU-15 | Phuljhari: Bulk Procurement IV | PC(PHU,15): total run family-level discount becomes 32.8125% | Own Phuljhari; PC-PHU-14 | B19-029 | 1.24089e+32 |
-| PC-ROC-15 | Rockets: Bulk Procurement IV | PC(ROC,15): total run family-level discount becomes 32.8125% | Own Rockets; PC-ROC-14 | B19-030 | 1.27972e+32 |
-| PC-SMC-15 | Small crackers: Bulk Procurement IV | PC(SMC,15): total run family-level discount becomes 32.8125% | Own Small crackers; PC-SMC-14 | B19-031 | 1.31975e+32 |
-| PC-STR-15 | Cracker strings: Bulk Procurement IV | PC(STR,15): total run family-level discount becomes 32.8125% | Own Cracker strings; PC-STR-14 | B19-032 | 1.36104e+32 |
-| TP-109 | Sales Pitch XIX | TD(55): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-108 | B19-033 | 1.40363e+32 |
-| TP-110 | Counter Display XIX | TD(56): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-109 | B19-034 | 1.44754e+32 |
-| TP-111 | Shop Showmanship XIX | TL(55): linked share A becomes 28.47457627% | Own 2+ families; TP-110 | B19-035 | 1.49283e+32 |
-| TP-112 | Crowd Appeal XIX | TL(56): linked share A becomes 28.77966102% | Own 2+ families; TP-111 | B19-036 | 1.53953e+32 |
-| TP-113 | Festival Calls XIX | TD(57): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-112 | B19-037 | 1.5877e+32 |
-| TP-114 | Shop Reputation XIX | TL(57): linked share A becomes 29.08474576% | Own 2+ families; TP-113 | B19-038 | 1.63737e+32 |
-| TC-37 | Counter Training VIII | TC(37): total run tap-level discount becomes 32.375% | Own 1+ families; TC-36 | B19-039 | 1.6886e+32 |
-| TC-38 | Sales Coaching VIII | TC(38): total run tap-level discount becomes 33.25% | Own 1+ families; TC-37 | B19-040 | 1.74143e+32 |
-| GP-73 | Festival Footfall X | GP(73): normal products and independent tap B x1.10, once | Own 1+ families; GP-72 | B19-041 | 1.79591e+32 |
-| GP-74 | Community Trust X | GP(74): normal products and independent tap B x1.10, once | Own 1+ families; GP-73 | B19-042 | 1.85209e+32 |
-| GP-75 | Local Advertising X | GP(75): normal products and independent tap B x1.10, once | Own 1+ families; GP-74 | B19-043 | 1.91004e+32 |
-| GP-76 | Shopfront Glow X | GP(76): normal products and independent tap B x1.10, once | Own 1+ families; GP-75 | B19-044 | 1.9698e+32 |
-| UC-29 | Supplier Network VIII | UC(29): total run named-cash discount becomes 31.71875% | Own 1+ families; UC-28 | B19-045 | 2.03142e+32 |
-| UC-30 | Trade Association VIII | UC(30): total run named-cash discount becomes 32.8125% | Own 1+ families; UC-29 | B19-046 | 2.09498e+32 |
+| SK-BO-P-10 | Larger Bulk Orders X | SP(BO,10): skill effect x260; factor=260 |  | B19-001 | 3.993637570958385e+159 |
+| PP-SMC-60 | Small crackers: Premium Range X | PP(SMC,60): product profit x32; factor=32 | Own Small crackers | B19-002 | 6.263583638318166e+159 |
+| PC-ROC-15 | Rockets: Bulk Procurement IV | PC(ROC,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Rockets | B19-003 | 9.824728143509607e+159 |
+| PP-STR-60 | Cracker strings Signature Breakthrough X | PP(STR,60): product profit x32; factor=32 | Own Cracker strings | B19-004 | 1.541209340835835e+160 |
+| TP-109 | Sales Pitch XIX | TD(109): tap profit x2.66656873; factor=2.66656873 |  | B19-005 | 2.417943521775004e+160 |
+| PP-AER-60 | Aerial shots: Premium Range X | PP(AER,60): product profit x32; factor=32 | Own Aerial shots | B19-006 | 3.793797113663730e+160 |
+| GP-73 | Festival Footfall X | GP(73): global profit x4; factor=4 |  | B19-007 | 5.953131564750562e+160 |
+| SK-FR-D-08 | Festival Rush: Longer Window VIII | SD(FR,8): skill effect x1.5; factor=1.5 |  | B19-008 | 9.342439387263367e+160 |
+| PP-BOX-60 | Celebration boxes: Premium Range X | PP(BOX,60): product profit x32; factor=32 | Own Celebration boxes | B19-009 | 1.466285455126525e+161 |
+| PP-PHU-61 | Phuljhari: Profit Expansion 1 | PP(PHU,61): product profit x2; factor=2 | Own Phuljhari | B19-010 | 2.301548831990132e+161 |
+| PC-SMC-15 | Small crackers: Bulk Procurement IV | PC(SMC,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Small crackers | B19-011 | 3.612977777759515e+161 |
+| PP-ANA-61 | Anar: Profit Expansion 1 | PP(ANA,61): product profit x2; factor=2 | Own Anar | B19-012 | 5.672229790322757e+161 |
+| TC-37 | Counter Training VIII | TC(37): remaining cost x0.011937766417144365; factor=0.011937766417144365 |  | B19-013 | 8.906063184848530e+161 |
+| SK-BO-C-10 | Bulk Order: Faster Recovery X | SC(BO,10): skill effect x0.7916666666666666; factor=0.7916666666666666 |  | B19-014 | 1.398495769346316e+162 |
+| TP-110 | Counter Display XIX | TD(110): tap profit x2.66656873; factor=2.66656873 |  | B19-015 | 2.196240881187648e+162 |
+| PP-CHA-61 | Chakri: Profit Expansion 1 | PP(CHA,61): product profit x2; factor=2 | Own Chakri | B19-016 | 3.449389326342818e+162 |
+| PP-ROC-61 | Rockets: Profit Expansion 1 | PP(ROC,61): product profit x2; factor=2 | Own Rockets | B19-017 | 5.418110879722760e+162 |
+| PP-SMC-61 | Small crackers: Profit Expansion 1 | PP(SMC,61): product profit x2; factor=2 | Own Small crackers | B19-018 | 8.511321415675109e+162 |
+| PC-STR-15 | Cracker strings: Bulk Procurement IV | PC(STR,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Cracker strings | B19-019 | 1.337178925841477e+163 |
+| GP-74 | Community Trust X | GP(74): global profit x5; factor=5 |  | B19-020 | 2.100997255384924e+163 |
+| PP-STR-61 | Cracker strings: Profit Expansion 1 | PP(STR,61): product profit x2; factor=2 | Own Cracker strings | B19-021 | 3.301451154246371e+163 |
+| UC-30 | Upgrade Price Discount 30 | UC(30): remaining cost x0.5193249622542707; factor=0.5193249622542707 |  | B19-022 | 5.188331259552281e+163 |
+| TP-111 | Shop Showmanship XIX | TD(111): tap profit x2; factor=2 |  | B19-023 | 8.154436341408290e+163 |
+| PP-AER-61 | Aerial shots: Profit Expansion 1 | PP(AER,61): product profit x2; factor=2 | Own Aerial shots | B19-024 | 1.281750885495759e+164 |
+| PP-BOX-61 | Celebration boxes: Profit Expansion 1 | PP(BOX,61): product profit x2; factor=2 | Own Celebration boxes | B19-025 | 2.014915023462550e+164 |
+| PP-PHU-62 | Phuljhari: Profit Expansion 2 | PP(PHU,62): product profit x2; factor=2 | Own Phuljhari | B19-026 | 3.167767314441763e+164 |
+| PC-AER-15 | Aerial shots: Bulk Procurement IV | PC(AER,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Aerial shots | B19-027 | 4.980732768745318e+164 |
+| PP-ANA-62 | Anar: Profit Expansion 2 | PP(ANA,62): product profit x2; factor=2 | Own Anar | B19-028 | 7.832071407036889e+164 |
+| PP-CHA-62 | Chakri: Profit Expansion 2 | PP(CHA,62): product profit x2; factor=2 | Own Chakri | B19-029 | 1.231695812930555e+165 |
+| TP-112 | Crowd Appeal XIX | TD(112): tap profit x7.0872235; factor=7.0872235 |  | B19-030 | 1.937196702868042e+165 |
+| PP-ROC-62 | Rockets: Profit Expansion 2 | PP(ROC,62): product profit x2; factor=2 | Own Rockets | B19-031 | 3.047104908592704e+165 |
+| GP-75 | Local Advertising X | GP(75): global profit x6; factor=6 |  | B19-032 | 4.793409384539771e+165 |
+| PP-SMC-62 | Small crackers: Profit Expansion 2 | PP(SMC,62): product profit x2; factor=2 | Own Small crackers | B19-033 | 7.541280004910617e+165 |
+| PC-BOX-15 | Celebration boxes: Bulk Procurement IV | PC(BOX,15): remaining cost x0.011659144011798317; factor=0.011659144011798317 | Own Celebration boxes | B19-034 | 1.186558186969933e+166 |
+| PP-STR-62 | Cracker strings: Profit Expansion 2 | PP(STR,62): product profit x2; factor=2 | Own Cracker strings | B19-035 | 1.867138110800026e+166 |
+| PP-AER-62 | Aerial shots: Profit Expansion 2 | PP(AER,62): product profit x2; factor=2 | Own Aerial shots | B19-036 | 2.938375379305553e+166 |
+| TC-38 | Sales Coaching VIII | TC(38): remaining cost x0.011253355826007653; factor=0.011253355826007653 |  | B19-037 | 4.624678414479005e+166 |
+| TP-113 | Festival Calls XIX | TD(113): tap profit x2; factor=2 |  | B19-038 | 7.279461113096269e+166 |
+| PP-BOX-62 | Celebration boxes: Profit Expansion 2 | PP(BOX,62): product profit x2; factor=2 | Own Celebration boxes | B19-039 | 1.145935969332065e+167 |
+| PP-PHU-63 | Phuljhari: Profit Expansion 3 | PP(PHU,63): product profit x4; factor=4 | Own Phuljhari | B19-040 | 1.804117844570714e+167 |
+| SK-BO-P-11 | Larger Bulk Orders XI | SP(BO,11): skill effect x280; factor=280 |  | B19-041 | 2.840618310803679e+167 |
+| PC-PHU-16 | Phuljhari: Factory Partnership IV | PC(PHU,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Phuljhari | B19-042 | 4.473055550968645e+167 |
+| PP-ANA-63 | Anar: Profit Expansion 3 | PP(ANA,63): product profit x4; factor=4 | Own Anar | B19-043 | 7.044320882037592e+167 |
+| GP-76 | Shopfront Glow X | GP(76): global profit x2; factor=2 |  | B19-044 | 1.109474689446891e+168 |
+| PP-CHA-63 | Chakri: Profit Expansion 3 | PP(CHA,63): product profit x4; factor=4 | Own Chakri | B19-045 | 1.747588173085643e+168 |
+| TP-114 | Shop Reputation XIX | TD(114): tap profit x3.26946426; factor=3.26946426 |  | B19-046 | 2.752987403385058e+168 |
+| PP-ROC-63 | Rockets: Profit Expansion 3 | PP(ROC,63): product profit x4; factor=4 | Own Rockets | B19-047 | 4.337233274858882e+168 |
+| SK-BO-C-11 | Bulk Order: Faster Recovery XI | SC(BO,11): skill effect x0.7708333333333334; factor=0.7708333333333334 |  | B19-048 | 6.833839381437020e+168 |
+| PP-SMC-63 | Small crackers: Profit Expansion 3 | PP(SMC,63): product profit x4; factor=4 | Own Small crackers | B19-049 | 1.076862324459173e+169 |
+| PC-ANA-16 | Anar: Factory Partnership IV | PC(ANA,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Anar | B19-050 | 1.697067153838663e+169 |
 
-## Band 20
+## Page 20
 
-Access: cash, ownership, level, and prior-upgrade requirements only. No completed-prestige requirement.
-
-| ID | Name | Effect | Requirements | Price key | Base cash price |
+| ID | Name | Effect | Family metadata (not a gate) | Price key | Base cash price |
 |---|---|---|---|---|---:|
-| PP-AER-58 | Aerial shots: Signature Collection X | PP(AER,58): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-57 | B20-001 | 1.62361e+33 |
-| PP-ANA-58 | Anar Signature Breakthrough X | PP(ANA,58): multiply family normal profit by x8; complete signature effect | Own Anar; PP-ANA-57 | B20-002 | 1.66358e+33 |
-| PP-BOX-58 | Celebration boxes Signature Breakthrough X | PP(BOX,58): multiply family normal profit by x8; complete signature effect | Own Celebration boxes; PP-BOX-57 | B20-003 | 1.70454e+33 |
-| PP-CHA-58 | Chakri: Signature Collection X | PP(CHA,58): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-57 | B20-004 | 1.7465e+33 |
-| PP-PHU-58 | Phuljhari: Signature Collection X | PP(PHU,58): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-57 | B20-005 | 1.7895e+33 |
-| PP-ROC-58 | Rockets: Signature Collection X | PP(ROC,58): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-57 | B20-006 | 1.83355e+33 |
-| PP-SMC-58 | Small crackers: Signature Collection X | PP(SMC,58): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-57 | B20-007 | 1.87869e+33 |
-| PP-STR-58 | Cracker strings: Signature Collection X | PP(STR,58): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-57 | B20-008 | 1.92495e+33 |
-| PP-AER-59 | Aerial shots: Celebration Specialist X | PP(AER,59): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-58 | B20-009 | 1.97234e+33 |
-| PP-ANA-59 | Anar: Celebration Specialist X | PP(ANA,59): multiply family normal profit by x1.6 | Own Anar; PP-ANA-58 | B20-010 | 2.02089e+33 |
-| PP-BOX-59 | Celebration boxes: Celebration Specialist X | PP(BOX,59): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-58 | B20-011 | 2.07065e+33 |
-| PP-CHA-59 | Chakri: Celebration Specialist X | PP(CHA,59): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-58 | B20-012 | 2.12162e+33 |
-| PP-PHU-59 | Phuljhari: Celebration Specialist X | PP(PHU,59): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-58 | B20-013 | 2.17386e+33 |
-| PP-ROC-59 | Rockets Signature Breakthrough X | PP(ROC,59): multiply family normal profit by x8; complete signature effect | Own Rockets; PP-ROC-58 | B20-014 | 2.22737e+33 |
-| PP-SMC-59 | Small crackers: Celebration Specialist X | PP(SMC,59): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-58 | B20-015 | 2.28221e+33 |
-| PP-STR-59 | Cracker strings: Celebration Specialist X | PP(STR,59): multiply family normal profit by x1.6 | Own Cracker strings; PP-STR-58 | B20-016 | 2.3384e+33 |
-| PP-AER-60 | Aerial shots: Premium Range X | PP(AER,60): multiply family normal profit by x1.6 | Own Aerial shots; PP-AER-59 | B20-017 | 2.39597e+33 |
-| PP-ANA-60 | Anar: Premium Range X | PP(ANA,60): multiply family normal profit by x1.6 | Own Anar; PP-ANA-59 | B20-018 | 2.45495e+33 |
-| PP-BOX-60 | Celebration boxes: Premium Range X | PP(BOX,60): multiply family normal profit by x1.6 | Own Celebration boxes; PP-BOX-59 | B20-019 | 2.51539e+33 |
-| PP-CHA-60 | Chakri: Premium Range X | PP(CHA,60): multiply family normal profit by x1.6 | Own Chakri; PP-CHA-59 | B20-020 | 2.57732e+33 |
-| PP-PHU-60 | Phuljhari: Premium Range X | PP(PHU,60): multiply family normal profit by x1.6 | Own Phuljhari; PP-PHU-59 | B20-021 | 2.64077e+33 |
-| PP-ROC-60 | Rockets: Premium Range X | PP(ROC,60): multiply family normal profit by x1.6 | Own Rockets; PP-ROC-59 | B20-022 | 2.70578e+33 |
-| PP-SMC-60 | Small crackers: Premium Range X | PP(SMC,60): multiply family normal profit by x1.6 | Own Small crackers; PP-SMC-59 | B20-023 | 2.7724e+33 |
-| PP-STR-60 | Cracker strings Signature Breakthrough X | PP(STR,60): multiply family normal profit by x8; complete signature effect | Own Cracker strings; PP-STR-59 | B20-024 | 2.84065e+33 |
-| PC-AER-16 | Aerial shots: Factory Partnership IV | PC(AER,16): total run family-level discount becomes 35% | Own Aerial shots; PC-AER-15 | B20-025 | 2.91058e+33 |
-| PC-ANA-16 | Anar: Factory Partnership IV | PC(ANA,16): total run family-level discount becomes 35% | Own Anar; PC-ANA-15 | B20-026 | 2.98224e+33 |
-| PC-BOX-16 | Celebration boxes: Factory Partnership IV | PC(BOX,16): total run family-level discount becomes 35% | Own Celebration boxes; PC-BOX-15 | B20-027 | 3.05566e+33 |
-| PC-CHA-16 | Chakri: Factory Partnership IV | PC(CHA,16): total run family-level discount becomes 35% | Own Chakri; PC-CHA-15 | B20-028 | 3.13089e+33 |
-| PC-PHU-16 | Phuljhari: Factory Partnership IV | PC(PHU,16): total run family-level discount becomes 35% | Own Phuljhari; PC-PHU-15 | B20-029 | 3.20797e+33 |
-| PC-ROC-16 | Rockets: Factory Partnership IV | PC(ROC,16): total run family-level discount becomes 35% | Own Rockets; PC-ROC-15 | B20-030 | 3.28695e+33 |
-| PC-SMC-16 | Small crackers: Factory Partnership IV | PC(SMC,16): total run family-level discount becomes 35% | Own Small crackers; PC-SMC-15 | B20-031 | 3.36787e+33 |
-| PC-STR-16 | Cracker strings: Factory Partnership IV | PC(STR,16): total run family-level discount becomes 35% | Own Cracker strings; PC-STR-15 | B20-032 | 3.45078e+33 |
-| TP-115 | Sales Pitch XX | TD(58): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-114 | B20-033 | 3.53574e+33 |
-| TP-116 | Counter Display XX | TD(59): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-115 | B20-034 | 3.62278e+33 |
-| TP-117 | Shop Showmanship XX | TL(58): linked share A becomes 29.38983051% | Own 2+ families; TP-116 | B20-035 | 3.71197e+33 |
-| TP-118 | Crowd Appeal XX | TL(59): linked share A becomes 29.69491525% | Own 2+ families; TP-117 | B20-036 | 3.80336e+33 |
-| TP-119 | Festival Calls XX | TD(60): independent tap B x1.20; add one owned TD step to mastery M | Own 1+ families; TP-118 | B20-037 | 3.89699e+33 |
-| TP-120 | Shop Reputation XX | TL(60): linked share A becomes 30% | Own 2+ families; TP-119 | B20-038 | 3.99293e+33 |
-| TC-39 | Team Handbook VIII | TC(39): total run tap-level discount becomes 34.125% | Own 1+ families; TC-38 | B20-039 | 4.09124e+33 |
-| TC-40 | Customer Insight VIII | TC(40): total run tap-level discount becomes 35% | Own 1+ families; TC-39 | B20-040 | 4.19196e+33 |
-| GP-77 | Delivery Reach X | GP(77): normal products and independent tap B x1.10, once | Own 1+ families; GP-76 | B20-041 | 4.29516e+33 |
-| GP-78 | Celebration Demand X | GP(78): normal products and independent tap B x1.10, once | Own 1+ families; GP-77 | B20-042 | 4.4009e+33 |
-| GP-79 | Brand Recognition X | GP(79): normal products and independent tap B x1.10, once | Own 1+ families; GP-78 | B20-043 | 4.50925e+33 |
-| GP-80 | Customer Loyalty X | GP(80): normal products and independent tap B x1.10, once | Own 1+ families; GP-79 | B20-044 | 4.62027e+33 |
-| UC-31 | Procurement Office VIII | UC(31): total run named-cash discount becomes 33.90625% | Own 1+ families; UC-30 | B20-045 | 4.73401e+33 |
-| UC-32 | Distributor Alliance VIII | UC(32): total run named-cash discount becomes 35% | Own 1+ families; UC-31 | B20-046 | 4.85056e+33 |
-| SK-FR-P-08 | Stronger Rush VIII | SP(FR,8): Rush product multiplier x4 | Own 1+ families; SK-FR-P-07 | B20-047 | 4.96998e+33 |
-| SK-HH-P-08 | More Helping Hands VIII | SP(HH,8): 16 auto taps/s | Own 2+ families; SK-HH-P-07 | B20-048 | 5.09233e+33 |
-| SK-BO-P-12 | Larger Bulk Orders XII | SP(BO,12): 300 seconds of normal P | Own 3+ families; SK-BO-P-11 | B20-049 | 5.2177e+33 |
-| SK-FR-D-08 | Festival Rush: Longer Window VIII | SD(FR,8): cumulative run duration factor 1.5 | SK-FR-P-01; SK-FR-D-07 | B20-050 | 5.34616e+33 |
-| SK-HH-D-08 | Helping Hands: Longer Window VIII | SD(HH,8): cumulative run duration factor 1.5 | SK-HH-P-01; SK-HH-D-07 | B20-051 | 5.47777e+33 |
-| SK-FR-C-08 | Festival Rush: Faster Recovery VIII | SC(FR,8): cumulative run cooldown factor 0.75 | SK-FR-P-01; SK-FR-C-07 | B20-052 | 5.61263e+33 |
-| SK-HH-C-08 | Helping Hands: Faster Recovery VIII | SC(HH,8): cumulative run cooldown factor 0.75 | SK-HH-P-01; SK-HH-C-07 | B20-053 | 5.75081e+33 |
-| SK-BO-C-12 | Bulk Order: Faster Recovery XII | SC(BO,12): cumulative run cooldown factor 0.75 | SK-BO-P-01; SK-BO-C-11 | B20-054 | 5.89239e+33 |
-| PF-MIX-04 | Celebration Mix: Portfolio Milestone IV | PF(MIX,4): each listed family's normal profit x1.30 | BOX+ROC levels >= 300; PF-MIX-03 (every listed family) | B20-055 | 6.03746e+33 |
-| PF-RHYTHM-04 | Sound and Rhythm: Portfolio Milestone IV | PF(RHYTHM,4): each listed family's normal profit x1.30 | SMC+STR levels >= 300; PF-RHYTHM-03 (every listed family) | B20-056 | 6.18609e+33 |
-| PF-SKY-04 | Skyline Collection: Portfolio Milestone IV | PF(SKY,4): each listed family's normal profit x1.30 | ROC+AER levels >= 300; PF-SKY-03 (every listed family) | B20-057 | 6.33839e+33 |
-| PF-STREET-04 | Street Favourites: Portfolio Milestone IV | PF(STREET,4): each listed family's normal profit x1.30 | PHU+ANA+CHA levels >= 300; PF-STREET-03 (every listed family) | B20-058 | 6.49443e+33 |
+| PP-STR-63 | Cracker strings: Profit Expansion 3 | PP(STR,63): product profit x4; factor=4 | Own Cracker strings | B20-001 | 2.674738336841423e+169 |
+| PP-AER-63 | Aerial shots: Profit Expansion 3 | PP(AER,63): product profit x4; factor=4 | Own Aerial shots | B20-002 | 4.216062170948732e+169 |
+| UC-31 | Upgrade Price Discount 31 | UC(31): remaining cost x0.5095708793947467; factor=0.5095708793947467 |  | B20-003 | 6.646241836574545e+169 |
+| PP-BOX-63 | Celebration boxes: Profit Expansion 3 | PP(BOX,63): product profit x4; factor=4 | Own Celebration boxes | B20-004 | 1.047824871477682e+170 |
+| TP-115 | Sales Pitch XX | TD(115): tap profit x6.53892852; factor=6.53892852 |  | B20-005 | 1.652131817458993e+170 |
+| PP-PHU-64 | Phuljhari: Profit Expansion 4 | PP(PHU,64): product profit x8; factor=8 | Own Phuljhari | B20-006 | 2.605218280429803e+170 |
+| GP-77 | Delivery Reach X | GP(77): global profit x3; factor=3 |  | B20-007 | 4.108534783435788e+170 |
+| PC-CHA-16 | Chakri: Factory Partnership IV | PC(CHA,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Chakri | B20-008 | 6.479973783282343e+170 |
+| PP-ANA-64 | Anar: Profit Expansion 4 | PP(ANA,64): product profit x8; factor=8 | Own Anar | B20-009 | 1.022122524489998e+171 |
+| PP-CHA-64 | Chakri: Profit Expansion 4 | PP(CHA,64): product profit x8; factor=8 | Own Chakri | B20-010 | 1.612412285424406e+171 |
+| PP-ROC-64 | Rockets: Profit Expansion 4 | PP(ROC,64): product profit x8; factor=8 | Own Rockets | B20-011 | 2.543856843211814e+171 |
+| TC-39 | Team Handbook VIII | TC(39): remaining cost x0.010608183551394486; factor=0.010608183551394486 |  | B20-012 | 4.013771694981641e+171 |
+| TP-116 | Counter Display XX | TD(116): tap profit x2; factor=2 |  | B20-013 | 6.333679656269553e+171 |
+| PP-SMC-64 | Small crackers: Profit Expansion 4 | PP(SMC,64): product profit x8; factor=8 | Own Small crackers | B20-014 | 9.995463814941346e+171 |
+| PC-ROC-16 | Rockets: Factory Partnership IV | PC(ROC,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Rockets | B20-015 | 1.577586706743792e+172 |
+| PP-STR-64 | Cracker strings: Profit Expansion 4 | PP(STR,64): product profit x8; factor=8 | Own Cracker strings | B20-016 | 2.490158289603685e+172 |
+| PP-AER-64 | Aerial shots: Profit Expansion 4 | PP(AER,64): product profit x8; factor=8 | Own Aerial shots | B20-017 | 3.931009560747715e+172 |
+| PP-BOX-64 | Celebration boxes: Profit Expansion 4 | PP(BOX,64): product profit x8; factor=8 | Own Celebration boxes | B20-018 | 6.206184398836989e+172 |
+| GP-78 | Celebration Demand X | GP(78): global profit x4; factor=4 |  | B20-019 | 9.799156186765103e+172 |
+| SK-HH-D-08 | Helping Hands: Longer Window VIII | SD(HH,8): skill effect x1.5; factor=1.5 |  | B20-020 | 1.547376916756648e+173 |
+| PP-PHU-65 | Phuljhari: Profit Expansion 5 | PP(PHU,65): product profit x16; factor=16 | Own Phuljhari | B20-021 | 2.443694871656380e+173 |
+| TP-117 | Shop Showmanship XX | TD(117): tap profit x3.51806554; factor=3.51806554 |  | B20-022 | 3.859590869818160e+173 |
+| PP-ANA-65 | Anar: Profit Expansion 5 | PP(ANA,65): product profit x16; factor=16 | Own Anar | B20-023 | 6.096477745168806e+173 |
+| PC-SMC-16 | Small crackers: Factory Partnership IV | PC(SMC,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Small crackers | B20-024 | 9.630750781889014e+173 |
+| PP-CHA-65 | Chakri: Profit Expansion 5 | PP(CHA,65): product profit x16; factor=16 | Own Chakri | B20-025 | 1.521544736158463e+174 |
+| PP-ROC-65 | Rockets: Profit Expansion 5 | PP(ROC,65): product profit x16; factor=16 | Own Rockets | B20-026 | 2.404101152632692e+174 |
+| PP-SMC-65 | Small crackers: Profit Expansion 5 | PP(SMC,65): product profit x16; factor=16 | Own Small crackers | B20-027 | 3.798955241906680e+174 |
+| TP-118 | Crowd Appeal XX | TD(118): tap profit x3.97865277; factor=3.97865277 |  | B20-028 | 6.003700881079347e+174 |
+| PP-STR-65 | Cracker strings: Profit Expansion 5 | PP(STR,65): product profit x16; factor=16 | Own Cracker strings | B20-029 | 9.488932244971340e+174 |
+| SK-BO-P-12 | Larger Bulk Orders XII | SP(BO,12): skill effect x300; factor=300 |  | B20-030 | 1.499888841350716e+175 |
+| PC-STR-16 | Cracker strings: Factory Partnership IV | PC(STR,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Cracker strings | B20-031 | 2.371069216457958e+175 |
+| GP-79 | Brand Recognition X | GP(79): global profit x5; factor=5 |  | B20-032 | 3.748632098099205e+175 |
+| PP-AER-65 | Aerial shots: Profit Expansion 5 | PP(AER,65): product profit x16; factor=16 | Own Aerial shots | B20-033 | 5.927135236658887e+175 |
+| SK-BO-C-12 | Bulk Order: Faster Recovery XII | SC(BO,12): skill effect x0.75; factor=0.75 |  | B20-034 | 9.372604316206383e+175 |
+| PP-BOX-65 | Celebration boxes: Profit Expansion 5 | PP(BOX,65): product profit x16; factor=16 | Own Celebration boxes | B20-035 | 1.482242148537541e+176 |
+| UC-32 | Upgrade Price Discount 32 | UC(32): remaining cost x0.5; factor=0.5 |  | B20-036 | 2.344344675114535e+176 |
+| PP-PHU-66 | Phuljhari: Profit Expansion 6 | PP(PHU,66): product profit x32; factor=32 | Own Phuljhari | B20-037 | 3.708234571414289e+176 |
+| TC-40 | Customer Insight VIII | TC(40): remaining cost x0.010000000000000002; factor=0.010000000000000002 |  | B20-038 | 5.866193206031716e+176 |
+| TP-119 | Festival Calls XX | TD(119): tap profit x3.51806554; factor=3.51806554 |  | B20-039 | 9.280875700294729e+176 |
+| PP-ANA-66 | Anar: Profit Expansion 6 | PP(ANA,66): product profit x32; factor=32 | Own Anar | B20-040 | 1.468469663968862e+177 |
+| PC-AER-16 | Aerial shots: Factory Partnership IV | PC(AER,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Aerial shots | B20-041 | 2.323723401474176e+177 |
+| PP-CHA-66 | Chakri: Profit Expansion 6 | PP(CHA,66): product profit x32; factor=32 | Own Chakri | B20-042 | 3.677454546801861e+177 |
+| PP-ROC-66 | Rockets: Profit Expansion 6 | PP(ROC,66): product profit x32; factor=32 | Own Rockets | B20-043 | 5.820410626336704e+177 |
+| PP-SMC-66 | Small crackers: Profit Expansion 6 | PP(SMC,66): product profit x32; factor=32 | Own Small crackers | B20-044 | 9.213048676839900e+177 |
+| GP-80 | Customer Loyalty X | GP(80): global profit x6; factor=6 |  | B20-045 | 1.458466761584052e+178 |
+| PP-STR-66 | Cracker strings: Profit Expansion 6 | PP(STR,66): product profit x32; factor=32 | Own Cracker strings | B20-046 | 2.309048928786067e+178 |
+| TP-120 | Shop Reputation XX | TD(120): tap profit x4.9041849; factor=4.9041849 |  | B20-047 | 3.656058741504150e+178 |
+| PC-BOX-16 | Celebration boxes: Factory Partnership IV | PC(BOX,16): remaining cost x0.010000000000000002; factor=0.010000000000000002 | Own Celebration boxes | B20-048 | 5.789440881075116e+178 |
+| PP-AER-66 | Aerial shots: Profit Expansion 6 | PP(AER,66): product profit x32; factor=32 | Own Aerial shots | B20-049 | 9.168610248269994e+178 |
+| PP-BOX-66 | Celebration boxes: Profit Expansion 6 | PP(BOX,66): product profit x32; factor=32 | Own Celebration boxes | B20-050 | 1.452157857267672e+179 |

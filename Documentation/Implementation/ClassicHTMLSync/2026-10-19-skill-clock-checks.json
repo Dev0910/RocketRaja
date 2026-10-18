@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-19",
+  "items": [
+    "H2U-006",
+    "H2U-007"
+  ],
+  "syntax": "pass",
+  "clock_checks": [
+    {
+      "name": "Ready is full gold before activation",
+      "passed": true
+    },
+    {
+      "name": "Active starts full for 30 seconds",
+      "passed": true
+    },
+    {
+      "name": "Active drains to halfway",
+      "passed": true
+    },
+    {
+      "name": "Active expiry starts grey cooldown with native 255 seconds remaining",
+      "passed": true
+    },
+    {
+      "name": "Grey cooldown fills halfway",
+      "passed": true
+    },
+    {
+      "name": "Native cooldown deadline restores ready",
+      "passed": true
+    },
+    {
+      "name": "Long hidden-tab elapsed time settles ready",
+      "passed": true
+    },
+    {
+      "name": "Instant Bulk Order goes directly to cooldown",
+      "passed": true
+    },
+    {
+      "name": "Bulk Order radial cooldown fills",
+      "passed": true
+    },
+    {
+      "name": "Bulk Order ready after ten minutes",
+      "passed": true
+    }
+  ],
+  "timing": "Exported duration/cooldown values; native readyAt is measured from activation, so cooldown display shows only the remaining time after active duration.",
+  "source": "UI Builder/HTML/Classic/classic.js",
+  "scope": "Presentation-only clocks; no reward grants or save writes",
+  "browser": {
+    "viewport": {
+      "width": 964,
+      "height": 884
+    },
+    "ready": "All three enabled with full gold rings",
+    "active": "Festival Rush live 00:30 countdown; gold arc observed at 57.926% with 00:18 remaining",
+    "expiry": "Real 30-second transition to grey cooldown observed; automatic/tap rates returned to normal",
+    "independent": "Helping Hands active while Festival Rush and Bulk Order were in cooldown",
+    "navigation": "Clocks continued through Products and back",
+    "reset": "Reload restored all three ready rings",
+    "alignment": "Name horizontal center 481.984px vs stall center 482px; corrected vertical anchor and line height",
+    "metadata": "homeSkillClocks binding present",
+    "overflow": false
+  },
+  "native_baseline_files_unchanged": 1385
+}

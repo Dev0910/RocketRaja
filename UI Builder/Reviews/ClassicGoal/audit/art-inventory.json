@@ -1,0 +1,311 @@
+{
+  "products": [
+    {
+      "id": "phuljhari",
+      "name": "Phuljhari",
+      "subtitle": "A little spark of celebration",
+      "color": "F3B544",
+      "cost": 30,
+      "income": 0.85
+    },
+    {
+      "id": "anar",
+      "name": "Anar",
+      "subtitle": "Fountains of festive colour",
+      "color": "E66E45",
+      "cost": 420,
+      "income": 2.125
+    },
+    {
+      "id": "chakri",
+      "name": "Chakri",
+      "subtitle": "A whirl of bright possibilities",
+      "color": "59AFA1",
+      "cost": 5880,
+      "income": 5.3125
+    },
+    {
+      "id": "rockets",
+      "name": "Rockets",
+      "subtitle": "Send your ambitions skyward",
+      "color": "789ADB",
+      "cost": 82320,
+      "income": 13.28125
+    },
+    {
+      "id": "small-crackers",
+      "name": "Small crackers",
+      "subtitle": "Little packs. Big excitement.",
+      "color": "D97491",
+      "cost": 1152480,
+      "income": 33.203125
+    },
+    {
+      "id": "cracker-strings",
+      "name": "Cracker strings",
+      "subtitle": "A string of happy moments",
+      "color": "C594E3",
+      "cost": 16134720,
+      "income": 83.0078125
+    },
+    {
+      "id": "aerial-shots",
+      "name": "Aerial shots",
+      "subtitle": "Paint the evening sky",
+      "color": "65B7CD",
+      "cost": 225886080,
+      "income": 207.51953125
+    },
+    {
+      "id": "gift-boxes",
+      "name": "Celebration boxes",
+      "subtitle": "A whole festival in a box",
+      "color": "E6BE6E",
+      "cost": 3162405120,
+      "income": 518.798828125
+    }
+  ],
+  "cards": [
+    {
+      "id": "C01",
+      "name": "Phuljhari Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 0
+    },
+    {
+      "id": "C02",
+      "name": "Anar Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 1
+    },
+    {
+      "id": "C03",
+      "name": "Chakri Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 2
+    },
+    {
+      "id": "C04",
+      "name": "Rocket Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 3
+    },
+    {
+      "id": "C05",
+      "name": "Small Cracker Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 4
+    },
+    {
+      "id": "C06",
+      "name": "Cracker String Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 5
+    },
+    {
+      "id": "C07",
+      "name": "Aerial Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 6
+    },
+    {
+      "id": "C08",
+      "name": "Celebration Showcase",
+      "tier": 0,
+      "effect": 0,
+      "target": 7
+    },
+    {
+      "id": "C09",
+      "name": "Phuljhari Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 0
+    },
+    {
+      "id": "C10",
+      "name": "Anar Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 1
+    },
+    {
+      "id": "C11",
+      "name": "Chakri Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 2
+    },
+    {
+      "id": "C12",
+      "name": "Rocket Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 3
+    },
+    {
+      "id": "C13",
+      "name": "Small Cracker Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 4
+    },
+    {
+      "id": "C14",
+      "name": "Cracker String Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 5
+    },
+    {
+      "id": "C15",
+      "name": "Aerial Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 6
+    },
+    {
+      "id": "C16",
+      "name": "Celebration Wholesale",
+      "tier": 0,
+      "effect": 1,
+      "target": 7
+    },
+    {
+      "id": "R01",
+      "name": "Master Salesperson",
+      "tier": 1,
+      "effect": 2,
+      "target": -1
+    },
+    {
+      "id": "R02",
+      "name": "Practice Pays",
+      "tier": 1,
+      "effect": 3,
+      "target": -1
+    },
+    {
+      "id": "R03",
+      "name": "Festival Rhythm",
+      "tier": 1,
+      "effect": 4,
+      "target": 0
+    },
+    {
+      "id": "R04",
+      "name": "Helping Hands Rota",
+      "tier": 1,
+      "effect": 4,
+      "target": 1
+    },
+    {
+      "id": "R05",
+      "name": "Express Orders",
+      "tier": 1,
+      "effect": 4,
+      "target": 2
+    },
+    {
+      "id": "R06",
+      "name": "Festival Encore",
+      "tier": 1,
+      "effect": 5,
+      "target": 0
+    },
+    {
+      "id": "R07",
+      "name": "Extra Shift",
+      "tier": 1,
+      "effect": 5,
+      "target": 1
+    },
+    {
+      "id": "R08",
+      "name": "Celebration Contract",
+      "tier": 1,
+      "effect": 6,
+      "target": 2
+    },
+    {
+      "id": "R09",
+      "name": "Night Sales",
+      "tier": 1,
+      "effect": 7,
+      "target": -1
+    },
+    {
+      "id": "R10",
+      "name": "Long Opening Hours",
+      "tier": 1,
+      "effect": 8,
+      "target": -1
+    },
+    {
+      "id": "L01",
+      "name": "Festival Brand",
+      "tier": 2,
+      "effect": 9,
+      "target": -1
+    },
+    {
+      "id": "L02",
+      "name": "Master Negotiator",
+      "tier": 2,
+      "effect": 10,
+      "target": -1
+    }
+  ],
+  "manifest": {
+    "generator": "built-in image_gen",
+    "icons": [
+      {
+        "id": "sparklers",
+        "file": "sparklers.png",
+        "prompt": "Production 2D mobile game product inventory icon: three upright blue and saffron sparkler packets, slightly fanned, with simple gold starburst decorations. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "anar",
+        "file": "anar.png",
+        "prompt": "Production 2D mobile game product inventory icon: three cone fountain fireworks, one tall vermilion cone and two smaller teal and saffron cones, flat bases aligned. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "chakri",
+        "file": "chakri.png",
+        "prompt": "Production 2D mobile game product inventory icon: three colorful circular ground-spinner fireworks, two slightly overlapping upright discs behind one low horizontal disc, clear coiled spiral forms. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "rockets",
+        "file": "rockets.png",
+        "prompt": "Production 2D mobile game product inventory icon: three colorful pointed festive rockets on short visible bamboo sticks, tied as a compact upright bundle, stick ends aligned at bottom. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "small-crackers",
+        "file": "small-crackers.png",
+        "prompt": "Production 2D mobile game product inventory icon: two compact bundles of small red cylindrical firecrackers, one lying horizontally in front of the other, visible cream fuse tips. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "cracker-strings",
+        "file": "cracker-strings.png",
+        "prompt": "Production 2D mobile game product inventory icon: two neatly folded red firecracker garlands, dense connected red cylinders in an upright compact stack with short gold cord. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "aerial",
+        "file": "aerial.png",
+        "prompt": "Production 2D mobile game product inventory icon: three upright navy and teal cylindrical aerial firework canisters, staggered heights with colorful gold star patterns and flat bases. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      },
+      {
+        "id": "gift-boxes",
+        "file": "gift-boxes.png",
+        "prompt": "Production 2D mobile game product inventory icon: one red-and-gold closed festive fireworks assortment box and one slightly taller teal box behind it, simple lotus decorations, neat rectangular silhouettes. Match our Indian Diwali bazaar painted gouache storybook / folk-print style: saturated jewel colors, warm highlights, subtle brush texture, crisp navy contours. Only the merchandise, centered, front facing with slight visible depth. Strong simple silhouette readable at 48 pixels. All objects stand together on one invisible horizontal baseline near bottom of image; no floating objects. Tight bounding box, product fills 85-90% of canvas with small clear margin. Transparent background, transparent outside merchandise. Absolutely NO platform, pedestal, floor, shelf, border, card, text, numbers, flames, sparks, flowers, loose decorations, cast shadow or scenery. Unlit packaged fireworks. The objects must fit a small shelf compartment."
+      }
+    ]
+  }
+}

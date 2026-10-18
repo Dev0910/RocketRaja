@@ -11,6 +11,7 @@ namespace RocketRaja
     {
         public ScrollRect scroll;
         public Action Tap;
+        public Vector3? LastTapWorldPosition { get; private set; }
         readonly Dictionary<int, Vector2> starts = new Dictionary<int, Vector2>();
         readonly HashSet<int> dragged = new HashSet<int>();
         public void OnPointerDown(PointerEventData e)
@@ -25,7 +26,12 @@ namespace RocketRaja
         {
             bool accepted = e.button == PointerEventData.InputButton.Left && starts.TryGetValue(e.pointerId, out var start) && !dragged.Contains(e.pointerId) &&
                 Vector2.Distance(start, e.position) < 15 && RectTransformUtility.RectangleContainsScreenPoint((RectTransform)transform, e.position, e.pressEventCamera);
-            starts.Remove(e.pointerId); dragged.Remove(e.pointerId); if (accepted) Tap?.Invoke();
+            starts.Remove(e.pointerId); dragged.Remove(e.pointerId);
+            if (accepted)
+            {
+                LastTapWorldPosition = RectTransformUtility.ScreenPointToWorldPointInRectangle((RectTransform)transform, e.position, e.pressEventCamera, out var point) ? point : (Vector3?)null;
+                Tap?.Invoke();
+            }
         }
         void OnDisable() { starts.Clear(); dragged.Clear(); }
         void OnApplicationPause(bool paused) { if (paused) { starts.Clear(); dragged.Clear(); } }

@@ -17,7 +17,7 @@ foreach (var name in new[] { "new", "opened", "growing", "progressed", "prestige
         if (name != "growing")
         {
             s.completedPrestiges = 1; s.fame = 1; s.freeCredits = 3; s.kajuKatli = 100;
-            s.target = ProgressionNumbers.RunTarget(s.completedPrestiges);
+            s.target = ProgressionNumbers.RunTarget(s.completedPrestiges, s.fame);
             s.cardLevels[0] = 1; s.cardLevels[2] = 2; s.cardLevels[16] = 1; s.cardLevels[18] = 1;
         }
         s.upgrades = data.upgrades.Where(u => u.effect == CashEffect.SkillPower && u.rank == 1).Select(u => u.id).ToList();
@@ -50,11 +50,11 @@ foreach (var name in new[] { "new", "opened", "growing", "progressed", "prestige
     }
     fixtures[name] = new {
         name, cash = Money(s.cash), normal = Money(e.NormalIncome()), tap = Money(e.TapPayout()), boostedNormal = Money(e.NormalIncome() * e.PreviewSkill(0).power), boostedTap = Money(e.TapPayout() * 1.25), levels = s.products, s.tapLevel,
-        fame = s.fame.ToString(), multiplier = Money(ProgressionNumbers.FameMultiplier(s.fame)), prestiges = s.completedPrestiges.ToString(), kk = s.kajuKatli.ToString(), credits = s.freeCredits.ToString(), earned = Money(s.eligibleEarnings), lifetime = Money(s.lifetimeEarnings), taps = s.manualTaps.ToString(), owned = s.upgrades,
+        fame = s.fame.ToString(), multiplier = Money(ProgressionNumbers.FameMultiplier(s.fame)), tapMultiplier = Money(ProgressionNumbers.TapFameMultiplier(s.fame)), prestiges = s.completedPrestiges.ToString(), kk = s.kajuKatli.ToString(), credits = s.freeCredits.ToString(), earned = Money(s.eligibleEarnings), lifetime = Money(s.lifetimeEarnings), taps = s.manualTaps.ToString(), owned = s.upgrades,
         levelQuotes = Enumerable.Range(-1, 9).ToDictionary(p => p.ToString(), p => new Dictionary<string, object> { ["1"] = Level(p, 1), ["10"] = Level(p, 10), ["100"] = Level(p, 100), ["Max"] = Level(p, int.MaxValue) }),
         skills = Enumerable.Range(0, 3).Select(i => { var p = e.PreviewSkill(i); return new { p.skill, p.unlockId, p.owned, p.power, p.duration, p.cooldown, payout = Money(p.orderPayout) }; }),
         cards = data.cards.Select((c, i) => new { level = s.cardLevels[i].ToString(), current = Money(ProgressionNumbers.CardMultiplier(c.effect, s.cardLevels[i])), next = Money(ProgressionNumbers.CardMultiplier(c.effect, s.cardLevels[i] + (Natural)1)), delta = ProgressionNumbers.DuplicateBenefit(c.effect, s.cardLevels[i]), examples = Enumerable.Range(0, 65).Select(n => Money(ProgressionNumbers.CardMultiplier(c.effect, (Natural)n))) }),
-        prestige = new { fame.Eligible, fame = fame.Fame.ToString(), credits = fame.Credits.ToString(), target = Money(fame.CurrentTarget), nextTarget = Money(fame.NextTarget), multiplier = Money(fame.ResultingIncomeMultiplier), nextFame = Money(fame.NextFameEarnings), fame.CatalogueCredits, fame.NextUniqueMilestone }, upgrades, batches
+        prestige = new { fame.Eligible, fame = fame.Fame.ToString(), credits = fame.Credits.ToString(), target = Money(fame.CurrentTarget), nextTarget = Money(fame.NextTarget), multiplier = Money(fame.ResultingIncomeMultiplier), tapMultiplier = Money(fame.ResultingTapIncomeMultiplier), nextFame = Money(fame.NextFameEarnings), fame.CatalogueCredits, fame.NextUniqueMilestone }, upgrades, batches
     };
 }
 Directory.CreateDirectory("UI Builder/HTML/Classic");

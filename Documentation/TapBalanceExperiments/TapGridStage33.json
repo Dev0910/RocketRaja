@@ -1,0 +1,42 @@
+[
+  {
+    "fame": 33,
+    "current": 183.47712125471966,
+    "targetLog": 183.68712125471967,
+    "tapScale": 2,
+    "incomeOffset": 0,
+    "loss": 16.271,
+    "comparisons": [
+      {
+        "activeSeconds": 1632,
+        "passiveSeconds": 2010,
+        "speedup": 0.18805970149253737,
+        "products": 0.7941989512666063
+      },
+      {
+        "activeSeconds": 1158,
+        "passiveSeconds": 1357,
+        "speedup": 0.14664701547531322,
+        "products": 0.8361041375440247
+      },
+      {
+        "activeSeconds": 1290,
+        "passiveSeconds": 1531,
+        "speedup": 0.15741345525800132,
+        "products": 0.8335488776824796
+      },
+      {
+        "activeSeconds": 1452,
+        "passiveSeconds": 1676,
+        "speedup": 0.13365155131264916,
+        "products": 0.7442665773187388
+      },
+      {
+        "activeSeconds": 1323,
+        "passiveSeconds": 1652,
+        "speedup": 0.19915254237288138,
+        "products": 0.8200686249758845
+      }
+    ]
+  }
+]

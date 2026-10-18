@@ -1,0 +1,41 @@
+[
+  {
+    "fame": 9,
+    "current": 63.47712125471966,
+    "targetLog": 63.87712125471966,
+    "tapScale": 4.4,
+    "loss": 0.04,
+    "comparisons": [
+      {
+        "activeSeconds": 1337,
+        "passiveSeconds": 1596,
+        "speedup": 0.16228070175438591,
+        "products": 0.7653776432269416
+      },
+      {
+        "activeSeconds": 1201,
+        "passiveSeconds": 1335,
+        "speedup": 0.10037453183520595,
+        "products": 0.9014152414066915
+      },
+      {
+        "activeSeconds": 1175,
+        "passiveSeconds": 1312,
+        "speedup": 0.10442073170731703,
+        "products": 0.6675521912034519
+      },
+      {
+        "activeSeconds": 1227,
+        "passiveSeconds": 1466,
+        "speedup": 0.16302864938608463,
+        "products": 0.824911854563307
+      },
+      {
+        "activeSeconds": 1201,
+        "passiveSeconds": 1341,
+        "speedup": 0.1043997017151379,
+        "products": 0.9069773653757982
+      }
+    ]
+  }
+]

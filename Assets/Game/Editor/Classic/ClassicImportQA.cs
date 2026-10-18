@@ -38,7 +38,7 @@ namespace RocketRaja.Editor
             var material=AssetDatabase.LoadAssetAtPath<Material>(materialPath);if(!material){material=new Material(Shader.Find("UI/Classic Grayscale"));AssetDatabase.CreateAsset(material,materialPath);}ui.undiscoveredMaterial=material;
             ui.motion.coinSprite=AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Game/ImportedUI/Art/Coins.png");
             ui.redButton=AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Game/ImportedUI/Art/Folk Red.png");
-            foreach(var image in ui.GetComponentsInChildren<Image>(true))if(image.type==Image.Type.Filled&&!image.sprite)image.sprite=AssetDatabase.GetBuiltinExtraResource<Sprite>("UI/Skin/UISprite.psd");
+            foreach(var image in ui.GetComponentsInChildren<Image>(true))if(image.type==Image.Type.Filled)BuildClassicUI.ConfigureProgressFill(image);
             foreach(var panel in ui.panels.Where(p=>p.route!="Home"))
             {
                 var close=panel.root.transform.Find("Header/Collapse").GetComponent<Image>();close.sprite=null;close.color=Color.clear;

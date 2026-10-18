@@ -21,13 +21,15 @@ static partial class Program
         Check(g.BuyLevels(0, 1) && g.State.cash.mantissa == 0 && disk.products[0] == 1, "Exact first-purchase affordability and immediate durability");
         Check(!g.BuyLevels(1, 1) && !g.BuyLevels(8, 1), "Insufficient cash and unknown product reject safely");
         Check(Near(g.NormalIncome(), .85), "First product rate is 0.85");
-        Check(g.Tap() && !g.Tap(), "One full-value manual tap per 1/3 second");
-        g.Advance(1d / 3); Check(g.Tap(), "Manual tap becomes available after interval");
-        g.Advance(100); Check(g.Tap() && !g.Tap(), "Idle time cannot bank a burst of manual taps");
-        Check(g.State.manualTaps.Value == 3, "Rejected taps do not increment manual count");
+        var cashBeforeTaps = g.State.cash; var perTap = g.TapPayout();
+        Check(Enumerable.Range(0, 100).All(_ => g.Tap()), "Every rapid manual tap succeeds without advancing time");
+        Check(g.State.manualTaps.Value == 100 && Near(g.State.cash - cashBeforeTaps, perTap * 100), "Rapid taps each increment the count and award full earnings");
+        g.Advance(100); Check(g.Tap() && g.Tap(), "Consecutive manual taps still succeed after idle time");
+        var legacyCooldown = fresh.Copy(); legacyCooldown.nextManualTapAt = legacyCooldown.now + 1;
+        Check(Make(legacyCooldown).Tap(), "A cooldown timestamp from an existing save does not block tapping");
         var projected = g.PreviewUpgrade("PP-PHU-01");
         Check(Near(projected.normalBefore, .85) && Near(projected.normalAfter, 1.7) && projected.requirementsMet && g.State.upgrades.Count == 0, "Upgrade projection shows correct per-family/shop change without a mutation");
-        var wealth = RedesignState.Fresh(1000); wealth.cash = new Amount(1, 100); wealth.products = Enumerable.Repeat(300, 8).ToArray();
+        var wealth = RedesignState.Fresh(1000); wealth.cash = new Amount(1, 250); wealth.products = Enumerable.Repeat(300, 8).ToArray();
         g = Make(wealth);
         var all = g.QuoteBuyAll();
         Check(all.Ids.Count == 1000 && all.FirstPurchases == 1000, "All 1,000 upgrades reachable without any prestige requirement");
@@ -75,7 +77,7 @@ static partial class Program
         var recoveryCopy = afterSecond.Copy(); recoveryCopy.requiresDrawReconciliation = true;
         g = Make(Clone(recoveryCopy));
         Check(g.QuoteDraw(true) == null && g.QuoteDraw(false) == null && g.State.Valid(catalog), "Restored backup cannot spend rolled-back currency or reroll credits before reconciliation");
-        var stage = RedesignState.Fresh(1000); stage.products[0] = 1; stage.cash = 1000;
+        var stage = RedesignState.Fresh(1000); stage.products[0] = 1; stage.cash = 100000;
         g = Make(stage); var scoped = g.QuoteBuyAll(new UpgradeScope { effect = CashEffect.ProductProfit, product = 0 });
         Check(scoped.Ids.Count > 1 && scoped.Ids.All(id => id.StartsWith("PP-PHU-")), "Scoped batch includes newly eligible prerequisite successors only within the filter");
         g.Advance(100); Check(g.CommitBuyAll(scoped) && g.State.upgrades.SequenceEqual(scoped.Ids), "Passive accrual preserves frozen batch list without adding purchases");
@@ -88,7 +90,7 @@ static partial class Program
         var atomic = new RedesignEngine(catalog, stage, s => { if (fail) throw new IOException("Injected disk full"); disk = Clone(s); });
         var atomicQuote = atomic.QuoteBuyAll();
         try { atomic.CommitBuyAll(atomicQuote); } catch (IOException) { }
-        Check(atomic.State.upgrades.Count == 0 && atomic.State.cash.CompareTo(1000) == 0, "Failed batch save rolls back every purchase and payment");
+        Check(atomic.State.upgrades.Count == 0 && atomic.State.cash.CompareTo(stage.cash) == 0, "Failed batch save rolls back every purchase and payment");
         fail = false; Check(atomic.CommitBuyAll(atomicQuote) && !atomic.CommitBuyAll(atomicQuote), "Retry after failed write commits once");
         fail = true;
         atomic = new RedesignEngine(catalog, afterSecond, s => { if (fail) throw new IOException("Injected draw failure"); disk = Clone(s); }, new SequenceRandom(0, 0, 99, 1));
@@ -114,7 +116,7 @@ static partial class Program
         var bulk = Make(wealth); Check(Near(singles, bulk.LevelQuote(0, 100).cost), "Bulk product costs equal sequential singles");
         var discounted = allRun.Copy(); discounted.cardLevels[8] = 1; discounted.fame = discounted.completedPrestiges = 1; discounted.target = ProgressionNumbers.RunTarget(1);
         var combined = Make(discounted);
-        Check(Near(combined.LevelQuote(0, 1).cost, bulk.LevelQuote(0, 1).cost * .65 * .92), "Cumulative product discount replaces prior ranks and multiplies remaining card cost");
+        Check(Near(combined.LevelQuote(0, 1).cost, bulk.LevelQuote(0, 1).cost * .01 * .92), "Cumulative product discount replaces prior ranks and multiplies remaining card cost");
         var maxState = wealth.Copy(); maxState.cash = bulk.LevelQuote(0, 100).cost;
         g = Make(maxState); Check(g.LevelQuote(0, int.MaxValue).quantity == 100, "Max buys exact affordable bundle at quote boundary");
         var offlineState = RedesignState.Fresh(1000); offlineState.products[0] = 1;
@@ -123,7 +125,7 @@ static partial class Program
         Amount settled = g.State.cash;
         Check(!g.ResolveOffline(41000) && !g.ResolveOffline(500) && Near(settled, g.State.cash), "Duplicate resume and negative clock delta cannot pay twice");
         g = Make(disk); Check(!g.ResolveOffline(41000) && Near(g.State.cash, settled) && g.DismissOffline(), "Reload/summary close never credits offline a second time");
-        var skillState = wealth.Copy(); skillState.cash = new Amount(1, 100);
+        var skillState = wealth.Copy(); skillState.cash = new Amount(1, 250);
         g = Make(skillState); g.CommitBuyAll(g.QuoteBuyAll()); var p = g.NormalIncome(); var normalTap = g.TapPayout();
         Check(g.ActivateSkill(0) && Near(g.TapPayout(), normalTap * 1.25), "Rush adds separate x1.25 taps without changing linked normal P");
         Amount beforeBulk = g.State.cash;
@@ -139,7 +141,7 @@ static partial class Program
         var handsBase = RedesignState.Fresh(1000); handsBase.products[0] = handsBase.products[1] = 1;
         handsBase.upgrades.Add("SK-HH-P-01"); handsBase.everPurchased.Add("SK-HH-P-01");
         g = Make(handsBase); g.ActivateSkill(1); g.Advance(30);
-        Check(Near(g.State.eligibleEarnings, (.85 + 1.36) * 30 + .85 * 90), "Base Helping Hands delivers 90 independent cadence payouts over 30 seconds");
+        Check(Near(g.State.eligibleEarnings, (EconomyBalance.ProductIncome(0) + EconomyBalance.ProductIncome(1)) * 30 + EconomyBalance.TapBase * 90), "Base Helping Hands delivers 90 independent cadence payouts over 30 seconds");
         var stepped = Make(handsBase); stepped.ActivateSkill(1); for (int i = 0; i < 300; i++) stepped.Advance(.1);
         Check(Near(stepped.State.eligibleEarnings, g.State.eligibleEarnings), "Helping Hands payout is independent of frame subdivision at expiry");
         SaveChecks(catalog);
@@ -161,8 +163,9 @@ static partial class Program
         state.schema = 4; Raw(state);
         Check(store.Load().status == RedesignLoadStatus.UnsupportedVersion, "Future main cannot silently fall back to old backup");
         Reject(() => store.Save(RedesignState.Fresh()), "Future save cannot be overwritten");
-        Raw(new GameState()); Check(store.Load().status == RedesignLoadStatus.LegacyTransitionRequired, "Old save recognized and preserved rather than discarded");
-        Reject(() => store.Save(RedesignState.Fresh()), "Legacy save cannot be reset implicitly");
+        File.Delete(file + ".bak"); Raw(new GameState()); Check(store.Load().CanCreateFresh, "Known old local save starts the new economy");
+        store.Save(RedesignState.Fresh()); store.Save(store.Load().state);
+        Check(store.Load().status == RedesignLoadStatus.Loaded, "Economy reset writes a durable current save and does not reset again");
         Raw(new RedesignState { schema = 2, economy = RedesignCatalog.EconomyVersion, contentVersion = RedesignCatalog.ContentVersion });
         Check(store.Load().status == RedesignLoadStatus.RecoveredBackup, "Missing mandatory new fields are malformed, not fresh defaults");
         string brokenJson = "{bad json"; File.WriteAllText(file, SavePayload.Digest(brokenJson) + "\n" + brokenJson);

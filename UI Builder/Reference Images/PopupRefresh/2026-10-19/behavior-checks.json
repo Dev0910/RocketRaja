@@ -1,0 +1,54 @@
+[
+  {
+    "check": "Settings toggle survives decorated rerender",
+    "checked": "false",
+    "backButtons": 0
+  },
+  {
+    "check": "Empty naming validation",
+    "error": true,
+    "focus": "shop-name",
+    "layers": 2
+  },
+  {
+    "check": "Nested close restores Settings opener",
+    "focus": "Naming",
+    "top": "Settings"
+  },
+  {
+    "check": "Outside click dismisses Settings without stall tap",
+    "layers": 0,
+    "rate": "₹10.24K/sec"
+  },
+  {
+    "check": "Stale purchase review remains disabled",
+    "enabled": false
+  },
+  {
+    "check": "Save error keeps training disabled",
+    "disabled": true,
+    "error": "Progress could not be saved. Purchases are paused; nothing will be spent until saving is available."
+  },
+  {
+    "check": "Purchase preview outcome",
+    "message": "Your Kaju Katli has arrived."
+  },
+  {
+    "check": "Purchase preview outcome",
+    "message": "Purchase pending · no KK added"
+  },
+  {
+    "check": "Purchase preview outcome",
+    "message": "Purchase cancelled · no KK added"
+  },
+  {
+    "check": "Purchase preview outcome",
+    "message": "Purchase failed · no KK added"
+  },
+  {
+    "check": "Existing skill clock and list return",
+    "focus": "Details for Festival Rush",
+    "status": "ACTIVE · 00:30",
+    "top": "Skills"
+  }
+]

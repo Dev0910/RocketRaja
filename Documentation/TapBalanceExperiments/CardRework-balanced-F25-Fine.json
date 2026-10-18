@@ -1,0 +1,91 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.5,
+  "cardGlobalGain": null,
+  "profiles": null,
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    1.5,
+    1.55,
+    1.6,
+    1.65,
+    1.7,
+    1.75,
+    1.8,
+    1.85,
+    1.9,
+    1.95,
+    2,
+    2.05,
+    2.1,
+    2.15,
+    2.2,
+    2.25,
+    2.3,
+    2.35,
+    2.4,
+    2.45,
+    2.5
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 25,
+      "found": false,
+      "candidateCount": 9599,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 4,
+      "closest": {
+        "tapScale": 2,
+        "targetLog": 144.64712125471965,
+        "incomeOffset": 0,
+        "ratioError": 0.014048138958450473,
+        "passingBuilds": 4,
+        "comparisons": [
+          {
+            "activeSeconds": 1651,
+            "passiveSeconds": 2062,
+            "speedup": 0.19932104752667312,
+            "products": 0.5259094523813286,
+            "passiveProducts": 0.5998039785143342
+          },
+          {
+            "activeSeconds": 1528,
+            "passiveSeconds": 1856,
+            "speedup": 0.17672413793103448,
+            "products": 0.5273833837345542,
+            "passiveProducts": 0.8077034780293717
+          },
+          {
+            "activeSeconds": 1581,
+            "passiveSeconds": 1909,
+            "speedup": 0.17181770560502885,
+            "products": 0.6426080930189713,
+            "passiveProducts": 0.7930122351769331
+          },
+          {
+            "activeSeconds": 1433,
+            "passiveSeconds": 1823,
+            "speedup": 0.21393307734503564,
+            "products": 0.4998859383865852,
+            "passiveProducts": 0.5637819116998435
+          },
+          {
+            "activeSeconds": 1551,
+            "passiveSeconds": 1931,
+            "speedup": 0.1967892283790782,
+            "products": 0.5266862844204352,
+            "passiveProducts": 0.8679424623975456
+          }
+        ]
+      }
+    }
+  ]
+}

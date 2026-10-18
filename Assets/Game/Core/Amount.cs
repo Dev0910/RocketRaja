@@ -50,7 +50,16 @@ namespace RocketRaja.Core
         public static Amount operator *(Amount a, double b) => a * new Amount(b);
         public static Amount operator *(Amount a, Amount b) => new Amount(a.mantissa * b.mantissa, checked(a.exponent + b.exponent));
         public static Amount operator /(Amount a, double b) => b <= 0 ? throw new DivideByZeroException() : new Amount(a.mantissa / b, a.exponent);
-        public static double Ratio(Amount a, Amount b) => b.mantissa == 0 ? double.PositiveInfinity : Math.Pow(10, Math.Min(308, a.Log10 - b.Log10));
+        public static double Ratio(Amount a, Amount b)
+        {
+            if (b.mantissa == 0) return double.PositiveInfinity;
+            if (a.mantissa == 0) return 0;
+            long gap = (long)a.exponent - b.exponent;
+            // Avoid subtracting large logarithms: one ULP at a high exponent can
+            // otherwise look like source/Unity serialization drift.
+            if (gap >= -300 && gap <= 300) return a.mantissa / b.mantissa * Math.Pow(10, gap);
+            return Math.Pow(10, Math.Min(308, a.Log10 - b.Log10));
+        }
         public int CompareTo(Amount b)
         {
             if (mantissa == 0 || b.mantissa == 0) return mantissa.CompareTo(b.mantissa);
@@ -64,10 +73,16 @@ namespace RocketRaja.Core
         {
             if (mantissa == 0) return "0";
             if (exponent < 3) return (mantissa * Math.Pow(10, exponent)).ToString("0.##", CultureInfo.InvariantCulture);
-            string[] suffix = { "", "K", "M", "B", "T", "aa", "ab", "ac", "ad", "ae", "af" };
+            string[] suffix = { "", "K", "M", "B", "T" };
             int group = exponent / 3;
-            if (group >= suffix.Length) return mantissa.ToString("0.##", CultureInfo.InvariantCulture) + "e" + exponent;
-            return (mantissa * Math.Pow(10, exponent % 3)).ToString("0.##", CultureInfo.InvariantCulture) + suffix[group];
+            string label;
+            if (group < suffix.Length) label = suffix[group];
+            else
+            {
+                int n = group - 5 + 26; label = "";
+                do { label = (char)('a' + n % 26) + label; n = n / 26 - 1; } while (n >= 0);
+            }
+            return (mantissa * Math.Pow(10, exponent % 3)).ToString("0.##", CultureInfo.InvariantCulture) + label;
         }
     }
 }

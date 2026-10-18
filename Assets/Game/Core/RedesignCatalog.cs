@@ -49,7 +49,7 @@ namespace RocketRaja.Core
     /// <summary>Validated and indexed once per loaded content asset; no runtime Markdown or fallback catalogue.</summary>
     public sealed class RedesignCatalog
     {
-        public const string EconomyVersion = "2.0.0", ContentVersion = "cash-only-v1";
+        public const string EconomyVersion = "3.0.0", ContentVersion = "faster-start-v1";
         public static readonly string[] ProductKeys = { "PHU", "ANA", "CHA", "ROC", "SMC", "STR", "AER", "BOX" };
         public static readonly string[] SkillKeys = { "FR", "HH", "BO" };
         public static readonly double[][] SkillPower = {
@@ -94,10 +94,10 @@ namespace RocketRaja.Core
             Require(c.economyVersion == EconomyVersion && c.contentVersion == ContentVersion, "unsupported economy/content version");
             Require(c.sourceHash != null && c.sourceHash.Length == 64 && c.sourceHash.All(Uri.IsHexDigit), "source digest");
             Require(c.products != null && c.products.Length == 8, "eight products");
-            for (int i = 0; i < 8; i++) Require(c.products[i] != null && c.products[i].id == Catalog.ProductIds[i] && c.products[i].cost == 30 * Math.Pow(2, i) && c.products[i].income == .85 * Math.Pow(1.6, i), "product mapping/formula " + i);
+            for (int i = 0; i < 8; i++) Require(c.products[i] != null && c.products[i].id == Catalog.ProductIds[i] && c.products[i].cost == EconomyBalance.ProductCost(i) && c.products[i].income == EconomyBalance.ProductIncome(i), "product mapping/formula " + i);
             Require(c.upgrades != null && c.upgrades.Length == 1000 && c.upgrades.All(x => x != null && !string.IsNullOrWhiteSpace(x.id) && !string.IsNullOrWhiteSpace(x.name)), "1,000 named cash entries");
             Require(c.upgrades.Select(x => x.id).Distinct(StringComparer.Ordinal).Count() == 1000, "unique IDs");
-            int[] expected = { 480, 128, 60, 60, 40, 80, 32, 28, 16, 28, 32, 16 };
+            int[] expected = { 528, 128, 120, 0, 40, 80, 32, 28, 16, 28, 0, 0 };
             for (int i = 0; i < expected.Length; i++) Require(c.upgrades.Count(x => (int)x.effect == i) == expected[i], "effect count " + (CashEffect)i);
             Require(c.upgrades.Count(x => x.signature) == 80 && c.upgrades.All(x => !x.signature || x.effect == CashEffect.ProductProfit), "80 product signatures");
             for (int p = 0; p < 8; p++) Require(c.upgrades.Count(x => x.signature && x.target == p) == 10, "ten signatures per product " + p);
@@ -116,7 +116,13 @@ namespace RocketRaja.Core
                 if (u.effect == CashEffect.Link) Require(u.beneficiary == (u.target + 1) % 8, "link beneficiary " + u.id);
                 if (u.effect == CashEffect.Group) Require(u.group.Length >= 2 && u.productRequirements.Length == u.group.Length, "group membership " + u.id);
                 if (u.effect >= CashEffect.SkillPower && u.effect <= CashEffect.SkillCooldown)
+                    {
                     Require(u.target >= 0 && u.target < 3 && (u.effect != CashEffect.SkillDuration || u.target != 2), "skill target " + u.id);
+                    int maximum = u.effect == CashEffect.SkillDuration ? 8 : SkillPower[u.target].Length;
+                    Require(u.rank <= maximum, "skill rank " + u.id);
+                    double factor = u.effect == CashEffect.SkillPower ? SkillPower[u.target][u.rank - 1] : u.effect == CashEffect.SkillDuration ? 1 + u.rank / 16d : 1 - u.rank / (u.target == 2 ? 48d : 32d);
+                    Require(Math.Abs(u.factor - factor) < 1e-12, "authored skill effect matches timing " + u.id);
+                }
             }
             var visiting = new HashSet<string>(); var visited = new HashSet<string>();
             void Visit(string id)
@@ -127,16 +133,10 @@ namespace RocketRaja.Core
                 visiting.Remove(id); visited.Add(id);
             }
             foreach (string id in ids.Keys) Visit(id);
-            foreach (var band in c.upgrades.GroupBy(x => x.band))
-            {
-                var sorted = band.OrderBy(x => x.position).ToArray();
-                double opening = band.Key == 1 ? 100 : band.Key == 2 ? 3000000 : 72000000 * Math.Pow(31, band.Key - 3);
-                for (int i = 0; i < sorted.Length; i++)
-                {
-                    double rounded = double.Parse((opening * Math.Pow(4, (double)i / (sorted.Length - 1))).ToString("G6", CultureInfo.InvariantCulture), CultureInfo.InvariantCulture);
-                    Require(sorted[i].position == i + 1 && Math.Abs(Amount.Ratio(sorted[i].price, new Amount(rounded)) - 1) < 1e-14, "six-digit x31 price " + sorted[i].id);
-                }
-            }
+            var priceOrder = c.upgrades.OrderBy(x => x.band).ThenBy(x => x.position).ToArray();
+            for (int i = 0; i < priceOrder.Length; i++)
+                Require(priceOrder[i].band == i / 50 + 1 && priceOrder[i].position == i % 50 + 1 && Math.Abs(Amount.Ratio(priceOrder[i].price, EconomyBalance.UpgradePrice(i)) - 1) < 1e-12, "continuous exponential price " + priceOrder[i].id);
+            for (int p = 0; p < 8; p++) Require(c.upgrades.Count(x => x.effect == CashEffect.ProductProfit && x.target == p) == 66, "66 profit upgrades per family");
             Require(c.cards != null && c.cards.Length == 28 && c.cards.All(x => x != null && !string.IsNullOrWhiteSpace(x.id) && !string.IsNullOrWhiteSpace(x.name)) && c.cards.Select(x => x.id).Distinct().Count() == 28, "28 distinct cards");
             Require(c.cards.Count(x => x.tier == CardTier.Common) == 16 && c.cards.Count(x => x.tier == CardTier.Rare) == 10 && c.cards.Count(x => x.tier == CardTier.Legendary) == 2, "16/10/2 tiers");
             foreach (var card in c.cards)

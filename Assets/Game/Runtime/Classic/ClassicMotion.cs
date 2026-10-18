@@ -58,16 +58,24 @@ namespace RocketRaja.Classic
         }
         public void Coins(RectTransform origin,RectTransform destination)
         {
+            if(origin)Coins(origin.position,destination);
+        }
+        public void Coins(Vector3 origin,RectTransform destination)
+        {
             if(reduced||!coinSprite)return;int emitted=0;
             for(int i=0;i<particles.Length&&emitted<3;i++)if(!particles[i].gameObject.activeSelf)
             {
-                coinFlight[i]=true;particleOrigin[i]=effectRoot.InverseTransformPoint(origin.position);particleVelocity[i]=effectRoot.InverseTransformPoint(destination.position);
+                coinFlight[i]=true;particleOrigin[i]=effectRoot.InverseTransformPoint(origin);particleVelocity[i]=effectRoot.InverseTransformPoint(destination.position);
                 particleTime[i]=Time.unscaledTime+emitted*.055f;particleDuration[i]=.65f;particleOrder[i]=emitted;particles[i].sprite=coinSprite;particles[i].rectTransform.sizeDelta=new Vector2(11,11);particles[i].rectTransform.anchoredPosition=particleOrigin[i];particles[i].color=Color.clear;particles[i].gameObject.SetActive(true);emitted++;
             }
         }
         public void Burst(RectTransform target,int tier=0,int count=12)
         {
-            if(!target||reduced)return;var center=(Vector2)effectRoot.InverseTransformPoint(target.position);int emitted=0;
+            if(target)Burst(target.position,tier,count);
+        }
+        public void Burst(Vector3 origin,int tier=0,int count=12)
+        {
+            if(reduced)return;var center=(Vector2)effectRoot.InverseTransformPoint(origin);int emitted=0;
             for(int i=0;i<particles.Length&&emitted<count;i++)if(!particles[i].gameObject.activeSelf)
             {
                 float angle=emitted*6.283185f/count,range=(count==7?28:count==12?42:76)+emitted%4*5;particleOrigin[i]=center;particleVelocity[i]=new Vector2(Mathf.Cos(angle),-Mathf.Sin(angle))*range;

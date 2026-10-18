@@ -1,0 +1,86 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.6,
+  "profiles": [
+    "no-cards",
+    "tap-heavy",
+    "product-heavy",
+    "all-cards"
+  ],
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 10,
+      "current": 68.47712125471966,
+      "targetLog": 65.72712125471966,
+      "tapScale": 1.5,
+      "incomeOffset": 0,
+      "loss": 6.428333333333335,
+      "candidateCount": 5809,
+      "feasibleCount": 23,
+      "bestPassingBuilds": 4,
+      "comparisons": [
+        {
+          "activeSeconds": 473,
+          "passiveSeconds": 579,
+          "speedup": 0.18307426597582033,
+          "products": 0.9695871369929727,
+          "passiveProducts": 0.999999999932884,
+          "activeMaxGap": 20,
+          "passiveMaxGap": 60
+        },
+        {
+          "activeSeconds": 471,
+          "passiveSeconds": 572,
+          "speedup": 0.17657342657342656,
+          "products": 0.9490604180030655,
+          "passiveProducts": 0.7527523089341901,
+          "activeMaxGap": 20,
+          "passiveMaxGap": 80
+        },
+        {
+          "activeSeconds": 432,
+          "passiveSeconds": 481,
+          "speedup": 0.10187110187110182,
+          "products": 0.9947938069935385,
+          "passiveProducts": 0.9999999999523373,
+          "activeMaxGap": 20,
+          "passiveMaxGap": 20
+        },
+        {
+          "activeSeconds": 378,
+          "passiveSeconds": 426,
+          "speedup": 0.11267605633802813,
+          "products": 0.9285757067652469,
+          "passiveProducts": 0.9999997722758945,
+          "activeMaxGap": 20,
+          "passiveMaxGap": 20
+        }
+      ]
+    }
+  ]
+}

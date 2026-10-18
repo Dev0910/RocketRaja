@@ -92,14 +92,14 @@ namespace RocketRaja
                 (tap ? "Tap level " : preview.beforeLevel == 0 ? "Available · Level " : "Owned · Level ") + preview.beforeLevel;
             if (tap)
                 projection.text = "Normal payout: " + Cash(preview.tapBefore) + " → " + Cash(preview.tapAfter) + " per tap\n" +
-                    "Product-linked part: " + Cash(preview.linkedTapBefore) + " → " + Cash(preview.linkedTapAfter) + "\n" +
-                    "Current payout: " + Cash(e.TapPayout()) + " per tap\nOnly taps on the open stall earn cash. Up to 3 full-value taps each second.";
+                    (preview.nextMilestone == 0 ? "All milestones reached" : "Next milestone: " + preview.nextMilestone + " · ×" + EconomyBalance.MilestoneReward(preview.nextMilestone)) + "\n" +
+                    "Current payout: " + Cash(e.TapPayout()) + " per tap\nEvery tap on the open stall earns the full payout.";
             else
             {
                 double share = preview.normalBefore.mantissa == 0 ? 0 : Amount.Ratio(preview.productBefore, preview.normalBefore) * 100;
                 projection.text = "Normal income: " + Cash(preview.productBefore) + " → " + Cash(preview.productAfter) + "/s\n" +
                     "Shop contribution: " + share.ToString("0.##") + "%\n" +
-                    (preview.nextMilestone == 0 ? "All level milestones reached" : "Next milestone: level " + preview.nextMilestone + " · ×2 income") + "\n" +
+                    (preview.nextMilestone == 0 ? "All level milestones reached" : "Next milestone: level " + preview.nextMilestone + " · ×" + EconomyBalance.MilestoneReward(preview.nextMilestone) + " income") + "\n" +
                     "Shop income after: " + Cash(preview.normalAfter) + "/s";
             }
             string levelWord = quote.quantity == 1 ? "level" : "levels";

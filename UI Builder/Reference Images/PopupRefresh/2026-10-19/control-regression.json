@@ -1,0 +1,292 @@
+[
+  {
+    "route": "Welcome",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Account",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Upgrades",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "ProductDetail",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "TapTraining",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Skills",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SkillDetail",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "CardDetail",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "DrawReveal",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Prestige",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Offline",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Statistics",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Settings",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Naming",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Privacy",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "AccountCompare",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Promote",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SignOut",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Handoff",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SaveRecovery",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "RecoveryConfirm",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "RecoveryExit",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Purchase",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "BuyAll",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Appearance",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Help",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Odds",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Exact",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Guidance",
+    "size": "390x844",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Welcome",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Account",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Upgrades",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "ProductDetail",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "TapTraining",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Skills",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SkillDetail",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "CardDetail",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "DrawReveal",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Prestige",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Offline",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Statistics",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Settings",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Naming",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Privacy",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "AccountCompare",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Promote",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SignOut",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Handoff",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "SaveRecovery",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "RecoveryConfirm",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "RecoveryExit",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Purchase",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "BuyAll",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Appearance",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Help",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Odds",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Exact",
+    "size": "360x540",
+    "actionsPreserved": true
+  },
+  {
+    "route": "Guidance",
+    "size": "360x540",
+    "actionsPreserved": true
+  }
+]

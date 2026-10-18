@@ -62,11 +62,29 @@ namespace RocketRaja.Editor
         static void BuildPlayer(RectTransform content)
         {
             var toolbar=New("Toolbar",content);Height(toolbar,48);Button(Region("Stats",toolbar,0,0,.23f,1),"Navigate","Statistics","","Stats",ivory);Button(Region("Skills",toolbar,.24f,0,.48f,1),"Navigate","Skills","","Skills",ivory);Button(Region("Quantity",toolbar,.66f,0,1,1),"Quantity","tap","tap-quantity","Buy ×1");
+            ApplyPlayerToolbarIcons(toolbar);
             var tapping=Row("Salesmanship",content);Picture("",Fixed("Icon",tapping,8,10,36,46),Sprite("Icon Player"));Label("tap-row-title",Region("Name",tapping,.15f,.5f,.69f,.9f),"Salesmanship · Level 12",12,true);Label("tap-row-income",Region("Income",tapping,.15f,.13f,.68f,.48f),"₹105.91 per tap",11);Button(Region("Train",tapping,.70f,.10f,.98f,.90f),"Navigate","TapTraining","tap-row-cost","₹300\nTrain tapping");
             var prestige=Row("A brighter beginning",content,76);Picture("",Fixed("Icon",prestige,8,12,36,42),Sprite("Icon Prestige"));Label("",Region("Title",prestige,.15f,.55f,.68f,.95f),"A brighter beginning",13,true);Label("fame",Region("Fame",prestige,.15f,.08f,.68f,.57f),"1 Fame · ×6 permanent income",10);Button(Region("View",prestige,.70f,.17f,.98f,.85f),"Navigate","Prestige","","View prestige");
             var header=New("Upgrades heading",content);Height(header,28);Label("",Region("Title",header,0,0,.6f,1),"Upgrades",19,true,Ink,TextAlignmentOptions.Left,heading);Label("upgrade-count",Region("Count",header,.6f,0,1,1),"4 / 1000",11,false,Muted,TextAlignmentOptions.Right);
             var buy=New("Buy all upgrades",content);Height(buy,48);Button(buy,"BuyAll","","","Buy all Upgrades");ui.nextUpgrades=Enumerable.Range(0,10).Select(i=>Upgrade(content,i,"Next upgrade")).ToArray();
             var empty=New("Empty",content);Height(empty,28);Label("upgrade-empty",Fill("Label",empty),"",11,false,Muted);
+        }
+        public static void ApplyPlayerToolbarIcons(Transform toolbar)
+        {
+            foreach(var name in new[]{"Stats","Skills"})
+            {
+                var button=toolbar.Find(name);
+                var icon=button.Find("Icon") as RectTransform;
+                if(!icon)icon=Region("Icon",button,0,0,1,1);
+                icon.anchorMin=icon.anchorMax=new Vector2(.5f,1);icon.pivot=new Vector2(.5f,1);
+                icon.sizeDelta=new Vector2(25,25);icon.anchoredPosition=new Vector2(0,-3);
+                var image=icon.GetComponent<Image>();if(!image)image=icon.gameObject.AddComponent<Image>();
+                image.sprite=Sprite("Icon "+name);image.preserveAspect=true;image.raycastTarget=false;
+                var label=button.GetComponentInChildren<TMP_Text>();var rect=label.rectTransform;
+                rect.anchorMin=Vector2.zero;rect.anchorMax=new Vector2(1,0);rect.pivot=new Vector2(.5f,0);
+                rect.sizeDelta=new Vector2(0,18);rect.anchoredPosition=new Vector2(0,2);
+                label.fontSize=label.fontSizeMax=10;label.fontSizeMin=9;label.alignment=TextAlignmentOptions.Center;
+            }
         }
         static ClassicUpgradeRow Upgrade(RectTransform content,int i,string prefix)
         {
@@ -79,7 +97,7 @@ namespace RocketRaja.Editor
             ui.products=new ClassicProductRow[8];var keys=new[]{"sparklers","anar","chakri","rockets","small-crackers","cracker-strings","aerial","gift-boxes"};for(int i=0;i<8;i++)
             {
                 var r=Row(data.Products[i].name,content,80);var detail=Region("Details",r,.02f,.06f,.59f,.94f);Face(detail,new Color(1,1,1,.001f),null,true);var b=detail.gameObject.AddComponent<Button>();b.targetGraphic=detail.GetComponent<Image>();b.navigation=new Navigation{mode=Navigation.Mode.None};var c=detail.gameObject.AddComponent<ClassicControl>();c.owner=ui;c.action="Navigate";c.parameter="ProductDetail:"+i;
-                var frame=Fixed("Product frame",detail,0,3,54,62);Face(frame,new Color32(229,212,176,255),rounded);Picture("",Fill("Product",frame,4),art["product-"+keys[i]]);var bar=Bottom("Milestone track",frame,7);Face(bar,new Color32(216,203,176,255));var fill=Face(Fill("Fill",bar),new Color32(50,127,120,255));fill.type=Image.Type.Filled;fill.fillMethod=Image.FillMethod.Horizontal;fill.fillAmount=i==0?0:.5f;
+                var frame=Fixed("Product frame",detail,0,3,54,62);Face(frame,new Color32(229,212,176,255),rounded);Picture("",Fill("Product",frame,4),art["product-"+keys[i]]);var bar=Bottom("Milestone track",frame,7);Face(bar,new Color32(216,203,176,255));var fill=Face(Fill("Fill",bar),new Color32(50,127,120,255));ConfigureProgressFill(fill);fill.fillAmount=i==0?0:.5f;
                 var name=Label("",Region("Name",detail,.32f,.50f,1,.92f),data.Products[i].name,12,true);var income=Label("",Region("Income",detail,.32f,.14f,1,.50f),"₹0/s",11,true);
                 var level=Label("",Region("Level",r,.58f,.35f,.70f,.7f),"Lvl : 25",9,true,Ink,TextAlignmentOptions.Right);var buy=Button(Region("Upgrade",r,.71f,.13f,.98f,.87f),"BuyLevels",i.ToString(),"","₹300\nUpgrade ×1");
                 ui.products[i]=new ClassicProductRow{name=name,income=income,level=level,buy=buy,cost=buy.GetComponentInChildren<TMP_Text>(),progress=fill};
