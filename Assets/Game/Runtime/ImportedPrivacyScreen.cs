@@ -17,7 +17,7 @@ namespace RocketRaja
 
         void Awake()
         {
-            if (closeButton == null || backButton == null || consentButton == null || consentRow == null)
+            if (closeButton == null || backButton == null)
             {
                 Debug.LogError("Privacy dialog has missing editor-authored references.", this);
                 return;
@@ -25,7 +25,6 @@ namespace RocketRaja
 
             closeButton.onClick.AddListener(Close);
             backButton.onClick.AddListener(Close);
-            consentButton.onClick.AddListener(OpenPrivacyOptions);
             Refresh();
         }
 
@@ -57,13 +56,9 @@ namespace RocketRaja
         public void Refresh()
         {
             if (consentRow != null)
-                consentRow.SetActive(controller != null && controller.Ads != null && controller.Ads.PrivacyOptionsRequired);
+                consentRow.SetActive(false);
         }
 
-        void OpenPrivacyOptions()
-        {
-            if (controller != null && controller.Ads != null && controller.Ads.PrivacyOptionsRequired)
-                controller.Ads.PrivacyOptions();
-        }
+        void OpenPrivacyOptions() { }
     }
 }

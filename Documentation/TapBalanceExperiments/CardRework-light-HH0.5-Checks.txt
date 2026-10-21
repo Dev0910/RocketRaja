@@ -1,0 +1,103 @@
+PASS ProductProfit retains positive, beneficial progression to level 1
+PASS ProductProfit retains positive, beneficial progression to level 5
+PASS ProductProfit retains positive, beneficial progression to level 25
+PASS ProductProfit retains positive, beneficial progression to level 100
+PASS ProductProfit retains positive, beneficial progression to level 1000
+PASS ProductCost retains positive, beneficial progression to level 1
+PASS ProductCost retains positive, beneficial progression to level 5
+PASS ProductCost retains positive, beneficial progression to level 25
+PASS ProductCost retains positive, beneficial progression to level 100
+PASS ProductCost retains positive, beneficial progression to level 1000
+PASS TapProfit retains positive, beneficial progression to level 1
+PASS TapProfit retains positive, beneficial progression to level 5
+PASS TapProfit retains positive, beneficial progression to level 25
+PASS TapProfit retains positive, beneficial progression to level 100
+PASS TapProfit retains positive, beneficial progression to level 1000
+PASS TapCost retains positive, beneficial progression to level 1
+PASS TapCost retains positive, beneficial progression to level 5
+PASS TapCost retains positive, beneficial progression to level 25
+PASS TapCost retains positive, beneficial progression to level 100
+PASS TapCost retains positive, beneficial progression to level 1000
+PASS SkillCooldown retains positive, beneficial progression to level 1
+PASS SkillCooldown retains positive, beneficial progression to level 5
+PASS SkillCooldown retains positive, beneficial progression to level 25
+PASS SkillCooldown retains positive, beneficial progression to level 100
+PASS SkillCooldown retains positive, beneficial progression to level 1000
+PASS SkillDuration retains positive, beneficial progression to level 1
+PASS SkillDuration retains positive, beneficial progression to level 5
+PASS SkillDuration retains positive, beneficial progression to level 25
+PASS SkillDuration retains positive, beneficial progression to level 100
+PASS SkillDuration retains positive, beneficial progression to level 1000
+PASS OrderPayout retains positive, beneficial progression to level 1
+PASS OrderPayout retains positive, beneficial progression to level 5
+PASS OrderPayout retains positive, beneficial progression to level 25
+PASS OrderPayout retains positive, beneficial progression to level 100
+PASS OrderPayout retains positive, beneficial progression to level 1000
+PASS OfflineEfficiency retains positive, beneficial progression to level 1
+PASS OfflineEfficiency retains positive, beneficial progression to level 5
+PASS OfflineEfficiency retains positive, beneficial progression to level 25
+PASS OfflineEfficiency retains positive, beneficial progression to level 100
+PASS OfflineEfficiency retains positive, beneficial progression to level 1000
+PASS OfflineHours retains positive, beneficial progression to level 1
+PASS OfflineHours retains positive, beneficial progression to level 5
+PASS OfflineHours retains positive, beneficial progression to level 25
+PASS OfflineHours retains positive, beneficial progression to level 100
+PASS OfflineHours retains positive, beneficial progression to level 1000
+PASS GlobalProfit retains positive, beneficial progression to level 1
+PASS GlobalProfit retains positive, beneficial progression to level 5
+PASS GlobalProfit retains positive, beneficial progression to level 25
+PASS GlobalProfit retains positive, beneficial progression to level 100
+PASS GlobalProfit retains positive, beneficial progression to level 1000
+PASS UpgradeCost retains positive, beneficial progression to level 1
+PASS UpgradeCost retains positive, beneficial progression to level 5
+PASS UpgradeCost retains positive, beneficial progression to level 25
+PASS UpgradeCost retains positive, beneficial progression to level 100
+PASS UpgradeCost retains positive, beneficial progression to level 1000
+PASS Full x32 manual and Hands upgrade: tap-heavy, Fame 1
+PASS Tap upgrade does not change product income; preview agrees: tap-heavy, Fame 1
+PASS Tap payout remains independent of product levels: tap-heavy, Fame 1
+PASS Full x32 manual and Hands upgrade: product-heavy, Fame 1
+PASS Tap upgrade does not change product income; preview agrees: product-heavy, Fame 1
+PASS Tap payout remains independent of product levels: product-heavy, Fame 1
+PASS Full x32 manual and Hands upgrade: all-cards, Fame 1
+PASS Tap upgrade does not change product income; preview agrees: all-cards, Fame 1
+PASS Tap payout remains independent of product levels: all-cards, Fame 1
+PASS Full x32 manual and Hands upgrade: tap-heavy, Fame 5
+PASS Tap upgrade does not change product income; preview agrees: tap-heavy, Fame 5
+PASS Tap payout remains independent of product levels: tap-heavy, Fame 5
+PASS Full x32 manual and Hands upgrade: product-heavy, Fame 5
+PASS Tap upgrade does not change product income; preview agrees: product-heavy, Fame 5
+PASS Tap payout remains independent of product levels: product-heavy, Fame 5
+PASS Full x32 manual and Hands upgrade: all-cards, Fame 5
+PASS Tap upgrade does not change product income; preview agrees: all-cards, Fame 5
+PASS Tap payout remains independent of product levels: all-cards, Fame 5
+PASS Full x32 manual and Hands upgrade: tap-heavy, Fame 10
+PASS Tap upgrade does not change product income; preview agrees: tap-heavy, Fame 10
+PASS Tap payout remains independent of product levels: tap-heavy, Fame 10
+PASS Full x32 manual and Hands upgrade: product-heavy, Fame 10
+PASS Tap upgrade does not change product income; preview agrees: product-heavy, Fame 10
+PASS Tap payout remains independent of product levels: product-heavy, Fame 10
+PASS Full x32 manual and Hands upgrade: all-cards, Fame 10
+PASS Tap upgrade does not change product income; preview agrees: all-cards, Fame 10
+PASS Tap payout remains independent of product levels: all-cards, Fame 10
+PASS Full x32 manual and Hands upgrade: tap-heavy, Fame 20
+PASS Tap upgrade does not change product income; preview agrees: tap-heavy, Fame 20
+PASS Tap payout remains independent of product levels: tap-heavy, Fame 20
+PASS Full x32 manual and Hands upgrade: product-heavy, Fame 20
+PASS Tap upgrade does not change product income; preview agrees: product-heavy, Fame 20
+PASS Tap payout remains independent of product levels: product-heavy, Fame 20
+PASS Full x32 manual and Hands upgrade: all-cards, Fame 20
+PASS Tap upgrade does not change product income; preview agrees: all-cards, Fame 20
+PASS Tap payout remains independent of product levels: all-cards, Fame 20
+PASS Full x32 manual and Hands upgrade: tap-heavy, Fame 33
+PASS Tap upgrade does not change product income; preview agrees: tap-heavy, Fame 33
+PASS Tap payout remains independent of product levels: tap-heavy, Fame 33
+PASS Full x32 manual and Hands upgrade: product-heavy, Fame 33
+PASS Tap upgrade does not change product income; preview agrees: product-heavy, Fame 33
+PASS Tap payout remains independent of product levels: product-heavy, Fame 33
+PASS Full x32 manual and Hands upgrade: all-cards, Fame 33
+PASS Tap upgrade does not change product income; preview agrees: all-cards, Fame 33
+PASS Tap payout remains independent of product levels: all-cards, Fame 33
+PASS Helping Hands uses its separate base for all 90 base-skill payouts
+PASS Separate Hands base preserves frame-independent event accrual
+All 102 experiment checks passed. Curve=light; Hands base=0.5.

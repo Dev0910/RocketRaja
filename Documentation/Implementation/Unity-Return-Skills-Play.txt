@@ -1,0 +1,47 @@
+Scope: actual Play Mode, saved preview, real offline settlement and native skill purchases with a disposable profile. Main/device acceptance pending.
+PASS Only the saved preview and explicit disposable profile are used
+PASS Startup preserves the whole authored UI inventory
+PASS Driver loads and settles the real ten-hour absence; save error=
+PASS Return receipt was credited and capped before native interaction
+PASS Return page blocks manual gameplay taps
+PASS Physical return action reaches the topmost saved control
+PASS Active control: offline-next
+PASS Next-step action opens the pinned upgrade without another claim
+PASS Late duplicate return action cannot add income again
+PASS Return acknowledgement survives a real save read
+PASS Unowned skill activation is disabled 0
+PASS Active control: skill-unlock
+PASS Skill base link opens native upgrade details 0
+PASS Active control: Buy upgrade
+PASS Active control: back-upgrades
+PASS Buying the base skill returns to a ready native skill 0
+PASS Active control: skill-activate
+PASS Native activation starts the real cooldown 0
+PASS Active control: skill-upgrades
+PASS Native skill upgrades link preserves scope 0
+PASS Unowned skill activation is disabled 1
+PASS Active control: skill-unlock
+PASS Skill base link opens native upgrade details 1
+PASS Active control: Buy upgrade
+PASS Active control: back-upgrades
+PASS Buying the base skill returns to a ready native skill 1
+PASS Active control: skill-activate
+PASS Native activation starts the real cooldown 1
+PASS Native overlap feedback explains the actual Helping Hands bonus
+PASS Active control: skill-upgrades
+PASS Native skill upgrades link preserves scope 1
+PASS Unowned skill activation is disabled 2
+PASS Active control: skill-unlock
+PASS Skill base link opens native upgrade details 2
+PASS Active control: Buy upgrade
+PASS Active control: back-upgrades
+PASS Buying the base skill returns to a ready native skill 2
+PASS Active control: skill-activate
+PASS Native activation starts the real cooldown 2
+PASS Bulk Order feedback keeps its payout basis separate from active Rush
+PASS Active control: skill-upgrades
+PASS Native skill upgrades link preserves scope 2
+PASS Rush and Hands can overlap while browsing menus
+PASS All return/skill/catalogue navigation retains saved object identities
+PASS No gameplay/runtime errors: 
+NOTE Known MCP path advisory count: 1

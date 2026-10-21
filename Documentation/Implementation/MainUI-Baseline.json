@@ -1,0 +1,31 @@
+{
+  "scope": "Main integration: only these original files may change. Other original UI assets remain protected by NativeUI-Baseline.json.",
+  "files": [
+    {
+      "path": "Assets/Scenes/Main.unity",
+      "sha256": "C3FB4616A58DB54AE233E853F96C142E54CA547F67A76E85674A1EAE3284083C"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameController.cs",
+      "sha256": "EA642027A99F3F6E3A4EE6E9DA89121B18A4ECD4A7374B57FA93D68AD0D728F0"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameView.cs",
+      "sha256": "E3924FA3FA65B4F9F6485C9C678F2F7967F3F57BD2AB8333F5526850AC5887D0"
+    },
+    {
+      "path": "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+      "sha256": "A0C324DD0C5C813D70E002162296889D6DE997B8E319DE00FDBE01478453EE45"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildGame.cs",
+      "sha256": "6E8B4B5346D339C5623F2D55CEEBAA84955EE07FB011B7C8443F56B4C7524DED"
+    },
+    {
+      "path": "Assets/Game/Editor/ValidateGame.cs",
+      "sha256": "3ED9532107088C933EC0E51AE45977489883E8F5BE0BB32986530C100113BB55"
+    }
+  ],
+  "recordedAt": "2026-10-02T03:36:26.4311370+05:30",
+  "backupDirectory": "C:\\Unity\\Projects\\Incremental game\\Temp\\RedesignMainBackup-20261002-033626"
+}

@@ -26,6 +26,27 @@ before(async () => {
 beforeEach(async () => { await env.clearFirestore(); });
 after(async () => { await env?.cleanup(); });
 
+test('redesign snapshots use a separate namespace while legacy progress remains untouched', async () => {
+  const db = context(uid);
+  await assertSucceeds(setDoc(playerDoc(db), initial()));
+  const redesigned = doc(db, 'redesignUser', uid);
+  const newPayload = {...payload, json:'{"schema":2,"economy":"2.0.0","contentVersion":"cash-only-v1"}'};
+  await assertSucceeds(setDoc(redesigned, {...initial(), save:newPayload}));
+  assert.equal((await getDoc(playerDoc(db))).data().save.json, payload.json);
+  assert.equal((await getDoc(redesigned)).data().save.json, newPayload.json);
+  await assertFails(getDoc(doc(context('other-user'), 'redesignUser', uid)));
+  await assertFails(getDocs(collection(db, 'redesignUser')));
+  await assertFails(deleteDoc(redesigned));
+});
+
+test('client save permissions never grant access to a premium receipt or wallet ledger', async () => {
+  const db = context(uid);
+  for (const name of ['premiumLedger', 'purchaseReceipts', 'wallets', 'premiumWallets', 'premiumReceipts', 'premiumDraws', 'premiumProfiles', 'premiumRateLimits', 'premiumRevocations', 'unexpected']) {
+    await assertFails(setDoc(doc(db, name, uid), initial()));
+    await assertFails(getDoc(doc(db, name, uid)));
+  }
+});
+
 test('Google player can create and read exactly their own user document', async () => {
   const db=context(uid); await assertSucceeds(setDoc(playerDoc(db),initial()));
   const saved=await assertSucceeds(getDoc(playerDoc(db))); assert.equal(saved.data().profile.uid,uid);

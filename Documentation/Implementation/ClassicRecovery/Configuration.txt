@@ -1,0 +1,8 @@
+6 October 2026, local configuration check; no credentials or tokens exported.
+Package: com.diwali.fireworkstycoon.dev
+Project: rocket-raja-4729c
+Generated default_web_client_id matches configured Web client: True
+Generated project_id matches Firebase config: True
+APK certificate SHA1: BB4249744A4FFA4C2AC081CA53B9E4ECB1AEFC28
+Cloud flag remains disabled; Firebase CLI has no authorized account.
+Console lists Rocket Raja but opening it reports missing project or insufficient app-list permissions. Deployed settings and remote records remain unverified.

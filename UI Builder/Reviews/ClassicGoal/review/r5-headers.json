@@ -1,0 +1,3043 @@
+{
+  "sourceBefore": {
+    "index.html": "aab89c102bbec9afd5ddbbd34ff3fb25a09950da19998d221a39979efa9973e1",
+    "classic.css": "8a25cd2daf27b8df4499ac7e229372f33e5556e654acda16f02c889d83261ead",
+    "classic.js": "c48a74444650521a23ba1878f6fa37622479a44974738380d612611c9ca7575d",
+    "motion.css": "329a06bf16c495068913e5f38535ffbb5350765d0f4253775abd155b9723dcbd",
+    "motion.js": "51fc804dd237038a3ba192159a20ba7aca0595af85c75162ef8e832fd74980c5"
+  },
+  "checks": [
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Player",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Products",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Shop",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Player",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Products",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Legacy",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Shop",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        540
+      ],
+      "tab": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Player",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Products",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Shop",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Player",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Products",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Legacy",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Shop",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        360,
+        640
+      ],
+      "tab": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 360,
+        "height": 112,
+        "top": 0,
+        "right": 360,
+        "bottom": 112,
+        "left": 0
+      },
+      "tap": {
+        "x": 304,
+        "y": 57,
+        "width": 48,
+        "height": 48,
+        "top": 57,
+        "right": 352,
+        "bottom": 105,
+        "left": 304
+      },
+      "settings": {
+        "x": 8,
+        "y": 9,
+        "width": 48,
+        "height": 48,
+        "top": 9,
+        "right": 56,
+        "bottom": 57,
+        "left": 8
+      },
+      "cash": {
+        "x": 79.1875,
+        "y": 3.796875,
+        "width": 201.59375,
+        "height": 36,
+        "top": 3.796875,
+        "right": 280.78125,
+        "bottom": 39.796875,
+        "left": 79.1875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Player",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Products",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Shop",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Player",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Products",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Legacy",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Shop",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        390,
+        844
+      ],
+      "tab": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 121.328125,
+        "top": 0,
+        "right": 390,
+        "bottom": 121.328125,
+        "left": 0
+      },
+      "tap": {
+        "x": 334,
+        "y": 66.328125,
+        "width": 48,
+        "height": 48,
+        "top": 66.328125,
+        "right": 382,
+        "bottom": 114.328125,
+        "left": 334
+      },
+      "settings": {
+        "x": 8.65625,
+        "y": 9.75,
+        "width": 52,
+        "height": 52,
+        "top": 9.75,
+        "right": 60.65625,
+        "bottom": 61.75,
+        "left": 8.65625
+      },
+      "cash": {
+        "x": 85.796875,
+        "y": 4.125,
+        "width": 218.390625,
+        "height": 39,
+        "top": 4.125,
+        "right": 304.1875,
+        "bottom": 43.125,
+        "left": 85.796875
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Player",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Products",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Shop",
+      "name": "DIWALI DUKAAN",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Player",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Products",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Legacy",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Shop",
+      "name": "Festival Lights Bazaar26",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "Festival Lights Bazaar26",
+        "label": "Shop name: Festival Lights Bazaar26",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    },
+    {
+      "vp": [
+        450,
+        916
+      ],
+      "tab": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "title": {
+        "rect": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "overflow": "ellipsis"
+      },
+      "world": {
+        "x": 0,
+        "y": 0,
+        "width": 450,
+        "height": 140,
+        "top": 0,
+        "right": 450,
+        "bottom": 140,
+        "left": 0
+      },
+      "tap": {
+        "x": 394,
+        "y": 85,
+        "width": 48,
+        "height": 48,
+        "top": 85,
+        "right": 442,
+        "bottom": 133,
+        "left": 394
+      },
+      "settings": {
+        "x": 10,
+        "y": 11.25,
+        "width": 60,
+        "height": 60,
+        "top": 11.25,
+        "right": 70,
+        "bottom": 71.25,
+        "left": 10
+      },
+      "cash": {
+        "x": 99,
+        "y": 4.75,
+        "width": 252,
+        "height": 45,
+        "top": 4.75,
+        "right": 351,
+        "bottom": 49.75,
+        "left": 99
+      }
+    }
+  ],
+  "errors": [],
+  "sourceAfter": {
+    "index.html": "aab89c102bbec9afd5ddbbd34ff3fb25a09950da19998d221a39979efa9973e1",
+    "classic.css": "8a25cd2daf27b8df4499ac7e229372f33e5556e654acda16f02c889d83261ead",
+    "classic.js": "c48a74444650521a23ba1878f6fa37622479a44974738380d612611c9ca7575d",
+    "motion.css": "329a06bf16c495068913e5f38535ffbb5350765d0f4253775abd155b9723dcbd",
+    "motion.js": "51fc804dd237038a3ba192159a20ba7aca0595af85c75162ef8e832fd74980c5"
+  }
+}

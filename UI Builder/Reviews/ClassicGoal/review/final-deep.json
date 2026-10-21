@@ -1,0 +1,1536 @@
+{
+  "checks": [
+    {
+      "viewport": "360x540",
+      "name": "Player tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Player selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Products tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Products selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Legacy tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Legacy selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Shop tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Shop selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Product scroll retained",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "new Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "new first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "rebuilt Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "rebuilt first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Product quantity cycles",
+      "pass": true,
+      "data": [
+        "1",
+        "10",
+        "100",
+        "Max"
+      ]
+    },
+    {
+      "viewport": "360x540",
+      "name": "Product opens detail",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Product detail returns correct focus",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Save error blocks product purchases",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Intentional tap gives one event",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Navigation did not tap",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "28 card collection",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Card detail visible",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Explicit card close returns opener",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Five pull opens reveal",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Five cards complete returns Legacy",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Locked collection disables draw",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Activated skill disables activation",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Cooldown blocks skill",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Below-target prestige blocked",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Eligible prestige enabled",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Prestige opens rebuilt snapshot",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Offline Continue does not recredit",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 0 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-FR-C-01",
+          "SK-FR-P-02",
+          "SK-FR-D-01",
+          "SK-FR-C-02",
+          "SK-FR-P-03",
+          "SK-FR-D-02",
+          "SK-FR-C-03",
+          "SK-FR-P-04",
+          "SK-FR-D-03",
+          "SK-FR-C-04",
+          "SK-FR-P-05",
+          "SK-FR-D-04",
+          "SK-FR-C-05",
+          "SK-FR-P-06",
+          "SK-FR-D-05",
+          "SK-FR-C-06",
+          "SK-FR-P-07",
+          "SK-FR-D-06",
+          "SK-FR-C-07",
+          "SK-FR-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "0",
+        "count": "23 matching · Skills · Festival Rush / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 0 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Festival Rush",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 1 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-HH-C-01",
+          "SK-HH-P-02",
+          "SK-HH-D-01",
+          "SK-HH-C-02",
+          "SK-HH-P-03",
+          "SK-HH-D-02",
+          "SK-HH-C-03",
+          "SK-HH-P-04",
+          "SK-HH-D-03",
+          "SK-HH-C-04",
+          "SK-HH-P-05",
+          "SK-HH-D-04",
+          "SK-HH-C-05",
+          "SK-HH-P-06",
+          "SK-HH-C-06",
+          "SK-HH-D-05",
+          "SK-HH-P-07",
+          "SK-HH-C-07",
+          "SK-HH-D-06",
+          "SK-HH-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "1",
+        "count": "23 matching · Skills · Helping Hands / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 1 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Helping Hands",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 2 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-BO-C-01",
+          "SK-BO-P-02",
+          "SK-BO-C-02",
+          "SK-BO-P-03",
+          "SK-BO-C-03",
+          "SK-BO-P-04",
+          "SK-BO-C-04",
+          "SK-BO-P-05",
+          "SK-BO-C-05",
+          "SK-BO-P-06",
+          "SK-BO-C-06",
+          "SK-BO-P-07",
+          "SK-BO-C-07",
+          "SK-BO-P-08",
+          "SK-BO-C-08",
+          "SK-BO-P-09",
+          "SK-BO-C-09",
+          "SK-BO-P-10",
+          "SK-BO-C-10",
+          "SK-BO-P-11"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "2",
+        "count": "23 matching · Skills · Bulk Order / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Skill 2 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Bulk Order",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Broad Skills scope clears target",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Stale batch blocked",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Stale warning immediately visible",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Stale quote frozen unchanged",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Refreshed batch ready",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Save failure blocks batch",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Direct Buy All updates ownership",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Purchase cancellation no grant",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Purchase failure no grant",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Separate repeated pack transactions supported",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Existing guest opens comparison",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Cloud choice returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Confirmed signout returns guest",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "New account opens promotion",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Eligible copy returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Handoff returns Account",
+      "pass": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "Confirmed separate local game uses new fixture",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Player tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Player selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Products tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Products selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Legacy tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Legacy selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Shop tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Shop selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Product scroll retained",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "new Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "new first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "rebuilt Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "rebuilt first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Product quantity cycles",
+      "pass": true,
+      "data": [
+        "1",
+        "10",
+        "100",
+        "Max"
+      ]
+    },
+    {
+      "viewport": "360x640",
+      "name": "Product opens detail",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Product detail returns correct focus",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Save error blocks product purchases",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Intentional tap gives one event",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Navigation did not tap",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "28 card collection",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Card detail visible",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Explicit card close returns opener",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Five pull opens reveal",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Five cards complete returns Legacy",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Locked collection disables draw",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Activated skill disables activation",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Cooldown blocks skill",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Below-target prestige blocked",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Eligible prestige enabled",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Prestige opens rebuilt snapshot",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Offline Continue does not recredit",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 0 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-FR-C-01",
+          "SK-FR-P-02",
+          "SK-FR-D-01",
+          "SK-FR-C-02",
+          "SK-FR-P-03",
+          "SK-FR-D-02",
+          "SK-FR-C-03",
+          "SK-FR-P-04",
+          "SK-FR-D-03",
+          "SK-FR-C-04",
+          "SK-FR-P-05",
+          "SK-FR-D-04",
+          "SK-FR-C-05",
+          "SK-FR-P-06",
+          "SK-FR-D-05",
+          "SK-FR-C-06",
+          "SK-FR-P-07",
+          "SK-FR-D-06",
+          "SK-FR-C-07",
+          "SK-FR-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "0",
+        "count": "23 matching · Skills · Festival Rush / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 0 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Festival Rush",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 1 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-HH-C-01",
+          "SK-HH-P-02",
+          "SK-HH-D-01",
+          "SK-HH-C-02",
+          "SK-HH-P-03",
+          "SK-HH-D-02",
+          "SK-HH-C-03",
+          "SK-HH-P-04",
+          "SK-HH-D-03",
+          "SK-HH-C-04",
+          "SK-HH-P-05",
+          "SK-HH-D-04",
+          "SK-HH-C-05",
+          "SK-HH-P-06",
+          "SK-HH-C-06",
+          "SK-HH-D-05",
+          "SK-HH-P-07",
+          "SK-HH-C-07",
+          "SK-HH-D-06",
+          "SK-HH-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "1",
+        "count": "23 matching · Skills · Helping Hands / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 1 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Helping Hands",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 2 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-BO-C-01",
+          "SK-BO-P-02",
+          "SK-BO-C-02",
+          "SK-BO-P-03",
+          "SK-BO-C-03",
+          "SK-BO-P-04",
+          "SK-BO-C-04",
+          "SK-BO-P-05",
+          "SK-BO-C-05",
+          "SK-BO-P-06",
+          "SK-BO-C-06",
+          "SK-BO-P-07",
+          "SK-BO-C-07",
+          "SK-BO-P-08",
+          "SK-BO-C-08",
+          "SK-BO-P-09",
+          "SK-BO-C-09",
+          "SK-BO-P-10",
+          "SK-BO-C-10",
+          "SK-BO-P-11"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "2",
+        "count": "23 matching · Skills · Bulk Order / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Skill 2 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Bulk Order",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Broad Skills scope clears target",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Stale batch blocked",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Stale warning immediately visible",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Stale quote frozen unchanged",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Refreshed batch ready",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Save failure blocks batch",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Direct Buy All updates ownership",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Purchase cancellation no grant",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Purchase failure no grant",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Separate repeated pack transactions supported",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Existing guest opens comparison",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Cloud choice returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Confirmed signout returns guest",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "New account opens promotion",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Eligible copy returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Handoff returns Account",
+      "pass": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Confirmed separate local game uses new fixture",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Player tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Player selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Products tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Products selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Legacy tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Legacy selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Shop tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Shop selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Product scroll retained",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "new Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "new first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "rebuilt Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "rebuilt first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Product quantity cycles",
+      "pass": true,
+      "data": [
+        "1",
+        "10",
+        "100",
+        "Max"
+      ]
+    },
+    {
+      "viewport": "390x844",
+      "name": "Product opens detail",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Product detail returns correct focus",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Save error blocks product purchases",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Intentional tap gives one event",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Navigation did not tap",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "28 card collection",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Card detail visible",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Explicit card close returns opener",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Five pull opens reveal",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Five cards complete returns Legacy",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Locked collection disables draw",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Activated skill disables activation",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Cooldown blocks skill",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Below-target prestige blocked",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Eligible prestige enabled",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Prestige opens rebuilt snapshot",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Offline Continue does not recredit",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 0 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-FR-C-01",
+          "SK-FR-P-02",
+          "SK-FR-D-01",
+          "SK-FR-C-02",
+          "SK-FR-P-03",
+          "SK-FR-D-02",
+          "SK-FR-C-03",
+          "SK-FR-P-04",
+          "SK-FR-D-03",
+          "SK-FR-C-04",
+          "SK-FR-P-05",
+          "SK-FR-D-04",
+          "SK-FR-C-05",
+          "SK-FR-P-06",
+          "SK-FR-D-05",
+          "SK-FR-C-06",
+          "SK-FR-P-07",
+          "SK-FR-D-06",
+          "SK-FR-C-07",
+          "SK-FR-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "0",
+        "count": "23 matching · Skills · Festival Rush / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 0 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Festival Rush",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 1 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-HH-C-01",
+          "SK-HH-P-02",
+          "SK-HH-D-01",
+          "SK-HH-C-02",
+          "SK-HH-P-03",
+          "SK-HH-D-02",
+          "SK-HH-C-03",
+          "SK-HH-P-04",
+          "SK-HH-D-03",
+          "SK-HH-C-04",
+          "SK-HH-P-05",
+          "SK-HH-D-04",
+          "SK-HH-C-05",
+          "SK-HH-P-06",
+          "SK-HH-C-06",
+          "SK-HH-D-05",
+          "SK-HH-P-07",
+          "SK-HH-C-07",
+          "SK-HH-D-06",
+          "SK-HH-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "1",
+        "count": "23 matching · Skills · Helping Hands / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 1 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Helping Hands",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 2 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-BO-C-01",
+          "SK-BO-P-02",
+          "SK-BO-C-02",
+          "SK-BO-P-03",
+          "SK-BO-C-03",
+          "SK-BO-P-04",
+          "SK-BO-C-04",
+          "SK-BO-P-05",
+          "SK-BO-C-05",
+          "SK-BO-P-06",
+          "SK-BO-C-06",
+          "SK-BO-P-07",
+          "SK-BO-C-07",
+          "SK-BO-P-08",
+          "SK-BO-C-08",
+          "SK-BO-P-09",
+          "SK-BO-C-09",
+          "SK-BO-P-10",
+          "SK-BO-C-10",
+          "SK-BO-P-11"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "2",
+        "count": "23 matching · Skills · Bulk Order / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Skill 2 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Bulk Order",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Broad Skills scope clears target",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Stale batch blocked",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Stale warning immediately visible",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Stale quote frozen unchanged",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Refreshed batch ready",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Save failure blocks batch",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Direct Buy All updates ownership",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Purchase cancellation no grant",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Purchase failure no grant",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Separate repeated pack transactions supported",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Existing guest opens comparison",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Cloud choice returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Confirmed signout returns guest",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "New account opens promotion",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Eligible copy returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Handoff returns Account",
+      "pass": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Confirmed separate local game uses new fixture",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Player tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Player selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Products tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Products selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Legacy tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Legacy selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Shop tab selects",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Shop selected tab returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Product scroll retained",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "new Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "new first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "rebuilt Home first-stock CTA reaches Products",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "rebuilt first stock returns Home populated",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Product quantity cycles",
+      "pass": true,
+      "data": [
+        "1",
+        "10",
+        "100",
+        "Max"
+      ]
+    },
+    {
+      "viewport": "450x916",
+      "name": "Product opens detail",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Product detail returns correct focus",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Save error blocks product purchases",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Intentional tap gives one event",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Navigation did not tap",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "28 card collection",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Card detail visible",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Explicit card close returns opener",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Five pull opens reveal",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Five cards complete returns Legacy",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Locked collection disables draw",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Activated skill disables activation",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Cooldown blocks skill",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Below-target prestige blocked",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Eligible prestige enabled",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Prestige opens rebuilt snapshot",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Offline Continue does not recredit",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 0 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-FR-C-01",
+          "SK-FR-P-02",
+          "SK-FR-D-01",
+          "SK-FR-C-02",
+          "SK-FR-P-03",
+          "SK-FR-D-02",
+          "SK-FR-C-03",
+          "SK-FR-P-04",
+          "SK-FR-D-03",
+          "SK-FR-C-04",
+          "SK-FR-P-05",
+          "SK-FR-D-04",
+          "SK-FR-C-05",
+          "SK-FR-P-06",
+          "SK-FR-D-05",
+          "SK-FR-C-06",
+          "SK-FR-P-07",
+          "SK-FR-D-06",
+          "SK-FR-C-07",
+          "SK-FR-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "0",
+        "count": "23 matching · Skills · Festival Rush / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 0 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Festival Rush",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 1 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-HH-C-01",
+          "SK-HH-P-02",
+          "SK-HH-D-01",
+          "SK-HH-C-02",
+          "SK-HH-P-03",
+          "SK-HH-D-02",
+          "SK-HH-C-03",
+          "SK-HH-P-04",
+          "SK-HH-D-03",
+          "SK-HH-C-04",
+          "SK-HH-P-05",
+          "SK-HH-D-04",
+          "SK-HH-C-05",
+          "SK-HH-P-06",
+          "SK-HH-C-06",
+          "SK-HH-D-05",
+          "SK-HH-P-07",
+          "SK-HH-C-07",
+          "SK-HH-D-06",
+          "SK-HH-P-08"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "1",
+        "count": "23 matching · Skills · Helping Hands / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 1 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Helping Hands",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 2 list scope correct",
+      "pass": true,
+      "data": {
+        "rows": [
+          "SK-BO-C-01",
+          "SK-BO-P-02",
+          "SK-BO-C-02",
+          "SK-BO-P-03",
+          "SK-BO-C-03",
+          "SK-BO-P-04",
+          "SK-BO-C-04",
+          "SK-BO-P-05",
+          "SK-BO-C-05",
+          "SK-BO-P-06",
+          "SK-BO-C-06",
+          "SK-BO-P-07",
+          "SK-BO-C-07",
+          "SK-BO-P-08",
+          "SK-BO-C-08",
+          "SK-BO-P-09",
+          "SK-BO-C-09",
+          "SK-BO-P-10",
+          "SK-BO-C-10",
+          "SK-BO-P-11"
+        ],
+        "bad": [],
+        "category": "Skills",
+        "target": "2",
+        "count": "23 matching · Skills · Bulk Order / AvailableAvailable includes every unowned upgrade, regardless of cash."
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Skill 2 native batch scope consistent",
+      "pass": true,
+      "data": {
+        "native": true,
+        "label": "Skills / Bulk Order",
+        "ids": [],
+        "bad": []
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Broad Skills scope clears target",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Stale batch blocked",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Stale warning immediately visible",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Stale quote frozen unchanged",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Refreshed batch ready",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Save failure blocks batch",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Direct Buy All updates ownership",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Purchase cancellation no grant",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Purchase failure no grant",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Separate repeated pack transactions supported",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Existing guest opens comparison",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Cloud choice returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Confirmed signout returns guest",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "New account opens promotion",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Eligible copy returns Home",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Handoff returns Account",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Confirmed separate local game uses new fixture",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Full catalogue reaches all1000 IDs",
+      "pass": true,
+      "data": {
+        "count": 1000,
+        "pages": 50
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Stable ID search works",
+      "pass": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Empty search explained",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

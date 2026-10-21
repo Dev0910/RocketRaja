@@ -1,42 +1,23 @@
 # Android release runbook
 
-Working title: **Rocket Raja**. Name availability has not been checked. The game does not depend on the real festival date.
+Updated 2 October 2026 for the ad-free Rocket Raja redesign. **Release is not accepted.** Earlier ad/Legacy instructions and calendar targets are superseded. There is no promised release date or platform approval. The current user-directed delivery is a development game with a local test shop; actual Play linking is deferred.
 
-## Owner actions
+The operational source is [Rollout and recovery](Implementation/RolloutRecovery.md): supported versions, retained namespaces, migration evidence, entitlement-preserving rollback, development-only exclusions and the exact final commit/build/device-update sequence. The [implementation TODO](../Game%20Design/Implementation%20TODO.md) remains the acceptance checklist.
 
-1. Create/verify the Play Console developer account and AdMob account; choose final application ID and store developer name.
-2. Own and securely back up the upload keystore. Configure Android Publishing Settings locally; never commit passwords or keys. Choose Play App Signing during store setup.
-3. Recruit the required closed-test cohort. For qualifying new personal accounts, budget at least 12 opted-in testers for 14 continuous days, then apply for production access. Approval timing is not guaranteed. [Play testing requirements](https://support.google.com/googleplay/android-developer/answer/14151465?hl=en-GB)
-4. Review and publish an accurate privacy policy at a public HTTPS URL. Fill the draft's owner/contact details; verify SDK data collection and regional consent behavior.
-5. Create an Android AdMob app and rewarded unit. Configure the real app ID in Assets > Google Mobile Ads > Settings. Create `ProductionConfig` from the Rocket Raja asset menu and save it as `Assets/Resources/ProductionConfig.asset`; fill application ID, rewarded unit, privacy URL and enable productionAds.
+## Before the final commit and device replacement
 
-## Device testing before closed-test distribution
+1. Native Main now uses the redesigned core, 13 saved screens, retained utilities, progression art, feedback and contextual tips. Finish the remaining integrated regressions and device/player acceptance using the current candidate.
+2. Complete the local test-shop/device recovery scope authorized by the user. Actual [store/backend configuration](Implementation/PremiumDeploymentReview.md), licensed Play sandbox purchases and real fulfillment remain explicitly deferred; the compiled adapter and synthetic server tests do not establish those results.
+3. Complete device performance, sign-in/guest, interrupted save/draw, offline/resume, two-device and uncoached player checks using identified test profiles. Preserve source hashes, signing/distribution details and results. Never test destructive recovery on actual player data.
+4. Resolve deployed-player transition, privacy/support/retention details and the production package/version. Keep Firebase Analytics/Crashlytics collection settings unchanged unless separately decided. AdMob/UMP have been removed; no ad configuration or ad reward tests are required.
+5. Close acceptance using the tested candidate. Review and commit the full authorized diff, build the final artifact from that commit, compare it with the accepted sources/configuration, then update the connected phone without uninstalling or clearing data. Verify its installed package/signature before updating. The debug-signed Android Test menu cannot replace a differently signed installed game.
 
-- Install the test APK on ARM64 Android phones; test a short 16:9 screen and a tall phone with cutout/gesture navigation.
-- Validate actual rewarded ads with test units: complete, dismiss, fail network, background during video, duplicate callback handling, consent required/not required and privacy-options form.
-- Verify purchases and scrolling never create accidental scene taps, especially multitouch and rapid navigation.
-- Force-stop after offline payout, prestige, Legacy purchase and reward; restart and verify balances/cooldowns. Corrupt main save in a test install and verify backup recovery. Preserve evidence before starting a fresh save.
-- Test 8-hour and 18-hour offline caps, backward time, repeated focus/pause events and no internet.
-- Play three complete prestige cycles without ads. Observe new testers without coaching. Simulator timings are development targets, not usability evidence.
-- Profile a low-end physical phone for at least ten minutes after filling the shop: target sustained 30 FPS, acceptable temperature and memory, no ANRs. Windows frame rate is not evidence of Android performance.
+The isolated development boundary blocks all non-development player builds through the common Unity build callback. Do not remove that boundary merely to obtain an APK; the requested local prototype can be delivered as a development build. The separate core QA APK is not the full game. The [native playtest package](Implementation/DeviceGame/README.md) uses the actual saved Bootstrap/Main game and its own application data; it is still an intermediate test build before the final committed replacement.
 
-## Production submission
+## Before any later store publication
 
-- Confirm the current target API, supported SDK minimum, 64-bit and 16 KB page-size requirements in Play Console. The project selects the installed target API automatically and ARM64 IL2CPP; inspect the actual bundle before upload.
-- Remove test identifiers from production configuration; use `Rocket Raja > Build Production Bundle`. Keep test advertising identifiers in development builds.
-- Review title availability, store icon, feature graphic and screenshots. Use actual gameplay captures; avoid presenting unfinished features.
-- Complete content rating, target audience (teens/adults), Contains ads, Data safety, privacy URL, app access and signing declarations. Audit Google's advertising SDK disclosures for the included version; do not claim that no data is collected merely because saves are local.
-- Upload to closed testing first. Inspect pre-launch report, crashes/ANRs and Android vitals. Use a staged rollout when approved.
+RR-11-05/07 require a current review of platform/account testing requirements, target API, 64-bit/page-size compatibility, Play signing, store products/localized prices, odds text, app access, data declarations, privacy URL and support/deletion behavior against the actual configuration and artifact. [Official-source review dated 2 October 2026](Implementation/PlatformReview-2026-10-02.md) records current API, native-page and disclosure requirements. Artifact/device checks and owner-specific production inputs remain open; no account eligibility is assumed. Capture real gameplay screenshots and preserve artifact inspection results.
 
-## Schedule
+Public backend deployment and store publication are later directed actions. The current request authorizes implementation and the final local device update. See [Premium deployment review](Implementation/PremiumDeploymentReview.md) for the concrete undeployed service and configuration inputs, and [Firebase SDK/signing notes](FirebaseSDK.md) for the installed game's signing constraints.
 
-September 14–20: project/account foundations. September 21–27: full shop and offline saves. September 28–October 4: prestige and closed-test build. October 5–18: closed testing and refinements. October 19–25: production access/submission. October 26–November 1: review buffer, aiming for October 30 availability. Account verification and store approval are external gates.
-
-## Integration references
-
-- [Google Mobile Ads Unity setup](https://developers.google.com/admob/unity/quick-start)
-- [Rewarded ads](https://developers.google.com/admob/unity/rewarded)
-- [Unity consent workflow](https://developers.google.com/admob/unity/privacy)
-- [India Post holiday calendar](https://www.indiapost.gov.in/holidays-list)
-
-No separate analytics SDK, purchases, banners, interstitials, app-open ads, cloud accounts or multiplayer are implemented.
+The [privacy draft](PrivacyPolicy-DRAFT.md) still requires owner completion and a full review against the accepted release configuration; it must not be published as-is.

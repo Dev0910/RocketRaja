@@ -1,0 +1,75 @@
+PASS Saved Bootstrap uses the redesigned flow without constructing the legacy host
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Cancelled sign-in returns to the native welcome state without losing the guest
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS New-account choice is explicit before any cloud document is created
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 583.00); hits=Primary Button
+PASS Native confirmation opens saved Main on the promoted account session
+PASS Scene transition and promotion preserve the original guest bytes
+PASS Account Main cannot use the local purchase simulator
+PASS Active native control: settings
+PASS Topmost native hit: settings; point=(945.69, 2278.15); hits=settings
+PASS Configured account flow uses accurate Settings and Privacy copy on existing text objects
+PASS Active native control: Account controls
+PASS Topmost native hit: Account controls; point=(885.00, 1049.50); hits=Account controls,Scroll Body,SettingsDialog
+PASS Settings opens the saved account menu and pauses its old gameplay binding
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 583.00); hits=Primary Button
+PASS Native sign-out returns to the original guest with its progress intact
+PASS Sign-out releases the confirmed account lease
+PASS Active native control: offline-close
+PASS Topmost native hit: offline-close; point=(540.00, 389.13); hits=offline-close,Viewport
+PASS Active native control: settings
+PASS Topmost native hit: settings; point=(945.69, 2278.15); hits=settings
+PASS Active native control: Account controls
+PASS Topmost native hit: Account controls; point=(885.00, 1049.50); hits=Account controls,Scroll Body,SettingsDialog
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Existing Google comparison offers Google or guest without an overwrite action
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Existing Google progress restores through Bootstrap into Main
+PASS Disconnected account exposes an account-options route in native recovery
+PASS Active native control: recovery-exit
+PASS Topmost native hit: recovery-exit; point=(540.00, 698.00); hits=recovery-exit,SaveRecoveryDialog,DimBackdrop
+PASS Recovery reaches account options without clearing the pending account files
+PASS Active native control: Tertiary Button
+PASS Topmost native hit: Tertiary Button; point=(540.00, 259.00); hits=Tertiary Button
+PASS Offline return-to-guest remains playable without pretending the account upload succeeded
+PASS Active native control: offline-close
+PASS Topmost native hit: offline-close; point=(540.00, 389.13); hits=offline-close,Viewport
+PASS Active native control: settings
+PASS Topmost native hit: settings; point=(945.69, 2278.15); hits=settings
+PASS Active native control: Account controls
+PASS Topmost native hit: Account controls; point=(885.00, 1049.50); hits=Account controls,Scroll Body,SettingsDialog
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS A different Google UID receives its own new-account choice
+PASS Active native control: Secondary Button
+PASS Topmost native hit: Secondary Button; point=(540.00, 421.00); hits=Secondary Button
+PASS Choosing a fresh second account does not import the guest or first account
+PASS First Google account remains present after switching UID
+PASS Other-device takeover blocks the second account's native Main
+PASS Active native control: recovery-exit
+PASS Topmost native hit: recovery-exit; point=(540.00, 698.00); hits=recovery-exit,SaveRecoveryDialog,DimBackdrop
+PASS Active native control: Tertiary Button
+PASS Topmost native hit: Tertiary Button; point=(540.00, 259.00); hits=Tertiary Button
+PASS Active native control: offline-close
+PASS Topmost native hit: offline-close; point=(540.00, 389.13); hits=offline-close,Viewport
+PASS Active native control: settings
+PASS Topmost native hit: settings; point=(945.69, 2278.15); hits=settings
+PASS Active native control: Account controls
+PASS Topmost native hit: Account controls; point=(885.00, 1049.50); hits=Account controls,Scroll Body,SettingsDialog
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Existing remote owner requires an explicit Play here confirmation
+PASS Active native control: Primary Button
+PASS Topmost native hit: Primary Button; point=(540.00, 549.00); hits=Primary Button
+PASS Confirmed handoff enters Main under the new generation while the old engine stays fenced
+PASS All scene routes retain the redesign namespace and legacy/live guard
+PASS No runtime errors during complete account/guest/UID/handoff scene routes

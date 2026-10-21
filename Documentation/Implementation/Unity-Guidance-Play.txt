@@ -1,0 +1,48 @@
+Scope: two actual preview Play Mode sessions, disposable profile, topmost native raycasts and durable acknowledgements. No device or human comprehension claim.
+PASS Saved preview starts without accessing a normal profile
+PASS Startup has exactly the saved UI inventory
+PASS Actual driver loads the disposable profile
+PASS Opening suggests a manual first purchase without executing it
+PASS Active native control: Read tip
+PASS Topmost physical control: Read tip; hits=Read tip,Contextual tip
+PASS Explicit Read tip opens the reader
+PASS Active native control: Skip tip
+PASS Topmost physical control: Skip tip; hits=Skip tip,Tip reader,home-training
+PASS Physical Skip persists but never buys or taps
+PASS Active native control: home-first-buy
+PASS Topmost physical control: home-first-buy; hits=home-first-buy,Viewport
+PASS Actual manual purchase makes tap guidance relevant without forcing it open
+PASS Active native control: Read tip
+PASS Topmost physical control: Read tip; hits=Read tip,Contextual tip
+PASS Active native control: Got it
+PASS Topmost physical control: Got it; hits=Got it,Tip reader,home-training
+PASS Got it persists without a leaked counter tap
+PASS Active native control: Read tip
+PASS Topmost physical control: Read tip; hits=Read tip,Contextual tip
+PASS Back closes help before leaving the product page or learning its topic
+PASS Active native control: Read tip
+PASS Topmost physical control: Read tip; hits=Read tip,Contextual tip
+PASS Utility overlay closes help and removes the strip
+PASS Active native control: Upgrades
+PASS Topmost physical control: Upgrades; hits=Upgrades
+PASS Active native control: review-buyall
+PASS Topmost physical control: review-buyall; hits=review-buyall
+PASS Native frozen review offers relevant optional Buy All guidance
+PASS Active native control: Read tip
+PASS Topmost physical control: Read tip; hits=Read tip,Contextual tip
+PASS Active native control: Got it
+PASS Topmost physical control: Got it; hits=Got it,Tip reader,Cancel
+PASS Physical acknowledgement keeps the same reviewed batch valid
+PASS Active native control: Buy 3 · ₹472.06
+PASS Topmost physical control: Buy 3 · ₹472.06; hits=Buy 3 · ₹472.06
+PASS The reviewed batch commits after help with no unintended counter taps
+PASS Guidance and gameplay preserve all authored UI object identities
+PASS No gameplay/runtime errors: 
+PASS Saved preview starts without accessing a normal profile
+PASS Startup has exactly the saved UI inventory
+PASS Actual driver loads the disposable profile
+PASS Second actual session restores acknowledged and skipped topics
+PASS Restart neither reopens learned help nor manufactures counter taps
+PASS An unacknowledged contextual topic remains optional after restart
+PASS Guidance and gameplay preserve all authored UI object identities
+PASS No gameplay/runtime errors: 

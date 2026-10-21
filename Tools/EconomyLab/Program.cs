@@ -79,11 +79,14 @@ if (!args.Contains("--simulate"))
     tied.upgrades = new[] { new UpgradeDef { id = "z", effect = Effect.TapProfit, price = 10 }, new UpgradeDef { id = "a", effect = Effect.TapProfit, price = 10 } };
     var tieEngine = new GameEngine(tied, new GameState()); tieEngine.State.cash = 10;
     Check(tieEngine.BuyAll() == 1 && tieEngine.State.upgrades.Single() == "a", "Equal prices use deterministic ordinal ID order");
-    g.ActivateSkill(0); g.ActivateSkill(1); g.RewardAd("one", "sponsor");
+    g.ActivateSkill(0); g.ActivateSkill(1);
+    Check(!g.RewardAd("one", "sponsor"), "Retired sponsor callbacks cannot grant a boost");
+    g.State.sponsorUntil = g.State.now + 300; // A legacy saved boost must also be inert.
+    Check(Near(g.LiveIncome, g.NormalIncome * g.RushMultiplier), "Legacy sponsor timestamp cannot double displayed income");
     h = new GameEngine(g.Data, Clone(g.State));
     g.Advance(400); for (int i = 0; i < 4000; i++) h.Advance(.1);
     Check(Near(g.State.runEarnings, h.State.runEarnings), "Large and small timesteps agree across buff boundaries");
-    Check(g.State.runEarnings > g.State.eligibleEarnings, "Ad bonus excluded from prestige earnings");
+    Check(Near(g.State.runEarnings, g.State.eligibleEarnings), "Legacy sponsor timestamp cannot grant hidden bonus income");
     var before = g.State.eligibleEarnings; g.ActivateSkill(2);
     Check(Near(g.State.eligibleEarnings - before, g.NormalIncome * 300), "Bulk Order uses normal income");
     g.State.eligibleEarnings = Catalog.PrestigeThreshold * 4; var p = g.PreviewPrestige();
@@ -97,7 +100,7 @@ if (!args.Contains("--simulate"))
     Check(Near(reward, normal * .5 * 8 * 3600), "Eight-hour offline cap");
     var balance = g.State.cash; g.ResolveOffline(g.State.savedAt); Check(Near(balance, g.State.cash), "Repeated resume has no duplicate payout");
     string offline = g.State.pendingOfflineId;
-    Check(g.RewardAd("two", "offline", offline) && !g.RewardAd("two", "offline", offline) && !g.RewardAd("three", "offline", offline), "Offline reward callback is single-use");
+    Check(!g.RewardAd("two", "offline", offline) && !g.RewardAd("two", "offline", offline) && !g.RewardAd("three", "offline", offline) && Near(balance, g.State.cash) && g.State.pendingOfflineId == offline, "Retired offline callbacks preserve the settled income and return summary");
     balance = g.State.cash; double saved = g.State.savedAt; g.ResolveOffline(saved - 1000); g.ResolveOffline(saved); Check(Near(balance, g.State.cash), "Clock rollback cannot replay offline time");
     var root = Path.Combine(Path.GetTempPath(), "DiwaliTests-" + Guid.NewGuid());
     var store = new SaveStore(Path.Combine(root, "save"), s => JsonSerializer.Serialize(s, options), s => JsonSerializer.Deserialize<GameState>(s, options));

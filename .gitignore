@@ -7,6 +7,9 @@ UserSettings/
 .vs/
 *.csproj
 !Tools/EconomyLab/EconomyLab.csproj
+!Tools/CloudSaveLab/CloudSaveLab.csproj
+!Tools/RedesignLab/RedesignLab.csproj
+!Tools/**/*.csproj
 *.sln
 *.log
 Tools/**/bin/

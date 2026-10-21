@@ -1,0 +1,4 @@
+PASS Isolated non-development build is rejected: None
+PASS Isolated non-development build is rejected: ForceOptimizeScriptCompilation, Il2CPP, CompressTextures, StripDebugSymbols, ShaderLivelinkSupport, CompressWithLz4
+PASS Isolated non-development build is rejected: ForceOptimizeScriptCompilation, Il2CPP, CompressTextures, StripDebugSymbols, ShaderLivelinkSupport, AutoRunPlayer
+PASS Explicit development diagnostics remain allowed by the isolation guard

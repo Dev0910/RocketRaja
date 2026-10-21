@@ -1,0 +1,7 @@
+PASS A real locked save prevents initial persistence
+PASS Startup stays closed with the underlying I/O failure recorded
+PASS No purchasing or tapping before recovery
+PASS Retry resumes initialization after the file lock is released
+PASS Recovery settles the original ten-hour absence with the eight-hour cap
+PASS Offline receipt and credit are durable before input becomes available
+PASS Repeated retry cannot settle the absence a second time

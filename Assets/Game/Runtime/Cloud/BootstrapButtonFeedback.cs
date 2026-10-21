@@ -14,6 +14,8 @@ namespace RocketRaja.Cloud
         {
             get
             {
+                var redesign=RedesignSessionHost.Instance;
+                if(redesign)return redesign.Account?.State?.reducedMotion??redesign.Coordinator?.GuestState?.reducedMotion??false;
                 var host = PlayerSessionHost.Instance;
                 return host?.Session?.State?.reducedMotion ?? host?.GuestState?.reducedMotion ?? false;
             }

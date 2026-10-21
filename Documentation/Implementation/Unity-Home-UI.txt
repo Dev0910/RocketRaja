@@ -1,0 +1,26 @@
+Scope: isolated saved Home rendering/binding; actual pointer events and Main/device acceptance are separate.
+PASS Fresh Home keeps the exact opening grant and requires a manual purchase
+PASS Fresh shelves distinguish empty first product from locked families
+PASS Native first purchase spends the grant once even after repeated binding/callback
+PASS Manual buying populates the correct shelf and exposes the next family
+PASS Counter cannot bypass the engine's one-third-second ceiling
+PASS A long idle gap does not bank extra counter taps
+PASS Session gameplay gate blocks a late counter callback
+PASS Saved shelf routes by exact product ID 0
+PASS Saved shelf routes by exact product ID 1
+PASS Saved shelf routes by exact product ID 2
+PASS Saved shelf routes by exact product ID 3
+PASS Saved shelf routes by exact product ID 4
+PASS Saved shelf routes by exact product ID 5
+PASS Saved shelf routes by exact product ID 6
+PASS Saved shelf routes by exact product ID 7
+PASS Saved skill routes by exact skill ID 0
+PASS Saved skill routes by exact skill ID 1
+PASS Saved skill routes by exact skill ID 2
+PASS Home exposes real tap training
+PASS Home wallet opens the test shop without granting or marking a purchase
+PASS Home preserves the actual pinned goal destination
+PASS Rebinding a different profile clears previous tap feedback
+PASS Progressed Home binds all eight levels and earned-target prestige readiness
+PASS Home and six tap feedback slots preserve every saved UI object
+PASS Unity compilation succeeds

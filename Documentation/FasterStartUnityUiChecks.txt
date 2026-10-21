@@ -1,0 +1,25 @@
+PASS Disposable guest initializes
+PASS Fresh opening buys the first product for the seeded cash and earns 0.85 per second
+PASS Product and tap quantity controls start on Max
+PASS Level 12 tile progress is 13.33 percent between the 10 and 25 milestones
+PASS Level 12 popup matches tile progress
+PASS All ten product bars use solid left-to-right fills
+PASS Fill texture has no transparent corners, gradient or shadow
+PASS Tile and popup agree at level 0
+PASS Tile and popup agree at level 1
+PASS Tile and popup agree at level 12
+PASS Tile and popup agree at level 24
+PASS Tile and popup agree at level 25
+PASS Tile and popup agree at level 37
+PASS Tile and popup agree at level 49
+PASS Tile and popup agree at level 50
+PASS Tile and popup agree at level 75
+PASS Tile and popup agree at level 99
+PASS Tile and popup agree at level 100
+PASS Tile and popup agree at level 150
+PASS Tile and popup agree at level 99999
+PASS Tile and popup agree at level 100000
+PASS Synergy identifies the final product below its shared threshold
+PASS Synergy displays the earned multiplier and advances to the next threshold
+PASS Stock shelf buys one initial level even with Max selected
+PASS The next purchase upgrades with Max

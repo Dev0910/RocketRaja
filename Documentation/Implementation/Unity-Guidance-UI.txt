@@ -1,0 +1,65 @@
+Scope: saved native topic text/layout at two sizes, durable command bindings and failure isolation. Full physical interaction/relaunch is separate Play Mode evidence.
+PASS All 13 known topics and closed optional controls are saved in the prefab
+PASS Native guidance text exactly matches inspected editable HTML manifest
+PASS Guidance uses saved TMP material slots
+PASS Context selects a collapsed optional strip: buy-first
+PASS Full native topic and 48px actions fit (390, 844) / buy-first
+PASS Full native topic and 48px actions fit (360, 540) / buy-first
+PASS Closing a reader never acknowledges or spends: buy-first
+PASS Context selects a collapsed optional strip: tap-counter
+PASS Full native topic and 48px actions fit (390, 844) / tap-counter
+PASS Full native topic and 48px actions fit (360, 540) / tap-counter
+PASS Closing a reader never acknowledges or spends: tap-counter
+PASS Context selects a collapsed optional strip: product-levels
+PASS Full native topic and 48px actions fit (390, 844) / product-levels
+PASS Full native topic and 48px actions fit (360, 540) / product-levels
+PASS Closing a reader never acknowledges or spends: product-levels
+PASS Context selects a collapsed optional strip: catalogue-filters
+PASS Full native topic and 48px actions fit (390, 844) / catalogue-filters
+PASS Full native topic and 48px actions fit (360, 540) / catalogue-filters
+PASS Closing a reader never acknowledges or spends: catalogue-filters
+PASS Context selects a collapsed optional strip: buy-all
+PASS Full native topic and 48px actions fit (390, 844) / buy-all
+PASS Full native topic and 48px actions fit (360, 540) / buy-all
+PASS Closing a reader never acknowledges or spends: buy-all
+PASS Context selects a collapsed optional strip: skill-basics
+PASS Full native topic and 48px actions fit (390, 844) / skill-basics
+PASS Full native topic and 48px actions fit (360, 540) / skill-basics
+PASS Closing a reader never acknowledges or spends: skill-basics
+PASS Context selects a collapsed optional strip: comebacks
+PASS Full native topic and 48px actions fit (390, 844) / comebacks
+PASS Full native topic and 48px actions fit (360, 540) / comebacks
+PASS Closing a reader never acknowledges or spends: comebacks
+PASS Context selects a collapsed optional strip: prestige
+PASS Full native topic and 48px actions fit (390, 844) / prestige
+PASS Full native topic and 48px actions fit (360, 540) / prestige
+PASS Closing a reader never acknowledges or spends: prestige
+PASS Context selects a collapsed optional strip: rebuild
+PASS Full native topic and 48px actions fit (390, 844) / rebuild
+PASS Full native topic and 48px actions fit (360, 540) / rebuild
+PASS Closing a reader never acknowledges or spends: rebuild
+PASS Context selects a collapsed optional strip: cash-and-talent
+PASS Full native topic and 48px actions fit (390, 844) / cash-and-talent
+PASS Full native topic and 48px actions fit (360, 540) / cash-and-talent
+PASS Closing a reader never acknowledges or spends: cash-and-talent
+PASS Context selects a collapsed optional strip: talent-free
+PASS Full native topic and 48px actions fit (390, 844) / talent-free
+PASS Full native topic and 48px actions fit (360, 540) / talent-free
+PASS Closing a reader never acknowledges or spends: talent-free
+PASS Context selects a collapsed optional strip: talent-duplicates
+PASS Full native topic and 48px actions fit (390, 844) / talent-duplicates
+PASS Full native topic and 48px actions fit (360, 540) / talent-duplicates
+PASS Closing a reader never acknowledges or spends: talent-duplicates
+PASS Context selects a collapsed optional strip: second-gift
+PASS Full native topic and 48px actions fit (390, 844) / second-gift
+PASS Full native topic and 48px actions fit (360, 540) / second-gift
+PASS Closing a reader never acknowledges or spends: second-gift
+PASS Skip persists once and suppresses the next topic in an unchanged context
+PASS Navigation may suggest the next relevant topic, always collapsed
+PASS Failed native acknowledgement retains the topic and enters normal save recovery
+PASS Utility/recovery blocking hides help and restores body inset
+PASS Gameplay feedback closes the competing help reader
+PASS Opening help clears the competing notice without acknowledging it
+PASS Unrelated routes close help without persisting a lesson
+PASS All topics, actions and recovery preserve saved UI object identities
+PASS Unity compilation succeeds

@@ -1,0 +1,220 @@
+/* Native baseline plus reviewed HTML revisions tracked in Classic-HTML-to-Unity-TODO.md. */
+@font-face{font-family:'Native Card Serif';src:url('assets/fonts/card-serif.ttf') format('truetype');font-display:swap}
+@font-face{font-family:'Native UI';src:url('assets/fonts/body.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Native UI';src:url('assets/fonts/bold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Native Heading';src:url('assets/fonts/heading.ttf') format('truetype');font-weight:700;font-display:swap}
+html body .app{--font-ui:'Native UI',sans-serif;--font-display:'Native Heading',sans-serif;font-family:var(--font-ui);font-weight:500}
+html body .app{--paper:none;max-height:none;background:#fff4db;--world-height:var(--native-world-height)}
+html body .app:not([data-tab=Home]){--world-height:var(--native-world-height)}
+html body .app .world,html body .app:not([data-tab=Home]) .world{height:var(--world-height);flex:0 0 var(--world-height)}
+html body .app .world .stall-art,html body .app:not([data-tab=Home]) .world .stall-art{height:100%;object-fit:fill}
+html body .app:not([data-tab=Home]) .world :is(.shelves,.shopkeeper,.counter-message,.tap-hint){visibility:visible}
+html body .app .world .wallet{left:20%;top:.5%;width:60%;height:17%;line-height:1}
+html body .app .world .cash{display:flex;align-items:center;justify-content:center;height:76.47%;font-size:calc(36px * var(--s));font-weight:800;letter-spacing:0;-webkit-text-stroke:0;text-shadow:none;color:#f4cb77}
+html body .app .world .wallet>span{position:absolute;top:67.65%;height:31.18%;width:100%;margin:0;display:flex;align-items:center;justify-content:center;font-size:calc(10px * var(--s));font-weight:800;text-shadow:none}
+html body .app .world .settings{left:2%;top:1.5%;width:13.5%;height:14%;min-width:0;min-height:0;padding:calc(8px * var(--s))}
+html body .app .world .shop-title,html body .app:not([data-tab=Home]) .world .shop-title{left:24%;width:52%;top:24%;height:8.5%;font-size:calc(16px * var(--s));text-shadow:none;color:#fff4db}
+html body .app .world .shopkeeper{right:1%;bottom:9%;width:18%;height:18%;object-position:center;filter:none}
+html body .app .world .counter-message{left:18%;right:auto;width:60%;top:80.8%;height:6.4%;display:flex;align-items:center;justify-content:center;font-size:calc(7px * var(--s));letter-spacing:0;text-shadow:none}
+html body .app .world .tap-hint{left:18%;bottom:0;width:64%;height:5.2%;min-height:0;padding:0;background:#103543f5;border:0;outline:0;border-radius:0;color:#fff4db;font-size:calc(9.5px * var(--s));box-shadow:none}
+html body .app .world .stall-tap,html body .app:not([data-tab=Home]) .world .stall-tap{inset:auto 0 0;width:100%;height:24%;opacity:0;min-height:0;border:0;box-shadow:none;background:none;border-radius:0}
+html body .app .world .stall-tap:after{display:none}
+html body .app .world .shelves{inset:0;width:100%;height:100%;display:block;pointer-events:none}
+html body .app .world .product{position:absolute;left:8.7%;top:37%;width:19.07%;height:15.6%;min-height:0;transform:none;pointer-events:auto}
+html body .app .world .product:nth-child(4n+2){left:29.77%}html body .app .world .product:nth-child(4n+3){left:50.84%}html body .app .world .product:nth-child(4n+4){left:71.91%}
+html body .app .world .product:nth-child(n+5){top:54.4%}
+html body .app .shelf-visual{inset:0;height:100%}
+html body .app .world .product-art{inset:2% 6% 23%}html body .app .world .product-icon img{object-position:center}
+html body .app .world .product-name{font-size:calc(8px * var(--s));font-weight:500;padding:0;bottom:1%;height:22%}
+html body .app .world #display-gift-boxes .product-name{font-size:calc(6px * var(--s))}
+html body .app .empty-mark{display:none!important}
+html body .app :is(.panel,.panel-head,.scroll-body,.modal-card,.modal-head,.modal-body,.modal-footer){background-image:none;background-color:#fff4db}
+html body .app .panel{border:0}
+html body .app .panel-head{height:calc(49px * var(--s));min-height:0;padding:0 calc(12.6px * var(--s));border-bottom:calc(2px * var(--s)) solid #164b80}
+html body .app .panel-head h1{font-size:calc(24px * var(--s));line-height:1;font-weight:700}
+html body .app .panel-head .collapse{font-size:calc(23px * var(--s));width:14%;height:100%;min-height:0;padding:calc(13px * var(--s));color:#164b80}
+html body .app .panel .scroll-body{padding:calc(7px * var(--s)) calc(9px * var(--s)) calc(12px * var(--s))}
+html body .app .panel.has-native-guide:not(#panel-Home) .scroll-body{margin-top:calc(56px * var(--s))}
+.native-guide{position:absolute;left:calc(10px * var(--s));right:calc(10px * var(--s));top:calc(51px * var(--s));height:calc(48px * var(--s));padding:0;color:#164b80;text-align:left;border:0;background:#fff4db;border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s));z-index:1}
+.native-guide strong{position:absolute;left:3.5%;top:6%;width:81.5%;height:43%;font-size:calc(13px * var(--s));font-weight:800;display:flex;align-items:center}
+.native-guide span{position:absolute;left:3.5%;top:49%;width:83.5%;height:43%;font-size:calc(11px * var(--s));display:flex;align-items:center}
+.native-guide i{position:absolute;left:88%;top:10%;width:10%;height:80%;font-size:calc(20px * var(--s));font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center}
+#panel-Home>.native-guide{top:calc(7px * var(--s))}#panel-Home.has-native-guide .home-next{display:none}
+html body .app #scroll-Home{position:absolute;inset:0;display:block;padding:0;overflow:hidden}
+html body .app .home-next{position:absolute;left:calc(10px * var(--s));right:calc(10px * var(--s));top:calc(7px * var(--s));width:auto;height:calc(48px * var(--s));min-height:0;border-radius:0;border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s));background:#fff4db}
+html body .app .classic-income{position:absolute;left:calc(10px * var(--s));right:calc(10px * var(--s));bottom:calc(88px * var(--s));height:calc(77px * var(--s));min-height:0;border-radius:0;border:0;background:#fff4db;border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s));padding:calc(8px * var(--s)) calc(8px * var(--s));gap:calc(8px * var(--s))}
+html body .app .classic-income>svg{width:calc(29px * var(--s));height:70%}.classic-income small{font-size:calc(8px * var(--s))}.classic-income strong{font-size:calc(22px * var(--s))}.classic-income .tap-income strong{font-size:calc(18px * var(--s))}.classic-income em{font-size:calc(8px * var(--s))}
+html body .app .classic-skills{position:absolute;left:0;right:0;bottom:0;height:calc(82px * var(--s));margin:0;gap:0}
+html body .app .classic-skill{position:relative;display:block;height:100%;padding:0;min-height:0;font-size:calc(10px * var(--s))}
+html body .app .classic-skill .skill-disc{position:absolute;left:calc(37px * var(--s));top:calc(4px * var(--s));width:calc(46px * var(--s));height:calc(46px * var(--s));padding:calc(4px * var(--s));border:0;border-radius:50%;box-shadow:none;background:#174c7b}
+html body .app .classic-skill svg{width:100%;height:100%}.classic-skill strong{position:absolute;left:0;right:0;bottom:calc(9px * var(--s));height:calc(17px * var(--s));display:flex;align-items:center;justify-content:center}.classic-skill small{position:absolute;left:0;right:0;bottom:0;height:calc(12px * var(--s));margin:0;font-size:calc(8px * var(--s));color:#556f80}
+html body .app[data-native-compact=true] .classic-income{height:calc(65px * var(--s));bottom:calc(78px * var(--s))}html body .app[data-native-compact=true] .classic-skills{height:calc(74px * var(--s))}
+html body .app :is(.action,.sponsor,.settings,.close,.toggle){--native-button-face:url('assets/surfaces/blue.png');border-image:var(--native-button-face) 105 92 fill / calc(8.75px * var(--s)) calc(7.6667px * var(--s)) / 0 stretch!important;filter:none!important;box-shadow:none!important;border-radius:0!important;font-size:calc(12px * var(--s));font-weight:800}
+html body .app :is(.action.maroon,.action[aria-pressed=true]){--native-button-face:url('assets/surfaces/blue.png')}
+html body .app :is(.action.secondary:not(:disabled),.toggle[aria-checked=false]:not(:disabled)){--native-button-face:url('assets/surfaces/ivory.png')}
+html body .app :is(.action,.toggle):disabled{--native-button-face:url('assets/surfaces/sand.png');color:#fff4db!important}
+html body .app :is(.sheet-row,.info-card,.fame-overview){border:0;border-radius:0;box-shadow:none;background:#fff4db;border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s)) / 0 stretch;color:#164b80}
+html body .app .sheet-row{margin:0 0 calc(7px * var(--s));padding:calc(7px * var(--s)) calc(8px * var(--s));min-height:calc(66px * var(--s));gap:calc(8px * var(--s))}
+html body .app .row-copy h2{font-size:calc(12px * var(--s));line-height:1.2}html body .app .row-copy p{font-size:calc(11px * var(--s));line-height:1.25}html body .app .row-art{width:calc(36px * var(--s));height:calc(46px * var(--s))}
+html body .app .row-action{width:28%;min-height:calc(48px * var(--s));font-size:calc(12px * var(--s))}.app .action small{font-size:inherit}
+html body .app .classic-toolbar{height:calc(48px * var(--s));margin-bottom:calc(7px * var(--s));gap:0;flex:none}
+html body .app .classic-toolbar .player-icon{width:23%;height:100%;min-height:0;border:0;border-image:none;background:transparent;box-shadow:none;padding:calc(3px * var(--s));font-size:calc(10px * var(--s));display:flex;align-items:center;justify-content:flex-end;flex-direction:column}
+html body .app .classic-toolbar .player-icon+ .player-icon{margin-left:1%}.classic-toolbar .player-icon svg{width:calc(25px * var(--s));height:calc(25px * var(--s))}
+html body .app .classic-toolbar .action{width:34%;min-width:0;height:100%;margin-left:auto}.classic-toolbar>strong{font-size:calc(12px * var(--s))}
+html body .app .section-label{height:calc(28px * var(--s));margin:0 0 calc(7px * var(--s));padding:0;border:0}.section-label strong{font-size:calc(19px * var(--s))}.section-label span{font-size:calc(11px * var(--s))}
+html body .app .buy-all{height:calc(48px * var(--s));min-height:0;margin:0 0 calc(7px * var(--s));width:100%}
+html body .app .upgrade-row{height:calc(70px * var(--s));min-height:0;position:relative;padding:0!important;display:block}
+.upgrade-row .plain-detail{position:absolute;left:2.5%;width:64%;top:5%;bottom:8%;min-height:0}.upgrade-row .plain-detail h2{font-size:calc(12px * var(--s));line-height:1.1;margin:0;height:38%}.upgrade-row .plain-detail p{font-size:calc(10px * var(--s));line-height:1.2;margin:0}.upgrade-row .detail-cue{font-size:calc(10px * var(--s))}
+html body .app .upgrade-row .row-action{position:absolute;box-sizing:border-box;left:auto;right:calc(10px * var(--s));width:26%;top:11%;height:77%;min-height:0;margin:0}
+html body .app .product-row{height:calc(80px * var(--s));min-height:0;position:relative;padding:0;display:block}
+html body .app .product-row .details-link{position:absolute;left:2%;top:6%;width:57%;height:88%;min-height:0;padding:0;display:block}
+html body .app .product-image-frame{position:absolute;left:0;top:calc(3px * var(--s));width:calc(54px * var(--s));height:calc(62px * var(--s));padding:calc(4px * var(--s));background:#e5d4b0;border:0;border-radius:2px}
+html body .app .product-image-frame .row-art{width:100%;height:100%}.product-milestone-bar{position:absolute;left:0;right:0;bottom:0;height:calc(7px * var(--s));background:#d8cbb0;border:0;border-radius:0}.product-milestone-bar>span{background:#327f78}
+html body .app .product-tile-copy{position:absolute;left:32%;right:0;top:8%;bottom:14%;padding:0}.product-tile-name{font-size:calc(12px * var(--s));line-height:1.2}.product-tile-income{font-size:calc(11px * var(--s));margin-top:calc(9px * var(--s))}
+html body .app .product-tile-level{position:absolute;left:58%;width:12%;top:30%;height:35%;font-size:calc(9px * var(--s));display:flex;align-items:center;justify-content:flex-end}
+html body .app .product-row .row-action{position:absolute;left:71%;width:27%;top:13%;height:74%;min-height:0}
+html body .app .navigation,html body .app .navigation:has(button[aria-pressed=true]){height:calc(64px * var(--s));min-height:0;gap:calc(7px * var(--s));padding:calc(3px * var(--s)) calc(3px * var(--s)) calc(3px * var(--s)) calc(4px * var(--s));background:#fff4db;border:0;box-shadow:none}
+html body .app .navigation button,html body .app .navigation button[aria-pressed=true]{position:relative;border:0;border-radius:0;border-image:url('assets/surfaces/blue.png') 105 92 fill / calc(8.75px * var(--s)) calc(7.6667px * var(--s)) / 0 stretch!important;box-shadow:none!important;background:none;min-width:0;min-height:0}
+html body .app .navigation button>svg,html body .app .navigation button[aria-pressed=true]>svg{position:absolute;left:25%;top:5%;width:50%;height:63%}
+html body .app .navigation strong{position:absolute;left:0;right:0;bottom:2%;height:30%;font-family:var(--font-ui);font-size:calc(10px * var(--s));font-weight:800;display:flex;align-items:center;justify-content:center;text-shadow:none;text-decoration:none!important}
+html body .app .navigation button:after,html body .app .navigation button:before,.scroll-cue{display:none!important}
+html body .app .legacy-draw-actions{height:calc(56px * var(--s));gap:2%;margin:0 0 calc(7px * var(--s))}.legacy-draw-actions .action{width:49%;height:100%;min-height:0}
+.native-legacy-state{height:calc(14px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(10px * var(--s));text-align:center;color:#556f80}
+html body .app .collection-title{height:calc(28px * var(--s));margin:0 0 calc(7px * var(--s));padding:0;border:0;font-size:calc(19px * var(--s))}.rarity-discovered{font-size:calc(10px * var(--s))}
+html body .app #panel-Legacy .collection-grid{gap:calc(7px * var(--s)) calc(4px * var(--s));margin:0 0 calc(7px * var(--s))}
+html body .app #panel-Legacy .talent-card{height:calc(114px * var(--s));min-height:0;background-size:100% 100%;border-radius:0}
+html body .app #panel-Legacy .collection-grid .talent-card>.talent-art{top:13%;left:13%;width:74%;height:47%}
+html body .app #panel-Legacy .talent-card strong{top:74%;height:18%;font-family:'Native Card Serif',serif;font-size:calc(9px * var(--s));font-weight:500}
+html body .app #panel-Legacy .talent-card .card-level-badge{left:28%;top:60%;width:44%;height:12%;min-width:0;transform:none;padding:0;border:0;border-radius:1px;font:800 calc(9px * var(--s)) var(--font-ui);line-height:1;display:flex;align-items:center;justify-content:center;box-shadow:none;background:#164b80;color:#fff4db}
+html body #panel-Legacy .talent-card.unowned:disabled{opacity:.48}
+html body .app .shop-balance{height:calc(58px * var(--s));padding:0;position:relative;margin-bottom:calc(7px * var(--s))}.shop-balance small{font-size:calc(9px * var(--s))}.shop-balance strong{font-size:calc(24px * var(--s));font-family:var(--font-ui);font-weight:800}.shop-balance>.action{width:44%;height:83%;font-size:calc(12px * var(--s))}
+.native-store-status{height:calc(32px * var(--s));font-size:calc(10px * var(--s));margin:0 0 calc(7px * var(--s));color:#556f80}
+html body .app .pack{height:calc(84px * var(--s));min-height:0;padding:0;position:relative;display:block}.pack>.row-art{position:absolute;left:calc(7px * var(--s));top:calc(12px * var(--s));width:calc(46px * var(--s));height:calc(58px * var(--s))}.pack .row-copy{position:absolute;left:18%;width:50%;top:5%;height:83%;padding:0}.pack .row-copy h2{font-size:calc(14px * var(--s));height:39%;margin:0}.pack .row-copy p{font-size:calc(12px * var(--s));margin:0}.pack .row-copy strong{font-size:inherit;color:#164b80}.pack .row-action{position:absolute;left:72%;width:26%;top:15%;height:71%;min-height:0}
+html body .app .modal-layer{padding:calc(18px * var(--s)) calc(12px * var(--s));background:#10172ac9;backdrop-filter:none}
+html body .app .modal-card{max-height:100%;border:0;border-radius:3px;box-shadow:none;overflow:hidden;background:#fff4db}
+html body .app .modal-head{height:calc(59px * var(--s));min-height:calc(59px * var(--s));padding:0 4%;border-bottom:calc(2px * var(--s)) solid #164b80}
+html body .app .modal-head h2{font-size:calc(23px * var(--s));line-height:1.1}
+html body .app .modal-head .close{position:relative;width:16%;height:83%;min-width:0;min-height:0;margin-left:auto;padding:calc(12px * var(--s));font-size:calc(25px * var(--s))}
+html body .app .modal-body{padding:calc(7px * var(--s)) calc(9px * var(--s)) calc(12px * var(--s));font-size:calc(12px * var(--s))}
+html body .app .modal-body>.native-guide{position:relative;inset:auto;display:block;width:100%;height:calc(56px * var(--s));margin-bottom:calc(7px * var(--s))}
+html body .app .info-card{position:relative;padding:calc(36px * var(--s)) calc(12px * var(--s)) calc(12px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(12px * var(--s));min-height:calc(70px * var(--s))}.app .info-card h3{position:absolute;left:0;right:0;top:0;height:calc(30px * var(--s));margin:0;display:flex;align-items:center;justify-content:center;font-size:calc(19px * var(--s))!important}.app .info-card p{font-size:inherit;line-height:1.3}
+html body .app .modal-footer{display:flex;flex-direction:column-reverse;padding:calc(10px * var(--s)) calc(12px * var(--s));gap:calc(6px * var(--s));border:0}.modal-footer>.action{height:calc(48px * var(--s));min-height:0;flex:none;width:100%}
+html body .app .modal-layer[data-screen=CardDetail]{padding:calc(32px * var(--s)) calc(18px * var(--s))}
+html body .app .modal-layer[data-screen=CardDetail] .modal-card{width:min(100%,calc((100dvh - 64px * var(--s)) * .65));aspect-ratio:.65;max-height:none;border-radius:0;background:#fff4db}
+html body .app .modal-layer[data-screen=CardDetail] .modal-head{height:0;min-height:0;border:0}.modal-layer[data-screen=CardDetail] .close{display:none!important}
+html body .app .modal-layer[data-screen=CardDetail] .modal-body{position:absolute;inset:0;padding:0;overflow:hidden;background:none}
+.full-talent-card{position:absolute;inset:0;display:block}.full-card-heading{display:contents}.app .full-card-heading h3{position:absolute;left:9%;top:8.5%;width:63%;height:8%;font:700 calc(21px * var(--s))/1.1 'Native Card Serif',serif;display:flex;align-items:center;margin:0;color:#164b80}
+.full-card-level{position:absolute;left:76%;top:8.8%;width:16%;height:7.7%;padding:0;border-radius:0;background:#164b80;font-size:calc(15px * var(--s));display:flex;align-items:center;justify-content:center}
+.full-card-rarity{position:absolute;left:10%;top:16%;width:80%;height:5%;font-size:calc(10px * var(--s));letter-spacing:0;display:flex;align-items:center;justify-content:center;color:#164b80}
+.full-card-art{position:absolute;left:9.5%;top:21.6%;width:81%;height:52.7%;aspect-ratio:auto;padding:calc(18px * var(--s));background:none;border-radius:0}
+.app .modal-body .full-card-benefit{position:absolute;left:11%;top:73.5%;width:78%;height:9.5%;font:500 calc(18px * var(--s))/1.1 'Native Card Serif',serif;color:#30632e;margin:0}
+.full-card-benefit strong{font:inherit!important;color:inherit!important}.full-card-benefit span{font:inherit}.full-card-divider{position:absolute;left:15%;top:84.7%;width:70%;height:.2%;margin:0;display:block;background:#a32b49;font-size:0}.full-card-divider:before,.full-card-divider:after{display:none}
+.app .modal-body .full-card-flavor{position:absolute;left:10%;top:84.5%;width:80%;height:5%;font:400 calc(12px * var(--s))/1.2 'Native Card Serif',serif;margin:0;display:flex;align-items:center;justify-content:center}
+.app .modal-body .full-card-permanent{position:absolute;left:12%;top:89.5%;width:76%;height:4%;font-size:calc(9px * var(--s));margin:0;letter-spacing:0;display:flex;align-items:center;justify-content:center}
+html body .app .full-card-heading h3{white-space:nowrap;overflow:hidden}
+html body .app .settings-row{height:calc(76px * var(--s));min-height:0;position:relative;padding:0;display:block}
+.settings-row>div{position:absolute;left:3%;top:5%;width:62%;height:85%}.settings-row h3{font:700 calc(18px * var(--s))/1.1 var(--font-display)!important;margin:0;height:50%;display:flex;align-items:center}.settings-row p{font-size:calc(11px * var(--s));margin:0}
+html body .app .settings-row .toggle{position:absolute;left:69%;top:17%;width:28%;height:66%;min-height:0;padding:0;color:#164b80!important;--native-button-face:url('assets/surfaces/ivory.png')}
+.settings-row .toggle:after,.settings-row .toggle:before{display:none!important}
+html body .app .modal-layer[data-screen=Settings] .modal-body>.buy-all{height:calc(48px * var(--s));margin:0 0 calc(7px * var(--s))}
+html body .app #panel-Player .sheet-row:not(.upgrade-row){height:calc(66px * var(--s));position:relative;display:block;padding:0}
+html body .app #panel-Player .sheet-row:not(.upgrade-row)>.row-art{position:absolute;left:calc(8px * var(--s));top:calc(10px * var(--s));width:calc(36px * var(--s));height:calc(46px * var(--s))}
+html body .app #panel-Player .sheet-row:not(.upgrade-row)>.row-copy{position:absolute;left:15%;top:10%;width:54%;height:77%;display:flex;flex-direction:column;justify-content:center;padding:0}
+html body .app #panel-Player .sheet-row:not(.upgrade-row)>.row-action{position:absolute;left:70%;top:10%;width:28%;height:80%;min-height:0}
+html body .app #panel-Player .sheet-row:not(.upgrade-row):has([data-param=Prestige]){height:calc(76px * var(--s))}
+html body .app .product-image-frame{box-shadow:none}
+html body .app #panel-Legacy .collection-grid{padding:calc(3px * var(--s)) calc(2px * var(--s));gap:calc(6px * var(--s)) calc(4px * var(--s))}
+html body .app #panel-Legacy .talent-card{height:calc(var(--native-card-height,114px) * var(--s))}
+.native-legacy-state{line-height:calc(14px * var(--s))}
+html body .app .modal-layer[data-screen=Skills] .sheet-row{height:calc(80px * var(--s));min-height:0}
+html body .app .modal-layer[data-screen=Skills] .sheet-row h2{font-size:calc(14px * var(--s))}
+html body .app .modal-layer[data-screen=Skills] .sheet-row .row-action{height:calc(56px * var(--s));min-height:0}
+.native-decorations{position:absolute;inset:0;pointer-events:none;z-index:1}.native-decorations img{position:absolute;object-fit:fill}.native-decorations .garland{left:10%;top:31%;width:80%;height:6%}.native-decorations .lantern-left{left:.6%;top:39%;width:7.3%;height:26%}.native-decorations .lantern-right{left:92.5%;top:39%;width:7.3%;height:26%}.native-decorations .apron{left:11%;top:78%;width:68%;height:11.4%}.native-decorations .bunting{left:15%;top:16%;width:75%;height:7%}.native-decorations .crest{left:46%;top:72%;width:12%;height:7.5%}
+html body .app .product-tile-copy{text-align:left;align-items:flex-start;justify-content:flex-start;display:block}.product-tile-name,.product-tile-income{display:block;text-align:left}
+html body #panel-Legacy .talent-card{background-image:none!important}
+.native-mini-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none}
+html body #panel-Legacy .talent-card.unowned:disabled{filter:none;opacity:.48}
+.talent-card.unowned :is(.native-mini-frame,.talent-art){filter:grayscale(1)}
+html body .app .modal-layer[data-screen=ProductDetail]{padding:calc(52px * var(--s)) calc(12px * var(--s)) calc(18px * var(--s))}
+html body .app .modal-layer[data-screen=ProductDetail] .modal-card{padding-top:0;overflow:visible;border:0;border-radius:3px}
+html body .app .modal-layer[data-screen=ProductDetail] .modal-head{position:relative;height:calc(36px * var(--s));min-height:calc(36px * var(--s));padding:0;border:0;background:none}
+html body .app .modal-layer[data-screen=ProductDetail] .modal-head h2{position:absolute;left:12%;top:calc(-25px * var(--s));bottom:auto;width:76%;height:calc(54px * var(--s));min-height:0;padding:0;display:flex;align-items:center;justify-content:center;border:0;border-image:url('assets/surfaces/red.png') 105 92 fill / calc(8.75px * var(--s)) calc(7.6667px * var(--s));border-radius:0;box-shadow:none;background:none;color:#fff4db;font-size:calc(23px * var(--s))}
+html body .app .modal-layer[data-screen=ProductDetail] .modal-head .close{position:absolute;left:auto;right:calc(-8px * var(--s));top:calc(-22px * var(--s));bottom:auto;width:calc(48px * var(--s));height:calc(48px * var(--s));min-width:0;min-height:0;padding:calc(12px * var(--s));border:0!important;border-image:none!important;background:#a82149!important;color:#fff4db!important;border-radius:50%!important}
+html body .app .modal-layer[data-screen=ProductDetail] .modal-body{padding:calc(7px * var(--s)) calc(9px * var(--s)) calc(12px * var(--s))}
+.product-overview-identity{position:relative;display:block;height:calc(116px * var(--s));margin:0 0 calc(7px * var(--s))}
+html body .app .product-overview-art{position:absolute;left:calc(8px * var(--s));top:calc(9px * var(--s));width:calc(86px * var(--s));height:calc(96px * var(--s));padding:0;border:0;background:none;border-radius:0}
+.product-overview-identity>div+div{position:absolute;left:31%;top:6%;width:65%;height:87%}
+html body .app .product-overview-identity h3{height:37%;margin:0;display:flex;align-items:center;font-size:calc(23px * var(--s));line-height:1;color:#164b80}
+html body .app .product-overview-level{height:38%;margin:0;display:flex;align-items:center;font-size:calc(20px * var(--s));color:#164b80}.product-overview-level strong{color:inherit!important}
+html body .app .product-overview-subtitle{height:25%;margin:0;display:flex;align-items:center;font-size:calc(11px * var(--s));color:#556f80}
+html body .app .product-overview-earnings{height:calc(45px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(19px * var(--s));display:flex;align-items:center;justify-content:center;color:#417335;gap:4px}.product-overview-earnings strong{color:inherit}
+html body .app .product-overview-card{padding:0;border:0;background:none;box-shadow:none;border-radius:0;margin:0 0 calc(7px * var(--s))}
+html body .app .product-overview-card h3{height:calc(37px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(20px * var(--s));display:flex;align-items:center;justify-content:center;color:#556f80}
+html body .app .product-overview-progress{height:calc(29px * var(--s));margin:0 0 calc(7px * var(--s));padding:0;border:calc(3px * var(--s)) solid #244e57;background:#45696a;border-radius:0}
+html body .app .product-overview-progress>span{background:#45b7ad}.product-overview-progress>strong{font-size:calc(12px * var(--s))}
+html body .app .product-overview-card>.product-overview-reward{height:calc(30px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(14px * var(--s));display:flex;align-items:center;justify-content:center;color:#556f80}
+html body .app .product-overview-card>.product-overview-explanation{border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s));min-height:calc(70px * var(--s));padding:calc(12px * var(--s));font-size:calc(12px * var(--s));line-height:1.3;margin:0;color:#164b80}
+html body .app #legacy-kk{font:800 calc(17px * var(--s))/1 var(--font-ui)}
+html body .app .panel-head .collapse{padding:calc(8px * var(--s));display:flex;align-items:center;justify-content:center}
+html body .app .panel-head .collapse{width:calc(48px * var(--s));min-width:calc(48px * var(--s));min-height:calc(48px * var(--s));flex:none;padding:calc(6px * var(--s));color:#fff4db}
+.collapse .native-collapse-chevron{display:block;box-sizing:border-box;width:calc(36px * var(--s));height:calc(36px * var(--s));padding:calc(7px * var(--s));border:calc(1px * var(--s)) solid #c69843;border-radius:50%;background:#164b80;color:#fff4db}
+html body .app .modal-footer{flex-direction:column}
+html body .app #panel-Legacy [data-action=Draw][data-param="5"]:not(:disabled){--native-button-face:url('assets/surfaces/red.png')}
+html body .app :is(.action,.toggle):disabled{position:relative;isolation:isolate;border-image:none!important;background:none!important}
+html body .app :is(.action,.toggle):disabled:before{content:'';position:absolute;inset:0;z-index:-1;border-image:url('assets/surfaces/sand.png') 105 92 fill / calc(8.75px * var(--s)) calc(7.6667px * var(--s));filter:brightness(.75);pointer-events:none}
+.native-filters{display:flex;gap:2%;height:calc(48px * var(--s));margin:calc(7px * var(--s)) 0}.native-filters .action{width:49%;height:100%;min-height:0}
+html body .app .catalogue-count{height:calc(31px * var(--s));margin:0 0 calc(7px * var(--s));font-size:calc(10px * var(--s));display:flex;align-items:center}
+html body .app .search-box{height:calc(48px * var(--s));min-height:0;font-size:calc(14px * var(--s))}
+html body .app .native-reward{height:calc(60px * var(--s));margin:0 0 calc(7px * var(--s));display:flex;align-items:center;justify-content:center;font:700 calc(32px * var(--s))/1 var(--font-display);color:#a82149}
+.app .modal-body .full-card-flavor{color:#164b80}
+.modal-layer[data-screen=SkillDetail] .detail-hero{position:relative;height:calc(90px * var(--s));margin:0 0 calc(7px * var(--s));display:block}
+.modal-layer[data-screen=SkillDetail] .detail-hero>svg{position:absolute;left:calc(8px * var(--s));top:calc(8px * var(--s));width:calc(65px * var(--s));height:calc(74px * var(--s))}
+.modal-layer[data-screen=SkillDetail] .detail-hero>div{position:absolute;left:28%;top:5%;width:70%;height:89%}
+.app .modal-layer[data-screen=SkillDetail] .detail-hero h3{height:55%;font:700 calc(22px * var(--s))/1.1 var(--font-display);margin:0;display:flex;align-items:center}
+.modal-layer[data-screen=SkillDetail] .detail-hero .pill{height:45%;font-size:calc(12px * var(--s));padding:0;background:none;display:flex;align-items:center}
+.modal-layer[data-screen=DrawReveal] .pull-progress{height:calc(24px * var(--s));font-size:calc(12px * var(--s));margin:0 0 calc(7px * var(--s));display:flex;align-items:center;justify-content:center}
+.modal-layer[data-screen=DrawReveal] .flip-stage{width:60%;height:calc(250px * var(--s));margin:0 auto calc(7px * var(--s))}
+.modal-layer[data-screen=DrawReveal] .flip-front{background-size:100% 100%}
+.modal-layer[data-screen=DrawReveal] .flip-front>.talent-art{position:absolute;left:15%;top:18%;width:70%;height:51%}
+.modal-layer[data-screen=DrawReveal] .flip-front>.flip-level{position:absolute;left:53%;top:10%;width:35%;height:13%;font-size:calc(11px * var(--s));color:#164b80;background:none}
+.modal-layer[data-screen=DrawReveal] .flip-front>strong{position:absolute;left:14%;top:75%;width:72%;height:17%;font:400 calc(15px * var(--s))/1.1 'Native Card Serif',serif;display:flex;align-items:center;justify-content:center}
+.modal-layer[data-screen=DrawReveal] .flip-result{position:relative;height:calc(105px * var(--s));min-height:0;margin:0}
+.modal-layer[data-screen=DrawReveal] .flip-result>.pill{position:absolute;left:0;right:0;top:0;height:28%;font-size:calc(10px * var(--s));background:none}
+.modal-layer[data-screen=DrawReveal] .flip-result>h3{position:absolute;left:0;right:0;top:26%;height:39%;margin:0;font:700 calc(23px * var(--s))/1 var(--font-display);display:flex;align-items:center;justify-content:center}
+.modal-layer[data-screen=DrawReveal] .flip-result>p{position:absolute;left:0;right:0;top:64%;height:36%;margin:0;font-size:calc(12px * var(--s))}
+
+/* 19 October Home revision: stacked source rates and a combined live tap sample. */
+html body .app .classic-income{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:calc(10px * var(--s));padding:calc(6px * var(--s)) calc(11px * var(--s))}
+html body .app .classic-income>.income-breakdown{display:grid;gap:calc(5px * var(--s));min-width:0}
+html body .app .classic-income .income-breakdown>div{min-width:0}
+html body .app .classic-income small{font-size:calc(7px * var(--s));line-height:1.1;letter-spacing:calc(.35px * var(--s))}
+html body .app .classic-income .income-breakdown strong{display:block;font-size:calc(15px * var(--s));line-height:1.05;white-space:nowrap;font-variant-numeric:tabular-nums}
+html body .app .classic-income .tap-income{border:0;padding:0;flex:initial}
+html body .app .classic-income>.total-income{display:flex;flex-direction:column;justify-content:center;align-self:stretch;min-width:0;padding-left:calc(11px * var(--s));border-left:1px solid #d5c59d}
+html body .app .income-total-heading{display:flex;align-items:center;gap:calc(5px * var(--s));margin-bottom:calc(2px * var(--s))}
+html body .app .income-total-heading .earnings-icon{width:calc(20px * var(--s));height:calc(20px * var(--s));flex:none}
+html body .app .classic-income .total-income strong{font-size:calc(22px * var(--s));line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums}
+html body .app .classic-income .income-unit{font-size:.6em;font-weight:800;letter-spacing:0}
+html body .app[data-native-compact=true] .classic-income>.income-breakdown{gap:calc(3px * var(--s))}
+html body .app[data-native-compact=true] .classic-income .income-breakdown strong{font-size:calc(13px * var(--s))}
+html body .app .classic-skill:disabled{cursor:default}
+
+/* Center the lettering in the painted name plaque, including the font's line box. */
+html body .app .world .shop-title,html body .app:not([data-tab=Home]) .world .shop-title{top:25.3%;height:8.5%;display:flex;align-items:center;justify-content:center;line-height:1;text-align:center;padding:0;background:transparent}
+
+/* Gold means ready/active; cooldown fills clockwise in grey until ready again. */
+html body .app .classic-skill .skill-disc{overflow:visible}
+html body .app .classic-skill .skill-disc>.skill-ring{position:absolute;inset:calc(-3px * var(--s));width:calc(100% + 6px * var(--s));height:calc(100% + 6px * var(--s));overflow:visible;pointer-events:none;fill:none;stroke-width:3.5}
+html body .app .classic-skill .skill-ring-track{stroke:#786333}
+html body .app .classic-skill .skill-ring-progress{stroke:#ffd061;stroke-linecap:round;transition:stroke-dasharray 100ms linear}
+html body .app .classic-skill[data-state=ready] .skill-ring-progress{filter:drop-shadow(0 0 2px #eeb54480)}
+html body .app .classic-skill:is([data-state=active],[data-state=cooldown]) .skill-disc{animation:none}
+html body .app .classic-skill[data-state=cooldown] .skill-disc{background:#58616c;filter:none}
+html body .app .classic-skill[data-state=cooldown] .skill-disc>.game-icon:not(.skill-ring){filter:grayscale(1);opacity:.6}
+html body .app .classic-skill[data-state=cooldown] .skill-ring-track{stroke:#a4a9ae;opacity:.35}
+html body .app .classic-skill[data-state=cooldown] .skill-ring-progress{stroke:#bfc4c8}
+html body .app .classic-skill[data-state=locked] .skill-ring{visibility:hidden}
+html body .app[data-reduced-motion=true] .skill-ring-progress{transition:none}
+@media(prefers-reduced-motion:reduce){html body .app .skill-ring-progress{transition:none}}
+
+

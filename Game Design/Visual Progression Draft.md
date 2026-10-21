@@ -1,5 +1,7 @@
 # Rocket Raja: product and shop visual progression
 
+**Current presentation — 7 October 2026:** see [Current Implementation Design](Current%20Implementation%20Design.md). Six permanent shop stages and product looks at ownership/signatures I/IV/X remain. Classic updates local artwork, values, effects and audio; transient purchase/milestone notices are disabled. No stage toast, batch milestone list or pinned-goal flow is required. The earlier proposed feedback below is historical.
+
 Version 0.1, 1 October 2026. Planning only; no artwork or Unity assets created.
 
 Cash-only progression is selected. [Economy Specification v1](Economy%20Specification%20v1.md) and the main catalogue contain the current prices and Fame formula, with no completed-prestige requirements for cash upgrades. The x6 opening bonus is retained. Numerical balance remains subject to prototype tuning; the [decision record](Cash-only%20Economy%20Alternative%20v1.md) preserves the superseded comparison.
@@ -59,7 +61,7 @@ This calls for 32 owned display states total, including eight basic states that 
 
 Product appearances reset with run progress as confirmed and return as their qualifying upgrades are rebought. A lifetime album can record appearances seen, but it grants no bonus and is optional; it is not required for this first pass.
 
-## Moment-to-moment feedback
+## Historical feedback proposal (superseded where noted above)
 
 | Event | Proposed feedback |
 |---|---|

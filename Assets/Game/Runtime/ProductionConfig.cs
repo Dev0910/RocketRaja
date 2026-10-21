@@ -6,7 +6,6 @@ namespace RocketRaja
     {
         public string applicationId = "com.diwali.fireworkstycoon";
         public string privacyUrl = "";
-        public string rewardedAdUnitId = "";
-        public bool productionAds;
+        public bool releaseAcceptanceComplete;
     }
 }

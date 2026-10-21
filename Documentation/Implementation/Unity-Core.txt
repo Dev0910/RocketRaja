@@ -1,0 +1,23 @@
+PASS First purchase commits with Unity codec
+PASS Unity kernel purchases full authored catalogue
+PASS All new IDs roundtrip through Unity
+PASS Prestige reward/reset persist in one Unity write
+PASS Reset retention and exact rewards survive Unity reload
+PASS Draw result is saved before reveal
+PASS Repeated draw quote cannot consume another credit
+PASS Reopen replays and skips existing reveal
+PASS Unity offline settlement commits
+PASS Repeated Unity resume cannot duplicate credit
+PASS Unity schema 3 preserves an authoritative wallet and decimal-string wire counters
+PASS Unity codec persists the paid operation before network transmission
+PASS Unity codec roundtrips server draw result and preserves free card copies
+PASS Unity receipt wire codec keeps revisions beyond double integer precision exact
+PASS Reopened authoritative Unity wallet cannot use local paid spending
+PASS Full lifetime collection stays within cloud payload limit
+PASS No Unity compilation failure
+PASS Runtime catalogue validates once and reuses stable cache
+PASS Runtime driver opens isolated new-economy guest through Unity save codec
+PASS Runtime commands bind the redesigned manual purchase
+PASS Runtime browsing accrues production while blocking the gameplay input surface
+PASS Runtime suspension saves departure and gates spending
+PASS Runtime resume durably settles a return before commands

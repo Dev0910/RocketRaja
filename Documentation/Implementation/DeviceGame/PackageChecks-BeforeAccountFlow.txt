@@ -1,0 +1,36 @@
+APK: C:\Unity\Projects\Incremental game\Builds\Android\RocketRaja-redesign-playtest.apk
+Bytes: 92867189
+SHA256: 0F7A6E64A0D91B3D9EC42FCD31C285AF2B0927566D49FD1E91E2F8D625B1AACB
+PASS APK ZIP alignment with 16 KB native-library pages
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+package: name='com.diwali.rocketrajaredesign.playtest' versionCode='2' versionName='0.1.1' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+minSdkVersion:'25'
+targetSdkVersion:'36'
+application-label:'Rocket Raja Playtest'
+native-code: 'arm64-v8a'
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAnalytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppApp-13_17_0.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAppCheck.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libc++_shared.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-common.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-handler.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics-trampoline.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libcrashlytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libdatastore_shared_counter.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppAuth.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppCrashlytics.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppFirestore.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libFirebaseCppRemoteConfig.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libgame.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libmain.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/lib_burst_generated.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libunity.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libswappywrapper.so
+PASS 16 KB ELF load segments: lib/arm64-v8a/libil2cpp.so

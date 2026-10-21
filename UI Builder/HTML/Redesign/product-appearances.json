@@ -1,0 +1,502 @@
+{
+  "wireframe": "UI Builder/Wireframes/Redesign/product-appearances-v1.svg",
+  "reuseReview": "Documentation/Implementation/VisualReuse.md",
+  "products": [
+    {
+      "id": "phuljhari",
+      "name": "Phuljhari",
+      "source": "Assets/Resources/Art/phuljhari.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "540f1df66994d2718ddd3a6570d2356be2655c6d4b25fd0fde084869b45b3466",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 218,
+            "yFromTop": 49,
+            "width": 228,
+            "height": 522
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 760,
+            "yFromTop": 56,
+            "width": 300,
+            "height": 512
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 124,
+            "yFromTop": 713,
+            "width": 453,
+            "height": 455
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 682,
+            "yFromTop": 627,
+            "width": 472,
+            "height": 536
+          }
+        }
+      ]
+    },
+    {
+      "id": "anar",
+      "name": "Anar",
+      "source": "Assets/Resources/Art/anar.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "09eb03113804a010e506d9972b4e8d92b3dc9ffea0c16416f0dcdd56ef13421d",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 183,
+            "yFromTop": 113,
+            "width": 277,
+            "height": 418
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 684,
+            "yFromTop": 115,
+            "width": 506,
+            "height": 377
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 33,
+            "yFromTop": 774,
+            "width": 562,
+            "height": 398
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 640,
+            "yFromTop": 625,
+            "width": 594,
+            "height": 547
+          }
+        }
+      ]
+    },
+    {
+      "id": "chakri",
+      "name": "Chakri",
+      "source": "Assets/Resources/Art/chakri.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "40336c0122829647b3f233245869f4662280d1a06c17ea5574fae16e0cd69224",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 94,
+            "yFromTop": 188,
+            "width": 465,
+            "height": 287
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 687,
+            "yFromTop": 109,
+            "width": 488,
+            "height": 395
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 61,
+            "yFromTop": 754,
+            "width": 537,
+            "height": 392
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 653,
+            "yFromTop": 609,
+            "width": 569,
+            "height": 547
+          }
+        }
+      ]
+    },
+    {
+      "id": "rockets",
+      "name": "Rockets",
+      "source": "Assets/Resources/Art/rockets.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "ea38e392f7279abb6197f000764ea7e71ecb9ea5f1aa9cff061806b27c7ce6cf",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 154,
+            "yFromTop": 72,
+            "width": 376,
+            "height": 504
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 715,
+            "yFromTop": 78,
+            "width": 416,
+            "height": 498
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 102,
+            "yFromTop": 729,
+            "width": 478,
+            "height": 433
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 648,
+            "yFromTop": 613,
+            "width": 545,
+            "height": 564
+          }
+        }
+      ]
+    },
+    {
+      "id": "small-crackers",
+      "name": "Small crackers",
+      "source": "Assets/Resources/Art/small-crackers.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "45ebb99494afd20d99ddb6f3d260402af3a6ff8876121f83fc592171165c649b",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 111,
+            "yFromTop": 197,
+            "width": 456,
+            "height": 304
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 698,
+            "yFromTop": 162,
+            "width": 458,
+            "height": 335
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 59,
+            "yFromTop": 793,
+            "width": 551,
+            "height": 340
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 671,
+            "yFromTop": 649,
+            "width": 535,
+            "height": 489
+          }
+        }
+      ]
+    },
+    {
+      "id": "cracker-strings",
+      "name": "Cracker strings",
+      "source": "Assets/Resources/Art/cracker-strings.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "0d56b60571abe100c8b08a70aab1d412c2a851b037f3a27cf15660a78ee0ef19",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 176,
+            "yFromTop": 78,
+            "width": 357,
+            "height": 411
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 741,
+            "yFromTop": 73,
+            "width": 376,
+            "height": 429
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 63,
+            "yFromTop": 707,
+            "width": 503,
+            "height": 460
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 654,
+            "yFromTop": 562,
+            "width": 547,
+            "height": 604
+          }
+        }
+      ]
+    },
+    {
+      "id": "aerial-shots",
+      "name": "Aerial shots",
+      "source": "Assets/Resources/Art/aerial-shots.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a2be59d3c30a34cd58501a97e100b7ffe497b7a349a4e156badd14f505cc4f71",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 186,
+            "yFromTop": 162,
+            "width": 256,
+            "height": 357
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 749,
+            "yFromTop": 48,
+            "width": 378,
+            "height": 504
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 29,
+            "yFromTop": 757,
+            "width": 574,
+            "height": 390
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 642,
+            "yFromTop": 607,
+            "width": 598,
+            "height": 546
+          }
+        }
+      ]
+    },
+    {
+      "id": "gift-boxes",
+      "name": "Celebration boxes",
+      "source": "Assets/Resources/Art/gift-boxes.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "c4e56f21bc4f7febf8dbef6bf04f403c3a5a05d0085a4d0549bd550705c9a248",
+      "cells": [
+        {
+          "tier": 0,
+          "label": "Basic · owned",
+          "column": 0,
+          "rowFromTop": 0,
+          "signatureOrdinal": 0,
+          "rect": {
+            "x": 111,
+            "yFromTop": 191,
+            "width": 437,
+            "height": 344
+          }
+        },
+        {
+          "tier": 1,
+          "label": "Signature · I",
+          "column": 1,
+          "rowFromTop": 0,
+          "signatureOrdinal": 1,
+          "rect": {
+            "x": 751,
+            "yFromTop": 78,
+            "width": 369,
+            "height": 480
+          }
+        },
+        {
+          "tier": 2,
+          "label": "Premium · IV",
+          "column": 0,
+          "rowFromTop": 1,
+          "signatureOrdinal": 4,
+          "rect": {
+            "x": 45,
+            "yFromTop": 786,
+            "width": 568,
+            "height": 354
+          }
+        },
+        {
+          "tier": 3,
+          "label": "Showcase · X",
+          "column": 1,
+          "rowFromTop": 1,
+          "signatureOrdinal": 10,
+          "rect": {
+            "x": 641,
+            "yFromTop": 625,
+            "width": 580,
+            "height": 530
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.25,
+  "profiles": [
+    "no-cards",
+    "tap-heavy",
+    "product-heavy",
+    "all-cards"
+  ],
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.01,
+    0.03,
+    0.1,
+    0.25,
+    0.5,
+    1,
+    1.5,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    15,
+    20,
+    30
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 1,
+      "current": 23.477121254719663,
+      "targetLog": 23.437121254719663,
+      "tapScale": 4,
+      "incomeOffset": 0,
+      "loss": 1.3173333333333335,
+      "candidateCount": 9472,
+      "feasibleCount": 116,
+      "bestPassingBuilds": 4,
+      "comparisons": [
+        {
+          "activeSeconds": 666,
+          "passiveSeconds": 800,
+          "speedup": 0.16749999999999998,
+          "products": 0.823141042168344
+        },
+        {
+          "activeSeconds": 641,
+          "passiveSeconds": 798,
+          "speedup": 0.19674185463659144,
+          "products": 0.8269023538115535
+        },
+        {
+          "activeSeconds": 496,
+          "passiveSeconds": 587,
+          "speedup": 0.15502555366269166,
+          "products": 0.8186233821403238
+        },
+        {
+          "activeSeconds": 310,
+          "passiveSeconds": 363,
+          "speedup": 0.1460055096418733,
+          "products": 0.7552918422885146
+        }
+      ]
+    },
+    {
+      "fame": 5,
+      "found": false,
+      "candidateCount": 10281,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 2
+    },
+    {
+      "fame": 10,
+      "found": false,
+      "candidateCount": 6879,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 2
+    },
+    {
+      "fame": 20,
+      "current": 118.47712125471966,
+      "targetLog": 118.02712125471966,
+      "tapScale": 0.1,
+      "incomeOffset": 0,
+      "loss": 1.375,
+      "candidateCount": 7041,
+      "feasibleCount": 17,
+      "bestPassingBuilds": 4,
+      "comparisons": [
+        {
+          "activeSeconds": 1612,
+          "passiveSeconds": 1822,
+          "speedup": 0.115257958287596,
+          "products": 0.982489452278829
+        },
+        {
+          "activeSeconds": 1620,
+          "passiveSeconds": 1821,
+          "speedup": 0.11037891268533773,
+          "products": 0.9591593181847096
+        },
+        {
+          "activeSeconds": 1015,
+          "passiveSeconds": 1161,
+          "speedup": 0.12575366063738158,
+          "products": 0.9883799365482825
+        },
+        {
+          "activeSeconds": 501,
+          "passiveSeconds": 626,
+          "speedup": 0.1996805111821086,
+          "products": 0.9988301342236299
+        }
+      ]
+    },
+    {
+      "fame": 33,
+      "current": 183.47712125471966,
+      "targetLog": 181.76712125471965,
+      "tapScale": 0.25,
+      "incomeOffset": 0,
+      "loss": 5.2476666666666665,
+      "candidateCount": 5593,
+      "feasibleCount": 70,
+      "bestPassingBuilds": 4,
+      "comparisons": [
+        {
+          "activeSeconds": 544,
+          "passiveSeconds": 679,
+          "speedup": 0.19882179675994105,
+          "products": 0.9989158235454599
+        },
+        {
+          "activeSeconds": 540,
+          "passiveSeconds": 601,
+          "speedup": 0.1014975041597338,
+          "products": 0.946382414384172
+        },
+        {
+          "activeSeconds": 520,
+          "passiveSeconds": 601,
+          "speedup": 0.13477537437603992,
+          "products": 0.998983321852148
+        },
+        {
+          "activeSeconds": 473,
+          "passiveSeconds": 536,
+          "speedup": 0.1175373134328358,
+          "products": 0.9124446280888604
+        }
+      ]
+    }
+  ]
+}

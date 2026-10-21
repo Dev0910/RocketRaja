@@ -1,0 +1,82 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.5,
+  "cardGlobalGain": 1,
+  "profiles": [
+    "no-cards",
+    "tap-heavy",
+    "product-heavy",
+    "all-cards"
+  ],
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 10,
+      "found": false,
+      "candidateCount": 5744,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 3,
+      "closest": {
+        "tapScale": 3,
+        "targetLog": 67.44712125471966,
+        "incomeOffset": 0,
+        "ratioError": 0.08019299716688627,
+        "passingBuilds": 2,
+        "comparisons": [
+          {
+            "activeSeconds": 629,
+            "passiveSeconds": 701,
+            "speedup": 0.10271041369472178,
+            "products": 0.8471633754780201,
+            "passiveProducts": 0.914234223162609
+          },
+          {
+            "activeSeconds": 621,
+            "passiveSeconds": 774,
+            "speedup": 0.19767441860465118,
+            "products": 0.7231144428340729,
+            "passiveProducts": 0.9387262573231047
+          },
+          {
+            "activeSeconds": 621,
+            "passiveSeconds": 689,
+            "speedup": 0.09869375907111755,
+            "products": 0.9325957994624438,
+            "passiveProducts": 0.9888903546586513
+          },
+          {
+            "activeSeconds": 510,
+            "passiveSeconds": 521,
+            "speedup": 0.021113243761996192,
+            "products": 0.8135437434290475,
+            "passiveProducts": 0.9760748164797837
+          }
+        ]
+      }
+    }
+  ]
+}

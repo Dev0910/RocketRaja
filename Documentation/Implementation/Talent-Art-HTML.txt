@@ -1,0 +1,4 @@
+PASS All 28 card identities retain their existing family mapping
+PASS Local art gallery layout 390x844
+PASS Local art gallery layout 360x540
+PASS Eight existing local atlases load; no browser errors or external requests

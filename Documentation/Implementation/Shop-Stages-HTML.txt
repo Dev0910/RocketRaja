@@ -1,0 +1,7 @@
+PASS Six stages at the specified lifetime thresholds
+PASS Cumulative motifs and eight fixed shelves at each stage
+PASS Responsive stage gallery 390x844
+PASS Responsive stage gallery 360x540
+PASS Responsive stage gallery 1200x1010
+PASS Original shop and generated RGBA atlas load locally
+PASS No browser errors or external dependencies

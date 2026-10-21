@@ -33,7 +33,7 @@ namespace RocketRaja.Cloud
         public CloudRecord Remote { get; private set; }
         public GameState GuestState => guest?.State;
         public bool GuestNeedsRecovery => guest?.NeedsRecovery ?? false;
-        public bool GoogleSupported => google != null && google.Supported;
+        public bool GoogleSupported => !RedesignEnvironment.Isolated && google != null && google.Supported;
         public string StartupNotice { get; private set; }
         public bool AskGuestChoice { get; private set; }
         public Catalog Catalog { get; private set; }
@@ -57,6 +57,7 @@ namespace RocketRaja.Cloud
         public void InspectGuest() { if (guest == null) guest = new GuestSession(LocalProfiles.Root); }
         async Task EnsureCloudAsync()
         {
+            RedesignEnvironment.RequireLiveCloud();
             if (auth == null) { auth = new FirebaseAccountAuth(google); auth.Changed += AuthChanged; }
             await auth.InitializeAsync();
             if (cloud == null)

@@ -1,0 +1,63 @@
+const capture=require('./capture.cjs');
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const {chromium}=require('C:/Users/Dev/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+ const page=await browser.newPage({viewport:{width:390,height:844}}),checks=[],errors=[];
+ page.setDefaultTimeout(12000);
+ const check=(value,label)=>{assert.ok(value,label);checks.push(label);if(checks.length%5===0)console.log(checks.length+' checks: '+label);};
+ const action=(name,param)=>page.locator(`.app [data-action="${name}"][data-param="${param}"]:visible`).last();
+ const reset=(fixture='progressed',screen='Home')=>page.evaluate(({fixture,screen})=>{classicPreview.condition('normal');classicPreview.reset(fixture);classicPreview.navigate('Home');classicPreview.navigate(screen);},{fixture,screen});
+ const snapshot=()=>page.evaluate(()=>classicPreview.getSnapshot());
+ const settled=()=>page.waitForFunction(()=>!document.querySelector('[data-motion-ghost]')&&!document.querySelector('.motion-burst'));
+ page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
+ try{
+  await page.goto((process.env.CLASSIC_PREVIEW_URL||'http://127.0.0.1:4310')+'/Classic/?previewResources=pulls');
+  await page.locator('.product-icon img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
+  check(await page.locator('.festival-mote').count()===12,'A bounded decorative atmosphere loads');
+  check(await page.locator('.classic-skill[data-state=ready]').count()===3,'Ready effects match actual skill state');
+  for(const tab of ['Player','Products','Legacy','Shop']){await page.click('#nav-'+tab);check((await snapshot()).tab===tab,tab+' opens during animated navigation');}
+  await page.click('#nav-Products');await page.locator('#scroll-Products').evaluate(e=>e.scrollTop=210);const y=await page.locator('#scroll-Products').evaluate(e=>e.scrollTop);
+  await page.click('#nav-Player');await page.click('#nav-Products');check(await page.locator('#scroll-Products').evaluate(e=>e.scrollTop)===y,'Panel entrance preserves scroll');
+  await reset('new','Products');await action('BuyLevels','0').click();
+  check((await snapshot()).tab==='Home'&&await page.locator('#display-phuljhari').getAttribute('data-owned')==='true','First stock still populates the shelf and returns Home');
+  await settled();await reset('progressed','Products');
+  const buy=page.locator('#panel-Products [data-action=BuyLevels]:enabled').first(),product=await buy.getAttribute('data-param');await buy.click();
+  check(await page.evaluate(i=>classicPreview.state.levelBought.has(Number(i)),product),'Product purchase completes during feedback');
+  check(await action('BuyLevels',product).isDisabled(),'Repeated purchase remains disabled');
+  await settled();await page.evaluate(()=>classicPreview.condition('save-error'));
+  check(await page.locator('#panel-Products [data-action=BuyLevels]:enabled').count()===0,'Save failure cannot trigger purchase effects or spending');
+  await reset('progressed','Home');const tap=page.locator('#stall-tap'),box=await tap.boundingBox();
+  await page.mouse.move(box.x+20,box.y+20);await page.mouse.down();await page.mouse.move(box.x+60,box.y+20);await page.mouse.up();
+  check(!(await snapshot()).events.some(e=>e.action==='Tap'),'Dragging does not earn or celebrate');
+  await tap.click();check((await snapshot()).events.filter(e=>e.action==='Tap').length===1,'One intentional counter tap produces one event');
+  check(await page.locator('.festival-coin').count()===3,'A counter tap sends a bounded coin trail');await settled();
+  check(await page.locator('.motion-effects>*').count()===0,'Transient particles clean up completely');
+  await reset('progressed','Legacy');await action('Draw','5').click();
+  check((await snapshot()).credits===0,'Five-card draw still consumes exactly four free credits');
+  check(await page.locator('[data-action=Reveal][data-param=skip]').count()===0,'Reveal has no skip control');
+  for(let i=0;i<5;i++){await page.locator('.modal-layer:not([data-motion-ghost]).flip-settled').waitFor();check(await action('Reveal','continue').textContent()===(i===4?'Continue':'Next card'),'Reveal '+(i+1)+' settles with the correct button');await action('Reveal','continue').click();}
+  check((await snapshot()).tab==='Legacy'&&(await snapshot()).sheets.length===0,'Continue returns to collection after all five cards');await settled();
+  await action('Draw','1').click();const granted=await page.evaluate(()=>classicPreview.state.cardLevels.reduce((a,b)=>a+b,0));await page.keyboard.press('Escape');
+  check((await snapshot()).sheets.length===0&&await page.evaluate(()=>classicPreview.state.reveal===null),'Closing an in-progress flip finalizes its reveal');
+  check(await page.evaluate(()=>classicPreview.state.cardLevels.reduce((a,b)=>a+b,0))===granted,'Closing animation does not grant duplicate rewards');await settled();
+  await page.evaluate(()=>classicPreview.navigate('CardDetail:0'));await page.locator('.full-card-art').click();check((await snapshot()).sheets.at(-1)==='CardDetail','Clicking card artwork does not dismiss it');
+  await page.locator('.modal-layer:not([data-motion-ghost])').click({position:{x:3,y:3}});check((await snapshot()).sheets.length===0,'Outside click closes the animated full card');await settled();
+  await reset('progressed','Settings');await action('Setting','motion').click();
+  check(await page.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length)===0,'In-game Reduced motion stops CSS and Web animations');
+  await page.keyboard.press('Escape');await page.click('#nav-Legacy');await action('Draw','1').click();
+  check(await action('Reveal','continue').isEnabled(),'Reduced-motion card reveal settles immediately');await action('Reveal','continue').click();
+  await page.evaluate(()=>classicPreview.navigate('Home'));const tapsBefore=(await snapshot()).events.filter(e=>e.action==='Tap').length;await tap.click();check((await snapshot()).events.filter(e=>e.action==='Tap').length===tapsBefore+1&&await page.locator('.tap-income strong').isVisible()&&await page.locator('.tap-income strong').innerText()!=='₹0','Reduced-motion taps retain the readable payout label and one input event');check(await page.locator('#notice').isHidden(),'Counter taps keep the current no-toast presentation');
+  check(await page.locator('.motion-effects>*').count()===0,'Reduced motion suppresses decorative particles');
+  await page.evaluate(()=>classicPreview.navigate('Settings'));await action('Setting','motion').click();await page.keyboard.press('Escape');await reset('progressed','Legacy');await action('Draw','1').click();await page.emulateMedia({reducedMotion:'reduce'});await page.waitForFunction(()=>matchMedia('(prefers-reduced-motion: reduce)').matches&&document.querySelector('#sheets .modal-layer:not([hidden]) [data-action=Reveal][data-param=continue]')?.disabled===false);
+  check(await action('Reveal','continue').isEnabled(),'Changing OS motion preference mid-flip releases Continue');
+  check(await page.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length)===0,'OS Reduced motion stops all running animations');
+  await page.keyboard.press('Escape');await page.emulateMedia({reducedMotion:'no-preference'});await reset('progressed','Home');
+  await page.setViewportSize({width:360,height:540});await capture(page,'UI Builder/HTML/Classic/renders/motion-small-screen.png');
+  check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Small-screen layout has no horizontal overflow');
+  await page.click('#nav-Products');await page.locator('#scroll-Products').evaluate(e=>e.scrollTop=e.scrollHeight);check(await action('BuyLevels','7').isVisible(),'Last product remains reachable on a short screen');
+  await page.evaluate(()=>classicPreview.navigate('Settings'));const buttons=page.locator('.modal-layer:not([data-motion-ghost]) button:not(:disabled)');await buttons.last().focus();await page.keyboard.press('Tab');check(await buttons.first().evaluate(e=>e===document.activeElement),'Animated dialog preserves keyboard focus trap');
+  check(errors.length===0,'No browser errors or failed resources');
+  fs.writeFileSync('UI Builder/HTML/Classic/renders/motion-report.json',JSON.stringify({status:'pass',checks,errors},null,2));console.log('PASS '+checks.length+' motion and interaction checks');
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

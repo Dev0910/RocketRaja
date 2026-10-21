@@ -1,0 +1,36 @@
+Scope: saved sprites/layers, six native phone stages and progress text. Actual batch/reload/reset/rebuy is a separate Play Mode report.
+PASS Five cumulative layer roots and progress copy reload from the saved prefab
+PASS Six noninteractive images reuse five persistent decorative sprites
+PASS Progress text material slots are serialized
+PASS Loading directly settles the exact cumulative shop stage 0
+PASS Stage and next milestone copy match lifetime progress 0
+PASS Lifetime shop history never restores run-specific product art 0
+PASS Decoration stage preserves all product and counter anchors 0
+PASS Repeated binding neither saves nor queues older milestone celebrations 0
+PASS Loading directly settles the exact cumulative shop stage 1
+PASS Stage and next milestone copy match lifetime progress 1
+PASS Lifetime shop history never restores run-specific product art 1
+PASS Decoration stage preserves all product and counter anchors 1
+PASS Repeated binding neither saves nor queues older milestone celebrations 1
+PASS Loading directly settles the exact cumulative shop stage 2
+PASS Stage and next milestone copy match lifetime progress 2
+PASS Lifetime shop history never restores run-specific product art 2
+PASS Decoration stage preserves all product and counter anchors 2
+PASS Repeated binding neither saves nor queues older milestone celebrations 2
+PASS Loading directly settles the exact cumulative shop stage 3
+PASS Stage and next milestone copy match lifetime progress 3
+PASS Lifetime shop history never restores run-specific product art 3
+PASS Decoration stage preserves all product and counter anchors 3
+PASS Repeated binding neither saves nor queues older milestone celebrations 3
+PASS Loading directly settles the exact cumulative shop stage 4
+PASS Stage and next milestone copy match lifetime progress 4
+PASS Lifetime shop history never restores run-specific product art 4
+PASS Decoration stage preserves all product and counter anchors 4
+PASS Repeated binding neither saves nor queues older milestone celebrations 4
+PASS Loading directly settles the exact cumulative shop stage 5
+PASS Stage and next milestone copy match lifetime progress 5
+PASS Lifetime shop history never restores run-specific product art 5
+PASS Decoration stage preserves all product and counter anchors 5
+PASS Repeated binding neither saves nor queues older milestone celebrations 5
+PASS All six stage renders preserve the exact saved object inventory
+PASS Unity compilation succeeds

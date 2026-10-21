@@ -1,0 +1,152 @@
+{
+  "absoluteLocalResources": [],
+  "advisoryAssetMismatches": [],
+  "assetParity": [
+    {
+      "assetId": "achievementClaimProgress",
+      "byteIdentical": true,
+      "expectedHashesMatch": true,
+      "html": "index.html",
+      "metadataId": "unity-metadata",
+      "previewSha256": "fce55947bed5f74055a83e5b9db6c48d38c8e5bd736f63dd0fcaa8dba5d52685",
+      "previewSource": "assets/achievements/claim-progress.png",
+      "required": true,
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-progress.png",
+      "unitySha256": "fce55947bed5f74055a83e5b9db6c48d38c8e5bd736f63dd0fcaa8dba5d52685"
+    },
+    {
+      "assetId": "achievementClaimReady",
+      "byteIdentical": true,
+      "expectedHashesMatch": true,
+      "html": "index.html",
+      "metadataId": "unity-metadata",
+      "previewSha256": "a2d53863c0db260cf283531390c112d0c3abb29a50b7d810fd8a0087b778b23b",
+      "previewSource": "assets/achievements/claim-ready.png",
+      "required": true,
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-ready.png",
+      "unitySha256": "a2d53863c0db260cf283531390c112d0c3abb29a50b7d810fd8a0087b778b23b"
+    },
+    {
+      "assetId": "achievementClaimed",
+      "byteIdentical": true,
+      "expectedHashesMatch": true,
+      "html": "index.html",
+      "metadataId": "unity-metadata",
+      "previewSha256": "f325402a736a22437a78657d2b95b1fff38504acc0602f2f57ae126f485a490d",
+      "previewSource": "assets/achievements/claim-claimed.png",
+      "required": true,
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-claimed.png",
+      "unitySha256": "f325402a736a22437a78657d2b95b1fff38504acc0602f2f57ae126f485a490d"
+    },
+    {
+      "assetId": "achievementLedgerAtlas",
+      "byteIdentical": true,
+      "expectedHashesMatch": true,
+      "html": "index.html",
+      "metadataId": "unity-metadata",
+      "previewSha256": "6969c52798fff2e7eee62bf6d74d9a4ca80990a9f50139592d864abc2df57a7c",
+      "previewSource": "assets/achievements/ledger-atlas.png",
+      "required": true,
+      "unityPath": "Assets/Game/ClassicUI/Achievements/ledger-atlas.png",
+      "unitySha256": "6969c52798fff2e7eee62bf6d74d9a4ca80990a9f50139592d864abc2df57a7c"
+    },
+    {
+      "assetId": "achievementReadyBadge",
+      "byteIdentical": true,
+      "expectedHashesMatch": true,
+      "html": "index.html",
+      "metadataId": "unity-metadata",
+      "previewSha256": "fa7b3c7b88e24b81ab80607cc0066a98181e63f1e88eba4ce72b2b1f92a4f704",
+      "previewSource": "assets/achievements/ready-badge.png",
+      "required": true,
+      "unityPath": "Assets/Game/ClassicUI/Achievements/ready-badge.png",
+      "unitySha256": "fa7b3c7b88e24b81ab80607cc0066a98181e63f1e88eba4ce72b2b1f92a4f704"
+    }
+  ],
+  "cssFiles": [
+    "preview.css"
+  ],
+  "duplicateIds": [],
+  "errors": [],
+  "executableScripts": [
+    "index.html#script-2",
+    "index.html#script-3",
+    "index.html#script-4",
+    "index.html#script-5"
+  ],
+  "htmlFiles": [
+    "index.html"
+  ],
+  "inspectedCssFiles": [
+    "Achievements/preview.css",
+    "Classic/achievements-ledger.css",
+    "Classic/popup-clearance.css",
+    "Classic/popup-refresh.css"
+  ],
+  "malformedJson": [],
+  "metadataBlocks": [
+    {
+      "html": "index.html",
+      "id": "unity-metadata"
+    }
+  ],
+  "metadataLocalResources": [
+    "index.html#unity-metadata:assets.achievementClaimProgress.previewSource: assets/achievements/claim-progress.png",
+    "index.html#unity-metadata:assets.achievementClaimReady.previewSource: assets/achievements/claim-ready.png",
+    "index.html#unity-metadata:assets.achievementClaimed.previewSource: assets/achievements/claim-claimed.png",
+    "index.html#unity-metadata:assets.achievementLedgerAtlas.previewSource: assets/achievements/ledger-atlas.png",
+    "index.html#unity-metadata:assets.achievementReadyBadge.previewSource: assets/achievements/ready-badge.png",
+    "index.html#unity-metadata:modules.accessibilityAndPresentation.assets.ledgerAtlas.previewSource: assets/achievements/ledger-atlas.png"
+  ],
+  "missingHtmlIds": [],
+  "missingLocalResources": [],
+  "missingUnityAssets": [],
+  "ok": true,
+  "outsidePackageResources": [],
+  "package": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Achievements",
+  "packageSymlinks": [],
+  "projectRoot": "C:\\Unity\\Projects\\Incremental game",
+  "referenceImages": [],
+  "remoteResources": [],
+  "requiredAssetMismatches": [],
+  "resourceRoot": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML",
+  "schemaVersion": 1,
+  "screenHints": [],
+  "stateHints": [],
+  "unityAssetPaths": [
+    "Assets/Game/ClassicUI/Achievements/claim-claimed.png",
+    "Assets/Game/ClassicUI/Achievements/claim-progress.png",
+    "Assets/Game/ClassicUI/Achievements/claim-ready.png",
+    "Assets/Game/ClassicUI/Achievements/ledger-atlas.png",
+    "Assets/Game/ClassicUI/Achievements/ready-badge.png",
+    "Assets/Game/Core/RedesignAchievements.cs",
+    "Assets/Game/Core/RedesignEngine.cs",
+    "Assets/Game/Runtime/Classic/ClassicUI.Achievements.cs",
+    "Assets/Game/Runtime/Classic/ClassicUI.cs",
+    "Assets/Game/Runtime/RedesignScreenRouter.cs",
+    "Assets/Scenes/Main.unity"
+  ],
+  "unityAttributeCount": 12,
+  "unresolvedDynamicHtmlIds": [
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[0]: achievement-claim-taps-100",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[10]: achievement-claim-products-4",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[11]: achievement-claim-products-8",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[12]: achievement-claim-prestiges-1",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[13]: achievement-claim-prestiges-5",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[14]: achievement-claim-prestiges-10",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[1]: achievement-claim-taps-1000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[2]: achievement-claim-taps-10000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[3]: achievement-claim-earnings-1000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[4]: achievement-claim-earnings-1000000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[5]: achievement-claim-earnings-1000000000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[6]: achievement-claim-upgrades-10",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[7]: achievement-claim-upgrades-100",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[8]: achievement-claim-upgrades-1000",
+    "index.html#unity-metadata:actions.ClaimAchievement.triggerIds.[9]: achievement-claim-products-1"
+  ],
+  "unsafeUnityAssetPaths": [],
+  "warnings": [
+    "Some action/binding IDs are absent from static HTML with preview scripts; verify generated DOM/template identities before wiring them.",
+    "Executable script content is present; inspect it and apply the skill's local-preview rendering boundary before execution."
+  ]
+}

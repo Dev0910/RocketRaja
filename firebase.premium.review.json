@@ -1,0 +1,9 @@
+{
+  "functions": [{
+    "source": "Backend/Premium",
+    "codebase": "premium",
+    "runtime": "nodejs22",
+    "ignore": ["node_modules", ".git", "*.test.mjs", ".env*", "README.md"],
+    "predeploy": ["npm --prefix \"$RESOURCE_DIR\" test"]
+  }]
+}

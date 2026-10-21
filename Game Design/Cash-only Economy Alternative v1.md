@@ -1,5 +1,7 @@
 # Rocket Raja: selected cash-only progression — decision record
 
+**Historical reference — 7 October 2026:** preserve the original rationale, scenarios and results below. They do not define the current interaction/access rules or establish current pacing. See [Current Implementation Design](Current%20Implementation%20Design.md) for the user-confirmed implementation.
+
 1 October 2026. The user selected **cash-only progression**. This file retains its original filename so existing links keep working. No Unity changes.
 
 ## Selected rules

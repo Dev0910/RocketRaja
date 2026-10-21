@@ -1,0 +1,3 @@
+Performing Streamed Install
+adb.exe: failed to install Temp/RedesignDeviceQA-20261002-005107-7545630d/Build/RocketRaja-core-qa.apk: Failure [INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+

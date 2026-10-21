@@ -1,0 +1,311 @@
+PASS: Catalog has 8 products and 96 unique unlockables
+PASS: 12 Legacy perks and valid initial state
+PASS: Old and fresh saves default to an unhandled store name
+PASS: Invalid store name rejected
+PASS: Invalid store name rejected
+PASS: Invalid store name rejected
+PASS: Invalid store name rejected
+PASS: Invalid store name rejected
+PASS: Invalid store name rejected
+PASS: Store names trim and preserve literal text
+PASS: Account payload retains name and prompt state
+PASS: Store name survives prestige
+PASS: Read-only session cannot rename
+PASS: Large numbers exceed double range
+PASS: Tiny values normalize and subtract zero safely
+PASS: Large-number multiply
+PASS: Bulk cost equals sequential single purchases
+PASS: Buy Max boundary
+PASS: Products unlock in sequence
+PASS: Affordable bulk buy preserves non-negative cash
+PASS: Visual tier at 0
+PASS: Visual tier at 1
+PASS: Visual tier at 25
+PASS: Visual tier at 50
+PASS: Visual tier at 100
+PASS: Interval progress resets at milestone
+PASS: Stocking and maximum endpoints
+PASS: Product 0 profit schedule at 0
+PASS: Product 0 profit schedule at 1
+PASS: Product 0 profit schedule at 9
+PASS: Product 0 profit schedule at 10
+PASS: Product 0 profit schedule at 24
+PASS: Product 0 profit schedule at 25
+PASS: Product 0 profit schedule at 49
+PASS: Product 0 profit schedule at 50
+PASS: Product 0 profit schedule at 75
+PASS: Product 0 profit schedule at 99
+PASS: Product 0 profit schedule at 100
+PASS: Product 0 profit schedule at 174
+PASS: Product 0 profit schedule at 175
+PASS: Product 0 profit schedule at 199
+PASS: Product 0 profit schedule at 200
+PASS: Product 0 profit schedule at 249
+PASS: Product 0 profit schedule at 250
+PASS: Product 0 profit schedule at 299
+PASS: Product 0 profit schedule at 300
+PASS: Product 0 profit schedule at 100000
+PASS: Bulk crosses every milestone once 0
+PASS: State roundtrip retains progress 0
+PASS: Product 1 profit schedule at 0
+PASS: Product 1 profit schedule at 1
+PASS: Product 1 profit schedule at 9
+PASS: Product 1 profit schedule at 10
+PASS: Product 1 profit schedule at 24
+PASS: Product 1 profit schedule at 25
+PASS: Product 1 profit schedule at 49
+PASS: Product 1 profit schedule at 50
+PASS: Product 1 profit schedule at 75
+PASS: Product 1 profit schedule at 99
+PASS: Product 1 profit schedule at 100
+PASS: Product 1 profit schedule at 174
+PASS: Product 1 profit schedule at 175
+PASS: Product 1 profit schedule at 199
+PASS: Product 1 profit schedule at 200
+PASS: Product 1 profit schedule at 249
+PASS: Product 1 profit schedule at 250
+PASS: Product 1 profit schedule at 299
+PASS: Product 1 profit schedule at 300
+PASS: Product 1 profit schedule at 100000
+PASS: Bulk crosses every milestone once 1
+PASS: State roundtrip retains progress 1
+PASS: Product 2 profit schedule at 0
+PASS: Product 2 profit schedule at 1
+PASS: Product 2 profit schedule at 9
+PASS: Product 2 profit schedule at 10
+PASS: Product 2 profit schedule at 24
+PASS: Product 2 profit schedule at 25
+PASS: Product 2 profit schedule at 49
+PASS: Product 2 profit schedule at 50
+PASS: Product 2 profit schedule at 75
+PASS: Product 2 profit schedule at 99
+PASS: Product 2 profit schedule at 100
+PASS: Product 2 profit schedule at 174
+PASS: Product 2 profit schedule at 175
+PASS: Product 2 profit schedule at 199
+PASS: Product 2 profit schedule at 200
+PASS: Product 2 profit schedule at 249
+PASS: Product 2 profit schedule at 250
+PASS: Product 2 profit schedule at 299
+PASS: Product 2 profit schedule at 300
+PASS: Product 2 profit schedule at 100000
+PASS: Bulk crosses every milestone once 2
+PASS: State roundtrip retains progress 2
+PASS: Product 3 profit schedule at 0
+PASS: Product 3 profit schedule at 1
+PASS: Product 3 profit schedule at 9
+PASS: Product 3 profit schedule at 10
+PASS: Product 3 profit schedule at 24
+PASS: Product 3 profit schedule at 25
+PASS: Product 3 profit schedule at 49
+PASS: Product 3 profit schedule at 50
+PASS: Product 3 profit schedule at 75
+PASS: Product 3 profit schedule at 99
+PASS: Product 3 profit schedule at 100
+PASS: Product 3 profit schedule at 174
+PASS: Product 3 profit schedule at 175
+PASS: Product 3 profit schedule at 199
+PASS: Product 3 profit schedule at 200
+PASS: Product 3 profit schedule at 249
+PASS: Product 3 profit schedule at 250
+PASS: Product 3 profit schedule at 299
+PASS: Product 3 profit schedule at 300
+PASS: Product 3 profit schedule at 100000
+PASS: Bulk crosses every milestone once 3
+PASS: State roundtrip retains progress 3
+PASS: Product 4 profit schedule at 0
+PASS: Product 4 profit schedule at 1
+PASS: Product 4 profit schedule at 9
+PASS: Product 4 profit schedule at 10
+PASS: Product 4 profit schedule at 24
+PASS: Product 4 profit schedule at 25
+PASS: Product 4 profit schedule at 49
+PASS: Product 4 profit schedule at 50
+PASS: Product 4 profit schedule at 75
+PASS: Product 4 profit schedule at 99
+PASS: Product 4 profit schedule at 100
+PASS: Product 4 profit schedule at 174
+PASS: Product 4 profit schedule at 175
+PASS: Product 4 profit schedule at 199
+PASS: Product 4 profit schedule at 200
+PASS: Product 4 profit schedule at 249
+PASS: Product 4 profit schedule at 250
+PASS: Product 4 profit schedule at 299
+PASS: Product 4 profit schedule at 300
+PASS: Product 4 profit schedule at 100000
+PASS: Bulk crosses every milestone once 4
+PASS: State roundtrip retains progress 4
+PASS: Product 5 profit schedule at 0
+PASS: Product 5 profit schedule at 1
+PASS: Product 5 profit schedule at 9
+PASS: Product 5 profit schedule at 10
+PASS: Product 5 profit schedule at 24
+PASS: Product 5 profit schedule at 25
+PASS: Product 5 profit schedule at 49
+PASS: Product 5 profit schedule at 50
+PASS: Product 5 profit schedule at 75
+PASS: Product 5 profit schedule at 99
+PASS: Product 5 profit schedule at 100
+PASS: Product 5 profit schedule at 174
+PASS: Product 5 profit schedule at 175
+PASS: Product 5 profit schedule at 199
+PASS: Product 5 profit schedule at 200
+PASS: Product 5 profit schedule at 249
+PASS: Product 5 profit schedule at 250
+PASS: Product 5 profit schedule at 299
+PASS: Product 5 profit schedule at 300
+PASS: Product 5 profit schedule at 100000
+PASS: Bulk crosses every milestone once 5
+PASS: State roundtrip retains progress 5
+PASS: Product 6 profit schedule at 0
+PASS: Product 6 profit schedule at 1
+PASS: Product 6 profit schedule at 9
+PASS: Product 6 profit schedule at 10
+PASS: Product 6 profit schedule at 24
+PASS: Product 6 profit schedule at 25
+PASS: Product 6 profit schedule at 49
+PASS: Product 6 profit schedule at 50
+PASS: Product 6 profit schedule at 75
+PASS: Product 6 profit schedule at 99
+PASS: Product 6 profit schedule at 100
+PASS: Product 6 profit schedule at 174
+PASS: Product 6 profit schedule at 175
+PASS: Product 6 profit schedule at 199
+PASS: Product 6 profit schedule at 200
+PASS: Product 6 profit schedule at 249
+PASS: Product 6 profit schedule at 250
+PASS: Product 6 profit schedule at 299
+PASS: Product 6 profit schedule at 300
+PASS: Product 6 profit schedule at 100000
+PASS: Bulk crosses every milestone once 6
+PASS: State roundtrip retains progress 6
+PASS: Product 7 profit schedule at 0
+PASS: Product 7 profit schedule at 1
+PASS: Product 7 profit schedule at 9
+PASS: Product 7 profit schedule at 10
+PASS: Product 7 profit schedule at 24
+PASS: Product 7 profit schedule at 25
+PASS: Product 7 profit schedule at 49
+PASS: Product 7 profit schedule at 50
+PASS: Product 7 profit schedule at 75
+PASS: Product 7 profit schedule at 99
+PASS: Product 7 profit schedule at 100
+PASS: Product 7 profit schedule at 174
+PASS: Product 7 profit schedule at 175
+PASS: Product 7 profit schedule at 199
+PASS: Product 7 profit schedule at 200
+PASS: Product 7 profit schedule at 249
+PASS: Product 7 profit schedule at 250
+PASS: Product 7 profit schedule at 299
+PASS: Product 7 profit schedule at 300
+PASS: Product 7 profit schedule at 100000
+PASS: Bulk crosses every milestone once 7
+PASS: State roundtrip retains progress 7
+PASS: All 96 unlockables reachable and ordered
+PASS: Non-skill upgrades have no product or tap gates
+PASS: Bulk buys beyond ten visible rows without duplicates; skill ownership retained
+PASS: Skill ranks remain sequential
+PASS: Buy All unlocks successive skill ranks
+PASS: Buy All with insufficient cash is a no-op
+PASS: Partial affordability uses cheapest-first order
+PASS: Bulk upgrades persist through serialization
+PASS: Disabled sessions reject individual and bulk purchases
+PASS: Equal prices use deterministic ordinal ID order
+PASS: Retired sponsor callbacks cannot grant a boost
+PASS: Legacy sponsor timestamp cannot double displayed income
+PASS: Large and small timesteps agree across buff boundaries
+PASS: Legacy sponsor timestamp cannot grant hidden bonus income
+PASS: Bulk Order uses normal income
+PASS: Prestige square-root reward
+PASS: Stale prestige quote rejected
+PASS: Prestige commits
+PASS: Prestige resets entire run exactly once
+PASS: Legacy spends balance without reducing lifetime reputation
+PASS: Eight-hour offline cap
+PASS: Repeated resume has no duplicate payout
+PASS: Retired offline callbacks preserve the settled income and return summary
+PASS: Clock rollback cannot replay offline time
+PASS: Store name survives disk restart
+PASS: Save roundtrip retains values and permanent perks
+PASS: Corrupt save recovers backup
+PASS: Unknown reward placement cannot mutate economy
+PASS: Legacy 0 rank 1
+PASS: Legacy 0 rank 2
+PASS: Legacy 0 rank 3
+PASS: Legacy 0 rank 4
+PASS: Legacy 0 rank 5
+PASS: Legacy rank cap 0
+PASS: Legacy 1 rank 1
+PASS: Legacy 1 rank 2
+PASS: Legacy 1 rank 3
+PASS: Legacy 1 rank 4
+PASS: Legacy 1 rank 5
+PASS: Legacy rank cap 1
+PASS: Legacy 2 rank 1
+PASS: Legacy 2 rank 2
+PASS: Legacy 2 rank 3
+PASS: Legacy 2 rank 4
+PASS: Legacy 2 rank 5
+PASS: Legacy rank cap 2
+PASS: Legacy 3 rank 1
+PASS: Legacy 3 rank 2
+PASS: Legacy 3 rank 3
+PASS: Legacy 3 rank 4
+PASS: Legacy 3 rank 5
+PASS: Legacy rank cap 3
+PASS: Legacy 4 rank 1
+PASS: Legacy 4 rank 2
+PASS: Legacy 4 rank 3
+PASS: Legacy 4 rank 4
+PASS: Legacy 4 rank 5
+PASS: Legacy rank cap 4
+PASS: Legacy 5 rank 1
+PASS: Legacy 5 rank 2
+PASS: Legacy 5 rank 3
+PASS: Legacy 5 rank 4
+PASS: Legacy 5 rank 5
+PASS: Legacy rank cap 5
+PASS: Legacy 6 rank 1
+PASS: Legacy 6 rank 2
+PASS: Legacy 6 rank 3
+PASS: Legacy 6 rank 4
+PASS: Legacy 6 rank 5
+PASS: Legacy rank cap 6
+PASS: Legacy 7 rank 1
+PASS: Legacy 7 rank 2
+PASS: Legacy 7 rank 3
+PASS: Legacy 7 rank 4
+PASS: Legacy 7 rank 5
+PASS: Legacy rank cap 7
+PASS: Legacy 8 rank 1
+PASS: Legacy 8 rank 2
+PASS: Legacy 8 rank 3
+PASS: Legacy 8 rank 4
+PASS: Legacy 8 rank 5
+PASS: Legacy rank cap 8
+PASS: Legacy 9 rank 1
+PASS: Legacy 9 rank 2
+PASS: Legacy 9 rank 3
+PASS: Legacy 9 rank 4
+PASS: Legacy 9 rank 5
+PASS: Legacy rank cap 9
+PASS: Legacy 10 rank 1
+PASS: Legacy 10 rank 2
+PASS: Legacy 10 rank 3
+PASS: Legacy 10 rank 4
+PASS: Legacy 10 rank 5
+PASS: Legacy rank cap 10
+PASS: Legacy 11 rank 1
+PASS: Legacy 11 rank 2
+PASS: Legacy 11 rank 3
+PASS: Legacy 11 rank 4
+PASS: Legacy 11 rank 5
+PASS: Legacy rank cap 11
+PASS: Maximum offline cap is eighteen hours
+PASS: Cooldown perk reduces cooldown by 25 percent
+PASS: Short closure preserves absolute skill cooldown
+PASS: Cooldown finishes while closed
+PASS: Spending never reduces prestige eligibility
+PASS: All Legacy ranks survive serialization
+PASS: Both corrupt saves preserved for explicit recovery
+All core checks passed. Test artifacts: C:\Users\Dev\AppData\Local\Temp\DiwaliTests-30b9412f-c449-4523-b5fa-c781d5d3a876

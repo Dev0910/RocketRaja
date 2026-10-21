@@ -55,6 +55,10 @@ namespace RocketRaja
         }
         void Log(string message, string stack, LogType type)
         {
+#if UNITY_EDITOR
+            const string pathAdvisory = "The project path contains spaces, which may cause issues during usage of AI Game Developer. Please consider the move the project to a folder without spaces.";
+            if (message == pathAdvisory && stack.Contains("Startup")) { checks.Add("NOTE Known MCP path advisory"); return; }
+#endif
             if (type != LogType.Error && type != LogType.Exception && type != LogType.Assert) return;
             errors++;
             checks.Add("ERROR " + message);
@@ -80,8 +84,10 @@ namespace RocketRaja
             game = FindFirstObjectByType<GameController>();
             Check(game != null, "Main scene booted");
             if (game == null) { Finish(); yield break; }
+            if (game.redesignApplication) { yield return RedesignChecks(); Finish(); yield break; }
 #if UNITY_EDITOR
             string motionStage = UnityEditor.SessionState.GetString("RocketRaja.HtmlMotionStage", "");
+            if (motionStage == "ad-retirement") { yield return AdRetirementChecks(); Finish(); yield break; }
             if (motionStage == "home-card") { yield return HomeCardChecks(); Finish(); yield break; }
             if (game.StoreNameScreen.gameObject.activeSelf) game.StoreNameScreen.Dismiss();
             game.Engine.SetStoreName(GameState.DefaultStoreName);
@@ -104,7 +110,7 @@ namespace RocketRaja
                 "Authored catalog loaded");
             Check(game.HomeScreen != null && game.PlayerScreen != null && game.ProductsScreen != null &&
                   game.LegacyScreen != null && game.PrivacyScreen != null && game.SettingsScreen != null &&
-                  game.SaveRecoveryScreen != null && game.OfflineScreen != null && game.SponsorScreen != null &&
+                  game.SaveRecoveryScreen != null && game.OfflineScreen != null &&
                   game.PrestigeScreen != null && game.StatisticsScreen != null && game.SkillsScreen != null &&
                   game.ProductDetailScreen != null, "All thirteen HTML screens bound in Main");
             Check(game.GetComponent<GameView>() == game.View && EventSystem.current != null &&
@@ -190,24 +196,18 @@ namespace RocketRaja
             Check(game.OfflineScreen.gameObject.activeSelf, "Offline dialog opens");
             yield return Capture("06-offline");
             var cash = e.State.cash;
-            var bonus = e.State.pendingOfflineReward;
             game.OfflineScreen.RequestVideo();
-            Check(e.State.cash >= cash + bonus && string.IsNullOrEmpty(e.State.pendingOfflineId),
-                "Test rewarded callback grants offline bonus once");
-            var adapter = game.Ads as TestRewardedAds;
-            Check(adapter != null, "Test rewarded ads adapter active");
-            if (adapter != null)
-            {
-                adapter.Success = false; game.ShowAd("sponsor");
-                Check(e.State.sponsorUntil == 0, "Cancelled sponsor grants no bonus");
-                adapter.Success = true; game.ShowAd("sponsor");
-                Check(e.State.sponsorUntil > e.State.now, "Completed sponsor activates boost");
-            }
+            Check(e.State.cash.CompareTo(cash) == 0 && !string.IsNullOrEmpty(e.State.pendingOfflineId),
+                "Retired offline event cannot grant extra income or consume the summary");
+            Check(game.Ads is DisabledRewardedAds && !game.Ads.Ready, "No rewarded ad provider is enabled");
+            bool accepted = true;
+            game.ShowAd("sponsor", result => accepted = result);
+            Check(!accepted && e.State.sponsorUntil == 0, "Retired sponsor route rejects without a reward");
             game.View.ShowStatistics(); Check(game.StatisticsScreen.gameObject.activeSelf, "Statistics opens"); game.StatisticsScreen.Close();
             game.View.ShowSkills(); Check(game.SkillsScreen.gameObject.activeSelf, "Skills opens"); game.SkillsScreen.Close();
             game.View.ShowProductDetail(0); Check(game.ProductDetailScreen.gameObject.activeSelf, "Product detail opens"); game.ProductDetailScreen.Close();
             game.View.ShowSettings(); Check(game.SettingsScreen.gameObject.activeSelf, "Settings opens"); game.SettingsScreen.Close();
-            game.View.ShowSponsor(); Check(game.SponsorScreen.gameObject.activeSelf, "Sponsor opens"); game.SponsorScreen.Close();
+            game.View.ShowSponsor(); Check(game.SponsorScreen == null || !game.SponsorScreen.gameObject.activeSelf, "Retired Sponsor cannot open");
             game.PrivacyScreen.Bind(game, null); game.PrivacyScreen.Open();
             Check(game.PrivacyScreen.gameObject.activeSelf, "Privacy opens"); game.PrivacyScreen.Close();
             game.SaveRecoveryScreen.Bind(game); game.SaveRecoveryScreen.Open();
@@ -351,7 +351,7 @@ namespace RocketRaja
             Action[] open =
             {
                 game.View.ShowSettings, game.View.ShowStatistics, game.View.ShowSkills,
-                () => game.View.ShowProductDetail(0), game.View.ShowPrestige, game.View.ShowSponsor,
+                () => game.View.ShowProductDetail(0), game.View.ShowPrestige,
                 () => { game.Engine.ResolveOffline(game.Engine.State.now + 3600); game.View.ShowOffline(); },
                 () => { game.PrivacyScreen.Bind(game, null); game.PrivacyScreen.Open(); },
                 () => { game.SaveRecoveryScreen.Bind(game); game.SaveRecoveryScreen.Open(); }
@@ -359,7 +359,7 @@ namespace RocketRaja
             MonoBehaviour[] screens =
             {
                 game.SettingsScreen, game.StatisticsScreen, game.SkillsScreen, game.ProductDetailScreen,
-                game.PrestigeScreen, game.SponsorScreen, game.OfflineScreen, game.PrivacyScreen, game.SaveRecoveryScreen
+                game.PrestigeScreen, game.OfflineScreen, game.PrivacyScreen, game.SaveRecoveryScreen
             };
             for (int i = 0; i < screens.Length; i++)
             {
@@ -369,7 +369,7 @@ namespace RocketRaja
                 var group = screen.GetComponent<CanvasGroup>();
                 Check(screen.gameObject.activeInHierarchy && group != null && group.interactable,
                     screen.name + " opens with a real, interactive CanvasGroup");
-                var close = (Button)screen.GetType().GetField(i == 8 ? "startButton" : "closeButton",
+                var close = (Button)screen.GetType().GetField(screen is ImportedSaveRecoveryScreen ? "startButton" : "closeButton",
                     System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).GetValue(screen);
                 var rect = (RectTransform)close.transform;
                 var pointer = new PointerEventData(EventSystem.current)

@@ -58,8 +58,8 @@ namespace RocketRaja
 
         void Awake()
         {
-            if (closeButton == null || backButton == null || privacyButton == null || consentButton == null || renameStoreButton == null || storeNameLabel == null ||
-                consentRow == null || enabledFace == null || disabledFace == null ||
+            if (closeButton == null || backButton == null || privacyButton == null || renameStoreButton == null || storeNameLabel == null ||
+                enabledFace == null || disabledFace == null ||
                 settingButtons == null || settingButtons.Length != 3 ||
                 settingFaces == null || settingFaces.Length != 3 ||
                 settingStates == null || settingStates.Length != 3 ||
@@ -82,7 +82,7 @@ namespace RocketRaja
             renameStoreActionLabel = renameStoreButton.GetComponentInChildren<TMP_Text>(true);
             backButton.onClick.AddListener(Close);
             privacyButton.onClick.AddListener(OpenPrivacy);
-            consentButton.onClick.AddListener(OpenConsent);
+            if (consentRow != null) consentRow.SetActive(false);
             if (accountButton != null) accountButton.onClick.AddListener(OpenAccount);
             renameStoreButton.onClick.AddListener(RenameStore);
             settingButtons[0].onClick.AddListener(ToggleMusic);
@@ -156,7 +156,7 @@ namespace RocketRaja
                 UiFeedback.SyncAppearance(settingButtons[i]);
             }
             if (consentRow != null)
-                consentRow.SetActive(controller.Ads != null && controller.Ads.PrivacyOptionsRequired);
+                consentRow.SetActive(false);
             RefreshAccountStatus();
         }
 
@@ -202,10 +202,6 @@ namespace RocketRaja
         void RenameStore() => view?.ShowStoreName();
         void OpenAccount() { controller?.Save(); Cloud.PlayerSessionHost.Ensure().OpenAccountMenu(); }
 
-        void OpenConsent()
-        {
-            if (controller != null && controller.Ads != null && controller.Ads.PrivacyOptionsRequired)
-                controller.Ads.PrivacyOptions();
-        }
+        void OpenConsent() { }
     }
 }

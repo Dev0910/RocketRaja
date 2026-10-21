@@ -1,0 +1,74 @@
+{
+  "revision": "v1",
+  "stage": "wireframe",
+  "approval": "waived",
+  "screens": [
+    {
+      "name": "Home",
+      "stem": "home",
+      "title": "Rocket Raja"
+    },
+    {
+      "name": "Upgrades",
+      "stem": "upgrades",
+      "title": "Upgrades"
+    },
+    {
+      "name": "UpgradeDetails",
+      "stem": "upgradedetails",
+      "title": "Upgrade details"
+    },
+    {
+      "name": "BuyAll",
+      "stem": "buyall",
+      "title": "Review Buy All"
+    },
+    {
+      "name": "Talent",
+      "stem": "talent",
+      "title": "Talent"
+    },
+    {
+      "name": "CardDetails",
+      "stem": "carddetails",
+      "title": "Phuljhari Showcase"
+    },
+    {
+      "name": "DrawReveal",
+      "stem": "drawreveal",
+      "title": "Your Talent card"
+    },
+    {
+      "name": "Prestige",
+      "stem": "prestige",
+      "title": "Prestige"
+    },
+    {
+      "name": "KajuShop",
+      "stem": "kajushop",
+      "title": "Kaju Katli shop"
+    },
+    {
+      "name": "Offline",
+      "stem": "offline",
+      "title": "Welcome back"
+    },
+    {
+      "name": "ProductDetails",
+      "stem": "productdetails",
+      "title": "Phuljhari"
+    },
+    {
+      "name": "SkillDetails",
+      "stem": "skilldetails",
+      "title": "Festival Rush"
+    },
+    {
+      "name": "TapTraining",
+      "stem": "taptraining",
+      "title": "Tap training"
+    }
+  ],
+  "waiver": "User explicitly instructed skip UI Approval on 2026-10-02; no claim of visual acceptance",
+  "handoff": "../../HTML/Redesign/ART-DIRECTION.md"
+}

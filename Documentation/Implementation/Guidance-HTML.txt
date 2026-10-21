@@ -1,0 +1,5 @@
+PASS First relevant tip starts as an optional strip, with reader closed
+PASS All thirteen topics readable with 48px controls at 390x844
+PASS All thirteen topics readable with 48px controls at 360x540
+PASS Both acknowledge and skip retain the topic in the fixture learned set
+PASS No browser errors or external dependencies

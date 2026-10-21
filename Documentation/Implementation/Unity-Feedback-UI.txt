@@ -1,0 +1,29 @@
+Scope: actual command-derived copy, isolated saved native renders and save-failure binding. Physical interactions are tested separately in Play Mode.
+PASS Real signature purchase succeeds for an earlier owned product
+PASS First-purchase/comeback copy reports the actual income change with no extra save
+PASS Rebuy copy distinguishes restored run power from lifetime first purchases
+PASS One actual batch produces bounded aggregate counts and only its final shop milestone
+PASS An opening product is not mislabeled as an older-product comeback
+PASS Concurrent real skill states explain the correct overlap bonus
+PASS Bulk Order message does not promise a Rush multiplier
+PASS Saved dismiss button and notice face prevent covered-control taps
+PASS Feedback text reuses saved material slots
+PASS Full committed feedback readable at (390, 844) / case 0
+PASS Full committed feedback readable at (360, 540) / case 0
+PASS Full committed feedback readable at (390, 844) / case 1
+PASS Full committed feedback readable at (360, 540) / case 1
+PASS Full committed feedback readable at (390, 844) / case 2
+PASS Full committed feedback readable at (360, 540) / case 2
+PASS Full committed feedback readable at (390, 844) / case 3
+PASS Full committed feedback readable at (360, 540) / case 3
+PASS Full committed feedback readable at (390, 844) / case 4
+PASS Full committed feedback readable at (360, 540) / case 4
+PASS Full committed feedback readable at (390, 844) / case 5
+PASS Full committed feedback readable at (360, 540) / case 5
+PASS Full committed feedback readable at (390, 844) / case 6
+PASS Full committed feedback readable at (360, 540) / case 6
+PASS Repeated dismissal hides presentation without a save, spend or grant
+PASS Muted/reduced-motion state retains the complete immediately visible batch result
+PASS A failed native save shows no purchase/milestone success and retains the old state
+PASS Every feedback state, dismissal and failure preserves saved object identities
+PASS Unity compilation succeeds

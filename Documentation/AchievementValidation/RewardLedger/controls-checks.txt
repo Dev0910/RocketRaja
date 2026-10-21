@@ -1,0 +1,19 @@
+READY / Claim follow-up — 21 October 2026
+
+PASS Saved native hierarchy: 30 dialogs, all 15 achievement row bindings; no added UI objects/components.
+PASS Unity 390x844, 360x540, 360x640 and 450x916 popup fit and bounded scrolling.
+PASS Native action labels fit; READY and Claim bounds do not overlap.
+PASS All 15 native actions select the correct serialized state surface.
+PASS Native Claim pays exact +5, disables claimed action and removes READY badge.
+PASS Repeated/stale Claim callback does not grant currency twice.
+PASS Blocked saving disables Claim; close/reopen retains all preplaced object identities.
+PASS Classic HTML: rounded 6px controls, no shared border image or disabled pseudo-element.
+PASS Classic HTML: all 15 Claim targets at least 48px; 8.7px separation below READY at current review viewport.
+PASS Focused HTML: Claim updates wallet 410 -> 415, removes READY, uses muted Claimed surface and remains disabled.
+PASS Browser disabled In progress uses pale blue surface without decorative folk frame.
+PASS Focused package inspector: no errors; all five declared artwork/surface assets byte-identical to Unity.
+PASS Shared font assets retain their pre-correction bytes.
+PASS QA scene removed; original Bootstrap restored. Real accounts and saves were not accessed.
+
+Existing 805 core checks were not repeated for this presentation-only correction.
+Unity-generated scene whitespace is preserved; Git whitespace checking of the entire previously dirty scene reports standard empty serialized fields.

@@ -1,0 +1,21 @@
+{
+    "phase": "after-force-stop",
+    "result": "PASS",
+    "failure": "",
+    "unity": "6000.4.9f1",
+    "model": "Xiaomi POCO X2",
+    "processor": "ARM64 FP ASIMD AES",
+    "graphics": "Adreno (TM) 618",
+    "operatingSystem": "Android OS 11 / API-30 (RKQ1.200826.002/V12.5.7.0.RGHINXM)",
+    "contentHash": "C0904702675993BCF0B3F647A8A1DC71E6A4FBFA5A455B97EFE58F43EFEFA5F7",
+    "checks": [
+        "Force-stop/relaunch reuses the exact persisted currency operation",
+        "Synthetic response persists one debit and one copy before reveal after relaunch",
+        "Repeated response cannot debit, grant or reveal again",
+        "Stale Android wallet snapshot cannot restore spent currency"
+    ],
+    "measurements": [],
+    "development": true,
+    "pointerBytes": 8,
+    "systemMemoryMiB": 5568
+}

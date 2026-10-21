@@ -1,0 +1,7 @@
+# Contextual guidance reuse — 2 October 2026
+
+Approval pauses are waived by the user; no human approval is inferred. The inspected [editable wireframe](../../Wireframes/Redesign/guidance-v1.svg) precedes [editable HTML](../../HTML/Redesign/guidance.html) and native reconstruction. The component reuses existing reviewed cream paper panels, maroon/teal colors, gold border, Nunito body/Fraunces headings and cream buttons. No new illustration is required or claimed.
+
+The optional 52-unit strip sits below the header and reserves 60 units of body space. The existing screen remains scrollable. Read tip opens one saved reader above the footer; it does not buy, draw, reset or activate anything. Got it and Skip tip both persist a learned-topic dismissal. Navigation remains available. Reading/dismissal never spends currency or invalidates an economic quote, and a failed save does not mark the topic learned. Utilities/recovery take priority.
+
+Thirteen topics cover manual first purchase, counter taps, levels, filters, Buy All, skills, older-product comebacks, Prestige, rebuilding, cash versus Talent, free draws, duplicates and the one-time second-Prestige gift. Relevance uses actual route/run state, not elapsed timers or an automatic tutorial sequence. A new candidate starts collapsed; the reader is never forced open. Native wording comes from the same [topic manifest](../../HTML/Redesign/guidance-topics.json) as the HTML review.

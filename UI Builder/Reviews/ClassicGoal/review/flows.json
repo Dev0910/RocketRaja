@@ -1,0 +1,592 @@
+{
+  "checks": [
+    {
+      "name": "settings toggle focus",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "music"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "₹1.24M\nCASH BALANCE\nDIWALI DUKAAN\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAeria"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Setting · music — preview only"
+      }
+    },
+    {
+      "name": "blank name feedback",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings",
+            "Naming"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "music"
+            },
+            {
+              "action": "Navigate",
+              "param": "Naming"
+            },
+            {
+              "action": "Rename",
+              "param": ""
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Naming-1-Rename--0",
+          "tag": "BUTTON",
+          "text": "Save shop name"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Enter a shop name first."
+      }
+    },
+    {
+      "name": "saved name returns",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "music"
+            },
+            {
+              "action": "Navigate",
+              "param": "Naming"
+            },
+            {
+              "action": "Rename",
+              "param": ""
+            },
+            {
+              "action": "Rename",
+              "param": ""
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "₹1.24M\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAe"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Shop name updated in this preview"
+      }
+    },
+    {
+      "name": "default shop pack availability",
+      "data": {
+        "buttons": 0,
+        "state": {
+          "snapshot": {
+            "tab": "Shop",
+            "sheets": [],
+            "events": [],
+            "fixture": "progressed",
+            "kk": 100,
+            "credits": 3
+          },
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "text": "₹1.24M\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAe"
+          },
+          "notice": {
+            "hidden": true,
+            "text": ""
+          },
+          "status": "Shop name updated in this preview"
+        }
+      }
+    },
+    {
+      "name": "retry shop availability",
+      "data": {
+        "buttons": 0,
+        "state": {
+          "snapshot": {
+            "tab": "Shop",
+            "sheets": [],
+            "events": [
+              {
+                "action": "PurchaseResult",
+                "param": "retry"
+              }
+            ],
+            "fixture": "progressed",
+            "kk": 100,
+            "credits": 3
+          },
+          "focus": {
+            "id": "",
+            "tag": "BODY",
+            "text": "₹1.24M\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAe"
+          },
+          "notice": {
+            "hidden": true,
+            "text": ""
+          },
+          "status": "PurchaseResult · retry — preview only"
+        }
+      }
+    },
+    {
+      "name": "pending purchase",
+      "data": {
+        "snapshot": {
+          "tab": "Shop",
+          "sheets": [],
+          "events": [
+            {
+              "action": "PurchaseResult",
+              "param": "pending"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "₹1.24M\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAe"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Purchase pending · no KK added"
+      }
+    },
+    {
+      "name": "pending delivered",
+      "data": {
+        "snapshot": {
+          "tab": "Shop",
+          "sheets": [],
+          "events": [
+            {
+              "action": "PurchaseResult",
+              "param": "pending"
+            },
+            {
+              "action": "PurchaseResult",
+              "param": "retry"
+            },
+            {
+              "action": "PurchaseResult",
+              "param": "delivered"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 1100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "₹1.24M\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAe"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Example KK delivered once. No payment was taken."
+      }
+    },
+    {
+      "name": "failed account feedback",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Account"
+          ],
+          "events": [
+            {
+              "action": "Account",
+              "param": "signin"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Account-0-Account-signin-0",
+          "tag": "BUTTON",
+          "text": "Continue with Google"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Connection or save unavailable. Your current game stays safe."
+      }
+    },
+    {
+      "name": "new account promotion",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Welcome",
+            "Promote"
+          ],
+          "events": [
+            {
+              "action": "Account",
+              "param": "signin"
+            }
+          ],
+          "fixture": "new",
+          "kk": 0,
+          "credits": 0
+        },
+        "focus": {
+          "id": "sheet-Promote-1-Close--3",
+          "tag": "BUTTON",
+          "text": ""
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Account · signin — preview only"
+      }
+    },
+    {
+      "name": "promotion completes",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [],
+          "events": [
+            {
+              "action": "Account",
+              "param": "signin"
+            },
+            {
+              "action": "Account",
+              "param": "copy"
+            }
+          ],
+          "fixture": "new",
+          "kk": 0,
+          "credits": 0
+        },
+        "focus": {
+          "id": "",
+          "tag": "BODY",
+          "text": "₹30\nCASH BALANCE\nFestival Friends\nPhuljhari\nAnar\nChakri\nRockets\nSmall crackers\nCracker strings\nAeria"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Google game selected in this preview"
+      }
+    },
+    {
+      "name": "cancel signout returns",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Account"
+          ],
+          "events": [
+            {
+              "action": "Account",
+              "param": "signout"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Account-0-Close--5",
+          "tag": "BUTTON",
+          "text": ""
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Account · signout — preview only"
+      }
+    },
+    {
+      "name": "blocking recovery Escape",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "SaveRecovery"
+          ],
+          "events": [],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-SaveRecovery-0-Recovery-retry-0",
+          "tag": "BUTTON",
+          "text": "Try loading again"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Account · signout — preview only"
+      }
+    },
+    {
+      "name": "cancel recovery confirmation",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "SaveRecovery"
+          ],
+          "events": [
+            {
+              "action": "Navigate",
+              "param": "RecoveryConfirm"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-SaveRecovery-0-Recovery-retry-0",
+          "tag": "BUTTON",
+          "text": "Try loading again"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Navigate · RecoveryConfirm — preview only"
+      }
+    },
+    {
+      "name": "recovery exit remains terminal",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "RecoveryExit"
+          ],
+          "events": [
+            {
+              "action": "Navigate",
+              "param": "RecoveryConfirm"
+            },
+            {
+              "action": "Recovery",
+              "param": "exit"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-RecoveryExit-0-Navigate-Welcome-0",
+          "tag": "BUTTON",
+          "text": "Return to welcome"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Recovery · exit — preview only"
+      }
+    },
+    {
+      "name": "reduced motion running animations",
+      "data": []
+    },
+    {
+      "name": "privacy returns focus",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "motion"
+            },
+            {
+              "action": "Navigate",
+              "param": "Privacy"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Settings-0-Close--8",
+          "tag": "BUTTON",
+          "text": ""
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Navigate · Privacy — preview only"
+      }
+    },
+    {
+      "name": "focus trap last to first",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "motion"
+            },
+            {
+              "action": "Navigate",
+              "param": "Privacy"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Settings-0-Close--8",
+          "tag": "BUTTON",
+          "text": ""
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Navigate · Privacy — preview only"
+      }
+    },
+    {
+      "name": "focus trap first to last",
+      "data": {
+        "snapshot": {
+          "tab": "Home",
+          "sheets": [
+            "Settings"
+          ],
+          "events": [
+            {
+              "action": "Setting",
+              "param": "motion"
+            },
+            {
+              "action": "Navigate",
+              "param": "Privacy"
+            }
+          ],
+          "fixture": "progressed",
+          "kk": 100,
+          "credits": 3
+        },
+        "focus": {
+          "id": "sheet-Settings-0-Close--7",
+          "tag": "BUTTON",
+          "text": "Back"
+        },
+        "notice": {
+          "hidden": true,
+          "text": ""
+        },
+        "status": "Navigate · Privacy — preview only"
+      }
+    },
+    {
+      "name": "OS reduced motion settles card",
+      "data": {
+        "enabled": true,
+        "animations": 0
+      }
+    },
+    {
+      "name": "mobile review opens",
+      "data": "review-open"
+    },
+    {
+      "name": "mobile review navigates closes",
+      "data": {
+        "class": "",
+        "snapshot": {
+          "snapshot": {
+            "tab": "Home",
+            "sheets": [],
+            "events": [],
+            "fixture": "progressed",
+            "kk": 100,
+            "credits": 3
+          },
+          "focus": {
+            "id": "mobile-review",
+            "tag": "BUTTON",
+            "text": "Preview"
+          },
+          "notice": {
+            "hidden": true,
+            "text": ""
+          },
+          "status": "All screens awaiting your approval."
+        }
+      }
+    }
+  ],
+  "errors": []
+}

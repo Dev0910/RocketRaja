@@ -1,0 +1,5 @@
+PASS ordinary Unity release excludes fixture reset/test grants and rejects simulated-shop saves
+PASS Unity release rejects injected lab symbol
+PASS Unity development diagnostic retains restricted fixture reset
+PASS standalone .NET lab retains restricted fixture reset
+Scope: actual C# core compilation/type inspection with simulated Unity symbols; not a Unity/IL2CPP release artifact or release acceptance.

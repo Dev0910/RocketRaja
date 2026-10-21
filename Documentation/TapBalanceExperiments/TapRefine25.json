@@ -1,0 +1,44 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "fits": [
+    {
+      "fame": 25,
+      "current": 143.47712125471966,
+      "targetLog": 144.22712125471966,
+      "tapScale": 0.95,
+      "loss": 0.075,
+      "comparisons": [
+        {
+          "activeSeconds": 1542,
+          "passiveSeconds": 1906,
+          "speedup": 0.1909758656873033,
+          "products": 0.5583328183229312
+        },
+        {
+          "activeSeconds": 1396,
+          "passiveSeconds": 1713,
+          "speedup": 0.18505545826036196,
+          "products": 0.7761203421939457
+        },
+        {
+          "activeSeconds": 1521,
+          "passiveSeconds": 1803,
+          "speedup": 0.1564059900166389,
+          "products": 0.8172470415494512
+        },
+        {
+          "activeSeconds": 1446,
+          "passiveSeconds": 1680,
+          "speedup": 0.13928571428571423,
+          "products": 0.6790226468463465
+        },
+        {
+          "activeSeconds": 1432,
+          "passiveSeconds": 1784,
+          "speedup": 0.19730941704035876,
+          "products": 0.760501894980246
+        }
+      ]
+    }
+  ]
+}

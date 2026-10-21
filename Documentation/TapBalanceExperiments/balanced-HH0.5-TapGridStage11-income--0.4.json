@@ -1,0 +1,60 @@
+[
+  {
+    "fame": 11,
+    "current": 73.47712125471966,
+    "targetLog": 72.31712125471967,
+    "tapScale": 2,
+    "incomeOffset": -0.4,
+    "loss": 0.116,
+    "candidateCount": 3138,
+    "feasibleCount": 118,
+    "bestPassingBuilds": 5,
+    "comparisons": [
+      {
+        "activeSeconds": 1785,
+        "passiveSeconds": 2119,
+        "speedup": 0.15762151958470982,
+        "products": 0.8447937001878031,
+        "passiveProducts": 0.9144589227874885,
+        "activeMaxGap": 565,
+        "passiveMaxGap": 340
+      },
+      {
+        "activeSeconds": 1620,
+        "passiveSeconds": 1943,
+        "speedup": 0.16623777663407102,
+        "products": 0.6521623356993175,
+        "passiveProducts": 0.9409460806759681,
+        "activeMaxGap": 260,
+        "passiveMaxGap": 340
+      },
+      {
+        "activeSeconds": 1681,
+        "passiveSeconds": 1931,
+        "speedup": 0.12946659761781465,
+        "products": 0.8570525519644584,
+        "passiveProducts": 0.9032332258136132,
+        "activeMaxGap": 521,
+        "passiveMaxGap": 260
+      },
+      {
+        "activeSeconds": 1731,
+        "passiveSeconds": 2015,
+        "speedup": 0.1409429280397022,
+        "products": 0.8320572854180762,
+        "passiveProducts": 0.9104033158916277,
+        "activeMaxGap": 551,
+        "passiveMaxGap": 280
+      },
+      {
+        "activeSeconds": 1572,
+        "passiveSeconds": 1903,
+        "speedup": 0.17393589069889648,
+        "products": 0.7210995376722359,
+        "passiveProducts": 0.9593595647024051,
+        "activeMaxGap": 352,
+        "passiveMaxGap": 340
+      }
+    ]
+  }
+]

@@ -1,5 +1,11 @@
 # Game design research: Tap Tycoon and Rocket Raja
 
+Current economy: [Faster-start Economy](Faster-start%20Economy.md). Its rules supersede the numerical values and completion targets below.
+
+Latest measured balance: [15 October tap calibration](../Documentation/TapBalanceReport.md), with full multipliers retained and card-build coverage stated explicitly.
+
+**Current game design — 7 October 2026:** start with [Current Implementation Design](Current%20Implementation%20Design.md). The user confirmed the current Unity behavior; the research reading order below is historical. Find the full upgrade list in [1000 Unlockables Catalogue](1000%20Unlockables%20Catalogue.md), or use the upgrades array in [the JSON export](../Documentation/RedesignContentCatalog.json).
+
 Research expanded 30 September 2026. These documents study Game Hive's *Tap Tycoon: Country vs Country*, review the full checked-in Rocket Raja design, compare other incremental games and primary research papers, and define testable responses to the identified problems. This is a design review; the playable economy was not changed.
 
 Open [the interactive findings dashboard](index.html) in a browser for a visual overview. It is a self-contained HTML file that works from a local checkout; its source links lead back to the Markdown reports.

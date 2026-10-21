@@ -1,0 +1,808 @@
+PASS Authoritative 1,000 cash entries and 28 cards import
+PASS Stable-ID indexed first price
+PASS Continuous price curve spans all 1,000 entries
+PASS Retired collection and linked effects absent
+PASS Duplicate IDs rejected
+PASS Unknown prerequisite rejected
+PASS Prerequisite cycles rejected
+PASS Nonpositive price rejected
+PASS Invalid product target rejected
+PASS Unsupported future content rejected
+PASS Price drift rejected
+PASS Unrecognized authored gate fails import instead of being ignored
+PASS Copies above double and long range increase by exactly one
+PASS Exact count roundtrips as decimal string
+PASS Malformed counters rejected
+PASS Reward boundary E/T=1, U=249
+PASS Reward boundary E/T=4, U=249
+PASS Reward boundary E/T=9, U=249
+PASS Reward boundary E/T=16, U=249
+PASS Reward boundary E/T=1, U=250
+PASS Reward boundary E/T=4, U=250
+PASS Reward boundary E/T=9, U=250
+PASS Reward boundary E/T=16, U=250
+PASS Reward boundary E/T=1, U=499
+PASS Reward boundary E/T=4, U=499
+PASS Reward boundary E/T=9, U=499
+PASS Reward boundary E/T=16, U=499
+PASS Reward boundary E/T=1, U=500
+PASS Reward boundary E/T=4, U=500
+PASS Reward boundary E/T=9, U=500
+PASS Reward boundary E/T=16, U=500
+PASS Reward boundary E/T=1, U=749
+PASS Reward boundary E/T=4, U=749
+PASS Reward boundary E/T=9, U=749
+PASS Reward boundary E/T=16, U=749
+PASS Reward boundary E/T=1, U=750
+PASS Reward boundary E/T=4, U=750
+PASS Reward boundary E/T=9, U=750
+PASS Reward boundary E/T=16, U=750
+PASS Reward boundary E/T=1, U=999
+PASS Reward boundary E/T=4, U=999
+PASS Reward boundary E/T=9, U=999
+PASS Reward boundary E/T=16, U=999
+PASS Reward boundary E/T=1, U=1000
+PASS Reward boundary E/T=4, U=1000
+PASS Reward boundary E/T=9, U=1000
+PASS Reward boundary E/T=16, U=1000
+PASS Below target grants nothing
+PASS Extreme earnings yield exact uncapped Fame and three first credits
+PASS Fame follows the authored rebuild curve
+PASS Target remains representable for unbounded prestige count
+PASS Unbounded card profit remains Amount
+PASS Exact duplicate benefit survives rounded display saturation
+PASS Calibrated tap Fame and prestige targets increase through and beyond authored stages
+PASS Tap upgrades retain full x32 manual/Helping Hands payout with tap-heavy cards at Fame 1
+PASS Prestige preview uses the same tap Fame curve at 1
+PASS Tap upgrades retain full x32 manual/Helping Hands payout with tap-heavy cards at Fame 8
+PASS Prestige preview uses the same tap Fame curve at 8
+PASS Tap upgrades retain full x32 manual/Helping Hands payout with tap-heavy cards at Fame 15
+PASS Prestige preview uses the same tap Fame curve at 15
+PASS Tap upgrades retain full x32 manual/Helping Hands payout with tap-heavy cards at Fame 25
+PASS Prestige preview uses the same tap Fame curve at 25
+PASS Tap upgrades retain full x32 manual/Helping Hands payout with tap-heavy cards at Fame 33
+PASS Prestige preview uses the same tap Fame curve at 33
+PASS Product milestone and preview agree at 10
+PASS Tap milestone applies exactly once at 10
+PASS Product milestone and preview agree at 25
+PASS Tap milestone applies exactly once at 25
+PASS Product milestone and preview agree at 50
+PASS Tap milestone applies exactly once at 50
+PASS Product milestone and preview agree at 100
+PASS Tap milestone applies exactly once at 100
+PASS Product milestone and preview agree at 200
+PASS Tap milestone applies exactly once at 200
+PASS Product milestone and preview agree at 300
+PASS Tap milestone applies exactly once at 300
+PASS All-eight synergy doubles products, excludes taps, and appears in bulk preview at 50
+PASS Synergy does not repeat above threshold 50
+PASS Synergy resets with prestige 50
+PASS All-eight synergy doubles products, excludes taps, and appears in bulk preview at 100
+PASS Synergy does not repeat above threshold 100
+PASS Synergy resets with prestige 100
+PASS All-eight synergy doubles products, excludes taps, and appears in bulk preview at 200
+PASS Synergy does not repeat above threshold 200
+PASS Synergy resets with prestige 200
+PASS All-eight synergy doubles products, excludes taps, and appears in bulk preview at 300
+PASS Synergy does not repeat above threshold 300
+PASS Synergy resets with prestige 300
+PASS Strongest discounts survive out-of-order purchases and stack with cards
+PASS Currency suffixes carry through az/ba and zz/aaa without scientific notation
+PASS Cumulative milestones stay in Amount beyond double range
+PASS Importer preserves authored profit instead of substituting signature defaults
+PASS Known previous local economy allows its one-time reset
+PASS Subsequent launches keep new-economy progress
+PASS Tap calibration preserves existing 3.0.0 cash, cards and in-progress prestige target without a reset
+PASS The next prestige adopts the calibrated target and persists normally
+PASS Local reset never silently discards a previous authoritative wallet
+PASS Fresh run grants exact manual first cost without earned cash or products
+PASS Exact first-purchase affordability and immediate durability
+PASS Insufficient cash and unknown product reject safely
+PASS First product rate is 0.85
+PASS Every rapid manual tap succeeds without advancing time
+PASS Rapid taps each increment the count and award full earnings
+PASS Consecutive manual taps still succeed after idle time
+PASS A cooldown timestamp from an existing save does not block tapping
+PASS Upgrade projection shows correct per-family/shop change without a mutation
+PASS All 1,000 upgrades reachable without any prestige requirement
+PASS One batch commits all purchases and lifetime decorations
+PASS Stale batch, owned row and unknown row rejected
+PASS Cash Buy All spends only on named cash entries
+PASS All skill branches apply cumulative ranks
+PASS Batch does not buy product levels
+PASS First prestige offers x6-opening Fame and exactly three credits
+PASS Prestige is committed once and same quote cannot reset twice
+PASS Reset clears the run and retains lifetime collection/decorations
+PASS Skills must be repurchased and no effects survive reset
+PASS Rebuy does not increment lifetime U
+PASS Signature replaces supporting effect and Fame applies exactly once
+PASS Later 4T plus U=1000 grants six credits and two Fame
+PASS Prestige preview separates credit components and next Fame/draw thresholds
+PASS Second reset gifts 100 KK once and grants discounted manual opening cash
+PASS Reset retains preferences, name, taught topics and cards
+PASS Free draw persists selected card and debit before reveal
+PASS Repeated draw click and a second action during reveal cannot spend again
+PASS Reload replays committed result without consulting new randomness
+PASS Committed reveal can be skipped safely
+PASS 100-KK draw duplicates add exactly one level
+PASS Insufficient KK cannot draw
+PASS Tier lower boundary and uniform identity mapping reach last Rare
+PASS Last free draw never changes into a paid action
+PASS Legendary begins at 97 and reaches both identities
+PASS Talent is locked before first prestige
+PASS Restored backup cannot spend rolled-back currency or reroll credits before reconciliation
+PASS Scoped batch includes newly eligible prerequisite successors only within the filter
+PASS Passive accrual preserves frozen batch list without adding purchases
+PASS Session change fences stale quote
+PASS Read-only ownership blocks all mutation routes
+PASS Read-only ownership also blocks accrual
+PASS Failed batch save rolls back every purchase and payment
+PASS Retry after failed write commits once
+PASS Failed draw persistence preserves payment and prior cards
+PASS Retry of failed draw preserves selected identity without reroll
+PASS Failed prestige save retains prior run and all prior rewards
+PASS Retried prestige commits once; later prestiges never repeat the 100-KK gift
+PASS Prestige has no compulsory all-eight ownership gate and survives passive accrual
+PASS Bulk product costs equal sequential singles
+PASS Cumulative product discount replaces prior ranks and multiplies remaining card cost
+PASS Max buys exact affordable bundle at quote boundary
+PASS Offline uses normal departure income at 50% capped to eight hours
+PASS Duplicate resume and negative clock delta cannot pay twice
+PASS Reload/summary close never credits offline a second time
+PASS Rush adds separate x1.25 taps without changing linked normal P
+PASS Bulk Order uses normal P during Rush
+PASS Cooldown starts at activation and prevents immediate reactivation
+PASS Overlapping skills expire at boundaries without infinite loops
+PASS Permanent skill cards never unlock a run-local skill
+PASS Base Helping Hands delivers 90 independent cadence payouts over 30 seconds
+PASS Helping Hands payout is independent of frame subdivision at expiry
+PASS Missing save is distinct from malformed save
+PASS New state roundtrips through checksummed file
+PASS Corrupt main recovers validated backup
+PASS Recovery preserves damaged source and valid backup
+PASS Future main cannot silently fall back to old backup
+PASS Future save cannot be overwritten
+PASS Known old local save starts the new economy
+PASS Economy reset writes a durable current save and does not reset again
+PASS Missing mandatory new fields are malformed, not fresh defaults
+PASS Codec parse failures also recover without throwing away evidence
+PASS Empty default state is rejected
+PASS Identified disposable legacy fixture resets without inventing Fame/cards/KK/U
+PASS Fixture transition drops active sponsor, old receipts and pending offline offer without crediting an ad reward
+PASS Fixture transition retains selected preferences/name and original bytes
+PASS Migration retries restore same run and pre-migration archive
+PASS Test-only migration rejects any path outside the synthetic-fixture directory
+Save fixtures: C:\Users\Dev\AppData\Local\Temp\RocketRajaRedesign-fa12d547ca7445d0992391b5177274b3
+PASS Fresh and pre-achievement saves load with no earned rewards
+PASS Incomplete and unknown achievements cannot grant currency
+PASS Product ownership records permanent achievement progress
+PASS Completing a milestone exposes a claim without automatically granting currency
+PASS Achievement pays its exact Kaju Katli reward
+PASS Saved claims cannot pay twice after reload
+PASS Staged state copies never share achievement receipt lists
+PASS Duplicate achievement receipts fail save validation
+PASS Unknown achievement receipts fail save validation
+PASS Impossible product achievement records fail validation
+PASS Failed reward save publishes neither currency nor a claimed receipt
+PASS Retry saves currency and receipt in the same transaction
+PASS Read-only sessions cannot claim achievement rewards
+PASS Prestige retains the best product collection, including achievements earned before this update
+PASS Unclaimed product and prestige milestones remain claimable after reset
+PASS Lifetime metrics unlock all 15 achievements for existing eligible saves
+PASS Claim milestone taps-100
+PASS Claim milestone taps-1000
+PASS Claim milestone taps-10000
+PASS Claim milestone earnings-1000
+PASS Claim milestone earnings-1000000
+PASS Claim milestone earnings-1000000000
+PASS Claim milestone upgrades-10
+PASS Claim milestone upgrades-100
+PASS Claim milestone upgrades-1000
+PASS Claim milestone products-1
+PASS Claim milestone products-4
+PASS Claim milestone products-8
+PASS Claim milestone prestiges-1
+PASS Claim milestone prestiges-5
+PASS Claim milestone prestiges-10
+PASS All achievement payouts sum exactly and leave no duplicate claim
+PASS Bonuses use whole percentages or integer multipliers without changing effects
+PASS Effect values round up without floating point noise or negative zero
+PASS Cost factors round up to hundredths with a stable decimal point
+PASS Every non-cost cash upgrade formats without decimal effects
+PASS New cloud state is validated before account play begins
+PASS Account accepts durable manual purchase
+PASS New product state reaches immutable cloud payload
+PASS New changes during upload persist as a separate follow-up snapshot
+PASS Lost acknowledgment pauses redesigned account without replaying mutation
+PASS Pending receipt recovery acknowledges accepted state exactly once
+PASS Reinitializing an account invalidates old engines even when ownership generation is reused
+PASS Prestige uses account's durable checkpoint boundary
+PASS Account free draw commits before reveal
+PASS Interrupted account draw restores the same card, debit and reveal
+PASS Recovery or guest copy cannot overwrite progressed account and premium state
+PASS Rejected account replacement makes no cloud write
+PASS Device takeover blocks new mutations and stale quote commits
+PASS Retry cannot silently reacquire another device's expired lease
+PASS Rejected retry preserves the other device's owner, generation and progress
+PASS Future gameplay payload is rejected before initial cloud commit
+PASS Unsupported version never rewrites cloud progress
+PASS Guest promotion preserves progress/preferences and rebases timers without modifying source guest
+PASS Account lifecycle preserves durable command routing
+PASS Lifecycle composition cannot override an account engine's ownership fence
+PASS Owned retry recovers the durable pending command after lease expiry and permanently fences the old binding
+PASS Repeated account retry does not credit the same absence twice
+PASS Retry cannot cancel a pending device handoff
+PASS Retry leaves the pending handoff and cloud progress intact
+PASS Disposed account cannot be reconnected
+PASS Purchase replacement fixture contains a valid account wallet
+PASS Explicit device replacement cannot discard an authoritative purchase wallet
+PASS Purchase protection preserves the original Google wallet without a cloud write
+PASS Draw distribution C01 within six sigma of uniform tier odds (11944/250000, seed 739103)
+PASS Draw distribution C02 within six sigma of uniform tier odds (11525/250000, seed 739103)
+PASS Draw distribution C03 within six sigma of uniform tier odds (11633/250000, seed 739103)
+PASS Draw distribution C04 within six sigma of uniform tier odds (11832/250000, seed 739103)
+PASS Draw distribution C05 within six sigma of uniform tier odds (11673/250000, seed 739103)
+PASS Draw distribution C06 within six sigma of uniform tier odds (11687/250000, seed 739103)
+PASS Draw distribution C07 within six sigma of uniform tier odds (11583/250000, seed 739103)
+PASS Draw distribution C08 within six sigma of uniform tier odds (11787/250000, seed 739103)
+PASS Draw distribution C09 within six sigma of uniform tier odds (11745/250000, seed 739103)
+PASS Draw distribution C10 within six sigma of uniform tier odds (11762/250000, seed 739103)
+PASS Draw distribution C11 within six sigma of uniform tier odds (11777/250000, seed 739103)
+PASS Draw distribution C12 within six sigma of uniform tier odds (11663/250000, seed 739103)
+PASS Draw distribution C13 within six sigma of uniform tier odds (11784/250000, seed 739103)
+PASS Draw distribution C14 within six sigma of uniform tier odds (11697/250000, seed 739103)
+PASS Draw distribution C15 within six sigma of uniform tier odds (11894/250000, seed 739103)
+PASS Draw distribution C16 within six sigma of uniform tier odds (11473/250000, seed 739103)
+PASS Draw distribution R01 within six sigma of uniform tier odds (5608/250000, seed 739103)
+PASS Draw distribution R02 within six sigma of uniform tier odds (5588/250000, seed 739103)
+PASS Draw distribution R03 within six sigma of uniform tier odds (5365/250000, seed 739103)
+PASS Draw distribution R04 within six sigma of uniform tier odds (5441/250000, seed 739103)
+PASS Draw distribution R05 within six sigma of uniform tier odds (5446/250000, seed 739103)
+PASS Draw distribution R06 within six sigma of uniform tier odds (5526/250000, seed 739103)
+PASS Draw distribution R07 within six sigma of uniform tier odds (5494/250000, seed 739103)
+PASS Draw distribution R08 within six sigma of uniform tier odds (5539/250000, seed 739103)
+PASS Draw distribution R09 within six sigma of uniform tier odds (5358/250000, seed 739103)
+PASS Draw distribution R10 within six sigma of uniform tier odds (5570/250000, seed 739103)
+PASS Draw distribution L01 within six sigma of uniform tier odds (3786/250000, seed 739103)
+PASS Draw distribution L02 within six sigma of uniform tier odds (3820/250000, seed 739103)
+PASS First offline cards independently provide 10h storage and 58.3333% efficiency
+PASS First cost cards apply different category-specific discounts
+PASS Overlay input cannot earn a gameplay tap
+PASS Browsing overlays retains full production and autosave
+PASS Gameplay input accepts consecutive taps without a cooldown
+PASS Repeated pause callbacks save departure once
+PASS Suspension gates accrual and manual commands
+PASS Resume credits elapsed absence using normal departure production
+PASS Duplicate resume without a new pause cannot mint offline cash
+PASS Storage failure blocks later mutations
+PASS Blocked save session cannot spend or silently accrue
+PASS Storage recovery saves retained state before reopening commands
+PASS Lifecycle keeps account ownership above UI actions
+PASS Lost ownership blocks lifecycle time as well as spending
+PASS Failed departure save still suspends gameplay
+PASS Failed resume remains suspended so an explicit retry still settles absence
+PASS Departure save failure recovers before offline settlement
+PASS Interrupted first write is recovery evidence, never a new profile
+PASS A restarted writer cannot overwrite an orphan temporary save
+PASS Interrupted first-write source bytes remain untouched
+PASS Future .bak blocks fallback to an older main
+PASS Future .bak cannot be rotated or replaced
+PASS Future .bak rejection preserves all source bytes
+PASS Future .tmp blocks fallback to an older main
+PASS Future .tmp cannot be rotated or replaced
+PASS Future .tmp rejection preserves all source bytes
+PASS Interrupted replacement loads the committed main, never the uncommitted temporary candidate
+PASS Retry archives interrupted bytes before reusing the temporary filename
+PASS An interrupted atomic replacement reports failure
+PASS Failed replace preserves the committed main
+PASS Retry after a failed replace commits a valid complete snapshot
+PASS Backup recovery carries a durable draw-reconciliation fence
+PASS A caller cannot remove the backup reconciliation fence before saving
+PASS Recovery archives the damaged main without replacing the valid backup with it
+PASS First-save temporary-file creation failure is reported
+PASS The same live writer can retry its failed first save after storage recovery
+PASS Future checkpoint  blocks older fallback
+PASS Future checkpoint  blocks overwrite
+PASS Future checkpoint  remains byte-identical
+PASS Future checkpoint .bak blocks older fallback
+PASS Future checkpoint .bak blocks overwrite
+PASS Future checkpoint .bak remains byte-identical
+PASS Future checkpoint .tmp blocks older fallback
+PASS Future checkpoint .tmp blocks overwrite
+PASS Future checkpoint .tmp remains byte-identical
+PASS Future gameplay in backup upload blocks an older checkpoint
+PASS Future gameplay backup cannot be rotated away
+PASS Future gameplay checkpoint bytes stay intact
+PASS Future gameplay in backup follow-up blocks an older checkpoint
+PASS Future gameplay backup cannot be rotated away
+PASS Future gameplay checkpoint bytes stay intact
+PASS Checkpoint path rejects another account's UID
+PASS Semantically damaged checkpoint recovers its validated backup
+PASS Checksum-valid but invalid checkpoint never rotates over the valid backup
+PASS Unrecoverable checkpoint blocks account initialization rather than becoming missing
+PASS Unrecoverable checkpoint cannot be replaced by a fresh cloud snapshot
+PASS Clock rollback grants nothing and retains the saved time anchor
+PASS Large forward jump retains the designed eight-hour offline cap
+PASS Repeated and reversed clock events cannot replay an offline receipt
+PASS ENOSPC injection rolls back the purchase and closes mutation
+PASS Storage recovery durably commits the retained state before reopening mutation
+Durability fixtures: C:\Users\Dev\AppData\Local\Temp\ClassicDurability-1c86f8c671ce4458bab63f959021acdb
+PASS C01 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C02 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C03 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C04 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C05 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C06 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C07 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C08 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C09 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C10 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C11 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C12 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C13 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C14 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C15 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C16 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R01 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R02 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R03 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R04 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R05 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R06 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R07 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R08 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R09 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R10 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L01 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L02 level 1 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C01 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C02 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C03 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C04 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C05 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C06 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C07 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C08 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C09 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C10 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C11 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C12 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C13 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C14 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C15 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C16 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R01 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R02 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R03 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R04 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R05 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R06 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R07 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R08 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R09 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R10 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L01 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L02 level 2 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C01 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C02 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C03 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C04 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C05 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C06 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C07 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C08 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C09 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C10 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C11 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C12 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C13 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C14 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C15 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS C16 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R01 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R02 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R03 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R04 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R05 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R06 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R07 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R08 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R09 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS R10 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L01 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS L02 level 100 affects its specified targets/curve without changing unrelated products, costs or skills
+PASS Prestige threshold 1T at completed count 0
+PASS One representable step below 1T at count 0 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 0 stays below
+PASS Prestige threshold 4T at completed count 0
+PASS One representable step below 4T at count 0 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 0 stays below
+PASS Prestige threshold 9T at completed count 0
+PASS One representable step below 9T at count 0 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 0 stays below
+PASS Prestige threshold 16T at completed count 0
+PASS One representable step below 16T at count 0 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 0 stays below
+PASS Prestige threshold 1T at completed count 1
+PASS One representable step below 1T at count 1 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 1 stays below
+PASS Prestige threshold 4T at completed count 1
+PASS One representable step below 4T at count 1 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 1 stays below
+PASS Prestige threshold 9T at completed count 1
+PASS One representable step below 9T at count 1 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 1 stays below
+PASS Prestige threshold 16T at completed count 1
+PASS One representable step below 16T at count 1 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 1 stays below
+PASS Prestige threshold 1T at completed count 7
+PASS One representable step below 1T at count 7 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 7 stays below
+PASS Prestige threshold 4T at completed count 7
+PASS One representable step below 4T at count 7 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 7 stays below
+PASS Prestige threshold 9T at completed count 7
+PASS One representable step below 9T at count 7 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 7 stays below
+PASS Prestige threshold 16T at completed count 7
+PASS One representable step below 16T at count 7 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 7 stays below
+PASS Prestige threshold 1T at completed count 19
+PASS One representable step below 1T at count 19 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 19 stays below
+PASS Prestige threshold 4T at completed count 19
+PASS One representable step below 4T at count 19 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 19 stays below
+PASS Prestige threshold 9T at completed count 19
+PASS One representable step below 9T at count 19 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 19 stays below
+PASS Prestige threshold 16T at completed count 19
+PASS One representable step below 16T at count 19 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 19 stays below
+PASS Prestige threshold 1T at completed count 147
+PASS One representable step below 1T at count 147 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 147 stays below
+PASS Prestige threshold 4T at completed count 147
+PASS One representable step below 4T at count 147 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 147 stays below
+PASS Prestige threshold 9T at completed count 147
+PASS One representable step below 9T at count 147 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 147 stays below
+PASS Prestige threshold 16T at completed count 147
+PASS One representable step below 16T at count 147 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 147 stays below
+PASS Prestige threshold 1T at completed count 148
+PASS One representable step below 1T at count 148 receives no early Fame
+PASS Immediately below Fame threshold 1T at count 148 stays below
+PASS Prestige threshold 4T at completed count 148
+PASS One representable step below 4T at count 148 receives no early Fame
+PASS Immediately below Fame threshold 4T at count 148 stays below
+PASS Prestige threshold 9T at completed count 148
+PASS One representable step below 9T at count 148 receives no early Fame
+PASS Immediately below Fame threshold 9T at count 148 stays below
+PASS Prestige threshold 16T at completed count 148
+PASS One representable step below 16T at count 148 receives no early Fame
+PASS Immediately below Fame threshold 16T at count 148 stays below
+PASS Max crosses the level-25 milestone using exactly affordable cash
+PASS High levels retain finite large-number quotes and clamp bulk quantity at storage limit
+PASS A level purchase invalidates an earlier frozen cash batch
+PASS Per-family contribution projections are available to screen bindings
+PASS Paid wallet is durably reconciled before store acknowledgment
+PASS Verified fulfillment reaches acknowledgment without client currency increment
+PASS Concurrent pending callbacks share one fulfillment operation
+PASS Generation change fences wallet application and acknowledgment after verification
+PASS Local wallet failure leaves the store transaction pending and retriable
+PASS Uncertain delivery retries the same token before acknowledgment
+PASS Mismatched fulfillment owner cannot acknowledge or populate this wallet
+PASS Disposed store adapter rejects a late cache completion
+PASS Client and authority use stable privacy-preserving account mapping
+PASS Authority activation upgrades the schema and replaces the gift wallet without doubling it
+PASS Identical wallet refresh is idempotent without invalidating cash quotes
+PASS Authoritative currency never uses the local random/debit path
+PASS Wrong-owner wallet response is rejected
+PASS Stale wallet cannot restore an already-spent balance
+PASS Conflicting data at the same wallet revision is rejected
+PASS Paid operation identity is durable before contacting the authority or debiting currency
+PASS Retry reuses the operation while another reveal cannot overlap it
+PASS Cache failure preserves the pending paid operation and never reveals an unpersisted result
+PASS Reload retries the same paid operation and persists result before revealing
+PASS Repeated paid response cannot add a copy or replay a dismissed reveal
+PASS A free-credit duplicate remains separate from the server-owned copy component
+PASS Pack wallet refresh preserves free copies and replaces balance rather than adding it
+PASS Late draw result can finish its reveal without rolling back a newer wallet
+PASS Paid reveal shows total free-plus-currency level change
+PASS Only the matching authoritatively rejected request may clear pending spending
+PASS Refund deficit blocks paid spending while retaining drawn cards
+PASS Wallet reconciliation cannot erase already-granted currency card copies
+PASS Guest may spend the one-time gift offline
+PASS Promoting a spent guest gift imports its original result without granting another copy or 100 KK
+PASS An account's second prestige records gift eligibility without locally duplicating the server grant
+PASS Authoritative second-prestige grant settles once after cloud progress is confirmed
+PASS Ambiguous older development gift provenance cannot create a replacement card or grant
+PASS Unspent old-development gift can acquire durable promotion provenance
+PASS Authoritative schema-3 wallet survives checksummed roundtrip
+PASS A local schema-2 save cannot overwrite an authoritative schema-3 wallet
+PASS Schema 3 rejects missing authority state rather than treating it as a local wallet
+PASS Test shop requires the explicit disposable namespace before granting
+PASS Test shop identity is durably marked and valid only in the development profile
+PASS Unknown test packs do not start an operation
+PASS rr.kk.small.1000 pending state persists before any simulated delivery
+PASS rr.kk.small.1000 duplicate taps reuse the pending operation and other packs wait
+PASS rr.kk.small.1000 relaunch preserves the same pending operation
+PASS rr.kk.small.1000 delivers the authored amount atomically
+PASS rr.kk.small.1000 duplicate callback cannot grant twice
+PASS rr.kk.festival.6000 pending state persists before any simulated delivery
+PASS rr.kk.festival.6000 duplicate taps reuse the pending operation and other packs wait
+PASS rr.kk.festival.6000 relaunch preserves the same pending operation
+PASS Late test callback cannot complete a newer purchase
+PASS rr.kk.festival.6000 delivers the authored amount atomically
+PASS rr.kk.festival.6000 duplicate callback cannot grant twice
+PASS rr.kk.celebration.13000 pending state persists before any simulated delivery
+PASS rr.kk.celebration.13000 duplicate taps reuse the pending operation and other packs wait
+PASS rr.kk.celebration.13000 relaunch preserves the same pending operation
+PASS Late test callback cannot complete a newer purchase
+PASS rr.kk.celebration.13000 delivers the authored amount atomically
+PASS rr.kk.celebration.13000 duplicate callback cannot grant twice
+PASS rr.kk.grand.28000 pending state persists before any simulated delivery
+PASS rr.kk.grand.28000 duplicate taps reuse the pending operation and other packs wait
+PASS rr.kk.grand.28000 relaunch preserves the same pending operation
+PASS Late test callback cannot complete a newer purchase
+PASS rr.kk.grand.28000 delivers the authored amount atomically
+PASS rr.kk.grand.28000 duplicate callback cannot grant twice
+PASS Test Cancelled preserves currency and rejects a late delivery
+PASS Test Failed preserves currency and rejects a late delivery
+PASS Failed pending-save cannot publish a test purchase
+PASS Failed delivery-save leaves the exact test operation pending without a grant
+PASS Session mutation gate also blocks simulated delivery
+PASS Retry saves the previously failed test delivery once
+PASS Test currency cannot prepare for live premium linking
+PASS Live wallet rejects a profile containing simulated purchases
+PASS Test balance and purchase marker survive first prestige
+PASS Test KK buys the real card-pool draw without fabricating gift provenance
+PASS Test-funded card and skippable reveal survive reload exactly once
+PASS Malformed test marker is rejected rather than normalized into a real wallet
+PASS Browser Full exposes every authored stable ID once
+PASS Browser category has complete isolated membership: Products
+PASS Browser category has complete isolated membership: Tapping
+PASS Browser category has complete isolated membership: Skills
+PASS Browser category has complete isolated membership: Shop
+PASS Product filter contains no retired links or collection groups
+PASS Product zero never leaks skill-zero entries
+PASS Skill filter keeps only Bulk Order power and cooldown choices
+PASS Browser searches stable IDs case-insensitively
+PASS Browser explicit empty state has no stale row
+PASS Fresh browser lists all unowned upgrades regardless of products or prerequisites
+PASS All upgrade categories ignore the former product, family and rank gates
+PASS Cash still blocks every unaffordable individual and batch upgrade
+PASS Buy All includes every affordable upgrade with no products owned
+PASS Higher skill rank can be bought and activated before its former prerequisites
+PASS Buying a lower skill rank preserves higher power, active time and cooldown
+PASS Already-owned upgrades cannot be purchased twice
+PASS Cash-only batch commits all remaining upgrades without purchasing products
+PASS Available includes eligible choices even before enough cash
+PASS Passive cash accrual does not rebuild the full catalogue
+PASS Buy All freezes only the chosen Tapping category
+PASS Changing browser filters cannot change an already-reviewed batch
+PASS Owned view refreshes after successful batch commands
+PASS Pin is durably saved before publication
+PASS Pin does not invalidate an economic quote
+PASS Upgrade goal has no prerequisite upgrade gate
+PASS Upgrade goal has no product ownership gate
+PASS Goal alternatives include cash upgrades, product levels and tap training
+PASS Goal alternative prices come from engine quotes
+PASS Unknown goal cannot replace a valid pinned choice
+PASS Passive income preserves the reviewed list and eligibility
+PASS Batch scope exposed to presentation is a defensive copy
+PASS Buying a pinned choice in a batch clears the completed goal
+PASS Completed review disables confirmation and cannot spend twice
+PASS Already-owned cash upgrade is not offered as an unfinished goal
+PASS Another economic command invalidates a reviewed batch
+PASS Failed goal save retains the previous state
+PASS Lost session ownership prevents preference mutation
+PASS Level projection has no persistence or state side effects
+PASS Level preview includes the crossed level-25 boost
+PASS Projected product income equals the actual durable purchase
+PASS Next product milestone advances after purchase
+PASS Locked product projection never suggests purchasable levels
+PASS Opening manual first-purchase grant buys exactly one projected level
+PASS Unaffordable Max tap preview contains zero levels
+PASS Unaffordable Max displays next single level price: -1
+PASS Unaffordable Max never buys a level: -1
+PASS Unaffordable Max displays next single level price: 0
+PASS Unaffordable Max never buys a level: 0
+PASS Tap projection applies direct training and has no product-linked component
+PASS Talent-adjusted projected tap payout matches actual training without changing normal sales
+PASS Projected Max stops at the actual affordability boundary
+PASS Buying the displayed Max count does not grow after passive earnings
+PASS Level cap projection offers neither extra levels nor an unreachable milestone
+PASS Unknown product projection is rejected
+PASS Locked skill preview includes relevant Talent but cannot activate
+PASS Skill preview has no save, cash or revision side effect
+PASS Projected unlock timings match actual Talent-adjusted purchase
+PASS Actual activation uses projected duration and rejects a duplicate cooldown action
+PASS Hands projection identifies its independent base skill and power
+PASS Order projection includes Talent and is an instant payout
+PASS Order preview equals actual payout while Rush is active
+PASS Owned skill projection uses upgraded power and timings
+PASS Unknown skill preview rejected
+PASS All three settings persist through durable commands
+PASS Changing settings preserves the reviewed economic quote
+PASS Naming normalizes and persists without invalidating an economic review
+PASS Invalid or unsupported names do not replace the saved name
+PASS Unknown preference cannot mutate state
+PASS Failed setting save publishes no toggle and records its I/O diagnostic
+PASS Saving recovery preserves preferences and clears the old failure diagnostic
+PASS Lost session ownership blocks name and preference commands
+PASS Unowned family has no owned display 0
+PASS Product levels alone never replace signature requirements 0
+PASS Current-run signature selects the exact display without an economic effect 0/1
+PASS Current-run signature selects the exact display without an economic effect 0/2
+PASS Current-run signature selects the exact display without an economic effect 0/3
+PASS Lifetime signature history cannot restore a run display 0
+PASS Unowned family has no owned display 1
+PASS Product levels alone never replace signature requirements 1
+PASS Current-run signature selects the exact display without an economic effect 1/1
+PASS Current-run signature selects the exact display without an economic effect 1/2
+PASS Current-run signature selects the exact display without an economic effect 1/3
+PASS Lifetime signature history cannot restore a run display 1
+PASS Unowned family has no owned display 2
+PASS Product levels alone never replace signature requirements 2
+PASS Current-run signature selects the exact display without an economic effect 2/1
+PASS Current-run signature selects the exact display without an economic effect 2/2
+PASS Current-run signature selects the exact display without an economic effect 2/3
+PASS Lifetime signature history cannot restore a run display 2
+PASS Unowned family has no owned display 3
+PASS Product levels alone never replace signature requirements 3
+PASS Current-run signature selects the exact display without an economic effect 3/1
+PASS Current-run signature selects the exact display without an economic effect 3/2
+PASS Current-run signature selects the exact display without an economic effect 3/3
+PASS Lifetime signature history cannot restore a run display 3
+PASS Unowned family has no owned display 4
+PASS Product levels alone never replace signature requirements 4
+PASS Current-run signature selects the exact display without an economic effect 4/1
+PASS Current-run signature selects the exact display without an economic effect 4/2
+PASS Current-run signature selects the exact display without an economic effect 4/3
+PASS Lifetime signature history cannot restore a run display 4
+PASS Unowned family has no owned display 5
+PASS Product levels alone never replace signature requirements 5
+PASS Current-run signature selects the exact display without an economic effect 5/1
+PASS Current-run signature selects the exact display without an economic effect 5/2
+PASS Current-run signature selects the exact display without an economic effect 5/3
+PASS Lifetime signature history cannot restore a run display 5
+PASS Unowned family has no owned display 6
+PASS Product levels alone never replace signature requirements 6
+PASS Current-run signature selects the exact display without an economic effect 6/1
+PASS Current-run signature selects the exact display without an economic effect 6/2
+PASS Current-run signature selects the exact display without an economic effect 6/3
+PASS Lifetime signature history cannot restore a run display 6
+PASS Unowned family has no owned display 7
+PASS Product levels alone never replace signature requirements 7
+PASS Current-run signature selects the exact display without an economic effect 7/1
+PASS Current-run signature selects the exact display without an economic effect 7/2
+PASS Current-run signature selects the exact display without an economic effect 7/3
+PASS Lifetime signature history cannot restore a run display 7
+PASS Actual manual purchase and signature command change the display
+PASS Committed display requirements survive a real codec round trip
+PASS Prestige clears run displays while retaining first-purchase history
+PASS First rebuild purchase restores only the basic display
+PASS Rebuy restores the signature look without another lifetime first purchase
+PASS Unknown display family rejected
+PASS Lifetime shop boundary derives without purchases, saves or run displays 0
+PASS Lifetime shop boundary derives without purchases, saves or run displays 99
+PASS Lifetime shop boundary derives without purchases, saves or run displays 100
+PASS Lifetime shop boundary derives without purchases, saves or run displays 249
+PASS Lifetime shop boundary derives without purchases, saves or run displays 250
+PASS Lifetime shop boundary derives without purchases, saves or run displays 499
+PASS Lifetime shop boundary derives without purchases, saves or run displays 500
+PASS Lifetime shop boundary derives without purchases, saves or run displays 749
+PASS Lifetime shop boundary derives without purchases, saves or run displays 750
+PASS Lifetime shop boundary derives without purchases, saves or run displays 999
+PASS Lifetime shop boundary derives without purchases, saves or run displays 1000
+PASS Durable decoration stage is a retained presentation floor
+PASS One real batch crosses every shop and product milestone to the final state
+PASS Both types of appearance survive durable reload
+PASS Prestige keeps the final shop and empties every product display
+PASS Manual rebuilding restores only the basic product inside the retained shop
+PASS Rebuy restores run art without replaying or recounting permanent milestones
+PASS Impossible lifetime visual count rejected
+PASS Read-only contextual topic: buy-first / home
+PASS Read-only contextual topic: buy-first / productdetails
+PASS Read-only contextual topic: none / upgrades
+PASS Read-only contextual topic: none / settings
+PASS Read-only contextual topic: tap-counter / home
+PASS Read-only contextual topic: product-levels / productdetails
+PASS Read-only contextual topic: product-levels / taptraining
+PASS Read-only contextual topic: catalogue-filters / upgrades
+PASS Read-only contextual topic: buy-all / buyall
+PASS Read-only contextual topic: skill-basics / skilldetails
+PASS Read-only contextual topic: comebacks / upgradedetails
+PASS Read-only contextual topic: none / upgradedetails
+PASS Read-only contextual topic: none / upgradedetails
+PASS Read-only contextual topic: prestige / prestige
+PASS Read-only contextual topic: cash-and-talent / talent
+PASS Read-only contextual topic: none / upgradedetails
+PASS Read-only contextual topic: rebuild / home
+PASS Read-only contextual topic: talent-free / talent
+PASS Read-only contextual topic: talent-duplicates / drawreveal
+PASS Read-only contextual topic: none / talent
+PASS Read-only contextual topic: none / drawreveal
+PASS Read-only contextual topic: second-gift / talent
+PASS Read-only contextual topic: second-gift / kajushop
+PASS Read-only contextual topic: talent-free / talent
+PASS Read-only contextual topic: none / talent
+PASS Read-only contextual topic: none / talent
+PASS Tip acknowledgement persists without an economic command revision
+PASS Acknowledging a tip preserves frozen Buy All and Prestige reviews
+PASS Repeated acknowledgement never writes twice
+PASS Failed acknowledgement keeps the unlearned topic and reports saving failure
+PASS Recovery allows the same topic to be acknowledged once
+PASS Prestige preserves acknowledged and skipped topic IDs
+PASS Learned topics survive the actual save store and codec
+PASS Lost ownership prevents topic acknowledgements
+PASS Full historical topic capacity rejects a new acknowledgement without throwing or writing
+PASS Wallet activation uses confirmed guest provenance and current account lease
+PASS Purchasing remains gated until owned account activation reconciles a durable wallet
+PASS Paid request is recoverable from cloud before the debit is sent
+PASS Uncertain server result leaves the same cloud-backed operation pending without a local reroll
+PASS Paid request is recoverable from cloud before the debit is sent
+PASS Reopened account retries the pending operation while the old client is fenced
+PASS Recovered paid draw preserves one debit, original card and persisted reveal
+PASS Definitive stale-wallet rejection clears the failed request and reconciles the newer balance
+PASS Unconfirmed cloud write pauses paid spending before contacting the currency server
+PASS Concurrent paid taps share one in-flight request
+PASS Device takeover fences late paid results while preserving their recoverable operation
+PASS Cloud account refuses a structurally valid wallet belonging to another UID
+PASS Cancelled identity selection creates no cloud account
+PASS Cancelled login preserves every guest-save byte
+PASS Concurrent identity preparation cannot race account selection
+PASS Preparing a new identity reads progress without creating an account before the choice
+PASS Confirmed new-account choice imports the guest once through the actual account initialization boundary
+PASS Promotion rebases server time while retaining the independent guest bytes
+PASS Coordinator checkpoints use only the redesigned economy namespace
+PASS Authentication change immediately blocks the bound account and stale gameplay
+PASS Recovery cannot renew the old UID under a different authenticated identity
+PASS Sign out confirms pending progress, releases the lease and restores the independent guest
+PASS Use Google progress retains the cloud game even when different device progress exists
+PASS Keep device progress waits for cloud confirmation before enabling account play
+PASS Keep device progress replaces an existing Google save and continues signed in
+PASS Replacing Google progress retains the independent device save bytes
+PASS Device replacement archives the actual previous Google snapshot for recovery
+PASS Explicit device choice also replaces a Google save that is further ahead
+PASS Lost replacement confirmation cannot open unconfirmed account gameplay
+PASS Accepted device replacement remains recoverable when the server response is lost
+PASS Retry recovers the replacement receipt without uploading an older account checkpoint
+PASS Device replacement respects an active session on another device
+PASS No replacement occurs before the device handoff
+PASS Confirmed handoff retains the device-progress selection and replaces the cloud save
+PASS Fixture creates an explicitly marked local test-shop profile
+PASS Test-shop history is ineligible for live account promotion even without a pending pack
+PASS Promotion refuses the simulated-purchase namespace
+PASS Rejected test-grant transfer creates no cloud document
+PASS A separate fresh Google choice preserves the local simulator without transferring its grants
+PASS Boosted/converted fixture provenance cannot promote to a real account
+PASS Fixture promotion is rejected before creating remote progress
+PASS Fixture rejection leaves the cloud empty
+PASS Boosted/converted fixture provenance cannot promote to a real account
+PASS Fixture promotion is rejected before creating remote progress
+PASS Fixture rejection leaves the cloud empty
+PASS Identity changed after comparison requires a new selection
+PASS Late identity change cannot create an account from a stale choice
+PASS Future account schema is rejected before acquisition or checkpoint writes
+PASS Unsupported cloud data remains untouched by account selection
+PASS Live account checkpoint location is independent of the selected guest profile
+PASS Earlier guest-relative checkpoint requires recovery before selecting the canonical account path
+PASS Checkpoint-location conflict is detected before cloud ownership or save changes
+PASS Purchase wire protocol preserves exact decimal-string revisions and derives ownership only from authenticated headers
+PASS Activation sends the owned lease and parses the wallet snapshot
+PASS Wallet reads cannot nominate a different player's UID in their body
+PASS HTTP 409/stale-wallet maps to stale-wallet without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 409/insufficient-currency maps to insufficient-currency without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 503/stale-wallet maps to service-unavailable without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 302/insufficient-currency maps to service-unavailable without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 401/detail maps to authentication-required without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 429/detail maps to retry-later without converting uncertainty to a safe-to-reroll rejection
+PASS HTTP 409/untrusted server detail maps to service-unavailable without converting uncertainty to a safe-to-reroll rejection
+PASS Malformed or oversized success response cannot populate the wallet
+PASS Malformed or oversized success response cannot populate the wallet
+PASS Malformed or oversized success response cannot populate the wallet
+All 805 redesign checks passed. Content SHA256=588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D

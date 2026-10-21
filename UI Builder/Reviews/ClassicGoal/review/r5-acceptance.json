@@ -1,0 +1,986 @@
+{
+  "checks": [
+    {
+      "viewport": "360x540",
+      "name": "Settings toggle retains focus",
+      "data": {
+        "focus": {
+          "id": "sheet-Settings-0-Setting-music-0",
+          "action": "Setting",
+          "param": "music",
+          "tag": "BUTTON"
+        },
+        "switch": {
+          "role": "switch",
+          "checked": "false",
+          "label": "Music",
+          "labelledby": null
+        }
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Blank name inline validation",
+      "data": {
+        "focus": {
+          "id": "shop-name",
+          "tag": "INPUT"
+        },
+        "input": {
+          "invalid": "true",
+          "description": "shop-name-help shop-name-error",
+          "label": "Shop name",
+          "error": [
+            "Up to 24 characters.",
+            "Enter a shop name first."
+          ]
+        }
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Name save focus",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Naming-3",
+        "action": "Navigate",
+        "param": "Naming",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Nested Privacy close restores opener",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Privacy-5",
+        "action": "Navigate",
+        "param": "Privacy",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Account fail feedback visible",
+      "data": {
+        "hidden": false,
+        "text": "Connection or save unavailable. Your current game stays safe.",
+        "role": "status",
+        "rect": {
+          "x": 21,
+          "y": 77,
+          "width": 318,
+          "height": 53.59375,
+          "top": 77,
+          "right": 339,
+          "bottom": 130.59375,
+          "left": 21
+        }
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Recovery still blocking",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SaveRecovery"
+        ],
+        "events": [
+          {
+            "action": "Recovery",
+            "param": "retry"
+          }
+        ],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Purchase resumes/delivers once",
+      "data": {
+        "kk": 1100,
+        "sheets": []
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Shop four packs and lower controls",
+      "data": {
+        "packs": 4,
+        "bottom": {
+          "client": 309,
+          "height": 640,
+          "top": 331
+        }
+      }
+    },
+    {
+      "viewport": "360x540",
+      "name": "Reduced motion disables running animation",
+      "data": 0
+    },
+    {
+      "viewport": "360x540",
+      "name": "Reduced motion reveal permits Continue",
+      "data": true
+    },
+    {
+      "viewport": "360x540",
+      "name": "OS reduced motion reveal",
+      "data": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "Settings toggle retains focus",
+      "data": {
+        "focus": {
+          "id": "sheet-Settings-0-Setting-music-0",
+          "action": "Setting",
+          "param": "music",
+          "tag": "BUTTON"
+        },
+        "switch": {
+          "role": "switch",
+          "checked": "true",
+          "label": "Music",
+          "labelledby": null
+        }
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Blank name inline validation",
+      "data": {
+        "focus": {
+          "id": "shop-name",
+          "tag": "INPUT"
+        },
+        "input": {
+          "invalid": "true",
+          "description": "shop-name-help shop-name-error",
+          "label": "Shop name",
+          "error": [
+            "Up to 24 characters.",
+            "Enter a shop name first."
+          ]
+        }
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Name save focus",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Naming-3",
+        "action": "Navigate",
+        "param": "Naming",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Nested Privacy close restores opener",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Privacy-5",
+        "action": "Navigate",
+        "param": "Privacy",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Account fail feedback visible",
+      "data": {
+        "hidden": false,
+        "text": "Connection or save unavailable. Your current game stays safe.",
+        "role": "status",
+        "rect": {
+          "x": 26,
+          "y": 98.40625,
+          "width": 308,
+          "height": 53.59375,
+          "top": 98.40625,
+          "right": 334,
+          "bottom": 152,
+          "left": 26
+        }
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Recovery still blocking",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SaveRecovery"
+        ],
+        "events": [
+          {
+            "action": "Recovery",
+            "param": "retry"
+          }
+        ],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Purchase resumes/delivers once",
+      "data": {
+        "kk": 1100,
+        "sheets": []
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Shop four packs and lower controls",
+      "data": {
+        "packs": 4,
+        "bottom": {
+          "client": 409,
+          "height": 640,
+          "top": 231
+        }
+      }
+    },
+    {
+      "viewport": "360x640",
+      "name": "Reduced motion disables running animation",
+      "data": 0
+    },
+    {
+      "viewport": "360x640",
+      "name": "Reduced motion reveal permits Continue",
+      "data": true
+    },
+    {
+      "viewport": "360x640",
+      "name": "OS reduced motion reveal",
+      "data": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "Settings toggle retains focus",
+      "data": {
+        "focus": {
+          "id": "sheet-Settings-0-Setting-music-0",
+          "action": "Setting",
+          "param": "music",
+          "tag": "BUTTON"
+        },
+        "switch": {
+          "role": "switch",
+          "checked": "false",
+          "label": "Music",
+          "labelledby": null
+        }
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Blank name inline validation",
+      "data": {
+        "focus": {
+          "id": "shop-name",
+          "tag": "INPUT"
+        },
+        "input": {
+          "invalid": "true",
+          "description": "shop-name-help shop-name-error",
+          "label": "Shop name",
+          "error": [
+            "Up to 24 characters.",
+            "Enter a shop name first."
+          ]
+        }
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Name save focus",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Naming-3",
+        "action": "Navigate",
+        "param": "Naming",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Nested Privacy close restores opener",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Privacy-5",
+        "action": "Navigate",
+        "param": "Privacy",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Account fail feedback visible",
+      "data": {
+        "hidden": false,
+        "text": "Connection or save unavailable. Your current game stays safe.",
+        "role": "status",
+        "rect": {
+          "x": 26,
+          "y": 195.171875,
+          "width": 338,
+          "height": 53.59375,
+          "top": 195.171875,
+          "right": 364,
+          "bottom": 248.765625,
+          "left": 26
+        }
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Recovery still blocking",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SaveRecovery"
+        ],
+        "events": [
+          {
+            "action": "Recovery",
+            "param": "retry"
+          }
+        ],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Purchase resumes/delivers once",
+      "data": {
+        "kk": 1100,
+        "sheets": []
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Shop four packs and lower controls",
+      "data": {
+        "packs": 4,
+        "bottom": {
+          "client": 598,
+          "height": 660,
+          "top": 62
+        }
+      }
+    },
+    {
+      "viewport": "390x844",
+      "name": "Reduced motion disables running animation",
+      "data": 0
+    },
+    {
+      "viewport": "390x844",
+      "name": "Reduced motion reveal permits Continue",
+      "data": true
+    },
+    {
+      "viewport": "390x844",
+      "name": "OS reduced motion reveal",
+      "data": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Settings toggle retains focus",
+      "data": {
+        "focus": {
+          "id": "sheet-Settings-0-Setting-music-0",
+          "action": "Setting",
+          "param": "music",
+          "tag": "BUTTON"
+        },
+        "switch": {
+          "role": "switch",
+          "checked": "true",
+          "label": "Music",
+          "labelledby": null
+        }
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Blank name inline validation",
+      "data": {
+        "focus": {
+          "id": "shop-name",
+          "tag": "INPUT"
+        },
+        "input": {
+          "invalid": "true",
+          "description": "shop-name-help shop-name-error",
+          "label": "Shop name",
+          "error": [
+            "Up to 24 characters.",
+            "Enter a shop name first."
+          ]
+        }
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Name save focus",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Naming-3",
+        "action": "Navigate",
+        "param": "Naming",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Nested Privacy close restores opener",
+      "data": {
+        "id": "sheet-Settings-0-Navigate-Privacy-5",
+        "action": "Navigate",
+        "param": "Privacy",
+        "tag": "BUTTON"
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Account fail feedback visible",
+      "data": {
+        "hidden": false,
+        "text": "Connection or save unavailable. Your current game stays safe.",
+        "role": "status",
+        "rect": {
+          "x": 26,
+          "y": 236.46875,
+          "width": 398,
+          "height": 36.796875,
+          "top": 236.46875,
+          "right": 424,
+          "bottom": 273.265625,
+          "left": 26
+        }
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Recovery still blocking",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SaveRecovery"
+        ],
+        "events": [
+          {
+            "action": "Recovery",
+            "param": "retry"
+          }
+        ],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Purchase resumes/delivers once",
+      "data": {
+        "kk": 1100,
+        "sheets": []
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Shop four packs and lower controls",
+      "data": {
+        "packs": 4,
+        "bottom": {
+          "client": 641,
+          "height": 709,
+          "top": 68
+        }
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Reduced motion disables running animation",
+      "data": 0
+    },
+    {
+      "viewport": "450x916",
+      "name": "Reduced motion reveal permits Continue",
+      "data": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "OS reduced motion reveal",
+      "data": true
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Home",
+      "data": {
+        "tab": "Home",
+        "sheets": [],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Player",
+      "data": {
+        "tab": "Player",
+        "sheets": [],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Products",
+      "data": {
+        "tab": "Products",
+        "sheets": [],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Legacy",
+      "data": {
+        "tab": "Legacy",
+        "sheets": [],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Shop",
+      "data": {
+        "tab": "Shop",
+        "sheets": [],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Upgrades",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Upgrades"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route BuyAll",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "BuyAll"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route ProductDetail",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "ProductDetail"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route TapTraining",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "TapTraining"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Skills",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Skills"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route SkillDetail",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SkillDetail"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route CardDetail",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "CardDetail"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route DrawReveal",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "DrawReveal"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Prestige",
+      "data": {
+        "tab": "Legacy",
+        "sheets": [
+          "Prestige"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Offline",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Offline"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Statistics",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Statistics"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Settings",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Settings"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Naming",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Naming"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Privacy",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Privacy"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Account",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Account"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Welcome",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Welcome"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route AccountCompare",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "AccountCompare"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Handoff",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Handoff"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route SaveRecovery",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SaveRecovery"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Purchase",
+      "data": {
+        "tab": "Shop",
+        "sheets": [
+          "Purchase"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Appearance",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Appearance"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Help",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Help"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Odds",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Odds"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route Promote",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "Promote"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route SignOut",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "SignOut"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route RecoveryConfirm",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "RecoveryConfirm"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile review route RecoveryExit",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "RecoveryExit"
+        ],
+        "events": [],
+        "fixture": "progressed",
+        "kk": 100,
+        "credits": 3
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Mobile fixture selector applies",
+      "data": {
+        "tab": "Home",
+        "sheets": [
+          "RecoveryExit"
+        ],
+        "events": [],
+        "fixture": "new",
+        "kk": 0,
+        "credits": 0
+      }
+    },
+    {
+      "viewport": "450x916",
+      "name": "Desktop review link works",
+      "data": {
+        "label": "Review card artwork ↗",
+        "url": "http://127.0.0.1:8765/Classic/card-art-gallery.html",
+        "status": 200
+      }
+    }
+  ],
+  "errors": []
+}

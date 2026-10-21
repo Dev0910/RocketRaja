@@ -1,0 +1,150 @@
+EDF0DFA604678A4E1944B621AA34AF7F2AB22044133FBBC58CD32F4F188F6C7F
+{
+  "schema": 1,
+  "economy": "1.0.0",
+  "revision": 10,
+  "runId": "fixture-old-run",
+  "cash": {
+    "mantissa": 5,
+    "exponent": 3
+  },
+  "runEarnings": {
+    "mantissa": 0,
+    "exponent": 0
+  },
+  "eligibleEarnings": {
+    "mantissa": 0,
+    "exponent": 0
+  },
+  "lifetimeEarnings": {
+    "mantissa": 0,
+    "exponent": 0
+  },
+  "tapLevel": 0,
+  "prestiges": 3,
+  "reputation": 12,
+  "lifetimeReputation": 20,
+  "manualTaps": 0,
+  "products": [
+    {
+      "id": "phuljhari",
+      "level": 50
+    },
+    {
+      "id": "anar",
+      "level": 0
+    },
+    {
+      "id": "chakri",
+      "level": 0
+    },
+    {
+      "id": "rockets",
+      "level": 0
+    },
+    {
+      "id": "small-crackers",
+      "level": 0
+    },
+    {
+      "id": "cracker-strings",
+      "level": 0
+    },
+    {
+      "id": "aerial-shots",
+      "level": 0
+    },
+    {
+      "id": "gift-boxes",
+      "level": 0
+    }
+  ],
+  "upgrades": [
+    "profit-phuljhari-0"
+  ],
+  "legacy": [
+    {
+      "id": "legacy-phuljhari",
+      "level": 2
+    },
+    {
+      "id": "legacy-anar",
+      "level": 0
+    },
+    {
+      "id": "legacy-chakri",
+      "level": 0
+    },
+    {
+      "id": "legacy-rockets",
+      "level": 0
+    },
+    {
+      "id": "legacy-small-crackers",
+      "level": 0
+    },
+    {
+      "id": "legacy-cracker-strings",
+      "level": 0
+    },
+    {
+      "id": "legacy-aerial-shots",
+      "level": 0
+    },
+    {
+      "id": "legacy-gift-boxes",
+      "level": 0
+    },
+    {
+      "id": "legacy-tap",
+      "level": 0
+    },
+    {
+      "id": "legacy-all",
+      "level": 0
+    },
+    {
+      "id": "legacy-offline",
+      "level": 0
+    },
+    {
+      "id": "legacy-cooldown",
+      "level": 0
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-0",
+      "activeUntil": 0,
+      "readyAt": 0
+    },
+    {
+      "id": "skill-1",
+      "activeUntil": 0,
+      "readyAt": 0
+    },
+    {
+      "id": "skill-2",
+      "activeUntil": 0,
+      "readyAt": 0
+    }
+  ],
+  "now": 10000,
+  "savedAt": 10000,
+  "sponsorUntil": 12000,
+  "runSeconds": 0,
+  "onboarding": 4,
+  "storeName": "Fixture Shop",
+  "storeNamePromptHandled": true,
+  "music": false,
+  "sound": true,
+  "reducedMotion": true,
+  "pendingOfflineId": "fixture-offline",
+  "pendingOfflineReward": {
+    "mantissa": 2,
+    "exponent": 1
+  },
+  "claimedRewards": [
+    "fixture-ad-receipt"
+  ]
+}

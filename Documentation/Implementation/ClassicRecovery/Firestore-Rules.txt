@@ -1,0 +1,42 @@
+i  emulators: Starting emulators: firestore
+i  emulators: Detected demo project ID "demo-rocket-raja", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+i  firestore: Firestore Emulator logging to firestore-debug.log
++  firestore: Firestore Emulator was started in standard edition.
++  firestore: Firestore Emulator UI websocket is running on 9150.
+i  Running script: node --test --test-concurrency=1 Tools/CloudSaveTests/rules.test.cjs Backend/Premium/firestore.integration.test.mjs
+✔ Admin transaction deduplicates concurrent receipt verification and survives a new authority instance (6621.01ms)
+✔ Admin transactions atomically fence concurrent wallet spends and replay the committed draw (326.0163ms)
+✔ Admin timestamp conversion preserves account handoff fencing (293.0231ms)
+✔ Admin transactions retain refund deficits exactly and never revoke twice (3480.2621ms)
+✔ Admin activation imports one spent guest gift and persists its account binding atomically (3493.6002ms)
+✔ Admin rejects a new spend until its operation identity is cloud-confirmed (269.1328ms)
+✔ Admin rate limit transactions coordinate concurrent function instances (7497.3012ms)
+✔ Admin pre-delivery revocation prevents a late receipt from creating a grant (231.1902ms)
+✔ redesign snapshots use a separate namespace while legacy progress remains untouched (1088.4743ms)
+✔ client save permissions never grant access to a premium receipt or wallet ledger (332.4581ms)
+✔ Google player can create and read exactly their own user document (78.2701ms)
+✔ guests, anonymous accounts and another UID cannot read or create player saves (180.7826ms)
+✔ collection enumeration and deletion are denied (72.4676ms)
+✔ extra fields, wrong UID and unsupported payload schema are denied (95.1623ms)
+✔ new saves require server timestamps, an unowned session and initial revision (96.0828ms)
+✔ simultaneous acquisitions produce only one active lease (157.9909ms)
+✔ valid saves increment one revision; rollback, jumps and same receipt are denied (135.3098ms)
+✔ server-time lease expiry prevents late commits and permits takeover (128.5713ms)
+✔ stale ownership generation cannot be replayed after takeover (91.9226ms)
+✔ handoff preserves data, allows a final save and releases before the next owner enters (135.7379ms)
+✔ lease changes cannot smuggle progress or identity edits (91.2592ms)
+✔ a released session cannot write until ownership is acquired again (69.9461ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34382.6632
++  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  firestore: Stopping Firestore Emulator
+!  Firestore Emulator has exited upon receiving signal: SIGINT
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

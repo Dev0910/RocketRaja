@@ -1,0 +1,27 @@
+PASS Main scene booted
+PASS Redesign smoke owns a newly created disposable profile
+PASS Main selects 1,000 cash upgrades and 28 Talent cards, with no legacy engine
+PASS Native input system and rupee glyph are present
+CAPTURE redesign-01-home 1080x2400
+PASS Full native catalogue uses eight saved rows
+PASS Scrolling reaches the final catalogue item without constructing rows
+PASS Native game can review all 1,000 eligible first purchases
+PASS Native control is active: Buy 3 · ₹472.06
+PASS Reviewed Buy All commits once and cannot replay
+PASS Full cash catalogue settles final permanent and run appearances
+CAPTURE redesign-02-complete-shop 1080x2400
+PASS Native control is active: Confirm prestige
+PASS First Prestige grants three free credits, clears the run and retains unique purchases
+PASS Native control is active: free-draw
+PASS Native free draw persists its result and spends one credit
+PASS Pending native reveal is already durable on disk
+CAPTURE redesign-03-reveal 1080x2400
+PASS Native control is active: reveal-done
+PASS Acknowledging the reveal cannot grant a second card
+PASS Native control is active: home-first-buy
+PASS Rebuild still requires a manual first purchase and menus never generate counter taps
+PASS Full redesigned state saves through the real driver store
+PASS Saved full-history payload remains valid and below the cloud payload guard
+PASS Scrolling, batch, Prestige and reveal preserve authored UI identities
+SCOPE Measurements describe this Editor/development runtime and one cycle; repeated-run and release-device performance are separate acceptance checks.
+SMOKE SUCCEEDED

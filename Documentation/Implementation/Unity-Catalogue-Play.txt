@@ -1,0 +1,70 @@
+Scope: isolated Play Mode saved native preview and disposable profile; not Main/device acceptance.
+PASS Only the saved native preview is under test
+PASS Play startup preserves every authored UI object and component, including text slots and caret; expected=10066; actual=10066; added=; removed=
+PASS Preview does not open a normal guest profile automatically
+PASS Actual driver loads and settles a disposable saved profile
+PASS Visible control receives the topmost UI raycast: Upgrades; screen=1080x2400; point=(410.54, 94.15); hits=Redesign Canvas/Safe Area/Navigation/Tabs/Upgrades
+PASS Visible control receives the topmost UI raycast: Products; screen=1080x2400; point=(339.51, 1873.85); hits=Redesign Canvas/Safe Area/Screen States/screen-upgrades/Catalogue/Categories/Products
+PASS Raycast dispatch changes the actual category
+PASS Native input callback filters while using the saved caret
+PASS Owned family starts with its saved basic display before the first signature
+PASS Live upgrade details show engine before/after income
+PASS Active/interactable control: Pin as goal
+PASS Repeated binding leaves one pin listener
+PASS Actual driver continues production while reading details
+PASS Details route blocks gameplay taps without suspending income
+PASS Active/interactable control: exact-upgrade
+PASS Full-precision action exposes stored price magnitude
+PASS Active/interactable control: alternatives
+PASS Goal alternatives reuse three saved controls
+PASS Active/interactable control: hide-alternatives
+PASS Hiding goal alternatives keeps the detail page
+PASS Active/interactable control: Buy upgrade
+PASS Live detail purchase applies once and clears completed goal
+PASS Live signature purchase immediately selects the saved Signature I shelf art
+PASS Purchase feedback comes from one listener and a dismissible saved toast
+PASS Visible control receives the topmost UI raycast: Dismiss notice; screen=1080x2400; point=(927.69, 426.46); hits=Redesign Canvas/Safe Area/Toast/Dismiss notice,Redesign Canvas/Safe Area/Toast,Redesign Canvas/Safe Area/Screen States/screen-upgradedetails/Scroll/Viewport/Content/alternatives,Redesign Canvas/Safe Area/Screen States/screen-upgradedetails/Scroll/Viewport
+PASS Physical notice dismissal neither mutates the economy nor leaks a gameplay tap
+PASS Active/interactable control: show-requirement
+PASS Missing prerequisite navigation opens the correct detail
+PASS Back restores the previous detail identity
+PASS Active/interactable control: review-buyall
+PASS Native catalogue opens actual frozen Buy All review
+PASS Review earns passive cash without growing its quoted list
+PASS Active/interactable control: Buy 3 · ₹472.06
+PASS One live confirmation applies the reviewed entries and returns to catalogue; route=upgrades; missing=; notice=Bought 2 upgrades · 2 new · 0 rebought; saving=; error=
+PASS Late repeated confirmation cannot grant or charge twice
+PASS Active/interactable control: review-buyall
+PASS Second review can be opened after completion
+PASS Changed economy disables a stale native confirmation
+PASS Active/interactable control: Cancel
+PASS Cancel returns to the retained catalogue
+PASS Detail/back retains catalogue view and scroll offset
+PASS Real Play Mode navigation and actions preserve all saved UI objects; added=; removed=
+PASS Driver pause callback suspends accrual
+PASS Driver resume callback restores the session after settlement
+PASS Active/interactable control: buy-levels
+PASS Native tap-training action durably buys one level
+PASS Active/interactable control: show-requirement
+PASS Missing product requirement reaches its live product page
+PASS Active/interactable control: x10
+PASS Actual product route agrees with the current shelf appearance after native purchases
+PASS Native x10 selection displays ten product levels
+PASS Active/interactable control: Max
+PASS Native Max selection uses actual affordability
+PASS Active/interactable control: buy-levels
+PASS Native level purchase buys exactly the displayed Max count
+PASS Locked product disables buying and exposes its predecessor
+PASS Active/interactable control: required-product
+PASS Locked-product navigation follows the correct predecessor
+PASS Active/interactable control: alternatives
+PASS Active/interactable control: alternative-2
+PASS Goal alternative reaches actual tap training
+PASS Active/interactable control: x100
+PASS Native x100 tap selection uses the actual quote
+PASS Active/interactable control: x1
+PASS Unaffordable tap training agrees with the actual engine quote
+PASS Active/interactable control: level-upgrades
+PASS Tap training links to the matching upgrade category
+PASS Level and goal routes preserve the same authored object instances
+PASS No Unity error, exception or assertion during the interaction run: 

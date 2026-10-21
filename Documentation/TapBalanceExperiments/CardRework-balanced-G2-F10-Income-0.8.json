@@ -1,0 +1,105 @@
+{
+  "catalogSourceHash": "588A7EC32CC558550CEF85DF246491F5804E27DB4B1C894C3613708A9F8FDB0D",
+  "balanceRevision": "tap-balance-2026-10-15",
+  "cardCurve": "balanced",
+  "handsPayout": 0.5,
+  "cardGlobalGain": null,
+  "profiles": null,
+  "description": "Offline finite search, not proof of global feasibility or impossibility. No runtime constants or authored effects are changed.",
+  "scales": [
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    1,
+    1.5,
+    2,
+    2.5,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10
+  ],
+  "targetOffsetRange": [
+    -3,
+    6
+  ],
+  "targetOffsetStep": 0.01,
+  "traceLimitSeconds": 2400,
+  "fits": [
+    {
+      "fame": 10,
+      "found": false,
+      "candidateCount": 2683,
+      "feasibleCount": 0,
+      "bestPassingBuilds": 7,
+      "closest": {
+        "tapScale": 4,
+        "targetLog": 66.88712125471966,
+        "incomeOffset": -0.8,
+        "ratioError": 0.03846260474726257,
+        "passingBuilds": 6,
+        "comparisons": [
+          {
+            "activeSeconds": 1165,
+            "passiveSeconds": 1356,
+            "speedup": 0.14085545722713866,
+            "products": 0.6556556444387996,
+            "passiveProducts": 0.9009161450504
+          },
+          {
+            "activeSeconds": 1166,
+            "passiveSeconds": 1373,
+            "speedup": 0.15076474872541878,
+            "products": 0.6168806740715669,
+            "passiveProducts": 0.9134480653167723
+          },
+          {
+            "activeSeconds": 1168,
+            "passiveSeconds": 1432,
+            "speedup": 0.1843575418994413,
+            "products": 0.7149816456874165,
+            "passiveProducts": 0.9160921486679138
+          },
+          {
+            "activeSeconds": 1191,
+            "passiveSeconds": 1428,
+            "speedup": 0.16596638655462181,
+            "products": 0.6672191949691353,
+            "passiveProducts": 0.8734324056356446
+          },
+          {
+            "activeSeconds": 1164,
+            "passiveSeconds": 1362,
+            "speedup": 0.14537444933920707,
+            "products": 0.6568997284251471,
+            "passiveProducts": 0.9273085312594944
+          },
+          {
+            "activeSeconds": 955,
+            "passiveSeconds": 1201,
+            "speedup": 0.20482930890924234,
+            "products": 0.5513998174286112,
+            "passiveProducts": 0.7810794902863175
+          },
+          {
+            "activeSeconds": 830,
+            "passiveSeconds": 889,
+            "speedup": 0.06636670416197976,
+            "products": 0.86402622336149,
+            "passiveProducts": 0.9775929347479139
+          },
+          {
+            "activeSeconds": 521,
+            "passiveSeconds": 646,
+            "speedup": 0.19349845201238391,
+            "products": 0.9457170057370291,
+            "passiveProducts": 0.732987585736295
+          }
+        ]
+      }
+    }
+  ]
+}

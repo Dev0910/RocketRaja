@@ -11,7 +11,6 @@ namespace RocketRaja.Editor
     /// <summary>Repeatable repairs and isolated native quality review of saved screens.</summary>
     public static class ReviewUiQuality
     {
-        [MenuItem("Rocket Raja/UI Quality/Apply Reviewed Screen Repairs")]
         public static void Apply()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode)
@@ -58,8 +57,6 @@ namespace RocketRaja.Editor
                 UiQuantityAuthoring.Apply(root);
             }
         }
-
-        [MenuItem("Rocket Raja/UI Quality/Run Native Review")]
         public static void Run() => Stage("quality", "Documentation/UIQualityValidation/Review");
 
         public static void Stage(string name, string output)

@@ -1,0 +1,22 @@
+PASS Main scene booted
+PASS Existing Main boots without a required Sponsor presenter
+PASS Ad retirement checks use a disposable guest with live cloud disabled
+PASS Saved Home has no Sponsor controls
+PASS Saved Main no longer references a Sponsor canvas
+PASS Settings keeps account/preferences without an advertising consent row
+PASS Saved privacy copy no longer claims use of advertising services
+PASS Saved sponsor timestamp does not affect runtime income
+PASS Offline settlement credits ordinary production once without the saved sponsor boost
+PASS Saved Offline opens with Continue and no reward button
+CAPTURE ad-free-offline 1080x2400
+PASS Legacy offline completion remains an inert compatibility callback
+PASS Repeated retired requests and late successful callbacks cannot mutate progress or hold an ad guard
+PASS Smoke mode uses the same disabled provider as the game
+PASS Repeated dismissal preserves credited cash
+PASS Retired offline events cannot add a bonus or consume the return summary
+PASS Return summary never waits for an ad callback
+PASS Closing keeps all settled offline cash
+PASS Retired Sponsor cannot open
+CAPTURE ad-free-home 1080x2400
+PASS Retired routes leave no modal or advertising input block
+SMOKE SUCCEEDED

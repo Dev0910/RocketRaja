@@ -1,5 +1,7 @@
 # Rocket Raja: reproducible economy model v1
 
+**Historical reference — 7 October 2026:** preserve the original rationale, scenarios and results below. They do not define the current interaction/access rules or establish current pacing. See [Current Implementation Design](Current%20Implementation%20Design.md) for the user-confirmed implementation.
+
 1 October 2026. Planning-only JavaScript recorded inside Markdown. It does not call Unity, edit saves, or use project runtime code.
 
 Input is the complete text of [1000 Unlockables Catalogue](1000%20Unlockables%20Catalogue.md). All v1 default parameters are embedded below. Pass that text to `runReference(catalogueMarkdown)`. The returned object includes purchases, lifetime counts, cards, earnings sources, daily checkpoints, reset events, and rebuild measurements.

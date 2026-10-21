@@ -1,0 +1,8 @@
+Scope: isolated saved asset/Edit Mode render validation. Main/device acceptance remains open.
+PASS Quantity controls and eight persistent product sprites reload on screen-productdetails
+PASS Quantity controls and eight persistent product sprites reload on screen-taptraining
+PASS Product detail shows the next crossed income milestone
+PASS Locked product offers navigation instead of purchase
+PASS Blocked session disables level mutations
+PASS Tap expansion uses stored before/after magnitudes
+PASS Unity compilation succeeds

@@ -1,0 +1,17 @@
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: O=Diwali Games
+Signer #1 certificate SHA-256 digest: 5b133f146943597b93688744cec649130db2599ec09a99be07f58da90e803286
+Signer #1 certificate SHA-1 digest: bb4249744a4ffa4c2ac081ca53b9e4ecb1aefc28
+Signer #1 certificate MD5 digest: 5f7b7b4fdc72d31fcd35f9bdb987bf2e
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 2982f9949802f1fbc30e85bda74691e6dfdf2e65d1b99e6b9e5c351972a20550
+Signer #1 public key SHA-1 digest: c727db4b69ce05edc6dd2d13a32fac050eeacb7a
+Signer #1 public key MD5 digest: e289197f70e468fb0955d859f5c41a10

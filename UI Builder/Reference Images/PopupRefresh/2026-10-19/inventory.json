@@ -1,0 +1,971 @@
+[
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Welcome",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "images": [
+      "parity/assets/bootstrap/stall.png",
+      "parity/assets/bootstrap/google.png"
+    ],
+    "route": "Welcome",
+    "text": "ROCKET RAJA\n\nYOUR FIREWORKS STORY STARTS HERE\n\nWelcome to your stall\n\nSave your progress with Google and continue on another device.\n\nSign in with Google\nPlay as guest\n\nYou can connect Google later in Settings.\n\nGuest progress stays on this device.\nGoogle progress follows you between devices.",
+    "title": "Welcome to your stall"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Account",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Sign in with Google",
+        "param": "signin"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Play as guest",
+        "param": "guest"
+      }
+    ],
+    "images": [
+      "parity/assets/bootstrap/stall.png",
+      "parity/assets/bootstrap/google.png"
+    ],
+    "route": "Account",
+    "text": "ROCKET RAJA\n\nYOUR FIREWORKS STORY STARTS HERE\n\nWelcome to your stall\n\nSave your progress with Google and continue on another device.\n\nSign in with Google\nPlay as guest\n\nYou can connect Google later in Settings.\n\nGuest progress stays on this device.\nGoogle progress follows you between devices.",
+    "title": "Welcome to your stall"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Upgrades",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "Find the next upgradeThe next ten are ready in Player.i",
+        "param": "catalogue-filters"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "label": "Search upgrades",
+        "param": "search"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "label": "All",
+        "param": "category"
+      },
+      {
+        "action": "Filter",
+        "disabled": false,
+        "label": "Available",
+        "param": "view"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹28.67Buy upgrade",
+        "param": "PP-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹41.1Buy upgrade",
+        "param": "TP-001"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹58.92Buy upgrade",
+        "param": "GP-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹84.48Buy upgrade",
+        "param": "PC-PHU-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹173.74Buy upgrade",
+        "param": "PP-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹249.18Buy upgrade",
+        "param": "PP-ROC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹357.43Buy upgrade",
+        "param": "TP-002"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹512.75Buy upgrade",
+        "param": "UC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹735.63Buy upgrade",
+        "param": "PC-ANA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹1.51KBuy upgrade",
+        "param": "PP-SMC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹2.17KBuy upgrade",
+        "param": "PP-STR-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹3.12KBuy upgrade",
+        "param": "PP-AER-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹4.48KBuy upgrade",
+        "param": "PP-BOX-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹6.43KBuy upgrade",
+        "param": "TC-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹9.23KBuy upgrade",
+        "param": "PP-PHU-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹13.25KBuy upgrade",
+        "param": "PP-ANA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹27.33KBuy upgrade",
+        "param": "PP-CHA-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹39.25KBuy upgrade",
+        "param": "PP-ROC-02"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹56.38KBuy upgrade",
+        "param": "PC-CHA-01"
+      },
+      {
+        "action": "BuyUpgrade",
+        "disabled": false,
+        "label": "₹81KBuy upgrade",
+        "param": "TP-003"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": true,
+        "label": "Previous",
+        "param": "previous"
+      },
+      {
+        "action": "CataloguePage",
+        "disabled": false,
+        "label": "Next",
+        "param": "next"
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "label": "Review Buy All",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Upgrades",
+    "text": "Cash upgrades\nFind the next upgrade\nThe next ten are ready in Player.\ni\nAll\nAvailable\n\n996 matching · All / Available\n\nAnar: Gift Packaging I\n\n×2 Anar income\n\nAvailable\n₹28.67\nBuy upgrade\nSales Pitch I\n\n×2 direct tap income\n\nAvailable\n₹41.1\nBuy upgrade\nFestival Footfall I\n\n×2 normal shop income\n\nAvailable\n₹58.92\nBuy upgrade\nPhuljhari: Wholesale Deal I\n\nProduct level prices ×0.1\n\nAvailable\n₹84.48\nBuy upgrade\nChakri: Gift Packaging I\n\n×2 Chakri income\n\nAvailable\n₹173.74\nBuy upgrade\nRockets: Gift Packaging I\n\n×2 Rockets income\n\nAvailable\n₹249.18\nBuy upgrade\nCounter Display I\n\n×2 direct tap income\n\nAvailable\n₹357.43\nBuy upgrade\nUpgrade Price Discount 1\n\nCash upgrade prices ×0.9\n\nAvailable\n₹512.75\nBuy upgrade\nAnar: Wholesale Deal I\n\nProduct level prices ×0.1\n\nAvailable\n₹735.63\nBuy upgrade\nSmall crackers: Gift Packaging I\n\n×2 Small crackers income\n\nAvailable\n₹1.51K\nBuy upgrade\nCracker strings: Gift Packaging I\n\n×2 Cracker strings income\n\nAvailable\n₹2.17K\nBuy upgrade\nAerial shots Signature Breakthrough I\n\n×2 Aerial shots income\n\nAvailable\n₹3.12K\nBuy upgrade\nCelebration boxes: Gift Packaging I\n\n×2 Celebration boxes income\n\nAvailable\n₹4.48K\nBuy upgrade\nPractice Routine I\n\nTap training prices ×0.1\n\nAvailable\n₹6.43K\nBuy upgrade\nPhuljhari: Festival Display I\n\n×2 Phuljhari income\n\nAvailable\n₹9.23K\nBuy upgrade\nAnar: Festival Display I\n\n×2 Anar income\n\nAvailable\n₹13.25K\nBuy upgrade\nChakri Signature Breakthrough I\n\n×2 Chakri income\n\nAvailable\n₹27.33K\nBuy upgrade\nRockets: Festival Display I\n\n×2 Rockets income\n\nAvailable\n₹39.25K\nBuy upgrade\nChakri: Wholesale Deal I\n\nProduct level prices ×0.1\n\nAvailable\n₹56.38K\nBuy upgrade\nShop Showmanship I\n\n×2 direct tap income\n\nAvailable\n₹81K\nBuy upgrade\nPrevious\nPage 1 / 50\nNext\nReview Buy All\nBack",
+    "title": "Cash upgrades"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close ProductDetail",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "An earlier shelf can growCompare its normal income and share.i",
+        "param": "comebacks"
+      }
+    ],
+    "images": [
+      "parity/assets/looks/phuljhari-1.png"
+    ],
+    "route": "ProductDetail",
+    "text": "Phuljhari\nAn earlier shelf can grow\nCompare its normal income and share.\ni\nPhuljhari\n\nLvl :\n25\n\nSignature I\n\nEarns\n₹1.22K / second\n\nLvl 50 · profit ×3\nLvl 50\n\nMilestone reward\n\nMilestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.\n\nNext synergy bonus\n0/8 products at Lvl 50\n\nAll products: ×1 → another ×2\n\nPhuljhari (25), Anar (18), Chakri (12), Rockets (8), Small crackers (5), Cracker strings (3), Aerial shots (1), Celebration boxes (1)",
+    "title": "Phuljhari"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close TapTraining",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "Choose your quantityReview x1, x10, x100 or Max.i",
+        "param": "product-levels"
+      },
+      {
+        "action": "Quantity",
+        "disabled": false,
+        "label": "Cycle quantity: 1 / 10 / 100 / Max",
+        "param": "tap:cycle"
+      },
+      {
+        "action": "BuyLevels",
+        "disabled": false,
+        "label": "Train ×60 · ₹1.16M",
+        "param": "-1"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "TapTraining",
+    "text": "Salesmanship\nChoose your quantity\nReview x1, x10, x100 or Max.\ni\nTrain your tapping\nLevel 12 → 72\nPer tap ₹3.43K → ₹117.84K\nNext: Lvl 25 · ×2\nCycle quantity: 1 / 10 / 100 / Max\nGrowing your shop\nTraining improves manual taps and Helping Hands. Tap milestones multiply profit at 10, 25, 50, 100 and every 100 levels.\nTrain ×60 · ₹1.16M\nBack",
+    "title": "Salesmanship"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Skills",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Details for Festival Rush",
+        "param": "SkillDetail:0"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "label": "Activate Helping Hands",
+        "param": "1"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Details for Helping Hands",
+        "param": "SkillDetail:1"
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "label": "Activate Bulk Order",
+        "param": "2"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Details for Bulk Order",
+        "param": "SkillDetail:2"
+      }
+    ],
+    "images": [],
+    "route": "Skills",
+    "text": "Your skills\n\nThree ways to boost your shop\n\nFestival Rush\nREADY\n\nDouble automatic sales. Taps +25%.\n\nDuration: 30s\nCooldown: 4m 45s\n\nActivate\nDetails\nHelping Hands\nREADY\n\n3 automatic taps per second.\n\nDuration: 30s\nCooldown: 5m\n\nActivate\nDetails\nBulk Order\nREADY\n\n120 seconds of sales, instantly.\n\nDuration: Instant\nCooldown: 10m\n\nActivate\nDetails\n\nSkills reset on prestige. Talent bonuses apply after rebuying.",
+    "title": "Your skills"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close SkillDetail",
+        "param": ""
+      },
+      {
+        "action": "ActivateSkill",
+        "disabled": false,
+        "label": "Activate Festival Rush",
+        "param": "0"
+      }
+    ],
+    "images": [],
+    "route": "SkillDetail",
+    "text": "Festival Rush\nREADY\n×2\nAutomatic sales\nFor 30s\n+25%\nManual & Helping Hands taps\nFor 30s\nDURATION\n30s\nCOOLDOWN\n4m 45s\n\nCooldown starts on activation.\n\nActivate Festival Rush",
+    "title": "Festival Rush"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close CardDetail",
+        "param": ""
+      }
+    ],
+    "images": [
+      "assets/cards/art/C01.png"
+    ],
+    "route": "CardDetail",
+    "text": "Phuljhari Showcase\nPhuljhari Showcase\nLvl 1\n· COMMON ·\n\nProduct income ×1.2\n\n◆\n\nA brighter display. A busier shop.\n\n· Permanent bonus ·",
+    "title": "Phuljhari Showcase"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close DrawReveal",
+        "param": ""
+      },
+      {
+        "action": "Reveal",
+        "disabled": true,
+        "label": "Continue",
+        "param": "continue"
+      }
+    ],
+    "images": [
+      "assets/cards/shared-card-back.png",
+      "assets/cards/art/C01.png"
+    ],
+    "route": "DrawReveal",
+    "text": "A little festival magic\n\nYour card awaits\n\nLvl 1\nPhuljhari Showcase\nContinue",
+    "title": "A little festival magic"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Prestige",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "Know what staysFame, cards and shop progress stay.i",
+        "param": "prestige"
+      },
+      {
+        "action": "Prestige",
+        "disabled": true,
+        "label": "Begin again",
+        "param": "confirm"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Keep growing",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Prestige",
+    "text": "A brighter beginning\nKnow what stays\nFame, cards and shop progress stay.\ni\n₹4.8M earned\nYour next beginning\nRun target · ₹153.86ac\nProducts ×6 · taps ×31.8\n0 free Talent draws\nNext run target · ₹153.86ac\nResets\nRun cash · product and tap levels\nCash upgrades · skills and active effects\nStays\nFame · Talent · KK · free draws\nLifetime discoveries · decorations\nBegin again\nKeep growing",
+    "title": "A brighter beginning"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Offline",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "Welcome backYour offline cash is already saved.i",
+        "param": "return-play"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "label": "View your next step",
+        "param": "goal"
+      },
+      {
+        "action": "Offline",
+        "disabled": false,
+        "label": "Continue to your shop",
+        "param": "close"
+      }
+    ],
+    "images": [],
+    "route": "Offline",
+    "text": "Welcome back\nWelcome back\nYour offline cash is already saved.\ni\n₹147.45M\nWhile you were away\nAlready added to your cash\nAway for 10.0 hours\nCredited 8.0 hours at 50% efficiency.\nYour next step\nCheck product levels or purchase an upgrade. Closing keeps the credited earnings.\nView your next step\nContinue to your shop",
+    "title": "Welcome back"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Statistics",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Statistics",
+    "text": "Your shop in numbers\nThis run\nEarned this run: ₹4.8M\nNormal sales: ₹10.24K /s\nManual taps: 12480\nTap payout: ₹3.43K\nOwned upgrades: 4 / 1,000\nYour whole journey\nPrestiges: 1\nFame: 1\nDiscovered upgrades: 4 / 1,000\nTalent cards: 4 / 28\nLifetime earnings: ₹24M\nYour decorations\nShop 1/6 · Opening stall\n4 unique purchases · Next: Marigold welcome at 100\nDecorations stay after Prestige. Product displays rebuild.\nBack",
+    "title": "Your shop in numbers"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Settings",
+        "param": ""
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "label": "Music",
+        "param": "music"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "label": "Sound effects",
+        "param": "sound"
+      },
+      {
+        "action": "Setting",
+        "disabled": false,
+        "label": "Reduced motion",
+        "param": "motion"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Shop name",
+        "param": "Naming"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Account & cloud save",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Privacy",
+        "param": "Privacy"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "How to play",
+        "param": "Help"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Settings",
+    "text": "Settings\nMusic\n\nFestival atmosphere\n\nON\nSound effects\n\nTaps and celebrations\n\nON\nReduced motion\n\nSettle effects instantly\n\nOFF\nShop nameAccount & cloud savePrivacyHow to play\nBack",
+    "title": "Settings"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Naming",
+        "param": ""
+      },
+      {
+        "action": "Rename",
+        "disabled": false,
+        "label": "Save shop name",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Naming",
+    "text": "Make it your own\nName your shop\n\nA name for your little corner of the festival.\n\nShop name\n\nUp to 24 characters.\n\nSave shop name\nBack",
+    "title": "Make it your own"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Privacy",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Privacy",
+    "text": "Your privacy\nYour progress\n\nGuest games stay on this device. Google sync is optional. Account games use a separate cloud save; one device plays at a time.\n\nPurchases & information\n\nA real store purchase must be verified before Kaju Katli is delivered. No payment, authentication or analytics service runs in this preview.\n\nControl your experience\n\nMusic, sound and reduced motion are available in Settings. Recovery choices explain which save will be used before you continue.\n\nBack",
+    "title": "Your privacy"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close AccountCompare",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Use Google game",
+        "param": "cloud"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Keep this guest",
+        "param": "guest"
+      }
+    ],
+    "images": [],
+    "route": "AccountCompare",
+    "text": "Choose your progress\nOn this device\n\nYour guest shop · ₹4.8M earned this run\n\nThe guest save stays safe on this device.\n\nGoogle game\n\nExample cloud shop · 1 prestige · 4 Talent cards\n\nUse the Google game, or keep playing as your guest. These saves will not be merged.\n\nUse Google game\nKeep this guest",
+    "title": "Choose your progress"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Promote",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Copy eligible guest progress",
+        "param": "copy"
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Start a fresh Google game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Promote",
+    "text": "Start your Google game\n\nThis Google account has no game yet. Your original guest save stays separate whichever option you choose.\n\nCopy eligible guest progress\nStart a fresh Google game\nBack",
+    "title": "Start your Google game"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close SignOut",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Save and sign out",
+        "param": "confirm-signout"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "SignOut",
+    "text": "Return to your guest game?\nKeep both journeys\n\nYour account progress must finish syncing before signing out. Your guest game remains separate.\n\nSave and sign out\nBack",
+    "title": "Return to your guest game?"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Handoff",
+        "param": ""
+      },
+      {
+        "action": "Account",
+        "disabled": false,
+        "label": "Play here",
+        "param": "handoff"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Handoff",
+    "text": "Play on this device?\nOne shop, one active device\n\nTaking over here will stop gameplay on the previous device. Wait for its latest save before continuing.\n\nPlay here\nBack",
+    "title": "Play on this device?"
+  },
+  {
+    "actions": [
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "label": "Try loading again",
+        "param": "retry"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Account options",
+        "param": "Account"
+      },
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Start a new local game",
+        "param": "RecoveryConfirm"
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "label": "Keep files and leave",
+        "param": "exit"
+      }
+    ],
+    "images": [],
+    "route": "SaveRecovery",
+    "text": "Your progress needs attention\nWe could not open this save\n\nKeep the existing files while you retry or choose an account. Starting a new local game requires a separate confirmation.\n\nTry loading again\nAccount options\nStart a new local game\nKeep files and leave",
+    "title": "Your progress needs attention"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close RecoveryConfirm",
+        "param": ""
+      },
+      {
+        "action": "Recovery",
+        "disabled": false,
+        "label": "Confirm new local game",
+        "param": "fresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "RecoveryConfirm",
+    "text": "Start a separate local game?\n\nThe unreadable save will be kept for recovery. This only changes the example state in this HTML preview.\n\nConfirm new local game\nBack",
+    "title": "Start a separate local game?"
+  },
+  {
+    "actions": [
+      {
+        "action": "Navigate",
+        "disabled": false,
+        "label": "Return to welcome",
+        "param": "Welcome"
+      }
+    ],
+    "images": [],
+    "route": "RecoveryExit",
+    "text": "Your files are safe\n\nYou have left the blocked game. In Unity this action exits the application. This preview keeps the browser open.\n\nReturn to welcome",
+    "title": "Your files are safe"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Purchase",
+        "param": ""
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "label": "Preview successful purchase",
+        "param": "delivered"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "label": "Preview pending purchase",
+        "param": "pending"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "label": "Preview cancellation",
+        "param": "cancelled"
+      },
+      {
+        "action": "PurchaseResult",
+        "disabled": false,
+        "label": "Preview verification failure",
+        "param": "failed"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [
+      "assets/products/icons/gift-boxes.png"
+    ],
+    "route": "Purchase",
+    "text": "Kaju Katli pack\nSmall box\n\n1,000 Kaju Katli\n\nA treat for your Talent\n\n10 draws · 100 KK per draw\n\n₹99\n\nExample app-store price. No real payment in this HTML preview.\n\nEach draw uses the same pool: Common 75%, Rare 22%, Legendary 3%. No pack guarantees a rarity.\n\nChoose an outcome below to review the purchase flow.\n\nPreview successful purchase\nPreview pending purchase\nPreview cancellation\nPreview verification failure\nBack",
+    "title": "Kaju Katli pack"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Appearance",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [
+      "parity/assets/looks/phuljhari-1.png"
+    ],
+    "route": "Appearance",
+    "text": "Your shop’s journey\nYour shop, over the years\n\nEight familiar shelves keep their places. Product displays follow signature upgrades bought this run; permanent decorations celebrate lifetime discoveries.\n\nPhuljhari\n\nFour display appearances\n\nOwn product · first display\nSignature I · fuller shelves\nSignature IV · festive display\nSignature X · premium display\nDecorations that stay\n\nSix decoration stages unlock at 0, 100, 250, 500, 750 and 1,000 lifetime unique upgrades. These decorations stay after prestige. Product displays rebuild with current-run signatures.\n\nThis candidate preserves the original stall artwork. Final placement of later decoration layers can follow your review.\n\nBack",
+    "title": "Your shop’s journey"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Help",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Help",
+    "text": "A little guidance\nStart with a spark\n\nManually buy Phuljhari in Products. Products earn automatically; tap the counter on any main tab for extra cash.\n\nGrow your way\n\nPlayer contains tap training and the full upgrade browser. Products contains your eight families. Legacy brings together Fame and Talent. Shop contains Kaju Katli packs.\n\nBegin again, stronger\n\nPrestige resets the run while keeping Fame, Talent, KK, free credits, discoveries and decorations.\n\nBack",
+    "title": "A little guidance"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Odds",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Odds",
+    "text": "Every card has a chance\nSame pool for every draw\n\nCommon · 75% / 16 cards = 4.6875% each\n\nRare · 22% / 10 cards = 2.2% each\n\nLegendary · 3% / 2 cards = 1.5% each\n\nFree draws and 100-KK draws use the same pool. Each duplicate adds one card level. There is no guaranteed rarity from buying a pack.\n\nBack",
+    "title": "Every card has a chance"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Guidance",
+        "param": ""
+      },
+      {
+        "action": "LearnTip",
+        "disabled": false,
+        "label": "Got it",
+        "param": "buy-all"
+      }
+    ],
+    "images": [],
+    "route": "Guidance",
+    "text": "A little guidance\nBuy affordable upgrades\nPlayer's Buy All immediately buys affordable eligible cash upgrades in price order. In the catalogue, Review Buy All shows the scoped list before purchase. Neither buys product levels or Talent, nor spends KK.\nGot it",
+    "title": "A little guidance"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close BuyAll",
+        "param": ""
+      },
+      {
+        "action": "Tip",
+        "disabled": false,
+        "label": "Buy affordable upgradesBuy All spends cash on eligible upgrades.i",
+        "param": "buy-all"
+      },
+      {
+        "action": "ConfirmBatch",
+        "disabled": false,
+        "label": "Buy reviewed upgrades",
+        "param": ""
+      },
+      {
+        "action": "ReviewBatch",
+        "disabled": false,
+        "label": "Refresh review",
+        "param": "refresh"
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "BuyAll",
+    "text": "Review your purchases\nBuy affordable upgrades\nBuy All spends cash on eligible upgrades.\ni\nOnly the reviewed upgrades\n\nScope · All / All targets\n\nBudget · ₹1.24M\n\n24 upgrades · ₹1.00M\n\n24 first purchases\n\nAnar: Gift Packaging I\n₹28.67\nSales Pitch I\n₹41.1\nFestival Footfall I\n₹58.92\nPhuljhari: Wholesale Deal I\n₹84.48\nChakri: Gift Packaging I\n₹173.74\nRockets: Gift Packaging I\n₹249.18\nCounter Display I\n₹357.43\nUpgrade Price Discount 1\n₹512.75\nAnar: Wholesale Deal I\n₹662.07\nSmall crackers: Gift Packaging I\n₹1.36K\nCracker strings: Gift Packaging I\n₹1.96K\nAerial shots Signature Breakthrough I\n₹2.81K\nCelebration boxes: Gift Packaging I\n₹4.03K\nPractice Routine I\n₹5.79K\nPhuljhari: Festival Display I\n₹8.31K\nAnar: Festival Display I\n₹11.93K\nChakri Signature Breakthrough I\n₹24.60K\nRockets: Festival Display I\n₹35.33K\nChakri: Wholesale Deal I\n₹50.75K\nShop Showmanship I\n₹72.90K\nSmall crackers: Festival Display I\n₹104.73K\nCommunity Trust I\n₹150.49K\nCracker strings: Festival Display I\n₹216.25K\nAerial shots: Festival Display I\n₹310.77K\n\nNormal sales continue. New earnings never add upgrades to this list.\n\nProduct levels, tap levels, Talent and KK are not included.\n\nBuy reviewed upgrades\nRefresh review\nBack",
+    "title": "Review your purchases"
+  },
+  {
+    "actions": [
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Close Exact",
+        "param": ""
+      },
+      {
+        "action": "Close",
+        "disabled": false,
+        "label": "Back",
+        "param": ""
+      }
+    ],
+    "images": [],
+    "route": "Exact",
+    "text": "A closer look\n\nAmounts are exported from the native core’s stored magnitude; display rounding does not change the quote.\n\nBack",
+    "title": "A closer look"
+  }
+]

@@ -91,11 +91,11 @@ namespace RocketRaja
             if (homePanel == null || stallTap == null || settingsButton == null || inspectSignButton == null ||
                 !Valid(navigationButtons, 3) || !Valid(navigationLabels, 3) || !Valid(navigationIndicators, 3) ||
                 !Valid(shelfButtons, 8) || !Valid(skillButtons, 3) ||
-                sponsorButton == null || !Valid(shelfArt, 8) || !Valid(emptyShelfMarks, 8) || !Valid(shelfNames, 8) ||
+                !Valid(shelfArt, 8) || !Valid(emptyShelfMarks, 8) || !Valid(shelfNames, 8) ||
                 !Valid(skillStatus, 3) || !Valid(skillImages, 3) || !Valid(skillArtwork, 3) ||
                 lockedSkillIcon == null || cashLabel == null ||
                 incomeLabel == null || tapLabel == null ||
-                sponsorLabel == null || sponsorLayout == null || tapHintLabel == null ||
+                tapHintLabel == null ||
                 nextActionLayout == null || nextGoalLabel == null || nextProgressLabel == null || nextProductsButton == null ||
                 counterLabel == null ||
                 noticeLabel == null || noticeRoot == null ||
@@ -107,7 +107,7 @@ namespace RocketRaja
             }
             settingsButton.onClick.AddListener(OpenSettings);
             inspectSignButton.onClick.AddListener(OpenStoreNameDetail);
-            sponsorButton.onClick.AddListener(OpenSponsor);
+            if (sponsorLayout != null) sponsorLayout.gameObject.SetActive(false);
             nextProductsButton.onClick.AddListener(ActivateNextAction);
             if (!CacheNextActionText())
             {
@@ -197,7 +197,7 @@ namespace RocketRaja
         void Switch(string tab) => view?.Switch(tab);
         void OpenSettings() => view?.ShowSettings();
         void OpenStoreNameDetail() => view?.ShowStoreNameDetail();
-        void OpenSponsor() => view?.ShowSponsor();
+        void OpenSponsor() { }
         void ActivateNextAction()
         {
             if (controller == null || controller.Engine == null) return;
@@ -402,24 +402,12 @@ namespace RocketRaja
             }
             counterLabel.richText = false;
             counterLabel.text = state.StoreName;
-            bool boosted = state.sponsorUntil > state.now;
-            bool offer = state.OwnedProducts > 0 && !boosted && controller.Ads != null && controller.Ads.Ready;
-            var rootCanvas = GetComponentInParent<Canvas>()?.rootCanvas;
-            bool compact = rootCanvas != null && rootCanvas.scaleFactor < .4f;
-            bool oneLineSponsor = compact || boosted;
-            sponsorLayout.gameObject.SetActive(boosted || offer);
-            sponsorLayout.preferredHeight = oneLineSponsor && (boosted || offer) ? 100 : 136;
-            sponsorLabel.text = boosted ? "SPONSOR ×2 · " + GameView.Duration(state.sponsorUntil - state.now) : "OPTIONAL SPONSOR · ×2 sales";
-            if (sponsorCaption != null) sponsorCaption.gameObject.SetActive(!oneLineSponsor);
-            var sponsorStatusRect = sponsorLabel.rectTransform;
-            sponsorStatusRect.offsetMin = new Vector2(sponsorStatusRect.offsetMin.x, oneLineSponsor ? 8 : 46);
-            sponsorStatusRect.offsetMax = new Vector2(sponsorStatusRect.offsetMax.x, oneLineSponsor ? -8 : -15);
-            sponsorButton.interactable = offer && engine.CanMutate;
-            nextActionLayout.preferredHeight = compact && (boosted || offer) ? 196 : boosted ? 181 : offer ? 160 : 240;
-            nextActionKicker.fontSize = nextProgressLabel.fontSize = compact && (boosted || offer) ? 36 : 32;
+            if (sponsorLayout != null) sponsorLayout.gameObject.SetActive(false);
+            nextActionLayout.preferredHeight = 240;
+            nextActionKicker.fontSize = nextProgressLabel.fontSize = 32;
             var nextButtonRect = (RectTransform)nextProductsButton.transform;
-            nextButtonRect.anchorMin = new Vector2(nextButtonRect.anchorMin.x, offer ? .03f : .12f);
-            nextButtonRect.anchorMax = new Vector2(nextButtonRect.anchorMax.x, offer ? .97f : .88f);
+            nextButtonRect.anchorMin = new Vector2(nextButtonRect.anchorMin.x, .12f);
+            nextButtonRect.anchorMax = new Vector2(nextButtonRect.anchorMax.x, .88f);
             Goal goal = RecommendGoal(engine);
             if (goal.kind == GoalKind.Prestige)
             {

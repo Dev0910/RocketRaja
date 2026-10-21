@@ -1,5 +1,7 @@
 # Rocket Raja: redesign working plan
 
+**7 October 2026 — accepted implementation:** [Current Implementation Design](Current%20Implementation%20Design.md) is the current source of truth. Earlier planning/experience-review passages below are historical where they conflict. Pacing results have not been rerun for unrestricted upgrades, unlimited taps and discounted five-card pulls.
+
 Updated: 1 October 2026. Planning only. The numerical authoring and simulation pass is now complete as a reviewable v1 candidate. No Unity changes were made.
 
 ## Confirmed direction
@@ -7,7 +9,7 @@ Updated: 1 October 2026. Planning only. The numerical authoring and simulation p
 The user's answers establish:
 
 - Prioritize longer progression with regular milestones.
-- Cash-only catalogue progression is selected: no completed-prestige requirements on upgrades. Cash, product ownership, level, and prior-upgrade prerequisites still apply.
+- Cash-only catalogue progression is selected: no completed-prestige requirements on upgrades. Only the affordable discounted price and absence of current-run ownership gate cash entries. Product, level, family-count and prior-upgrade gates do not apply.
 - Design the full 1,000 distinct cash unlockables now, rather than a 500-entry catalog with the remainder deferred. These are distinct purchases, not product levels or repeat purchases after a reset.
 - Introduce Kaju Katli as a scarce premium currency, with small free grants and IAP acquisition. Initially it buys random permanent-upgrade card draws only. Temporary boosts, instant cash, cosmetics, cooldown resets, and direct card purchases are outside the initial premium shop. The initial amounts and INR pack prices are confirmed in the premium specification.
 - Completely redesign prestige progression, drawing inspiration from the existing Tap Tycoon research.
@@ -20,10 +22,10 @@ The user's answers establish:
 - First prestige grants three free draws. Later free draws combine current-run progress with lifetime progression measured by different cash upgrades purchased at least once from the 1,000 unlockables. The latest explicit selection supersedes the intervening Fame-based draw metric. Rebuying an entry after prestige does not count again. Exact reward thresholds, current-run metric, minimum, and qualification remain draft. Fame remains a separate proposed basis for guaranteed permanent income.
 - Include cash-purchased cost-reduction unlockables alongside permanent cost-reduction cards.
 - Keep cash purchasing manual with Buy All throughout progression. Do not unlock automatic purchasing later. Automatic duplicate card level-ups and Helping Hands taps are separate mechanics and remain part of the proposed card/skill design.
-- Use one Upgrades screen with category and product filters. Detailed navigation, filter behavior, and Buy All previews remain draft.
+- Use Classic Player and its full catalogue: search, category and Available/Upcoming/Owned/Full views; no product-family filter or pin controls. Player Buy All immediately buys a global batch without review.
 - Evolve the same shop through bigger displays, lighting, and decorations. Keep earned shop decorations through prestige; rebuild product displays as products are repurchased. Exact visual stages and thresholds remain prototype defaults; distinct shop locations are not the selected direction.
 - Grant enough starting cash for the current discounted first Phuljhari unit, bought manually, on a new account and after prestige. Exclude that grant from earned-cash progress.
-- Skill access and all cash-purchased skill improvements reset at prestige. Players buy the base skills again each run; permanent skill Talent cards remain owned and apply once the relevant skill is reacquired.
+- Skill access and all cash-purchased skill improvements reset at prestige. Any purchased skill power rank unlocks that skill each run; permanent skill Talent cards remain owned and apply once the relevant skill is reacquired.
 - Base offline earnings are 50% of normal product income for up to eight hours. Talent cards can improve efficiency and storage; their numerical level curves remain draft.
 - Support both short daily check-ins and longer active sessions.
 - Use 15–25 total active minutes per day after the opening day as the regular nonpaying player's balancing baseline. The user selected this over 30–45 or 60+ minutes. This budget includes purchases, collection management, skills, and rebuilding as well as tapping; it is not a minimum daily activity requirement.
@@ -37,7 +39,7 @@ The user's answers establish:
 - Unlock Talent and give the first card draw at the first prestige. The earlier proposal for an introductory draw 10–15 minutes into play is superseded.
 - Add Kaju Katli rewards through achievements and daily/weekly objectives later. Those systems and their currency supply are deferred from the initial economy baseline. Rewarded ads and ad-funded rewards are excluded from the initial redesign. Prestige free draws remain in the initial design. One 100-Kaju-Katli gift after the second prestige is confirmed.
 - Use India / INR first, with other regions localized later. Initial packs are confirmed at 1,000 / 6,000 / 13,000 / 28,000 KK for ₹99 / ₹499 / ₹999 / ₹1,999; platform price availability is checked during implementation.
-- Remain in planning. Markdown notes are permitted; implementation is not authorized.
+- The current Unity implementation is accepted as of 7 October. This document update records that choice; release service activation and acceptance remain separate work.
 
 ## Current plan and source of truth
 
@@ -61,7 +63,7 @@ V1 specification/report values take precedence over earlier numerical draft pass
 
 ## Selected cash-only progression
 
-**Cash-only progression is confirmed.** Every cash entry is available when its individual cash, ownership, level, and prior-upgrade requirements are met. Completed prestige count never locks catalogue sections.
+**Cash-only progression is confirmed.** Buy any unowned run entry when its price is affordable, without product, level, family, previous-upgrade or prestige-count gates.
 
 The main catalogue, specification, and model now use the same selected baseline: later price-band growth x31 and permanent income 6+3×(sqrt(F)−1), with x1 at zero Fame. Prestige remains valuable for Fame and free cards. U still counts different cash entries ever purchased for the lifetime draw bonus; N still advances the next-run earnings target.
 
@@ -79,7 +81,7 @@ Opening and visual retention are now confirmed: keep earned decorations, rebuild
 - Later free draws: 1+floor(log4(E/T)), plus floor(U/250) when E>=4T. Thresholds remain recommendations; the hybrid metric is selected.
 - All cash prices/effects and concrete source-level requirements are now supplied. No numeric placeholder is needed to run this candidate.
 
-## Executed results
+## Historical executed results (1 October; not current pacing validation)
 
 The free-player reference reaches first prestige at eight elapsed hours, and the sustained benchmark at about 2h 6m. The x6 first-rebuild diagnostic, with cards suppressed, is about 5.89x faster sustained and about 3.92x faster under matched mixed visits. Actual overnight absence can postpone a purchase.
 
@@ -87,7 +89,7 @@ Thirty-two free-player histories complete on days 75 / 86 / 98 at the sample 10t
 
 The first-day test uses 15/5/5/5/10 minutes at elapsed hours 0/2/4/6/8, totalling forty minutes. The regular twenty-minute reference uses 4/4/12-minute visits separated by eight and six hours; there is no invented overnight login or purchase. The shorter initial 24-minute test schedule has been superseded.
 
-## Review risks and later implementation
+## Historical review risks and implementation planning
 
 Review the early reveal of all eight families, the transition after the introductory price band, and small-pack perceived value. The longest named-upgrade gap in the sustained reference is about 13.7 minutes; product/tap investments remain available, but engagement is untested.
 

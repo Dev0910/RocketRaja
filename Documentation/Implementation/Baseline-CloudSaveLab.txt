@@ -1,0 +1,29 @@
+PASS: Complete game snapshot validates
+PASS: Large amounts, preferences, permanent progress and receipts round-trip
+PASS: Modified cloud payload fails checksum
+PASS: Account enters gameplay only after initial confirmed commit
+PASS: An immediate account save reaches the cloud
+PASS: Retrying the same upload receipt cannot commit twice
+PASS: A stale revision cannot overwrite progress
+PASS: Checkpoint metadata is atomic and account-bound
+PASS: A recovered acknowledged upload becomes a confirmed checkpoint
+PASS: Changes during an in-flight upload survive in a follow-up checkpoint
+PASS: Lost acknowledgment pauses play without repeating the accepted mutation
+PASS: Reconnect recovers a server-accepted upload exactly once
+PASS: Offline session blocks every direct economy command and late reward callback
+PASS: Device handoff pauses the old session and flushes before releasing ownership
+PASS: Handoff includes passive earnings accumulated after the last queued checkpoint
+PASS: The second device receives the complete saved progress with a new ownership generation
+PASS: The old device cannot save after ownership changes
+PASS: Two live devices cannot hold the same account lease
+PASS: A crashed device can be replaced after server lease expiry
+PASS: Superseded local checkpoint is not eligible for automatic replay
+PASS: Repeated reconnect cannot double-award offline earnings
+PASS: Account revalidation after an ad excludes ad time from offline earnings
+PASS: An unacknowledged upload timeout pauses play and retains its local checkpoint
+PASS: A late server acknowledgment cannot silently resume a paused session
+PASS: Explicit reconnection restores the accepted timed-out upload once
+PASS: Restart uploads a valid interrupted local checkpoint without losing or duplicating progress
+PASS: Restart with Unity empty follow-up recovers not yet uploaded receipt exactly once
+PASS: Restart with Unity empty follow-up recovers already accepted receipt exactly once
+All 28 cloud protocol checks passed. Artifacts: C:\Users\Dev\AppData\Local\Temp\RocketRajaCloudTests-fe0d905813a240cbaf8bd47f865ee281

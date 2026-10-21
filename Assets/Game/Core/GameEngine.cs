@@ -42,7 +42,7 @@ namespace RocketRaja.Core
         public Amount NormalIncome => Enumerable.Range(0, 8).Aggregate(Amount.Zero, (a, i) => a + ProductIncome(i));
         public Amount TapIncome => new Amount(1 + State.tapLevel * 1.4) * RunMultiplier(Effect.TapProfit) * Math.Pow(Data.legacy[8].valuePerRank, State.Legacy(8));
         public double RushMultiplier => State.skills[0].activeUntil > State.now && SkillRank(0) > 0 ? Data.skills[0].values[SkillRank(0) - 1] : 1;
-        public Amount LiveIncome => NormalIncome * RushMultiplier * (State.sponsorUntil > State.now ? 2 : 1);
+        public Amount LiveIncome => NormalIncome * RushMultiplier;
         public double OfflineCap => (8 + Data.legacy[10].valuePerRank * State.Legacy(10)) * 3600;
         public void Grant(Amount amount, bool eligible = true)
         {
@@ -60,11 +60,9 @@ namespace RocketRaja.Core
             {
                 double stop = end;
                 foreach (var skill in State.skills) if (skill.activeUntil > State.now) stop = Math.Min(stop, skill.activeUntil);
-                if (State.sponsorUntil > State.now) stop = Math.Min(stop, State.sponsorUntil);
                 double duration = stop - State.now;
                 Amount earned = NormalIncome * RushMultiplier * duration;
                 Grant(earned);
-                if (State.sponsorUntil > State.now) Grant(earned, false);
                 int rank = SkillRank(1);
                 if (rank > 0 && State.skills[1].activeUntil > State.now) Grant(TapIncome * Data.skills[1].values[rank - 1] * duration);
                 State.now = stop; State.runSeconds += duration;
@@ -214,20 +212,8 @@ namespace RocketRaja.Core
             if (elapsed >= 60 && reward > Amount.Zero) { State.pendingOfflineId = Guid.NewGuid().ToString("N"); State.pendingOfflineReward = reward; }
             Touch(true); return reward;
         }
-        public bool RewardAd(string receipt, string placement, string offlineId = null)
-        {
-            if (!CanMutate) return false;
-            if (string.IsNullOrEmpty(receipt) || State.claimedRewards.Contains(receipt)) return false;
-            if (placement == "sponsor") { if (State.sponsorUntil > State.now) return false; State.sponsorUntil = State.now + 300; }
-            else if (placement == "offline")
-            {
-                if (string.IsNullOrEmpty(offlineId) || offlineId != State.pendingOfflineId) return false;
-                Grant(State.pendingOfflineReward, false); State.pendingOfflineId = null; State.pendingOfflineReward = Amount.Zero;
-            }
-            else return false;
-            State.claimedRewards.Add(receipt); if (State.claimedRewards.Count > 128) State.claimedRewards.RemoveAt(0);
-            Touch(true); return true;
-        }
+        // Read old receipt/sponsor fields for compatibility; no retired reward can mutate this version.
+        public bool RewardAd(string receipt, string placement, string offlineId = null) => false;
         public void DismissOffline() { if (!CanMutate) return; State.pendingOfflineId = null; State.pendingOfflineReward = Amount.Zero; Touch(true); }
     }
 }

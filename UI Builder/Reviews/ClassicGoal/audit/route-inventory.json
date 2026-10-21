@@ -1,0 +1,1218 @@
+[
+  {
+    "name": "Legacy-360x540",
+    "screen": {
+      "tab": "Legacy",
+      "sheets": [],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 151,
+      "scroll": 1466
+    },
+    "text": "1× Pull\n1 free pull\n5× Pull\n400 KK\nCommon\n4 / 28 discovered\nPhuljhari Showcase\nLvl 1\nAnar Showcase\nLvl 0\nChakri Showcase\nLvl 2\nRocket Showcase\nLvl 0\nSmall Cracker Showcase\nLvl 0\nCracker String Showcase\nLvl 0\nAerial Showcase\nLvl 0\nCelebration Showcase\nLvl 0\nPhuljhari Wholesale\nLvl 0\nAnar Wholesale\nLvl 0\nChakri Wholesale\nLvl 0\nRocket Wholesale\nLvl 0\nSmall Cracker Wholesale\nLvl 0\nCracker String Wholesale\nLvl 0\nAerial Wholesale\nLvl 0\nCelebration Wholesale\nLvl 0\nRare\n4 / 28 discovered\nMaster Salesperson\nLvl 1\nPractice Pays\nLvl 0\nFestival Rhythm\nLvl 1\nHelping Hands Rota\nLvl 0\nExpress Orders\nLvl 0\nFestival Encore\nLvl 0\nExtra Shift\nLvl 0\nCelebration Contract\nLvl 0\nNight Sales\nLvl 0\nLong Opening Hours\nLvl 0\nLegendary\n4 / 28 discovered\nFestival Brand\nLvl 0\nMaster Negotiator\nLvl 0"
+  },
+  {
+    "name": "Shop-360x540",
+    "screen": {
+      "tab": "Shop",
+      "sheets": [],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 151,
+      "scroll": 627
+    },
+    "text": "KAJU KATLI\n100 KK\nYour collection\nStore purchases are not available yet.Try again\nSmall box\n\n1,000 KK\n10 Talent draws\n\n₹99\nView pack\nFestival box\n\n6,000 KK\n60 Talent draws\n\n₹499\nView pack\nCelebration box\n\n13,000 KK\n130 Talent draws\n\n₹999\nView pack\nGrand celebration box\n\n28,000 KK\n280 Talent draws\n\n₹1,999\nView pack\n\nOne Talent draw costs 100 KK.\nCommon 75% · Rare 22% · Legendary 3%.\n\nSee card odds\n\nPreview prices · no real payment.\nFinal prices will come from your app store."
+  },
+  {
+    "name": "Upgrades-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Upgrades"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 2132
+    },
+    "text": "Cash upgrades\nCategory\nAll\nProducts\nTapping\nSkills\nShop\nShow\nAvailable\nUpcoming\nOwned\nFull\n\n996 matching · All / Available\nAvailable includes every unowned upgrade, regardless of cash.\n\nAnar: Gift Packaging I\n\n×2 Anar income\n\nFirst purchase\n₹28.67\nBuy upgrade\nSales Pitch I\n\n×2 direct tap income\n\nFirst purchase\n₹41.1\nBuy upgrade\nFestival Footfall I\n\n×2 normal shop income\n\nFirst purchase\n₹58.92\nBuy upgrade\nPhuljhari: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹84.48\nBuy upgrade\nChakri: Gift Packaging I\n\n×2 Chakri income\n\nFirst purchase\n₹173.74\nBuy upgrade\nRockets: Gift Packaging I\n\n×2 Rockets income\n\nFirst purchase\n₹249.18\nBuy upgrade\nCounter Display I\n\n×2 direct tap income\n\nFirst purchase\n₹357.43\nBuy upgrade\nUpgrade Price Discount 1\n\nCash upgrade prices ×0.9\n\nFirst purchase\n₹512.75\nBuy upgrade\nAnar: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹735.63\nBuy upgrade\nSmall crackers: Gift Packaging I\n\n×2 Small crackers income\n\nFirst purchase\n₹1.51K\nBuy upgrade\nCracker strings: Gift Packaging I\n\n×2 Cracker strings income\n\nFirst purchase\n₹2.17K\nBuy upgrade\nAerial shots Signature Breakthrough I\n\n×2 Aerial shots income\n\nFirst purchase\n₹3.12K\nBuy upgrade\nCelebration boxes: Gift Packaging I\n\n×2 Celebration boxes income\n\nFirst purchase\n₹4.48K\nBuy upgrade\nPractice Routine I\n\nTap training prices ×0.1\n\nFirst purchase\n₹6.43K\nBuy upgrade\nPhuljhari: Festival Display I\n\n×2 Phuljhari income\n\nFirst purchase\n₹9.23K\nBuy upgrade\nAnar: Festival Display I\n\n×2 Anar income\n\nFirst purchase\n₹13.25K\nBuy upgrade\nChakri Signature Breakthrough I\n\n×2 Chakri income\n\nFirst purchase\n₹27.33K\nBuy upgrade\nRockets: Festival Display I\n\n×2 Rockets income\n\nFirst purchase\n₹39.25K\nBuy upgrade\nChakri: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹56.38K\nBuy upgrade\nShop Showmanship I\n\n×2 direct tap income\n\nFirst purchase\n₹81K\nBuy upgrade\nPrevious\nPage 1 / 50\nNext\nReview Buy All\nBack"
+  },
+  {
+    "name": "BuyAll-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "BuyAll"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 273,
+      "scroll": 1119
+    },
+    "text": "Review your purchases\nOnly the reviewed upgrades\n\nScope · All / All targets\n\nBudget · ₹1.24M\n\n24 upgrades · ₹1.00M\n\n24 first purchases\n\nAnar: Gift Packaging I\n₹28.67\nSales Pitch I\n₹41.1\nFestival Footfall I\n₹58.92\nPhuljhari: Wholesale Deal I\n₹84.48\nChakri: Gift Packaging I\n₹173.74\nRockets: Gift Packaging I\n₹249.18\nCounter Display I\n₹357.43\nUpgrade Price Discount 1\n₹512.75\nAnar: Wholesale Deal I\n₹662.07\nSmall crackers: Gift Packaging I\n₹1.36K\nCracker strings: Gift Packaging I\n₹1.96K\nAerial shots Signature Breakthrough I\n₹2.81K\nCelebration boxes: Gift Packaging I\n₹4.03K\nPractice Routine I\n₹5.79K\nPhuljhari: Festival Display I\n₹8.31K\nAnar: Festival Display I\n₹11.93K\nChakri Signature Breakthrough I\n₹24.60K\nRockets: Festival Display I\n₹35.33K\nChakri: Wholesale Deal I\n₹50.75K\nShop Showmanship I\n₹72.90K\nSmall crackers: Festival Display I\n₹104.73K\nCommunity Trust I\n₹150.49K\nCracker strings: Festival Display I\n₹216.25K\nAerial shots: Festival Display I\n₹310.77K\n\nNormal sales continue. New earnings never add upgrades to this list.\n\nProduct levels, tap levels, Talent and KK are not included.\n\nBuy reviewed upgrades\nRefresh review\nBack"
+  },
+  {
+    "name": "ProductDetail-0-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "ProductDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 444,
+      "scroll": 528
+    },
+    "text": "Phuljhari\nPhuljhari\n\nLvl : 25\n\nA little spark of celebration\n\nEarns ₹1.22K / second\n\nLvl 50 · profit ×3\nLvl 50\n\nMilestone reward\n\nMilestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.\n\nNext synergy bonus\n0/8 products at Lvl 50\n\nAll products: ×1 → another ×2\n\nPhuljhari (25), Anar (18), Chakri (12), Rockets (8), Small crackers (5), Cracker strings (3), Aerial shots (1), Celebration boxes (1)"
+  },
+  {
+    "name": "ProductDetail-7-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "ProductDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 444,
+      "scroll": 528
+    },
+    "text": "Celebration boxes\nCelebration boxes\n\nLvl : 1\n\nA whole festival in a box\n\nEarns ₹3.11K / second\n\nLvl 10 · profit ×2\nLvl 10\n\nMilestone reward\n\nMilestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.\n\nNext synergy bonus\n0/8 products at Lvl 50\n\nAll products: ×1 → another ×2\n\nPhuljhari (25), Anar (18), Chakri (12), Rockets (8), Small crackers (5), Cracker strings (3), Aerial shots (1), Celebration boxes (1)"
+  },
+  {
+    "name": "TapTraining-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "TapTraining"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 549
+    },
+    "text": "Salesmanship\nSalesmanship\n₹3.43K / tap\n\nLevel 12\n\nTrain your tapping\n\nLevel 12 → 72\n\nPer tap ₹3.43K → ₹117.84K\nNext: Lvl 25 · ×2\n\nChoose your quantity\n×1\n×10\n×100\nMax\n\nBuy 60 levels · ₹1.16M\n\nShow exact quoteBrowse tapping upgrades\nTrain ×60 · ₹1.16M\nBack"
+  },
+  {
+    "name": "Skills-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Skills"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 301,
+      "scroll": 301
+    },
+    "text": "Your skills\nFestival Rush\n\nReady to activate\n\nView skill\nHelping Hands\n\nReady to activate\n\nView skill\nBulk Order\n\nReady to activate\n\nView skill\n\nSkills reset on prestige. Permanent Talent bonuses apply after you buy the relevant skill again.\n\nBack"
+  },
+  {
+    "name": "SkillDetail-0-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 402
+    },
+    "text": "Festival Rush\nFestival Rush\nReady\nWhat it does\n\n×2 automatic sales for 30s. Manual and Helping Hands taps receive ×1.25.\n\nTiming & improvements\n\nCooldown · 285 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "SkillDetail-1-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 402
+    },
+    "text": "Helping Hands\nHelping Hands\nReady\nWhat it does\n\n3 automatic taps per second for 30s. Uses your tap payout.\n\nTiming & improvements\n\nCooldown · 300 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "SkillDetail-2-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 402
+    },
+    "text": "Bulk Order\nBulk Order\nReady\nWhat it does\n\nPays 120 seconds of normal sales immediately. Current payout ₹1.23M.\n\nTiming & improvements\n\nCooldown · 600 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "CardDetail-0-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 470,
+      "scroll": 470
+    },
+    "text": "Phuljhari Showcase\nPhuljhari Showcase\nLvl 1\n✦ COMMON ✦\n\n×1.2\nPhuljhari income\n\n◆\n\nA brighter display. A busier shop.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "CardDetail-18-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 470,
+      "scroll": 470
+    },
+    "text": "Festival Rhythm\nFestival Rhythm\nLvl 1\n✦ RARE ✦\n\n×0.95\nFestival Rush cooldown\n\n◆\n\nReady for the next rush.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "CardDetail-27-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 470,
+      "scroll": 470
+    },
+    "text": "Master Negotiator\nMaster Negotiator\nLvl 0\n✦ LEGENDARY ✦\n\n×1\nCash upgrade prices\n\n◆\n\nA better deal for a brighter shop.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "DrawReveal-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "DrawReveal"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 301,
+      "scroll": 301
+    },
+    "text": "A little festival magic\n\nYour card awaits\n\nLvl 1\nPhuljhari Showcase\nContinue"
+  },
+  {
+    "name": "Prestige-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Prestige"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 610
+    },
+    "text": "A brighter beginning\nKeep growing your shop\n₹4.8M earned\n\nRun target · ₹153.86ac\n\nProducts ×6 · taps ×31.8\n\nYour rewards\n\n0 free Talent draws\n\nCatalogue milestone: 0 extra draw credits. Next lifetime milestone · 250 first purchases.\n\nYour second prestige also gives 100 KK once.\n\nResets\nRun cash\nProduct & tap levels\nCash upgrades\nSkills & active effects\nStays\nFame & Talent\nKK & free draws\nLifetime discoveries\nShop decorations\nYour next beginning\n\nYour opening cash covers a manual first Phuljhari purchase. Permanent discounts still apply.\n\nNext run target · ₹153.86ac\n\nKeep growing to ₹153.86ac\nBack"
+  },
+  {
+    "name": "Offline-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Offline"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 328,
+      "scroll": 422
+    },
+    "text": "Welcome back\n₹147.45M\n\nAlready added to your cash\n\nWhile you were away\n\nAway for 10 hours · credited for 8 hours\n\nNormal sales at departure · ₹10.24K/s\n\n50% earnings efficiency · 2 hours exceeded storage\n\nYour next step\n\nCheck your product levels or browse new upgrades.\n\nClosing keeps the credited earnings. Skills and manual taps are excluded.\n\nView your next step\nContinue to your shop"
+  },
+  {
+    "name": "Statistics-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Statistics"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 508
+    },
+    "text": "Your shop in numbers\nThis run\nEarned this run\n₹4.8M\nNormal sales\n₹10.24K/s\nManual taps\n12480\nTap payout\n₹3.43K\nOwned upgrades\n4 / 1,000\nYour whole journey\nPrestiges\n1\nFame\n1\nDiscovered upgrades\n4 / 1,000\nTalent cards\n4 / 28\nLifetime earnings\n₹24M\nBack"
+  },
+  {
+    "name": "Settings-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Settings"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 515
+    },
+    "text": "Settings\nGuest · local progress\nMusic\n\nFestival atmosphere\n\nON\nSound effects\n\nTaps and celebrations\n\nON\nReduced motion\n\nSettle effects instantly\n\nOFF\nShop name · DIWALI DUKAANAccount & cloud savePrivacyHow to play\nBack"
+  },
+  {
+    "name": "Naming-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Naming"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 182,
+      "scroll": 182
+    },
+    "text": "Make it your own\nName your shop\n\nA name for your little corner of the festival.\n\nShop name\nSave shop name\nBack"
+  },
+  {
+    "name": "Privacy-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Privacy"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 392
+    },
+    "text": "Your privacy\nYour progress\n\nGuest games stay on this device. Google sync is optional. Account games use a separate cloud save; one device plays at a time.\n\nPurchases & information\n\nA real store purchase must be verified before Kaju Katli is delivered. No payment, authentication or analytics service runs in this preview.\n\nControl your experience\n\nMusic, sound and reduced motion are available in Settings. Recovery choices explain which save will be used before you continue.\n\nBack"
+  },
+  {
+    "name": "Account-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Account"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 380,
+      "scroll": 380
+    },
+    "text": "Account & saves\nPlaying as a guest\n\nThis game stays on your device. You can connect Google to keep a separate cloud game.\n\nContinue with Google\nReview saved games\nPlay on this device\nSave recovery options\n\nAccount actions are visual examples here. No sign-in or cloud request is sent.\n\nBack"
+  },
+  {
+    "name": "Welcome-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Welcome"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 188,
+      "scroll": 188
+    },
+    "text": "Welcome to Rocket Raja\nYour festival starts here\n\nBuild a little fireworks shop into a lasting legacy.\n\nContinue with Google\nPlay as guest"
+  },
+  {
+    "name": "AccountCompare-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "AccountCompare"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 262,
+      "scroll": 262
+    },
+    "text": "Choose your progress\nOn this device\n\nYour guest shop · ₹4.8M earned this run\n\nThe guest save stays safe on this device.\n\nGoogle game\n\nExample cloud shop · 1 prestige · 4 Talent cards\n\nUse the Google game, or keep playing as your guest. These saves will not be merged.\n\nUse Google game\nKeep this guest"
+  },
+  {
+    "name": "Handoff-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Handoff"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 129,
+      "scroll": 129
+    },
+    "text": "Play on this device?\nOne shop, one active device\n\nTaking over here will stop gameplay on the previous device. Wait for its latest save before continuing.\n\nPlay here\nBack"
+  },
+  {
+    "name": "SaveRecovery-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SaveRecovery"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 358,
+      "scroll": 358
+    },
+    "text": "Your progress needs attention\nWe could not open this save\n\nKeep the existing files while you retry or choose an account. Starting a new local game requires a separate confirmation.\n\nTry loading again\nAccount options\nStart a new local game\nKeep files and leave"
+  },
+  {
+    "name": "Purchase-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Purchase"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 534
+    },
+    "text": "Kaju Katli pack\nSmall box\n\n1,000 Kaju Katli\n\nA treat for your Talent\n\n10 draws · 100 KK per draw\n\n₹99\n\nExample app-store price. No real payment in this HTML preview.\n\nEach draw uses the same pool: Common 75%, Rare 22%, Legendary 3%. No pack guarantees a rarity.\n\nChoose an outcome below to review the purchase flow.\n\nPreview successful purchase\nPreview pending purchase\nPreview cancellation\nPreview verification failure\nBack"
+  },
+  {
+    "name": "Appearance-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Appearance"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 471
+    },
+    "text": "Your shop’s journey\nYour shop, over the years\n\nEight familiar shelves keep their places. Product displays follow signature upgrades bought this run; permanent decorations celebrate lifetime discoveries.\n\nPhuljhari\n\nFour display appearances\n\nOwn product · first display\nSignature I · fuller shelves\nSignature IV · festive display\nSignature X · premium display\nDecorations that stay\n\nSix decoration stages unlock at 0, 100, 250, 500, 750 and 1,000 lifetime unique upgrades. These decorations stay after prestige. Product displays rebuild with current-run signatures.\n\nThis candidate preserves the original stall artwork. Final placement of later decoration layers can follow your review.\n\nBack"
+  },
+  {
+    "name": "Help-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Help"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 383,
+      "scroll": 392
+    },
+    "text": "A little guidance\nStart with a spark\n\nManually buy Phuljhari in Products. Products earn automatically; tap the counter on any main tab for extra cash.\n\nGrow your way\n\nPlayer contains tap training and the full upgrade browser. Products contains your eight families. Legacy brings together Fame and Talent. Shop contains Kaju Katli packs.\n\nBegin again, stronger\n\nPrestige resets the run while keeping Fame, Talent, KK, free credits, discoveries and decorations.\n\nBack"
+  },
+  {
+    "name": "Odds-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Odds"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 211,
+      "scroll": 211
+    },
+    "text": "Every card has a chance\nSame pool for every draw\n\nCommon · 75% / 16 cards = 4.6875% each\n\nRare · 22% / 10 cards = 2.2% each\n\nLegendary · 3% / 2 cards = 1.5% each\n\nFree draws and 100-KK draws use the same pool. Each duplicate adds one card level. There is no guaranteed rarity from buying a pack.\n\nBack"
+  },
+  {
+    "name": "Promote-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Promote"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 66,
+      "scroll": 66
+    },
+    "text": "Start your Google game\n\nThis Google account has no game yet. Your original guest save stays separate whichever option you choose.\n\nCopy eligible guest progress\nStart a fresh Google game\nBack"
+  },
+  {
+    "name": "SignOut-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SignOut"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 129,
+      "scroll": 129
+    },
+    "text": "Return to your guest game?\nKeep both journeys\n\nYour account progress must finish syncing before signing out. Your guest game remains separate.\n\nSave and sign out\nBack"
+  },
+  {
+    "name": "RecoveryConfirm-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "RecoveryConfirm"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 66,
+      "scroll": 66
+    },
+    "text": "Start a separate local game?\n\nThe unreadable save will be kept for recovery. This only changes the example state in this HTML preview.\n\nConfirm new local game\nBack"
+  },
+  {
+    "name": "RecoveryExit-360x540",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "RecoveryExit"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 66,
+      "scroll": 66
+    },
+    "text": "Your files are safe\n\nYou have left the blocked game. In Unity this action exits the application. This preview keeps the browser open.\n\nReturn to welcome"
+  },
+  {
+    "name": "Legacy-390x844",
+    "screen": {
+      "tab": "Legacy",
+      "sheets": [],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 289,
+      "scroll": 1469
+    },
+    "text": "1× Pull\n1 free pull\n5× Pull\n400 KK\nCommon\n4 / 28 discovered\nPhuljhari Showcase\nLvl 1\nAnar Showcase\nLvl 0\nChakri Showcase\nLvl 2\nRocket Showcase\nLvl 0\nSmall Cracker Showcase\nLvl 0\nCracker String Showcase\nLvl 0\nAerial Showcase\nLvl 0\nCelebration Showcase\nLvl 0\nPhuljhari Wholesale\nLvl 0\nAnar Wholesale\nLvl 0\nChakri Wholesale\nLvl 0\nRocket Wholesale\nLvl 0\nSmall Cracker Wholesale\nLvl 0\nCracker String Wholesale\nLvl 0\nAerial Wholesale\nLvl 0\nCelebration Wholesale\nLvl 0\nRare\n4 / 28 discovered\nMaster Salesperson\nLvl 1\nPractice Pays\nLvl 0\nFestival Rhythm\nLvl 1\nHelping Hands Rota\nLvl 0\nExpress Orders\nLvl 0\nFestival Encore\nLvl 0\nExtra Shift\nLvl 0\nCelebration Contract\nLvl 0\nNight Sales\nLvl 0\nLong Opening Hours\nLvl 0\nLegendary\n4 / 28 discovered\nFestival Brand\nLvl 0\nMaster Negotiator\nLvl 0"
+  },
+  {
+    "name": "Shop-390x844",
+    "screen": {
+      "tab": "Shop",
+      "sheets": [],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 289,
+      "scroll": 647
+    },
+    "text": "KAJU KATLI\n100 KK\nYour collection\nStore purchases are not available yet.Try again\nSmall box\n\n1,000 KK\n10 Talent draws\n\n₹99\nView pack\nFestival box\n\n6,000 KK\n60 Talent draws\n\n₹499\nView pack\nCelebration box\n\n13,000 KK\n130 Talent draws\n\n₹999\nView pack\nGrand celebration box\n\n28,000 KK\n280 Talent draws\n\n₹1,999\nView pack\n\nOne Talent draw costs 100 KK.\nCommon 75% · Rare 22% · Legendary 3%.\n\nSee card odds\n\nPreview prices · no real payment.\nFinal prices will come from your app store."
+  },
+  {
+    "name": "Upgrades-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Upgrades"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 609,
+      "scroll": 2197
+    },
+    "text": "Cash upgrades\nCategory\nAll\nProducts\nTapping\nSkills\nShop\nShow\nAvailable\nUpcoming\nOwned\nFull\n\n996 matching · All / Available\nAvailable includes every unowned upgrade, regardless of cash.\n\nAnar: Gift Packaging I\n\n×2 Anar income\n\nFirst purchase\n₹28.67\nBuy upgrade\nSales Pitch I\n\n×2 direct tap income\n\nFirst purchase\n₹41.1\nBuy upgrade\nFestival Footfall I\n\n×2 normal shop income\n\nFirst purchase\n₹58.92\nBuy upgrade\nPhuljhari: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹84.48\nBuy upgrade\nChakri: Gift Packaging I\n\n×2 Chakri income\n\nFirst purchase\n₹173.74\nBuy upgrade\nRockets: Gift Packaging I\n\n×2 Rockets income\n\nFirst purchase\n₹249.18\nBuy upgrade\nCounter Display I\n\n×2 direct tap income\n\nFirst purchase\n₹357.43\nBuy upgrade\nUpgrade Price Discount 1\n\nCash upgrade prices ×0.9\n\nFirst purchase\n₹512.75\nBuy upgrade\nAnar: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹735.63\nBuy upgrade\nSmall crackers: Gift Packaging I\n\n×2 Small crackers income\n\nFirst purchase\n₹1.51K\nBuy upgrade\nCracker strings: Gift Packaging I\n\n×2 Cracker strings income\n\nFirst purchase\n₹2.17K\nBuy upgrade\nAerial shots Signature Breakthrough I\n\n×2 Aerial shots income\n\nFirst purchase\n₹3.12K\nBuy upgrade\nCelebration boxes: Gift Packaging I\n\n×2 Celebration boxes income\n\nFirst purchase\n₹4.48K\nBuy upgrade\nPractice Routine I\n\nTap training prices ×0.1\n\nFirst purchase\n₹6.43K\nBuy upgrade\nPhuljhari: Festival Display I\n\n×2 Phuljhari income\n\nFirst purchase\n₹9.23K\nBuy upgrade\nAnar: Festival Display I\n\n×2 Anar income\n\nFirst purchase\n₹13.25K\nBuy upgrade\nChakri Signature Breakthrough I\n\n×2 Chakri income\n\nFirst purchase\n₹27.33K\nBuy upgrade\nRockets: Festival Display I\n\n×2 Rockets income\n\nFirst purchase\n₹39.25K\nBuy upgrade\nChakri: Wholesale Deal I\n\nProduct level prices ×0.1\n\nFirst purchase\n₹56.38K\nBuy upgrade\nShop Showmanship I\n\n×2 direct tap income\n\nFirst purchase\n₹81K\nBuy upgrade\nPrevious\nPage 1 / 50\nNext\nReview Buy All\nBack"
+  },
+  {
+    "name": "BuyAll-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "BuyAll"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 552,
+      "scroll": 1100
+    },
+    "text": "Review your purchases\nOnly the reviewed upgrades\n\nScope · All / All targets\n\nBudget · ₹1.24M\n\n24 upgrades · ₹1.00M\n\n24 first purchases\n\nAnar: Gift Packaging I\n₹28.67\nSales Pitch I\n₹41.1\nFestival Footfall I\n₹58.92\nPhuljhari: Wholesale Deal I\n₹84.48\nChakri: Gift Packaging I\n₹173.74\nRockets: Gift Packaging I\n₹249.18\nCounter Display I\n₹357.43\nUpgrade Price Discount 1\n₹512.75\nAnar: Wholesale Deal I\n₹662.07\nSmall crackers: Gift Packaging I\n₹1.36K\nCracker strings: Gift Packaging I\n₹1.96K\nAerial shots Signature Breakthrough I\n₹2.81K\nCelebration boxes: Gift Packaging I\n₹4.03K\nPractice Routine I\n₹5.79K\nPhuljhari: Festival Display I\n₹8.31K\nAnar: Festival Display I\n₹11.93K\nChakri Signature Breakthrough I\n₹24.60K\nRockets: Festival Display I\n₹35.33K\nChakri: Wholesale Deal I\n₹50.75K\nShop Showmanship I\n₹72.90K\nSmall crackers: Festival Display I\n₹104.73K\nCommunity Trust I\n₹150.49K\nCracker strings: Festival Display I\n₹216.25K\nAerial shots: Festival Display I\n₹310.77K\n\nNormal sales continue. New earnings never add upgrades to this list.\n\nProduct levels, tap levels, Talent and KK are not included.\n\nBuy reviewed upgrades\nRefresh review\nBack"
+  },
+  {
+    "name": "ProductDetail-0-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "ProductDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 570,
+      "scroll": 570
+    },
+    "text": "Phuljhari\nPhuljhari\n\nLvl : 25\n\nA little spark of celebration\n\nEarns ₹1.22K / second\n\nLvl 50 · profit ×3\nLvl 50\n\nMilestone reward\n\nMilestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.\n\nNext synergy bonus\n0/8 products at Lvl 50\n\nAll products: ×1 → another ×2\n\nPhuljhari (25), Anar (18), Chakri (12), Rockets (8), Small crackers (5), Cracker strings (3), Aerial shots (1), Celebration boxes (1)"
+  },
+  {
+    "name": "ProductDetail-7-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "ProductDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 570,
+      "scroll": 570
+    },
+    "text": "Celebration boxes\nCelebration boxes\n\nLvl : 1\n\nA whole festival in a box\n\nEarns ₹3.11K / second\n\nLvl 10 · profit ×2\nLvl 10\n\nMilestone reward\n\nMilestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.\n\nNext synergy bonus\n0/8 products at Lvl 50\n\nAll products: ×1 → another ×2\n\nPhuljhari (25), Anar (18), Chakri (12), Rockets (8), Small crackers (5), Cracker strings (3), Aerial shots (1), Celebration boxes (1)"
+  },
+  {
+    "name": "TapTraining-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "TapTraining"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 576,
+      "scroll": 576
+    },
+    "text": "Salesmanship\nSalesmanship\n₹3.43K / tap\n\nLevel 12\n\nTrain your tapping\n\nLevel 12 → 72\n\nPer tap ₹3.43K → ₹117.84K\nNext: Lvl 25 · ×2\n\nChoose your quantity\n×1\n×10\n×100\nMax\n\nBuy 60 levels · ₹1.16M\n\nShow exact quoteBrowse tapping upgrades\nTrain ×60 · ₹1.16M\nBack"
+  },
+  {
+    "name": "Skills-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Skills"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 329,
+      "scroll": 329
+    },
+    "text": "Your skills\nFestival Rush\n\nReady to activate\n\nView skill\nHelping Hands\n\nReady to activate\n\nView skill\nBulk Order\n\nReady to activate\n\nView skill\n\nSkills reset on prestige. Permanent Talent bonuses apply after you buy the relevant skill again.\n\nBack"
+  },
+  {
+    "name": "SkillDetail-0-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 423,
+      "scroll": 423
+    },
+    "text": "Festival Rush\nFestival Rush\nReady\nWhat it does\n\n×2 automatic sales for 30s. Manual and Helping Hands taps receive ×1.25.\n\nTiming & improvements\n\nCooldown · 285 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "SkillDetail-1-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 423,
+      "scroll": 423
+    },
+    "text": "Helping Hands\nHelping Hands\nReady\nWhat it does\n\n3 automatic taps per second for 30s. Uses your tap payout.\n\nTiming & improvements\n\nCooldown · 300 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "SkillDetail-2-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SkillDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 423,
+      "scroll": 423
+    },
+    "text": "Bulk Order\nBulk Order\nReady\nWhat it does\n\nPays 120 seconds of normal sales immediately. Current payout ₹1.23M.\n\nTiming & improvements\n\nCooldown · 600 seconds\n\nNormal sales are the base for tap links and Bulk Order. Temporary Rush sales are excluded.\n\nBrowse power & timing upgrades\nActivate skill\nBack"
+  },
+  {
+    "name": "CardDetail-0-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 545,
+      "scroll": 545
+    },
+    "text": "Phuljhari Showcase\nPhuljhari Showcase\nLvl 1\n✦ COMMON ✦\n\n×1.2\nPhuljhari income\n\n◆\n\nA brighter display. A busier shop.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "CardDetail-18-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 545,
+      "scroll": 545
+    },
+    "text": "Festival Rhythm\nFestival Rhythm\nLvl 1\n✦ RARE ✦\n\n×0.95\nFestival Rush cooldown\n\n◆\n\nReady for the next rush.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "CardDetail-27-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "CardDetail"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 545,
+      "scroll": 545
+    },
+    "text": "Master Negotiator\nMaster Negotiator\nLvl 0\n✦ LEGENDARY ✦\n\n×1\nCash upgrade prices\n\n◆\n\nA better deal for a brighter shop.\n\n✦ Permanent bonus ✦"
+  },
+  {
+    "name": "DrawReveal-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "DrawReveal"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 453,
+      "scroll": 453
+    },
+    "text": "A little festival magic\n\nYour card awaits\n\nLvl 1\nPhuljhari Showcase\nContinue"
+  },
+  {
+    "name": "Prestige-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Prestige"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 609,
+      "scroll": 644
+    },
+    "text": "A brighter beginning\nKeep growing your shop\n₹4.8M earned\n\nRun target · ₹153.86ac\n\nProducts ×6 · taps ×31.8\n\nYour rewards\n\n0 free Talent draws\n\nCatalogue milestone: 0 extra draw credits. Next lifetime milestone · 250 first purchases.\n\nYour second prestige also gives 100 KK once.\n\nResets\nRun cash\nProduct & tap levels\nCash upgrades\nSkills & active effects\nStays\nFame & Talent\nKK & free draws\nLifetime discoveries\nShop decorations\nYour next beginning\n\nYour opening cash covers a manual first Phuljhari purchase. Permanent discounts still apply.\n\nNext run target · ₹153.86ac\n\nKeep growing to ₹153.86ac\nBack"
+  },
+  {
+    "name": "Offline-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Offline"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 453,
+      "scroll": 453
+    },
+    "text": "Welcome back\n₹147.45M\n\nAlready added to your cash\n\nWhile you were away\n\nAway for 10 hours · credited for 8 hours\n\nNormal sales at departure · ₹10.24K/s\n\n50% earnings efficiency · 2 hours exceeded storage\n\nYour next step\n\nCheck your product levels or browse new upgrades.\n\nClosing keeps the credited earnings. Skills and manual taps are excluded.\n\nView your next step\nContinue to your shop"
+  },
+  {
+    "name": "Statistics-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Statistics"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 543,
+      "scroll": 543
+    },
+    "text": "Your shop in numbers\nThis run\nEarned this run\n₹4.8M\nNormal sales\n₹10.24K/s\nManual taps\n12480\nTap payout\n₹3.43K\nOwned upgrades\n4 / 1,000\nYour whole journey\nPrestiges\n1\nFame\n1\nDiscovered upgrades\n4 / 1,000\nTalent cards\n4 / 28\nLifetime earnings\n₹24M\nBack"
+  },
+  {
+    "name": "Settings-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Settings"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 538,
+      "scroll": 538
+    },
+    "text": "Settings\nGuest · local progress\nMusic\n\nFestival atmosphere\n\nON\nSound effects\n\nTaps and celebrations\n\nON\nReduced motion\n\nSettle effects instantly\n\nOFF\nShop name · DIWALI DUKAANAccount & cloud savePrivacyHow to play\nBack"
+  },
+  {
+    "name": "Naming-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Naming"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 193,
+      "scroll": 193
+    },
+    "text": "Make it your own\nName your shop\n\nA name for your little corner of the festival.\n\nShop name\nSave shop name\nBack"
+  },
+  {
+    "name": "Privacy-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Privacy"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 421,
+      "scroll": 421
+    },
+    "text": "Your privacy\nYour progress\n\nGuest games stay on this device. Google sync is optional. Account games use a separate cloud save; one device plays at a time.\n\nPurchases & information\n\nA real store purchase must be verified before Kaju Katli is delivered. No payment, authentication or analytics service runs in this preview.\n\nControl your experience\n\nMusic, sound and reduced motion are available in Settings. Recovery choices explain which save will be used before you continue.\n\nBack"
+  },
+  {
+    "name": "Account-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Account"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 393,
+      "scroll": 393
+    },
+    "text": "Account & saves\nPlaying as a guest\n\nThis game stays on your device. You can connect Google to keep a separate cloud game.\n\nContinue with Google\nReview saved games\nPlay on this device\nSave recovery options\n\nAccount actions are visual examples here. No sign-in or cloud request is sent.\n\nBack"
+  },
+  {
+    "name": "Welcome-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Welcome"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 196,
+      "scroll": 196
+    },
+    "text": "Welcome to Rocket Raja\nYour festival starts here\n\nBuild a little fireworks shop into a lasting legacy.\n\nContinue with Google\nPlay as guest"
+  },
+  {
+    "name": "AccountCompare-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "AccountCompare"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 283,
+      "scroll": 283
+    },
+    "text": "Choose your progress\nOn this device\n\nYour guest shop · ₹4.8M earned this run\n\nThe guest save stays safe on this device.\n\nGoogle game\n\nExample cloud shop · 1 prestige · 4 Talent cards\n\nUse the Google game, or keep playing as your guest. These saves will not be merged.\n\nUse Google game\nKeep this guest"
+  },
+  {
+    "name": "Handoff-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Handoff"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 141,
+      "scroll": 141
+    },
+    "text": "Play on this device?\nOne shop, one active device\n\nTaking over here will stop gameplay on the previous device. Wait for its latest save before continuing.\n\nPlay here\nBack"
+  },
+  {
+    "name": "SaveRecovery-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SaveRecovery"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 372,
+      "scroll": 372
+    },
+    "text": "Your progress needs attention\nWe could not open this save\n\nKeep the existing files while you retry or choose an account. Starting a new local game requires a separate confirmation.\n\nTry loading again\nAccount options\nStart a new local game\nKeep files and leave"
+  },
+  {
+    "name": "Purchase-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Purchase"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 554,
+      "scroll": 554
+    },
+    "text": "Kaju Katli pack\nSmall box\n\n1,000 Kaju Katli\n\nA treat for your Talent\n\n10 draws · 100 KK per draw\n\n₹99\n\nExample app-store price. No real payment in this HTML preview.\n\nEach draw uses the same pool: Common 75%, Rare 22%, Legendary 3%. No pack guarantees a rarity.\n\nChoose an outcome below to review the purchase flow.\n\nPreview successful purchase\nPreview pending purchase\nPreview cancellation\nPreview verification failure\nBack"
+  },
+  {
+    "name": "Appearance-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Appearance"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 522,
+      "scroll": 522
+    },
+    "text": "Your shop’s journey\nYour shop, over the years\n\nEight familiar shelves keep their places. Product displays follow signature upgrades bought this run; permanent decorations celebrate lifetime discoveries.\n\nPhuljhari\n\nFour display appearances\n\nOwn product · first display\nSignature I · fuller shelves\nSignature IV · festive display\nSignature X · premium display\nDecorations that stay\n\nSix decoration stages unlock at 0, 100, 250, 500, 750 and 1,000 lifetime unique upgrades. These decorations stay after prestige. Product displays rebuild with current-run signatures.\n\nThis candidate preserves the original stall artwork. Final placement of later decoration layers can follow your review.\n\nBack"
+  },
+  {
+    "name": "Help-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Help"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 421,
+      "scroll": 421
+    },
+    "text": "A little guidance\nStart with a spark\n\nManually buy Phuljhari in Products. Products earn automatically; tap the counter on any main tab for extra cash.\n\nGrow your way\n\nPlayer contains tap training and the full upgrade browser. Products contains your eight families. Legacy brings together Fame and Talent. Shop contains Kaju Katli packs.\n\nBegin again, stronger\n\nPrestige resets the run while keeping Fame, Talent, KK, free credits, discoveries and decorations.\n\nBack"
+  },
+  {
+    "name": "Odds-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Odds"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 230,
+      "scroll": 230
+    },
+    "text": "Every card has a chance\nSame pool for every draw\n\nCommon · 75% / 16 cards = 4.6875% each\n\nRare · 22% / 10 cards = 2.2% each\n\nLegendary · 3% / 2 cards = 1.5% each\n\nFree draws and 100-KK draws use the same pool. Each duplicate adds one card level. There is no guaranteed rarity from buying a pack.\n\nBack"
+  },
+  {
+    "name": "Promote-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "Promote"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 75,
+      "scroll": 75
+    },
+    "text": "Start your Google game\n\nThis Google account has no game yet. Your original guest save stays separate whichever option you choose.\n\nCopy eligible guest progress\nStart a fresh Google game\nBack"
+  },
+  {
+    "name": "SignOut-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "SignOut"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 141,
+      "scroll": 141
+    },
+    "text": "Return to your guest game?\nKeep both journeys\n\nYour account progress must finish syncing before signing out. Your guest game remains separate.\n\nSave and sign out\nBack"
+  },
+  {
+    "name": "RecoveryConfirm-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "RecoveryConfirm"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 75,
+      "scroll": 75
+    },
+    "text": "Start a separate local game?\n\nThe unreadable save will be kept for recovery. This only changes the example state in this HTML preview.\n\nConfirm new local game\nBack"
+  },
+  {
+    "name": "RecoveryExit-390x844",
+    "screen": {
+      "tab": "Home",
+      "sheets": [
+        "RecoveryExit"
+      ],
+      "events": [],
+      "fixture": "progressed",
+      "kk": 100,
+      "credits": 3
+    },
+    "body": {
+      "height": 75,
+      "scroll": 75
+    },
+    "text": "Your files are safe\n\nYou have left the blocked game. In Unity this action exits the application. This preview keeps the browser open.\n\nReturn to welcome"
+  }
+]

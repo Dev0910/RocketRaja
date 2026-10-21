@@ -1,0 +1,206 @@
+{
+  "files": [
+    {
+      "path": "Assets/Scenes/Main.unity",
+      "sha256": "C3FB4616A58DB54AE233E853F96C142E54CA547F67A76E85674A1EAE3284083C"
+    },
+    {
+      "path": "Assets/Scenes/Bootstrap.unity",
+      "sha256": "C2E7B62162DE24FA8DD808EB4AC3AE7CA493580C399D7E0D2F60B056C3C7CD08"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameController.cs",
+      "sha256": "EA642027A99F3F6E3A4EE6E9DA89121B18A4ECD4A7374B57FA93D68AD0D728F0"
+    },
+    {
+      "path": "Assets/Game/Runtime/GameView.cs",
+      "sha256": "E3924FA3FA65B4F9F6485C9C678F2F7967F3F57BD2AB8333F5526850AC5887D0"
+    },
+    {
+      "path": "Assets/Game/Editor/BuildGame.cs",
+      "sha256": "6E8B4B5346D339C5623F2D55CEEBAA84955EE07FB011B7C8443F56B4C7524DED"
+    },
+    {
+      "path": "Assets/Game/Editor/ValidateGame.cs",
+      "sha256": "3ED9532107088C933EC0E51AE45977489883E8F5BE0BB32986530C100113BB55"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito Medium SDF.asset.meta",
+      "sha256": "8409087760670FE7E760DC129BF591760BC50068776D51699D98177F7A1DCDF8"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito Medium SDF.asset",
+      "sha256": "2DB7640B7BADF0CB3EA0C771907C9680A946C5D33095ED4CA7804C861041E600"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito ExtraBold SDF.asset.meta",
+      "sha256": "53825062B999D24E48F35F2D339AB3163FC23E024E6C93F775D1BD006F43B403"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito ExtraBold SDF.asset",
+      "sha256": "6701E30C94CF98549EDCFB58FC86AE7FCA881F0F561CB06C6B17714C571CB571"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Fraunces ExtraBold SDF.asset.meta",
+      "sha256": "8D138147C0F38070A0FEE353215126AD8AC90A4A4B821872FF9184214448101E"
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Fraunces ExtraBold SDF.asset",
+      "sha256": "6B343E27717BCE62799D2F4F6057257AC896C97DD453E131090BB9E9A0D0CAB8"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Tap Reward Material.mat.meta",
+      "sha256": "F87DE6125818CFE4E40D10634C3E49D3873D09668E7B192AACB2819EE142480C"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Tap Reward Material.mat",
+      "sha256": "216048177AFBB7DFCD6C6B47F57DCD87DC613308D75C6E87BA412B4DF6018A88"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Store Name Screen.prefab.meta",
+      "sha256": "A22C054916A45641F492A710DF651D8B56027380B392966D1B757FA634469560"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Store Name Screen.prefab",
+      "sha256": "109B1DB51F7C8F59069E1F75A6D3B9773A3B659612644AAE3D31D51679A66A06"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Statistics Screen.prefab.meta",
+      "sha256": "9CC4732918B59D06521C623F194024842C2035B297EEE43AFD61BDB6F96B9500"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Statistics Screen.prefab",
+      "sha256": "CC0887069938E79AD544E0687AB49FD1B803A154DDAA0473143A95453213CB78"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Skills Screen.prefab.meta",
+      "sha256": "6DA15C3CB5A8408836561DF813B34999F421C03F18C351AE4626336D1E29173F"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Skills Screen.prefab",
+      "sha256": "33510F7B5F0FF05B66344DD6212686C244E8D8EA827FE2EE51FC65EEB4385C74"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Settings Screen.prefab.meta",
+      "sha256": "B5514BFF185E057F316F6C8020CD8975B3BABAC94FB169FAFDBCD76A6F1F0AD7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Settings Screen.prefab",
+      "sha256": "CD9AAC8CC0D93BC9030FCCF06F00E4413F9FF7BAAAD4303183E6D8225F17B6D0"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Save Recovery Screen.prefab.meta",
+      "sha256": "C9FE8452A144B6E54D0D765DA059C7F000D9DCA976EF523FD163EC351009C764"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Save Recovery Screen.prefab",
+      "sha256": "1E44B9950085887946DEF1A6E098E6E32A11EF4DCB49FFAA60C423F5EB675511"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Products Screen.prefab.meta",
+      "sha256": "94F8E89FAC22786A8B20FDC18449FC4640516D4DC7A339181908885657C91800"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Products Screen.prefab",
+      "sha256": "89597036CF7B788A13DEF862F6A4680AEB74BBCEE154E77F3E499024411DCC3A"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Product Detail Screen.prefab.meta",
+      "sha256": "CE68CE6C182A7A748CFDB4D0DE6E871F663AEB0914B4373527E3BF2EAC9E1A7D"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Product Detail Screen.prefab",
+      "sha256": "587B0BE3580F49850B6E8FC35719476B5FF5A2E3A119D09E1C21E826B77CD0D8"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Privacy Screen.prefab.meta",
+      "sha256": "A9EFD81D9308A1C0542EFB680A4CB0C8949185EBB32277D7BC7EA50DEADA97A8"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Privacy Screen.prefab",
+      "sha256": "CD37EB3792355EF66C54D8D44C16391C1F5E1A603BE14BC5B5BA9FDA5D5CF6FB"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Prestige Screen.prefab.meta",
+      "sha256": "56026606DD3A0359EBFA6C24BD6AA55B28A63124A5C711A87D0CC8FAC233EA7B"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Prestige Screen.prefab",
+      "sha256": "6BA05C76E6ABD1E5BCAA8200A61E29AE9396A04FB9F5D36D693640447CA53462"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Player Screen.prefab.meta",
+      "sha256": "2956E01690FAB20FF9E4D930F7B2D97728A83F13FC352EEBC1D5A65BE66BCCE9"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Player Screen.prefab",
+      "sha256": "72EBFC514B49DEE8A8B6FB86F19589A23886B20F4BDD495EC027583A48E217D9"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Outfit SDF.asset.meta",
+      "sha256": "B99B59CF75233691CBD6DA1C91CA5AEB71F57DCC06382A613A3786A4791D89C2"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Outfit SDF.asset",
+      "sha256": "42157A72EFC7D883C120216D6842B8F185E5E93AF06C657CB17B84813FD271B1"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Offline Screen.prefab.meta",
+      "sha256": "56D2FCBD9D4C3728712957A710377FCB7B3708C83D7956BB1572017FC2630F5C"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Offline Screen.prefab",
+      "sha256": "476873B80CDEB9C8346E784B0C5FCE781F9C62B563DAD493C3CFE5B0BDD61E47"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito Medium SDF.asset.meta",
+      "sha256": "257AEA3C1C3C9C06EBB1AF5F3D1B74CF6115CDA3F2A7D7BACBFA68D7E3EACBC6"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito Medium SDF.asset",
+      "sha256": "0CFF741A51F55642C19159F8FC62A53192FC63051E35C7AFC2C25FC5593A59B1"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito ExtraBold SDF.asset.meta",
+      "sha256": "E84B8A48BDB0B7ECA3D71C4FEBE70F5BE6DC7CBC4E5D9DB14D56EE058FA4D458"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Nunito ExtraBold SDF.asset",
+      "sha256": "F9702BBFE57CC4D9EDAE70C684F5FB19B91B2A2BADF87AA9D967F9FD67EC1502"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Noto Sans Rupee SDF.asset.meta",
+      "sha256": "F6ED83615C46F7DBFC7BCD151F9323CC9492B4F45D8957770D49F4071B587B8D"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Noto Sans Rupee SDF.asset",
+      "sha256": "B372932EB9ED3F8949FF628A7465CB1A1A58C00D4417477099C7B57C79E433D4"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Legacy Screen.prefab.meta",
+      "sha256": "527BD9A00861274C3E86C3477EFD68F64987A4C51202F62442981A91C8D0AC76"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Legacy Screen.prefab",
+      "sha256": "002DB0F2B9F63BC626DFC4ACAFB3AF7B2C132AE6131B9D937AFF15C8F2D11CF7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Home Screen.prefab.meta",
+      "sha256": "85C0641B4616843C0CD7319455330B4C2423FB0415CACF417669F44DEDDDCA59"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Home Screen.prefab",
+      "sha256": "DACF74B17BA33BBE4445A46839C3FD78222E63908B091D0954E72056E5196BB7"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Baloo 2 Bold SDF.asset.meta",
+      "sha256": "8A1CD951AA46A4DE76D4315B82708EC1E7FABB047AC90068005DB6081827BFBD"
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Baloo 2 Bold SDF.asset",
+      "sha256": "947658FBD1B6CD7FB76BC760B9AE9965C08CD5EE8237C8C27337B6C0FCCEB822"
+    }
+  ],
+  "backupDirectory": "C:\\Unity\\Projects\\Incremental game\\Temp\\RedesignNativeBackup-20261002-013711",
+  "created": "2026-10-02T01:37:11.6360037+05:30"
+}

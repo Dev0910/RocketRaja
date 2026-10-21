@@ -1,0 +1,57 @@
+Scope: two actual Play Mode sessions with saved native preview and one disposable profile. Simulated KK only; Main/device acceptance remains open.
+PASS Saved preview uses only the explicit QA profile
+PASS Startup contains exactly the saved UI component inventory
+PASS Actual driver loads the disposable profile
+PASS Active control: Talent
+PASS First-prestige lock disables both draw actions
+PASS Active control: talent-odds
+PASS Exact odds action has one listener after repeated binding
+PASS Active control: card-L02
+PASS Last of all 28 saved card cells opens its own identity
+PASS Active control: card-back
+PASS Active control: Prestige
+PASS Native first-prestige preview shows one Fame and exactly three free credits
+PASS An economic command invalidates the saved prestige review
+PASS Active control: prestige-review
+PASS Passive earnings preserve the same confirmable prestige review
+PASS Prestige browsing blocks manual gameplay taps
+PASS Active control: Confirm prestige
+PASS Native confirmation atomically resets the run and retains a manual first-purchase grant
+PASS First Prestige feedback states its saved gains and reset distinction
+PASS Late duplicate confirm listener cannot repeat the prestige
+PASS First prestige opens unlocked Talent with separate balance guards
+PASS Active control: free-draw
+PASS One native free draw saves one card before showing its reveal
+PASS Normal-motion reveal starts hidden on its saved animation host
+PASS On-disk result and debit exist before the reveal is acknowledged
+PASS Talent, card and prestige routes preserve actual saved object identities
+PASS No gameplay/runtime errors in first Play Mode session: 
+NOTE Known MCP project-path advisory count in first session: 1
+PASS Saved preview uses only the explicit QA profile
+PASS Startup contains exactly the saved UI component inventory
+PASS Actual driver loads the disposable profile
+PASS New Play Mode session recovers the identical saved reveal without another debit
+PASS Active control: skip-reveal
+PASS Skip settles only the saved animation properties
+PASS Active control: reveal-details
+PASS Saved reveal opens its actual card details
+PASS Active control: card-back
+PASS Returning before acknowledgement reopens the same result
+PASS Active control: reveal-done
+PASS Acknowledging the first saved card retains readable level-change feedback
+PASS Active control: free-draw
+PASS Active control: reveal-done
+PASS Active control: free-draw
+PASS Active control: reveal-done
+PASS Last free draw stays a disabled free action and never becomes paid
+PASS Simulated wallet is explicitly marked as a development profile
+PASS QA funds the wallet only through the isolated test-pack command
+PASS Active control: Draw · 100 KK
+PASS Native paid draw spends exactly 100 simulated KK and increments exactly its chosen card
+PASS Late paid-click callback cannot spend while a result is pending
+PASS Normal-motion reveal reaches its final appearance without granting again
+PASS Active control: reveal-done
+PASS Final acknowledgement and remaining KK survive another save read
+PASS Repeated draws and reveal navigation create no UI objects
+PASS No gameplay/runtime errors in recovered Play Mode session: 
+NOTE Known MCP project-path advisory count in recovered session: 1

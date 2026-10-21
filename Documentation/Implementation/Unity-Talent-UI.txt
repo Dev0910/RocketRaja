@@ -1,0 +1,45 @@
+Scope: isolated saved-native rendering/binding with explicit fixture states; Play Mode, Main and device evidence is separate.
+PASS All collection/detail/reveal illustrations reuse persistent clean product regions
+PASS All 28 cards are inspectable while first-prestige draw actions are locked
+PASS Below-target prestige does not invent an all-product gate
+PASS Later prestige shows exact run/catalogue rewards and second-prestige gift
+PASS Collection exposes exact per-card odds for all tiers
+PASS Actual effect and stable identity: C01
+PASS Actual effect and stable identity: C02
+PASS Actual effect and stable identity: C03
+PASS Actual effect and stable identity: C04
+PASS Actual effect and stable identity: C05
+PASS Actual effect and stable identity: C06
+PASS Actual effect and stable identity: C07
+PASS Actual effect and stable identity: C08
+PASS Actual effect and stable identity: C09
+PASS Actual effect and stable identity: C10
+PASS Actual effect and stable identity: C11
+PASS Actual effect and stable identity: C12
+PASS Actual effect and stable identity: C13
+PASS Actual effect and stable identity: C14
+PASS Actual effect and stable identity: C15
+PASS Actual effect and stable identity: C16
+PASS Actual effect and stable identity: R01
+PASS Actual effect and stable identity: R02
+PASS Actual effect and stable identity: R03
+PASS Actual effect and stable identity: R04
+PASS Actual effect and stable identity: R05
+PASS Actual effect and stable identity: R06
+PASS Actual effect and stable identity: R07
+PASS Actual effect and stable identity: R08
+PASS Actual effect and stable identity: R09
+PASS Actual effect and stable identity: R10
+PASS Actual effect and stable identity: L01
+PASS Actual effect and stable identity: L02
+PASS Skill card explains its run prerequisite and exact duplicate benefit
+PASS Deterministic UI fixture commits one real draw before reveal
+PASS Duplicate reveal displays exactly one already-applied level
+PASS Skipping settles saved visuals without drawing or charging again
+PASS Reduced motion opens at the final saved-result appearance
+PASS Closing acknowledges the result without changing the awarded card
+PASS Failed draw persistence blocks UI and publishes neither debit nor reward
+PASS UI retry fixture recovers durable saving
+PASS Native retry reuses the same selected result and operation without rerolling
+PASS Lost session ownership disables both draw sources
+PASS Unity compilation succeeds

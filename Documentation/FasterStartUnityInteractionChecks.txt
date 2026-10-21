@@ -1,0 +1,51 @@
+PASS Disposable guest initializes
+PASS Stats uses HTML atlas sprite without intercepting input
+PASS Skills uses HTML atlas sprite without intercepting input
+PASS Stall receives raycast on Home at -0.25; hits=Counter tap surface; screen=(270.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Home at -0.25
+PASS Coins originate at pointer on Home at -0.25
+PASS Dragging stall gives no tap on Home
+PASS Stall receives raycast on Home at 0.25; hits=Counter tap surface; screen=(810.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Home at 0.25
+PASS Coins originate at pointer on Home at 0.25
+PASS Dragging stall gives no tap on Home
+PASS Stall receives raycast on Player at -0.25; hits=Counter tap surface; screen=(270.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Player at -0.25
+PASS Coins originate at pointer on Player at -0.25
+PASS Dragging stall gives no tap on Player
+PASS Stall receives raycast on Player at 0.25; hits=Counter tap surface; screen=(810.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Player at 0.25
+PASS Coins originate at pointer on Player at 0.25
+PASS Dragging stall gives no tap on Player
+PASS Stall receives raycast on Products at -0.25; hits=Counter tap surface; screen=(270.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Products at -0.25
+PASS Coins originate at pointer on Products at -0.25
+PASS Dragging stall gives no tap on Products
+PASS Stall receives raycast on Products at 0.25; hits=Counter tap surface; screen=(810.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Products at 0.25
+PASS Coins originate at pointer on Products at 0.25
+PASS Dragging stall gives no tap on Products
+PASS Stall receives raycast on Legacy at -0.25; hits=Counter tap surface; screen=(270.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Legacy at -0.25
+PASS Coins originate at pointer on Legacy at -0.25
+PASS Dragging stall gives no tap on Legacy
+PASS Stall receives raycast on Legacy at 0.25; hits=Counter tap surface; screen=(810.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Legacy at 0.25
+PASS Coins originate at pointer on Legacy at 0.25
+PASS Dragging stall gives no tap on Legacy
+PASS Stall receives raycast on Shop at -0.25; hits=Counter tap surface; screen=(270.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Shop at -0.25
+PASS Coins originate at pointer on Shop at -0.25
+PASS Dragging stall gives no tap on Shop
+PASS Stall receives raycast on Shop at 0.25; hits=Counter tap surface; screen=(810.00, 1322.88)/1080x2400 depth=68
+PASS Stall pays once on Shop at 0.25
+PASS Coins originate at pointer on Shop at 0.25
+PASS Dragging stall gives no tap on Shop
+PASS Fresh Player displays ten upgrades
+PASS Unaffordable upgrades remain disabled
+PASS Unaffordable Max tap displays the next price and one level
+PASS Modal controls do not trigger background earning
+PASS Closing dialog restores stall earning on Player
+PASS Buy initial product for Max price regression
+PASS Unaffordable product Max displays next level price with purchase disabled
+PASS Player panel is visible after its entrance animation

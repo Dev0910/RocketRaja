@@ -1,0 +1,37 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "791D9F26BFF2A8AB9698A5896A750769456285B1F079C101BBF532CF6580D7D6",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\index.html"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0614E6E8D23EDACDA4BD8C9D817FE2BB3C0C0C78DF87B8431C3ABE5FC3CF60DD",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\classic.css"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E9E2AFA0C170A5E773FB62C652313D4C2C7E0DE53F23E356485EABB909C3DA8B",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\classic.js"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "3AF52675555FDD50C8A1568F53FDFBF6309649554136984DCDCA9A205DF4E2C6",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\content.js"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "0A8B0D52ADC8253F0C0C3AFA03793DB19FB8CD05E701AFA00DDD801B37C29009",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\fixtures.js"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "1DF062E0414452EF5C30DA89506B257445A36C7B75C47FA2323A2E28BC356E8D",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\motion.css"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8A05CACE6934C4616C859A2BF8C73873F39FC52FAE5184984D3D7EAEB6F4DF3D",
+    "Path": "C:\\Unity\\Projects\\Incremental game\\UI Builder\\HTML\\Classic\\motion.js"
+  }
+]

@@ -1,0 +1,1 @@
+2026-10-01: Separate diagnostic installation rejected by Android: INSTALL_FAILED_USER_RESTRICTED: Install canceled by user. No device core tests ran. Original game APK SHA256 unchanged. Waiting for phone install approval before retry.

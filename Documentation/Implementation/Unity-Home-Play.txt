@@ -1,0 +1,34 @@
+Scope: actual Play Mode saved Home, fresh disposable profile and Unity pointer events; Main/device integration pending.
+PASS Saved preview uses only its explicit fresh QA profile
+PASS Startup preserves every serialized UI object and component
+PASS Actual driver creates an isolated fresh profile
+PASS Fresh Home does not automatically purchase a product
+PASS Active control: home-first-buy
+PASS First-purchase UI spends exactly the grant and leaks no tap
+PASS Physical counter hit reaches only the saved tap surface
+PASS Physical counter hit reaches only the saved tap surface
+PASS Two same-frame pointers cannot bypass the manual rate limit
+PASS Counter scroll gesture never earns a tap
+PASS Releasing outside the counter earns nothing
+PASS Active control: home-product-3
+PASS Shelf opens its exact product and closes the gameplay input gate
+PASS Late hidden-counter callback is rejected by the session gate
+PASS Active control: Home
+PASS Active control: home-training
+PASS Home training link reaches quantity controls
+PASS Active control: Home
+PASS Active control: Hands
+View unlock
+PASS Home skill link keeps the intended identity
+PASS Active control: Home
+PASS Active control: home-wallet
+PASS Wallet opens the placeholder without granting anything
+PASS Active control: Home
+PASS All tested UI navigation remains separate from gameplay taps
+PASS Physical counter hit reaches only the saved tap surface
+PASS A later physical tap earns exactly once after its cooldown
+PASS Reduced motion leaves saved tap feedback positions fixed
+PASS Accepted tap still gives visible feedback with reduced motion
+PASS Home, navigation and popups never construct UI at runtime
+PASS No gameplay/runtime errors: 
+NOTE Known MCP path advisory count: 1

@@ -1,0 +1,33 @@
+Scope: saved native skill/return component binding and rendering with actual isolated engine fixtures. Main/device integration pending.
+PASS Locked skill shows the actual unlock price and an explicit after-purchase effect
+PASS Locked skill opens its exact catalogue entry
+PASS Saved selector opens exact skill 0
+PASS Fixture purchases actual base skill 0
+PASS Newly purchased base skill is ready 0
+PASS Native activation starts cooldown and disables duplicates 0
+PASS Power/timing link keeps exact skill scope 0
+PASS Saved selector opens exact skill 1
+PASS Fixture purchases actual base skill 1
+PASS Newly purchased base skill is ready 1
+PASS Native activation starts cooldown and disables duplicates 1
+PASS Power/timing link keeps exact skill scope 1
+PASS Saved selector opens exact skill 2
+PASS Fixture purchases actual base skill 2
+PASS Newly purchased base skill is ready 2
+PASS Native activation starts cooldown and disables duplicates 2
+PASS Native Order awards precisely the engine's preview
+PASS Power/timing link keeps exact skill scope 2
+PASS Hands text refreshes the actual tap value when Rush expires without a command
+PASS Skill activation respects lost session ownership
+PASS Offline fixture uses real saved departure production and settlement
+PASS Return shows ten hours away, eight credited, two capped and 50 percent efficiency
+PASS Return offers the actual now-affordable pinned goal
+PASS Return reports actual skill readiness after the absence
+PASS Failed close retains already-credited cash and pending summary
+PASS Offline dismissal save can recover
+PASS Pinned-goal action acknowledges without claiming cash again
+PASS Duplicate close neither loses nor duplicates income
+PASS Zero-income return explains the manual first purchase without inventing earnings
+PASS Zero-income next step reaches the first product without buying or claiming
+PASS Skill/return interactions reuse every saved UI object
+PASS Unity compilation succeeds

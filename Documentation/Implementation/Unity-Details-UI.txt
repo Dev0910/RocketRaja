@@ -1,0 +1,10 @@
+Scope: saved asset and isolated Edit Mode rendering; Play Mode/Main/device acceptance tracked separately.
+PASS All text has four saved material slots
+PASS Search has a saved caret
+PASS Detail content scrolls at (390, 844)
+PASS Detail content scrolls at (360, 540)
+PASS Pinned goal uses its stable ID
+PASS Buy All retains positive list viewport at (390, 844)
+PASS Buy All retains positive list viewport at (360, 540)
+PASS Batch precision expands the actual frozen quote
+PASS Unity compilation succeeds

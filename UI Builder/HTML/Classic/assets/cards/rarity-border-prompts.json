@@ -1,0 +1,21 @@
+{
+  "generator": "built-in image_gen",
+  "assets": [
+    {
+      "file": "full-rare-outer.png",
+      "prompt": "Edit this standalone outer game UI border into the RARE rarity for our Folk Print set. Preserve EXACT framing, dimensions, transparent center opening, thin border thickness, corner placement, and transparent outside. Only change the painted border design and palette: deep plum ink with salmon-pink edge accents and four small flower block-print corner motifs. Keep the full tall portrait outer frame and small patterned dots along all four sides. Hand-painted gouache and distressed print texture. Keep every decoration inside existing border area; do not enlarge corners or obscure transparent opening. No text, no artwork, no center fill, no background. Asset is a border only, genuinely transparent in center."
+    },
+    {
+      "file": "full-rare-inner.png",
+      "prompt": "Edit this standalone inner game UI border into the RARE rarity for our Folk Print set. Preserve EXACT framing, dimensions, transparent center opening, thin border thickness, corner placement, and transparent outside. Only change the painted border design and palette: deep plum ink with salmon-pink edge accents and four small flower block-print corner motifs. Keep the square inner illustration frame and scalloped inner opening. Hand-painted gouache and distressed print texture. Keep every decoration inside existing border area; do not enlarge corners or obscure transparent opening. No text, no artwork, no center fill, no background. Asset is a border only, genuinely transparent in center."
+    },
+    {
+      "file": "full-legendary-outer.png",
+      "prompt": "Edit this standalone outer game UI border into the LEGENDARY rarity for our Folk Print set. Preserve EXACT framing, dimensions, transparent center opening, thin border thickness, corner placement, and transparent outside. Only change the painted border design and palette: rich saffron gold edges with raspberry-red inlay and restrained sunburst block-print corner motifs. Keep the full tall portrait outer frame and small patterned dots along all four sides. Hand-painted gouache and distressed print texture. Keep every decoration inside existing border area; do not enlarge corners or obscure transparent opening. No text, no artwork, no center fill, no background. Asset is a border only, genuinely transparent in center."
+    },
+    {
+      "file": "full-legendary-inner.png",
+      "prompt": "Edit this standalone inner game UI border into the LEGENDARY rarity for our Folk Print set. Preserve EXACT framing, dimensions, transparent center opening, thin border thickness, corner placement, and transparent outside. Only change the painted border design and palette: rich saffron gold edges with raspberry-red inlay and restrained sunburst block-print corner motifs. Keep the square inner illustration frame and scalloped inner opening. Hand-painted gouache and distressed print texture. Keep every decoration inside existing border area; do not enlarge corners or obscure transparent opening. No text, no artwork, no center fill, no background. Asset is a border only, genuinely transparent in center."
+    }
+  ]
+}

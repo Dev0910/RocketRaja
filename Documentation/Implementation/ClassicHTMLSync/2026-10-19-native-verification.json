@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "trackedChanges": [
+    "H2U-001",
+    "H2U-002",
+    "H2U-003",
+    "H2U-004",
+    "H2U-005",
+    "H2U-006",
+    "H2U-007",
+    "H2U-008",
+    "H2U-009",
+    "H2U-010",
+    "H2U-011",
+    "H2U-012",
+    "H2U-013"
+  ],
+  "savedDialogRoutes": 29,
+  "savedSkillClocks": 7,
+  "phoneCaptures": 72,
+  "phoneSizes": [
+    "360x540",
+    "360x640",
+    "390x844",
+    "450x916"
+  ],
+  "connectedProductionChecks": 82,
+  "productionErrors": 0,
+  "coreAtomicDrawPersistenceChecks": 66,
+  "hierarchySignatureStable": true,
+  "hierarchyNormalization": "TMP renames preplaced material slots for the bound material; normalize those names only. Component signatures and hierarchy counts match. Production fixture also checks actual component identities.",
+  "sharedFontsChanged": [],
+  "generatedArtParity": 8,
+  "changedExistingNativeFiles": [
+    "Assets/Game/Runtime/Classic/ClassicControl.cs",
+    "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+    "Assets/Game/Runtime/Classic/ClassicLayout.cs",
+    "Assets/Game/Runtime/Classic/ClassicUI.Bindings.cs",
+    "Assets/Game/Runtime/Classic/ClassicUI.cs",
+    "Assets/Game/Runtime/Cloud/BootstrapButtonFeedback.cs",
+    "Assets/Game/Runtime/Cloud/BootstrapController.cs",
+    "Assets/Game/Runtime/Cloud/BootstrapController.Redesign.cs",
+    "Assets/Game/Editor/Classic/ClassicProductionValidation.cs",
+    "Assets/Scenes/Bootstrap.unity",
+    "Assets/Scenes/Main.unity"
+  ],
+  "externalBackup": "C:\\Users\\Dev\\.codex\\tmp\\classic-native-sync-20261019\\backup",
+  "externalEvidence": "C:\\Users\\Dev\\.codex\\tmp\\classic-native-sync-20261019",
+  "currentEditor": "Bootstrap, Edit Mode; QA scene removed",
+  "liveServicesTested": false,
+  "serviceVerification": "Existing Editor-only auth/cloud fixtures; no live Firebase, payments or player profiles."
+}

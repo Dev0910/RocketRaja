@@ -1,5 +1,7 @@
 # Rocket Raja: planning decisions and review v1
 
+**7 October 2026 — accepted implementation:** [Current Implementation Design](Current%20Implementation%20Design.md) is the current source of truth. Earlier planning/experience-review passages below are historical where they conflict. Pacing results have not been rerun for unrestricted upgrades, unlimited taps and discounted five-card pulls.
+
 1 October 2026. Planning only.
 
 This closes the numerical authoring pass and records what is selected versus recommended. Read [Economy Specification v1](Economy%20Specification%20v1.md), [Premium Economy v1](Premium%20Economy%20v1.md), and [Economy Simulation Report v1](Economy%20Simulation%20Report%20v1.md) as the current candidate. The executable model is preserved in [Economy Model v1](Economy%20Model%20v1.md).
@@ -23,7 +25,7 @@ All earlier selected mechanics remain: 1,000 distinct cash entries; the 28-card 
 
 ## Catalogue-access decision resolved
 
-**Cash-only progression is confirmed.** Every cash entry is available when its individual cash, ownership, level, and prior-upgrade requirements are met. Completed prestige count never locks catalogue sections.
+**Cash-only progression is confirmed.** Any unowned run entry can be bought at its affordable discounted price. Product ownership, levels, family counts, previous upgrades and prestige counts are not purchase gates.
 
 The main catalogue, specification, and model now use the same selected baseline: later price-band growth x31 and permanent income 6+3×(sqrt(F)−1), with x1 at zero Fame. Prestige remains valuable for Fame and free cards. U still counts different cash entries ever purchased for the lifetime draw bonus; N still advances the next-run earnings target.
 
@@ -45,8 +47,8 @@ The rerun of 32 free histories completes on days **75 / 86 / 98** at the sample 
 | Shop appearance | Permanent shop decorations; run-specific product displays rebuild | Confirmed retention/reset direction. |
 | Visual milestones | Permanent U stages at 0/100/250/500/750/1000; product looks at ownership/signatures I/IV/X | Recommended presentation mapping. |
 | Offline return | Automatically credit once, then show time/rate/cap/amount and a next action | Recommended flow. |
-| Skill reset | End effects; a repurchased base skill starts ready | Recommended and included in the model. |
-| Buy All | Explicit filtered scope; cheapest eligible sequence; review a fixed quoted list | Recommended flow; manual buying remains selected. |
+| Skill reset | End effects; any first purchased power rank unlocks the skill ready | Confirmed current behavior; lower ranks do not reset timing or reduce power. |
+| Buy All | Immediate global batch from Player; cheapest unowned sequence with discount recalculation | Current implementation confirmed 7 October; no review or inherited catalogue filters. |
 | Menus | Production and cooldowns continue; menu touches do not count as taps | Recommended flow. |
 | Legacy ads | Leave their payouts outside the redesigned launch economy | Confirmed initial scope; all numerical targets use no ads. |
 | First-day test schedule | 15/5/5/5/10 minutes at 0/2/4/6/8 elapsed hours | Tested input, not a required player routine. |
@@ -54,7 +56,7 @@ The rerun of 32 free histories completes on days **75 / 86 / 98** at the sample 
 
 No additional premium spending use, daily objectives, card slots, automated buying, rarity guarantee, or multiplayer system is introduced.
 
-## Experience review completed on paper
+## Historical experience review completed on paper (1 October)
 
 - Browser filters preserve one ownership identity; first purchases and rebuys are separate; all 1,000 entries remain inspectable.
 - Buy All states its scope and cost, recalculates within its proposed sequence, and confirms a fixed list. It does not silently expand while passive income accrues.
@@ -74,7 +76,7 @@ This is a consistency review, not evidence of user comprehension or visual usabi
 4. The smallest initial IAP pack mainly provides immediate collection gains; the selected cash-only model showed three median paired days saved, with wide variation and some slower policy outcomes. Do not advertise a guaranteed shortcut.
 5. Finite simulated histories do not establish real retention, spending conversion, or the optimal strategy. Wider optimization and live player behavior can reveal issues.
 
-## What is now complete and what requires a later phase
+## Historical planning completion record (1 October)
 
 Complete as planning artifacts: all 1,000 numerical rows; product/tap growth; skill/card interaction rules; a complete prestige candidate; free/paid currency budget; play-pattern and card-history comparisons; executable reproduction source; proposed UI, visual, onboarding, and return flows; and this decision register.
 

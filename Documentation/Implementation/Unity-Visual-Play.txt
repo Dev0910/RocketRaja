@@ -1,0 +1,37 @@
+Scope: two actual preview Play Mode sessions; saved native UI, disposable profile, real batch/reset/rebuy commands. No device acceptance claim.
+PASS Saved preview starts without normal profile access
+PASS Startup has the exact saved UI inventory
+PASS Actual driver loads the durable disposable state
+PASS Unpurchased shop starts with no earned decoration layers
+PASS Active native control: Upgrades
+PASS Active native control: review-buyall
+PASS Native batch review includes all 1,000 real first purchases
+PASS Active native control: Buy 3 · ₹472.06
+PASS Active native control: Home
+PASS One confirmation settles all crossed shop and product tiers immediately
+PASS One native Buy All notice aggregates the entire batch and only its final shop milestone
+PASS Real progression navigation preserves all authored UI objects
+PASS No gameplay/runtime errors: 
+PASS Saved preview starts without normal profile access
+PASS Startup has the exact saved UI inventory
+PASS Actual driver loads the durable disposable state
+PASS Second actual session restores final shop and product appearances without old celebrations
+PASS Decorated shelf remains the topmost physical target: home-product-0
+PASS Decorated shelf remains the topmost physical target: home-product-1
+PASS Decorated shelf remains the topmost physical target: home-product-2
+PASS Decorated shelf remains the topmost physical target: home-product-3
+PASS Decorated shelf remains the topmost physical target: home-product-4
+PASS Decorated shelf remains the topmost physical target: home-product-5
+PASS Decorated shelf remains the topmost physical target: home-product-6
+PASS Decorated shelf remains the topmost physical target: home-product-7
+PASS Active native control: Prestige
+PASS Active native control: Confirm prestige
+PASS Active native control: Home
+PASS Native prestige keeps earned shop decorations and clears every run display
+PASS Active native control: home-first-buy
+PASS Manual rebuilding starts with Basic inside the retained decorated shop
+PASS Active native control: Buy upgrade
+PASS Active native control: Home
+PASS Native signature rebuy restores only its run look and cannot recount lifetime milestones
+PASS Real progression navigation preserves all authored UI objects
+PASS No gameplay/runtime errors: 

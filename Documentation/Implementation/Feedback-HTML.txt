@@ -1,0 +1,4 @@
+PASS All seven feedback states readable with 48px dismissal at 390x844
+PASS All seven feedback states readable with 48px dismissal at 360x540
+PASS Dismiss hides only the reusable result card; fixture can reopen it
+PASS No browser errors or external dependencies

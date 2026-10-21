@@ -1,0 +1,5 @@
+Local profile metadata inventory, 6 October 2026. Read-only; paths, identities, balances and raw payloads excluded.
+Scope: current desktop persistent-data root and previous product-name sibling. File counts include backups/archives; they are not unique player counts.
+2 files: gameplay, 1, 1.0.0, False, False, False (Kind, Schema, Economy, PremiumSchema, TestProvenance, PendingCheckpoint)
+4 files: gameplay, 2, 2.0.0, False, False, False (Kind, Schema, Economy, PremiumSchema, TestProvenance, PendingCheckpoint)
+Remote documents and phone storage are not inventoried by this desktop scan. PremiumSchema indicates serialized wallet data, not verified paid entitlement.

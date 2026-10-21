@@ -12,6 +12,11 @@ namespace RocketRaja.Editor
         [MenuItem("Rocket Raja/Validate Unity Save Codec")]
         public static void Run()
         {
+            RedesignCoreValidation.Run();
+        }
+        [MenuItem("Rocket Raja/Validate Legacy Save Fixtures")]
+        public static void RunLegacy()
+        {
             var checks = new List<string>();
             void Check(bool ok, string name) { if (!ok) throw new Exception("FAIL " + name); checks.Add("PASS " + name); }
             string folder = Path.Combine(Application.temporaryCachePath, "DiwaliSaveQA-" + Guid.NewGuid().ToString("N"));

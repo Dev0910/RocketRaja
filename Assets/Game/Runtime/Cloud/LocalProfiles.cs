@@ -41,6 +41,7 @@ namespace RocketRaja.Cloud
         {
             get
             {
+                if (RedesignEnvironment.Isolated) return RedesignEnvironment.ProfileRoot;
                 string current = Application.persistentDataPath;
 #if UNITY_EDITOR || UNITY_STANDALONE
                 string parent = Path.GetDirectoryName(current);
@@ -58,14 +59,14 @@ namespace RocketRaja.Cloud
         {
             get
             {
-                const string key = "RocketRaja.CloudDevice";
+                string key = RedesignEnvironment.PreferenceKey("RocketRaja.CloudDevice");
                 string id = PlayerPrefs.GetString(key, "");
                 if (id.Length != 32) { id = Guid.NewGuid().ToString("N"); PlayerPrefs.SetString(key, id); PlayerPrefs.Save(); }
                 return id;
             }
         }
-        public static string Mode => PlayerPrefs.GetString("RocketRaja.IdentityMode", "");
-        public static void SetMode(string value) { PlayerPrefs.SetString("RocketRaja.IdentityMode", value); PlayerPrefs.Save(); }
+        public static string Mode => PlayerPrefs.GetString(RedesignEnvironment.PreferenceKey("RocketRaja.IdentityMode"), "");
+        public static void SetMode(string value) { PlayerPrefs.SetString(RedesignEnvironment.PreferenceKey("RocketRaja.IdentityMode"), value); PlayerPrefs.Save(); }
         public static bool HasProgress(GameState s) => s != null && (s.manualTaps > 0 || s.lifetimeEarnings > Amount.Zero || s.prestiges > 0 || s.OwnedProducts > 0 || s.upgrades.Count > 0 || s.legacy.Any(x => x.level > 0));
         public static void Backup(GameState state, string uid, string label)
         {

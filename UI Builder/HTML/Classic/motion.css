@@ -1,0 +1,53 @@
+/* Warm festival atmosphere; movement stays separate from layout and hit targets. */
+.festival-atmosphere,.motion-effects{position:absolute;inset:0;overflow:hidden;pointer-events:none;user-select:none}
+.festival-atmosphere{z-index:4}.motion-effects{z-index:42;contain:strict}
+.lantern-glow{position:absolute;top:29%;width:14%;height:17%;border-radius:50%;background:radial-gradient(ellipse,#ffc55b55,transparent 68%);animation:lantern-breathe 4.7s ease-in-out infinite alternate}
+.lantern-glow.left{left:-2%}.lantern-glow.right{right:-2%;animation-delay:-2.1s}
+.festival-mote{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:#ffe4a2;box-shadow:0 0 6px #ffc75c88;opacity:0;animation:festival-drift var(--duration) ease-in-out var(--delay) infinite}
+.app .world .shopkeeper{transform-origin:80% 100%;animation:shopkeeper-breathe 6.5s ease-in-out infinite}
+.app .world .product-art{transform-origin:50% 100%}
+.app button:not(:disabled):not(.stall-tap){transition:transform 120ms ease,filter 160ms ease,box-shadow 160ms ease}
+.app button:not(:disabled):not(.stall-tap):not(.product):active{transform:translateY(1px)}
+.app .navigation button svg{transform-origin:50% 85%;transition:filter 180ms ease}
+.app .navigation button[aria-pressed=true] svg{filter:drop-shadow(0 2px 3px #bb80383d)}
+.app .product-milestone-bar>span,.app .product-overview-progress>span,.app .progress-fill{transform-origin:left center;transition:width 400ms ease-out}
+.classic-skill[data-state=ready] .skill-disc{animation:skill-ready 3.8s ease-in-out infinite}
+.classic-skill:nth-child(2) .skill-disc{animation-delay:-1.3s}.classic-skill:nth-child(3) .skill-disc{animation-delay:-2.6s}
+.classic-skill[data-state=active] .skill-disc{animation:skill-active 2.2s ease-in-out infinite}
+.classic-skill[data-state=cooldown] .skill-disc{filter:saturate(.45)}
+.app[data-tab=Home] .tap-hint{animation:tap-invitation 5.5s ease-in-out infinite}
+.app .talent-card:not(:disabled),.app .product-image-frame,.app .shop-balance{transition:filter 180ms ease,transform 180ms ease,box-shadow 180ms ease}
+.app .full-card-art{transform-origin:center;animation:card-art-arrive 450ms ease-out both}
+.app .flip-settled .flip-front{box-shadow:0 0 22px #f9d78c22}
+.motion-burst{position:absolute;width:0;height:0;pointer-events:none}
+.festival-particle{position:absolute;width:5px;height:7px;border-radius:2px;will-change:transform,opacity}
+.festival-particle.star{width:10px;height:10px;clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,38% 64%,0 50%,38% 36%)}
+.festival-coin{position:absolute;width:11px;height:11px;border-radius:50%;border:2px solid #f9dc87;background:#dca547;box-shadow:inset 0 0 0 1px #a96a28;will-change:transform,opacity}
+.app [data-motion-ghost]{pointer-events:none!important;z-index:36}
+.app [data-motion-ghost] *{pointer-events:none!important;animation:none!important;transition:none!important}
+.app[data-motion-paused=true] .festival-atmosphere *,.app[data-motion-paused=true] .shopkeeper,.app[data-motion-paused=true] .skill-disc,.app[data-motion-paused=true] .tap-hint{animation-play-state:paused!important}
+@media(hover:hover) and (pointer:fine){
+ .app .action:not(:disabled):hover,.app .close:hover,.app .toggle:hover{filter:brightness(1.08);transform:translateY(-1px)}
+ .app .talent-card:not(:disabled):hover{transform:translateY(-3px) rotate(-.6deg);filter:drop-shadow(0 3px 3px #52331b33)}
+ .app .talent-card.rare:not(:disabled):hover{filter:drop-shadow(0 3px 5px #b87fac66)}
+ .app .talent-card.legendary:not(:disabled):hover{filter:drop-shadow(0 3px 6px #e4b54d88)}
+ .app .details-link:hover .product-image-frame{transform:translateY(-1px);box-shadow:inset 0 0 0 2px #f1dfb5,0 2px 5px #80613725}
+ .app .world .product[data-owned=true]:hover .product-art{animation:merchandise-nod 450ms ease-out}
+ .app .classic-skill:hover svg,.app .navigation button:hover svg{filter:brightness(1.12)}
+}
+@keyframes lantern-breathe{from{opacity:.35;transform:scale(.9)}to{opacity:.85;transform:scale(1.12)}}
+@keyframes festival-drift{0%,100%{opacity:0;transform:translate(0,10px) scale(.5)}25%{opacity:.48}70%{opacity:.35}90%{opacity:0;transform:translate(var(--drift),-22px) scale(.8)}}
+@keyframes shopkeeper-breathe{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-1px) rotate(.6deg)}}
+@keyframes skill-ready{0%,70%,100%{box-shadow:0 2px 0 #947137,0 0 0 0 #dfae4b00}85%{box-shadow:0 2px 0 #947137,0 0 0 4px #dfae4b29}}
+@keyframes skill-active{0%,100%{box-shadow:0 2px 0 #947137,0 0 7px #5abec755}50%{box-shadow:0 2px 0 #947137,0 0 12px #5abec799}}
+@keyframes tap-invitation{0%,75%,100%{filter:brightness(1)}87%{filter:brightness(1.1)}}
+@keyframes merchandise-nod{0%,100%{transform:rotate(0)}35%{transform:rotate(-2deg)}70%{transform:rotate(1.5deg)}}
+@keyframes card-art-arrive{from{opacity:.3;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+.app[data-reduced-motion=true] *,.app[data-reduced-motion=true] *::before,.app[data-reduced-motion=true] *::after{animation:none!important;transition:none!important}
+.app[data-reduced-motion=true] .festival-atmosphere,.app[data-reduced-motion=true] .motion-effects{display:none}
+.app[data-reduced-motion=true] button:active,.app[data-reduced-motion=true] button:hover{transform:none!important}
+@media(prefers-reduced-motion:reduce){
+ .app *,.app *::before,.app *::after{animation:none!important;transition:none!important}
+ .festival-atmosphere,.motion-effects{display:none}
+ .app button:active,.app button:hover{transform:none!important}
+}

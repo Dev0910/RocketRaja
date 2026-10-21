@@ -1,0 +1,3416 @@
+{
+  "status": "pass",
+  "homePixelComparisons": 4,
+  "expandedCases": 48,
+  "results": [
+    {
+      "route": "Player",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 540,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "DIWALI DUKAAN",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 128.96875,
+          "y": 66.5,
+          "width": 102.015625,
+          "height": 22,
+          "top": 66.5,
+          "right": 230.984375,
+          "bottom": 88.5,
+          "left": 128.96875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 83.1875,
+          "y": 66.5,
+          "width": 286.875,
+          "height": 22,
+          "top": 66.5,
+          "right": 370.0625,
+          "bottom": 88.5,
+          "left": 83.1875
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "Festival CornerShop 2026",
+      "width": 360,
+      "height": 640,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 112,
+          "top": 0,
+          "right": 360,
+          "bottom": 112,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 270,
+          "top": 0,
+          "right": 360,
+          "bottom": 270,
+          "left": 0
+        },
+        "sign": {
+          "x": 79.1875,
+          "y": 65,
+          "width": 201.59375,
+          "height": 25,
+          "top": 65,
+          "right": 280.78125,
+          "bottom": 90,
+          "left": 79.1875
+        },
+        "text": {
+          "x": 99.953125,
+          "y": 66.5,
+          "width": 160.046875,
+          "height": 22,
+          "top": 66.5,
+          "right": 260,
+          "bottom": 88.5,
+          "left": 99.953125
+        },
+        "tap": {
+          "x": 304,
+          "y": 57,
+          "width": 48,
+          "height": 48,
+          "top": 57,
+          "right": 352,
+          "bottom": 105,
+          "left": 304
+        },
+        "wallet": {
+          "x": 79.1875,
+          "y": 3.796875,
+          "width": 201.59375,
+          "height": 48,
+          "top": 3.796875,
+          "right": 280.78125,
+          "bottom": 51.796875,
+          "left": 79.1875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "DIWALI DUKAAN",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 139.75,
+          "y": 71.9375,
+          "width": 110.46875,
+          "height": 24,
+          "top": 71.9375,
+          "right": 250.21875,
+          "bottom": 95.9375,
+          "left": 139.75
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 89.796875,
+          "y": 71.9375,
+          "width": 310.65625,
+          "height": 24,
+          "top": 71.9375,
+          "right": 400.453125,
+          "bottom": 95.9375,
+          "left": 89.796875
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "Festival CornerShop 2026",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 108.328125,
+          "y": 71.9375,
+          "width": 173.3125,
+          "height": 24,
+          "top": 71.9375,
+          "right": 281.640625,
+          "bottom": 95.9375,
+          "left": 108.328125
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "DIWALI DUKAAN",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 139.75,
+          "y": 71.9375,
+          "width": 110.46875,
+          "height": 24,
+          "top": 71.9375,
+          "right": 250.21875,
+          "bottom": 95.9375,
+          "left": 139.75
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 89.796875,
+          "y": 71.9375,
+          "width": 310.65625,
+          "height": 24,
+          "top": 71.9375,
+          "right": 400.453125,
+          "bottom": 95.9375,
+          "left": 89.796875
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "Festival CornerShop 2026",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 108.328125,
+          "y": 71.9375,
+          "width": 173.3125,
+          "height": 24,
+          "top": 71.9375,
+          "right": 281.640625,
+          "bottom": 95.9375,
+          "left": 108.328125
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 139.75,
+          "y": 71.9375,
+          "width": 110.46875,
+          "height": 24,
+          "top": 71.9375,
+          "right": 250.21875,
+          "bottom": 95.9375,
+          "left": 139.75
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 89.796875,
+          "y": 71.9375,
+          "width": 310.65625,
+          "height": 24,
+          "top": 71.9375,
+          "right": 400.453125,
+          "bottom": 95.9375,
+          "left": 89.796875
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "Festival CornerShop 2026",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 108.328125,
+          "y": 71.9375,
+          "width": 173.3125,
+          "height": 24,
+          "top": 71.9375,
+          "right": 281.640625,
+          "bottom": 95.9375,
+          "left": 108.328125
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "DIWALI DUKAAN",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 139.75,
+          "y": 71.9375,
+          "width": 110.46875,
+          "height": 24,
+          "top": 71.9375,
+          "right": 250.21875,
+          "bottom": 95.9375,
+          "left": 139.75
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 89.796875,
+          "y": 71.9375,
+          "width": 310.65625,
+          "height": 24,
+          "top": 71.9375,
+          "right": 400.453125,
+          "bottom": 95.9375,
+          "left": 89.796875
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "Festival CornerShop 2026",
+      "width": 390,
+      "height": 844,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 121.328125,
+          "top": 0,
+          "right": 390,
+          "bottom": 121.328125,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 292.5,
+          "top": 0,
+          "right": 390,
+          "bottom": 292.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 85.796875,
+          "y": 70.40625,
+          "width": 218.390625,
+          "height": 27.078125,
+          "top": 70.40625,
+          "right": 304.1875,
+          "bottom": 97.484375,
+          "left": 85.796875
+        },
+        "text": {
+          "x": 108.328125,
+          "y": 71.9375,
+          "width": 173.3125,
+          "height": 24,
+          "top": 71.9375,
+          "right": 281.640625,
+          "bottom": 95.9375,
+          "left": 108.328125
+        },
+        "tap": {
+          "x": 334,
+          "y": 66.328125,
+          "width": 48,
+          "height": 48,
+          "top": 66.328125,
+          "right": 382,
+          "bottom": 114.328125,
+          "left": 334
+        },
+        "wallet": {
+          "x": 85.796875,
+          "y": 4.125,
+          "width": 218.390625,
+          "height": 52,
+          "top": 4.125,
+          "right": 304.1875,
+          "bottom": 56.125,
+          "left": 85.796875
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "DIWALI DUKAAN",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 161.234375,
+          "y": 82.875,
+          "width": 127.515625,
+          "height": 28,
+          "top": 82.875,
+          "right": 288.75,
+          "bottom": 110.875,
+          "left": 161.234375
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 103,
+          "y": 82.875,
+          "width": 358.59375,
+          "height": 28,
+          "top": 82.875,
+          "right": 461.59375,
+          "bottom": 110.875,
+          "left": 103
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Player",
+      "name": "Festival CornerShop 2026",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 124.96875,
+          "y": 82.875,
+          "width": 200.0625,
+          "height": 28,
+          "top": 82.875,
+          "right": 325.03125,
+          "bottom": 110.875,
+          "left": 124.96875
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "DIWALI DUKAAN",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 161.234375,
+          "y": 82.875,
+          "width": 127.515625,
+          "height": 28,
+          "top": 82.875,
+          "right": 288.75,
+          "bottom": 110.875,
+          "left": 161.234375
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 103,
+          "y": 82.875,
+          "width": 358.59375,
+          "height": 28,
+          "top": 82.875,
+          "right": 461.59375,
+          "bottom": 110.875,
+          "left": 103
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Products",
+      "name": "Festival CornerShop 2026",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 124.96875,
+          "y": 82.875,
+          "width": 200.0625,
+          "height": 28,
+          "top": 82.875,
+          "right": 325.03125,
+          "bottom": 110.875,
+          "left": 124.96875
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "DIWALI DUKAAN",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 161.234375,
+          "y": 82.875,
+          "width": 127.515625,
+          "height": 28,
+          "top": 82.875,
+          "right": 288.75,
+          "bottom": 110.875,
+          "left": 161.234375
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 103,
+          "y": 82.875,
+          "width": 358.59375,
+          "height": 28,
+          "top": 82.875,
+          "right": 461.59375,
+          "bottom": 110.875,
+          "left": 103
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Legacy",
+      "name": "Festival CornerShop 2026",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 124.96875,
+          "y": 82.875,
+          "width": 200.0625,
+          "height": 28,
+          "top": 82.875,
+          "right": 325.03125,
+          "bottom": 110.875,
+          "left": 124.96875
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "DIWALI DUKAAN",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 161.234375,
+          "y": 82.875,
+          "width": 127.515625,
+          "height": 28,
+          "top": 82.875,
+          "right": 288.75,
+          "bottom": 110.875,
+          "left": 161.234375
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "DIWALI DUKAAN",
+        "label": "Shop name: DIWALI DUKAAN",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 103,
+          "y": 82.875,
+          "width": 358.59375,
+          "height": 28,
+          "top": 82.875,
+          "right": 461.59375,
+          "bottom": 110.875,
+          "left": 103
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "WWWWWWWWWWWWWWWWWWWWWWWW",
+        "label": "Shop name: WWWWWWWWWWWWWWWWWWWWWWWW",
+        "clip": "hidden"
+      }
+    },
+    {
+      "route": "Shop",
+      "name": "Festival CornerShop 2026",
+      "width": 450,
+      "height": 916,
+      "geometry": {
+        "world": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 140,
+          "top": 0,
+          "right": 450,
+          "bottom": 140,
+          "left": 0
+        },
+        "art": {
+          "x": 0,
+          "y": 0,
+          "width": 450,
+          "height": 337.5,
+          "top": 0,
+          "right": 450,
+          "bottom": 337.5,
+          "left": 0
+        },
+        "sign": {
+          "x": 99,
+          "y": 81.25,
+          "width": 252,
+          "height": 31.25,
+          "top": 81.25,
+          "right": 351,
+          "bottom": 112.5,
+          "left": 99
+        },
+        "text": {
+          "x": 124.96875,
+          "y": 82.875,
+          "width": 200.0625,
+          "height": 28,
+          "top": 82.875,
+          "right": 325.03125,
+          "bottom": 110.875,
+          "left": 124.96875
+        },
+        "tap": {
+          "x": 394,
+          "y": 85,
+          "width": 48,
+          "height": 48,
+          "top": 85,
+          "right": 442,
+          "bottom": 133,
+          "left": 394
+        },
+        "wallet": {
+          "x": 99,
+          "y": 4.75,
+          "width": 252,
+          "height": 60,
+          "top": 4.75,
+          "right": 351,
+          "bottom": 64.75,
+          "left": 99
+        },
+        "name": "Festival CornerShop 2026",
+        "label": "Shop name: Festival CornerShop 2026",
+        "clip": "hidden"
+      }
+    }
+  ],
+  "errors": []
+}

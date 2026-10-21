@@ -61,11 +61,10 @@ namespace RocketRaja.EditorTools
                 text.fontSizeMin = 22; text.fontSizeMax = name == "home-tap" ? 60 : 72;
                 text.textWrappingMode = TextWrappingModes.NoWrap;
             }
-            var sponsor = Find(root, "Sponsor");
-            data.FindProperty("sponsorLayout").objectReferenceValue = sponsor.GetComponent<LayoutElement>();
-            Remove(root, "Sponsor Caption"); Place(Find(root, "sponsor-status"), .12f, .1f, .98f, .9f);
-            var sponsorText = Find(root, "sponsor-status").GetComponent<TMP_Text>(); sponsorText.enableAutoSizing = true;
-            sponsorText.fontSizeMin = 26; sponsorText.fontSizeMax = 38;
+            Remove(root, "Sponsor");
+            data.FindProperty("sponsorLayout").objectReferenceValue = null;
+            data.FindProperty("sponsorButton").objectReferenceValue = null;
+            data.FindProperty("sponsorLabel").objectReferenceValue = null;
             data.ApplyModifiedPropertiesWithoutUndo();
             // Keep pooled rewards legible against the bright illustration with a saved outline material.
             const string materialPath = "Assets/Game/ImportedUI/Tap Reward Material.mat";

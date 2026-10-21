@@ -1,0 +1,29 @@
+PASS 125 required reference scenarios recorded
+PASS Free completion nearest-rank 10th/median/90th matches report
+PASS 23 of 32 complete by day 90
+PASS Late resets/day matches report
+PASS Paired free control matches report
+PASS No-Legendary cohort matches report
+PASS 10 paid-draw cohort matches report
+PASS 10 paired median days saved matches report
+PASS 60 paid-draw cohort matches report
+PASS 60 paired median days saved matches report
+PASS 130 paid-draw cohort matches report
+PASS 130 paired median days saved matches report
+PASS 280 paid-draw cohort matches report
+PASS 280 paired median days saved matches report
+PASS minutes15 policy matches report
+PASS minutes25 policy matches report
+PASS oneVisit policy matches report
+PASS twoVisits policy matches report
+PASS noTap policy matches report
+PASS levelsFirst policy matches report
+PASS depth4 policy matches report
+PASS depth16 policy matches report
+PASS commonOnly policy matches report
+PASS noCardEffects policy matches report
+PASS neverPrestige policy matches report
+PASS Sustained first prestige 2h 5m 40s
+PASS Mixed first prestige 8h
+PASS Matched rebuilding ratios match report
+All 28 published-result checks passed. These remain planning-model results, not device or human-play evidence.

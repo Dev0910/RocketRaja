@@ -12,7 +12,9 @@ namespace RocketRaja
         GameEngine E => game.Engine;
         float refreshClock;
         string currentTab = "Home";
-        public string CurrentTab => currentTab;
+        RedesignScreenRouter redesign;
+        public string CurrentTab => redesign ? redesign.CurrentRoute : currentTab;
+        public void InitializeRedesign(RedesignScreenRouter router) { redesign = router; game = null; enabled = false; }
 
         public bool Initialize(GameController controller)
         {
@@ -21,7 +23,7 @@ namespace RocketRaja
                 controller.ProductsScreen == null || controller.LegacyScreen == null ||
                 controller.PrivacyScreen == null || controller.SettingsScreen == null ||
                 controller.SaveRecoveryScreen == null || controller.OfflineScreen == null ||
-                controller.SponsorScreen == null || controller.PrestigeScreen == null ||
+                controller.PrestigeScreen == null ||
                 controller.StatisticsScreen == null || controller.SkillsScreen == null ||
                 controller.ProductDetailScreen == null || controller.StoreNameScreen == null)
             {
@@ -45,6 +47,7 @@ namespace RocketRaja
 
         public void Switch(string tab)
         {
+            if (redesign) { redesign.Navigate(tab.ToLowerInvariant(), ""); return; }
             game.HomeScreen.gameObject.SetActive(true);
             int direction = currentTab == "Home" || tab == "Home" ? 0 : Math.Sign(Array.IndexOf(new[] { "Player", "Products", "Legacy" }, tab) - Array.IndexOf(new[] { "Player", "Products", "Legacy" }, currentTab));
             currentTab = tab;
@@ -103,7 +106,6 @@ namespace RocketRaja
             else if (game.PrivacyScreen.gameObject.activeInHierarchy) game.PrivacyScreen.Close();
             else if (game.SettingsScreen.gameObject.activeInHierarchy) game.SettingsScreen.Close();
             else if (game.OfflineScreen.gameObject.activeInHierarchy) game.OfflineScreen.Dismiss();
-            else if (game.SponsorScreen.gameObject.activeInHierarchy) game.SponsorScreen.Close();
             else if (game.PrestigeScreen.gameObject.activeInHierarchy) game.PrestigeScreen.Close();
             else if (game.StatisticsScreen.gameObject.activeInHierarchy) game.StatisticsScreen.Close();
             else if (game.SkillsScreen.gameObject.activeInHierarchy) game.SkillsScreen.Close();
@@ -115,7 +117,7 @@ namespace RocketRaja
             return true;
         }
 
-        static void BackgroundTask()
+        internal static void BackgroundTask()
         {
 #if UNITY_ANDROID && !UNITY_EDITOR
             try
@@ -173,17 +175,7 @@ namespace RocketRaja
             offline.Bind(game);
             offline.Open();
         }
-        public void ShowSponsor()
-        {
-            var sponsor = game.SponsorScreen;
-            if (sponsor == null)
-            {
-                Debug.LogError("The editor-authored Sponsor screen is missing from Main.", this);
-                return;
-            }
-            sponsor.Bind(game);
-            sponsor.Open();
-        }
+        public void ShowSponsor() { } // Retired route retained for old callers.
         public void ShowStatistics()
         {
             var statistics = game.StatisticsScreen;

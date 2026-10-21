@@ -1,0 +1,84 @@
+Scope: persistent asset reload, 32 native Home/details states, phone renders and stable saved geometry. Play purchase and core save/reset checks are separate reports.
+PASS All 32 distinct sprites reload as persistent Unity assets
+PASS Four unique reviewed regions share the original family texture 0
+PASS Four unique reviewed regions share the original family texture 1
+PASS Four unique reviewed regions share the original family texture 2
+PASS Four unique reviewed regions share the original family texture 3
+PASS Four unique reviewed regions share the original family texture 4
+PASS Four unique reviewed regions share the original family texture 5
+PASS Four unique reviewed regions share the original family texture 6
+PASS Four unique reviewed regions share the original family texture 7
+PASS Saved Home and product details reference the same reviewed art
+PASS Appearance copy has four saved text material slots
+PASS Home family/tier agrees with run ownership 0/0
+PASS Home family/tier agrees with run ownership 1/0
+PASS Home family/tier agrees with run ownership 2/0
+PASS Home family/tier agrees with run ownership 3/0
+PASS Home family/tier agrees with run ownership 4/0
+PASS Home family/tier agrees with run ownership 5/0
+PASS Home family/tier agrees with run ownership 6/0
+PASS Home family/tier agrees with run ownership 7/0
+PASS Details shows the matching look and exact next signature 0/0
+PASS Details shows the matching look and exact next signature 1/0
+PASS Details shows the matching look and exact next signature 2/0
+PASS Details shows the matching look and exact next signature 3/0
+PASS Details shows the matching look and exact next signature 4/0
+PASS Details shows the matching look and exact next signature 5/0
+PASS Details shows the matching look and exact next signature 6/0
+PASS Details shows the matching look and exact next signature 7/0
+PASS Appearance tier preserves all shelf and counter anchors 0
+PASS Home family/tier agrees with run ownership 0/1
+PASS Home family/tier agrees with run ownership 1/1
+PASS Home family/tier agrees with run ownership 2/1
+PASS Home family/tier agrees with run ownership 3/1
+PASS Home family/tier agrees with run ownership 4/1
+PASS Home family/tier agrees with run ownership 5/1
+PASS Home family/tier agrees with run ownership 6/1
+PASS Home family/tier agrees with run ownership 7/1
+PASS Details shows the matching look and exact next signature 0/1
+PASS Details shows the matching look and exact next signature 1/1
+PASS Details shows the matching look and exact next signature 2/1
+PASS Details shows the matching look and exact next signature 3/1
+PASS Details shows the matching look and exact next signature 4/1
+PASS Details shows the matching look and exact next signature 5/1
+PASS Details shows the matching look and exact next signature 6/1
+PASS Details shows the matching look and exact next signature 7/1
+PASS Appearance tier preserves all shelf and counter anchors 1
+PASS Home family/tier agrees with run ownership 0/2
+PASS Home family/tier agrees with run ownership 1/2
+PASS Home family/tier agrees with run ownership 2/2
+PASS Home family/tier agrees with run ownership 3/2
+PASS Home family/tier agrees with run ownership 4/2
+PASS Home family/tier agrees with run ownership 5/2
+PASS Home family/tier agrees with run ownership 6/2
+PASS Home family/tier agrees with run ownership 7/2
+PASS Details shows the matching look and exact next signature 0/2
+PASS Details shows the matching look and exact next signature 1/2
+PASS Details shows the matching look and exact next signature 2/2
+PASS Details shows the matching look and exact next signature 3/2
+PASS Details shows the matching look and exact next signature 4/2
+PASS Details shows the matching look and exact next signature 5/2
+PASS Details shows the matching look and exact next signature 6/2
+PASS Details shows the matching look and exact next signature 7/2
+PASS Appearance tier preserves all shelf and counter anchors 2
+PASS Home family/tier agrees with run ownership 0/3
+PASS Home family/tier agrees with run ownership 1/3
+PASS Home family/tier agrees with run ownership 2/3
+PASS Home family/tier agrees with run ownership 3/3
+PASS Home family/tier agrees with run ownership 4/3
+PASS Home family/tier agrees with run ownership 5/3
+PASS Home family/tier agrees with run ownership 6/3
+PASS Home family/tier agrees with run ownership 7/3
+PASS Details shows the matching look and exact next signature 0/3
+PASS Details shows the matching look and exact next signature 1/3
+PASS Details shows the matching look and exact next signature 2/3
+PASS Details shows the matching look and exact next signature 3/3
+PASS Details shows the matching look and exact next signature 4/3
+PASS Details shows the matching look and exact next signature 5/3
+PASS Details shows the matching look and exact next signature 6/3
+PASS Details shows the matching look and exact next signature 7/3
+PASS Appearance tier preserves all shelf and counter anchors 3
+PASS Fresh shared empty/locked states remain distinct from owned artwork
+PASS Unowned detail labels its faded art as a preview without granting ownership
+PASS All 32 native states and shared states preserve every authored UI instance
+PASS Unity compilation succeeds

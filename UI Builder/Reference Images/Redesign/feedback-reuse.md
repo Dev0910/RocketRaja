@@ -1,0 +1,7 @@
+# Compact feedback reuse — 2 October 2026
+
+The user waived approval pauses. The [editable wireframe](../../Wireframes/Redesign/feedback-v1.svg) was inspected before downstream HTML/native work. Existing [Buy All art](buyall-v1.png), saved native maroon toast, cream/gold buttons and Nunito text are the style reference. This extends an existing notice component; no new illustration is needed or claimed. The [editable HTML](../../HTML/Redesign/feedback.html) covers new purchases, rebuys, a comeback, aggregated Buy All, skill overlap, first Prestige and card level change.
+
+One saved card replaces the previous notice. It has an explicit 48px-or-larger Dismiss action, stays above navigation, blocks touches within its own bounds, and leaves uncovered gameplay available. Text renders immediately; sound and motion are not required to understand the result. Native notices last 5–12 seconds based on length, or until dismissed. The browser fixture holds them for inspection. The original skip/reduced-motion card reveal remains the primary card outcome presentation.
+
+The message is a view of an already committed result. Dismissal cannot save, spend, grant, replay or run a purchase. Buy All never queues one celebration per item; at most one older-product comeback and the final crossed shop stage accompany its aggregate counts. A comeback requires an already-owned earlier family whose normal income at least doubles and whose normal shop share grows by more than half a percentage point. This is a presentation threshold only.

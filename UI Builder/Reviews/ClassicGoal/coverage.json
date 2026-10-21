@@ -1,0 +1,1641 @@
+{
+  "goal": "Rocket Raja Classic HTML autonomous UI improvement",
+  "status": "complete",
+  "approval": "Candidate HTML; user delegated wireframe/art-reference review, not final visual approval",
+  "baselineAt": "2026-10-15T20:52:54.400Z",
+  "viewports": [
+    [
+      360,
+      540
+    ],
+    [
+      360,
+      640
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      450,
+      916
+    ]
+  ],
+  "agents": {
+    "audit": "gpt-6.1-sol/high",
+    "fix": "gpt-6.1-sol/high",
+    "review": "gpt-6.1-sol/high"
+  },
+  "screens": [
+    {
+      "name": "Home",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Home-360x540.png",
+        "review/r5-Home-360x640.png",
+        "review/r5-Home-390x844.png",
+        "review/r5-Home-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Home-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-new-normal-360x540.png"
+        },
+        {
+          "state": "Home-opened-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-opened-normal-360x540.png"
+        },
+        {
+          "state": "Home-growing-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-growing-normal-360x540.png"
+        },
+        {
+          "state": "Home-prestige-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-prestige-normal-360x540.png"
+        },
+        {
+          "state": "Home-rebuilt-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-rebuilt-normal-360x540.png"
+        },
+        {
+          "state": "Home-progressed-active",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-progressed-active-360x540.png"
+        },
+        {
+          "state": "Home-progressed-cooldown",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Home-progressed-cooldown-360x540.png"
+        },
+        {
+          "state": "Home-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-new-normal-390x844.png"
+        },
+        {
+          "state": "Home-opened-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-opened-normal-390x844.png"
+        },
+        {
+          "state": "Home-growing-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-growing-normal-390x844.png"
+        },
+        {
+          "state": "Home-prestige-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-prestige-normal-390x844.png"
+        },
+        {
+          "state": "Home-rebuilt-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-rebuilt-normal-390x844.png"
+        },
+        {
+          "state": "Home-progressed-active",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-progressed-active-390x844.png"
+        },
+        {
+          "state": "Home-progressed-cooldown",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Home-progressed-cooldown-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "Player",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Player-360x540.png",
+        "review/r5-Player-360x640.png",
+        "review/r5-Player-390x844.png",
+        "review/r5-Player-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Player-bulk-purchased",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Player-bulk-purchased-360x540.png"
+        },
+        {
+          "state": "Player-prestige-entry",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Player-prestige-entry-360x540.png"
+        },
+        {
+          "state": "Player-bulk-purchased",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Player-bulk-purchased-390x844.png"
+        },
+        {
+          "state": "Player-prestige-entry",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Player-prestige-entry-390x844.png"
+        }
+      ],
+      "findings": [
+        "A2"
+      ]
+    },
+    {
+      "name": "Products",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Products-360x540.png",
+        "review/r5-Products-360x640.png",
+        "review/r5-Products-390x844.png",
+        "review/r5-Products-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Products-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Products-new-normal-360x540.png"
+        },
+        {
+          "state": "Products-progressed-insufficient",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Products-progressed-insufficient-360x540.png"
+        },
+        {
+          "state": "Products-progressed-save-error",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Products-progressed-save-error-360x540.png"
+        },
+        {
+          "state": "Products-purchased",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Products-purchased-360x540.png"
+        },
+        {
+          "state": "Products-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Products-new-normal-390x844.png"
+        },
+        {
+          "state": "Products-progressed-insufficient",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Products-progressed-insufficient-390x844.png"
+        },
+        {
+          "state": "Products-progressed-save-error",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Products-progressed-save-error-390x844.png"
+        },
+        {
+          "state": "Products-purchased",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Products-purchased-390x844.png"
+        }
+      ],
+      "findings": [
+        "A2"
+      ]
+    },
+    {
+      "name": "Legacy",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Legacy-360x540.png",
+        "review/r5-Legacy-360x640.png",
+        "review/r5-Legacy-390x844.png",
+        "review/r5-Legacy-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Legacy-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Legacy-new-normal-360x540.png"
+        },
+        {
+          "state": "Legacy-rebuilt-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Legacy-rebuilt-normal-360x540.png"
+        },
+        {
+          "state": "Legacy-zero-draw-resources",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Legacy-zero-draw-resources-360x540.png"
+        },
+        {
+          "state": "Legacy-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Legacy-new-normal-390x844.png"
+        },
+        {
+          "state": "Legacy-rebuilt-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Legacy-rebuilt-normal-390x844.png"
+        },
+        {
+          "state": "Legacy-zero-draw-resources",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Legacy-zero-draw-resources-390x844.png"
+        }
+      ],
+      "findings": [
+        "A2"
+      ]
+    },
+    {
+      "name": "Shop",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Shop-360x540.png",
+        "review/r5-Shop-360x640.png",
+        "review/r5-Shop-390x844.png",
+        "review/r5-Shop-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Shop-progressed-loading",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-loading-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-unavailable",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-unavailable-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-pending",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-pending-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-cancelled",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-cancelled-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-failed",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-failed-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-delivered",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Shop-progressed-delivered-360x540.png"
+        },
+        {
+          "state": "Shop-progressed-loading",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-loading-390x844.png"
+        },
+        {
+          "state": "Shop-progressed-unavailable",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-unavailable-390x844.png"
+        },
+        {
+          "state": "Shop-progressed-pending",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-pending-390x844.png"
+        },
+        {
+          "state": "Shop-progressed-cancelled",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-cancelled-390x844.png"
+        },
+        {
+          "state": "Shop-progressed-failed",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-failed-390x844.png"
+        },
+        {
+          "state": "Shop-progressed-delivered",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Shop-progressed-delivered-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "Upgrades",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Upgrades-360x540.png",
+        "review/r5-Upgrades-360x640.png",
+        "review/r5-Upgrades-390x844.png",
+        "review/r5-Upgrades-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Upgrades-progressed-empty",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Upgrades-progressed-empty-360x540.png"
+        },
+        {
+          "state": "Upgrades-progressed-insufficient",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Upgrades-progressed-insufficient-360x540.png"
+        },
+        {
+          "state": "Upgrades-progressed-empty",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Upgrades-progressed-empty-390x844.png"
+        },
+        {
+          "state": "Upgrades-progressed-insufficient",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Upgrades-progressed-insufficient-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "BuyAll",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-BuyAll-360x540.png",
+        "review/r5-BuyAll-360x640.png",
+        "review/r5-BuyAll-390x844.png",
+        "review/r5-BuyAll-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "BuyAll-progressed-stale",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-BuyAll-progressed-stale-360x540.png"
+        },
+        {
+          "state": "BuyAll-progressed-save-error",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-BuyAll-progressed-save-error-360x540.png"
+        },
+        {
+          "state": "BuyAll-progressed-stale",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-BuyAll-progressed-stale-390x844.png"
+        },
+        {
+          "state": "BuyAll-progressed-save-error",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-BuyAll-progressed-save-error-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "ProductDetail",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-ProductDetail-0-360x540.png",
+        "review/r5-ProductDetail-1-360x540.png",
+        "review/r5-ProductDetail-2-360x540.png",
+        "review/r5-ProductDetail-3-360x540.png",
+        "review/r5-ProductDetail-4-360x540.png",
+        "review/r5-ProductDetail-5-360x540.png",
+        "review/r5-ProductDetail-6-360x540.png",
+        "review/r5-ProductDetail-7-360x540.png",
+        "review/r5-ProductDetail-0-360x640.png",
+        "review/r5-ProductDetail-1-360x640.png",
+        "review/r5-ProductDetail-2-360x640.png",
+        "review/r5-ProductDetail-3-360x640.png",
+        "review/r5-ProductDetail-4-360x640.png",
+        "review/r5-ProductDetail-5-360x640.png",
+        "review/r5-ProductDetail-6-360x640.png",
+        "review/r5-ProductDetail-7-360x640.png",
+        "review/r5-ProductDetail-0-390x844.png",
+        "review/r5-ProductDetail-1-390x844.png",
+        "review/r5-ProductDetail-2-390x844.png",
+        "review/r5-ProductDetail-3-390x844.png",
+        "review/r5-ProductDetail-4-390x844.png",
+        "review/r5-ProductDetail-5-390x844.png",
+        "review/r5-ProductDetail-6-390x844.png",
+        "review/r5-ProductDetail-7-390x844.png",
+        "review/r5-ProductDetail-0-450x916.png",
+        "review/r5-ProductDetail-1-450x916.png",
+        "review/r5-ProductDetail-2-450x916.png",
+        "review/r5-ProductDetail-3-450x916.png",
+        "review/r5-ProductDetail-4-450x916.png",
+        "review/r5-ProductDetail-5-450x916.png",
+        "review/r5-ProductDetail-6-450x916.png",
+        "review/r5-ProductDetail-7-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "TapTraining",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-TapTraining-360x540.png",
+        "review/r5-TapTraining-360x640.png",
+        "review/r5-TapTraining-390x844.png",
+        "review/r5-TapTraining-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Skills",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Skills-360x540.png",
+        "review/r5-Skills-360x640.png",
+        "review/r5-Skills-390x844.png",
+        "review/r5-Skills-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "SkillDetail",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-SkillDetail-0-360x540.png",
+        "review/r5-SkillDetail-1-360x540.png",
+        "review/r5-SkillDetail-2-360x540.png",
+        "review/r5-SkillDetail-0-360x640.png",
+        "review/r5-SkillDetail-1-360x640.png",
+        "review/r5-SkillDetail-2-360x640.png",
+        "review/r5-SkillDetail-0-390x844.png",
+        "review/r5-SkillDetail-1-390x844.png",
+        "review/r5-SkillDetail-2-390x844.png",
+        "review/r5-SkillDetail-0-450x916.png",
+        "review/r5-SkillDetail-1-450x916.png",
+        "review/r5-SkillDetail-2-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "SkillDetail-0-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-0-new-normal-360x540.png"
+        },
+        {
+          "state": "SkillDetail-0-progressed-active",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-0-progressed-active-360x540.png"
+        },
+        {
+          "state": "SkillDetail-0-progressed-cooldown",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-0-progressed-cooldown-360x540.png"
+        },
+        {
+          "state": "SkillDetail-1-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-1-new-normal-360x540.png"
+        },
+        {
+          "state": "SkillDetail-1-progressed-active",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-1-progressed-active-360x540.png"
+        },
+        {
+          "state": "SkillDetail-2-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-2-new-normal-360x540.png"
+        },
+        {
+          "state": "SkillDetail-2-progressed-cooldown",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-SkillDetail-2-progressed-cooldown-360x540.png"
+        },
+        {
+          "state": "SkillDetail-0-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-0-new-normal-390x844.png"
+        },
+        {
+          "state": "SkillDetail-0-progressed-active",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-0-progressed-active-390x844.png"
+        },
+        {
+          "state": "SkillDetail-0-progressed-cooldown",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-0-progressed-cooldown-390x844.png"
+        },
+        {
+          "state": "SkillDetail-1-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-1-new-normal-390x844.png"
+        },
+        {
+          "state": "SkillDetail-1-progressed-active",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-1-progressed-active-390x844.png"
+        },
+        {
+          "state": "SkillDetail-2-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-2-new-normal-390x844.png"
+        },
+        {
+          "state": "SkillDetail-2-progressed-cooldown",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-SkillDetail-2-progressed-cooldown-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "CardDetail",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-CardDetail-0-360x540.png",
+        "review/r5-CardDetail-1-360x540.png",
+        "review/r5-CardDetail-2-360x540.png",
+        "review/r5-CardDetail-3-360x540.png",
+        "review/r5-CardDetail-4-360x540.png",
+        "review/r5-CardDetail-5-360x540.png",
+        "review/r5-CardDetail-6-360x540.png",
+        "review/r5-CardDetail-7-360x540.png",
+        "review/r5-CardDetail-8-360x540.png",
+        "review/r5-CardDetail-9-360x540.png",
+        "review/r5-CardDetail-10-360x540.png",
+        "review/r5-CardDetail-11-360x540.png",
+        "review/r5-CardDetail-12-360x540.png",
+        "review/r5-CardDetail-13-360x540.png",
+        "review/r5-CardDetail-14-360x540.png",
+        "review/r5-CardDetail-15-360x540.png",
+        "review/r5-CardDetail-16-360x540.png",
+        "review/r5-CardDetail-17-360x540.png",
+        "review/r5-CardDetail-18-360x540.png",
+        "review/r5-CardDetail-19-360x540.png",
+        "review/r5-CardDetail-20-360x540.png",
+        "review/r5-CardDetail-21-360x540.png",
+        "review/r5-CardDetail-22-360x540.png",
+        "review/r5-CardDetail-23-360x540.png",
+        "review/r5-CardDetail-24-360x540.png",
+        "review/r5-CardDetail-25-360x540.png",
+        "review/r5-CardDetail-26-360x540.png",
+        "review/r5-CardDetail-27-360x540.png",
+        "review/r5-CardDetail-0-360x640.png",
+        "review/r5-CardDetail-1-360x640.png",
+        "review/r5-CardDetail-2-360x640.png",
+        "review/r5-CardDetail-3-360x640.png",
+        "review/r5-CardDetail-4-360x640.png",
+        "review/r5-CardDetail-5-360x640.png",
+        "review/r5-CardDetail-6-360x640.png",
+        "review/r5-CardDetail-7-360x640.png",
+        "review/r5-CardDetail-8-360x640.png",
+        "review/r5-CardDetail-9-360x640.png",
+        "review/r5-CardDetail-10-360x640.png",
+        "review/r5-CardDetail-11-360x640.png",
+        "review/r5-CardDetail-12-360x640.png",
+        "review/r5-CardDetail-13-360x640.png",
+        "review/r5-CardDetail-14-360x640.png",
+        "review/r5-CardDetail-15-360x640.png",
+        "review/r5-CardDetail-16-360x640.png",
+        "review/r5-CardDetail-17-360x640.png",
+        "review/r5-CardDetail-18-360x640.png",
+        "review/r5-CardDetail-19-360x640.png",
+        "review/r5-CardDetail-20-360x640.png",
+        "review/r5-CardDetail-21-360x640.png",
+        "review/r5-CardDetail-22-360x640.png",
+        "review/r5-CardDetail-23-360x640.png",
+        "review/r5-CardDetail-24-360x640.png",
+        "review/r5-CardDetail-25-360x640.png",
+        "review/r5-CardDetail-26-360x640.png",
+        "review/r5-CardDetail-27-360x640.png",
+        "review/r5-CardDetail-0-390x844.png",
+        "review/r5-CardDetail-1-390x844.png",
+        "review/r5-CardDetail-2-390x844.png",
+        "review/r5-CardDetail-3-390x844.png",
+        "review/r5-CardDetail-4-390x844.png",
+        "review/r5-CardDetail-5-390x844.png",
+        "review/r5-CardDetail-6-390x844.png",
+        "review/r5-CardDetail-7-390x844.png",
+        "review/r5-CardDetail-8-390x844.png",
+        "review/r5-CardDetail-9-390x844.png",
+        "review/r5-CardDetail-10-390x844.png",
+        "review/r5-CardDetail-11-390x844.png",
+        "review/r5-CardDetail-12-390x844.png",
+        "review/r5-CardDetail-13-390x844.png",
+        "review/r5-CardDetail-14-390x844.png",
+        "review/r5-CardDetail-15-390x844.png",
+        "review/r5-CardDetail-16-390x844.png",
+        "review/r5-CardDetail-17-390x844.png",
+        "review/r5-CardDetail-18-390x844.png",
+        "review/r5-CardDetail-19-390x844.png",
+        "review/r5-CardDetail-20-390x844.png",
+        "review/r5-CardDetail-21-390x844.png",
+        "review/r5-CardDetail-22-390x844.png",
+        "review/r5-CardDetail-23-390x844.png",
+        "review/r5-CardDetail-24-390x844.png",
+        "review/r5-CardDetail-25-390x844.png",
+        "review/r5-CardDetail-26-390x844.png",
+        "review/r5-CardDetail-27-390x844.png",
+        "review/r5-CardDetail-0-450x916.png",
+        "review/r5-CardDetail-1-450x916.png",
+        "review/r5-CardDetail-2-450x916.png",
+        "review/r5-CardDetail-3-450x916.png",
+        "review/r5-CardDetail-4-450x916.png",
+        "review/r5-CardDetail-5-450x916.png",
+        "review/r5-CardDetail-6-450x916.png",
+        "review/r5-CardDetail-7-450x916.png",
+        "review/r5-CardDetail-8-450x916.png",
+        "review/r5-CardDetail-9-450x916.png",
+        "review/r5-CardDetail-10-450x916.png",
+        "review/r5-CardDetail-11-450x916.png",
+        "review/r5-CardDetail-12-450x916.png",
+        "review/r5-CardDetail-13-450x916.png",
+        "review/r5-CardDetail-14-450x916.png",
+        "review/r5-CardDetail-15-450x916.png",
+        "review/r5-CardDetail-16-450x916.png",
+        "review/r5-CardDetail-17-450x916.png",
+        "review/r5-CardDetail-18-450x916.png",
+        "review/r5-CardDetail-19-450x916.png",
+        "review/r5-CardDetail-20-450x916.png",
+        "review/r5-CardDetail-21-450x916.png",
+        "review/r5-CardDetail-22-450x916.png",
+        "review/r5-CardDetail-23-450x916.png",
+        "review/r5-CardDetail-24-450x916.png",
+        "review/r5-CardDetail-25-450x916.png",
+        "review/r5-CardDetail-26-450x916.png",
+        "review/r5-CardDetail-27-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "DrawReveal",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-DrawReveal-360x540.png",
+        "review/r5-DrawReveal-360x640.png",
+        "review/r5-DrawReveal-390x844.png",
+        "review/r5-DrawReveal-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Reveal-card-1",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Reveal-card-1-360x540.png"
+        },
+        {
+          "state": "Reveal-card-2",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Reveal-card-2-360x540.png"
+        },
+        {
+          "state": "Reveal-card-3",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Reveal-card-3-360x540.png"
+        },
+        {
+          "state": "Reveal-card-4",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Reveal-card-4-360x540.png"
+        },
+        {
+          "state": "Reveal-card-5",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Reveal-card-5-360x540.png"
+        },
+        {
+          "state": "Reveal-card-1",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Reveal-card-1-390x844.png"
+        },
+        {
+          "state": "Reveal-card-2",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Reveal-card-2-390x844.png"
+        },
+        {
+          "state": "Reveal-card-3",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Reveal-card-3-390x844.png"
+        },
+        {
+          "state": "Reveal-card-4",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Reveal-card-4-390x844.png"
+        },
+        {
+          "state": "Reveal-card-5",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Reveal-card-5-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "Prestige",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Prestige-360x540.png",
+        "review/r5-Prestige-360x640.png",
+        "review/r5-Prestige-390x844.png",
+        "review/r5-Prestige-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Prestige-prestige-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Prestige-prestige-normal-360x540.png"
+        },
+        {
+          "state": "Prestige-from-player",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Prestige-from-player-360x540.png"
+        },
+        {
+          "state": "Prestige-prestige-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Prestige-prestige-normal-390x844.png"
+        },
+        {
+          "state": "Prestige-from-player",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Prestige-from-player-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "Offline",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Offline-360x540.png",
+        "review/r5-Offline-360x640.png",
+        "review/r5-Offline-390x844.png",
+        "review/r5-Offline-450x916.png"
+      ],
+      "states": [
+        {
+          "state": "Offline-new-normal",
+          "viewport": "360x540",
+          "evidence": "review/finalstate-Offline-new-normal-360x540.png"
+        },
+        {
+          "state": "Offline-new-normal",
+          "viewport": "390x844",
+          "evidence": "review/finalstate-Offline-new-normal-390x844.png"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "name": "Statistics",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Statistics-360x540.png",
+        "review/r5-Statistics-360x640.png",
+        "review/r5-Statistics-390x844.png",
+        "review/r5-Statistics-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Settings",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Settings-360x540.png",
+        "review/r5-Settings-360x640.png",
+        "review/r5-Settings-390x844.png",
+        "review/r5-Settings-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Naming",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Naming-360x540.png",
+        "review/r5-Naming-360x640.png",
+        "review/r5-Naming-390x844.png",
+        "review/r5-Naming-450x916.png"
+      ],
+      "states": [],
+      "findings": [
+        "A1"
+      ]
+    },
+    {
+      "name": "Privacy",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Privacy-360x540.png",
+        "review/r5-Privacy-360x640.png",
+        "review/r5-Privacy-390x844.png",
+        "review/r5-Privacy-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Account",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Account-360x540.png",
+        "review/r5-Account-360x640.png",
+        "review/r5-Account-390x844.png",
+        "review/r5-Account-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Welcome",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Welcome-360x540.png",
+        "review/r5-Welcome-360x640.png",
+        "review/r5-Welcome-390x844.png",
+        "review/r5-Welcome-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "AccountCompare",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-AccountCompare-360x540.png",
+        "review/r5-AccountCompare-360x640.png",
+        "review/r5-AccountCompare-390x844.png",
+        "review/r5-AccountCompare-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Handoff",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Handoff-360x540.png",
+        "review/r5-Handoff-360x640.png",
+        "review/r5-Handoff-390x844.png",
+        "review/r5-Handoff-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "SaveRecovery",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-SaveRecovery-360x540.png",
+        "review/r5-SaveRecovery-360x640.png",
+        "review/r5-SaveRecovery-390x844.png",
+        "review/r5-SaveRecovery-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Purchase",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Purchase-360x540.png",
+        "review/r5-Purchase-360x640.png",
+        "review/r5-Purchase-390x844.png",
+        "review/r5-Purchase-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Appearance",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Appearance-360x540.png",
+        "review/r5-Appearance-360x640.png",
+        "review/r5-Appearance-390x844.png",
+        "review/r5-Appearance-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Help",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Help-360x540.png",
+        "review/r5-Help-360x640.png",
+        "review/r5-Help-390x844.png",
+        "review/r5-Help-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Odds",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Odds-360x540.png",
+        "review/r5-Odds-360x640.png",
+        "review/r5-Odds-390x844.png",
+        "review/r5-Odds-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Promote",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Promote-360x540.png",
+        "review/r5-Promote-360x640.png",
+        "review/r5-Promote-390x844.png",
+        "review/r5-Promote-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "SignOut",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-SignOut-360x540.png",
+        "review/r5-SignOut-360x640.png",
+        "review/r5-SignOut-390x844.png",
+        "review/r5-SignOut-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "RecoveryConfirm",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-RecoveryConfirm-360x540.png",
+        "review/r5-RecoveryConfirm-360x640.png",
+        "review/r5-RecoveryConfirm-390x844.png",
+        "review/r5-RecoveryConfirm-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "RecoveryExit",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-RecoveryExit-360x540.png",
+        "review/r5-RecoveryExit-360x640.png",
+        "review/r5-RecoveryExit-390x844.png",
+        "review/r5-RecoveryExit-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    },
+    {
+      "name": "Exact",
+      "audit": "complete; see audit/COVERAGE.md",
+      "fix": "Complete; no open findings",
+      "review": "PASS independent final visual and behavioral review",
+      "evidence": [
+        "review/r5-Exact-360x540.png",
+        "review/r5-Exact-360x640.png",
+        "review/r5-Exact-390x844.png",
+        "review/r5-Exact-450x916.png"
+      ],
+      "states": [],
+      "findings": []
+    }
+  ],
+  "components": [
+    {
+      "name": "Wallet/settings header",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Stall/shopkeeper/8 product positions",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Home goal/income/3 skills",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "4 bottom tabs/collapse",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Product rows/art/progress/quantity/purchases",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Player upgrade rows/count/buy-all/training",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Catalogue search/filters/pagination/exact prices",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Modal header/body/footer/stack/focus",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "28 Talent cards/rarity borders/reveals/draws",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "4 IAP pack cards/purchase outcome states",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Form fields/name validation/settings toggles",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Accounts/comparison/handoff/recovery",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Notices/purchase/error/skill feedback",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Motion/reduced motion",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    },
+    {
+      "name": "Desktop/mobile preview tools",
+      "audit": "PASS detailed Audit coverage",
+      "review": "PASS independent final component review",
+      "evidence": [
+        "audit/COVERAGE.md",
+        "review/REVIEW.md"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "A1",
+      "severity": "high",
+      "area": "In-app feedback / Naming validation",
+      "status": "PASS independent final review",
+      "observed": "notice() hides phone-local notice and sends all feedback to external review-status; empty Naming submit has no visible validation.",
+      "acceptance": "Visible accessible phone-local status, associated inline name validation with focus/aria-invalid; purchase/recovery outcomes visible at all4 sizes without overlap.",
+      "evidence": [
+        "audit/Naming-empty-submit-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A2",
+      "severity": "high",
+      "area": "Expanded panel usable content / scroll affordance",
+      "status": "PASS independent final review",
+      "observed": "Persistent stall occupies51% viewport leaving152px scroll at360x540; Player upgrades/Legacy first cards not visible; continuation undisclosed.",
+      "acceptance": "Compact expanded-panel scene with Home unchanged, retained cash/tap/shop context and touch controls, 2+ product rows/first collection row/upgrade content at360x540 and honest scroll cue. Shared scroll cues also cover overflowing modal bodies without obscuring fixed actions.",
+      "evidence": [
+        "audit/Player-360x540.png",
+        "audit/Products-360x540.png",
+        "audit/Legacy-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "R1",
+      "severity": "high",
+      "area": "Focus preservation across settings refresh / nested sheet close",
+      "observed": "Setting toggle and successful rename drop focus to BODY; nested close loses invoking action after parent rerender.",
+      "acceptance": "Focus retained on equivalent logical control after refresh; rename returns to trigger; nested sheet dismissal returns opener with inert/trap intact. Settings switches have distinct names associated with visible labels and correct aria-checked.",
+      "evidence": [
+        "review/flows.json",
+        "review/flow-settings-after-toggle.png",
+        "review/flow-saved-name.png"
+      ],
+      "status": "PASS independent final review",
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "R2",
+      "severity": "medium",
+      "area": "Review screen selector",
+      "observed": "setTab overwrites requested select.value before navigate, so modal choices open Home.",
+      "acceptance": "Every review-screen option opens its declared route using visible tooling; review actions stay separate from game contract.",
+      "evidence": [
+        "review/flows.json"
+      ],
+      "status": "PASS independent final review",
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A3",
+      "severity": "high",
+      "area": "CardDetail explicit dismiss",
+      "status": "PASS independent final review",
+      "observed": "CardDetail omits close control; only backdrop/Escape dismiss, unclear on small phones.",
+      "acceptance": "Visible48px circular close for28cards/3rarities/all4sizes, unclipped and returns logical focus.",
+      "evidence": [
+        "audit/CardDetail-0-360x540.png",
+        "audit/CardDetail-18-360x540.png",
+        "audit/CardDetail-27-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A4",
+      "severity": "medium",
+      "area": "Current-tab indication",
+      "status": "PASS independent final review",
+      "observed": "Selected and unselected navigation blue faces are visually indistinguishable.",
+      "acceptance": "Restrained current-tab indicator retaining painted blue face, aria-pressed/toggle-to-Home and stable layout.",
+      "evidence": [
+        "audit/Player-390x844.png",
+        "audit/Products-390x844.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "R3",
+      "severity": "medium",
+      "area": "Desktop review comparison link",
+      "status": "PASS independent final review",
+      "observed": "Compare original UI anchor targets deleted Player/player.html, HTTP404.",
+      "acceptance": "Review-only link removed or replaced by honestly labelled available artwork gallery; resource/link check passes.",
+      "evidence": [
+        "review desktop/source and HTTP404 confirmation"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A5",
+      "severity": "high",
+      "area": "Scoped skill upgrade catalogue / quote consistency",
+      "status": "PASS independent final review",
+      "observed": "SkillDetail scoped route sets target but visible matches ignores it; native batch target differs visible list.",
+      "acceptance": "Each skill target filters7/8/9 own rows/count and agrees native batch; visible scope label/clear; no removed target dropdown; safe page reset.",
+      "evidence": [
+        "audit/skill-scope.json",
+        "audit/skill-scope-Rush-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A6",
+      "severity": "high",
+      "area": "First-stock Home CTA",
+      "status": "PASS independent final review",
+      "observed": "Stock Phuljhari CTA opens read-only ProductDetail without purchase action.",
+      "acceptance": "Fresh/new/rebuilt first-stock CTA opens first Products row and existingStock action returns opened Home; details stay read-only.",
+      "evidence": [
+        "audit/state-Home-new-normal-360x540.png",
+        "audit/state-ProductDetail-0-new-normal-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A7",
+      "severity": "medium",
+      "area": "Stale BuyAll explanation placement",
+      "status": "PASS independent final review",
+      "observed": "Stale warning follows24quote rows; disabled confirm/refresh visible without explanation atsmallviewport.",
+      "acceptance": "Stale explanation immediately visible360x540/390x844; confirmation remainsguarded, frozenids/prices unchangeduntil explicitrefresh.",
+      "evidence": [
+        "audit/state-BuyAll-progressed-stale-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "A8",
+      "severity": "medium",
+      "area": "Maximum-length shop name boundaries",
+      "status": "PASS independent final review",
+      "observed": "24widechars overflow shared painted sign and Settings renamebutton.",
+      "acceptance": "24wide/24normalchar names fit sign/Settings acrossHome+expanded all4; full editablevalue/maxlength retained.",
+      "evidence": [
+        "audit/Home-max-wide-name-360x540.png",
+        "audit/Settings-max-wide-name-360x540.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "R4",
+      "severity": "medium",
+      "area": "Home shared shelf touch targets",
+      "status": "PASS independent final review",
+      "observed": "Required settled verifier finds eightHome producttargets42.05px at360x540; panel-only sweep didnotinclude sharedworld.",
+      "acceptance": "Allvisible shared/panel/modal controls>=48×48 inclrolebuttons, shelves nooverlap and noaccidentalstallaction; artworkpositions preserved.",
+      "evidence": [
+        "UI Fix settled verify measurement; finalfocusedshelfreport pending"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/final-sweep.json",
+        "review/final-states.json",
+        "review/final-deep.json",
+        "review/final-acceptance.json",
+        "review/final-name-scroll.json",
+        "review/final-shared-targets.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    },
+    {
+      "id": "R5",
+      "severity": "medium",
+      "area": "Expanded scene shop-name alignment at taller widths",
+      "status": "PASS independent final review",
+      "observed": "At390x844/450x916 compactname sitsaboveawningwhilepaintedplaqueempty; DOMgeometrytests pass.",
+      "acceptance": "Compactlive name anchored actualpaintedplaque all4viewports/normal24/W24, noCash/Tapcollision; Homeunchanged.",
+      "evidence": [
+        "coordinator/R5-before-Player-390x844.png",
+        "coordinator/R5-before-Player-450x916.png"
+      ],
+      "owner": "ui_fix",
+      "reviewEvidence": [
+        "review/r5-headers.json",
+        "review/REVIEW.md",
+        "review/r5-sweep.json"
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "name": "current-ui-check baseline",
+      "status": "pass",
+      "evidence": "UI Fix reports 44 route/viewport checks plus current regression assertions; no browser exceptions."
+    },
+    {
+      "name": "verify baseline",
+      "status": "fail",
+      "reason": "Controls sampled60ms into330ms scale entrance measure46.59/47.31px; settle animation before distinguishing geometry defects."
+    },
+    {
+      "name": "interactions baseline",
+      "status": "fail",
+      "reason": "13 checks pass then stale catalogue-target selector absent in current UI; browser/resource errors0."
+    },
+    {
+      "name": "Independent baseline accessibility",
+      "status": "partial-pass",
+      "evidence": "UI Review reports switch roles/states, focus trap endpoints, recovery nondismissal/cancel and OS/in-game reduced-motion/settled reveal behavior pass; switch names/focus are R1 failures."
+    },
+    {
+      "name": "states baseline",
+      "status": "pass",
+      "evidence": "UI Fix reports30snapshot/state checks plus desktop capture pass."
+    },
+    {
+      "name": "Artwork audit",
+      "status": "audit-pass",
+      "evidence": [
+        "audit/card-art-inventory.png",
+        "audit/icons-merchandise-displayed-sizes.png",
+        "audit/card-details-contact-0.png",
+        "audit/card-details-contact-6.png"
+      ],
+      "details": "Audit visually inspected28cardarts/allnative-sizecarddetails/3rarityframes/back,19icons at30/36/48 and8merchandise at37/54. No raster/crop/readability issue beyondA3missing dismiss. Independent final review pending."
+    },
+    {
+      "name": "Fix focused polish suite",
+      "status": "pass",
+      "evidence": "UI Fix reports243checks across4viewports incl112cardclosecases,focus/forms/reviewroutes/gallery. Independent acceptance pending and A8added afterthis run."
+    },
+    {
+      "name": "Final review barrier",
+      "status": "running",
+      "evidence": "UI Review notified sharedUI stable afterA8; independent276variant/viewport capture sweep and interaction acceptance underway."
+    },
+    {
+      "name": "UI Audit full coverage report",
+      "status": "audit-complete",
+      "evidence": "audit/COVERAGE.md",
+      "details": "33surfaces, all13conditions whereapplicable,6fixtures,28cards,3rarityframes/back/reveals,19symbols,8merchandise,4packs,form boundaries. R4addedfrom finalverifier."
+    },
+    {
+      "name": "Independent pre-R4 final sweep",
+      "status": "superseded-by-R4",
+      "evidence": "review/final-sweep.json;276checks and219deepassertions reported; R4expandedsharedcontrolscope requiresfinalrerun."
+    },
+    {
+      "name": "R4 focused shared-control verifier",
+      "status": "pass",
+      "evidence": "Tools/ClassicUiPreview/home-targets.cjs; fix/Home-targets-360x540.png",
+      "details": "UI Fix reports allvisible .app interactive rolecontrols>=48 atall4sizes,8shelfhitrectanglespairwisedisjoint; visualartcoords preserved byseparatelayer."
+    },
+    {
+      "name": "Independent final normal sweep",
+      "status": "automated-pass; visual sign-off pending",
+      "evidence": "review/final-sweep.json",
+      "count": 276,
+      "errors": 0,
+      "sourceUnchanged": true
+    },
+    {
+      "name": "Independent final state sweep",
+      "status": "automated-pass; visual sign-off pending",
+      "evidence": "review/final-states.json",
+      "count": 82,
+      "errors": 0,
+      "sourceUnchanged": true
+    },
+    {
+      "name": "Independent final shared-control review",
+      "status": "pass",
+      "evidence": "review/final-shared-targets.json",
+      "count": 52,
+      "details": "20whole-interface tabgeometry sets+32actualshelfclicks; no undersized targets/overlap/accidentalTap."
+    },
+    {
+      "name": "R5 focused responsive header verification",
+      "status": "pass",
+      "evidence": "fix/R5/compact-header-report.json",
+      "details": "4Home decodedpixel/geometry comparisons unchanged;48expandedroute/name/viewportcases; current44andsharedtargets4 pass. Independentreviewpending."
+    },
+    {
+      "name": "Independent final R5 responsive pixel review",
+      "status": "pass",
+      "count": 48,
+      "evidence": "review/r5-headers.json",
+      "details": "4tabs×3names×4sizes; fullpaintedplaque/textaligned;cash/settings/Tapclear;full24charvaluepreserved;sourceunchanged."
+    },
+    {
+      "name": "Definitive final R5 normal sweep",
+      "status": "pass",
+      "evidence": "review/r5-sweep.json",
+      "count": 276,
+      "errors": 0,
+      "currentSourcesMatch": true
+    },
+    {
+      "name": "Definitive final R5 deep flows",
+      "status": "pass",
+      "evidence": "review/r5-deep.json",
+      "count": 219,
+      "errors": 0
+    },
+    {
+      "name": "Definitive final R5 accessibility and tooling",
+      "status": "pass",
+      "evidence": "review/r5-acceptance.json",
+      "count": 78,
+      "errors": 0
+    }
+  ],
+  "notes": [
+    "Current Classic working files are source of truth; existing user changes and deleted files preserved.",
+    "Do not run historical build.cjs: it reads deleted Player/player.html.",
+    "Native Unity/backends/economy/game rules are read-only.",
+    "Archive hashes/status and baseline source copies are checkpoint evidence, not runtime artifacts.",
+    "Final evidence scope expanded after R4: all shared world/header/navigation/role controls, not only active panel/modal. Reviewer independently checks8shelf targets and no Tap side effects.",
+    "R5 found by independent final pixels after DOM/suite passes. Goal not complete until responsive painted sign alignment is corrected/reviewed.",
+    "R5 CSS-only compact header fix scales artwork/crop/live text from same width coordinates; Home decoded pixels unchanged. Independent final responsive review pending."
+  ],
+  "completion": "All33surfaces/components/art/meaningfulstates independently reviewed; all13findings resolved; all required suites pass; finalR5source-stamped sweep276/state82/header48pass with0errors and unchangedcurrenthashes.",
+  "finalReviewReport": "review/REVIEW.md",
+  "normalVariants": 69,
+  "coverageTotals": {
+    "surfaces": 33,
+    "viewports": 4,
+    "normalVariantViewportChecks": 276,
+    "stateCaptures": 82,
+    "independentHeaderChecks": 48,
+    "resolvedFindings": 13,
+    "openFindings": 0
+  }
+}

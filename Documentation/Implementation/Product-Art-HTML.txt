@@ -1,0 +1,6 @@
+PASS Exactly 32 owned states, grouped by eight stable family IDs
+PASS Full gallery layout 390x844
+PASS Full gallery layout 360x540
+PASS Full gallery layout 1100x850
+PASS All eight original RGBA atlas sources load locally
+PASS No browser errors or external network dependencies

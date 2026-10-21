@@ -1,0 +1,17 @@
+# Premium authority implementation
+
+Server-only, undeployed modules. No live endpoint, credential or fake-grant release route is enabled. `authority.mjs` implements verified pack deduplication, immutable paid-draw outcomes, account-lease fencing, exact decimal-string wallet arithmetic and once-only refund revocation. `google-play.mjs` verifies with the official Play API; `firestore-store.mjs` adapts trusted Admin transactions.
+
+`http-handler.mjs` verifies Firebase ID tokens and App Check, derives UID from the verified identity, restricts provider to Google, rejects unknown fields, enforces a shared Firestore rate limiter and bounds bodies. `index.mjs` provides a Firebase second-generation HTTP entry and private Pub/Sub refund worker with required configuration and platform credentials. Prepared for review using `firebase.premium.review.json`; nothing is deployed. The refund worker checks Google's Voided Purchases API before a revoke transaction, including a pre-delivery record that prevents late grants. Live topic configuration, monitoring and sandbox evidence remain pending. Logging must redact tokens and credentials. See [deployment review](../../Documentation/Implementation/PremiumDeploymentReview.md).
+
+Grant durability precedes Unity IAP `ConfirmPurchase`. Lost fulfillment responses retry the same purchase token. Reading the wallet restores fulfilled consumables. Draws reuse their operation UUID after uncertain responses and cache the returned server component before revealing it. Repeated old draw results must not replace a newer cached wallet; the client compares exact revisions.
+
+The four pack definitions are taken from the validated catalogue export by the test harness. Production must load an explicit store-verified allowlist. Unit fixtures are synthetic and confined to `authority.test.mjs`; they are not receipt verification or real sandbox purchase evidence.
+
+`activate` binds confirmed guest provenance to one UID and imports the one-time gift or its original spent card atomically. Paid draws require the matching operation in confirmed schema-3 cloud progress. The Unity client now separates free and currency-funded copies, rejects stale wallet snapshots, persists operation IDs before sending, and handles replay through the authenticated HTTP transport. Still required before enabling: explicit endpoint/deployment, Firebase Play Integrity provider and console setup, runtime scene/account binding, reviewed shop and real Play Console/sandbox acceptance. See [the full ownership contract](../../Documentation/Implementation/PremiumAuthority.md).
+
+Run: `node --test Backend/Premium/authority.test.mjs`.
+
+Firestore Admin SDK 14.5.0 is pinned in this directory's lockfile and requires Node 22+. `Tools/CloudSaveTests/run.ps1` also executes `firestore.integration.test.mjs` against the local demo emulator, covering concurrent grants/spends, restart replay, timestamp/ownership conversion and refunds. It refuses a nonlocal emulator or non-demo project. These are actual Admin transaction tests with synthetic Play verification, not store sandbox evidence.
+
+Install server/test dependencies with `npm ci --ignore-scripts` in this directory. A narrow gaxios override pins UUID 11.1.1, which patches [GHSA-w5hq-g745-h8pq](https://github.com/uuidjs/uuid/security/advisories/GHSA-w5hq-g745-h8pq) and retains the CommonJS `v4()` API used by gaxios. The resulting dependency audit has no reported vulnerabilities.
