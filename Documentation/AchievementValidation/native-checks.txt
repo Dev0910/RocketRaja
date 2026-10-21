@@ -1,0 +1,15 @@
+PASS saved hierarchy: 30 dialogs, 15 fully bound achievements.
+PASS real Player toolbar button opens Achievements.
+PASS completed rewards appear first.
+PASS close symbol is visible.
+PASS real claim button awards exactly 10 Kaju Katli, stores its receipt and disables repeat claims.
+PASS stale callback cannot grant the same reward twice.
+PASS all 1,000 upgrade descriptions and 28 card descriptions (levels 0, 1, 10, 100) follow effect precision rules.
+PASS 390x844 Player/Achievements
+PASS 390x844 Player/Achievements
+PASS 360x540 Player/Achievements
+PASS native Unity JsonUtility/checksummed save reload retains the exact wallet and claim; reloaded duplicate grant rejected.
+PASS 360x640 Player/Achievements
+PASS 450x916 Player/Achievements
+PASS all 15 rows and permanent rewards note are reachable by scrolling.
+PASS native close button returns to Player and restores gameplay input.

@@ -71,7 +71,7 @@ namespace RocketRaja.Core
         public CurrencyDrawRequest BeginCurrencyDraw()
         {
             var p = State.premium;
-            if (!State.HasPremium || !MutationAllowed() || State.requiresDrawReconciliation || State.completedPrestiges.IsZero || State.reveal.pending || !PremiumSpendAllowed()) return null;
+            if (!State.HasPremium || !MutationAllowed() || State.requiresDrawReconciliation || State.reveal.pending || !PremiumSpendAllowed()) return null;
             if (p.pendingOperationId == "")
             {
                 if (State.kajuKatli.Value < 100 || !p.deficit.IsZero) return null;

@@ -163,8 +163,8 @@ namespace RocketRaja.Editor
                         Click(app.retained.account); Next(.7); break;
                     case 9:
                         if (!Scene("Bootstrap")) return;
-                        Primary(); Check(Heading == "Choose your progress" && Field<Button>("tertiaryButton").gameObject.activeSelf == false,
-                            "Existing Google comparison offers Google or guest without an overwrite action");
+                        Primary(); Check(Heading == "Choose your progress" && Field<TMP_Text>("secondaryLabel").text == "Keep device progress" && Field<Button>("tertiaryButton").gameObject.activeSelf,
+                            "Existing Google comparison offers Google progress, explicit device replacement and staying as guest");
                         Capture("compare"); Next(); break;
                     case 10:
                         Primary(); Next(.7); break;

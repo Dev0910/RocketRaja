@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rocket Raja · Achievement reward ledger</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../Classic/popup-refresh.css"><link rel="stylesheet" href="../Classic/popup-clearance.css">
+<link rel="stylesheet" href="../Classic/achievements-ledger.css?v=ledger-controls-r2-20261021"><link rel="stylesheet" href="preview.css">
+</head><body>
+<main id="app" class="app" data-achievement-preview data-reduced-motion="true">
+<button id="achievement-open" class="preview-open" data-action="Navigate" data-param="Achievements" data-unity-name="OpenAchievements" data-unity-action="Navigate" data-runtime-status="existing-verified" data-unity-listener-owner="RocketRaja.Classic.ClassicControl" data-unity-interactability="Mutable session" hidden>Achievements</button>
+<section id="achievement-modal" class="modal-layer bazaar-dialog" data-screen="Achievements">
+<div class="modal-card popup-has-close" role="dialog" aria-modal="true" aria-labelledby="achievement-title">
+<header class="modal-head"><h2 id="achievement-title">Your<br>achievements</h2></header>
+<button id="achievement-close" class="close" aria-label="Close achievements" data-action="Close" data-unity-name="CloseAchievements" data-unity-action="Close" data-runtime-status="existing-verified" data-unity-listener-owner="RocketRaja.Classic.ClassicControl" data-unity-interactability="Top popup and mutable session">×</button>
+<div id="achievement-body" class="modal-body"></div>
+<footer class="modal-footer"><p>Progress stays after prestige.</p><button id="achievement-back" class="action secondary" data-action="Close" data-unity-name="BackToStall" data-unity-action="Close" data-runtime-status="existing-verified" data-unity-listener-owner="RocketRaja.Classic.ClassicControl" data-unity-interactability="Top popup and mutable session">Back to your stall</button></footer>
+</div></section></main>
+<script id="unity-metadata" type="application/json">{
+  "screen": {
+    "identity": "achievement-reward-ledger",
+    "entryState": "Achievements",
+    "destinationOrOwner": "Assets/Scenes/Main.unity",
+    "functionalityProfile": "existing-integration",
+    "referenceViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "visualApprovalStatus": "candidate",
+    "approvalWorkflow": "User selected Option 1 Reward ledger and directly requested implementation on 21 October 2026; no subsequent HTML review is claimed.",
+    "capabilityModules": [
+      "collections",
+      "stateMachines",
+      "persistence",
+      "accessibilityAndPresentation"
+    ],
+    "sceneHierarchyHint": "ClassicProductionCanvas / Local dialogs / Achievements",
+    "nativeImplementationStatus": "verified"
+  },
+  "actions": {
+    "ClaimAchievement": {
+      "triggerIds": [
+        "achievement-claim-taps-100",
+        "achievement-claim-taps-1000",
+        "achievement-claim-taps-10000",
+        "achievement-claim-earnings-1000",
+        "achievement-claim-earnings-1000000",
+        "achievement-claim-earnings-1000000000",
+        "achievement-claim-upgrades-10",
+        "achievement-claim-upgrades-100",
+        "achievement-claim-upgrades-1000",
+        "achievement-claim-products-1",
+        "achievement-claim-products-4",
+        "achievement-claim-products-8",
+        "achievement-claim-prestiges-1",
+        "achievement-claim-prestiges-5",
+        "achievement-claim-prestiges-10"
+      ],
+      "parameterSource": "Stable achievement Id from RedesignAchievements.All",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Core/RedesignAchievements.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "ClaimAchievement",
+      "guards": [
+        "Existing achievement",
+        "Milestone complete",
+        "Not already claimed",
+        "Session may mutate",
+        "Current Classic wallet supports local grants"
+      ],
+      "reentryPolicy": "Duplicate claims return false; no second grant",
+      "success": "Save currency and claim receipt atomically, then publish and refresh",
+      "failure": [
+        "Not eligible: no mutation",
+        "Already claimed: no mutation",
+        "Persistence failure: retain previous wallet and receipt state and enter existing save recovery"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine.Commit",
+        "RedesignLifecycle",
+        "RedesignSaveStore"
+      ],
+      "listenerPolicy": "One ClassicControl listener per Editor-authored button; browser demo changes memory only",
+      "evidence": [
+        "Assets/Game/Core/RedesignAchievements.cs",
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Tools/RedesignLab/AchievementChecks.cs"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing achievement behavior verified in the prior implementation; latest user selected Reward ledger and explicitly requested implementation.",
+      "canFail": true
+    },
+    "Close": {
+      "triggerIds": [
+        "achievement-close",
+        "achievement-back"
+      ],
+      "triggerSelector": "[data-action=\"Close\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "Close",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Transferred into saved native uGUI and verified in the 19 October 2026 native stage; browser execution remains preview-only.",
+      "canFail": false
+    },
+    "Navigate": {
+      "triggerIds": [
+        "achievement-open"
+      ],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.RedesignScreenRouter",
+      "entrySymbol": "Navigate",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    }
+  },
+  "bindings": {
+    "achievementLedger": {
+      "targetIds": [
+        "achievement-body"
+      ],
+      "valueType": "15 stable achievement rows plus wallet and overview",
+      "format": "Whole counts, progress and Kaju Katli rewards",
+      "sourceOwner": "RocketRaja.Classic.ClassicUI",
+      "sourceSymbol": "RefreshAchievements",
+      "updateTrigger": "Open, command and 100ms presentation refresh",
+      "visibilityRule": "Achievements popup open",
+      "interactabilityRule": "Completed and unclaimed with mutable session",
+      "fallback": "In progress or Claimed; recovery on persistence failure",
+      "runtimeStatus": "existing-verified",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicUI.Achievements.cs"
+      ],
+      "reason": "Saved native page, 15 bindings and actual production route verified with isolated test profiles on 21 October 2026."
+    }
+  },
+  "navigation": {
+    "routes": [
+      "Achievements"
+    ],
+    "owner": "RocketRaja.Classic.ClassicUI",
+    "history": "Close returns to invoking Player page and restores focus",
+    "transition": "Existing ClassicMotion Enter/Exit; reduced motion respected"
+  },
+  "conflicts": [],
+  "qaScenarios": [
+    {
+      "id": "achievement-ledger-claim",
+      "preconditions": [
+        "Completed unclaimed milestone",
+        "Mutable session"
+      ],
+      "trigger": "Click Claim",
+      "expectedUiState": "Claimed state, updated wallet and claimed/ready counts; row moves after in-progress rows",
+      "expectedSideEffects": [
+        "One persisted reward and receipt"
+      ],
+      "forbiddenSideEffects": [
+        "Repeat grant",
+        "Stall tap",
+        "Reward from artwork or animation"
+      ],
+      "actionIds": [
+        "ClaimAchievement"
+      ]
+    },
+    {
+      "id": "achievement-ledger-save-failure",
+      "preconditions": [
+        "Persistence unavailable"
+      ],
+      "trigger": "Attempt Claim",
+      "expectedUiState": "Existing save recovery",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "Currency grant",
+        "Claimed receipt",
+        "Loss of prior save"
+      ],
+      "actionIds": [
+        "ClaimAchievement"
+      ]
+    }
+  ],
+  "modules": {
+    "collections": {
+      "achievements": {
+        "count": 15,
+        "key": "AchievementDefinition.Id",
+        "template": "achievement-ledger-row"
+      }
+    },
+    "stateMachines": {
+      "achievement": {
+        "states": [
+          "In progress",
+          "Ready",
+          "Claimed"
+        ],
+        "owner": "RedesignAchievements / RedesignEngine"
+      }
+    },
+    "persistence": {
+      "owner": "RedesignEngine.Commit / RedesignSaveStore",
+      "atomicity": "Reward and claimed receipt persisted before publication",
+      "failure": "Existing recovery UI; no reward or receipt published"
+    },
+    "accessibilityAndPresentation": {
+      "owner": "ClassicUI / ClassicMotion",
+      "focus": "Invoking control restored on close",
+      "reducedMotion": "Existing setting; no new looping effect",
+      "preview": "Memory-only fixtures; no network, storage or player saves",
+      "assets": {
+        "ledgerAtlas": {
+          "previewSource": "assets/achievements/ledger-atlas.png",
+          "unityPath": "Assets/Game/ClassicUI/Achievements/ledger-atlas.png",
+          "byteIdentical": true
+        }
+      }
+    }
+  },
+  "assets": {
+    "achievementClaimReady": {
+      "previewSource": "assets/achievements/claim-ready.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-ready.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "a2d53863c0db260cf283531390c112d0c3abb29a50b7d810fd8a0087b778b23b"
+    },
+    "achievementClaimProgress": {
+      "previewSource": "assets/achievements/claim-progress.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-progress.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "fce55947bed5f74055a83e5b9db6c48d38c8e5bd736f63dd0fcaa8dba5d52685"
+    },
+    "achievementClaimed": {
+      "previewSource": "assets/achievements/claim-claimed.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/claim-claimed.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "f325402a736a22437a78657d2b95b1fff38504acc0602f2f57ae126f485a490d"
+    },
+    "achievementReadyBadge": {
+      "previewSource": "assets/achievements/ready-badge.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/ready-badge.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "fa7b3c7b88e24b81ab80607cc0066a98181e63f1e88eba4ce72b2b1f92a4f704"
+    },
+    "achievementLedgerAtlas": {
+      "previewSource": "assets/achievements/ledger-atlas.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/ledger-atlas.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "6969c52798fff2e7eee62bf6d74d9a4ca80990a9f50139592d864abc2df57a7c"
+    }
+  }
+}</script>
+<script src="../Classic/content.js" data-handoff-role="preview-only"></script><script src="../Classic/fixtures.js" data-handoff-role="preview-only"></script>
+<script src="../Classic/achievements-ledger.js" data-handoff-role="preview-only"></script><script src="preview.js" data-handoff-role="preview-only"></script>
+</body></html>

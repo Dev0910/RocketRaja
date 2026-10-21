@@ -24,7 +24,7 @@ namespace RocketRaja.Classic
             {
                 var row=products[i];var q=e.LevelQuote(i,LevelQuantity(i));int n=s.products[i];row.name.text=e.Data.Products[i].name;row.level.text="Lvl : "+n;row.income.text=Cash(e.ProductIncome(i))+"/s";
                 row.cost.text=n>=Catalog.MaxLevel?"Max level":Cash(q.cost)+"\n"+(!e.ProductAvailable(i)?"Own "+e.Data.Products[i-1].name:n==0?"Stock shelf":"Upgrade ×"+Math.Max(1,q.quantity));row.buy.interactable=can&&q.affordable;
-                ((UnityEngine.UI.Image)row.buy.targetGraphic).sprite=row.buy.interactable?blueButton:disabledButton;
+                SetButtonSkin(row.buy,row.buy.interactable);
                 motion.Fill(row.progress,MilestoneProgress(n));shelfProducts[i].SetActive(n>0);
             }
             for(int i=0;i<3;i++)
@@ -36,7 +36,7 @@ namespace RocketRaja.Classic
             int discovered=s.cardLevels.Count(n=>!n.IsZero);for(int i=0;i<3;i++)Text("discovered-"+i,discovered+" / 28 discovered");
             Text("draw-one","1× pull\n"+(!s.freeCredits.IsZero?"1 free pull":"100 KK"));Text("draw-five","5× pull\n"+(s.freeCredits.Value>=4?"4 free pulls":"400 KK"));
             Enable("Draw","1",can&&e.CanDraw(!s.freeCredits.IsZero));Enable("Draw","5",can&&e.CanDrawFive(s.freeCredits.Value>=4));
-            Text("legacy-state",s.requiresDrawReconciliation?"Backup recovered · Draws need reward recovery.":s.completedPrestiges.IsZero?"Complete your first prestige to unlock Talent.":"");
+            Text("legacy-state",s.requiresDrawReconciliation?"Backup recovered · Draws need reward recovery.":"");
             for(int i=0;i<cards.Length;i++){bool owned=!s.cardLevels[i].IsZero;cards[i].level.text="Lvl "+Count(s.cardLevels[i]);cards[i].button.interactable=owned;cards[i].group.alpha=owned?1:.48f;cards[i].art.color=Color.white;cards[i].art.material=cards[i].frame.material=owned?null:undiscoveredMaterial;}
             Text("shop-status",s.HasDevelopmentShop?(s.developmentShop.status=="pending"?"Purchase pending — return to its pack to check the outcome.":s.developmentShop.status=="failed"?"Purchase could not be verified. No KK was granted.":s.developmentShop.status=="cancelled"?"Purchase cancelled. Nothing was charged.":s.developmentShop.status=="delivered"?"Development purchase delivered.":""):"");
             if(!isolatedPreview)Text("shop-status","Store purchases are not available yet.");
@@ -49,9 +49,9 @@ namespace RocketRaja.Classic
             foreach(var row in nextUpgrades.Concat(catalogueRows))if(row.root.activeSelf&&e.Data.TryUpgrade(row.control.parameter,out _))
             {
                 row.buy.interactable=can&&e.Eligible(row.control.parameter)&&e.UpgradeCost(row.control.parameter)<=s.cash;
-                ((UnityEngine.UI.Image)row.buy.targetGraphic).sprite=row.buy.interactable?blueButton:disabledButton;
+                SetButtonSkin(row.buy,row.buy.interactable);
             }
-            Enable("BuyAll","",can&&e.Data.Upgrades.Any(u=>e.Eligible(u.id)&&e.UpgradeCost(u.id)<=s.cash));RefreshDialog();
+            Enable("BuyAll","",can&&e.Data.Upgrades.Any(u=>e.Eligible(u.id)&&e.UpgradeCost(u.id)<=s.cash));RefreshDialog();RefreshHTMLPresentation();RefreshAchievements();
         }
         static string TimeLabel(double value)=>TimeSpan.FromSeconds(Math.Max(0,value)).ToString(@"mm\:ss");
         string SkillState(int i)=>!Engine.SkillOwned(i)?"LOCKED":Engine.State.activeUntil[i]>Engine.State.now?"ACTIVE":Engine.State.readyAt[i]>Engine.State.now?"COOLDOWN":"READY";
@@ -63,7 +63,7 @@ namespace RocketRaja.Classic
             {
                 var row=rows[i];row.root.SetActive(i<upgrades.Length);if(i>=upgrades.Length)continue;var u=upgrades[i];row.control.parameter=u.id;row.title.text=u.name;bool owned=Engine.State.upgrades.Contains(u.id);
                 row.copy.text=RedesignUpgradeRow.Effect(u,Engine.Data)+"\n"+(owned?"Owned this run":Engine.Eligible(u.id)?"Available":RedesignUpgradeRow.Requirements(u,Engine.Data));row.cost.text=owned?"Purchased":Cash(Engine.UpgradeCost(u.id))+"\nBuy upgrade";
-                row.buy.interactable=!owned&&driver.Session.CanMutate&&Engine.Eligible(u.id)&&Engine.UpgradeCost(u.id)<=Engine.State.cash;((UnityEngine.UI.Image)row.buy.targetGraphic).sprite=row.buy.interactable?blueButton:disabledButton;
+                row.buy.interactable=!owned&&driver.Session.CanMutate&&Engine.Eligible(u.id)&&Engine.UpgradeCost(u.id)<=Engine.State.cash;SetButtonSkin(row.buy,row.buy.interactable);
             }
         }
         void RefreshCatalogue()
@@ -97,7 +97,7 @@ namespace RocketRaja.Classic
                     Text("synergy-copy",synergy==0?"All synergy milestones reached.":string.Join(", ",Enumerable.Range(0,8).Where(i=>s.products[i]<synergy).Select(i=>e.Data.Products[i].name+" ("+s.products[i]+")")));
                     break;
                 case "TapTraining":var q=e.PreviewLevels(-1,LevelQuantity(-1));Text("tap-detail","Level "+q.beforeLevel+" → "+q.afterLevel+"\nPer tap "+Cash(q.tapBefore)+" → "+Cash(q.tapAfter)+"\n"+(q.nextMilestone==0?"All milestones reached":"Next: Lvl "+q.nextMilestone+" · ×"+EconomyBalance.MilestoneReward(q.nextMilestone)));Text("tap-buy",s.tapLevel>=Catalog.MaxLevel?"Max level":Cash(q.quote.cost)+" · Train ×"+Math.Max(1,q.quote.quantity));Enable("BuyLevels","-1",driver.Session.CanMutate&&q.quote.affordable);break;
-                case "SkillDetail":var sk=e.PreviewSkill(skill);Text("skill-title",SkillNames[skill]);Picture("skill-art",skillArt[skill]);Text("skill-state",SkillState(skill));Text("skill-copy",skill==0?"×"+sk.power+" automatic sales for "+sk.duration+"s. Manual and Helping Hands taps receive ×1.25.":skill==1?sk.power+" automatic taps each second for "+sk.duration+"s.":"Pays "+Cash(sk.orderPayout)+" immediately ("+sk.power+" seconds of normal sales).");Text("skill-timing","Cooldown · "+Math.Round(sk.cooldown)+" seconds\nNormal sales are the base for tap links and Bulk Order.");Text("skill-activate",SkillState(skill)=="READY"?"Activate skill":SkillState(skill));Enable("ActivateSkill","",driver.Session.CanMutate&&SkillState(skill)=="READY");break;
+                case "SkillDetail":var sk=e.PreviewSkill(skill);Text("skill-title",SkillNames[skill]);Picture("skill-art",skillArt[skill]);Text("skill-state",SkillState(skill));Text("skill-copy",skill==0?UpgradeEffectCopy.Multiplier(sk.power)+" automatic sales for "+UpgradeEffectCopy.Whole(sk.duration)+"s. Manual and Helping Hands taps receive +25%.":skill==1?UpgradeEffectCopy.Whole(sk.power)+" automatic taps each second for "+UpgradeEffectCopy.Whole(sk.duration)+"s.":"Pays "+Cash(sk.orderPayout)+" immediately ("+UpgradeEffectCopy.Whole(sk.power)+" seconds of normal sales).");Text("skill-timing","Cooldown · "+UpgradeEffectCopy.Whole(sk.cooldown)+" seconds\nNormal sales are the base for tap links and Bulk Order.");Text("skill-activate",SkillState(skill)=="READY"?"Activate "+SkillNames[skill]:SkillState(skill));Enable("ActivateSkill","",driver.Session.CanMutate&&SkillState(skill)=="READY");break;
                 case "CardDetail":var c=e.Data.Cards[selectedCard];int tier=(int)c.tier;Picture("full-outer",outerFrames[tier]);Picture("full-inner",innerFrames[tier]);Picture("full-art",cardArt[selectedCard]);Text("full-name",c.name);Text("full-level","Lvl "+Count(s.cardLevels[selectedCard]));Text("full-rarity","· "+c.tier.ToString().ToUpperInvariant()+" ·");Text("full-benefit",RedesignCardCopy.Effect(c,s.cardLevels[selectedCard]));Text("full-flavor",c.effect==CardEffect.ProductProfit?"A brighter display. A busier shop.":c.effect==CardEffect.ProductCost?"Stock up wisely. Grow your shop.":"A little talent. A brighter festival.");break;
                 case "DrawReveal":var r=s.reveal;if(!e.Data.TryCard(r.cardId,out int ci))break;var card=e.Data.Cards[ci];Text("reveal-progress",r.batch!=null&&r.batch.Length>0?"Card "+(r.batchIndex+1)+" / "+r.batch.Length:"Your card awaits");Text("reveal-name",card.name);Text("reveal-level","Lvl "+Count(r.after));Text("reveal-rarity",card.tier.ToString());Picture("reveal-frame",miniFrames[(int)card.tier]);Picture("reveal-art",cardArt[ci]);Text("reveal-result",r.before.IsZero?"New card discovered!":"Level "+Count(r.before)+" → "+Count(r.after));Text("reveal-effect",RedesignCardCopy.Effect(card,r.after));Text("reveal-continue",r.batch!=null&&r.batchIndex+1<r.batch.Length?"Next card":"Continue");break;
                 case "Prestige":var f=prestige??e.PreviewPrestige();Text("prestige-reward",f.Eligible?"+"+Count(f.Fame)+" Fame":Cash(s.eligibleEarnings)+" earned");Text("prestige-copy","Run target · "+Cash(f.CurrentTarget)+"\nProducts ×"+f.ResultingIncomeMultiplier+" · taps ×"+f.ResultingTapIncomeMultiplier+"\n"+Count(f.Credits)+" free Talent draws\nNext run target · "+Cash(f.NextTarget));Enable("Prestige","",driver.Session.CanMutate&&e.CanCommitPrestige(f));break;

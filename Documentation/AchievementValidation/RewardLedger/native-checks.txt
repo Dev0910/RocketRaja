@@ -1,0 +1,17 @@
+PASS 30 dialogs and 15 native ledger rows; inactive original preserved.
+PASS Player button opens the new ledger and live 1/15, 4-ready, 410-KK overview.
+PASS READY, in-progress and claimed labels and button guards.
+PASS native claim grants exactly +5 KK, refreshes counts and disables the row.
+PASS duplicate callback and save reload cannot grant twice.
+PASS unchanged cash/taps and stable hierarchy of 3668 preplaced transforms.
+PASS 390x844 Player/Achievements
+PASS 390x844 Player/Achievements; no text overflow
+PASS 360x540 Player/Achievements; no text overflow
+PASS 360x640 Player/Achievements; no text overflow
+PASS 450x916 Player/Achievements
+PASS enter/exit motion (start alpha 0, intermediate 1, settled 1), close during entry, reopen and unchanged preplaced hierarchy; reduced motion remains available.
+PASS 450x916 Player/Achievements with simulated notch insets; all 15 rows scrollable.
+PASS actual saved Main with ClassicApplication, normal session driver and no preview presenter.
+PASS actual Player -> Achievements route, modal input guard, +10 and +25 KK native claims, duplicate rejection and normal close.
+PASS unchanged production UI component identity set across row reordering; original page remains inactive.
+Isolated temporary guest only; no real player profile, account or live service used.

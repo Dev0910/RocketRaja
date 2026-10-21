@@ -61,6 +61,8 @@ namespace RocketRaja.Editor
             ClassicMotionAuthoring.Apply();
             ConnectPresentation();
             ClassicProductionAuthoring.Integrate();
+            ClassicAchievementStagesAuthoring.Author();
+            ClassicRedDotAuthoring.Author();
             var saved=SceneManager.GetSceneByPath(ScenePath).GetRootGameObjects().Single(g=>g.name==RootName);
             Selection.activeGameObject=saved;Debug.Log("CLASSIC_UI_SAVED objects="+saved.GetComponentsInChildren<Transform>(true).Length+" dialogs="+saved.GetComponent<ClassicUI>().dialogs.Length);
         }

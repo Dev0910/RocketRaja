@@ -98,8 +98,8 @@ namespace RocketRaja.Core
             if (entering || selecting || Account != null) throw new InvalidOperationException("An account operation is already in progress.");
             string uid = Profile?.uid; if (string.IsNullOrEmpty(uid)) throw new InvalidOperationException("Sign in before choosing progress.");
             if (preparedUid != uid) throw new CloudConflictException("The signed-in account changed. Compare its progress before continuing.");
-            if (promoteGuest && (Remote != null || !CanPromoteGuest))
-                throw new CloudConflictException("Device progress cannot replace an existing Google game or transfer simulated purchases. Keep playing as guest or use Google progress.");
+            if (promoteGuest && !CanPromoteGuest)
+                throw new CloudConflictException("This device save needs recovery or contains test/purchase data that cannot transfer to Google. Keep playing as guest or use Google progress.");
             if (!string.Equals(Path.GetFullPath(root), Path.GetFullPath(checkpointRoot), StringComparison.OrdinalIgnoreCase) &&
                 CheckpointStore.ForRedesign(root, uid, encodeCheckpoint, decodeCheckpoint, version).Load(uid) != null)
                 throw new InvalidDataException("An earlier account checkpoint is preserved beside your guest profile. Recover it before changing account save locations.");
@@ -128,9 +128,9 @@ namespace RocketRaja.Core
                 if (!owned.OwnedBy(owner, owned.generation)) throw new CloudConflictException("Could not confirm ownership of this game.");
                 var local = CheckpointStore.ForRedesign(checkpointRoot, uid, encodeCheckpoint, decodeCheckpoint, version);
                 candidate = new RedesignAccountSession(cloud, local, uid, owner, catalog, encode, decode, clock);
-                var selected = creating ? promoteGuest ? decode(encode(GuestState)) : RedesignState.Fresh(owned.heartbeatAt) : null;
+                var selected = promoteGuest ? decode(encode(GuestState)) : creating ? RedesignState.Fresh(owned.heartbeatAt) : null;
                 // The guest remains in its original independent save; account checkpoints use economy-2.
-                await candidate.InitializeAsync(owned, selected); Identity(uid);
+                await candidate.InitializeAsync(owned, selected, replaceExistingProgress: promoteGuest); Identity(uid);
                 Account = candidate; candidate = null; Remote = owned; CloudState = Account.State;
             }
             finally { candidate?.Dispose(); entering = false; }

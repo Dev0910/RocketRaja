@@ -41,6 +41,9 @@ namespace RocketRaja.Core
         public Natural revision, commandRevision, fame, completedPrestiges, kajuKatli, freeCredits, manualTaps;
         public Natural[] cardLevels;
         public List<string> everPurchased, upgrades, learnedTopics;
+        // Optional for compatibility with existing saves; lifetime rewards survive prestige.
+        public List<string> claimedAchievements;
+        public int mostProductsStocked;
         public bool secondPrestigeGift, music, sound, reducedMotion, storeNamePromptHandled;
         public bool requiresDrawReconciliation;
         // Schema 2 is local-only. Enabling an authoritative wallet upgrades to schema 3,
@@ -79,6 +82,7 @@ namespace RocketRaja.Core
             var s = (RedesignState)MemberwiseClone();
             s.products = (int[])products.Clone(); s.cardLevels = (Natural[])cardLevels.Clone();
             s.everPurchased = new List<string>(everPurchased); s.upgrades = new List<string>(upgrades); s.learnedTopics = new List<string>(learnedTopics);
+            s.claimedAchievements = claimedAchievements == null ? null : new List<string>(claimedAchievements);
             s.activeUntil = (double[])activeUntil.Clone(); s.readyAt = (double[])readyAt.Clone(); s.nextHandsAt = (double[])nextHandsAt.Clone();
             s.reveal = reveal.Copy(); s.offline = offline.Copy();
             s.guestWallet = guestWallet?.Copy(); s.premium = premium?.Copy();
@@ -101,13 +105,14 @@ namespace RocketRaja.Core
                 storeName == null || storeName.Length > 128 || pinnedUpgradeId == null || pinnedUpgradeId != "" && !data.TryUpgrade(pinnedUpgradeId, out _) ||
                 decorationStage < 0 || decorationStage > 5 || reveal == null || offline == null) return false;
             if (!string.IsNullOrEmpty(migrationSourceDigest) && (migrationSourceDigest.Length != 64 || !migrationSourceDigest.All(Uri.IsHexDigit))) return false;
+            if (!RedesignAchievements.ValidClaims(this)) return false;
             if (HasDevelopmentShop && (HasPremium || !developmentShop.Valid(data))) return false;
             if (guestWallet != null && (HasGuestProvenance || !string.IsNullOrEmpty(guestWallet.giftDrawCardId) || !string.IsNullOrEmpty(guestWallet.giftDrawOperationId)) &&
                 (!guestWallet.Valid(data) || guestWallet.giftDrawCardId != "" && (!secondPrestigeGift || !data.TryCard(guestWallet.giftDrawCardId, out int giftCard) || cardLevels[giftCard].IsZero))) return false;
             // JsonUtility expands null inline classes into empty objects. Schema, rather than
             // object nullness, is the authority boundary; an unbound local object contains no data.
             if (schema == 2 && premium != null && !premium.IsUnbound || schema == 3 && (premium == null || !premium.Valid(this))) return false;
-            if (fame.CompareTo(completedPrestiges) < 0 || completedPrestiges.IsZero && (!fame.IsZero || !freeCredits.IsZero || cardLevels.Any(x => !x.IsZero)) ||
+            if (fame.CompareTo(completedPrestiges) < 0 || completedPrestiges.IsZero && !fame.IsZero ||
                 secondPrestigeGift != (completedPrestiges.Value >= 2) || !ProgressionNumbers.ValidRunTarget(target, completedPrestiges, fame)) return false;
             if (!reveal.before.Valid || !reveal.after.Valid || reveal.operationId == null || reveal.cardId == null || reveal.payment == null) return false;
             if (reveal.operationId != "" && (!data.TryCard(reveal.cardId, out int ci) || reveal.after.Value != reveal.before.Value + 1 || cardLevels[ci].CompareTo(reveal.after) < 0 || reveal.payment != "credit" && reveal.payment != "kk")) return false;

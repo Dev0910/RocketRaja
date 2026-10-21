@@ -45,23 +45,24 @@ namespace RocketRaja
         }
         public static string Effect(CashUpgrade item, RedesignCatalog catalog)
         {
-            string factor = item.factor.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture);
+            string factor = UpgradeEffectCopy.Multiplier(item.factor);
+            string cost = UpgradeEffectCopy.Cost(item.factor);
             switch (item.effect)
             {
-                case CashEffect.ProductProfit: return catalog.Products[item.target].name + " income ×" + factor;
-                case CashEffect.ProductCost: return catalog.Products[item.target].name + " level prices ×" + factor + " of run base";
-                case CashEffect.TapDirect: return "Tap profit ×" + factor;
+                case CashEffect.ProductProfit: return catalog.Products[item.target].name + " income " + factor;
+                case CashEffect.ProductCost: return catalog.Products[item.target].name + " level prices ×" + cost + " of run base";
+                case CashEffect.TapDirect: return "Tap profit " + factor;
                 case CashEffect.TapLinked: return "Add more normal shop income to each tap";
-                case CashEffect.TapCost: return "Tap level prices ×" + factor + " of run base";
-                case CashEffect.GlobalProfit: return "Global profit ×" + factor;
-                case CashEffect.UpgradeCost: return "Upgrade Price Discount: pay ×" + factor + " of base";
+                case CashEffect.TapCost: return "Tap level prices ×" + cost + " of run base";
+                case CashEffect.GlobalProfit: return "Global profit " + factor;
+                case CashEffect.UpgradeCost: return "Upgrade Price Discount: pay ×" + cost + " of base";
                 case CashEffect.SkillPower:
                     double power = RedesignCatalog.SkillPower[item.target][item.rank - 1];
-                    return item.target == 0 ? "Rush product income ×" + power : item.target == 1 ? "Helping Hands: " + power + " taps/s" : "Bulk Order: " + power + " seconds of normal sales";
-                case CashEffect.SkillDuration: return "Increase skill duration";
-                case CashEffect.SkillCooldown: return "Shorten skill cooldown";
-                case CashEffect.Link: return catalog.Products[item.beneficiary].name + " comeback income ×" + factor;
-                case CashEffect.Group: return "Linked product group income ×" + factor;
+                    return item.target == 0 ? "Rush product income " + UpgradeEffectCopy.Multiplier(power) : item.target == 1 ? "Helping Hands: " + UpgradeEffectCopy.Whole(power) + " taps/s" : "Bulk Order: " + UpgradeEffectCopy.Whole(power) + " seconds of normal sales";
+                case CashEffect.SkillDuration: return UpgradeEffectCopy.Bonus(item.factor) + " skill duration";
+                case CashEffect.SkillCooldown: return "Shorten skill cooldown by " + UpgradeEffectCopy.Reduction(item.factor);
+                case CashEffect.Link: return catalog.Products[item.beneficiary].name + " comeback income " + factor;
+                case CashEffect.Group: return "Linked product group income " + factor;
                 default: return item.name;
             }
         }

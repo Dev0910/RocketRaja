@@ -89,6 +89,19 @@ namespace RocketRaja.Editor
                 var coordinator=new RedesignAccountCoordinator(auth,cloud,RedesignRuntimeContent.Load(),root,"classic-device-a",JsonUtility.ToJson,JsonUtility.FromJson<RedesignState>,JsonUtility.FromJson<SaveVersionHeader>,JsonUtility.ToJson,JsonUtility.FromJson<AccountCheckpoint>,()=>Time.realtimeSinceStartupAsDouble,()=>RedesignRuntimeDriver.Utc);
                 var host=RedesignSessionHost.Ensure();host.ConfigureFixture(coordinator,root);
                 await SceneManager.LoadSceneAsync("Bootstrap");await Until(()=>Bootstrap);
+                var popup=(GameObject)typeof(BootstrapController).GetField("popupPanel",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(Bootstrap);
+                var opener=(GameObject)typeof(BootstrapController).GetField("popupOpener",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(Bootstrap);
+                var bootstrapIdentity=Bootstrap.GetComponentsInChildren<Component>(true).Select(c=>c.GetInstanceID()).ToArray();
+                Bootstrap.DismissPopup();
+                Check(!popup.activeSelf&&opener.activeSelf&&host.Mode==""&&!File.Exists(file),"Outside Welcome dismissal does not select or create a save");
+                Bootstrap.ReopenPopup();
+                Check(popup.activeSelf&&!opener.activeSelf&&bootstrapIdentity.SequenceEqual(Bootstrap.GetComponentsInChildren<Component>(true).Select(c=>c.GetInstanceID())),"Welcome reopens using the same saved controls");
+                string captures=SessionState.GetString("Classic.HTMLSync.CaptureDirectory","");
+                if(!string.IsNullOrEmpty(captures))
+                {
+                    Directory.CreateDirectory(captures);
+                    foreach(var size in new[]{new Vector2Int(360,540),new Vector2Int(390,844)}){ClassicImportQA.Viewport(size.x,size.y);await Task.Delay(500);ClassicImportQA.Capture(Path.Combine(captures,"BootstrapWelcome-"+size.x+"x"+size.y+".png"));}
+                }
                 Choose("secondaryButton");await Home();
                 var ui=App.ui;var state=ui.Engine.State;
                 Check(state.cash.CompareTo((Amount)30)==0&&state.products.All(n=>n==0)&&state.fame.IsZero&&state.freeCredits.IsZero&&state.kajuKatli.IsZero&&state.cardLevels.All(n=>n.IsZero),"Fresh profile has only the 30 cash manual first-purchase grant");
@@ -142,6 +155,15 @@ namespace RocketRaja.Editor
                 Check(App.ui.driver.IsAccount,"Back to shop reconnects the existing account");
                 App.OpenAccount();await Until(()=>Bootstrap);Choose("primaryButton");await Home();
                 Check(!App.ui.driver.IsAccount&&auth.Current==null&&coordinator.Account==null&&App.ui.Engine.State.products[0]==1,"Sign-out releases account and restores retained guest progress");
+                Check(App.ui.driver.Command(e=>e.SetStoreName("Keep this device game")),"Device game has a distinct durable replacement choice");
+                App.OpenAccount();await Until(()=>Bootstrap);Choose("primaryButton");
+                await Until(()=>Bootstrap&&coordinator.Remote!=null);
+                Check(((TMPro.TMP_Text)typeof(BootstrapController).GetField("secondaryLabel",BindingFlags.Instance|BindingFlags.NonPublic).GetValue(Bootstrap)).text=="Keep device progress","Existing Google comparison exposes the device replacement choice");
+                byte[] deviceBeforeReplacement=File.ReadAllBytes(file);
+                Choose("secondaryButton");await Home();
+                Check(App.ui.driver.IsAccount&&auth.Current!=null&&coordinator.Account.CanPlay&&App.ui.Engine.State.storeName=="Keep this device game"&&JsonUtility.FromJson<RedesignState>(cloud.Record.save.json).storeName=="Keep this device game","Keep device progress saves the chosen device game to Google and opens signed-in Classic gameplay");
+                Check(deviceBeforeReplacement.SequenceEqual(File.ReadAllBytes(file)),"Native replacement leaves independent guest-save bytes intact");
+                App.OpenAccount();await Until(()=>Bootstrap);Choose("primaryButton");await Home();
                 ui=App.ui;
                 Check(host.ProfileRoot==root&&root.StartsWith(Path.GetTempPath(),StringComparison.OrdinalIgnoreCase),"Advanced UI fixture is confined to this disposable Editor test profile");
                 ui.driver.Command(e=>{
@@ -150,12 +172,13 @@ namespace RocketRaja.Editor
                     return e.Save();
                 });
                 ui.InvalidateQuotes();ui.SetTab("Products");
+                Click(ui,"Quantity","products");
                 Check(Math.Abs(ui.products[0].progress.fillAmount)<.001f,"Product milestone bar resets at level 25");
                 Click(ui,"BuyLevels","0");Check(ui.Engine.State.products[0]==26&&Math.Abs(ui.products[0].progress.fillAmount-.04f)<.001f,"Direct product purchase updates the next milestone segment");
                 ui.SetTab("Player");
                 var next=ui.Engine.Data.Upgrades.Where(u=>ui.Engine.Eligible(u.id)).OrderBy(u=>ui.Engine.UpgradeCost(u.id)).ThenBy(u=>u.id,StringComparer.Ordinal).Take(10).Select(u=>u.id);
                 Check(ui.nextUpgrades.Where(r=>r.root.activeSelf).Select(r=>r.control.parameter).SequenceEqual(next),"Player binds exactly the next ten eligible upgrades in price order");
-                int tap=ui.Engine.State.tapLevel;Click(ui,"BuyLevels","-1");Check(ui.Engine.State.tapLevel==tap+1&&ui.CurrentDialog=="","Salesmanship purchase stays inline");
+                Click(ui,"Quantity","tap");int tap=ui.Engine.State.tapLevel;Click(ui,"BuyLevels","-1");Check(ui.Engine.State.tapLevel==tap+1&&ui.CurrentDialog=="","Salesmanship purchase stays inline");
                 int upgrades=ui.Engine.State.upgrades.Count;Click(ui,"BuyAll");Check(ui.Engine.State.upgrades.Count>upgrades&&ui.CurrentDialog=="","Buy All commits directly without a detail popup");
                 ui.SetTab("Legacy");
                 Check(ui.cards.Take(4).Select((c,i)=>Math.Abs(((RectTransform)c.button.transform).anchorMin.x-i*.25f)<.001f).All(x=>x)&&((RectTransform)ui.cards[4].button.transform).anchorMin.x==0&&((RectTransform)ui.cards[4].button.transform).anchorMin.y<((RectTransform)ui.cards[0].button.transform).anchorMin.y,"Talent cards remain inline in four-column rows");
@@ -173,12 +196,20 @@ namespace RocketRaja.Editor
                 var legacyCoordinator=new RedesignAccountCoordinator(new FixtureAuth(),new RedesignAccountPlayValidation.FixtureCloud(),RedesignRuntimeContent.Load(),legacyRoot,"classic-legacy-device",JsonUtility.ToJson,JsonUtility.FromJson<RedesignState>,JsonUtility.FromJson<SaveVersionHeader>,JsonUtility.ToJson,JsonUtility.FromJson<AccountCheckpoint>,()=>Time.realtimeSinceStartupAsDouble,()=>RedesignRuntimeDriver.Utc);
                 host=RedesignSessionHost.Ensure();host.ConfigureFixture(legacyCoordinator,legacyRoot);
                 await SceneManager.LoadSceneAsync("Bootstrap");await Until(()=>Bootstrap);
-                Choose("tertiaryButton");Check(!File.Exists(Path.Combine(legacyRoot,"classic-v2","rocket-raja-v2.save")),"Separate-profile review does not create or replace progress before confirmation");
-                Choose("primaryButton");await Home();
-                Check(host.ProfileRoot==Path.Combine(legacyRoot,"classic-v2")&&App.ui.Engine.State.cash.CompareTo((Amount)30)==0&&App.ui.Engine.State.products.All(n=>n==0),"Explicit confirmation selects a separate normal fresh profile");
-                Check(File.ReadAllText(legacyFile)=="preserved original legacy progress"&&!File.Exists(Path.Combine(legacyRoot,"rocket-raja-v2.save")),"Legacy source remains byte-identical with no new save beside it");
-                App.OpenAccount();await Until(()=>Bootstrap);Choose("secondaryButton");await Home();
-                Check(host.ProfileRoot==Path.Combine(legacyRoot,"classic-v2"),"Account-menu return keeps the explicitly selected separate profile");
+                Check(host.InspectGuest().status==RedesignLoadStatus.Corrupt,"Unreadable legacy sibling stays in recovery under the current economy policy");
+                Choose("secondaryButton");await Until(()=>App&&App.ui.CurrentDialog=="SaveRecovery");
+                Check(!App.Ready&&App.ui.driver.Session==null&&File.ReadAllText(legacyFile)=="preserved original legacy progress"&&!File.Exists(Path.Combine(legacyRoot,"rocket-raja-v2.save")),"Unreadable legacy source remains unchanged without a fresh fallback");
+                App.OpenAccount();await Until(()=>Bootstrap);UnityEngine.Object.Destroy(host.gameObject);await Until(()=>!RedesignSessionHost.Instance);
+                string resetRoot=Path.Combine(Path.GetTempPath(),"ClassicKnownEconomy-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(resetRoot);
+                string oldJson="{\"schema\":1,\"economy\":\"1.0.0\"}",oldBytes=SavePayload.Digest(oldJson)+"\n"+oldJson;
+                string resetFile=Path.Combine(resetRoot,"diwali-v1.save");File.WriteAllText(resetFile,oldBytes);
+                var resetCoordinator=new RedesignAccountCoordinator(new FixtureAuth(),new RedesignAccountPlayValidation.FixtureCloud(),RedesignRuntimeContent.Load(),resetRoot,"classic-reset-device",JsonUtility.ToJson,JsonUtility.FromJson<RedesignState>,JsonUtility.FromJson<SaveVersionHeader>,JsonUtility.ToJson,JsonUtility.FromJson<AccountCheckpoint>,()=>Time.realtimeSinceStartupAsDouble,()=>RedesignRuntimeDriver.Utc);
+                host=RedesignSessionHost.Ensure();host.ConfigureFixture(resetCoordinator,resetRoot);
+                await SceneManager.LoadSceneAsync("Bootstrap");await Until(()=>Bootstrap);
+                Check(host.InspectGuest().CanCreateFresh,"Known older economy follows the existing faster-start reset policy");
+                Choose("secondaryButton");await Home();
+                Check(host.ProfileRoot==resetRoot&&App.ui.Engine.State.cash.CompareTo((Amount)30)==0&&App.ui.Engine.State.products.All(n=>n==0),"Explicit Play as guest starts the current normal profile");
+                Check(File.ReadAllText(resetFile)==oldBytes&&File.Exists(Path.Combine(resetRoot,"rocket-raja-v2.save")),"Known legacy source is retained beside the new current-economy save");
                 Check(errors.Count==0,"No runtime errors during connected startup/recovery/account flow");
             }
             catch(Exception ex){checks.Add("FAIL "+ex);}

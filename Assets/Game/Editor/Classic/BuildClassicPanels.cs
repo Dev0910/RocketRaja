@@ -36,6 +36,7 @@ namespace RocketRaja.Editor
             if(tab=="Home"){BuildHome(root);return result;}
             var head=Top("Header",root,48);Label("",Region("Title",head,.035f,0,.60f,1),tab,24,true,Ink,TextAlignmentOptions.Left,heading);
             var close=Button(Region("Collapse",head,.86f,0,1,1),"Tab",tab,"","⌄",ivory,23);
+            ClassicPanelControlsAuthoring.Configure(close);
             Face(Bottom("Blue divider",head,2),Ink);
             if(tab=="Legacy"){Label("legacy-kk",Region("KK balance",head,.43f,0,.735f,1),"400 KK",17,true,Ink,TextAlignmentOptions.Right);Button(Region("Information",head,.73f,.08f,.86f,.92f),"Navigate","Odds","","i",ivory,17);}
             var region=Fill("Scroll",root);region.offsetMax=new Vector2(0,-49);result.scroll=Scroll(region,out var content);
@@ -71,15 +72,16 @@ namespace RocketRaja.Editor
         }
         public static void ApplyPlayerToolbarIcons(Transform toolbar)
         {
-            foreach(var name in new[]{"Stats","Skills"})
+            foreach(var name in new[]{"Stats","Skills","Achievements"})
             {
                 var button=toolbar.Find(name);
+                if(!button)continue;
                 var icon=button.Find("Icon") as RectTransform;
                 if(!icon)icon=Region("Icon",button,0,0,1,1);
                 icon.anchorMin=icon.anchorMax=new Vector2(.5f,1);icon.pivot=new Vector2(.5f,1);
                 icon.sizeDelta=new Vector2(25,25);icon.anchoredPosition=new Vector2(0,-3);
                 var image=icon.GetComponent<Image>();if(!image)image=icon.gameObject.AddComponent<Image>();
-                image.sprite=Sprite("Icon "+name);image.preserveAspect=true;image.raycastTarget=false;
+                image.sprite=Sprite(name=="Achievements"?"Icon Prestige":"Icon "+name);image.preserveAspect=true;image.raycastTarget=false;
                 var label=button.GetComponentInChildren<TMP_Text>();var rect=label.rectTransform;
                 rect.anchorMin=Vector2.zero;rect.anchorMax=new Vector2(1,0);rect.pivot=new Vector2(.5f,0);
                 rect.sizeDelta=new Vector2(0,18);rect.anchoredPosition=new Vector2(0,2);
@@ -122,11 +124,9 @@ namespace RocketRaja.Editor
         }
         static void BuildStore(RectTransform content)
         {
-            var balance=New("Balance",content);Height(balance,58);Label("",Region("Kicker",balance,0,.62f,.5f,1),"KAJU KATLI",9,true);Label("shop-kk",Region("KK",balance,0,0,.5f,.68f),"400 KK",24,true);Button(Region("Collection",balance,.56f,.10f,1,.93f),"Navigate","Legacy","","Your collection",ivory);
+            var balance=New("Balance",content);Height(balance,58);Label("",Region("Kicker",balance,0,.62f,.5f,1),"KAJU KATLI",9,true);Label("shop-kk",Region("KK",balance,0,0,.5f,.68f),"400 KK",24,true);
             var status=New("Store status",content);Height(status,32);Label("shop-status",Fill("Message",status),"",10,false,Muted);
             for(int i=0;i<data.Packs.Count;i++){var p=data.Packs[i];var r=Row(p.name,content,84);Picture("",Fixed("Pack",r,7,12,46,58),art["product-gift-boxes"]);Label("",Region("Name",r,.18f,.56f,.68f,.95f),p.name,14,true);Label("",Region("Contents",r,.18f,.12f,.68f,.58f),p.kajuKatli+" KK\n"+(p.kajuKatli/100)+" Talent draws",12,true);Button(Region("Price",r,.72f,.15f,.98f,.86f),"Purchase",i.ToString(),"","₹"+p.designInr+"\nView pack");}
-            Info(content,"Card draws","","One draw costs 100 KK.\nCommon 75% · Rare 22% · Legendary 3%.",85);
-            var odds=New("Odds",content);Height(odds,48);Button(odds,"Navigate","Odds","","See card odds",ivory);
             var note=New("Store note",content);Height(note,43);Label("",Fill("Label",note),"Isolated Editor preview · no real payment\nFinal prices come from your app store.",10,false,Muted,TextAlignmentOptions.Center);
         }
         static void BuildNavigation(RectTransform navigation)

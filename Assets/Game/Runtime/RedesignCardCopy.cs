@@ -14,20 +14,22 @@ namespace RocketRaja
         }
         public static string Effect(TalentCard card, Natural level, bool full = false)
         {
-            string factor = RedesignUiContext.Number(ProgressionNumbers.CardMultiplier(card.effect, level), full);
+            string factor = card.effect == CardEffect.ProductProfit ? "+" + (level.Value * 20).ToString(CultureInfo.InvariantCulture) + "%"
+                : card.effect == CardEffect.GlobalProfit ? "+" + (level.Value * 25).ToString(CultureInfo.InvariantCulture) + "%"
+                : UpgradeEffectCopy.Multiplier(ProgressionNumbers.CardFactor(card.effect, level));
             switch (card.effect)
             {
-                case CardEffect.ProductProfit: return "Product income ×" + factor;
-                case CardEffect.GlobalProfit: return "Normal product and direct tap income ×" + factor;
-                case CardEffect.ProductCost: return "Product level cost ×" + factor;
-                case CardEffect.TapCost: return "Tap level cost ×" + factor;
-                case CardEffect.UpgradeCost: return "Cash upgrade prices ×" + factor;
-                case CardEffect.TapProfit: return "Tap and Helping Hands payout ×" + factor;
-                case CardEffect.SkillCooldown: return "Skill cooldown ×" + factor;
-                case CardEffect.SkillDuration: return "Skill duration ×" + factor;
-                case CardEffect.OrderPayout: return "Bulk Order payout ×" + factor;
-                case CardEffect.OfflineHours: return "Offline storage " + factor + " hours";
-                case CardEffect.OfflineEfficiency: return "Offline income efficiency " + (ProgressionNumbers.CardFactor(card.effect, level) * 100).ToString(full ? "G17" : "0.####", CultureInfo.InvariantCulture) + "%";
+                case CardEffect.ProductProfit: return "Product income " + factor;
+                case CardEffect.GlobalProfit: return "Normal product and direct tap income " + factor;
+                case CardEffect.ProductCost: return "Product level cost ×" + UpgradeEffectCopy.Cost(ProgressionNumbers.CardFactor(card.effect, level));
+                case CardEffect.TapCost: return "Tap level cost ×" + UpgradeEffectCopy.Cost(ProgressionNumbers.CardFactor(card.effect, level));
+                case CardEffect.UpgradeCost: return "Cash upgrade prices ×" + UpgradeEffectCopy.Cost(ProgressionNumbers.CardFactor(card.effect, level));
+                case CardEffect.TapProfit: return "Tap and Helping Hands payout " + factor;
+                case CardEffect.SkillCooldown: return "Skill cooldown −" + UpgradeEffectCopy.Reduction(ProgressionNumbers.CardFactor(card.effect, level));
+                case CardEffect.SkillDuration: return "Skill duration " + factor;
+                case CardEffect.OrderPayout: return "Bulk Order payout " + factor;
+                case CardEffect.OfflineHours: return "Offline storage " + UpgradeEffectCopy.Whole(ProgressionNumbers.CardFactor(card.effect, level)) + " hours";
+                case CardEffect.OfflineEfficiency: return "Offline income efficiency " + UpgradeEffectCopy.Whole(ProgressionNumbers.CardFactor(card.effect, level) * 100) + "%";
                 default: return "";
             }
         }

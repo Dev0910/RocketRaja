@@ -48,7 +48,7 @@ namespace RocketRaja.Classic
                 case "ProductDetail": return Unread("comebacks") ?? Unread("product-levels");
                 case "Player": return Unread("buy-all") ?? Unread("catalogue-filters");
                 case "Upgrades": return Unread("catalogue-filters");
-                case "Skills": case "SkillDetail": return Unread("skill-basics");
+                case "Skills": case "SkillDetail": return null;
                 case "Offline": return Unread("return-play");
                 case "Legacy": return RedesignGuidance.Next(e, "talent", "");
                 case "DrawReveal": return RedesignGuidance.Next(e, "drawreveal", "");

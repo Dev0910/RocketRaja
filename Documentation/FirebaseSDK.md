@@ -42,6 +42,8 @@ The existing debug fingerprints remain registered. The web OAuth client ID did n
 
 The console configuration download did not complete in the automation browser, so `Assets/google-services.json` was not overwritten. Its existing web client remains valid and is the client consumed by Credential Manager.
 
+On 21 October 2026, the existing project became accessible again and the current Google provider, Android registration, release fingerprints and Web client were verified live. Classic's tested `redesignUser` rules/index exemption were published and `RedesignCloudSettings.enabledAfterReview` was enabled through the Editor. The signed Google-enabled APK installed in place on POCO X2; the user confirmed login works and the live Classic cloud save advanced to revision 13. The legacy `user` save metadata remained unchanged. See [activation and phone evidence](Implementation/ClassicAndroid/2026-10-21-google-login.md) for the exact APK and limits. No SDK reimport or OAuth/config-file replacement was needed.
+
 ## Android repository paths containing spaces (Gradle)
 
 EDM4U generates a `file:///` repository URL containing the Unity project path. Gradle 9 rejects the unescaped space in `Incremental game`. The settings template encodes spaces as `%20`, and `Assets/Editor/FirebaseRepositoryUriFix.cs` reapplies this correction to generated Gradle settings before building if dependency resolution has regenerated the template. Keep this callback while using the current resolver version.

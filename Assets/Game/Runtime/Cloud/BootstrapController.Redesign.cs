@@ -13,6 +13,7 @@ namespace RocketRaja.Cloud
         RedesignSessionHost redesignHost;
         void StartRedesign()
         {
+            popupReturnToShop=redesignHost.AccountMenuRequested;
             if (redesignHost.AccountMenuRequested)
             {
                 redesignHost.AccountMenuRequested = false;
@@ -46,12 +47,13 @@ namespace RocketRaja.Cloud
             promoteRedesignGuest = false;
             if (coordinator.Remote != null)
             {
-                Show("Choose your progress", "Your device and Google games stay separate. Choosing Google does not replace your device save.",
+                Show("Choose your progress", "Keep device progress replaces this account's Google save with your device game. Choosing Google keeps your current Google progress.",
                     "Use Google progress", () => Run(ContinueRedesignAccount),
-                    "Keep device progress", () => Run(() => RedesignGuest(false)));
+                    "Keep device progress", () => { promoteRedesignGuest = true; Run(ContinueRedesignAccount); },
+                    "Stay as guest", () => Run(() => RedesignGuest(false)));
                 RedesignSummary(coordinator.GuestState, deviceCash, deviceDetails, deviceTime);
                 RedesignSummary(coordinator.CloudState, cloudCash, cloudDetails, cloudTime); comparisonCards.SetActive(true);
-                hint.text = "Your Google save will not be replaced.";
+                hint.text = "Your chosen progress will be saved to Google. You'll stay signed in.";
             }
             else if (coordinator.CanPromoteGuest && RedesignAccountCoordinator.HasProgress(coordinator.GuestState))
             {

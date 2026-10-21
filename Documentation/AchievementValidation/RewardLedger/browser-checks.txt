@@ -1,0 +1,18 @@
+PASS All 15 stable achievement rows render
+PASS All declared achievement action IDs resolve in rendered DOM
+PASS Selected reference fixture has 4 ready rewards
+PASS Reference wallet is 410 Kaju Katli
+PASS 390x844: popup fits, no horizontal overflow, 48px controls
+PASS 360x540: popup fits, no horizontal overflow, 48px controls
+PASS 360x640: popup fits, no horizontal overflow, 48px controls
+PASS 450x916: popup fits, no horizontal overflow, 48px controls
+PASS Real preview Claim action adds exact +5 reward
+PASS Claim updates state and reorders the row
+PASS Claimed action becomes disabled
+PASS Stale preview callback cannot duplicate the reward
+PASS Native-equivalent close action dismisses the ledger
+PASS Reopen retains exactly 15 rows
+PASS New game has no premature claim actions
+PASS Unavailable saving disables every claim
+PASS Current Classic preview routes to the same ledger
+PASS Browser reports no JavaScript errors

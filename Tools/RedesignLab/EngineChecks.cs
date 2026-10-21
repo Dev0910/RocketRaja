@@ -73,7 +73,16 @@ static partial class Program
         Check(g.QuoteDraw(true) == null && g.State.kajuKatli.Value == 100, "Last free draw never changes into a paid action");
         g = Make(afterSecond, new SequenceRandom(97, 1));
         Check(g.Draw(g.QuoteDraw(true)) && g.State.reveal.cardId == "L02", "Legendary begins at 97 and reaches both identities");
-        g = Make(); Check(g.QuoteDraw(true) == null && g.QuoteDraw(false) == null, "Talent is locked before first prestige");
+        g = Make(); Check(g.QuoteDraw(true) == null && g.QuoteDraw(false) == null, "New players still need credits or Kaju Katli to draw");
+        var earlyTalent = RedesignState.Fresh(1000); earlyTalent.kajuKatli = 500;
+        g = Make(earlyTalent, new SequenceRandom(0, 0));
+        Check(g.CanDraw(false) && g.Draw(g.QuoteDraw(false)) && g.State.completedPrestiges.IsZero && g.State.kajuKatli.Value == 400 && g.State.Valid(catalog), "Kaju Katli draws work and save before the first prestige");
+        Check(Clone(g.State).Valid(catalog), "Pre-prestige Talent ownership survives save reload");
+        earlyTalent = RedesignState.Fresh(1000); earlyTalent.freeCredits = 5;
+        g = Make(earlyTalent, new SequenceRandom(0, 0));
+        Check(g.CanDraw(true) && g.Draw(g.QuoteDraw(true)) && g.State.freeCredits.Value == 4 && g.State.Valid(catalog), "Free Talent draws work before the first prestige when credits are available");
+        g.DismissReveal(g.State.reveal.operationId);
+        Check(g.CanDrawFive(true) && g.DrawFive(g.QuoteDrawFive()) && g.State.Valid(catalog), "Five-card free draws work before the first prestige");
         var recoveryCopy = afterSecond.Copy(); recoveryCopy.requiresDrawReconciliation = true;
         g = Make(Clone(recoveryCopy));
         Check(g.QuoteDraw(true) == null && g.QuoteDraw(false) == null && g.State.Valid(catalog), "Restored backup cannot spend rolled-back currency or reroll credits before reconciliation");

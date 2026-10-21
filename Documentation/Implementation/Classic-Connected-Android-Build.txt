@@ -5,8 +5,8 @@ No preview defines or boosted profile
 Succeeded
 Errors: 0
 Warnings: 30
-Duration: 00:01:56.8913342
-Bytes: 979985758
+Duration: 00:04:40.8210867
+Bytes: 984185926
 Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.probuilder/Runtime/com.IvanMurzak.Unity.MCP.ProBuilder.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
 Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.particlesystem/Runtime/com.IvanMurzak.Unity.MCP.ParticleSystem.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
 Warning: Assets\Game\Runtime\Cloud\PlayerSessionHost.cs(173,34): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'

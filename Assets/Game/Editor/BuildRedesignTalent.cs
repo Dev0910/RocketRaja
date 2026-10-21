@@ -40,7 +40,7 @@ namespace RocketRaja.Editor
             var balances = Panel(content, "Balances", "Permanent collection"); ui.balances = FlowText(balances, "talent-balances", "0 free draws · 0 Kaju Katli");
             ui.status = FlowText(balances, "talent-status", "Cards apply automatically when relevant.", 13);
             var locked = Panel(content, "Talent locked", "Grow your Fame first"); ui.lockedPanel = locked.gameObject;
-            FlowText(locked, "Unlock instructions", "Talent unlocks after your first prestige. You will receive 3 free draws.", 14);
+            FlowText(locked, "Unlock instructions", "Talent is available from the start. Prestige rewards free draws.", 14);
             ui.prestige = FlowButton(locked, "talent-to-prestige", "View Prestige");
             FlowText(content, "Tier odds", "Common 75% · Rare 22% · Legendary 3%", 13);
             ui.odds = FlowButton(content, "talent-odds", "View exact draw odds");

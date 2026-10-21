@@ -57,7 +57,7 @@ namespace RocketRaja
         {
             if (context == null) return; var e = context.Engine; var s = e.State;
             balances.text = RedesignCardCopy.Count(s.freeCredits) + " free draws · " + RedesignCardCopy.Count(s.kajuKatli) + " Kaju Katli";
-            lockedPanel.SetActive(s.completedPrestiges.IsZero);
+            lockedPanel.SetActive(false);
             status.text = !context.CanMutate() ? "Saving or recovery needs attention." : s.requiresDrawReconciliation ? "Restore the pending draw before drawing again." : s.reveal.pending ? "A saved card result is ready to view." : "Cards and unused draw balances remain after prestige.";
             resume.gameObject.SetActive(s.reveal.pending);
             freeDraw.interactable = context.CanMutate() && e.CanDraw(true); paidDraw.interactable = context.CanMutate() && e.CanDraw(false);

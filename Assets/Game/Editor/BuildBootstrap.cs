@@ -73,7 +73,7 @@ namespace RocketRaja.EditorTools
             var device = Card(compare,"This device",false); var cloud = Card(compare,"Google save",true);
             compare.gameObject.SetActive(false);
             var loading = Row(panel,"Loading",200);
-            var spinRect = Rect("Spinner",loading); spinRect.anchorMin = spinRect.anchorMax = new Vector2(.5f,1); spinRect.pivot = new Vector2(.5f,1); spinRect.sizeDelta = new Vector2(76,76);
+            var spinRect = Rect("Spinner",loading); spinRect.anchorMin = spinRect.anchorMax = new Vector2(.5f,1); spinRect.pivot = new Vector2(.5f,.5f); spinRect.sizeDelta = new Vector2(76,76); spinRect.anchoredPosition = new Vector2(0,-38);
             Image(spinRect,Color.white).sprite = AssetDatabase.LoadAssetAtPath<Sprite>(Root+"Art/Spinner.png");
             var progress = Text(At(loading,"Progress",0,0,108,84),"Syncing your progress…",35,Muted,bodyFont);
             loading.gameObject.SetActive(false);

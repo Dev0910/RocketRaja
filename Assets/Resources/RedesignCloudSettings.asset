@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 532dcad57247bd54a8113e09ede51289, type: 3}
   m_Name: RedesignCloudSettings
   m_EditorClassIdentifier: Assembly-CSharp::RocketRaja.Cloud.RedesignCloudSettings
-  enabledAfterReview: 0
+  enabledAfterReview: 1
   applicationId: com.diwali.fireworkstycoon.dev
   firebaseProjectId: rocket-raja-4729c

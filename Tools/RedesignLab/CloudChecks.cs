@@ -87,6 +87,21 @@ static partial class Program
             "Retry leaves the pending handoff and cloud progress intact");
         promotion.Dispose();
         await Rejected(promotion.ReconnectOwnedAsync, "Disposed account cannot be reconnected");
+
+        var purchaseCloud = new FakeCloud();
+        var purchased = RedesignState.Fresh(purchaseCloud.Time);
+        purchased.schema = 3; purchased.kajuKatli = 500;
+        purchased.premium = new PremiumWalletCache {
+            uid = "purchase-player", profileId = purchased.guestWallet.profileId, revision = 1, deficit = 0,
+            currencyCards = Enumerable.Repeat(Natural.Zero, 28).ToArray(), pendingOperationId = "", pendingExpectedRevision = "", lastAppliedOperationId = ""
+        };
+        Check(purchased.Valid(data), "Purchase replacement fixture contains a valid account wallet");
+        await purchaseCloud.CreateAsync(new AccountProfile { uid = "purchase-player" }, SavePayload.Create(Encode(purchased)));
+        var purchaseOwned = await purchaseCloud.AcquireAsync("purchase-player", "purchase-device");
+        using var purchaseSession = new RedesignAccountSession(purchaseCloud, CheckpointStore.ForRedesign(root, "purchase-player", Encode, Decode<AccountCheckpoint>, Decode<SaveVersionHeader>), "purchase-player", "purchase-device", data, Encode, Decode<RedesignState>, () => purchaseCloud.Time);
+        await Rejected(() => purchaseSession.InitializeAsync(purchaseOwned, RedesignState.Fresh(), replaceExistingProgress: true), "Explicit device replacement cannot discard an authoritative purchase wallet");
+        Check(purchaseCloud.Record.revision == 1 && Decode<RedesignState>(purchaseCloud.Record.save.json).kajuKatli.Value == 500,
+            "Purchase protection preserves the original Google wallet without a cloud write");
         CloudRecord awaitOwned() => Clone(cloud.Record);
     }
 }

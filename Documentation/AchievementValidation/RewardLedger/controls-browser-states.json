@@ -1,0 +1,155 @@
+{
+  "afterClaimWallet": 415,
+  "rows": [
+    {
+      "disabled": false,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-ready.png\")",
+      "id": "achievement-products-4",
+      "phase": "ready",
+      "ready": true,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": false,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-ready.png\")",
+      "id": "achievement-products-8",
+      "phase": "ready",
+      "ready": true,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": false,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-ready.png\")",
+      "id": "achievement-prestiges-1",
+      "phase": "ready",
+      "ready": true,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-taps-100",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-taps-1000",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-taps-10000",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-earnings-1000000",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-earnings-1000000000",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-upgrades-10",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-upgrades-100",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-upgrades-1000",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-prestiges-5",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-progress.png\")",
+      "id": "achievement-prestiges-10",
+      "phase": "progress",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-claimed.png\")",
+      "id": "achievement-earnings-1000",
+      "phase": "claimed",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    },
+    {
+      "disabled": true,
+      "face": "url(\"http://127.0.0.1:4310/Classic/assets/achievements/claim-claimed.png\")",
+      "id": "achievement-products-1",
+      "phase": "claimed",
+      "ready": false,
+      "rounding": "6px",
+      "sharedFrame": "none",
+      "sharedPseudo": "none"
+    }
+  ]
+}

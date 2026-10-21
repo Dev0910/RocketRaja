@@ -67,6 +67,7 @@ static partial class Program
         NumberChecks();
         RebalanceChecks(catalog);
         EngineChecks(catalog);
+        AchievementChecks(catalog);
         CloudChecks(catalog).GetAwaiter().GetResult();
         DistributionChecks(catalog);
         LifecycleChecks(catalog);

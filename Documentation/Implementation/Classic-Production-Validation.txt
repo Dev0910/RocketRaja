@@ -1,3 +1,5 @@
+PASS Outside Welcome dismissal does not select or create a save
+PASS Welcome reopens using the same saved controls
 PASS Bootstrap choice enabled: Play as guest
 PASS Selected profile reaches Classic Home
 PASS Fresh profile has only the 30 cash manual first-purchase grant
@@ -45,11 +47,22 @@ PASS Back to shop reconnects the existing account
 PASS Bootstrap choice enabled: Sign out
 PASS Selected profile reaches Classic Home
 PASS Sign-out releases account and restores retained guest progress
+PASS Device game has a distinct durable replacement choice
+PASS Bootstrap choice enabled: Sign in with Google
+PASS Existing Google comparison exposes the device replacement choice
+PASS Bootstrap choice enabled: Keep device progress
+PASS Selected profile reaches Classic Home
+PASS Keep device progress saves the chosen device game to Google and opens signed-in Classic gameplay
+PASS Native replacement leaves independent guest-save bytes intact
+PASS Bootstrap choice enabled: Sign out
+PASS Selected profile reaches Classic Home
 PASS Advanced UI fixture is confined to this disposable Editor test profile
+PASS Saved Classic control enabled: Quantity:products
 PASS Product milestone bar resets at level 25
 PASS Saved Classic control enabled: BuyLevels:0
 PASS Direct product purchase updates the next milestone segment
 PASS Player binds exactly the next ten eligible upgrades in price order
+PASS Saved Classic control enabled: Quantity:tap
 PASS Saved Classic control enabled: BuyLevels:-1
 PASS Salesmanship purchase stays inline
 PASS Saved Classic control enabled: BuyAll:
@@ -63,18 +76,17 @@ PASS Saved Classic control enabled: ContinueReveal:
 PASS Saved Classic control enabled: ContinueReveal:
 PASS Saved Classic control enabled: ContinueReveal:
 PASS Continue advances saved results then returns to Legacy without extra grants
-PASS Saved Classic control enabled: Card:1
+PASS Saved Classic control enabled: Card:2
 PASS Owned Talent opens its saved full card
 PASS Saved Classic control enabled: Close:
 PASS Outside-card dismissal returns to the inline collection
-PASS Bootstrap choice enabled: Start a separate Classic game…
-PASS Separate-profile review does not create or replace progress before confirmation
-PASS Bootstrap choice enabled: Start Classic game
-PASS Selected profile reaches Classic Home
-PASS Explicit confirmation selects a separate normal fresh profile
-PASS Legacy source remains byte-identical with no new save beside it
+PASS Unreadable legacy sibling stays in recovery under the current economy policy
+PASS Bootstrap choice enabled: Play as guest
+PASS Unreadable legacy source remains unchanged without a fresh fallback
+PASS Known older economy follows the existing faster-start reset policy
 PASS Bootstrap choice enabled: Play as guest
 PASS Selected profile reaches Classic Home
-PASS Account-menu return keeps the explicitly selected separate profile
+PASS Explicit Play as guest starts the current normal profile
+PASS Known legacy source is retained beside the new current-economy save
 PASS No runtime errors during connected startup/recovery/account flow
-Fixture profile: C:\Users\Dev\AppData\Local\Temp\ClassicProduction-9d62574c117242638a03d6e7afdbb4ca (no player files or live Firebase used)
+Fixture profile: C:\Users\Dev\AppData\Local\Temp\ClassicProduction-e1f8f61de2d0477c8dc98751ee89f539 (no player files or live Firebase used)

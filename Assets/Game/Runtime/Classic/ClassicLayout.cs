@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace RocketRaja.Classic
 {
-    [Serializable] public sealed class ClassicInfoFit { public LayoutElement layout; public TMP_Text copy; [NonSerialized] public string lastText; [NonSerialized] public float lastWidth; }
+    [Serializable] public sealed class ClassicInfoFit { public LayoutElement layout; public TMP_Text copy, values; [NonSerialized] public string lastText; [NonSerialized] public float lastWidth; }
     /// <summary>Responsive constraints for existing Editor-authored geometry; never assembles UI.</summary>
     [ExecuteAlways]
     public sealed class ClassicLayout : MonoBehaviour
@@ -31,8 +31,10 @@ namespace RocketRaja.Classic
             foreach(var row in infoRows)
             {
                 if(!row.layout||!row.copy||row.copy.rectTransform.rect.width<20)continue;
-                if(row.lastText==row.copy.text&&Mathf.Approximately(row.lastWidth,row.copy.rectTransform.rect.width))continue;row.lastText=row.copy.text;row.lastWidth=row.copy.rectTransform.rect.width;
+                string signature=row.copy.text+"|"+(row.values?row.values.text:"");
+                if(row.lastText==signature&&Mathf.Approximately(row.lastWidth,row.copy.rectTransform.rect.width))continue;row.lastText=signature;row.lastWidth=row.copy.rectTransform.rect.width;
                 float preferred=Mathf.Max(70,row.copy.GetPreferredValues(row.copy.text,row.copy.rectTransform.rect.width,0).y+52);
+                if(row.values)preferred=Mathf.Max(preferred,row.values.GetPreferredValues(row.values.text,row.values.rectTransform.rect.width,0).y+52);
                 row.layout.minHeight=row.layout.preferredHeight=preferred;
             }
             foreach(var dialog in ui.dialogs)
@@ -41,7 +43,8 @@ namespace RocketRaja.Classic
                 if(dialog.route=="CardDetail")continue;
                 if(dialog.scroll&&dialog.scroll.content)
                 {
-                    float desired=LayoutUtility.GetPreferredHeight(dialog.scroll.content)+dialog.scroll.GetComponent<RectTransform>().offsetMin.y+59;
+                    var body=(RectTransform)dialog.scroll.transform;
+                    float desired=LayoutUtility.GetPreferredHeight(dialog.scroll.content)+body.offsetMin.y-body.offsetMax.y;
                     dialog.window.anchorMin=new Vector2(0,.5f);dialog.window.anchorMax=new Vector2(1,.5f);dialog.window.pivot=new Vector2(.5f,.5f);dialog.window.sizeDelta=new Vector2(0,Mathf.Min(area.rect.height,Mathf.Max(220,desired)));dialog.window.anchoredPosition=Vector2.zero;
                 }
             }

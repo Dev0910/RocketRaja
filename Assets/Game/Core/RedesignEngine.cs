@@ -163,6 +163,7 @@ namespace RocketRaja.Core
             string session = SessionKey;
             var next = State.Copy();
             if (!change(next)) return false;
+            next.mostProductsStocked = Math.Max(next.mostProductsStocked, Math.Max(State.products.Count(n => n > 0), next.products.Count(n => n > 0)));
             next.revision += (Natural)1;
             if (structural) next.commandRevision += (Natural)1;
             next.savedAt = next.now;
@@ -406,7 +407,7 @@ namespace RocketRaja.Core
         }
         public bool CanDraw(bool useCredit)
         {
-            return MutationAllowed() && !State.requiresDrawReconciliation && !State.completedPrestiges.IsZero && !State.reveal.pending && !(State.HasPremium && State.premium.pendingOperationId != "") &&
+            return MutationAllowed() && !State.requiresDrawReconciliation && !State.reveal.pending && !(State.HasPremium && State.premium.pendingOperationId != "") &&
                 (useCredit ? !State.freeCredits.IsZero : !State.HasPremium && PremiumSpendAllowed() && State.kajuKatli.Value >= 100);
         }
         public TalentDrawQuote QuoteDraw(bool useCredit)
@@ -426,7 +427,7 @@ namespace RocketRaja.Core
             return Commit(s => {
                 if (quote.UseCredit) s.freeCredits -= (Natural)1; else s.kajuKatli -= (Natural)100;
                 Natural before = s.cardLevels[card]; s.cardLevels[card] += (Natural)1;
-                if (!quote.UseCredit && s.HasGuestProvenance && !s.HasDevelopmentShop) { s.guestWallet.giftDrawCardId = Data.Cards[card].id; s.guestWallet.giftDrawOperationId = quote.OperationId; }
+                if (!quote.UseCredit && s.secondPrestigeGift && s.HasGuestProvenance && !s.HasDevelopmentShop) { s.guestWallet.giftDrawCardId = Data.Cards[card].id; s.guestWallet.giftDrawOperationId = quote.OperationId; }
                 s.reveal = new DrawReveal { operationId = quote.OperationId, cardId = Data.Cards[card].id, payment = quote.UseCredit ? "credit" : "kk", before = before, after = s.cardLevels[card], pending = true };
                 return true;
             });

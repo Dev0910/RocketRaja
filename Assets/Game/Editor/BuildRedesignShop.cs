@@ -40,7 +40,7 @@ namespace RocketRaja.Editor
             var odds = Panel(content, "Shared card pool", "Same draw pool for everyone");
             FlowText(odds, "Tier odds", "Common 75% · Rare 22% · Legendary 3%", 14);
             FlowText(odds, "Individual odds", "Each Common: 4.6875% · Each Rare: 2.2% · Each Legendary: 1.5%\nNo purchase guarantees a rarity. Free and KK draws use the same pool.", 13);
-            FlowText(odds, "No auto spend", "Buying a pack does not draw cards automatically. Talent unlocks after your first prestige.", 13);
+            FlowText(odds, "No auto spend", "Buying a pack does not draw cards automatically. Talent is available from the start.", 13);
             ui.testStates = FlowButton(content, "test-shop-states", "Test purchase states");
             ui.back = FlowButton(content, "shop-back", "Back to Talent");
             root.gameObject.SetActive(false);

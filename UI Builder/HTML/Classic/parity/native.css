@@ -156,7 +156,8 @@ html body .app .product-overview-card>.product-overview-reward{height:calc(30px 
 html body .app .product-overview-card>.product-overview-explanation{border-image:url('assets/surfaces/row-frame.png') 72 fill / calc(6px * var(--s));min-height:calc(70px * var(--s));padding:calc(12px * var(--s));font-size:calc(12px * var(--s));line-height:1.3;margin:0;color:#164b80}
 html body .app #legacy-kk{font:800 calc(17px * var(--s))/1 var(--font-ui)}
 html body .app .panel-head .collapse{padding:calc(8px * var(--s));display:flex;align-items:center;justify-content:center}
-.native-collapse-arrow{font:500 calc(23px * var(--s))/1 var(--font-ui)}
+html body .app .panel-head .collapse{width:calc(48px * var(--s));min-width:calc(48px * var(--s));min-height:calc(48px * var(--s));flex:none;padding:calc(6px * var(--s));color:#fff4db}
+.collapse .native-collapse-chevron{display:block;box-sizing:border-box;width:calc(36px * var(--s));height:calc(36px * var(--s));padding:calc(7px * var(--s));border:calc(1px * var(--s)) solid #c69843;border-radius:50%;background:#164b80;color:#fff4db}
 html body .app .modal-footer{flex-direction:column}
 html body .app #panel-Legacy [data-action=Draw][data-param="5"]:not(:disabled){--native-button-face:url('assets/surfaces/red.png')}
 html body .app :is(.action,.toggle):disabled{position:relative;isolation:isolate;border-image:none!important;background:none!important}

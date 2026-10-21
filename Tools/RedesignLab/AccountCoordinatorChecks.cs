@@ -55,11 +55,56 @@ static partial class Program
         await host.ReturnToGuestAsync(true);
         Check(host.Account == null && auth.Current == null && cloud.Record.owner == "" && host.GuestState.manualTaps.Value == 3,
             "Sign out confirms pending progress, releases the lease and restores the independent guest");
-        await host.PrepareGoogleAsync(true); long revision = cloud.Record.revision;
-        await Rejected(() => host.EnterAccountAsync(true, false), "Guest selection cannot overwrite an existing Google game");
-        Check(cloud.Record.revision == revision, "Rejected replacement leaves confirmed cloud progress unchanged");
+        source.manualTaps = 7; source.products[0] = 2; source.storeName = "Chosen device game";
+        Store(root).Save(source);
+        await host.PrepareGoogleAsync(true);
         await host.EnterAccountAsync(false, false);
-        Check(host.Account.CanPlay && host.Account.State.manualTaps.Value == 3, "Existing Google progress opens without reseeding it from the guest");
+        Check(host.Account.CanPlay && host.Account.State.manualTaps.Value == 3 && Decode<RedesignState>(cloud.Record.save.json).storeName == "Device fixture",
+            "Use Google progress retains the cloud game even when different device progress exists");
+        await host.ReturnToGuestAsync(true);
+
+        await host.PrepareGoogleAsync(true);
+        bytes = File.ReadAllBytes(Path.Combine(root, "rocket-raja-v2.save"));
+        cloud.Hold = new TaskCompletionSource<bool>();
+        var replacing = host.EnterAccountAsync(true, false);
+        Check(host.Account == null && !replacing.IsCompleted && Decode<RedesignState>(cloud.Record.save.json).manualTaps.Value == 3,
+            "Keep device progress waits for cloud confirmation before enabling account play");
+        cloud.Hold.SetResult(true); await replacing; cloud.Hold = null;
+        var replaced = Decode<RedesignState>(cloud.Record.save.json);
+        Check(host.Account.CanPlay && auth.Current != null && host.Account.State.manualTaps.Value == 7 && replaced.manualTaps.Value == 7 && replaced.products[0] == 2 && replaced.storeName == source.storeName,
+            "Keep device progress replaces an existing Google save and continues signed in");
+        Check(bytes.SequenceEqual(File.ReadAllBytes(Path.Combine(root, "rocket-raja-v2.save"))), "Replacing Google progress retains the independent device save bytes");
+        string accountDirectory = Path.Combine(root, "economy-2", "accounts", SavePayload.Digest(auth.Current.uid));
+        var recoveryFiles = Directory.GetFiles(accountDirectory, "checkpoint.save.before-device-replacement.*");
+        Check(recoveryFiles.Select(File.ReadAllText).Any(raw => Decode<RedesignState>(Decode<AccountCheckpoint>(raw.Substring(raw.IndexOf('\n') + 1)).save.json).manualTaps.Value == 3),
+            "Device replacement archives the actual previous Google snapshot for recovery");
+        await host.ReturnToGuestAsync(true);
+
+        source.manualTaps = 1; source.products[0] = 0; source.storeName = "Earlier device game";
+        Store(root).Save(source); await host.PrepareGoogleAsync(true);
+        await host.EnterAccountAsync(true, false);
+        Check(host.Account.CanPlay && Decode<RedesignState>(cloud.Record.save.json).manualTaps.Value == 1 && host.Account.State.products[0] == 0,
+            "Explicit device choice also replaces a Google save that is further ahead");
+        await host.ReturnToGuestAsync(true);
+
+        source.manualTaps = 2; Store(root).Save(source); await host.PrepareGoogleAsync(true);
+        long revision = cloud.Record.revision; cloud.LoseAck = true;
+        await Rejected(() => host.EnterAccountAsync(true, false), "Lost replacement confirmation cannot open unconfirmed account gameplay");
+        Check(host.Account == null && auth.Current != null && cloud.Record.revision == revision + 1 && Decode<RedesignState>(cloud.Record.save.json).manualTaps.Value == 2,
+            "Accepted device replacement remains recoverable when the server response is lost");
+        await host.PrepareGoogleAsync(false); await host.EnterAccountAsync(false, false);
+        Check(host.Account.CanPlay && host.Account.State.manualTaps.Value == 2 && cloud.Record.revision == revision + 2,
+            "Retry recovers the replacement receipt without uploading an older account checkpoint");
+        await host.ReturnToGuestAsync(true);
+
+        await cloud.AcquireAsync(auth.NextUid, "other-device");
+        source.manualTaps = 4; Store(root).Save(source); await host.PrepareGoogleAsync(true);
+        revision = cloud.Record.revision;
+        await Rejected(() => host.EnterAccountAsync(true, false), "Device replacement respects an active session on another device");
+        Check(cloud.Record.revision == revision && cloud.Record.owner == "other-device", "No replacement occurs before the device handoff");
+        cloud.Time += 31; await host.EnterAccountAsync(true, true);
+        Check(host.Account.CanPlay && cloud.Record.owner == "fixture-device" && Decode<RedesignState>(cloud.Record.save.json).manualTaps.Value == 4,
+            "Confirmed handoff retains the device-progress selection and replaces the cloud save");
         await host.ReturnToGuestAsync(true);
 
         string testRoot = Root(); var testCloud = new FakeCloud(); var testAuth = new CoordinatorAuth { NextUid = "test-grant-player" };

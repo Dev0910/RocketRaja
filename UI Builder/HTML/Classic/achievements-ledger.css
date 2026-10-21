@@ -1,0 +1,40 @@
+/* Selected Reward ledger. Every label and control remains live HTML/native uGUI. */
+html body .app .classic-toolbar .player-icon:not(.achievement-tab){width:18%;flex:none}
+html body .app .classic-toolbar .achievement-tab{width:30%;min-width:0;font-size:9px;flex:none}
+html body .app .classic-toolbar .action{width:30%}
+html body .app .classic-toolbar .achievement-tab .game-icon{width:25px;height:25px}
+html body .app .bazaar-dialog[data-screen=Achievements] .modal-body{padding:0 8px 6px}
+html body .app .bazaar-dialog[data-screen=Achievements] .modal-head h2{font-size:23px}
+html body .app .bazaar-dialog[data-screen=Achievements] .modal-footer{gap:3px;padding-top:4px}
+html body .app .bazaar-dialog[data-screen=Achievements] .modal-footer>p{margin:0 0 3px;text-align:center;font-size:10px;line-height:20px}
+html body .app .bazaar-dialog[data-screen=Achievements] .modal-footer>.action{font-size:14px;min-height:48px}
+.ledger-art{display:block;pointer-events:none}
+.ledger-art svg{display:block;width:100%;height:100%}
+.ledger-hero{height:80px;display:flex;justify-content:center;flex:none}
+.ledger-hero>.ledger-art{width:150px;height:80px}
+.ledger-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));height:45px;margin-bottom:6px;border:1px solid #c99e4d;border-radius:5px;box-shadow:inset 0 0 0 2px #fff9e7;background:linear-gradient(120deg,#fff9e8,#fff0cb)}
+.ledger-summary>div{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;min-width:0;line-height:1.1}
+.ledger-summary>div+div:before{content:'';position:absolute;left:0;top:20%;bottom:20%;width:1px;background:#c1943d}
+.ledger-summary strong{font-size:16px;line-height:1.3;color:#164b80}
+.ledger-summary span{font-size:9px;font-weight:800;color:#164b80}
+.ledger-rows{display:grid;gap:6px}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row{position:relative;height:90px;min-height:90px;margin:0;padding:0;border:1px solid #c79a44;border-radius:5px;box-shadow:inset 0 0 0 2px #fffbeb;background:linear-gradient(115deg,#fff8e7,#fff0cc);color:#164b80;overflow:hidden}
+.ledger-row .ledger-illustration{position:absolute;left:1.2%;top:7%;width:19.6%;height:85%}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row h3{position:absolute;left:22.5%;right:23%;top:2%;height:29%;display:flex;align-items:center;margin:0!important;padding:0;font-family:'Native UI',sans-serif!important;font-size:12px!important;line-height:1.1!important;font-weight:800;color:#164b80}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row .ledger-description{position:absolute;left:22.5%;width:40.1%;top:29%;height:30.5%;margin:0!important;padding:0;font-size:9.5px!important;line-height:1.22!important;color:#556f80}
+.ledger-track{position:absolute;left:22.5%;width:39.3%;top:67.5%;height:7%;border:1px solid #caa45c;border-radius:8px;overflow:hidden;background:#e5d1a7}
+.ledger-track>span{display:block;height:100%;border-radius:8px;background:linear-gradient(#efc25e,#cb901e)}
+.ledger-progress{position:absolute;left:22.5%;width:39.5%;top:76%;height:19.5%;font-size:10px;line-height:1.5}
+.ledger-reward{position:absolute;left:62.8%;width:15.4%;top:24%;bottom:4.5%;display:flex;flex-direction:column;justify-content:end;align-items:center;text-align:center}
+.ledger-reward>.ledger-art{height:36%;width:90%;flex:1}
+.ledger-reward>strong{font-size:10px;line-height:1.1}
+.ledger-reward small{display:block;font-size:8.5px;font-weight:800;white-space:nowrap;line-height:1.4}
+.ledger-ready{position:absolute;left:78.7%;right:2.4%;top:5%;height:21.5%;display:flex;align-items:center;justify-content:center;background:url('assets/achievements/ready-badge.png') center/100% 100% no-repeat;color:#fff4db;font-size:9px;font-weight:800;letter-spacing:.3px;line-height:1;pointer-events:none}
+/* Override the shared folk border AND its disabled pseudo-element: this ledger
+   has its own rounded surfaces, shared byte-for-byte with the saved Unity UI. */
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row .ledger-claim{position:absolute;top:auto;left:78.7%;right:2.4%;bottom:8px;width:auto;min-width:48px;min-height:48px;height:48px;margin:0;padding:3px;font-size:14px;line-height:1.1;font-weight:800;border:0!important;border-image:none!important;border-radius:6px!important;background:transparent url('assets/achievements/claim-ready.png') center/100% 100% no-repeat!important;color:#fff4db!important;box-shadow:none!important;filter:none!important;text-shadow:0 1px #103d65;overflow-wrap:normal;word-break:normal}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row .ledger-claim::before,html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row .ledger-claim::after{display:none!important;content:none!important}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row[data-phase=progress] .ledger-claim{background-image:url('assets/achievements/claim-progress.png')!important;color:#194871!important;opacity:1;text-shadow:none;font-size:11px}
+html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row[data-phase=claimed] .ledger-claim{background-image:url('assets/achievements/claim-claimed.png')!important;color:#536267!important;opacity:1;text-shadow:none;font-size:11px}
+.ledger-row[data-phase=claimed] .ledger-track>span{background:#819f8a}
+@media(max-width:370px){html body .app .bazaar-dialog[data-screen=Achievements] .ledger-row h3{font-size:11.5px!important}.ledger-summary strong{font-size:15px}}

@@ -1,4 +1,10 @@
-# Google-save test activation — prepared, not applied
+# Google-save test activation
+
+## Current activation — 21 October 2026
+
+The user explicitly requested Firebase verification, Google login activation, a new APK and a physical-phone test. Console access now works. Google is enabled, and the live Android package, app ID, release signing fingerprints and OAuth Web client match the existing project configuration. The tested repository save rules were published to the existing default database; the only change from the previous deployed rules adds the explicit `user` / `redesignUser` collection allowlist. The `redesignUser.save` index exemption was added alongside the existing unchanged `user.save` exemption. Refreshed published rule text exactly matches `firestore.rules`.
+
+`RedesignCloudSettings.enabledAfterReview` is now enabled through the Unity Editor for the existing package and Firebase project. This supersedes the earlier access/configuration blockers below. Build and physical-device results are recorded in [the activation report](ClassicAndroid/2026-10-21-google-login.md); live sign-in acceptance must be assessed from that report rather than inferred from the enabled flag.
 
 ## Current Classic target — 6 October 2026
 

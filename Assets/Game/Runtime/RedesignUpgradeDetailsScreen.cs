@@ -86,17 +86,17 @@ namespace RocketRaja
                 text.Append("\n").Append(engine.Data.Products[i].name).Append(": ").Append(Cash(p.productsBefore[i])).Append(" → ").Append(Cash(p.productsAfter[i])).Append("/s");
                 double before = p.normalBefore.mantissa == 0 ? 0 : Amount.Ratio(p.productsBefore[i], p.normalBefore) * 100;
                 double after = p.normalAfter.mantissa == 0 ? 0 : Amount.Ratio(p.productsAfter[i], p.normalAfter) * 100;
-                text.Append("\nShop share: ").Append(before.ToString("0.##")).Append("% → ").Append(after.ToString("0.##")).Append('%');
+                text.Append("\nShop share: ").Append(UpgradeEffectCopy.Whole(before)).Append("% → ").Append(UpgradeEffectCopy.Whole(after)).Append('%');
             }
             if (p.manualTapBefore.CompareTo(p.manualTapAfter) != 0) text.Append("\nNormal manual tap: ").Append(Cash(p.manualTapBefore)).Append(" → ").Append(Cash(p.manualTapAfter));
             if (p.costCategory != AffectedCost.None)
                 text.Append("\n").Append(p.costCategory == AffectedCost.ProductLevels ? "Next product level" : p.costCategory == AffectedCost.TapLevels ? "Next tap level" : "Cash upgrades per ₹100 base").Append(": ").Append(Cash(p.costBefore)).Append(" → ").Append(Cash(p.costAfter));
             if (item.effect >= CashEffect.SkillPower && item.effect <= CashEffect.SkillCooldown)
             {
-                string unit = item.target == 0 ? "× income" : item.target == 1 ? "taps/s" : "seconds of normal sales";
-                text.Append("\nPower: ").Append(p.skillPowerBefore.ToString("0.###")).Append(" → ").Append(p.skillPowerAfter.ToString("0.###")).Append(' ').Append(unit);
-                if (item.target != 2) text.Append("\nDuration: ").Append(p.durationBefore.ToString("0.###")).Append(" → ").Append(p.durationAfter.ToString("0.###")).Append('s');
-                text.Append("\nCooldown: ").Append(p.cooldownBefore.ToString("0.###")).Append(" → ").Append(p.cooldownAfter.ToString("0.###")).Append('s');
+                string unit = item.target == 0 ? "income" : item.target == 1 ? "taps/s" : "seconds of normal sales";
+                text.Append("\nPower: ").Append(item.target == 0 ? UpgradeEffectCopy.Multiplier(p.skillPowerBefore) : UpgradeEffectCopy.Whole(p.skillPowerBefore)).Append(" → ").Append(item.target == 0 ? UpgradeEffectCopy.Multiplier(p.skillPowerAfter) : UpgradeEffectCopy.Whole(p.skillPowerAfter)).Append(' ').Append(unit);
+                if (item.target != 2) text.Append("\nDuration: ").Append(UpgradeEffectCopy.Whole(p.durationBefore)).Append(" → ").Append(UpgradeEffectCopy.Whole(p.durationAfter)).Append('s');
+                text.Append("\nCooldown: ").Append(UpgradeEffectCopy.Whole(p.cooldownBefore)).Append(" → ").Append(UpgradeEffectCopy.Whole(p.cooldownAfter)).Append('s');
                 if (p.skillPowerBefore == 0) text.Append("\nThe skill is locked before purchase.");
             }
             return text.ToString();

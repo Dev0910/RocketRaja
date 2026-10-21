@@ -46,7 +46,7 @@ namespace RocketRaja
         void Unlock() => context?.Navigate("upgradedetails", projection.unlockId);
         void Upgrades() => context?.Navigate("skillupgrades", target.ToString(CultureInfo.InvariantCulture));
         void Back() => context?.Navigate("back", "");
-        public static string Seconds(double value) => Math.Max(0, value).ToString("0.##", CultureInfo.InvariantCulture) + "s";
+        public static string Seconds(double value) => UpgradeEffectCopy.Whole(Math.Max(0, value)) + "s";
         void Update() { elapsed += Time.unscaledDeltaTime; if (elapsed >= .2f) { elapsed = 0; Refresh(); } }
         public void Refresh()
         {
@@ -55,13 +55,13 @@ namespace RocketRaja
             {
                 revision = s.commandRevision.digits; projection = e.PreviewSkill(target); itemName.text = Names[target]; artwork.sprite = sprites[target];
                 string prefix = projection.owned ? "" : "After buying the base skill:\n";
-                effect.text = prefix + (target == 0 ? "Products produce ×" + projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " income for " + Seconds(projection.duration) + ". Manual and Helping Hands taps receive ×1.25.\nTap links and Bulk Order use normal sales." :
-                    target == 1 ? projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) + ".\nHands uses the direct tap payout and its own tap timing." :
-                    "Instantly earn " + RedesignUiContext.Cash(projection.orderPayout) + ".\nBase power: " + projection.power.ToString("0.###", CultureInfo.InvariantCulture) + " seconds of normal sales, improved by your Bulk Order Talent card. Rush and other temporary effects do not boost this amount.");
+                effect.text = prefix + (target == 0 ? "Product income " + UpgradeEffectCopy.Multiplier(projection.power) + " for " + Seconds(projection.duration) + ". Manual and Helping Hands taps receive +25%.\nTap links and Bulk Order use normal sales." :
+                    target == 1 ? UpgradeEffectCopy.Whole(projection.power) + " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) + ".\nHands uses the direct tap payout and its own tap timing." :
+                    "Instantly earn " + RedesignUiContext.Cash(projection.orderPayout) + ".\nBase power: " + UpgradeEffectCopy.Whole(projection.power) + " seconds of normal sales, improved by your Bulk Order Talent card. Rush and other temporary effects do not boost this amount.");
                 timing.text = "Cooldown: " + Seconds(projection.cooldown) + "\nStarts on activation. Repurchased base skills start ready.";
             }
             double active = Math.Max(0, s.activeUntil[target] - s.now), wait = Math.Max(0, s.readyAt[target] - s.now);
-            if (target == 1) effect.text = (projection.owned ? "" : "After buying the base skill:\n") + projection.power.ToString("0.###", CultureInfo.InvariantCulture) +
+            if (target == 1) effect.text = (projection.owned ? "" : "After buying the base skill:\n") + UpgradeEffectCopy.Whole(projection.power) +
                 " automatic taps/s for " + Seconds(projection.duration) + ". Each currently earns " + RedesignUiContext.Cash(e.TapPayout(true)) +
                 ".\nHands uses the direct tap payout and its own tap timing.";
             status.text = !projection.owned ? "Locked this run · buy the base skill" : active > 0 ? "Active for " + Seconds(active) + " · ready again in " + Seconds(wait) : wait > 0 ? "Ready in " + Seconds(wait) : "Ready to activate";

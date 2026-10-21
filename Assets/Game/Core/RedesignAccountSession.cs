@@ -50,7 +50,7 @@ namespace RocketRaja.Core
                 throw new CloudConflictException("Your game moved to another device.");
             remote = value; lastAck = localAnchor = monotonic(); serverAnchor = value.heartbeatAt;
         }
-        public async Task InitializeAsync(CloudRecord owned, RedesignState guestReplacement = null, bool reconcileOffline = true)
+        public async Task InitializeAsync(CloudRecord owned, RedesignState guestReplacement = null, bool reconcileOffline = true, bool replaceExistingProgress = false)
         {
             if (disposed) throw new ObjectDisposedException(nameof(RedesignAccountSession));
             bindingEpoch++;
@@ -60,7 +60,9 @@ namespace RocketRaja.Core
             if (owned == null || owned.owner != Owner) throw new CloudConflictException("This device does not own the account session.");
             Accept(owned);
             var original = ReadState(owned.save); // Validate before replaying or acknowledging any checkpoint.
-            if (guestReplacement != null && (original.HasPremium || !original.completedPrestiges.IsZero || !original.kajuKatli.IsZero || !original.freeCredits.IsZero || original.upgrades.Count != 0 || original.everPurchased.Count != 0 || original.products.Any(n => n > 0) || !original.manualTaps.IsZero))
+            if (guestReplacement != null && original.HasPremium)
+                throw new CloudConflictException("This Google save has an account purchase wallet. Use Google progress to preserve its purchases.");
+            if (guestReplacement != null && !replaceExistingProgress && (!original.completedPrestiges.IsZero || !original.kajuKatli.IsZero || !original.freeCredits.IsZero || original.upgrades.Count != 0 || original.everPurchased.Count != 0 || original.products.Any(n => n > 0) || !original.manualTaps.IsZero))
                 throw new CloudConflictException("Existing redesigned account progress cannot be overwritten by a recovery/guest snapshot. Reconcile ownership and the premium ledger first.");
             var previous = local.Load(Uid);
             if (guestReplacement == null && previous != null && previous.pending)
@@ -81,7 +83,17 @@ namespace RocketRaja.Core
                 }
                 else local.Archive("superseded");
             }
-            if (guestReplacement != null) local.Archive("before-choice");
+            if (guestReplacement != null)
+            {
+                local.Archive("before-choice");
+                // Keep the exact server snapshot as a recovery copy, even on a device
+                // that has never opened this account. The next write stages the choice.
+                local.Save(new AccountCheckpoint {
+                    uid = Uid, owner = Owner, generation = owned.generation, baseRevision = owned.revision,
+                    save = owned.save, commitId = owned.commitId, pending = false
+                });
+                local.Archive("before-device-replacement");
+            }
             State = guestReplacement == null ? ReadState(remote.save) : decode(encode(guestReplacement));
             if (!State.Valid(catalog) || State.developmentFixture || State.HasDevelopmentShop || !string.IsNullOrEmpty(State.migrationSourceDigest) || State.HasPremium && State.premium.uid != Uid) throw new InvalidDataException("The selected progress is invalid.");
             if (guestReplacement != null)
