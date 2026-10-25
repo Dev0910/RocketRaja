@@ -104,7 +104,7 @@ namespace RocketRaja.Editor
                 Check(ui.nextUpgrades.All(r => !r.buy.interactable), "Unaffordable upgrades remain disabled");
                 for (int i = 0; i < 4; i++) ui.Handle("Quantity", "tap");
                 var tapText = ui.textBindings.Single(t => t.key == "tap-row-cost").text.text;
-                Check(tapText.StartsWith("₹40") && tapText.Contains("×1"), "Unaffordable Max tap displays the next price and one level");
+                Check(tapText.StartsWith("₹10") && tapText.Contains("×1"), "Unaffordable Max tap displays the next price and one level");
                 var beforeDialog = ui.Engine.State.manualTaps;
                 ui.Open("Statistics"); ui.tapTarget.Tap();
                 Check(ui.Engine.State.manualTaps.Value == beforeDialog.Value, "Modal controls do not trigger background earning");

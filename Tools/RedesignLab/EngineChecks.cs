@@ -17,13 +17,19 @@ static partial class Program
         RedesignState disk = null;
         RedesignEngine Make(RedesignState s = null, IDrawRandom random = null) => new(catalog, s ?? fresh, candidate => disk = Clone(candidate), random);
         var g = Make();
-        Check(g.State.Valid(catalog) && g.State.cash.CompareTo(30) == 0 && g.State.eligibleEarnings.mantissa == 0 && g.State.products.All(x => x == 0), "Fresh run grants exact manual first cost without earned cash or products");
-        Check(g.BuyLevels(0, 1) && g.State.cash.mantissa == 0 && disk.products[0] == 1, "Exact first-purchase affordability and immediate durability");
+        Check(g.State.Valid(catalog) && g.State.cash.CompareTo(0) == 0 && g.State.eligibleEarnings.mantissa == 0 && g.State.products.All(x => x == 0), "Fresh player starts with zero cash and no products");
+        Check(Near(g.TapPayout(), 1) && Near(g.LevelQuote(-1, 1).cost, 10), "Starting tap pays one rupee and first tap upgrade costs ten");
+        Check(!g.BuyLevels(-1, 1) && !g.BuyLevels(0, 1), "Zero cash cannot buy tap training or products");
+        var tapStart = Make(fresh.Copy());
+        Check(Enumerable.Range(0, 9).All(_ => tapStart.Tap()) && !tapStart.BuyLevels(-1, 1), "Nine starting taps cannot buy first tap upgrade");
+        Check(tapStart.Tap() && tapStart.BuyLevels(-1, 1) && tapStart.State.cash.CompareTo(0) == 0 && tapStart.State.tapLevel == 1, "Tenth starting tap funds exactly the first tap upgrade");
+        Check(Enumerable.Range(0, 30).All(_ => g.Tap()), "Thirty starting taps fund first product");
+        Check(g.BuyLevels(0, 1) && g.State.cash < new Amount(1e-10) && disk.products[0] == 1, "First purchase after thirty taps is affordable and immediately durable");
         Check(!g.BuyLevels(1, 1) && !g.BuyLevels(8, 1), "Insufficient cash and unknown product reject safely");
         Check(Near(g.NormalIncome(), .85), "First product rate is 0.85");
-        var cashBeforeTaps = g.State.cash; var perTap = g.TapPayout();
+        var cashBeforeTaps = g.State.cash; var perTap = g.TapPayout(); var tapsBefore = g.State.manualTaps;
         Check(Enumerable.Range(0, 100).All(_ => g.Tap()), "Every rapid manual tap succeeds without advancing time");
-        Check(g.State.manualTaps.Value == 100 && Near(g.State.cash - cashBeforeTaps, perTap * 100), "Rapid taps each increment the count and award full earnings");
+        Check(g.State.manualTaps.Value == tapsBefore.Value + 100 && Near(g.State.cash - cashBeforeTaps, perTap * 100), "Rapid taps each increment the count and award full earnings");
         g.Advance(100); Check(g.Tap() && g.Tap(), "Consecutive manual taps still succeed after idle time");
         var legacyCooldown = fresh.Copy(); legacyCooldown.nextManualTapAt = legacyCooldown.now + 1;
         Check(Make(legacyCooldown).Tap(), "A cooldown timestamp from an existing save does not block tapping");
@@ -165,7 +171,7 @@ static partial class Program
         Check(store.Load().state.Valid(catalog), "New state roundtrips through checksummed file");
         state.revision += (Natural)1; state.cash = 50; store.Save(state);
         File.WriteAllText(file, "bad checksum");
-        Check(store.Load().status == RedesignLoadStatus.RecoveredBackup && store.Load().state.cash.CompareTo(30) == 0, "Corrupt main recovers validated backup");
+        Check(store.Load().status == RedesignLoadStatus.RecoveredBackup && store.Load().state.cash.CompareTo(0) == 0, "Corrupt main recovers validated backup");
         state.requiresDrawReconciliation = true;
         store.Save(state); Check(Directory.GetFiles(folder, "*.damaged-*").Length == 1 && store.Load().state.cash.CompareTo(50) == 0, "Recovery preserves damaged source and valid backup");
         void Raw(object value) { string json = JsonSerializer.Serialize(value, value.GetType(), Json); File.WriteAllText(file, SavePayload.Digest(json) + "\n" + json); }
@@ -186,7 +192,7 @@ static partial class Program
         var converted = Migrate();
         Check(converted.Valid(catalog) && converted.fame.IsZero && converted.completedPrestiges.IsZero && converted.upgrades.Count == 0 && converted.everPurchased.Count == 0 && converted.kajuKatli.IsZero, "Identified disposable legacy fixture resets without inventing Fame/cards/KK/U");
         Check(!converted.offline.pending && converted.offline.amount.CompareTo(Amount.Zero) == 0 && converted.eligibleEarnings.CompareTo(Amount.Zero) == 0 &&
-            converted.cash.CompareTo(new Amount(30)) == 0 && new RedesignEngine(catalog, converted, _ => { }).NormalIncome().CompareTo(Amount.Zero) == 0,
+            converted.cash.CompareTo(Amount.Zero) == 0 && new RedesignEngine(catalog, converted, _ => { }).NormalIncome().CompareTo(Amount.Zero) == 0,
             "Fixture transition drops active sponsor, old receipts and pending offline offer without crediting an ad reward");
         Check(converted.storeName == "Fixture Shop" && !converted.music && converted.reducedMotion && File.ReadAllText(fixture) == rawFixture, "Fixture transition retains selected preferences/name and original bytes");
         Check(Migrate().runId == converted.runId && File.Exists(fixture + ".pre-v2-" + SavePayload.Digest(rawFixture)), "Migration retries restore same run and pre-migration archive");

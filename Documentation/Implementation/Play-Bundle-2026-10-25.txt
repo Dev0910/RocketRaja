@@ -1,0 +1,67 @@
+QUEUED
+Package: com.diwali.fireworkstycoon.dev
+Version: 0.1.3 (3)
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 23
+Duration: 00:11:08.5248491
+RUNNING
+Bundletool validation: PASS
+JAR signature verification: PASS (existing self-signed certificate; verifier warnings saved separately)
+Artifact: Builds/Android/RocketRaja-play-v3.aab
+Artifact bytes: 88060032
+SHA256: DF35248A2601879F832E8F4A3F5EE3C79551A01A40D3EF6C9A398446C8A6AD91
+Target SDK: 36
+Release build, no debuggable flag in manifest
+Play Console upload and store-installed login not tested. Play App Signing certificate registration still needs verification.
+
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:49.8899826
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:24.7461126
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:16.6289563
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:24.1023931
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:18.1719321
+RUNNING
+Cancelled
+Errors: 1
+Warnings: 16
+Duration: 00:00:22.9530448
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:16.2406886
+RUNNING
+Cancelled
+Errors: 1
+Warnings: 16
+Duration: 00:00:18.5325532
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:16.3403688
+RUNNING
+Succeeded
+Errors: 0
+Warnings: 15
+Duration: 00:00:23.5129124

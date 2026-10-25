@@ -104,13 +104,14 @@ namespace RocketRaja.Editor
                 }
                 Choose("secondaryButton");await Home();
                 var ui=App.ui;var state=ui.Engine.State;
-                Check(state.cash.CompareTo((Amount)30)==0&&state.products.All(n=>n==0)&&state.fame.IsZero&&state.freeCredits.IsZero&&state.kajuKatli.IsZero&&state.cardLevels.All(n=>n.IsZero),"Fresh profile has only the 30 cash manual first-purchase grant");
+                Check(state.cash.CompareTo(Amount.Zero)==0&&state.products.All(n=>n==0)&&state.fame.IsZero&&state.freeCredits.IsZero&&state.kajuKatli.IsZero&&state.cardLevels.All(n=>n.IsZero),"Fresh profile starts at zero cash with no progress");
                 Check(!ui.isolatedPreview&&!ui.GetComponent<ClassicPreviewSession>()&&UnityEngine.Object.FindObjectsByType<RedesignRuntimeDriver>(FindObjectsSortMode.None).Length==1&&PlayerSessionHost.Instance==null,"One live driver, no preview or legacy session");
                 Check(ui.navigation.Length==4&&ui.cards.Length==28&&ui.nextUpgrades.Length==10&&ui.motion.particles.Length==64,"Approved navigation, Talent, next-ten and fixed effect pool retained");
                 Check(!ui.dialogs.Any(v=>v.route=="UpgradeDetail"||v.route=="Collection"),"Removed upgrade-detail and collection popups stay absent");
                 var identities=ui.GetComponentsInChildren<Component>(true).Select(c=>c.GetInstanceID()).ToArray();
                 ui.SetTab("Legacy");Check(ui.cards.All(c=>!c.button.interactable),"All unowned Talent cards disabled");
                 ui.Handle("Card","0");Check(ui.CurrentDialog=="","Unowned card cannot open");
+                for(int i=0;i<30;i++)Check(ui.driver.TapGameplaySurface(),"Earn first product cash");
                 ui.SetTab("Products");Click(ui,"BuyLevels","0");
                 Check(ui.Engine.State.products[0]==1&&ui.CurrentTab=="Home","First Phuljhari purchase is manual and returns Home");
                 ui.SetTab("Shop");Check(ui.GetComponentsInChildren<ClassicControl>(true).Where(c=>c.action=="Purchase").All(c=>!c.GetComponent<Button>().interactable),"Normal session cannot select simulated purchase outcomes");
@@ -208,7 +209,7 @@ namespace RocketRaja.Editor
                 await SceneManager.LoadSceneAsync("Bootstrap");await Until(()=>Bootstrap);
                 Check(host.InspectGuest().CanCreateFresh,"Known older economy follows the existing faster-start reset policy");
                 Choose("secondaryButton");await Home();
-                Check(host.ProfileRoot==resetRoot&&App.ui.Engine.State.cash.CompareTo((Amount)30)==0&&App.ui.Engine.State.products.All(n=>n==0),"Explicit Play as guest starts the current normal profile");
+                Check(host.ProfileRoot==resetRoot&&App.ui.Engine.State.cash.CompareTo(Amount.Zero)==0&&App.ui.Engine.State.products.All(n=>n==0),"Explicit Play as guest starts the current normal profile");
                 Check(File.ReadAllText(resetFile)==oldBytes&&File.Exists(Path.Combine(resetRoot,"rocket-raja-v2.save")),"Known legacy source is retained beside the new current-economy save");
                 Check(errors.Count==0,"No runtime errors during connected startup/recovery/account flow");
             }

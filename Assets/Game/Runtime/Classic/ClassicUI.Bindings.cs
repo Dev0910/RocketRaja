@@ -11,6 +11,13 @@ namespace RocketRaja.Classic
         {
             if(Engine==null)return;var e=Engine;var s=e.State;bool can=driver.Session.CanMutate;
             motion.reduced=s.reducedMotion;
+            if(developerResetRow)
+            {
+                developerResetRow.SetActive(DeveloperResetVisible);
+                Enable("Navigate","DeveloperReset",driver.CanResetDevelopmentGame);
+                var label=developerResetRow.GetComponentInChildren<TMPro.TMP_Text>(true);
+                if(label)label.text=driver.IsAccount?"Reset game · guest mode only":"Reset game (developer)";
+            }
             if(progression)progression.Refresh();
             if(guidance)guidance.Refresh();
             Text("cash",Cash(s.cash));Text("shop-name",string.IsNullOrWhiteSpace(s.storeName)?"DIWALI DUKAAN":s.storeName);

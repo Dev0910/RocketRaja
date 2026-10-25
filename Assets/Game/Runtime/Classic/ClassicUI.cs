@@ -45,6 +45,19 @@ namespace RocketRaja.Classic
         public ClassicGuidance guidance;
         public ClassicProgression progression;
         public RedesignAudio audioFeedback;
+        public GameObject developerResetRow;
+        public GameObject developerResetDialog;
+        public static bool DeveloperResetVisible
+        {
+            get
+            {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+                return true;
+#else
+                return false;
+#endif
+            }
+        }
         public string CurrentTab { get; private set; }="Home";
         public string CurrentDialog => stack.Count==0?"":stack[stack.Count-1].route;
         public RedesignEngine Engine => driver.Session?.Engine;
@@ -61,6 +74,8 @@ namespace RocketRaja.Classic
         int LevelQuantity(int index) => index < -1 || index >= 8 ? 1 : (index < 0 ? Engine.State.tapLevel : Engine.State.products[index]) == 0 ? 1 : index < 0 ? tapQuantity : quantity;
         void Awake()
         {
+            if(developerResetRow)developerResetRow.SetActive(DeveloperResetVisible);
+            if(developerResetDialog)developerResetDialog.SetActive(false);
             if(!driver||!motion||products.Length!=8||cards.Length!=28||nextUpgrades.Length!=10||catalogueRows.Length!=20)throw new InvalidOperationException("Classic UI is missing its Editor-authored bindings");
             foreach(var b in textBindings)texts.Add(b.key,b.text);foreach(var b in imageBindings)images.Add(b.key,b.image);
             controls.AddRange(GetComponentsInChildren<ClassicControl>(true));
@@ -103,6 +118,7 @@ namespace RocketRaja.Classic
         }
         public void Open(string route)
         {
+            if(route=="DeveloperReset" && !driver.CanResetDevelopmentGame)return;
             if (application && IsAccountRoute(route)) { application.OpenAccount(); return; }
             if (!driver.Initialized || !driver.Session.CanMutate) return;
             var parts=route.Split(':');route=parts[0];if(parts.Length>1&&int.TryParse(parts[1],out int value)){if(route=="ProductDetail")product=value;if(route=="SkillDetail")skill=value;if(route=="CardDetail")selectedCard=value;}
@@ -171,6 +187,13 @@ namespace RocketRaja.Classic
             string revision=Engine.State.commandRevision.digits;
             switch(action)
             {
+                case "DeveloperReset":
+                    if(CurrentDialog=="DeveloperReset" && driver.ResetDevelopmentGame())
+                    {
+                        acceptedTaps.Clear();quantity=tapQuantity=int.MaxValue;
+                        InvalidateQuotes();CloseAll();SetTab("Home");
+                    }
+                    break;
                 case "Tip":if(guidance)guidance.Open();break;
                 case "LearnTip":if(guidance)guidance.Acknowledge();break;
                 case "Tab":SetTab(CurrentTab==arg?"Home":arg);break;

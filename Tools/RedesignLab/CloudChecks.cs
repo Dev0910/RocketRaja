@@ -10,7 +10,8 @@ static partial class Program
         async Task Rejected(Func<Task> action, string message) { bool failed = false; try { await action(); } catch { failed = true; } Check(failed, message); }
         var root = Path.Combine(Path.GetTempPath(), "RedesignCloud-" + Guid.NewGuid().ToString("N"));
         var cloud = new FakeCloud();
-        await cloud.CreateAsync(new AccountProfile { uid = "fixture-player", displayName = "Fixture", email = "", photoUrl = "" }, SavePayload.Create(Encode(RedesignState.Fresh(cloud.Time))));
+        var funded = RedesignState.Fresh(cloud.Time); funded.cash = 30;
+        await cloud.CreateAsync(new AccountProfile { uid = "fixture-player", displayName = "Fixture", email = "", photoUrl = "" }, SavePayload.Create(Encode(funded)));
         var owned = await cloud.AcquireAsync("fixture-player", "device-a");
         var local = CheckpointStore.ForRedesign(root, "fixture-player", Encode, Decode<AccountCheckpoint>, Decode<SaveVersionHeader>);
         using var account = new RedesignAccountSession(cloud, local, "fixture-player", "device-a", data, Encode, Decode<RedesignState>, () => cloud.Time);

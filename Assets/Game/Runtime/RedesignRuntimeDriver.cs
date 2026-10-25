@@ -24,6 +24,38 @@ namespace RocketRaja
         public bool Recovering => recovery != null && !recovery.IsCompleted;
         public string RecoveryNotice => Session?.SaveFailure ?? account?.Status ?? LoadResult?.notice;
         public bool IsDisposableGuest => Session != null && account == null && developmentProfile;
+        public bool CanResetDevelopmentGame
+        {
+            get
+            {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+                return Initialized && !IsAccount && !Recovering && Session.CanMutate && !Session.Engine.State.HasPremium;
+#else
+                return false;
+#endif
+            }
+        }
+
+        public bool ResetDevelopmentGame()
+        {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (!CanResetDevelopmentGame) return false;
+            var catalog = RedesignRuntimeContent.Load();
+            var store = new RedesignSaveStore(Path.Combine(guestRoot, "rocket-raja-v2.save"),
+                catalog, JsonUtility.ToJson, JsonUtility.FromJson<RedesignState>, JsonUtility.FromJson<SaveVersionHeader>);
+            var fresh = RedesignState.Fresh(Utc);
+            // Keep the durable revision monotonic while clearing every gameplay field.
+            fresh.revision = Session.Engine.State.revision;
+            if (!Session.Run(e => { store.Save(fresh); return true; })) { Changed?.Invoke(); return false; }
+            Session = new RedesignLifecycle(new RedesignEngine(catalog, fresh, store.Save));
+            // Replace the recovery backup too, so recovery cannot resurrect pre-reset progress.
+            bool saved = Session.Run(e => e.Save());
+            Changed?.Invoke();
+            return saved;
+#else
+            return false;
+#endif
+        }
         public void InitializeAccount(RedesignAccountSession account)
         {
             if (Session != null) throw new InvalidOperationException("A runtime session is already bound");

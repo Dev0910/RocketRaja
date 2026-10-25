@@ -4,9 +4,9 @@ Scenes: Bootstrap, Main
 No preview defines or boosted profile
 Succeeded
 Errors: 0
-Warnings: 30
-Duration: 00:04:40.8210867
-Bytes: 984185926
+Warnings: 31
+Duration: 00:05:57.2780565
+Bytes: 1002630762
 Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.probuilder/Runtime/com.IvanMurzak.Unity.MCP.ProBuilder.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
 Warning: Assembly for Assembly Definition File 'Packages/com.ivanmurzak.unity.mcp.particlesystem/Runtime/com.IvanMurzak.Unity.MCP.ParticleSystem.Runtime.asmdef' will not be compiled, because it has no scripts associated with it.
 Warning: Assets\Game\Runtime\Cloud\PlayerSessionHost.cs(173,34): warning CS0618: 'Object.FindFirstObjectByType<T>()' is obsolete: 'FindFirstObjectByType has been deprecated because it relies on instance ID ordering. Use FindAnyObjectByType instead, which does not depend on ordering.'
@@ -17,6 +17,7 @@ Warning: Assets\Game\Runtime\SmokeHarness.cs(118,78): warning CS0618: 'FindObjec
 Warning: Assets\Game\Runtime\SmokeHarness.cs(118,20): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
 Warning: Assets\Game\Runtime\SmokeHarness.cs(398,54): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'
 Warning: Assets\Game\Runtime\SmokeHarness.cs(398,28): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'
+Warning: The character with Unicode value \u2197 was not found in the [Bold SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [Rising arrow].
 Warning: Shader warning in 'ProBuilder6/Standard Vertex Color': implicit truncation of vector type at Files/Unity/Hub/Editor/6000.4.9f1/Editor/Data/Resources/CGIncludes/UnityShadowLibrary.cginc(60) (on gles3)
 
 Compiling Subshader: 0, Pass: BuiltIn ForwardAdd, Vertex program with SHADOWS_DEPTH SHADOWS_SOFT SPOT _ADDITIONAL_LIGHTS _MAIN_LIGHT_SHADOWS_CASCADE

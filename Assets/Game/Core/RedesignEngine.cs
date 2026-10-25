@@ -184,7 +184,7 @@ namespace RocketRaja.Core
         static Amount Geometric(double baseCost, int level, int count) => new Amount(baseCost) * Amount.Pow10(level * Math.Log10(EconomyBalance.LevelGrowth)) * (count == 1 ? new Amount(1) : (Amount.Pow10(count * Math.Log10(EconomyBalance.LevelGrowth)) - new Amount(1)) / (EconomyBalance.LevelGrowth - 1));
         public bool ProductAvailable(int p) => p >= 0 && p < 8 && (p == 0 || State.products[p - 1] > 0);
         Amount ProductCost(int p, int q, RedesignState s, RunEffects f) => Geometric(Data.Products[p].cost, s.products[p], q) * f.productCost[p] * ProgressionNumbers.CardFactor(CardEffect.ProductCost, s.cardLevels[8 + p]);
-        Amount TapCost(int q, RedesignState s, RunEffects f) => Geometric(40, s.tapLevel, q) * f.tapCost * ProgressionNumbers.CardFactor(CardEffect.TapCost, s.cardLevels[17]);
+        Amount TapCost(int q, RedesignState s, RunEffects f) => Geometric(10, s.tapLevel, q) * f.tapCost * ProgressionNumbers.CardFactor(CardEffect.TapCost, s.cardLevels[17]);
         public Quote LevelQuote(int product, int quantity)
         {
             bool tap = product == -1;

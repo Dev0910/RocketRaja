@@ -71,7 +71,7 @@ namespace RocketRaja.Core
                 runId = Guid.NewGuid().ToString("N"), revision = 0, commandRevision = 0, fame = 0, completedPrestiges = 0, kajuKatli = 0, freeCredits = 0, manualTaps = 0,
                 cardLevels = Enumerable.Range(0, 28).Select(_ => Natural.Zero).ToArray(),
                 everPurchased = new List<string>(), upgrades = new List<string>(), learnedTopics = new List<string>(),
-                music = true, sound = true, storeName = "", pinnedUpgradeId = "", products = new int[8], cash = 30,
+                music = true, sound = true, storeName = "", pinnedUpgradeId = "", products = new int[8], cash = 0,
                 target = ProgressionNumbers.RunTarget(0), now = now, savedAt = now, activeUntil = new double[3], readyAt = new double[3], nextHandsAt = new double[3],
                 reveal = DrawReveal.Empty(), offline = OfflineReceipt.Empty(), guestWallet = GuestWalletProvenance.Fresh()
             };

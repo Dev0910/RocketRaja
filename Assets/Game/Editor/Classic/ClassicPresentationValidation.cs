@@ -63,7 +63,7 @@ namespace RocketRaja.Editor
                 host.ConfigureFixture(coordinator,root);await host.ReturnToGuestAsync(false);host.EnterMain();await Home();
                 var ui=App.ui;var audio=ui.audioFeedback;ClassicImportQA.Viewport(360,540);await Task.Delay(500);
                 Check(ui.guidance&&ui.progression&&audio&&audio.music&&audio.effects,"Saved Classic guidance, artwork and audio bindings exist");
-                Check(ui.Engine.State.cash.CompareTo((Amount)30)==0&&ui.Engine.State.products.All(n=>n==0),"Native journey starts unboosted");
+                Check(ui.Engine.State.cash.CompareTo(Amount.Zero)==0&&ui.Engine.State.products.All(n=>n==0),"Native journey starts unboosted");
                 Check(ui.guidance.CurrentTopic=="buy-first","Contextual first purchase guidance");await Capture("Fresh-360x540");
                 foreach(string route in new[]{"Home","Player","Products","Legacy","Shop"})
                 {
@@ -74,9 +74,10 @@ namespace RocketRaja.Editor
                 ui.Handle("Tip","");await Capture("Guidance-360x540");ui.Handle("LearnTip","");await Task.Delay(250);
                 Check(ui.Engine.State.learnedTopics.Contains("buy-first")&&ui.guidance.CurrentTopic!="buy-first","Acknowledged topic is saved and not repeated");
                 var identities=ui.GetComponentsInChildren<Component>(true).Select(c=>c.GetInstanceID()).ToArray();
+                for(int i=0;i<30;i++)Check(ui.driver.TapGameplaySurface(),"Manual taps fund the first product");
                 ui.SetTab("Products");ui.Handle("BuyLevels","0");await Task.Delay(120);
                 Check(ui.Engine.State.products[0]==1&&audio.LastCue=="purchase","Manual first purchase emits one purchase cue");
-                Check(ui.guidance.CurrentTopic=="tap-counter","First ownership introduces counter taps");
+                Check(ui.guidance.CurrentTopic!="tap-counter","Opening manual taps already introduced the counter");
                 var n=ui.Engine.State.manualTaps;var pointer=Pointer(ui);ui.tapTarget.OnPointerDown(pointer);ui.tapTarget.OnBeginDrag(pointer);pointer.position+=Vector2.up*40;ui.tapTarget.OnDrag(pointer);ui.tapTarget.OnPointerUp(pointer);ui.tapTarget.OnEndDrag(pointer);
                 Check(ui.Engine.State.manualTaps.CompareTo(n)==0,"Dragging the counter never earns cash");
                 pointer=Pointer(ui);ui.tapTarget.OnPointerDown(pointer);ui.tapTarget.OnPointerUp(pointer);

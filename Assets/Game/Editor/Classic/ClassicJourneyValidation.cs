@@ -40,7 +40,8 @@ namespace RocketRaja.Editor
                 string root=Path.Combine(Path.GetTempPath(),"ClassicJourney-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(root);
                 var store=new RedesignSaveStore(Path.Combine(root,"rocket-raja-v2.save"),data,JsonUtility.ToJson,JsonUtility.FromJson<RedesignState>,JsonUtility.FromJson<SaveVersionHeader>);
                 var e=new RedesignEngine(data,RedesignState.Fresh(1000),store.Save);
-                Check(e.State.cash.CompareTo((Amount)30)==0&&e.State.products.All(n=>n==0)&&e.State.cardLevels.All(n=>n.IsZero),"Fresh unboosted starting state");
+                Check(e.State.cash.CompareTo(Amount.Zero)==0&&e.State.products.All(n=>n==0)&&e.State.cardLevels.All(n=>n.IsZero),"Fresh unboosted starting state");
+                for(int i=0;i<30;i++)Check(e.Tap(),"Earn opening cash with a manual tap");
                 Check(!e.ProductAvailable(1)&&!e.BuyLevels(1,1)&&e.BuyLevels(0,1)&&e.ProductAvailable(1),"Manual first purchase and sequential product unlock");
                 Check(e.State.cash.CompareTo(Amount.Zero)==0&&e.State.eligibleEarnings.CompareTo(Amount.Zero)==0,"Opening grant is spent, never counted as earnings");
                 Check(e.LearnTopic("buy-first")&&e.ToggleSetting("motion")&&e.SetStoreName("Journey stall"),"Guidance, accessibility and name saved through commands");

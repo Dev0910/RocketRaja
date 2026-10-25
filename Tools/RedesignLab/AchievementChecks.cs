@@ -6,6 +6,7 @@ static partial class Program
     static void AchievementChecks(RedesignCatalog catalog)
     {
         var fresh = RedesignState.Fresh();
+        fresh.cash = 30; // Fixture funding for the ownership checks.
         var engine = new RedesignEngine(catalog, fresh, _ => { });
         Check(fresh.Valid(catalog) && RedesignAchievements.ReadyCount(fresh) == 0, "Fresh and pre-achievement saves load with no earned rewards");
         Check(!engine.ClaimAchievement("products-1") && !engine.ClaimAchievement("unknown") && !engine.ClaimAchievement(null), "Incomplete and unknown achievements cannot grant currency");

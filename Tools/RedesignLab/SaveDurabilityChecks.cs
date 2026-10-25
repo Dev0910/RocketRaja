@@ -101,7 +101,8 @@ static partial class Program
         Fails(() => local.Load(checkpoint.uid), "Unrecoverable checkpoint blocks account initialization rather than becoming missing");
         Fails(() => local.Save(checkpoint), "Unrecoverable checkpoint cannot be replaced by a fresh cloud snapshot");
 
-        var earning = RedesignState.Fresh(1000); var engine = new RedesignEngine(catalog, earning, _ => { });
+        var earning = RedesignState.Fresh(1000); earning.cash = 30;
+        var engine = new RedesignEngine(catalog, earning, _ => { });
         engine.BuyLevels(0, 1); engine.Save(); var start = engine.State.cash;
         Check(!engine.ResolveOffline(900) && engine.State.cash.CompareTo(start) == 0, "Clock rollback grants nothing and retains the saved time anchor");
         Check(engine.ResolveOffline(1000000) && engine.State.offline.creditedSeconds == 28800, "Large forward jump retains the designed eight-hour offline cap");

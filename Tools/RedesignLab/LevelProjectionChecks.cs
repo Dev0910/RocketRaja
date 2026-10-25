@@ -15,7 +15,7 @@ static partial class Program
         Check(!locked.available && locked.quote.quantity == 0 && locked.afterLevel == 0, "Locked product projection never suggests purchasable levels");
         var starter = new RedesignEngine(data, RedesignState.Fresh(), _ => { });
         var opening = starter.PreviewLevels(0, int.MaxValue);
-        Check(opening.quote.affordable && opening.quote.quantity == 1 && opening.quote.cost.CompareTo(starter.State.cash) == 0, "Opening manual first-purchase grant buys exactly one projected level");
+        Check(!opening.quote.affordable && opening.quote.quantity == 0 && opening.quote.cost.CompareTo(30) == 0, "Zero-cash opening previews the unaffordable first product");
         Check(starter.PreviewLevels(-1, int.MaxValue).quote.quantity == 0, "Unaffordable Max tap preview contains zero levels");
         var poor = RedesignState.Fresh(); poor.cash = 0;
         var poorEngine = new RedesignEngine(data, poor, _ => throw new Exception("Unaffordable purchase must not save"));

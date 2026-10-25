@@ -5,10 +5,10 @@ namespace RocketRaja.Core
     /// <summary>Versioned economy constants shared by authoring, gameplay and the balance lab.</summary>
     public static class EconomyBalance
     {
-        public const string Revision = "tap-balance-2026-10-15";
+        public const string Revision = "tap-start-2026-10-25";
         public const double LevelGrowth = 1.12, ProductCostGrowth = 14, ProductIncomeGrowth = 2.5;
         public const double UpgradeBase = 20, UpgradeSlope = .36, UpgradeCurvature = .00005;
-        public static double TapBase { get; private set; } = 2.6;
+        public static double TapBase { get; private set; } = 1;
         // Offline calibration only. These remain fixed for every player, independent
         // of taps, cards, purchases and elapsed play time. Every upgrade still applies
         // its full authored multiplier on top of these Fame bonuses.
