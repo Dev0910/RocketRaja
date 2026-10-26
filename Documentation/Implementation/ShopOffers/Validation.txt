@@ -1,0 +1,13 @@
+PASS Both KK offers precede the IAPs
+PASS Affordable offers are enabled
+PASS Cash row displays the actual reward
+PASS Prices use the selected KK token
+PASS Cash button charges 100 KK and grants the shown amount
+PASS Boost button charges 150 KK and prevents active repurchase
+PASS Active boost displays a 24-hour countdown
+PASS Boost expiry is durably saved
+PASS Short-phone purchase button stays inside its row: BuyShopCash
+PASS Short-phone purchase button stays inside its row: BuyShopProfit
+PASS Purchases and token rendering reuse the saved UI objects
+Disposable profile only: C:\Users\Dev\AppData\Local\Temp\ClassicShopOffers-28fa606776aa4be29bb2823471c897f4
+PASS: 11 native shop checks

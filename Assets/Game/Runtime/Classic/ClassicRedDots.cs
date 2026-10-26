@@ -18,7 +18,13 @@ namespace RocketRaja.Classic
         public ClassicUI ui;
         public ClassicRedDotBinding[] bindings = Array.Empty<ClassicRedDotBinding>();
         float nextRefresh;
-        readonly bool[] skills = new bool[3];
+
+        public static bool SupportsIndicator(ClassicControl control)
+        {
+            if (!control || control.name == "Collapse" || control.action == "Close" || control.action == "ActivateSkill") return false;
+            return !((control.action == "Navigate" || control.action == "Tab") &&
+                (control.parameter == "Skills" || (control.parameter ?? "").StartsWith("SkillDetail:")));
+        }
 
         void LateUpdate()
         {
@@ -35,14 +41,12 @@ namespace RocketRaja.Classic
             bool draw = can && engine.CanDraw(!engine.State.freeCredits.IsZero);
             bool upgrades = can && engine.Data.Upgrades.Any(u => engine.Eligible(u.id) && engine.UpgradeCost(u.id) <= engine.State.cash);
             bool prestige = can && engine.CanCommitPrestige(engine.PreviewPrestige());
-            for (int i = 0; i < skills.Length; i++)
-                skills[i] = can && engine.SkillOwned(i) && engine.State.activeUntil[i] <= engine.State.now && engine.State.readyAt[i] <= engine.State.now;
             foreach (var binding in bindings)
             {
                 if (!binding.control || !binding.dot) continue;
                 var c = binding.control;
                 bool show = false;
-                if (can)
+                if (can && SupportsIndicator(c))
                 {
                     if (c.action == "ClaimAchievement") show = engine.CanClaimAchievement(c.parameter);
                     else if (c.action == "Draw") show = draw && (c.parameter == "1" || c.parameter == "5" && engine.CanDrawFive(engine.State.freeCredits.Value >= 4));
@@ -50,26 +54,16 @@ namespace RocketRaja.Classic
                     else if (c.action == "BuyAll" || c.action == "ReviewBatch") show = upgrades;
                     else if (c.action == "ConfirmBatch") show = ui.NotificationBatchReady;
                     else if (c.action == "Prestige") show = prestige;
-                    else if (c.action == "ActivateSkill")
-                    {
-                        int index;
-                        if (string.IsNullOrEmpty(c.parameter)) show = ui.CurrentDialog == "SkillDetail" && SkillFromDialog(out index) && skills[index];
-                        else show = int.TryParse(c.parameter, out index) && index >= 0 && index < 3 && skills[index];
-                    }
                     else if (c.action == "Navigate" || c.action == "Tab")
                     {
                         switch (c.parameter)
                         {
                             case "Achievements": show = achievements; break;
-                            case "Skills": show = skills[0] || skills[1] || skills[2]; break;
-                            case "Player": show = achievements || prestige || upgrades || skills[0] || skills[1] || skills[2]; break;
+                            case "Player": show = achievements || prestige || upgrades; break;
                             case "Legacy": show = draw; break;
                             case "Upgrades":
                             case "Catalogue": show = upgrades; break;
                             case "Prestige": show = prestige; break;
-                            default:
-                                if (c.parameter.StartsWith("SkillDetail:") && int.TryParse(c.parameter.Substring(12), out int i) && i >= 0 && i < 3) show = skills[i];
-                                break;
                         }
                     }
                 }
@@ -77,6 +71,5 @@ namespace RocketRaja.Classic
             }
         }
 
-        bool SkillFromDialog(out int index) { index = ui.NotificationSkillIndex; return index >= 0 && index < 3; }
     }
 }

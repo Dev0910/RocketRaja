@@ -31,7 +31,7 @@ namespace RocketRaja.Classic
             shop.Refresh(ui.Engine);
             stage = shop.DisplayedStage;
             if(counterSlogan)counterSlogan.SetActive(stage<3);
-            summary.text = "TAP THE STALL TO EARN";
+            summary.text = "TAP TO EARN";
         }
     }
 }

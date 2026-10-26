@@ -12,6 +12,7 @@ function welcome(body){const old=body.querySelector('.native-startup'),root=docu
 function decorate(layer){
  const route=layer.dataset.screen,body=layer.querySelector('.modal-body');
  layer.dataset.designReference=route==='Account'?'Welcome':route;
+ if(route==='Welcome'||route==='Account')return;
  if(chosen.has(route)){if(route==='CardDetail')layer.classList.add('popup-collection-card');return;}
  layer.classList.add('bazaar-dialog');
  if(route==='Welcome'||route==='Account'){welcome(body);return;}

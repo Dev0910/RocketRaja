@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 500" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#f7efd9"/><stop offset="1" stop-color="#fff4db"/></linearGradient>
+    <path id="panel" d="M7 102 Q8 87 30 85 Q43 59 76 64 Q93 39 125 44 Q145 27 180 22 Q210 18 220 5 Q230 18 260 22 Q295 27 315 44 Q347 39 364 64 Q397 59 410 85 Q432 87 433 102 L433 480 Q433 493 420 493 H20 Q7 493 7 480 Z"/>
+  </defs>
+  <use href="#panel" fill="url(#paper)" stroke="#f5d584" stroke-width="13" stroke-linejoin="round"/>
+  <use href="#panel" fill="none" stroke="#07548d" stroke-width="8" stroke-linejoin="round"/>
+  <use href="#panel" fill="none" stroke="#fff0bf" stroke-width="4" stroke-linejoin="round"/>
+  <use href="#panel" fill="none" stroke="#cb922d" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

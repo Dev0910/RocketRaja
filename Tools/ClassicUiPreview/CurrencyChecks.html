@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><title>Kaju Katli currency checks</title>
+<style>body{font:15px system-ui;background:#13313b;color:#fff4db}pre{white-space:pre-wrap}iframe{border:1px solid gold}</style>
+<h1>Selected Kaju Katli currency checks</h1><output id="status">Running</output><pre id="results"></pre><iframe title="Currency preview"></iframe>
+<script>
+(async()=>{
+ const frame=document.querySelector('iframe'),results=[],errors=[],base=location.origin;
+ const assert=(value,message)=>{if(!value)throw Error(message);};
+ const routes=['Legacy','Shop','Achievements','Purchase','Prestige','BuyAll','Odds','Help','StandaloneAchievements'];
+ for(const [width,height] of [[964,884],[360,540],[390,844]])for(const route of routes){
+  const label=`${width}×${height} ${route}`;
+  try{
+   frame.style.width=width+'px';frame.style.height=height+'px';const ready=new Promise(resolve=>frame.onload=resolve);
+   frame.src=route==='StandaloneAchievements'?base+'/Achievements/?state=progressed':base+'/Classic/?build=development&state=progressed&screen='+route;
+   await ready;const w=frame.contentWindow,d=w.document;await d.fonts.ready;await Promise.all([...d.images].map(i=>i.decode().catch(()=>{})));
+   const app=d.querySelector('#app'),text=app.innerText;
+   assert(!/\bKK\b/.test(text),'Raw KK abbreviation remains visible');
+   assert(d.documentElement.scrollWidth<=width+1,'Page has horizontal overflow');
+   const icons=[...d.querySelectorAll('img.kk-icon')];assert(icons.length>0,'No currency token rendered');
+   assert(icons.every(i=>i.src===base+'/Classic/assets/currency/kaju-katli.png'&&i.complete&&i.naturalWidth>0),'Wrong or unloaded currency icon');
+   const visible=e=>e.getClientRects().length&&!e.closest('[hidden]');
+   for(const amount of d.querySelectorAll('.kk-amount')){
+    assert(amount.getAttribute('aria-label').includes('Kaju Katli'),'Amount lacks accessible currency name');
+    if(!visible(amount))continue;
+    const container=amount.closest('button')||amount.closest('.panel-head'),r=amount.getBoundingClientRect();
+    if(container){const c=container.getBoundingClientRect();assert(r.left>=c.left-.5&&r.right<=c.right+.5,'Currency amount escapes its control');}
+   }
+   if(route==='Legacy'){assert(d.querySelector('#legacy-kk .kk-number').textContent==='100','Legacy balance changed');assert(d.querySelector('[data-action=Draw][data-param="5"] .kk-number').textContent==='400','Five-pull cost changed');}
+   if(route==='Shop')assert(d.querySelectorAll('.pack .currency-pack-art .kk-icon').length===4,'Not all pack icons were replaced');
+   if(route.includes('Achievements'))assert(d.querySelectorAll('.ledger-reward>.kk-icon').length===15,'Not all achievement reward icons were replaced');
+   results.push({label,status:'PASS',icons:icons.length});
+  }catch(error){errors.push({label,error:String(error.message||error)});results.push({label,status:'FAIL'});}
+  document.querySelector('#results').textContent=JSON.stringify({results,errors},null,2);
+ }
+ document.querySelector('#status').textContent=errors.length?`FAIL ${errors.length}/${results.length}`:`PASS ${results.length} cases`;
+})().catch(e=>document.querySelector('#status').textContent='FAIL '+e);
+</script>

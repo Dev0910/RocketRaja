@@ -1,0 +1,23 @@
+PASS Saved immersive hierarchy loaded from Bootstrap
+PASS Removed tagline stays absent
+PASS Welcome dismiss/reopen retains every UI component identity
+PASS 48px logical button height primaryButton at (360, 540)
+PASS 48px logical button height secondaryButton at (360, 540)
+PASS Both footer statements retained at (360, 540)
+PASS 48px logical button height primaryButton at (360, 640)
+PASS 48px logical button height secondaryButton at (360, 640)
+PASS Both footer statements retained at (360, 640)
+PASS 48px logical button height primaryButton at (390, 844)
+PASS 48px logical button height secondaryButton at (390, 844)
+PASS Both footer statements retained at (390, 844)
+PASS Guest choice reaches production Main Home
+PASS Painted banner visible in production Home
+PASS Lower half of banner lies inside existing tap target
+PASS Banner tap earns exactly once through authoritative owner
+PASS Progress refresh retains approved tap wording
+PASS Dragging does not earn a tap
+PASS Open popup blocks stall tapping
+PASS Native tap pulse returns to saved pose
+PASS Tap, popup and refresh create no UI objects or components
+PASS No runtime errors in welcome/banner checks
+Isolated fixture profile: C:\Users\Dev\AppData\Local\Temp\Welcome20261026-d46affe4399c408ab33484b48e53a76e

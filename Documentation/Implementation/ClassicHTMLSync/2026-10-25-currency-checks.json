@@ -1,0 +1,140 @@
+{
+  "results": [
+    {
+      "label": "964×884 Legacy",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "964×884 Shop",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "964×884 Achievements",
+      "status": "PASS",
+      "icons": 27
+    },
+    {
+      "label": "964×884 Purchase",
+      "status": "PASS",
+      "icons": 13
+    },
+    {
+      "label": "964×884 Prestige",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "964×884 BuyAll",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "964×884 Odds",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "964×884 Help",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "964×884 StandaloneAchievements",
+      "status": "PASS",
+      "icons": 16
+    },
+    {
+      "label": "360×540 Legacy",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "360×540 Shop",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "360×540 Achievements",
+      "status": "PASS",
+      "icons": 27
+    },
+    {
+      "label": "360×540 Purchase",
+      "status": "PASS",
+      "icons": 13
+    },
+    {
+      "label": "360×540 Prestige",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "360×540 BuyAll",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "360×540 Odds",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "360×540 Help",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "360×540 StandaloneAchievements",
+      "status": "PASS",
+      "icons": 16
+    },
+    {
+      "label": "390×844 Legacy",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "390×844 Shop",
+      "status": "PASS",
+      "icons": 11
+    },
+    {
+      "label": "390×844 Achievements",
+      "status": "PASS",
+      "icons": 27
+    },
+    {
+      "label": "390×844 Purchase",
+      "status": "PASS",
+      "icons": 13
+    },
+    {
+      "label": "390×844 Prestige",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "390×844 BuyAll",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "390×844 Odds",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "390×844 Help",
+      "status": "PASS",
+      "icons": 12
+    },
+    {
+      "label": "390×844 StandaloneAchievements",
+      "status": "PASS",
+      "icons": 16
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\brand-sign.png",
+    "sha256": "757EF08EE95E1EB396B067AC47F27624A027DA3E124790BC04220CEDE6F1932A"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\button-primary.png",
+    "sha256": "368BB950982A0DBB33A4C48A21D9117D45DD9BA4DC31BC7FEA1F3668B7048AD8"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\button-secondary.png",
+    "sha256": "8AB2E0F7ECA439AF17FB41BEB7B0A1B79F898827F07DCFCB2CEFF9F548613221"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\festival-salesman.png",
+    "sha256": "DA6D6099A600F237A6DBDCFD79C1008E77CC919D66A2703C3672C9D8DB73F35A"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\floral-accent.png",
+    "sha256": "379BF5E6C77CC6531675AE087B7F13E5A53A81C75DB194E45D4E7095FFC87CC4"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\panel-frame.png",
+    "sha256": "50B6C31565D8CA5579BFF884807A4DF7D3612177631E6C79FE2D348A5D246F9E"
+  },
+  {
+    "asset": "Assets\\Game\\ClassicUI\\Welcome20261026\\tap-banner.png",
+    "sha256": "D8A798FB72BDEA32B925067C59B09F34E7AB4AC8E2126E152919C805921D5AC6"
+  }
+]

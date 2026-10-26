@@ -1,0 +1,14 @@
+PASS Supplied Android app and rewarded-unit IDs are saved
+PASS Editor uses Google test rewarded unit instead of live inventory
+PASS Original offline reward remains open after consent and initialization
+PASS Loaded Google SDK ad enables the offline Watch button
+PASS Showing an ad gates repeat watches and starts native presentation handling
+PASS Native Android ad pause preserves the engine and frozen receipt
+PASS SDK earned-reward callback durably doubles the original offline receipt
+PASS Saved completion prevents repeat rewards after reload
+PASS Duplicate provider delivery cannot grant again
+PASS Settings ad privacy entry follows UMP requirements
+PASS Ad privacy entry belongs to the Settings scroll layout
+PASS No runtime errors during SDK Editor integration check
+Disposable local profile: C:\Users\Dev\AppData\Local\Temp\ClassicRewardedAds-f60d36a5c7d446e091cac2427022509c
+PASS: 12 Google SDK integration checks (Editor simulation; no device/network delivery claim)

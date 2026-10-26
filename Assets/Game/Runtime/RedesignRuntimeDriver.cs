@@ -17,6 +17,8 @@ namespace RocketRaja
         bool initialOfflinePending;
         Task<bool> recovery;
         bool destroyed;
+        public bool NativeAdPresentation { get; private set; }
+        bool presentationForeground = true;
         bool developmentProfile;
         public bool Initialized => Session != null && !initialOfflinePending;
         public bool IsAccount => account != null;
@@ -147,11 +149,18 @@ namespace RocketRaja
         }
         void Update()
         {
+            if (NativeAdPresentation)
+            {
+                if (presentationForeground) account?.Tick(Application.internetReachability != NetworkReachability.NotReachable);
+                return;
+            }
             account?.Tick(Application.internetReachability != NetworkReachability.NotReachable);
             Session?.Tick(Time.unscaledDeltaTime);
         }
         void OnApplicationPause(bool paused)
         {
+            presentationForeground = !paused;
+            if (NativeAdPresentation) return;
             if (Session == null) return;
             if (paused)
             {
@@ -161,6 +170,36 @@ namespace RocketRaja
             }
             else if (Session.Resume(account?.ServerNow ?? Utc)) initialOfflinePending = false;
             Changed?.Invoke();
+        }
+        public bool BeginNativeAdPresentation()
+        {
+            if (destroyed || NativeAdPresentation || Session == null || !Session.Run(e => e.Save())) return false;
+            NativeAdPresentation = true;
+            return true;
+        }
+        public async Task<bool> EndNativeAdPresentationAsync()
+        {
+            if (!NativeAdPresentation) return false;
+            var session = Session;
+            try
+            {
+                // The SDK's close callback may precede Android's foreground callback.
+                double deadline = Time.realtimeSinceStartupAsDouble + 30;
+                while (!presentationForeground && !destroyed && Time.realtimeSinceStartupAsDouble < deadline) await Task.Delay(50);
+                if (destroyed || !presentationForeground || Session != session) return false;
+                if (account != null) await account.RenewAfterNativePresentationAsync();
+                if (destroyed || Session != session || !session.CanMutate) return false;
+                double utc = account?.ServerNow ?? Utc;
+                if (utc > Math.Max(session.Engine.State.now, session.Engine.State.savedAt))
+                    return session.Run(e => e.ResolveOffline(utc, preservePendingReceipt: true));
+                return true;
+            }
+            catch (Exception)
+            {
+                account?.Block("Reconnect to continue after the ad.");
+                return false;
+            }
+            finally { NativeAdPresentation = false; if (!destroyed) Changed?.Invoke(); }
         }
         // Android keyboard/focus callbacks are not app suspension. OnApplicationPause owns that boundary.
         void OnApplicationQuit() => Session?.Suspend();

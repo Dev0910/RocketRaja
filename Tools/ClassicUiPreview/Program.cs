@@ -26,7 +26,16 @@ foreach (var name in new[] { "new", "opened", "growing", "progressed", "prestige
     if (name == "prestige" || name == "rebuilt") s.eligibleEarnings = s.target * 4;
     var e = new RedesignEngine(catalog, s, _ => { });
     if (name == "rebuilt") { if (!e.Prestige(e.PreviewPrestige())) throw new Exception("Cannot prepare rebuilt fixture"); s = e.State; }
-    if (name == "opened") { if (!e.BuyLevels(0, 1)) throw new Exception("Cannot prepare first-stock fixture"); s = e.State; }
+    if (name == "opened")
+    {
+        // Earn the first display through the current tap command, starting from zero.
+        for (int taps = 0; !e.PreviewLevels(0, 1).quote.affordable; taps++)
+        {
+            if (taps >= 1000 || !e.Tap()) throw new Exception("Cannot fund first-stock fixture");
+        }
+        if (!e.BuyLevels(0, 1)) throw new Exception("Cannot prepare first-stock fixture");
+        s = e.State;
+    }
     object Level(int product, int qty)
     {
         var p = e.PreviewLevels(product, qty);

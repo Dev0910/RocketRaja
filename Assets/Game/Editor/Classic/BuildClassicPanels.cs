@@ -126,6 +126,7 @@ namespace RocketRaja.Editor
         {
             var balance=New("Balance",content);Height(balance,58);Label("",Region("Kicker",balance,0,.62f,.5f,1),"KAJU KATLI",9,true);Label("shop-kk",Region("KK",balance,0,0,.5f,.68f),"400 KK",24,true);
             var status=New("Store status",content);Height(status,32);Label("shop-status",Fill("Message",status),"",10,false,Muted);
+            BuildShopOffers(content);
             for(int i=0;i<data.Packs.Count;i++){var p=data.Packs[i];var r=Row(p.name,content,84);Picture("",Fixed("Pack",r,7,12,46,58),art["product-gift-boxes"]);Label("",Region("Name",r,.18f,.56f,.68f,.95f),p.name,14,true);Label("",Region("Contents",r,.18f,.12f,.68f,.58f),p.kajuKatli+" KK\n"+(p.kajuKatli/100)+" Talent draws",12,true);Button(Region("Price",r,.72f,.15f,.98f,.86f),"Purchase",i.ToString(),"","₹"+p.designInr+"\nView pack");}
             var note=New("Store note",content);Height(note,43);Label("",Fill("Label",note),"Isolated Editor preview · no real payment\nFinal prices come from your app store.",10,false,Muted,TextAlignmentOptions.Center);
         }

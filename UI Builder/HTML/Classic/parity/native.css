@@ -12,11 +12,11 @@ html body .app:not([data-tab=Home]) .world :is(.shelves,.shopkeeper,.counter-mes
 html body .app .world .wallet{left:20%;top:.5%;width:60%;height:17%;line-height:1}
 html body .app .world .cash{display:flex;align-items:center;justify-content:center;height:76.47%;font-size:calc(36px * var(--s));font-weight:800;letter-spacing:0;-webkit-text-stroke:0;text-shadow:none;color:#f4cb77}
 html body .app .world .wallet>span{position:absolute;top:67.65%;height:31.18%;width:100%;margin:0;display:flex;align-items:center;justify-content:center;font-size:calc(10px * var(--s));font-weight:800;text-shadow:none}
-html body .app .world .settings{left:2%;top:1.5%;width:13.5%;height:14%;min-width:0;min-height:0;padding:calc(8px * var(--s))}
+html body .app .world .settings{box-sizing:border-box;left:2%;top:1.5%;width:calc(48px * var(--s));height:calc(48px * var(--s));min-width:48px;min-height:48px;aspect-ratio:1;padding:calc(8px * var(--s))}
 html body .app .world .shop-title,html body .app:not([data-tab=Home]) .world .shop-title{left:24%;width:52%;top:24%;height:8.5%;font-size:calc(16px * var(--s));text-shadow:none;color:#fff4db}
 html body .app .world .shopkeeper{right:1%;bottom:9%;width:18%;height:18%;object-position:center;filter:none}
 html body .app .world .counter-message{left:18%;right:auto;width:60%;top:80.8%;height:6.4%;display:flex;align-items:center;justify-content:center;font-size:calc(7px * var(--s));letter-spacing:0;text-shadow:none}
-html body .app .world .tap-hint{left:18%;bottom:0;width:64%;height:5.2%;min-height:0;padding:0;background:#103543f5;border:0;outline:0;border-radius:0;color:#fff4db;font-size:calc(9.5px * var(--s));box-shadow:none}
+html body .app .world .tap-hint{box-sizing:border-box;left:23%;bottom:-7%;width:54%;height:14%;min-height:42px;padding:0 14%;background:transparent url('../assets/tap-to-earn-banner.png') center/100% 100% no-repeat;border:0;outline:0;border-radius:0;color:#00509a;font-family:'Native Heading',serif;font-size:calc(13px * var(--s));font-weight:700;letter-spacing:.025em;box-shadow:none;white-space:nowrap;text-shadow:0 1px #fff9e8;filter:drop-shadow(0 2px 2px #33170755)}
 html body .app .world .stall-tap,html body .app:not([data-tab=Home]) .world .stall-tap{inset:auto 0 0;width:100%;height:24%;opacity:0;min-height:0;border:0;box-shadow:none;background:none;border-radius:0}
 html body .app .world .stall-tap:after{display:none}
 html body .app .world .shelves{inset:0;width:100%;height:100%;display:block;pointer-events:none}
@@ -66,13 +66,22 @@ html body .app .buy-all{height:calc(48px * var(--s));min-height:0;margin:0 0 cal
 html body .app .upgrade-row{height:calc(70px * var(--s));min-height:0;position:relative;padding:0!important;display:block}
 .upgrade-row .plain-detail{position:absolute;left:2.5%;width:64%;top:5%;bottom:8%;min-height:0}.upgrade-row .plain-detail h2{font-size:calc(12px * var(--s));line-height:1.1;margin:0;height:38%}.upgrade-row .plain-detail p{font-size:calc(10px * var(--s));line-height:1.2;margin:0}.upgrade-row .detail-cue{font-size:calc(10px * var(--s))}
 html body .app .upgrade-row .row-action{position:absolute;box-sizing:border-box;left:auto;right:calc(10px * var(--s));width:26%;top:11%;height:77%;min-height:0;margin:0}
+/* Upgrade artwork, copy and purchase action each own a separate column. */
+html body .app .panel .upgrade-row{display:grid;grid-template-columns:calc(44px * var(--s)) minmax(0,1fr) calc(90px * var(--s));gap:calc(8px * var(--s));align-items:center;height:auto;min-height:calc(90px * var(--s));padding:calc(10px * var(--s))!important}
+html body .app .upgrade-icon{display:block;width:calc(44px * var(--s));height:calc(50px * var(--s));object-fit:contain;pointer-events:none}
+html body .app .panel .upgrade-row .plain-detail{position:static;inset:auto;width:auto;min-height:0}
+html body .app .panel .upgrade-row .plain-detail h2{height:auto;margin:0 0 4px;line-height:1.25;overflow-wrap:anywhere}
+html body .app .panel .upgrade-row .plain-detail p{margin:0 0 3px;line-height:1.3}
+html body .app .panel .upgrade-row .row-action,html body .app .panel .upgrade-row .row-action:disabled{position:relative;inset:auto;width:100%;height:calc(58px * var(--s));min-height:48px;padding:calc(5px * var(--s));margin:0}
+html body .app #panel-Player .upgrade-row:before{display:none}
 html body .app .product-row{height:calc(80px * var(--s));min-height:0;position:relative;padding:0;display:block}
-html body .app .product-row .details-link{position:absolute;left:2%;top:6%;width:57%;height:88%;min-height:0;padding:0;display:block}
+html body .app #panel-Products .product-row .details-link{position:absolute;left:2%;top:6%;width:55%;height:88%;min-height:0;padding:0;display:block}
 html body .app .product-image-frame{position:absolute;left:0;top:calc(3px * var(--s));width:calc(54px * var(--s));height:calc(62px * var(--s));padding:calc(4px * var(--s));background:#e5d4b0;border:0;border-radius:2px}
 html body .app .product-image-frame .row-art{width:100%;height:100%}.product-milestone-bar{position:absolute;left:0;right:0;bottom:0;height:calc(7px * var(--s));background:#d8cbb0;border:0;border-radius:0}.product-milestone-bar>span{background:#327f78}
 html body .app .product-tile-copy{position:absolute;left:32%;right:0;top:8%;bottom:14%;padding:0}.product-tile-name{font-size:calc(12px * var(--s));line-height:1.2}.product-tile-income{font-size:calc(11px * var(--s));margin-top:calc(9px * var(--s))}
 html body .app .product-tile-level{position:absolute;left:58%;width:12%;top:30%;height:35%;font-size:calc(9px * var(--s));display:flex;align-items:center;justify-content:flex-end}
-html body .app .product-row .row-action{position:absolute;left:71%;width:27%;top:13%;height:74%;min-height:0}
+html body .app .product-row .row-action{position:absolute;box-sizing:border-box;left:auto;right:2%;width:27%;top:13%;height:74%;min-height:0;margin:0}
+html body .app .panel .product-row .row-action:disabled{position:absolute}
 html body .app .navigation,html body .app .navigation:has(button[aria-pressed=true]){height:calc(64px * var(--s));min-height:0;gap:calc(7px * var(--s));padding:calc(3px * var(--s)) calc(3px * var(--s)) calc(3px * var(--s)) calc(4px * var(--s));background:#fff4db;border:0;box-shadow:none}
 html body .app .navigation button,html body .app .navigation button[aria-pressed=true]{position:relative;border:0;border-radius:0;border-image:url('assets/surfaces/blue.png') 105 92 fill / calc(8.75px * var(--s)) calc(7.6667px * var(--s)) / 0 stretch!important;box-shadow:none!important;background:none;min-width:0;min-height:0}
 html body .app .navigation button>svg,html body .app .navigation button[aria-pressed=true]>svg{position:absolute;left:25%;top:5%;width:50%;height:63%}
@@ -158,6 +167,8 @@ html body .app #legacy-kk{font:800 calc(17px * var(--s))/1 var(--font-ui)}
 html body .app .panel-head .collapse{padding:calc(8px * var(--s));display:flex;align-items:center;justify-content:center}
 html body .app .panel-head .collapse{width:calc(48px * var(--s));min-width:calc(48px * var(--s));min-height:calc(48px * var(--s));flex:none;padding:calc(6px * var(--s));color:#fff4db}
 .collapse .native-collapse-chevron{display:block;box-sizing:border-box;width:calc(36px * var(--s));height:calc(36px * var(--s));padding:calc(7px * var(--s));border:calc(1px * var(--s)) solid #c69843;border-radius:50%;background:#164b80;color:#fff4db}
+html body .app .panel-head .panel-info{box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none;width:calc(48px * var(--s));height:calc(48px * var(--s));min-width:48px;min-height:48px;margin-left:auto;padding:calc(6px * var(--s));border:0;border-image:none;border-radius:0;background:none;color:#164b80}
+html body .app .panel-head .panel-info+.collapse{margin-left:0}
 html body .app .modal-footer{flex-direction:column}
 html body .app #panel-Legacy [data-action=Draw][data-param="5"]:not(:disabled){--native-button-face:url('assets/surfaces/red.png')}
 html body .app :is(.action,.toggle):disabled{position:relative;isolation:isolate;border-image:none!important;background:none!important}
@@ -218,3 +229,8 @@ html body .app[data-reduced-motion=true] .skill-ring-progress{transition:none}
 @media(prefers-reduced-motion:reduce){html body .app .skill-ring-progress{transition:none}}
 
 
+
+/* The painted tap plaque straddles the stall/paper seam. */
+html body .app .world{overflow:visible;z-index:2}
+html body .app .world .stall-tap{bottom:-7%;height:31%}
+html body .app .home-next,html body .app #panel-Home>.native-guide{top:calc(28px * var(--s))}

@@ -25,6 +25,8 @@ html body .app .modal-layer:not([data-screen=CardDetail]) .modal-card.popup-has-
  margin:0;padding:0;border:0;border-image:none;box-shadow:none;background:none;
  text-align:center;white-space:normal;overflow-wrap:anywhere;
 }
+html body .app .modal-layer[data-screen=ProductDetail] .modal-card.popup-has-close>.modal-head>h2{color:#164b80}
+html body .app .modal-layer .modal-card>.popup-info{box-sizing:border-box;display:flex;align-items:center;justify-content:center;position:absolute;top:22px;left:22px;z-index:5;width:48px;height:48px;min-width:48px;min-height:48px;margin:0;padding:6px;border:0;border-image:none;background:none;color:#164b80}
 html body .app .modal-layer[data-screen=Skills] .modal-card.popup-has-close>.modal-head{
  min-height:100px;padding-bottom:30px;
 }

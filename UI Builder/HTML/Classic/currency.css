@@ -1,0 +1,11 @@
+/* Selected option 3: a silver Kaju Katli sweet in a blue-and-gold token. */
+html body .app .kk-amount{display:inline-flex;align-items:center;justify-content:center;gap:.2em;vertical-align:middle;white-space:nowrap;font:inherit;line-height:inherit;color:inherit}
+html body .app .kk-number{font:inherit;color:inherit}
+html body .app img.kk-icon{display:inline-block;flex:none;width:clamp(18px,1.25em,28px);height:clamp(18px,1.25em,28px);min-width:0;min-height:0;max-width:none;object-fit:contain;vertical-align:middle;border:0;border-radius:0;box-shadow:none;pointer-events:none}
+html body .app #legacy-kk .kk-icon{width:calc(27px * var(--s));height:calc(27px * var(--s))}
+html body .app .shop-balance .kk-icon{width:40px;height:40px}
+html body .app .currency-pack-art{display:flex;align-items:center;justify-content:center}
+html body .app .currency-pack-art>.kk-icon{width:100%;height:100%}
+html body .app .ledger-reward>.kk-icon{width:28px;height:28px;flex:none;margin-bottom:2px}
+html body .app .ledger-summary strong>.kk-amount{font-size:inherit;line-height:1}
+html body .app .ledger-summary .kk-icon{width:20px;height:20px}

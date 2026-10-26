@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+      "label": "964×884 Offline",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Offline",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

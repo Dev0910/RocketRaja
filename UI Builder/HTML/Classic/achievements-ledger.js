@@ -38,14 +38,14 @@ function render(state,fixture,data,button,escape,blocked){
  <div id="achievement-ledger-summary" class="ledger-summary" aria-live="polite">
  <div><strong>${claims.size} / ${definitions.length}</strong><span>claimed</span></div>
  <div><strong>${ready}</strong><span>rewards ready</span></div>
- <div><strong>${state.kk.toLocaleString('en-US')}</strong><span>Kaju Katli</span></div></div>
+ <div><strong>${window.classicCurrency.amount(state.kk.toLocaleString('en-US'))}</strong><span>Kaju Katli</span></div></div>
  <div class="ledger-rows">${ordered.map(a=>{
   const claimed=claims.has(a.id),done=complete(a,m),phase=claimed?'claimed':done?'ready':'progress';
   const current=Math.min(a.target,m[a.metric]),progress=a.metric==='Earnings'?'₹'+compact(current)+' / ₹'+compact(a.target):current.toLocaleString('en-US')+' / '+a.target.toLocaleString('en-US');
   return `<article id="achievement-${a.id}" class="ledger-row" data-phase="${phase}" data-unity-collection-id="achievements" data-unity-item-key="${a.id}" data-unity-template-id="achievement-ledger-row">
   ${sprite(illustration(a),'ledger-illustration')}<h3>${escape(a.title)}</h3><p class="ledger-description">${escape(a.description)}</p>
   <span class="ledger-track" role="progressbar" aria-label="${escape(a.title)}" aria-valuemin="0" aria-valuemax="${a.target}" aria-valuenow="${current}"><span style="width:${Math.min(100,current/a.target*100)}%"></span></span>
-  <strong class="ledger-progress">${progress}</strong><div class="ledger-reward">${sprite('kaju')}<strong>+${a.reward}<small>Kaju Katli</small></strong></div>
+  <strong class="ledger-progress">${progress}</strong><div class="ledger-reward">${window.classicCurrency.icon({decorative:true})}<strong>+${a.reward}<small>Kaju Katli</small></strong></div>
   ${done&&!claimed?'<span class="ledger-ready">READY</span>':''}
   ${button('ClaimAchievement',a.id,claimed?'Claimed':done?'Claim':'In progress','action ledger-claim',blocked||claimed||!done)}
   </article>`;

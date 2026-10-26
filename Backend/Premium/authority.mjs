@@ -73,7 +73,10 @@ export class PremiumAuthority {
         if(p.schema===2){
           const gift=p.guestWallet,card=gift.giftDrawCardId??'',op=gift.giftDrawOperationId??'';
           if(card===''){
-            if(op!==''||p.kajuKatli?.digits!=='100')fail('gift-provenance-required');
+            if(p.shopGiftSpent===true){
+              if(op!==''||p.kajuKatli?.digits!=='0')fail('gift-provenance-required');
+              w.spent=(natural(w.spent)+100n).toString();
+            }else if(op!==''||p.kajuKatli?.digits!=='100')fail('gift-provenance-required');
           }else{
             const index=cardIndex(card);
             if(index<0||!operationId(op)||p.kajuKatli?.digits!=='0'||natural(p.cardLevels?.[index]?.digits)<1n)fail('gift-provenance-required');

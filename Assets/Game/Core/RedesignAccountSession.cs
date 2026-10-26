@@ -239,6 +239,19 @@ namespace RocketRaja.Core
             if (changed) Changed?.Invoke();
         }
         public async Task WaitForPendingAsync() { if (Busy) await operation; }
+        // A native ad can outlast the heartbeat window. Renew the same lease without
+        // replacing the engine or its frozen reward receipt; never acquire another owner.
+        public async Task RenewAfterNativePresentationAsync()
+        {
+            if (disposed || handoff || remote == null || State == null) throw new CloudConflictException("Account presentation session ended.");
+            long generation = Generation, epoch = bindingEpoch;
+            await WaitForPendingAsync();
+            var owned = await cloud.HeartbeatAsync(Uid, Owner, generation);
+            if (disposed || handoff || bindingEpoch != epoch || Generation != generation || owned == null ||
+                !owned.OwnedBy(Owner, generation) || !string.IsNullOrEmpty(owned.handoff))
+                throw new CloudConflictException("Your game moved to another device.");
+            Accept(owned); active = true; Status = "Saved to Google"; Changed?.Invoke();
+        }
         // Recovery renews only the exact existing lease. Taking over another device
         // belongs to the separate, explicit account-selection flow.
         public Task ReconnectOwnedAsync()

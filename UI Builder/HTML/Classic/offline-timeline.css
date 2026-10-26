@@ -1,0 +1,30 @@
+/* Selected Capped Timeline, 25 Oct 2026. The timeline measures time independently of efficiency. */
+[data-screen="Offline"] .afk-timeline{display:grid;gap:calc(10px*var(--s));color:#155588}
+[data-screen="Offline"] .afk-earnings{text-align:center;display:flex;flex-direction:column;align-items:center;padding:calc(2px*var(--s)) 0}
+[data-screen="Offline"] .afk-earnings>img{width:calc(78px*var(--s));height:calc(74px*var(--s));object-fit:contain}
+[data-screen="Offline"] .afk-earnings>p{margin:calc(4px*var(--s)) 0;font-weight:800;letter-spacing:.14em;font-size:calc(12px*var(--s))}
+[data-screen="Offline"] .afk-earnings>strong{font:700 calc(38px*var(--s))/1.2 Georgia,serif;color:#a62249}
+[data-screen="Offline"] .afk-earnings>span{font-size:calc(12px*var(--s));color:#7f562c}
+[data-screen="Offline"] .afk-storage,[data-screen="Offline"] .afk-comparison{border:calc(1px*var(--s)) solid #c9a65e;border-radius:calc(7px*var(--s));background:#fff5dc;padding:calc(10px*var(--s))}
+[data-screen="Offline"] .afk-storage>header{display:flex;align-items:center;justify-content:space-between;gap:calc(6px*var(--s))}
+[data-screen="Offline"] .afk-storage h3,[data-screen="Offline"] .afk-comparison h3{font:700 calc(18px*var(--s))/1.25 Georgia,serif;margin:0;color:#155588}
+[data-screen="Offline"] .afk-storage header>span{font-size:calc(10px*var(--s));font-weight:800;color:#617178;white-space:nowrap}
+[data-screen="Offline"] .afk-timeline-space{padding-top:calc(32px*var(--s))}
+[data-screen="Offline"] .afk-track{position:relative;height:calc(31px*var(--s));border:calc(1px*var(--s)) solid #a39a7d;border-radius:calc(18px*var(--s));background:repeating-linear-gradient(135deg,#c9c8b4 0 calc(4px*var(--s)),#d0cfbc calc(4px*var(--s)) calc(8px*var(--s)))}
+[data-screen="Offline"] .afk-gold{position:absolute;inset:0 auto 0 0;border-radius:inherit;background:linear-gradient(#ffe778,#f2ae24);transition:width .4s ease}
+[data-screen="Offline"] .afk-track>strong{position:absolute;inset:0;display:grid;place-items:center;font-size:calc(13px*var(--s));z-index:1}
+[data-screen="Offline"] .afk-cap{position:absolute;top:calc(-2px*var(--s));bottom:calc(-2px*var(--s));width:calc(2px*var(--s));background:#155588;z-index:2}
+[data-screen="Offline"] .afk-cap>b{position:absolute;bottom:calc(100% + 4px*var(--s));right:0;background:#155588;color:#fff4dc;border-radius:calc(3px*var(--s));padding:calc(3px*var(--s)) calc(5px*var(--s));font-size:calc(11px*var(--s));white-space:nowrap}
+[data-screen="Offline"] .afk-ticks{display:flex;justify-content:space-between;gap:calc(6px*var(--s));padding-top:calc(5px*var(--s));color:#617178;font-size:calc(11px*var(--s))}
+[data-screen="Offline"] .afk-ticks>span:nth-child(2){flex:1;text-align:center}
+[data-screen="Offline"] .afk-efficiency{display:flex;align-items:center;justify-content:center;gap:calc(10px*var(--s));margin-top:calc(12px*var(--s));padding-top:calc(9px*var(--s));border-top:calc(1px*var(--s)) solid #d5bd86;font-size:calc(15px*var(--s))}
+[data-screen="Offline"] .afk-efficiency>span{width:calc(30px*var(--s));height:calc(30px*var(--s));border-radius:50%;background:conic-gradient(#c69843 var(--eff),#dfd0a1 0);mask:radial-gradient(transparent 47%,#000 49%)}
+[data-screen="Offline"] .afk-comparison{display:grid;grid-template-columns:1fr 1fr;text-align:center;padding:calc(6px*var(--s))}
+[data-screen="Offline"] .afk-comparison>div{display:flex;flex-direction:column;align-items:center;gap:calc(2px*var(--s))}
+[data-screen="Offline"] .afk-comparison>div+div{border-left:calc(1px*var(--s)) solid #d5bd86}
+[data-screen="Offline"] .afk-comparison h3{font-size:calc(14px*var(--s))}
+[data-screen="Offline"] .afk-comparison strong{font:700 calc(23px*var(--s))/1.3 Georgia,serif;color:#a62249}
+[data-screen="Offline"] .afk-comparison img{width:calc(39px*var(--s));height:calc(34px*var(--s));object-fit:contain}
+[data-screen="Offline"] .afk-comparison>div+div img{width:calc(55px*var(--s))}
+[data-screen="Offline"] .afk-ad-status{text-align:center;color:#617178;font-size:calc(11px*var(--s));line-height:1.3;margin:0}
+@media(prefers-reduced-motion:reduce){[data-screen="Offline"] .afk-gold{transition:none}}

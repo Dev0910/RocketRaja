@@ -1,0 +1,5 @@
+/* User-selected Legacy information button, shared by all current info entry points. */
+html body #app :is(.legacy-info,.panel-info,.popup-info){box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none;width:48px;height:48px;min-width:48px;min-height:48px;padding:0;border:0;border-image:none;border-radius:0;background:transparent;box-shadow:none;color:#164b80}
+html body #app :is(.legacy-info,.panel-info,.popup-info)>span,
+html body #app .native-guide>i{box-sizing:border-box;display:flex;align-items:center;justify-content:center;flex:none;width:23px;height:23px;min-width:23px;min-height:23px;padding:0;margin:0;border:2px solid currentColor;border-radius:50%;background:transparent;color:#164b80;font:bold 16px/1 Georgia,serif;font-style:normal;text-align:center}
+html body #app .native-guide>i{position:absolute;inset:auto 12px auto auto;top:50%;transform:translateY(-50%)}

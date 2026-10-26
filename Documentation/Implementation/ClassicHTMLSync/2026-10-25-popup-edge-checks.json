@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "label": "964×884 Settings",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 ProductDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Welcome",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Achievements",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 StandaloneAchievements",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Settings",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 ProductDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Welcome",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Achievements",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 StandaloneAchievements",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

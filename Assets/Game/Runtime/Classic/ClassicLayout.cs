@@ -44,7 +44,9 @@ namespace RocketRaja.Classic
                 if(dialog.scroll&&dialog.scroll.content)
                 {
                     var body=(RectTransform)dialog.scroll.transform;
-                    float desired=LayoutUtility.GetPreferredHeight(dialog.scroll.content)+body.offsetMin.y-body.offsetMax.y;
+                    // Authored fixed-content dialogs retain their correct size while inactive in Edit Mode.
+                    // Unity's inactive LayoutGroup otherwise reports zero preferred height.
+                    float desired=dialog.preferredHeight>0?dialog.preferredHeight:LayoutUtility.GetPreferredHeight(dialog.scroll.content)+body.offsetMin.y-body.offsetMax.y;
                     dialog.window.anchorMin=new Vector2(0,.5f);dialog.window.anchorMax=new Vector2(1,.5f);dialog.window.pivot=new Vector2(.5f,.5f);dialog.window.sizeDelta=new Vector2(0,Mathf.Min(area.rect.height,Mathf.Max(220,desired)));dialog.window.anchoredPosition=Vector2.zero;
                 }
             }

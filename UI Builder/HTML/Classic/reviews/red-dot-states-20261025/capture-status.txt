@@ -1,0 +1,1 @@
+PASS: 27 CTA appearances across 14 native screens. ON uses live readiness rules. OFF hides only indicators for a visual comparison. Repeated upgrade and achievement rows use one representative per screen.

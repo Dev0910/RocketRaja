@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-25",
+  "tool": "Built-in image_gen.imagegen",
+  "purpose": "User browser comment 10: unique left-hand artwork for all twelve CashEffect upgrade types",
+  "transparentBackground": true,
+  "assets": [
+    {
+      "file": "product-profit.png",
+      "effect": 0,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: a small Indian festival fireworks fountain cone with a fan of saffron sparks and three gold rupee coins, representing PRODUCT PROFIT. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "product-cost.png",
+      "effect": 1,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A compact stack of Indian fireworks boxes beside a gold price tag with a clear downward arrow, representing lower PRODUCT LEVEL COSTS. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "tap-direct.png",
+      "effect": 2,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: One friendly hand with extended index finger tapping a small cobalt counter button, with a bold golden spark burst, representing stronger MANUAL TAPS. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "tap-linked.png",
+      "effect": 3,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A tiny cobalt shop counter and a tapping hand connected by one thick golden curved link, representing SHOP SALES LINKED TO TAPS. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "tap-cost.png",
+      "effect": 4,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A tapping index finger beside a small blue price tag with a golden downward arrow, representing cheaper TAP TRAINING. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "global-profit.png",
+      "effect": 5,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A cheerful compact Indian festival market stall with red awning and a rising fan of golden coins, representing GLOBAL SHOP INCOME. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "upgrade-cost.png",
+      "effect": 6,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A small cobalt gear beside a cream price tag with a gold downward arrow, representing cheaper CASH UPGRADES. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "skill-power.png",
+      "effect": 7,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A bold vermilion lightning bolt over a cobalt star with gold sparkle tips, representing SKILL POWER. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "skill-duration.png",
+      "effect": 8,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A small decorative cobalt hourglass with golden sand and a thick gold upward arrow, representing LONGER SKILL DURATION. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "skill-cooldown.png",
+      "effect": 9,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: A compact cobalt stopwatch embraced by a bold golden circular arrow, representing FASTER SKILL COOLDOWN. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "product-link.png",
+      "effect": 10,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: Two small different Indian fireworks, a fountain cone and rocket, joined by one golden chain link, representing PRODUCT SYNERGY. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    },
+    {
+      "file": "product-group.png",
+      "effect": 11,
+      "prompt": "Create ONE square game upgrade icon, centered isolated on a genuinely transparent background. Subject: Three compact Indian fireworks, fountain cone, rocket and round chakri, united by a golden ribbon, representing GROUP INCOME. Hand-painted gouache storybook mobile game art for Rocket Raja's Ivory Bazaar: rich cobalt blue, warm gold, vermilion red, cream highlights, tactile brushwork, friendly chunky silhouette, crisp readable at 48 pixels. Objects occupy central 80%, generous clear margins. No text, no letters, no numbers, no border, no badge, no panel, no backdrop, no shadow outside objects. Single coherent icon only."
+    }
+  ]
+}

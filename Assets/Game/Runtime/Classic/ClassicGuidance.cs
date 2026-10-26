@@ -22,6 +22,7 @@ namespace RocketRaja.Classic
             string route = ui.CurrentDialog == "" ? ui.CurrentTab : ui.CurrentDialog;
             string next = ui.driver.Initialized && ui.driver.Session.CanMutate ? Next(route) : null;
             CurrentTopic = next;
+            bool banner = next != null && rows.Any(r => r.route == route);
             foreach (var row in rows)
             {
                 bool show = next != null && row.route == route;
@@ -29,7 +30,7 @@ namespace RocketRaja.Classic
                 if (show) { var copy = topics.Single(t => t.id == next); row.title.text = copy.title; row.brief.text = copy.brief; }
             }
             foreach (var panel in ui.panels)
-                if (panel.scroll) { var r = (RectTransform)panel.scroll.transform; r.offsetMax = new Vector2(r.offsetMax.x, -(next != null && panel.route == route ? 105 : 49)); }
+                if (panel.scroll) { var r = (RectTransform)panel.scroll.transform; r.offsetMax = new Vector2(r.offsetMax.x, -(banner && panel.route == route ? 105 : 49)); }
             var goal = ui.panels[0].root.transform.Find("Next display");
             if (goal) goal.gameObject.SetActive(!(route == "Home" && next != null));
         }
@@ -65,6 +66,14 @@ namespace RocketRaja.Classic
             var text = topics.Single(t => t.id == CurrentTopic);
             heading.text = text.title; body.text = text.body; ui.Open("Guidance");
             FitReader();
+        }
+        public void OpenTopic(string id)
+        {
+            if (!ui.driver.Session.CanMutate) return;
+            var text = topics.Single(t => t.id == id);
+            CurrentTopic = id;
+            heading.text = text.title; body.text = text.body;
+            ui.Open("Guidance"); FitReader();
         }
         void FitReader()
         {

@@ -1,0 +1,1 @@
+PASS saved Main reload: 12 effect icons, 30 row images, selected currency image and 25 currency text targets, three switch controls, all popup roots inactive, no missing scripts, and 25 currency-material label pools. Core economy and ad provider unchanged.

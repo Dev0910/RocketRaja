@@ -29,6 +29,12 @@ namespace RocketRaja.Editor
             var bindings = new List<ClassicRedDotBinding>();
             foreach (var control in ui.GetComponentsInChildren<ClassicControl>(true))
             {
+                if (!ClassicRedDots.SupportsIndicator(control))
+                {
+                    var removed = control.transform.Find("Notification dot");
+                    if (removed) Undo.DestroyObjectImmediate(removed.gameObject);
+                    continue;
+                }
                 bool destination = (control.action == "Navigate" || control.action == "Tab") &&
                     (new[] { "Achievements", "Skills", "Player", "Legacy", "Prestige", "Upgrades", "Catalogue" }.Contains(control.parameter) || control.parameter.StartsWith("SkillDetail:"));
                 if (!destination && control.action != "ClaimAchievement" && control.action != "Draw" && control.action != "Prestige" && control.action != "ActivateSkill" && control.action != "BuyUpgrade" && control.action != "BuyAll" && control.action != "ReviewBatch" && control.action != "ConfirmBatch") continue;
@@ -41,6 +47,10 @@ namespace RocketRaja.Editor
                 }
                 dot.anchorMin = dot.anchorMax = dot.pivot = Vector2.one;
                 dot.anchoredPosition = new Vector2(-2, -2); dot.sizeDelta = new Vector2(10, 10);
+                var background = control.GetComponent<Image>();
+                if (background && background.sprite &&
+                    (background.sprite.name == "Folk Blue" || background.sprite.name == "popup-primary"))
+                    dot.anchoredPosition = new Vector2(-7, -7);
                 dot.GetComponent<LayoutElement>().ignoreLayout = true;
                 var image = dot.GetComponent<Image>(); image.sprite = sprite; image.color = new Color32(220, 43, 54, 255); image.raycastTarget = false;
                 dot.SetAsLastSibling(); dot.gameObject.SetActive(false);
@@ -49,7 +59,7 @@ namespace RocketRaja.Editor
             notifications.bindings = bindings.ToArray(); EditorUtility.SetDirty(notifications);
             EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene);
             if (opened) EditorSceneManager.CloseScene(scene, true);
-            Debug.Log("Authored " + bindings.Count + " notification dots for rewards, skills, prestige, upgrades and Talent draws.");
+            Debug.Log("Authored " + bindings.Count + " notification dots for rewards, prestige, upgrades and Talent draws.");
         }
     }
 }

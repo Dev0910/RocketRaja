@@ -29,7 +29,7 @@ namespace RocketRaja.Classic
         {
             var state = Engine.State;
             int ready = RedesignAchievements.ReadyCount(state);
-            if (achievementTabLabel) achievementTabLabel.text = "Achievements" + (ready > 0 ? " (" + ready + ")" : "");
+            if (achievementTabLabel) achievementTabLabel.text = "Achievements";
             if (CurrentDialog != "Achievements") return;
             foreach (var row in achievementRows)
             {
@@ -49,7 +49,7 @@ namespace RocketRaja.Classic
             {
                 achievementClaimedCount.text = (state.claimedAchievements?.Count ?? 0) + " / " + RedesignAchievements.All.Count;
                 achievementReadyCount.text = ready.ToString();
-                achievementWallet.text = Count(state.kajuKatli);
+                achievementWallet.text = Count(state.kajuKatli) + " KK";
             }
             else if (achievementSummary)
                 achievementSummary.text = (state.claimedAchievements?.Count ?? 0) + " / " + RedesignAchievements.All.Count
@@ -60,7 +60,7 @@ namespace RocketRaja.Classic
                 if (!RedesignAchievements.TryGet(row.id, out var definition)) continue;
                 bool claimed = RedesignAchievements.Claimed(state, row.id), complete = definition.Complete(state);
                 row.progress.text = definition.Progress(state);
-                row.reward.text = "+" + definition.Reward + (row.readyBadge ? "\nKaju Katli" : " Kaju Katli");
+                row.reward.text = "+" + definition.Reward + (row.readyBadge ? "" : " Kaju Katli");
                 row.action.text = claimed ? "Claimed" : complete ? "Claim" : "In progress";
                 row.claim.interactable = driver.Session.CanMutate && Engine.CanClaimAchievement(row.id);
                 if (row.readyBadge)

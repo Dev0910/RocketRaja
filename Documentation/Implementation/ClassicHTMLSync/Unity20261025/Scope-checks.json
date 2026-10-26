@@ -1,0 +1,77 @@
+{
+  "protectedFontFiles": 16,
+  "changedFontFiles": [],
+  "bootstrapUnchanged": true,
+  "importedArtwork": [
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\global-profit.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\global-profit.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\product-cost.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\product-cost.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\product-group.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\product-group.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\product-link.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\product-link.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\product-profit.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\product-profit.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\skill-cooldown.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\skill-cooldown.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\skill-duration.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\skill-duration.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\skill-power.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\skill-power.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\tap-cost.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\tap-cost.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\tap-direct.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\tap-direct.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\tap-linked.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\tap-linked.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\upgrades\\upgrade-cost.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\upgrade-cost.png",
+      "identical": true
+    },
+    {
+      "source": "UI Builder\\HTML\\Classic\\assets\\currency\\kaju-katli.png",
+      "native": "Assets\\Game\\ClassicUI\\Revision20261025\\kaju-katli.png",
+      "identical": true
+    }
+  ],
+  "coreChecks": 839,
+  "nativeChecks": 135,
+  "currencyTextPools": 25,
+  "runtimeUiConstruction": false,
+  "liveAdProviderConfigured": false
+}

@@ -76,7 +76,7 @@ namespace RocketRaja.Classic
 
         void Observe()
         {
-            if (!started || leaving || !foreground) return;
+            if (!started || leaving || !foreground || ui.driver.NativeAdPresentation) return;
             if (!Ready)
             {
                 ui.ShowRecovery(failure ?? ui.driver.RecoveryNotice ?? "Your progress needs attention. Retry before continuing.");

@@ -1,0 +1,33 @@
+PASS Production Main automatically opens saved offline popup on return
+PASS Live return receipt shows actual cap and overflow
+PASS Previous complete popup retained inactive
+PASS Every production UI component already exists in the saved Edit Mode hierarchy
+PASS Animated time and efficiency fills settle to independent values
+PASS Shipping build gracefully disables ads without a provider
+PASS Unavailable ad cannot award cash
+PASS Control enabled: OfflineInfo
+PASS Header info opens offline explanation
+PASS Information closes back to the offline popup
+PASS Control enabled: OfflineAd
+PASS Pending ad disables repeat starts
+PASS Cancelled test ad keeps base reward and permits retry
+PASS Control enabled: OfflineAd
+PASS Completed test-provider callback saves one extra reward
+PASS Duplicate test callback cannot grant again
+PASS Control enabled: Offline
+PASS Continue acknowledges the receipt and closes without navigation
+PASS Completed bonus survives a save reload
+PASS Control enabled: OfflineAd
+PASS Close invalidates an in-flight ad and ignores its late callback
+PASS Fixed actions and scrollable content at (360, 640)
+PASS Fixed actions and scrollable content at (360, 540)
+PASS Fixed actions and scrollable content at (390, 844)
+PASS Popup stays inside simulated top and bottom device insets
+PASS Under-cap state shows remaining storage with no overflow claim
+PASS Talent card levels update the native cap and efficiency from game rules
+PASS Reduced motion retains the settled fill
+PASS No UI objects or components are created through repeated show, dismiss, ad and info cycles
+PASS No runtime errors during production-route validation
+This regression suite explicitly uses fake providers and bypasses automatic SDK initialization. The Google SDK adapter is validated separately.
+Disposable seeded profile: C:\Users\Dev\AppData\Local\Temp\OfflineCappedTimeline-5ba345982df54a189130c067cbf4b917
+PASS: 30 native offline checks

@@ -1,7 +1,7 @@
 using System;
 namespace RocketRaja
 {
-    // Compatibility surface for saved legacy presenters. This version has no ad provider.
+    // Rewarded placements grant only after the provider confirms completion.
     public interface IRewardedAds : IDisposable
     {
         bool Ready { get; }

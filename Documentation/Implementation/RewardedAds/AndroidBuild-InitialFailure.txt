@@ -1,0 +1,17 @@
+RUNNING
+Application: com.diwali.fireworkstycoon.dev
+Development build; Google test rewarded unit.
+Failed
+Errors: 3
+Warnings: 3
+Duration: 00:02:07.2534439
+Bytes: 0
+Warning: The character with Unicode value \u2197 was not found in the [Bold SDF] font asset or any potential fallbacks. It was replaced by Unicode character \u25A1 in text object [Rising arrow].
+Error: Cannot open file 'Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.17.0/firebase-app-unity-13.17.0.aar.meta' for write.
+
+Error: Failed to write meta file 'Assets/GeneratedLocalRepo/Firebase/m2repository/com/google/firebase/firebase-app-unity/13.17.0/firebase-app-unity-13.17.0.aar.meta'
+Warning: Invalid AssetDatabase path: C:/Unity/Projects/Incremental game/Assets\GoogleMobileAds\link.xml. Use path relative to the project folder.
+Exception: UnityException: Can not sign the application
+Unable to sign the application; please provide passwords!
+FAIL UnityEditor.Build.BuildFailedException: Rewarded ads APK build must succeed with zero errors
+  at RocketRaja.Editor.ClassicRewardedAdsAndroidBuild.Tick () [0x00263] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\Classic\ClassicRewardedAdsAndroidBuild.cs:46 

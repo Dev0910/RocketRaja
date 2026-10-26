@@ -1,0 +1,389 @@
+{
+  "results": [
+    {
+      "label": "964×884 Settings",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 ProductDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Upgrades",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 BuyAll",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 TapTraining",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Skills",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 SkillDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Achievements",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 DrawReveal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Prestige",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Offline",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Statistics",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Naming",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Privacy",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Welcome",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Account",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 AccountCompare",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Promote",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 SignOut",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Handoff",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 SaveRecovery",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 RecoveryConfirm",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 RecoveryExit",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Purchase",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Appearance",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Help",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Odds",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 DeveloperReset",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 CardDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 CardDetail:16",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 CardDetail:27",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 StandaloneAchievements",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Settings",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 ProductDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Upgrades",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 BuyAll",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 TapTraining",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Skills",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 SkillDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Achievements",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 DrawReveal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Prestige",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Offline",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Statistics",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Naming",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Privacy",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Welcome",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Account",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 AccountCompare",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Promote",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 SignOut",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Handoff",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 SaveRecovery",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 RecoveryConfirm",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 RecoveryExit",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Purchase",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Appearance",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Help",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Odds",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 DeveloperReset",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 CardDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 CardDetail:16",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 CardDetail:27",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 StandaloneAchievements",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Settings",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 ProductDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Upgrades",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 BuyAll",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 TapTraining",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Skills",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 SkillDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Achievements",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 DrawReveal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Prestige",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Offline",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Statistics",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Naming",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Privacy",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Welcome",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Account",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 AccountCompare",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Promote",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 SignOut",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Handoff",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 SaveRecovery",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 RecoveryConfirm",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 RecoveryExit",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Purchase",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Appearance",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Help",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Odds",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 DeveloperReset",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 CardDetail:0",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 CardDetail:16",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 CardDetail:27",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 StandaloneAchievements",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

@@ -105,6 +105,14 @@ test('account second prestige grants gift from confirmed progress without trusti
  const wallet=await f.authority.activate(actor);assert.equal(wallet.balance,'1100');assert.equal(wallet.revision,'2');
  assert.deepEqual(await f.authority.activate(actor),wallet);
 });
+
+test('activation preserves a guest gift spent on shop cash without regranting KK or importing a card',async()=>{
+ const f=fixture();giftProgress(f);progress(f,{shopGiftSpent:true,kajuKatli:{digits:'0'}});
+ const wallet=await f.authority.activate(actor);
+ assert.equal(wallet.balance,'0');assert.equal(wallet.giftRegistered,true);assert.ok(wallet.cards.every(c=>c==='0'));
+ assert.deepEqual(await f.authority.activate(actor),wallet);
+ assert.equal(f.store.records.get('premiumWallets/'+uid).spent,'100');
+});
 test('activation failure atomically preserves profile, wallet and original guest result',async()=>{
  const f=fixture();giftProgress(f,true);f.store.records.delete('premiumProfiles/'+profileId);f.store.records.delete('premiumWallets/'+uid);f.store.failBefore=true;
  await assert.rejects(f.authority.activate(actor));

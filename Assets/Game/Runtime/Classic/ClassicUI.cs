@@ -10,10 +10,10 @@ namespace RocketRaja.Classic
 {
     [Serializable] public sealed class ClassicTextBinding { public string key; public TMP_Text text; }
     [Serializable] public sealed class ClassicImageBinding { public string key; public Image image; }
-    [Serializable] public sealed class ClassicView { public string route; public GameObject root; public RectTransform window; public CanvasGroup group; public ScrollRect scroll; }
+    [Serializable] public sealed class ClassicView { public string route; public GameObject root; public RectTransform window; public CanvasGroup group; public ScrollRect scroll; public float preferredHeight; }
     [Serializable] public sealed class ClassicProductRow { public TMP_Text name,level,income,cost; public Button buy; public Image progress; public RectTransform artFrame; }
     [Serializable] public sealed class ClassicCardRow { public TMP_Text name,level; public Button button; public Image frame,art; public CanvasGroup group; }
-    [Serializable] public sealed class ClassicUpgradeRow { public GameObject root; public TMP_Text title,copy,cost; public Button buy; public ClassicControl control; }
+    [Serializable] public sealed class ClassicUpgradeRow { public GameObject root; public TMP_Text title,copy,cost; public Button buy; public ClassicControl control; public Image artwork; }
 
     /// <summary>Bindings and navigation for saved native Classic screens. Owns no UI factories.</summary>
     public sealed partial class ClassicUI : MonoBehaviour
@@ -33,6 +33,8 @@ namespace RocketRaja.Classic
         public Image[] homeSkillImages;
         public Sprite[] skillArt;
         public Sprite lockArt;
+        public Sprite[] upgradeTypeIcons=Array.Empty<Sprite>();
+        public Image legacyCurrencyIcon;
         public Material undiscoveredMaterial;
         public TMP_InputField nameInput,searchInput;
         public GameObject toast,revealFront,revealBack,revealResult;
@@ -85,13 +87,14 @@ namespace RocketRaja.Classic
         public void Bind()
         {
             if(initialized)return;if(!driver.Initialized)throw new InvalidOperationException("Bind Classic after its session initializes");initialized=true;driver.Changed+=OnChanged;Refresh();
+            InitializeOfflineAds();
             if(!application){if(Engine.State.reveal.pending)Open("DrawReveal");else if(Engine.State.offline.pending)Open("Offline");}
         }
-        void OnDestroy(){if(driver)driver.Changed-=OnChanged;if(searchInput)searchInput.onValueChanged.RemoveListener(Search);if(tapTarget)tapTarget.Tap=null;}
+        void OnDestroy(){CancelOfflineAd();offlineAds.Dispose();if(driver)driver.Changed-=OnChanged;if(searchInput)searchInput.onValueChanged.RemoveListener(Search);if(tapTarget)tapTarget.Tap=null;}
         void OnChanged(){if(initialized)Refresh();}
         void Update()
         {
-            if(!initialized)return;if(Time.unscaledTime>=refreshAt){refreshAt=Time.unscaledTime+.1f;Refresh();}
+            if(!initialized)return;offlineAds.Tick();if(Time.unscaledTime>=refreshAt){refreshAt=Time.unscaledTime+.1f;Refresh();}
             if(Input.GetKeyDown(KeyCode.Escape)){if(stack.Count>0)Close();else SetTab("Home");}
         }
         void Text(string key,string value){if(texts.TryGetValue(key,out var t)&&t.text!=value)t.text=value;}
@@ -100,7 +103,7 @@ namespace RocketRaja.Classic
         static string Count(Natural n)=>RedesignCardCopy.Count(n);
         void Enable(string action,string parameter,bool enabled)
         {
-            foreach(var control in controls)if(control.action==action&&control.parameter==parameter){var b=control.GetComponent<Button>();b.interactable=enabled;if(b.targetGraphic is Image img&&control.action!="Card"){if(control.htmlStyle>0)SetButtonSkin(b,enabled);else img.sprite=enabled?(action=="Draw"&&parameter=="5"?redButton:blueButton):disabledButton;}}
+            foreach(var control in controls)if(control.action==action&&control.parameter==parameter){var b=control.GetComponent<Button>();b.interactable=enabled;if(b.targetGraphic is Image img&&control.action!="Card"){if(control.htmlStyle>0)SetButtonSkin(b,enabled);else img.sprite=enabled?blueButton:disabledButton;}}
         }
         // Transient banners are disabled; retain this entry point for existing callers.
         public void Notice(string message){if(toast)toast.SetActive(false);}
@@ -134,7 +137,7 @@ namespace RocketRaja.Classic
             if(route=="DrawReveal")StartReveal();
             if(guidance)guidance.Refresh();
         }
-        void CloseAll(){closing=false;motion.SettleFlip();foreach(var v in stack){motion.ResetView(v.root.transform);v.root.SetActive(false);v.group.alpha=1;}stack.Clear();dialogFocus.Clear();motion.dialogOpen=false;}
+        void CloseAll(){CancelOfflineAd();closing=false;motion.SettleFlip();foreach(var v in stack){motion.ResetView(v.root.transform);v.root.SetActive(false);v.group.alpha=1;}stack.Clear();dialogFocus.Clear();motion.dialogOpen=false;}
         static bool IsAccountRoute(string route) => route == "Account" || route == "Welcome" || route == "AccountCompare" || route == "Handoff" || route == "SignOut" || route == "Promote" || route == "RecoveryConfirm";
         public void InvalidateQuotes() { lastRevision = ""; batch = null; prestige = null; five = null; one = null; Refresh(); }
         public void ShowRecovery(string message)
@@ -157,6 +160,7 @@ namespace RocketRaja.Classic
             if(closing||stack.Count==0)return;
             if(CurrentDialog=="SaveRecovery"||CurrentDialog=="RecoveryExit")return;
             if(CurrentDialog=="Offline"&&Engine.State.offline.pending&&!Command(e=>e.DismissOffline()))return;
+            if(CurrentDialog=="Offline")CancelOfflineAd();
             if(CurrentDialog=="DrawReveal")
             {
                 if(!Command(e=>e.DismissReveal(e.State.reveal.operationId)))return;motion.SettleFlip();CloseAll();SetTab("Legacy");if(UnityEngine.EventSystems.EventSystem.current)UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(navigation[2].gameObject);return;
@@ -196,6 +200,9 @@ namespace RocketRaja.Classic
                     break;
                 case "Tip":if(guidance)guidance.Open();break;
                 case "LearnTip":if(guidance)guidance.Acknowledge();break;
+                case "AdPrivacyOptions":offlineAds.PrivacyOptions();break;
+                case "BuyShopCash":if(Command(e=>e.BuyShopCash()))Notice("24 hours of cash collected");break;
+                case "BuyShopProfit":if(Command(e=>e.BuyShopProfit()))Notice("Double profits active for 24 hours");break;
                 case "Tab":SetTab(CurrentTab==arg?"Home":arg);break;
                 case "Navigate":Open(arg);break;
                 case "Exact":exactSelection=arg;Open("Exact");break;
@@ -215,7 +222,10 @@ namespace RocketRaja.Classic
                 case "Prestige":if(prestige!=null&&Command(e=>e.Prestige(prestige))){CloseAll();SetTab("Home");motion.Success(texts["shop-name"].rectTransform,2,22);Notice("A brighter beginning!");}break;
                 case "Setting":Command(e=>e.ToggleSetting(arg));break;
                 case "Rename":if(Command(e=>e.SetStoreName(nameInput.text))){Close();Notice("Shop name updated");}break;
-                case "Offline":if(Command(e=>e.DismissOffline())){Close();if(arg=="goal")SetTab("Products");}break;
+                case "Offline":Close();break;
+                case "OfflineAd":WatchOfflineAd();break;
+                case "OfflineInfo":if(guidance)guidance.OpenTopic("return-play");break;
+                case "Info":if(guidance)guidance.OpenTopic(arg);break;
                 case "Page":page=Math.Max(0,page+(arg=="next"?1:-1));RefreshCatalogue();break;
                 case "Filter":if(arg=="view")view=view=="Available"?"Upcoming":view=="Upcoming"?"Owned":view=="Owned"?"Full":"Available";else category=category=="All"?"Products":category=="Products"?"Tapping":category=="Tapping"?"Skills":category=="Skills"?"Shop":"All";page=0;RefreshCatalogue();break;
                 case "Purchase":if(!isolatedPreview){Notice("Store purchases are not available yet. No payment was started.");break;}pack=int.Parse(arg);Open("Purchase");break;

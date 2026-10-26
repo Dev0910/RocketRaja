@@ -16,6 +16,8 @@ namespace RocketRaja.Editor
         [MenuItem("Rocket Raja/Redesign/Retire Existing Ad Controls")]
         public static void Run()
         {
+            if (RewardedAdsSettings.Load()?.enabledInGame == true)
+                throw new InvalidOperationException("Rewarded ads have been restored. The historical ad-retirement migration cannot remove the active SDK/settings.");
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Leave Play Mode before editing saved screens.");
             foreach (string path in new[] { "Assets/Scenes/Main.unity", "Assets/Scenes/HTML Importer.unity" })
             {

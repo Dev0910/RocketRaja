@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "ActivateSkill",
+    "Count": 9
+  },
+  {
+    "Name": "BuyAll",
+    "Count": 1
+  },
+  {
+    "Name": "BuyUpgrade",
+    "Count": 2
+  },
+  {
+    "Name": "ClaimAchievement",
+    "Count": 1
+  },
+  {
+    "Name": "ConfirmBatch",
+    "Count": 1
+  },
+  {
+    "Name": "Draw",
+    "Count": 2
+  },
+  {
+    "Name": "Navigate",
+    "Count": 6
+  },
+  {
+    "Name": "Prestige",
+    "Count": 1
+  },
+  {
+    "Name": "Tab",
+    "Count": 4
+  }
+]

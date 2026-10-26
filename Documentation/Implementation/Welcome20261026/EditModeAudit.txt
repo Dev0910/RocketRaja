@@ -1,0 +1,6 @@
+Simulated top/bottom safe insets: close=True, panel=True
+Missing saved fonts=0
+Legacy canvas retained inactive=True
+Tagline active=False
+Bootstrap scaler=(1080.00, 2200.00)
+Main scaler=(360.00, 640.00)

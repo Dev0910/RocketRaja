@@ -25,8 +25,11 @@ namespace RocketRaja.Core
     {
         public string id;
         public double absence, creditedSeconds, efficiency;
+        // Optional on older saves. New receipts freeze the cap used when settling earnings.
+        public double capSeconds;
         public Amount amount;
         public bool pending;
+        public bool adRewarded;
         public OfflineReceipt Copy() => (OfflineReceipt)MemberwiseClone();
         public static OfflineReceipt Empty() => new OfflineReceipt { id = "", efficiency = .5 };
     }
@@ -56,6 +59,9 @@ namespace RocketRaja.Core
         public int[] products;
         public Amount cash, eligibleEarnings, lifetimeEarnings, target, departureRate;
         public double now, savedAt, runSeconds;
+        // Optional shop fields; older saves default to no active boost or spent gift.
+        public double shopProfitUntil;
+        public bool shopGiftSpent;
         public double nextManualTapAt; // Legacy save field; manual taps no longer have a cooldown.
         public double[] activeUntil, readyAt, nextHandsAt;
         public DrawReveal reveal;
@@ -100,12 +106,13 @@ namespace RocketRaja.Core
                 !Ids(everPurchased) || !Ids(upgrades) || !new HashSet<string>(everPurchased, StringComparer.Ordinal).IsSupersetOf(upgrades) ||
                 products == null || products.Length != 8 || products.Any(n => n < 0 || n > Catalog.MaxLevel) || tapLevel < 0 || tapLevel > Catalog.MaxLevel ||
                 !cash.Valid || !eligibleEarnings.Valid || !lifetimeEarnings.Valid || !target.Valid || target.mantissa == 0 || !departureRate.Valid ||
-                !Time(now) || !Time(savedAt) || !Time(runSeconds) || !Time(nextManualTapAt) || !Times(activeUntil) || !Times(readyAt) || !Times(nextHandsAt) ||
+                !Time(now) || !Time(savedAt) || !Time(runSeconds) || !Time(shopProfitUntil) || !Time(nextManualTapAt) || !Times(activeUntil) || !Times(readyAt) || !Times(nextHandsAt) ||
                 learnedTopics == null || learnedTopics.Count > 256 || learnedTopics.Any(x => string.IsNullOrWhiteSpace(x) || x.Length > 80) || learnedTopics.Distinct().Count() != learnedTopics.Count ||
                 storeName == null || storeName.Length > 128 || pinnedUpgradeId == null || pinnedUpgradeId != "" && !data.TryUpgrade(pinnedUpgradeId, out _) ||
                 decorationStage < 0 || decorationStage > 5 || reveal == null || offline == null) return false;
             if (!string.IsNullOrEmpty(migrationSourceDigest) && (migrationSourceDigest.Length != 64 || !migrationSourceDigest.All(Uri.IsHexDigit))) return false;
             if (!RedesignAchievements.ValidClaims(this)) return false;
+            if (shopGiftSpent && (!secondPrestigeGift || !HasGuestProvenance || guestWallet.giftDrawCardId != "")) return false;
             if (HasDevelopmentShop && (HasPremium || !developmentShop.Valid(data))) return false;
             if (guestWallet != null && (HasGuestProvenance || !string.IsNullOrEmpty(guestWallet.giftDrawCardId) || !string.IsNullOrEmpty(guestWallet.giftDrawOperationId)) &&
                 (!guestWallet.Valid(data) || guestWallet.giftDrawCardId != "" && (!secondPrestigeGift || !data.TryCard(guestWallet.giftDrawCardId, out int giftCard) || cardLevels[giftCard].IsZero))) return false;
@@ -132,7 +139,7 @@ namespace RocketRaja.Core
                 }
             }
             else if (reveal.batchIndex != 0) return false;
-            if (offline.id == null || !Time(offline.absence) || !Time(offline.creditedSeconds) || offline.creditedSeconds > offline.absence || !offline.amount.Valid || double.IsNaN(offline.efficiency) || offline.efficiency < .5 || offline.efficiency > 1 || offline.pending && offline.id == "") return false;
+            if (offline.id == null || !Time(offline.absence) || !Time(offline.creditedSeconds) || offline.creditedSeconds > offline.absence || !Time(offline.capSeconds) || offline.capSeconds > 0 && offline.creditedSeconds > offline.capSeconds || !offline.amount.Valid || double.IsNaN(offline.efficiency) || offline.efficiency < .5 || offline.efficiency > 1 || (offline.pending || offline.adRewarded) && offline.id == "") return false;
             return true;
         }
     }

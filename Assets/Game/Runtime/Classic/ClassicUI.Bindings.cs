@@ -10,6 +10,7 @@ namespace RocketRaja.Classic
         public void Refresh()
         {
             if(Engine==null)return;var e=Engine;var s=e.State;bool can=driver.Session.CanMutate;
+            if(adPrivacyRow)adPrivacyRow.SetActive(offlineAds.PrivacyOptionsRequired);
             motion.reduced=s.reducedMotion;
             if(developerResetRow)
             {
@@ -39,14 +40,15 @@ namespace RocketRaja.Classic
                 string state=SkillState(i);Text("home-skill-"+i,state=="READY"?"READY":state=="LOCKED"?"VIEW UNLOCK":state=="ACTIVE"?"ACTIVE · "+TimeLabel(s.activeUntil[i]-s.now):"WAIT · "+TimeLabel(s.readyAt[i]-s.now));
                 homeSkillImages[i].sprite=e.SkillOwned(i)?skillArt[i]:lockArt;motion.skillGlows[i].gameObject.SetActive(state=="READY"||state=="ACTIVE");motion.SkillState(i,state);Text("skills-state-"+i,state);
             }
-            Text("legacy-kk",Count(s.kajuKatli)+" KK");Text("shop-kk",Count(s.kajuKatli)+" KK");
+            Text("legacy-kk",Count(s.kajuKatli)+(legacyCurrencyIcon?"":" KK"));Text("shop-kk",Count(s.kajuKatli)+" KK");
+            RefreshShopOffers();
             int discovered=s.cardLevels.Count(n=>!n.IsZero);for(int i=0;i<3;i++)Text("discovered-"+i,discovered+" / 28 discovered");
             Text("draw-one","1× pull\n"+(!s.freeCredits.IsZero?"1 free pull":"100 KK"));Text("draw-five","5× pull\n"+(s.freeCredits.Value>=4?"4 free pulls":"400 KK"));
             Enable("Draw","1",can&&e.CanDraw(!s.freeCredits.IsZero));Enable("Draw","5",can&&e.CanDrawFive(s.freeCredits.Value>=4));
             Text("legacy-state",s.requiresDrawReconciliation?"Backup recovered · Draws need reward recovery.":"");
             for(int i=0;i<cards.Length;i++){bool owned=!s.cardLevels[i].IsZero;cards[i].level.text="Lvl "+Count(s.cardLevels[i]);cards[i].button.interactable=owned;cards[i].group.alpha=owned?1:.48f;cards[i].art.color=Color.white;cards[i].art.material=cards[i].frame.material=owned?null:undiscoveredMaterial;}
             Text("shop-status",s.HasDevelopmentShop?(s.developmentShop.status=="pending"?"Purchase pending — return to its pack to check the outcome.":s.developmentShop.status=="failed"?"Purchase could not be verified. No KK was granted.":s.developmentShop.status=="cancelled"?"Purchase cancelled. Nothing was charged.":s.developmentShop.status=="delivered"?"Development purchase delivered.":""):"");
-            if(!isolatedPreview)Text("shop-status","Store purchases are not available yet.");
+            if(!isolatedPreview)Text("shop-status","Kaju Katli packs are not available yet.");
             if(lastRevision!=s.commandRevision.digits)
             {
                 lastRevision=s.commandRevision.digits;var eligible=e.Data.Upgrades.Where(u=>e.Eligible(u.id)).OrderBy(u=>e.UpgradeCost(u.id)).ThenBy(u=>u.id,StringComparer.Ordinal).Take(10).ToArray();
@@ -69,6 +71,7 @@ namespace RocketRaja.Classic
             for(int i=0;i<rows.Length;i++)
             {
                 var row=rows[i];row.root.SetActive(i<upgrades.Length);if(i>=upgrades.Length)continue;var u=upgrades[i];row.control.parameter=u.id;row.title.text=u.name;bool owned=Engine.State.upgrades.Contains(u.id);
+                if(row.artwork&&upgradeTypeIcons.Length>(int)u.effect)row.artwork.sprite=upgradeTypeIcons[(int)u.effect];
                 row.copy.text=RedesignUpgradeRow.Effect(u,Engine.Data)+"\n"+(owned?"Owned this run":Engine.Eligible(u.id)?"Available":RedesignUpgradeRow.Requirements(u,Engine.Data));row.cost.text=owned?"Purchased":Cash(Engine.UpgradeCost(u.id))+"\nBuy upgrade";
                 row.buy.interactable=!owned&&driver.Session.CanMutate&&Engine.Eligible(u.id)&&Engine.UpgradeCost(u.id)<=Engine.State.cash;SetButtonSkin(row.buy,row.buy.interactable);
             }
@@ -109,7 +112,7 @@ namespace RocketRaja.Classic
                 case "DrawReveal":var r=s.reveal;if(!e.Data.TryCard(r.cardId,out int ci))break;var card=e.Data.Cards[ci];Text("reveal-progress",r.batch!=null&&r.batch.Length>0?"Card "+(r.batchIndex+1)+" / "+r.batch.Length:"Your card awaits");Text("reveal-name",card.name);Text("reveal-level","Lvl "+Count(r.after));Text("reveal-rarity",card.tier.ToString());Picture("reveal-frame",miniFrames[(int)card.tier]);Picture("reveal-art",cardArt[ci]);Text("reveal-result",r.before.IsZero?"New card discovered!":"Level "+Count(r.before)+" → "+Count(r.after));Text("reveal-effect",RedesignCardCopy.Effect(card,r.after));Text("reveal-continue",r.batch!=null&&r.batchIndex+1<r.batch.Length?"Next card":"Continue");break;
                 case "Prestige":var f=prestige??e.PreviewPrestige();Text("prestige-reward",f.Eligible?"+"+Count(f.Fame)+" Fame":Cash(s.eligibleEarnings)+" earned");Text("prestige-copy","Run target · "+Cash(f.CurrentTarget)+"\nProducts ×"+f.ResultingIncomeMultiplier+" · taps ×"+f.ResultingTapIncomeMultiplier+"\n"+Count(f.Credits)+" free Talent draws\nNext run target · "+Cash(f.NextTarget));Enable("Prestige","",driver.Session.CanMutate&&e.CanCommitPrestige(f));break;
                 case "Settings":Text("setting-music",s.music?"ON":"OFF");Text("setting-sound",s.sound?"ON":"OFF");Text("setting-motion",s.reducedMotion?"ON":"OFF");break;
-                case "Offline":Text("offline-amount",Cash(s.offline.amount));Text("offline-copy","Already added to your cash\nAway for "+TimeSpan.FromSeconds(s.offline.absence).TotalHours.ToString("0.0")+" hours\nCredited "+TimeSpan.FromSeconds(s.offline.creditedSeconds).TotalHours.ToString("0.0")+" hours at "+(s.offline.efficiency*100).ToString("0")+"% efficiency.");break;
+                case "Offline":RefreshOffline();break;
                 case "Statistics":Text("stats-run","Earned this run: "+Cash(s.eligibleEarnings)+"\nNormal sales: "+Cash(e.NormalIncome())+" /s\nManual taps: "+Count(s.manualTaps)+"\nTap payout: "+Cash(e.TapPayout())+"\nOwned upgrades: "+s.upgrades.Count+" / 1,000");Text("stats-lifetime","Prestiges: "+Count(s.completedPrestiges)+"\nFame: "+Count(s.fame)+"\nDiscovered upgrades: "+s.UniqueCount+" / 1,000\nTalent cards: "+s.cardLevels.Count(n=>!n.IsZero)+" / 28\nLifetime earnings: "+Cash(s.lifetimeEarnings));break;
                 case "Purchase":var packData=e.Data.Packs[pack];Text("purchase-name",packData.name);Text("purchase-amount",packData.kajuKatli+" Kaju Katli");Text("purchase-price","₹"+packData.designInr+" · example price");break;
                 case "BuyAll":Text("batch-copy",batch==null?"No quote available":batch.Ids.Count+" upgrades · "+Cash(batch.Cost)+"\n"+string.Join("\n",batch.Ids.Select(id=>e.Data.Upgrades.First(u=>u.id==id).name)));Enable("ConfirmBatch","",batch!=null&&e.CanCommitBuyAll(batch));break;

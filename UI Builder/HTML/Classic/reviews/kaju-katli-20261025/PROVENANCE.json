@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-25",
+  "tool": "Built-in image_gen.imagegen",
+  "status": "User selected variant 3 on 25 October 2026 by attaching its original generated PNG. Applied throughout current HTML currency presentation.",
+  "transparentBackground": true,
+  "variants": [
+    {
+      "id": 1,
+      "label": "Single silver diamond",
+      "file": "01-single-diamond.png",
+      "prompt": "Generate ONE isolated premium currency icon for the portrait Indian fireworks-stall incremental mobile game Rocket Raja, in its refined hand-painted gouache storybook / Ivory Bazaar style. It must represent KAJU KATLI, the Indian silver-leaf cashew sweet, and will replace the letters KK next to a numeric balance at just 24-28 px. VARIANT 1: ONE piece of authentic Indian kaju katli: an unmistakable wide rhombus-shaped cashew sweet, viewed from a gentle three-quarter top angle. A softly textured edible SILVER LEAF top, warm ivory cashew-colored thick beveled edges, a fine cobalt-blue contact contour to retain contrast on cream UI. Simple generous diamond silhouette, no plate, no gold coin, no extra sweets. Controlled palette: silver-white, cream, cobalt, restrained warm gold. Rich opaque gouache brush texture, hand-painted sculpted edges, soft restrained shading, visually consistent with festive Indian game UI, confident simple shape that remains legible at 24 px. Centered square composition with 12% clear margins, icon fills roughly 76% of canvas. GENUINELY TRANSPARENT background. No text, no numbers, no letters, no rupee symbols, no scenery, no label, no mockup, no drop shadow outside the object. Output exactly one icon."
+    },
+    {
+      "id": 2,
+      "label": "Stack of sweets",
+      "file": "02-sweet-stack.png",
+      "prompt": "Generate ONE isolated premium currency icon for the portrait Indian fireworks-stall incremental mobile game Rocket Raja, in its refined hand-painted gouache storybook / Ivory Bazaar style. It must represent KAJU KATLI, the Indian silver-leaf cashew sweet, and will replace the letters KK next to a numeric balance at just 24-28 px. VARIANT 2: A compact stack of THREE authentic Indian kaju katli sweets, each an unmistakable rhombus-shaped cashew confection with edible SILVER LEAF tops and warm ivory thick edges. The three overlap at slightly different heights in a tidy fan, top piece fully readable, tiny cobalt-blue contact contours for contrast on cream UI. No plate, no coin, no sparkles. Controlled palette: silver-white, cream, cobalt, restrained warm gold. Rich opaque gouache brush texture, hand-painted sculpted edges, soft restrained shading, visually consistent with festive Indian game UI, confident simple shape that remains legible at 24 px. Centered square composition with 12% clear margins, icon fills roughly 76% of canvas. GENUINELY TRANSPARENT background. No text, no numbers, no letters, no rupee symbols, no scenery, no label, no mockup, no drop shadow outside the object. Output exactly one icon."
+    },
+    {
+      "id": 3,
+      "label": "Festival token",
+      "file": "03-festival-token.png",
+      "prompt": "Generate ONE isolated premium currency icon for the portrait Indian fireworks-stall incremental mobile game Rocket Raja, in its refined hand-painted gouache storybook / Ivory Bazaar style. It must represent KAJU KATLI, the Indian silver-leaf cashew sweet, and will replace the letters KK next to a numeric balance at just 24-28 px. VARIANT 3: A single authentic SILVER LEAF diamond-shaped kaju katli cashew sweet set proudly inside a compact COBALT BLUE circular currency medallion with a thin WARM GOLD rim. The rhombus silver sweet remains the large central symbol, warm ivory bevels, minimal inset blue, crisp round silhouette, no ribbon, no crown, no coin text or markings. Controlled palette: silver-white, cream, cobalt, restrained warm gold. Rich opaque gouache brush texture, hand-painted sculpted edges, soft restrained shading, visually consistent with festive Indian game UI, confident simple shape that remains legible at 24 px. Centered square composition with 12% clear margins, icon fills roughly 76% of canvas. GENUINELY TRANSPARENT background. No text, no numbers, no letters, no rupee symbols, no scenery, no label, no mockup, no drop shadow outside the object. Output exactly one icon."
+    }
+  ],
+  "selectedVariant": 3
+}

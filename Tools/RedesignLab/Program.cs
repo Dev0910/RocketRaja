@@ -67,6 +67,8 @@ static partial class Program
         NumberChecks();
         RebalanceChecks(catalog);
         EngineChecks(catalog);
+        OfflineTimelineChecks(catalog);
+        NativeAdChecks(catalog).GetAwaiter().GetResult();
         AchievementChecks(catalog);
         CloudChecks(catalog).GetAwaiter().GetResult();
         DistributionChecks(catalog);
@@ -76,6 +78,7 @@ static partial class Program
         PremiumClientChecks(catalog).GetAwaiter().GetResult();
         PremiumWalletChecks(catalog);
         DevelopmentShopChecks(catalog);
+        ShopOfferChecks(catalog);
         UpgradeBrowserChecks(catalog);
         GoalChecks(catalog);
         LevelProjectionChecks(catalog);

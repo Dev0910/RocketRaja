@@ -1,0 +1,60 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Classic browser comment regression checks</title>
+<style>body{background:#10232b;color:#fff;font:15px system-ui}iframe{border:1px solid #ca9d44}pre{white-space:pre-wrap}</style>
+<h1>Classic browser comment regression checks</h1>
+<output id="status">Running</output><pre id="results"></pre><iframe title="Responsive preview"></iframe>
+<script>
+(async()=>{
+ const frame=document.querySelector('iframe'),results=[],errors=[];
+ const base=new URLSearchParams(location.search).get('base')||'http://127.0.0.1:4310/Classic/';
+ const check=(value,message)=>{if(!value)throw Error(message);};
+ const bounds=e=>e.getBoundingClientRect();
+ const inside=(a,b)=>a.left>=b.left-.5&&a.right<=b.right+.5&&a.top>=b.top-.5&&a.bottom<=b.bottom+.5;
+ const cases=[['Player','new','normal'],['Player','progressed','insufficient'],['Products','new','normal'],['Products','progressed','normal'],['Legacy','progressed','normal'],['Shop','progressed','normal'],['DrawReveal','progressed','normal'],['ProductDetail','new','normal'],['ProductDetail','progressed','normal'],['Upgrades','progressed','insufficient']];
+ for(const [width,height] of [[964,884],[360,540],[360,640],[390,844],[450,916]])for(const [route,state,condition] of cases){
+  const label=`${width}×${height} ${route}/${state}/${condition}`;
+  try{
+   frame.style.width=width+'px';frame.style.height=height+'px';
+   const ready=new Promise(resolve=>frame.onload=resolve);
+   frame.src=base+`?build=development&screen=${route}&state=${state}&condition=${condition}`;await ready;
+   const w=frame.contentWindow,d=w.document;
+   await d.fonts.ready;await Promise.all([...d.images].map(i=>i.decode().catch(()=>{})));
+   check(d.documentElement.scrollWidth<=width+1,'horizontal page overflow');
+   const gear=bounds(d.querySelector('#settings-button'));check(Math.abs(gear.width-gear.height)<1,'Settings is not square');
+   const ids=[...d.querySelectorAll('[id]')].map(e=>e.id);check(new Set(ids).size===ids.length,'duplicate IDs');
+   check([...d.images].every(i=>i.complete&&i.naturalWidth>0),'missing image');
+   for(const e of d.querySelectorAll('.upgrade-row')){
+    const icon=e.querySelector('.upgrade-icon'),copy=e.querySelector('.plain-detail'),button=e.querySelector('.row-action');
+    check(icon&&icon.complete&&icon.naturalWidth>0,'missing upgrade icon');
+    if(!e.getClientRects().length)continue;
+    check(bounds(icon).right<=bounds(copy).left+.5&&bounds(copy).right<=bounds(button).left+.5,'upgrade columns overlap');
+    check(inside(bounds(button),bounds(e)),'upgrade button outside row');
+   }
+   for(const e of d.querySelectorAll('.product-row'))if(e.getClientRects().length){
+    const button=e.querySelector('.row-action'),detail=e.querySelector('.details-link');
+    check(inside(bounds(button),bounds(e)),'stock button outside row');
+    check(bounds(detail).right<=bounds(button).left,'stock button overlaps details');
+   }
+   for(const panel of ['Player','Products']){
+    check(!d.querySelector('#panel-'+panel+'>.native-guide'),'large panel banner remains');
+    const info=d.querySelector('#panel-'+panel+' .panel-info');check(info&&info.nextElementSibling.classList.contains('collapse'),'header info misplaced');
+    if(info.getClientRects().length){check(bounds(info).width>=47.5&&bounds(info).height>=47.5,'info target too small');check(bounds(info).right<=bounds(info.nextElementSibling).left+.5,'info overlaps collapse');}
+   }
+   for(const panel of ['Legacy','Shop'])check(!d.querySelector('#panel-'+panel+'>.native-guide'),'gift banner remains');
+   check(!/[()]/.test(d.querySelector('.achievement-tab').textContent),'achievement parentheses remain');
+   if(route==='DrawReveal')check(!d.querySelector('[data-screen=DrawReveal] .native-guide'),'duplicate banner remains');
+   if(route==='ProductDetail'){
+    const root=d.querySelector('[data-screen=ProductDetail]'),title=root.querySelector('.modal-head h2'),info=root.querySelector('.popup-info'),close=root.querySelector('.close');
+    check(!root.querySelector('.native-guide'),'product banner remains');check(w.getComputedStyle(title).color==='rgb(22, 75, 128)','product title contrast');
+    check(info&&bounds(info).width>=48&&bounds(info).height>=48,'product info missing');
+    check(bounds(info).right<=bounds(title).left&&bounds(title).right<=bounds(close).left,'title and header controls overlap');
+   }
+   results.push({label,status:'PASS'});
+  }catch(error){errors.push({label,error:String(error.message||error)});results.push({label,status:'FAIL'});}
+  document.querySelector('#results').textContent=JSON.stringify({results,errors},null,2);
+ }
+ document.querySelector('#status').textContent=errors.length?`FAIL ${errors.length} / ${results.length}`:`PASS ${results.length} cases`;
+ document.title=document.querySelector('#status').textContent;
+})().catch(error=>{document.querySelector('#status').textContent='FAIL '+error;});
+</script>

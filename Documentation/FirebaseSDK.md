@@ -31,6 +31,8 @@ After removing a duplicate installation, refresh the asset database and force a 
 
 ## Google login signing certificates
 
+Rewarded-ad restoration, 26 October 2026: Google Mobile Ads 11.5.0 is now embedded under `Packages/com.google.ads.mobile`, using the existing embedded EDM4U 1.2.189. This supersedes the ad-removal status above; Firebase modules and their collection configuration remain unchanged. See [rewarded-ad integration](Implementation/RewardedAds/README.md).
+
 The Android OAuth registration must match the certificate of the APK installed on the device, including release builds. On 29 September 2026, the POCO X2 release APK showed the account chooser but returned to Welcome: Google Play services reported that the Android application was not registered for OAuth 2.0. Only the debug certificate had been registered.
 
 The existing Firebase Android app (`com.diwali.fireworkstycoon.dev`) now also has these release fingerprints, verified from the installed APK with `apksigner verify --print-certs`:

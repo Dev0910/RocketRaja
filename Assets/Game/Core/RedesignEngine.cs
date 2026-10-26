@@ -168,7 +168,7 @@ namespace RocketRaja.Core
             if (structural) next.commandRevision += (Natural)1;
             next.savedAt = next.now;
             var effects = new RunEffects(Data, next);
-            next.departureRate = NormalIncome(next, effects);
+            next.departureRate = NormalIncome(next, effects) / ShopProfitMultiplier(next);
             if (!next.Valid(Data)) throw new InvalidOperationException("Command produced invalid state");
             if (!MutationAllowed() || session != SessionKey) return false;
             persist(next); // Exceptions intentionally leave State and its caches unchanged.
@@ -176,7 +176,7 @@ namespace RocketRaja.Core
             return true;
         }
         bool Same(string qOwner, string qSession, string qRun, string qCommand) => MutationAllowed() && qOwner == owner && qSession == SessionKey && qRun == State.runId && qCommand == State.commandRevision.digits;
-        static Amount Global(RedesignState s, RunEffects f) => f.global * ProgressionNumbers.FameMultiplier(s.fame) * ProgressionNumbers.CardMultiplier(CardEffect.GlobalProfit, s.cardLevels[26]);
+        static Amount Global(RedesignState s, RunEffects f) => f.global * ProgressionNumbers.FameMultiplier(s.fame) * ProgressionNumbers.CardMultiplier(CardEffect.GlobalProfit, s.cardLevels[26]) * ShopProfitMultiplier(s);
         Amount ProductIncome(int p, RedesignState s, RunEffects f) => new Amount(Data.Products[p].income) * s.products[p] * EconomyBalance.MilestoneMultiplier(s.products[p]) * EconomyBalance.SynergyMultiplier(s.products.Min()) * f.profit[p] * ProgressionNumbers.CardMultiplier(CardEffect.ProductProfit, s.cardLevels[p]) * Global(s, f);
         Amount NormalIncome(RedesignState s, RunEffects f) { Amount sum = 0; for (int p = 0; p < 8; p++) sum += ProductIncome(p, s, f); return sum; }
         public Amount ProductIncome(int product) => ProductIncome(product, State, Effects);
@@ -331,43 +331,55 @@ namespace RocketRaja.Core
             // Ownership, levels and cards cannot change within this accrual call.
             // Reuse their rates across the independent Helping Hands events;
             // temporary Rush multipliers still change at their exact boundaries.
-            Amount normalRate = NormalIncome(), handsBase = BaseTapPayout(true, State, Effects);
+            Amount normalRate = NormalIncome() / ShopProfitMultiplier(State), handsBase = BaseTapPayout(true, State, Effects) / ShopProfitMultiplier(State);
             // Split exactly at temporary effect expiries and independent Helping Hands events.
             while (State.now < end)
             {
                 double next = end;
+                if (State.shopProfitUntil > State.now) next = Math.Min(next, State.shopProfitUntil);
                 for (int i = 0; i < 2; i++) if (State.activeUntil[i] > State.now) next = Math.Min(next, State.activeUntil[i]);
                 bool hands = SkillOwned(1) && State.activeUntil[1] > State.now;
                 if (hands) next = Math.Min(next, Math.Max(State.now, State.nextHandsAt[1]));
                 double dt = next - State.now;
                 double rush = State.activeUntil[0] > State.now && SkillOwned(0) ? RedesignCatalog.SkillPower[0][Effects.skillPower[0] - 1] : 1;
-                Earn(State, normalRate * rush * dt); State.now = next; State.runSeconds += dt;
+                Earn(State, normalRate * rush * ShopProfitMultiplier(State) * dt); State.now = next; State.runSeconds += dt;
                 double epsilon = Math.Max(1e-9, Math.Abs(State.now) * 1e-15);
                 if (hands && State.nextHandsAt[1] <= State.now + epsilon && State.now <= State.activeUntil[1] + epsilon)
                 {
-                    Earn(State, handsBase * (State.activeUntil[0] > State.now ? 1.25 : 1));
+                    Earn(State, handsBase * ShopProfitMultiplier(State) * (State.activeUntil[0] > State.now ? 1.25 : 1));
                     State.nextHandsAt[1] = State.now + 1 / RedesignCatalog.SkillPower[1][Effects.skillPower[1] - 1];
                 }
             }
             State.revision += (Natural)1;
         }
         public bool Save() => Commit(_ => true, false);
-        public bool ResolveOffline(double utc)
+        public bool ResolveOffline(double utc, bool preservePendingReceipt = false)
         {
             if (double.IsNaN(utc) || double.IsInfinity(utc) || utc < 0 || utc >= 1e12) throw new ArgumentOutOfRangeException(nameof(utc));
             if (utc <= Math.Max(State.now, State.savedAt)) return false;
             return Commit(s => {
                 double absence = utc - Math.Max(s.now, s.savedAt);
                 double efficiency = ProgressionNumbers.CardFactor(CardEffect.OfflineEfficiency, s.cardLevels[24]);
-                double credited = Math.Min(absence, 3600 * ProgressionNumbers.CardFactor(CardEffect.OfflineHours, s.cardLevels[25]));
-                Amount amount = s.departureRate * efficiency * credited;
+                double cap = 3600 * ProgressionNumbers.CardFactor(CardEffect.OfflineHours, s.cardLevels[25]);
+                double credited = Math.Min(absence, cap);
+                double boostedSeconds = Math.Min(credited, Math.Max(0, s.shopProfitUntil - Math.Max(s.now, s.savedAt)));
+                Amount amount = s.departureRate * efficiency * (credited + boostedSeconds);
                 Earn(s, amount); s.now = utc; s.savedAt = utc;
                 s.activeUntil = new double[3]; s.nextHandsAt = new double[3];
-                s.offline = new OfflineReceipt { id = Guid.NewGuid().ToString("N"), absence = absence, creditedSeconds = credited, efficiency = efficiency, amount = amount, pending = amount > Amount.Zero };
+                if (!preservePendingReceipt || !s.offline.pending)
+                    s.offline = new OfflineReceipt { id = Guid.NewGuid().ToString("N"), absence = absence, creditedSeconds = credited, capSeconds = cap, efficiency = efficiency, amount = amount, pending = amount > Amount.Zero };
                 return true;
             }, false);
         }
         public bool DismissOffline() => State.offline.pending && Commit(s => { s.offline.pending = false; return true; }, false);
+        // Called only after the rewarded-ad provider reports completion for this still-open receipt.
+        // The base reward was already saved by ResolveOffline; add exactly one extra base amount.
+        public bool RewardOfflineAd(string receiptId)
+        {
+            if (string.IsNullOrEmpty(receiptId) || State.offline.id != receiptId ||
+                !State.offline.pending || State.offline.adRewarded || State.offline.amount <= Amount.Zero) return false;
+            return Commit(s => { Earn(s, s.offline.amount); s.offline.adRewarded = true; return true; }, false);
+        }
         public FameQuote PreviewPrestige()
         {
             ProgressionNumbers.PrestigeRewards(State.eligibleEarnings, State.target, State.completedPrestiges, State.UniqueCount, out var fame, out var credits);
@@ -427,7 +439,7 @@ namespace RocketRaja.Core
             return Commit(s => {
                 if (quote.UseCredit) s.freeCredits -= (Natural)1; else s.kajuKatli -= (Natural)100;
                 Natural before = s.cardLevels[card]; s.cardLevels[card] += (Natural)1;
-                if (!quote.UseCredit && s.secondPrestigeGift && s.HasGuestProvenance && !s.HasDevelopmentShop) { s.guestWallet.giftDrawCardId = Data.Cards[card].id; s.guestWallet.giftDrawOperationId = quote.OperationId; }
+                if (!quote.UseCredit && s.secondPrestigeGift && s.HasGuestProvenance && !s.HasDevelopmentShop && !s.shopGiftSpent) { s.guestWallet.giftDrawCardId = Data.Cards[card].id; s.guestWallet.giftDrawOperationId = quote.OperationId; }
                 s.reveal = new DrawReveal { operationId = quote.OperationId, cardId = Data.Cards[card].id, payment = quote.UseCredit ? "credit" : "kk", before = before, after = s.cardLevels[card], pending = true };
                 return true;
             });

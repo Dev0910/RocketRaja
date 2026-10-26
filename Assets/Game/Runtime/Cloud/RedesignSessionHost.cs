@@ -34,6 +34,7 @@ namespace RocketRaja.Cloud
         public string ProfileRoot { get; private set; }
         public bool AccountMenuRequested { get; set; }
         public bool Ready { get; private set; }
+        public bool IsFixture => fixture;
         public bool GoogleSupported => fixture || AccountFlowAvailable && google && google.Supported;
         public string Mode => fixture ? fixtureMode : LocalProfiles.Mode;
         void Awake()

@@ -27,12 +27,12 @@ namespace RocketRaja.Cloud
         void RedesignWelcome()
         {
             bool legacy = redesignHost.InspectGuest().status == RedesignLoadStatus.LegacyTransitionRequired;
-            Show("Welcome to your stall", "Continue your game on this device or choose your Google progress.",
+            Show("Welcome to your stall", "Save your progress with Google and continue on another device.",
                 redesignHost.GoogleSupported ? "Sign in with Google" : "Google sign-in unavailable",
                 redesignHost.GoogleSupported ? () => Run(() => RedesignGoogle(true)) : (Action)null,
                 "Play as guest", () => Run(() => RedesignGuest(false)),
                 legacy ? "Start a separate Classic game…" : null, legacy ? ConfirmSeparateClassicGuest : (Action)null);
-            hint.text = "Guest and Google progress stay separate.";
+            hint.text = "You can connect Google later in Settings.";
             googleMark.SetActive(redesignHost.GoogleSupported);
             primaryLabel.margin = redesignHost.GoogleSupported ? new Vector4(85, 0, 0, 0) : Vector4.zero;
         }

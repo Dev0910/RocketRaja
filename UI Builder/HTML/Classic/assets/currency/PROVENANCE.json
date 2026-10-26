@@ -1,0 +1,11 @@
+{
+  "selectedOn": "2026-10-25",
+  "selection": "User explicitly attached option 3 and requested its use everywhere for KK",
+  "file": "kaju-katli.png",
+  "source": "exec-0151ff95-b7d4-48d5-8064-2ea6f747f385.png",
+  "reviewVariant": "reviews/kaju-katli-20261025/03-festival-token.png",
+  "sha256": "3a0ccba4645843911f19b80eb6256969be91adbf53aaa56d51cf3ab86b3b91bc",
+  "byteIdentical": true,
+  "tool": "Built-in image_gen.imagegen (previous generation; selected file reused unchanged)",
+  "promptReference": "../../reviews/kaju-katli-20261025/PROVENANCE.json, variant 3"
+}

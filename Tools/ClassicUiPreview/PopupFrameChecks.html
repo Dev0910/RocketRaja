@@ -1,0 +1,41 @@
+<!doctype html><meta charset="utf-8"><title>Popup single-frame checks</title>
+<style>body{font:15px system-ui;background:#13313b;color:#fff4db}pre{white-space:pre-wrap}iframe{border:1px solid gold}</style>
+<h1>Popup single-frame checks</h1><output id="status">Running</output><pre id="results"></pre><iframe title="Popup preview"></iframe>
+<script>
+(async()=>{
+ const frame=document.querySelector('iframe'),results=[],errors=[];
+ const assert=(value,message)=>{if(!value)throw Error(message);};
+ const fullRoutes=['Settings','ProductDetail:0','Upgrades','BuyAll','TapTraining','Skills','SkillDetail:0','Achievements','DrawReveal','Prestige','Offline','Statistics','Naming','Privacy','Welcome','Account','AccountCompare','Promote','SignOut','Handoff','SaveRecovery','RecoveryConfirm','RecoveryExit','Purchase','Appearance','Help','Odds','DeveloperReset','CardDetail:0','CardDetail:16','CardDetail:27','StandaloneAchievements'];
+ const quick=new URLSearchParams(location.search).has('quick');
+ const onlyRoute=new URLSearchParams(location.search).get('route');
+ const routes=onlyRoute?[onlyRoute]:quick?['Settings','ProductDetail:0','Welcome','Achievements','StandaloneAchievements']:fullRoutes;
+ for(const [width,height] of (quick?[[964,884],[360,540]]:[[964,884],[360,540],[390,844]]))for(const route of routes){
+  const label=`${width}×${height} ${route}`;
+  try{
+   frame.style.width=width+'px';frame.style.height=height+'px';const ready=new Promise(resolve=>frame.onload=resolve);
+   frame.src=route==='StandaloneAchievements'?location.origin+'/Achievements/':location.origin+'/Classic/?build=development&state=progressed&screen='+encodeURIComponent(route);await ready;
+   const w=frame.contentWindow,d=w.document;await d.fonts.ready;
+   const layer=d.querySelector('.modal-layer:not([hidden])'),card=layer?.querySelector('.modal-card');assert(card,'Popup did not open');
+   const s=w.getComputedStyle(card),p=w.getComputedStyle(card,'::before'),r=card.getBoundingClientRect();
+   assert(parseFloat(s.borderTopWidth)===0&&parseFloat(s.borderRightWidth)===0,'Outer CSS border remains');
+   assert(s.borderImageSource==='none','Outer CSS border image remains');
+   assert(d.documentElement.scrollWidth<=width+1,'Horizontal page overflow');
+   assert(r.left>=-.5&&r.right<=width+.5&&r.top>=-.5&&r.bottom<=height+.5,'Popup escapes viewport');
+   if(layer.classList.contains('bazaar-dialog')){
+    assert(p.top==='-4px'&&p.right==='-4px'&&p.bottom==='-4px'&&p.left==='-4px'&&s.overflowX==='hidden','Source margin is not clipped at the popup edge');
+    assert(p.borderImageSource.includes('/popup-refresh/frame.png'),'Missing retained painted frame');
+    assert(!s.boxShadow.includes('inset')&&!s.boxShadow.includes(', rgb('),'Duplicate outline shadow remains');
+   }
+   if(route.startsWith('CardDetail')){
+    assert(p.backgroundImage.includes('/cards/full-'),'Missing retained rarity frame');
+    const extra=w.getComputedStyle(card.querySelector('.full-talent-card'),'::after');assert(extra.content==='none'||extra.content==='normal'||extra.display==='none','Extra card overlay remains');
+   }
+   const close=card.querySelector(':scope>.close');if(close){const c=close.getBoundingClientRect();assert(c.left>=r.left-.5&&c.right<=r.right+.5&&c.top>=r.top-.5&&c.bottom<=r.bottom+.5,'Close control outside frame');assert(c.width>=47.5&&c.height>=47.5,'Close target too small');}
+   const body=card.querySelector('.modal-body'),b=body.getBoundingClientRect();assert(b.left>=r.left-.5&&b.right<=r.right+.5,'Body outside frame');
+   results.push({label,status:'PASS'});
+  }catch(error){errors.push({label,error:String(error.message||error)});results.push({label,status:'FAIL'});}
+  document.querySelector('#results').textContent=JSON.stringify({results,errors},null,2);
+ }
+ document.querySelector('#status').textContent=errors.length?`FAIL ${errors.length}/${results.length}`:`PASS ${results.length} cases`;
+})().catch(e=>document.querySelector('#status').textContent='FAIL '+e);
+</script>

@@ -1,0 +1,137 @@
+PASS All UI components exist in the saved scene before startup
+PASS Settings uses a square 48-unit target
+PASS All twelve effect icons have durable sprite references
+PASS All 1,000 upgrades map to an authored effect icon
+PASS Inline currency uses Editor-preplaced material slots
+PASS Player has no large guidance banner
+PASS Achievement shortcut never shows a count
+PASS Products has no large guidance banner
+PASS Legacy has no large guidance banner
+PASS Shop has no large guidance banner
+PASS Player information target is 48 units
+PASS Player information opens the existing topic
+PASS Player information remains available after learning
+PASS Products information target is 48 units
+PASS Products information opens the existing topic
+PASS Products information remains available after learning
+PASS ProductDetail:0 information target is 48 units
+PASS ProductDetail:0 information opens the existing topic
+PASS ProductDetail:0 information remains available after learning
+PASS Upgrade icon/copy/button columns stay separate: PP-PHU-01
+PASS Upgrade artwork follows its actual effect: PP-PHU-01
+PASS Upgrade icon/copy/button columns stay separate: PP-ANA-01
+PASS Upgrade artwork follows its actual effect: PP-ANA-01
+PASS Upgrade icon/copy/button columns stay separate: TP-001
+PASS Upgrade artwork follows its actual effect: TP-001
+PASS Upgrade icon/copy/button columns stay separate: GP-01
+PASS Upgrade artwork follows its actual effect: GP-01
+PASS Upgrade icon/copy/button columns stay separate: PC-PHU-01
+PASS Upgrade artwork follows its actual effect: PC-PHU-01
+PASS Upgrade icon/copy/button columns stay separate: PP-CHA-01
+PASS Upgrade artwork follows its actual effect: PP-CHA-01
+PASS Upgrade icon/copy/button columns stay separate: PP-ROC-01
+PASS Upgrade artwork follows its actual effect: PP-ROC-01
+PASS Upgrade icon/copy/button columns stay separate: TP-002
+PASS Upgrade artwork follows its actual effect: TP-002
+PASS Upgrade icon/copy/button columns stay separate: UC-01
+PASS Upgrade artwork follows its actual effect: UC-01
+PASS Upgrade icon/copy/button columns stay separate: PC-ANA-01
+PASS Upgrade artwork follows its actual effect: PC-ANA-01
+PASS Upgrade icon/copy/button columns stay separate: PP-PHU-01
+PASS Upgrade artwork follows its actual effect: PP-PHU-01
+PASS Upgrade icon/copy/button columns stay separate: PP-ANA-01
+PASS Upgrade artwork follows its actual effect: PP-ANA-01
+PASS Upgrade icon/copy/button columns stay separate: TP-001
+PASS Upgrade artwork follows its actual effect: TP-001
+PASS Upgrade icon/copy/button columns stay separate: GP-01
+PASS Upgrade artwork follows its actual effect: GP-01
+PASS Upgrade icon/copy/button columns stay separate: PC-PHU-01
+PASS Upgrade artwork follows its actual effect: PC-PHU-01
+PASS Upgrade icon/copy/button columns stay separate: PP-CHA-01
+PASS Upgrade artwork follows its actual effect: PP-CHA-01
+PASS Upgrade icon/copy/button columns stay separate: PP-ROC-01
+PASS Upgrade artwork follows its actual effect: PP-ROC-01
+PASS Upgrade icon/copy/button columns stay separate: TP-002
+PASS Upgrade artwork follows its actual effect: TP-002
+PASS Upgrade icon/copy/button columns stay separate: UC-01
+PASS Upgrade artwork follows its actual effect: UC-01
+PASS Upgrade icon/copy/button columns stay separate: PC-ANA-01
+PASS Upgrade artwork follows its actual effect: PC-ANA-01
+PASS Upgrade icon/copy/button columns stay separate: PP-SMC-01
+PASS Upgrade artwork follows its actual effect: PP-SMC-01
+PASS Upgrade icon/copy/button columns stay separate: PP-STR-01
+PASS Upgrade artwork follows its actual effect: PP-STR-01
+PASS Upgrade icon/copy/button columns stay separate: PP-AER-01
+PASS Upgrade artwork follows its actual effect: PP-AER-01
+PASS Upgrade icon/copy/button columns stay separate: PP-BOX-01
+PASS Upgrade artwork follows its actual effect: PP-BOX-01
+PASS Upgrade icon/copy/button columns stay separate: TC-01
+PASS Upgrade artwork follows its actual effect: TC-01
+PASS Upgrade icon/copy/button columns stay separate: PP-PHU-02
+PASS Upgrade artwork follows its actual effect: PP-PHU-02
+PASS Upgrade icon/copy/button columns stay separate: PP-ANA-02
+PASS Upgrade artwork follows its actual effect: PP-ANA-02
+PASS Upgrade icon/copy/button columns stay separate: PP-CHA-02
+PASS Upgrade artwork follows its actual effect: PP-CHA-02
+PASS Upgrade icon/copy/button columns stay separate: PP-ROC-02
+PASS Upgrade artwork follows its actual effect: PP-ROC-02
+PASS Upgrade icon/copy/button columns stay separate: PC-CHA-01
+PASS Upgrade artwork follows its actual effect: PC-CHA-01
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Product stock/upgrade action stays within its own column
+PASS Legacy balance displays selected currency token beside the amount
+PASS Every information circle has an imported sprite
+PASS Paid draw cost uses selected token
+PASS Seeded achievement reward is claimable
+PASS Live claim updates wallet and retains currency token
+PASS Settings has a single clipped popup shell
+PASS ProductDetail:0 has a single clipped popup shell
+PASS Product title has cobalt contrast
+PASS Skills has a single clipped popup shell
+PASS SkillDetail:0 has a single clipped popup shell
+PASS CardDetail:0 has a single clipped popup shell
+PASS CardDetail:16 has a single clipped popup shell
+PASS CardDetail:26 has a single clipped popup shell
+PASS Odds has a single clipped popup shell
+PASS Prestige has a single clipped popup shell
+PASS Help has a single clipped popup shell
+PASS Purchase has a single clipped popup shell
+PASS Upgrades has a single clipped popup shell
+PASS Appearance has a single clipped popup shell
+PASS Statistics has a single clipped popup shell
+PASS All three settings use saved switch controls
+PASS Settings switch has an intermediate sliding pose
+PASS Music switch settles to saved OFF state
+PASS Reduced motion settles switch immediately
+PASS Settings values survive save reload
+PASS Draw reveal has no duplicate-card banner
+PASS Responsive popup opens at (360, 540): Settings
+PASS Responsive popup opens at (360, 540): ProductDetail:0
+PASS Responsive popup opens at (360, 540): Skills
+PASS Responsive popup opens at (360, 540): SkillDetail:0
+PASS Responsive popup opens at (360, 540): Achievements
+PASS Responsive popup opens at (360, 640): Settings
+PASS Responsive popup opens at (360, 640): ProductDetail:0
+PASS Responsive popup opens at (360, 640): Skills
+PASS Responsive popup opens at (360, 640): SkillDetail:0
+PASS Responsive popup opens at (360, 640): Achievements
+PASS Responsive popup opens at (450, 916): Settings
+PASS Responsive popup opens at (450, 916): ProductDetail:0
+PASS Responsive popup opens at (450, 916): Skills
+PASS Responsive popup opens at (450, 916): SkillDetail:0
+PASS Responsive popup opens at (450, 916): Achievements
+PASS Shared popup stays within simulated notch and bottom insets
+PASS Development reset retains the current fresh economy
+PASS Fresh stock-shelf CTA is in place and disabled without cash
+PASS Earned opening cash enables the existing stock-shelf action
+PASS The first product purchase still commits once and returns Home
+PASS All UI identities remain stable through navigation, currency rendering, draws and settings
+PASS No runtime errors during revised production UI verification
+Disposable profile only: C:\Users\Dev\AppData\Local\Temp\ClassicRevision-ab6350ec70844716b6e4af5e7d4a296e
+PASS: 135 Classic revision checks

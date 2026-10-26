@@ -1,0 +1,205 @@
+{
+  "results": [
+    {
+      "label": "964×884 Player/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Player/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Products/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Products/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Legacy/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Shop/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 DrawReveal/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 ProductDetail/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 ProductDetail/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "964×884 Upgrades/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Player/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Player/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Products/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Products/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Legacy/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Shop/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 DrawReveal/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 ProductDetail/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 ProductDetail/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×540 Upgrades/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Player/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Player/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Products/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Products/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Legacy/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Shop/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 DrawReveal/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 ProductDetail/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 ProductDetail/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "360×640 Upgrades/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Player/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Player/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Products/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Products/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Legacy/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Shop/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 DrawReveal/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 ProductDetail/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 ProductDetail/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "390×844 Upgrades/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Player/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Player/progressed/insufficient",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Products/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Products/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Legacy/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Shop/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 DrawReveal/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 ProductDetail/new/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 ProductDetail/progressed/normal",
+      "status": "PASS"
+    },
+    {
+      "label": "450×916 Upgrades/progressed/insufficient",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

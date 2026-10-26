@@ -1,0 +1,15 @@
+Final rewarded test APK
+Bytes: 119730250
+SHA256: 355845E529216E352DE1507DD5886E2B7ADA33FC378F9DB7078C2A0D250037FE
+package: name='com.diwali.fireworkstycoon.dev' versionCode='5' versionName='0.1.5' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+install-location:'preferExternal'
+minSdkVersion:'25'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+A: http://schemas.android.com/apk/res/android:name(0x01010003)="com.google.android.gms.ads.APPLICATION_ID" (Raw: "com.google.android.gms.ads.APPLICATION_ID")
+A: http://schemas.android.com/apk/res/android:value(0x01010024)="ca-app-pub-3595621361914402~9466422249" (Raw: "ca-app-pub-3595621361914402~9466422249")
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: ca2a39cab8efd3a3607102d02cd01b078af6e01ac4032d1524aa95ee2ad9007f
+Signer #1 certificate SHA-1 digest: 77e713207402051368ddb3143af3a954311d218d
+Signer #1 certificate MD5 digest: c4f7a60ccc76860360c92b9d7bb4e0f4

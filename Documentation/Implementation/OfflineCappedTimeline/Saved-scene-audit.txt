@@ -1,0 +1,1 @@
+PASS: saved Main reload, all 16 offline references, inactive legacy/new entry roots, authored 719-unit preferred height, responsive Edit Mode height 719, annulus=Assets/Game/ClassicUI/Offline/efficiency-ring.png. No shared scaler change.

@@ -1,0 +1,10 @@
+{
+  "id": 4,
+  "label": "Faceted diamond",
+  "file": "04-diamond-gem.png",
+  "prompt": "Create a revised premium currency icon for Rocket Raja. Use the supplied icon only as a reference for its silver, ivory and cobalt palette and hand-painted game-art finish. Change the subject into ONE unmistakable FACETED DIAMOND GEMSTONE, not a food sweet: classic diamond silhouette with a broad clipped trapezoid crown at the top, angled shoulders, geometric triangular facets, tapering to one sharp point at the bottom. Front three-quarter view but strong symmetric diamond silhouette. Silver-white and very pale icy-blue facets, deeper cobalt-blue facet edges for clarity on a cream game header, extremely restrained fine warm-gold rim accents. Gouache storybook mobile game illustration, beautiful confident broad brush planes, polished but painted rather than photorealistic. No plate, no circular coin, no sweet or cake texture, no letters, no numbers, no text, no background, no surrounding particles. Centered square image, single gem occupying 75% of canvas, generous transparent margin. Genuinely transparent background. It must read clearly as a diamond gem at 24-28 pixels next to a numeric currency balance.",
+  "tool": "Built-in image_gen.imagegen",
+  "mode": "Reference-guided edit",
+  "reference": "01-single-diamond.png",
+  "status": "Diamond-style revision for review; user selection pending"
+}
