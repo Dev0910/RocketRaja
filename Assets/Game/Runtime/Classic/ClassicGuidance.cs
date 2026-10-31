@@ -36,6 +36,7 @@ namespace RocketRaja.Classic
         }
         string Next(string route)
         {
+            if (ui.Engine.TutorialActive) return null;
             var e = ui.Engine; var s = e.State;
             string Unread(string id) => s.learnedTopics.Contains(id) ? null : id;
             switch (route)

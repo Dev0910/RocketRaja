@@ -13,7 +13,7 @@ namespace RocketRaja.Classic
         public Sprite coinSprite,starSprite;
         public CanvasGroup[] skillGlows;
         public bool reduced, dialogOpen;
-        sealed class Track { public RectTransform target; public CanvasGroup group; public Vector3 scale; public Vector2 position; public float start,duration,delay,distance,alpha=1,fromScale=1,fromAlpha; public bool pulse,exit; public Action done; }
+        sealed class Track { public RectTransform target; public CanvasGroup group; public Vector3 scale; public Vector2 position; public float start,duration,delay,distance,alpha=1,fromScale=1,fromAlpha; public bool pulse,exit,stock; public Action done; }
         readonly List<Track> tracks=new List<Track>();
         Vector2[] moteOrigins,particleOrigin,particleVelocity;float[] particleTime;Color[] particleColors;
         bool[] coinFlight; Vector2[] particleSizes; Sprite sparkSprite;float[] particleDuration;int[] particleOrder;
@@ -49,6 +49,12 @@ namespace RocketRaja.Classic
         {
             if(!target||reduced)return;Cancel(target);GetPose(target);tracks.Add(new Track{target=target,scale=target.localScale,position=target.anchoredPosition,start=Time.unscaledTime,duration=.38f,pulse=true});
         }
+        public bool StockAnimating=>tracks.Exists(t=>t.stock);
+        public void Stock(RectTransform target)
+        {
+            if(!target||reduced)return;Cancel(target);GetPose(target);
+            tracks.Add(new Track{target=target,scale=target.localScale,position=target.anchoredPosition,start=Time.unscaledTime,duration=.7f,stock=true});
+        }
         public void Success(RectTransform target,int tier=0,int count=12){Pulse(target);Burst(target,tier,count);}
         public void Fill(Image image,float value)
         {
@@ -69,16 +75,16 @@ namespace RocketRaja.Classic
                 particleTime[i]=Time.unscaledTime+emitted*.055f;particleDuration[i]=.65f;particleOrder[i]=emitted;particles[i].sprite=coinSprite;particles[i].rectTransform.sizeDelta=new Vector2(11,11);particles[i].rectTransform.anchoredPosition=particleOrigin[i];particles[i].color=Color.clear;particles[i].gameObject.SetActive(true);emitted++;
             }
         }
-        public void Burst(RectTransform target,int tier=0,int count=12)
+        public void Burst(RectTransform target,int tier=0,int count=12,float radiusScale=1)
         {
-            if(target)Burst(target.position,tier,count);
+            if(target)Burst(target.position,tier,count,radiusScale);
         }
-        public void Burst(Vector3 origin,int tier=0,int count=12)
+        public void Burst(Vector3 origin,int tier=0,int count=12,float radiusScale=1)
         {
             if(reduced)return;var center=(Vector2)effectRoot.InverseTransformPoint(origin);int emitted=0;
             for(int i=0;i<particles.Length&&emitted<count;i++)if(!particles[i].gameObject.activeSelf)
             {
-                float angle=emitted*6.283185f/count,range=(count==7?28:count==12?42:76)+emitted%4*5;particleOrigin[i]=center;particleVelocity[i]=new Vector2(Mathf.Cos(angle),-Mathf.Sin(angle))*range;
+                float angle=emitted*6.283185f/count,range=((count==7?28:count==12?42:76)+emitted%4*5)*radiusScale;particleOrigin[i]=center;particleVelocity[i]=new Vector2(Mathf.Cos(angle),-Mathf.Sin(angle))*range;
                 particleTime[i]=Time.unscaledTime;particleDuration[i]=.65f+emitted%4*.065f;particleOrder[i]=emitted;var palette=Palettes[Mathf.Clamp(tier,0,2)];particleColors[i]=palette[emitted%palette.Length];
                 coinFlight[i]=false;bool star=emitted%3==0;particles[i].sprite=star&&starSprite?starSprite:sparkSprite;particles[i].rectTransform.sizeDelta=star?new Vector2(10,10):new Vector2(5,7);
                 particles[i].color=Color.clear;particles[i].gameObject.SetActive(true);emitted++;
@@ -114,6 +120,7 @@ namespace RocketRaja.Classic
                 var t=tracks[i];if(!t.target||!t.target.gameObject.activeInHierarchy){Restore(t);tracks.RemoveAt(i);continue;}
                 float raw=(time-t.start-t.delay)/t.duration,p=Mathf.Clamp01(raw),ease=Ease(p);var pose=GetPose(t.target);
                 pose.factor*=t.pulse?(ease<.35f?Mathf.Lerp(1,1.07f,ease/.35f):Mathf.Lerp(1.07f,1,(ease-.35f)/.65f)):t.exit?1-.02f*ease:Mathf.Lerp(t.fromScale,1,ease);
+                if(t.stock){pose.factor*=p<.65f?Mathf.Lerp(.35f,1.12f,Ease(p/.65f)):Mathf.Lerp(1.12f,1,Ease((p-.65f)/.35f));pose.offset+=Vector2.up*(p<.65f?Mathf.Lerp(-15,3,Ease(p/.65f)):Mathf.Lerp(3,0,Ease((p-.65f)/.35f)));}
                 if(!t.pulse)pose.offset+=Vector2.down*t.distance*(t.exit?ease:1-ease);
                 if(t.group&&!t.pulse)t.group.alpha=t.alpha*(t.exit?1-ease:Mathf.Lerp(t.fromAlpha,1,ease));
                 if(raw>=1){Restore(t);tracks.RemoveAt(i);t.done?.Invoke();}

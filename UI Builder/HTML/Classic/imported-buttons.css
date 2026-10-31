@@ -1,0 +1,24 @@
+/* 31 October 2026: same PNG faces and sliced borders as the saved Unity buttons. */
+html body #app.app :is(.action,.close,.settings,.settings-link,.native-guide,.ledger-claim),
+html body.tutorial-preview .tutorial-dialog .modal-actions button {
+ --imported-face:url('assets/buttons/folk-blue.png');
+ border:0 solid transparent!important;
+ border-image:var(--imported-face) 105 92 fill / 6.5625px 5.75px / 0 stretch!important;
+ border-radius:0!important;background:transparent!important;box-shadow:none!important;
+ color:#fff4db!important;filter:none;text-shadow:none;
+}
+html body #app.app :is(.action.secondary,.settings-link,.native-guide),
+html body.tutorial-preview .tutorial-dialog #modal-cancel {
+ --imported-face:url('assets/buttons/folk-ivory.png');color:#164b80!important;
+}
+html body #app.app .action.maroon {--imported-face:url('assets/buttons/folk-red.png')}
+html body #app.app :is(.action,.settings-link,.ledger-claim):disabled,
+html body.tutorial-preview .tutorial-dialog .modal-actions button:disabled {
+ --imported-face:url('assets/buttons/folk-sand.png');color:#514b3c!important;opacity:1;
+}
+html body #app.app :is(.action,.close,.settings,.settings-link,.native-guide):enabled:hover {filter:brightness(1.06)}
+html body #app.app .close {display:grid;place-items:center;padding:7px!important}
+html body #app.app .close svg {width:20px;height:20px;min-width:20px;min-height:20px}
+html body .app .modal-layer[inert] {pointer-events:none}
+html body .app .modal-layer[data-screen=Settings] .modal-card {height:auto;min-height:0}
+html body .app .modal-layer[data-screen=Settings] .modal-body {min-height:0;overflow-y:auto}

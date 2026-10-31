@@ -41,6 +41,7 @@ namespace RocketRaja.Classic
         void SetButtonSkin(Button button,bool enabled)
         {
             var control=button.GetComponent<ClassicControl>();if(!(button.targetGraphic is Image image))return;
+            if(control&&control.faceOverride){image.sprite=control.faceOverride;return;}
             if(control&&control.htmlStyle>0){if(control.htmlStyle==3){image.sprite=null;image.color=Color.clear;}else image.sprite=!enabled?popupDisabled:control.htmlStyle==2?popupSecondary:popupPrimary;}
             else image.sprite=enabled?blueButton:disabledButton;
         }

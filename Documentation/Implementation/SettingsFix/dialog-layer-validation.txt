@@ -1,0 +1,259 @@
+PASS Naming retains Settings throughout child presentation 0
+PASS Naming retains Settings throughout child presentation 1
+PASS Naming retains Settings throughout child presentation 2
+PASS Naming retains Settings throughout child presentation 3
+PASS Naming retains Settings throughout child presentation 4
+PASS Naming retains Settings throughout child presentation 5
+PASS Naming retains Settings throughout child presentation 6
+PASS Naming retains Settings throughout child presentation 7
+PASS Naming retains Settings throughout child presentation 8
+PASS Naming retains Settings throughout child presentation 9
+PASS Naming retains Settings throughout child presentation 10
+PASS Naming retains Settings throughout child presentation 11
+PASS Naming is the interactive top layer
+PASS Naming renders above Settings
+PASS Naming blocks background input
+PASS Naming blocks gameplay taps
+PASS Naming Back reveals the existing Settings layer
+PASS Naming preserves Settings scroll position
+PASS Naming restores keyboard focus
+PASS Privacy retains Settings throughout child presentation 0
+PASS Privacy retains Settings throughout child presentation 1
+PASS Privacy retains Settings throughout child presentation 2
+PASS Privacy retains Settings throughout child presentation 3
+PASS Privacy retains Settings throughout child presentation 4
+PASS Privacy retains Settings throughout child presentation 5
+PASS Privacy retains Settings throughout child presentation 6
+PASS Privacy retains Settings throughout child presentation 7
+PASS Privacy retains Settings throughout child presentation 8
+PASS Privacy retains Settings throughout child presentation 9
+PASS Privacy retains Settings throughout child presentation 10
+PASS Privacy retains Settings throughout child presentation 11
+PASS Privacy is the interactive top layer
+PASS Privacy renders above Settings
+PASS Privacy blocks background input
+PASS Privacy blocks gameplay taps
+PASS Privacy Back reveals the existing Settings layer
+PASS Privacy preserves Settings scroll position
+PASS Privacy restores keyboard focus
+PASS Help retains Settings throughout child presentation 0
+PASS Help retains Settings throughout child presentation 1
+PASS Help retains Settings throughout child presentation 2
+PASS Help retains Settings throughout child presentation 3
+PASS Help retains Settings throughout child presentation 4
+PASS Help retains Settings throughout child presentation 5
+PASS Help retains Settings throughout child presentation 6
+PASS Help retains Settings throughout child presentation 7
+PASS Help retains Settings throughout child presentation 8
+PASS Help retains Settings throughout child presentation 9
+PASS Help retains Settings throughout child presentation 10
+PASS Help retains Settings throughout child presentation 11
+PASS Help is the interactive top layer
+PASS Help renders above Settings
+PASS Help blocks background input
+PASS Help blocks gameplay taps
+PASS Help Back reveals the existing Settings layer
+PASS Help preserves Settings scroll position
+PASS Help restores keyboard focus
+PASS TutorialHelp retains Settings throughout child presentation 0
+PASS TutorialHelp retains Settings throughout child presentation 1
+PASS TutorialHelp retains Settings throughout child presentation 2
+PASS TutorialHelp retains Settings throughout child presentation 3
+PASS TutorialHelp retains Settings throughout child presentation 4
+PASS TutorialHelp retains Settings throughout child presentation 5
+PASS TutorialHelp retains Settings throughout child presentation 6
+PASS TutorialHelp retains Settings throughout child presentation 7
+PASS TutorialHelp retains Settings throughout child presentation 8
+PASS TutorialHelp retains Settings throughout child presentation 9
+PASS TutorialHelp retains Settings throughout child presentation 10
+PASS TutorialHelp retains Settings throughout child presentation 11
+PASS TutorialHelp is the interactive top layer
+PASS TutorialHelp renders above Settings
+PASS TutorialHelp blocks background input
+PASS TutorialHelp blocks gameplay taps
+PASS TutorialHelp Back reveals the existing Settings layer
+PASS TutorialHelp preserves Settings scroll position
+PASS TutorialHelp restores keyboard focus
+PASS DeveloperReset retains Settings throughout child presentation 0
+PASS DeveloperReset retains Settings throughout child presentation 1
+PASS DeveloperReset retains Settings throughout child presentation 2
+PASS DeveloperReset retains Settings throughout child presentation 3
+PASS DeveloperReset retains Settings throughout child presentation 4
+PASS DeveloperReset retains Settings throughout child presentation 5
+PASS DeveloperReset retains Settings throughout child presentation 6
+PASS DeveloperReset retains Settings throughout child presentation 7
+PASS DeveloperReset retains Settings throughout child presentation 8
+PASS DeveloperReset retains Settings throughout child presentation 9
+PASS DeveloperReset retains Settings throughout child presentation 10
+PASS DeveloperReset retains Settings throughout child presentation 11
+PASS DeveloperReset is the interactive top layer
+PASS DeveloperReset renders above Settings
+PASS DeveloperReset blocks background input
+PASS DeveloperReset blocks gameplay taps
+PASS DeveloperReset Back reveals the existing Settings layer
+PASS DeveloperReset preserves Settings scroll position
+PASS DeveloperReset restores keyboard focus
+PASS Three popup layers retain covered parents without accepting input
+PASS Returning to an existing ancestor removes its descendants
+PASS Switching panels closes the full stack and restores gameplay input
+PASS Layered Settings works at (360, 540)
+PASS Layered Settings works at (390, 844)
+PASS Home/Next display uses imported button artwork
+PASS Home/Festival Rush uses imported button artwork
+PASS Home/Helping Hands uses imported button artwork
+PASS Home/Bulk Order uses imported button artwork
+PASS Home/Contextual guidance uses imported button artwork
+PASS Player/Quantity uses imported button artwork
+PASS Player/Train uses imported button artwork
+PASS Player/View uses imported button artwork
+PASS Player/Buy all upgrades uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Buy uses imported button artwork
+PASS Player/Contextual guidance uses imported button artwork
+PASS Products/Quantity uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Upgrade uses imported button artwork
+PASS Products/Contextual guidance uses imported button artwork
+PASS Legacy/One pull uses imported button artwork
+PASS Legacy/Five pulls uses imported button artwork
+PASS Legacy/Contextual guidance uses imported button artwork
+PASS Shop/Collection uses imported button artwork
+PASS Shop/Buy uses imported button artwork
+PASS Shop/Buy uses imported button artwork
+PASS Shop/Price uses imported button artwork
+PASS Shop/Price uses imported button artwork
+PASS Shop/Price uses imported button artwork
+PASS Shop/Price uses imported button artwork
+PASS Shop/Odds uses imported button artwork
+PASS Shop/Contextual guidance uses imported button artwork
+PASS ProductDetail/Close uses imported button artwork
+PASS ProductDetail/Contextual guidance uses imported button artwork
+PASS ProductDetail/Exact price uses imported button artwork
+PASS TapTraining/Close uses imported button artwork
+PASS TapTraining/Contextual guidance uses imported button artwork
+PASS TapTraining/Buy quantity uses imported button artwork
+PASS TapTraining/Exact price uses imported button artwork
+PASS TapTraining/Train tapping uses imported button artwork
+PASS TapTraining/Back uses imported button artwork
+PASS Skills/Close uses imported button artwork
+PASS Skills/Activate uses imported button artwork
+PASS Skills/Activate uses imported button artwork
+PASS Skills/Activate uses imported button artwork
+PASS SkillDetail/Close uses imported button artwork
+PASS SkillDetail/Activate skill uses imported button artwork
+PASS CardDetail/Close uses imported button artwork
+PASS DrawReveal/Close uses imported button artwork
+PASS DrawReveal/Contextual guidance uses imported button artwork
+PASS DrawReveal/Continue uses imported button artwork
+PASS Upgrades/Close uses imported button artwork
+PASS Upgrades/Contextual guidance uses imported button artwork
+PASS Upgrades/Category uses imported button artwork
+PASS Upgrades/View uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Buy uses imported button artwork
+PASS Upgrades/Previous uses imported button artwork
+PASS Upgrades/Next uses imported button artwork
+PASS Upgrades/Back uses imported button artwork
+PASS Prestige/Close uses imported button artwork
+PASS Prestige/Contextual guidance uses imported button artwork
+PASS Prestige/Begin again uses imported button artwork
+PASS Prestige/Keep growing uses imported button artwork
+PASS Settings/Close uses imported button artwork
+PASS Settings/Naming uses imported button artwork
+PASS Settings/Privacy uses imported button artwork
+PASS Settings/Help uses imported button artwork
+PASS Settings/Developer Reset uses imported button artwork
+PASS Settings/Ad privacy choices uses imported button artwork
+PASS Settings/Tutorial guidance uses imported button artwork
+PASS Naming/Close uses imported button artwork
+PASS Naming/Save shop name uses imported button artwork
+PASS Naming/Back uses imported button artwork
+PASS Statistics/Close uses imported button artwork
+PASS Statistics/Back uses imported button artwork
+PASS Odds/Close uses imported button artwork
+PASS Odds/Back uses imported button artwork
+PASS Purchase/Close uses imported button artwork
+PASS Purchase/delivered uses imported button artwork
+PASS Purchase/pending uses imported button artwork
+PASS Purchase/cancelled uses imported button artwork
+PASS Purchase/failed uses imported button artwork
+PASS Purchase/Back uses imported button artwork
+PASS BuyAll/Close uses imported button artwork
+PASS BuyAll/Refresh review uses imported button artwork
+PASS BuyAll/Contextual guidance uses imported button artwork
+PASS BuyAll/Buy reviewed upgrades uses imported button artwork
+PASS BuyAll/Back uses imported button artwork
+PASS Help/Close uses imported button artwork
+PASS Help/Back uses imported button artwork
+PASS Privacy/Close uses imported button artwork
+PASS Privacy/Back uses imported button artwork
+PASS SaveRecovery/Try saving again uses imported button artwork
+PASS SaveRecovery/Keep files and leave uses imported button artwork
+PASS Appearance/Close uses imported button artwork
+PASS Appearance/Back uses imported button artwork
+PASS Guidance/Close uses imported button artwork
+PASS Guidance/Got it uses imported button artwork
+PASS Exact/Close uses imported button artwork
+PASS Exact/Back uses imported button artwork
+PASS Achievements/Close uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Claim reward uses imported button artwork
+PASS Achievements/Back to your stall uses imported button artwork
+PASS DeveloperReset/Close uses imported button artwork
+PASS DeveloperReset/Continue uses imported button artwork
+PASS DeveloperReset/Cancel uses imported button artwork
+PASS Offline/Close uses imported button artwork
+PASS Offline/Watch ad for 2× rewards uses imported button artwork
+PASS Offline/Continue uses imported button artwork
+PASS TutorialHelp/Close uses imported button artwork
+PASS TutorialHelp/Continue guidance uses imported button artwork
+PASS TutorialHelp/Replay guidance uses imported button artwork
+PASS TutorialHelp/Skip tutorial uses imported button artwork
+PASS TutorialHelp/Got it uses imported button artwork
+PASS Shared button artwork covers all current panels and popups
+PASS 258 checks; 157 button faces verified

@@ -1,0 +1,70 @@
+{
+  "sharedFonts": [
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Fraunces ExtraBold SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito ExtraBold SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/Bootstrap/Fonts/Nunito Medium SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Body SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Bold SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Card Serif SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Directional symbols SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Heading SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ClassicUI/Fonts/Symbols SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/Game/ImportedUI/Noto Sans Rupee SDF.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset",
+      "unchanged": true
+    }
+  ],
+  "changedProtectedFiles": [
+    "Assets/Game/Core/RedesignState.cs",
+    "Assets/Game/Core/RedesignEngine.cs",
+    "Assets/Game/Runtime/Classic/ClassicUI.cs",
+    "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+    "Assets/Scenes/Main.unity",
+    "Documentation/Implementation/Classic-HTML-to-Unity-TODO.md",
+    "Documentation/Architecture.md",
+    ".agents/skills/html-to-ugui/scripts/inspect_html_package.py",
+    "UI Builder/HTML/Tutorial/revision-1/index.html",
+    "UI Builder/HTML/Tutorial/revision-1/tutorial.css"
+  ],
+  "legacyObjectsPreserved": 10702,
+  "legacyMissing": [],
+  "legacyUnexpectedChanges": [],
+  "addedSceneObjectsAndComponents": 268,
+  "removedExistingSceneObjectsAndComponents": [],
+  "bootstrapUnchanged": true
+}

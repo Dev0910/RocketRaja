@@ -1,0 +1,9 @@
+RUNNING isolated Editor startup checks; live saves/ads excluded
+PASS fresh: automatic local startup; old account preference ignored; playable local session
+PASS existing: automatic local startup; old account preference ignored; playable local session
+PASS old-account-mode: automatic local startup; old account preference ignored; playable local session
+PASS corrupt: automatic local startup; old account preference ignored; protected recovery
+PASS future: automatic local startup; old account preference ignored; protected recovery
+PASS backup: automatic local startup; old account preference ignored; playable local session
+PASS restart: automatic local startup; old account preference ignored; playable local session
+ALL 7 STARTUP CASES PASSED

@@ -65,8 +65,9 @@ namespace RocketRaja.Editor
             foreach(var label in ui.GetComponentsInChildren<TMP_Text>(true))
             {
                 if(label.text.StartsWith("Isolated Editor preview")) label.text="Purchases will be available when the store is connected.";
-                if(label.text.Contains("This importer does not contact")) label.text="Guest progress stays on this device. Optional Google saves use Firebase. Purchases are currently unavailable.";
+                if(label.text.Contains("This importer does not contact")) label.text="Progress stays on this device. Store purchases are currently unavailable.";
             }
+            LocalOnlyPresentationAuthoring.EnforceMain(scene);
             EditorSceneManager.MarkSceneDirty(scene); EditorSceneManager.SaveScene(scene);
             EditorBuildSettings.scenes = new[]{new EditorBuildSettingsScene(Bootstrap,true),new EditorBuildSettingsScene(Main,true)};
             // Normal Play now uses the open scene. Main redirects to Bootstrap if no profile was selected.

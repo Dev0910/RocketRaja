@@ -15,6 +15,7 @@ function decorate(layer){
  if(route==='Welcome'||route==='Account')return;
  if(chosen.has(route)){if(route==='CardDetail')layer.classList.add('popup-collection-card');return;}
  layer.classList.add('bazaar-dialog');
+ if(route==='Appearance')return;
  if(route==='Welcome'||route==='Account'){welcome(body);return;}
  const cards=[...body.querySelectorAll(':scope>.info-card')];
  if(route==='Settings')settings(layer);

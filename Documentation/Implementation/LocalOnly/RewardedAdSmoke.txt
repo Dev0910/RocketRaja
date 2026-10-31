@@ -1,0 +1,6 @@
+PASS Saved Main binds a simulated rewarded provider while using an isolated local profile
+PASS Cancelled ad grants no extra reward
+PASS Completed ad grants exactly one extra offline amount
+PASS Duplicate completion callback grants nothing
+PASS Reward marker is durable in the local save
+No live ad network was invoked; no device was attached

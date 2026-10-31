@@ -1,0 +1,11 @@
+PASS Missing local profile permits a fresh game
+PASS Existing device progress round-trips without an account
+PASS Valid backup remains recoverable
+PASS Corrupt local files stay blocked and untouched
+PASS Future-version local saves cannot become a fresh game
+PASS Saved Main has no account/login dialogs
+PASS Settings and recovery have no account navigation
+PASS Real purchase actions remain unavailable
+PASS Live Google adapters and native bridge are removed
+PASS Resolved Android declarations contain no login-only libraries
+PASS Firebase modules and rewarded-ad package remain installed

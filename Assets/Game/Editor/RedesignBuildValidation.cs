@@ -17,7 +17,7 @@ namespace RocketRaja.Editor
         {
             var config = UnityEngine.Resources.Load<ProductionConfig>("ProductionConfig");
             if (RedesignEnvironment.Isolated || !config || !config.releaseAcceptanceComplete)
-                throw new BuildFailedException("Classic release acceptance is incomplete. Finish account/billing configuration and store-installed validation before creating a production bundle.");
+                throw new BuildFailedException("Classic release acceptance is incomplete. Finish local-save, advertising and store-installed validation before creating a production bundle.");
         }
     }
 }

@@ -1,0 +1,10 @@
+RUNNING
+Package: com.diwali.fireworkstycoon.dev
+Scenes: Bootstrap, Main
+Debug-signed development validation APK; local-only gameplay; no account migration
+Project signing settings restored after building
+Succeeded
+Errors: 0
+Warnings: 31
+Duration: 00:10:39.0055288
+Bytes: 1027994487

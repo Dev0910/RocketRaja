@@ -62,12 +62,6 @@ namespace RocketRaja.Core
     public sealed class UnsupportedCheckpointException : IOException
     { public UnsupportedCheckpointException() : base("This account checkpoint requires a newer app. All files were preserved.") { } }
 
-    public interface IGoogleSignInProvider
-    {
-        bool Supported { get; }
-        Task<string> SignInAsync();
-        Task SignOutAsync();
-    }
     public interface IAccountAuth : IDisposable
     {
         AccountProfile Current { get; }

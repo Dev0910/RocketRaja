@@ -1,0 +1,13 @@
+RUNNING
+Package: com.diwali.fireworkstycoon.dev
+Scenes: Bootstrap, Main
+Development APK; local-only gameplay; no account migration
+Failed
+Errors: 1
+Warnings: 0
+Duration: 00:00:36.3209022
+Bytes: 0
+UnityException: Can not sign the application
+Unable to sign the application; please provide passwords!
+FAIL UnityEditor.Build.BuildFailedException: Local-only Android build failed
+  at RocketRaja.Editor.LocalOnlyAndroidBuild.Tick () [0x00264] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\LocalOnlyAndroidBuild.cs:40 

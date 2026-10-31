@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Concurrent;
-using System.Diagnostics;
 using System.Threading.Tasks;
-using Firebase.Firestore;
 using RocketRaja.Core;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,7 +11,8 @@ namespace RocketRaja.Cloud
     public sealed class RedesignSessionHost : MonoBehaviour
     {
         public static RedesignSessionHost Instance { get; private set; }
-        public static bool AccountFlowAvailable => Instance?.fixture == true || RedesignCloudSettings.Load()?.MatchesApplication == true;
+        // Account fixtures remain available in Editor tests; players never initialize live identity.
+        public static bool AccountFlowAvailable => Instance?.fixture == true;
         public static RedesignSessionHost Ensure(string root = null)
         {
             if (!Instance) new GameObject("RedesignSessionHost").AddComponent<RedesignSessionHost>();
@@ -25,62 +24,37 @@ namespace RocketRaja.Cloud
             return Instance;
         }
         readonly ConcurrentQueue<Action> mainQueue = new ConcurrentQueue<Action>();
-        readonly Stopwatch clock = Stopwatch.StartNew();
         bool changingScene, fixture, foreground = true;
         string fixtureMode = "";
-        GoogleSignInBridge google;
         public RedesignAccountCoordinator Coordinator { get; private set; }
         public RedesignAccountSession Account => Coordinator?.Account;
         public string ProfileRoot { get; private set; }
         public bool AccountMenuRequested { get; set; }
         public bool Ready { get; private set; }
         public bool IsFixture => fixture;
-        public bool GoogleSupported => fixture || AccountFlowAvailable && google && google.Supported;
-        public string Mode => fixture ? fixtureMode : LocalProfiles.Mode;
+        public bool GoogleSupported => fixture;
+        public string Mode => fixture ? fixtureMode : "guest";
         void Awake()
         {
             if (Instance && Instance != this) { Destroy(gameObject); return; }
             Instance = this; ProfileRoot = RedesignEnvironment.ProfileRoot; DontDestroyOnLoad(gameObject);
-            var bridge = new GameObject("RedesignGoogleSignInBridge"); bridge.transform.SetParent(transform); google = bridge.AddComponent<GoogleSignInBridge>();
             SceneManager.sceneLoaded += SceneLoaded;
         }
         void SceneLoaded(Scene scene, LoadSceneMode mode) => changingScene = false;
         void SetMode(string mode) { if (fixture) fixtureMode = mode; else LocalProfiles.SetMode(mode); }
         public async Task<RedesignAccountCoordinator> ConnectAsync(bool interactive)
         {
-            if (!GoogleSupported) throw new NotSupportedException("Google saves are not configured for this build. Your guest progress stays on this device.");
-            if (Coordinator == null)
-            {
-                var config = RedesignCloudSettings.Load();
-                if (!config || !config.MatchesApplication) throw new NotSupportedException("The reviewed Google configuration is unavailable.");
-                var auth = new FirebaseAccountAuth(google);
-                try
-                {
-                    await auth.InitializeAsync();
-                    if (this == null) { auth.Dispose(); throw new OperationCanceledException(); }
-                    if (Firebase.FirebaseApp.DefaultInstance.Options.ProjectId != config.firebaseProjectId)
-                        throw new NotSupportedException("Firebase project does not match the reviewed redesign configuration.");
-                    var db = FirebaseFirestore.DefaultInstance; db.Settings.PersistenceEnabled = false;
-                    var cloud = new MainThreadCloudStore(new FirestoreSaveStore(db, FirestoreSaveStore.RedesignCollection), action => mainQueue.Enqueue(action));
-                    Coordinator = new RedesignAccountCoordinator(new MainThreadAuth(auth, action => mainQueue.Enqueue(action)), cloud,
-                        RedesignRuntimeContent.Load(), ProfileRoot, LocalProfiles.DeviceId, JsonUtility.ToJson, JsonUtility.FromJson<RedesignState>,
-                        JsonUtility.FromJson<SaveVersionHeader>, JsonUtility.ToJson, JsonUtility.FromJson<AccountCheckpoint>,
-                        () => clock.Elapsed.TotalSeconds, () => RedesignRuntimeDriver.Utc,
-                        error => error is FirestoreException firestore && firestore.ErrorCode == FirestoreError.PermissionDenied,
-                        RedesignEnvironment.DefaultProfileRoot);
-                }
-                catch { if (Coordinator == null) auth.Dispose(); throw; }
-            }
+            if (!fixture || Coordinator == null) throw new NotSupportedException("Account services are unavailable. Progress is saved on this device.");
             await Coordinator.PrepareGoogleAsync(interactive); return Coordinator;
         }
         public async Task EnterAccountAsync(bool promote, bool handoff)
         {
-            if (Coordinator == null) throw new InvalidOperationException("Choose an account first.");
+            if (!fixture || Coordinator == null) throw new InvalidOperationException("Account sessions are available only to isolated Editor fixtures.");
             await Coordinator.EnterAccountAsync(promote, handoff); SetMode("account"); Ready = true;
         }
         public async Task ReconnectAsync()
         {
-            if (Coordinator == null) throw new InvalidOperationException("Choose an account first.");
+            if (!fixture || Coordinator == null) throw new InvalidOperationException("Account sessions are available only to isolated Editor fixtures.");
             await Coordinator.ReconnectAsync(); Ready = true;
         }
         public async Task ReturnToGuestAsync(bool flush)
@@ -121,14 +95,15 @@ namespace RocketRaja.Cloud
         }
         public void OpenAccountMenu()
         {
+            if (!fixture) return;
             Ready = false; AccountMenuRequested = true;
             if (changingScene || SceneManager.GetActiveScene().name == "Bootstrap") return;
             changingScene = true; SceneManager.LoadSceneAsync("Bootstrap");
         }
-        public void EnterMain()
+        public AsyncOperation EnterMain()
         {
-            if (!Ready || Account != null && !Account.CanPlay || changingScene) return;
-            changingScene = true; SceneManager.LoadSceneAsync("Main");
+            if (!Ready || Account != null && !Account.CanPlay || changingScene) return null;
+            changingScene = true; return SceneManager.LoadSceneAsync("Main");
         }
         void Update()
         {
@@ -147,7 +122,7 @@ namespace RocketRaja.Cloud
             SceneManager.sceneLoaded -= SceneLoaded; Coordinator?.Dispose(); Instance = null;
         }
 #if UNITY_EDITOR
-        // Injection is Editor-only; an actual player can only construct the reviewed Firebase adapter.
+        // Injection is Editor-only; an actual player can only select local progress.
         public void ConfigureFixture(RedesignAccountCoordinator coordinator, string root)
         {
             if (!Application.isPlaying || Coordinator != null) throw new InvalidOperationException("Configure one isolated Play Mode fixture before using the host.");

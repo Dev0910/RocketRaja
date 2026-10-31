@@ -46,7 +46,11 @@ namespace RocketRaja.Core
         public List<string> everPurchased, upgrades, learnedTopics;
         // Optional for compatibility with existing saves; lifetime rewards survive prestige.
         public List<string> claimedAchievements;
+        // Optional: old saves (missing/version zero) never enroll automatically.
+        public ShopkeeperTutorialState tutorial;
         public int mostProductsStocked;
+        // Optional on older saves. Best minimum level held by all eight products together.
+        public int bestProductCollectionLevel;
         public bool secondPrestigeGift, music, sound, reducedMotion, storeNamePromptHandled;
         public bool requiresDrawReconciliation;
         // Schema 2 is local-only. Enabling an authoritative wallet upgrades to schema 3,
@@ -79,7 +83,8 @@ namespace RocketRaja.Core
                 everPurchased = new List<string>(), upgrades = new List<string>(), learnedTopics = new List<string>(),
                 music = true, sound = true, storeName = "", pinnedUpgradeId = "", products = new int[8], cash = 0,
                 target = ProgressionNumbers.RunTarget(0), now = now, savedAt = now, activeUntil = new double[3], readyAt = new double[3], nextHandsAt = new double[3],
-                reveal = DrawReveal.Empty(), offline = OfflineReceipt.Empty(), guestWallet = GuestWalletProvenance.Fresh()
+                reveal = DrawReveal.Empty(), offline = OfflineReceipt.Empty(), guestWallet = GuestWalletProvenance.Fresh(),
+                tutorial = ShopkeeperTutorialState.Fresh()
             };
             return state;
         }
@@ -93,6 +98,7 @@ namespace RocketRaja.Core
             s.reveal = reveal.Copy(); s.offline = offline.Copy();
             s.guestWallet = guestWallet?.Copy(); s.premium = premium?.Copy();
             s.developmentShop = developmentShop?.Copy();
+            s.tutorial = tutorial?.Copy();
             return s;
         }
         public bool Valid(RedesignCatalog data)
@@ -112,6 +118,7 @@ namespace RocketRaja.Core
                 decorationStage < 0 || decorationStage > 5 || reveal == null || offline == null) return false;
             if (!string.IsNullOrEmpty(migrationSourceDigest) && (migrationSourceDigest.Length != 64 || !migrationSourceDigest.All(Uri.IsHexDigit))) return false;
             if (!RedesignAchievements.ValidClaims(this)) return false;
+            if (tutorial != null && !tutorial.Valid(data)) return false;
             if (shopGiftSpent && (!secondPrestigeGift || !HasGuestProvenance || guestWallet.giftDrawCardId != "")) return false;
             if (HasDevelopmentShop && (HasPremium || !developmentShop.Valid(data))) return false;
             if (guestWallet != null && (HasGuestProvenance || !string.IsNullOrEmpty(guestWallet.giftDrawCardId) || !string.IsNullOrEmpty(guestWallet.giftDrawOperationId)) &&

@@ -1,0 +1,88 @@
+const {chromium}=require(process.argv[2]);
+const fs=require('fs'),path=require('path');
+const folder=path.resolve(__dirname,'../../Documentation/Implementation/FestivalFeel/AllSix');
+(async()=>{
+ const browser=await chromium.launch(),page=await browser.newPage({viewport:{width:390,height:844}}),report=[],errors=[];
+ fs.mkdirSync(folder,{recursive:true});page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(r.status()+' '+r.url());});
+ const check=(ok,label)=>{if(!ok)throw Error(label);report.push('PASS '+label);};
+ const settle=()=>page.waitForTimeout(450),audio=()=>page.evaluate(()=>classicAudio.getSnapshot());
+ const reset=(fixture='progressed',tab='Home')=>page.evaluate(({fixture,tab})=>{classicPreview.condition('normal');classicPreview.reset(fixture);classicPreview.navigate(tab);},{fixture,tab});
+ const setting=key=>page.locator(`.modal-layer:not([inert]) [data-action=Setting][data-param=${key}]`);
+ try{
+  await page.goto('http://127.0.0.1:8772/Classic/?capture=1&state=progressed');await settle();
+  check((await audio()).state==='locked'&&(await audio()).musicNotes===0,'Music stays silent until a trusted player interaction');
+  await page.locator('#stall-tap').click({position:{x:150,y:50}});await page.waitForTimeout(500);
+  check((await audio()).music&&(await audio()).musicNotes>0,'Trusted player gesture starts the quiet music loop');
+  await page.evaluate(()=>classicPreview.navigate('Settings'));await settle();await setting('music').click();
+  check(!(await audio()).music&&(await audio()).activeMusicVoices===0&&(await audio()).sound,'Music switch stops the loop independently of sound effects');
+  const notes=(await audio()).musicNotes;await page.waitForTimeout(500);check((await audio()).musicNotes===notes,'Muted music does not schedule future notes');
+  await setting('sound').click();await setting('music').click();await page.waitForTimeout(450);
+  check(!(await audio()).sound&&(await audio()).music&&(await audio()).activeVoices===0&&(await audio()).musicNotes>notes,'Music works while sound effects are disabled');
+  await setting('sound').click();await page.keyboard.press('Escape');await settle();
+  await page.locator('#panel-Home [data-action=ActivateSkill][data-param="0"]').click();await page.waitForTimeout(100);
+  check(await page.evaluate(()=>classicPreview.state.skillTimers[0].activeUntil>performance.now()&&document.getElementById('app').dataset.festivalRush==='true'),'Festival Rush warm lighting follows the actual active timer');
+  await page.locator('#panel-Home [data-action=ActivateSkill][data-param="1"]').click();await page.waitForTimeout(100);
+  check(await page.evaluate(()=>document.getElementById('app').dataset.helpingHands==='true'&&getComputedStyle(document.querySelector('.working-hands')).opacity!=='0'),'Helping Hands shows working-hand gestures only while active');
+  await page.locator('#panel-Home [data-action=ActivateSkill][data-param="2"]').click();
+  check(await page.locator('.bulk-parcel').count()===1,'Successful Bulk Order sends one parcel across the counter');
+  await page.locator('#panel-Home [data-action=ActivateSkill][data-param="2"]').evaluate(e=>e.click());
+  check(await page.locator('.bulk-parcel').count()===1,'Cooldown prevents repeated Bulk Order effects');
+  await page.waitForTimeout(180);await page.screenshot({path:path.join(folder,'skill-transformations-390x844.png')});
+  await page.evaluate(()=>{classicPreview.state.skillTimers[0].activeUntil=performance.now()-1;classicPreview.state.skillTimers[1].activeUntil=performance.now()-1;});await page.waitForTimeout(200);
+  check(await page.evaluate(()=>document.getElementById('app').dataset.festivalRush==='false'&&document.getElementById('app').dataset.helpingHands==='false'),'Skill transformations end when their real active intervals end');
+  await page.waitForTimeout(1300);check(await page.locator('.bulk-parcel').count()===0,'Bulk Order parcel cleans up');
+  const candidate=await page.evaluate(()=>{
+   for(const [fixture,f]of Object.entries(classicFixtures))for(let i=0;i<8;i++)for(const quantity of ['1','10','100','Max']){
+    const q=f.levelQuotes?.[i]?.[quantity];if(q?.affordable&&q.beforeLevel>0&&[10,25,50,100].some(n=>q.beforeLevel<n&&q.afterLevel>=n))return {fixture,i,quantity,before:q.beforeLevel,after:q.afterLevel,level:[10,25,50,100].filter(n=>q.beforeLevel<n&&q.afterLevel>=n).at(-1)};
+   }return null;
+  });check(!!candidate,'An exported affordable quote supplies a real milestone crossing');
+  await reset(candidate.fixture,'Products');await page.evaluate(q=>{classicPreview.state.quantities.products=q.quantity;classicPreview.condition('normal');},candidate);await settle();
+  await page.locator(`#panel-Products [data-action=BuyLevels][data-param="${candidate.i}"]`).click();
+  check(await page.evaluate(q=>classicPreview.state.levels[q.i]===q.after,candidate),'Milestone is based on the selected successful purchase quote');
+  check((await page.locator('.milestone-ribbon').innerText()).includes('Level '+candidate.level),'Only the highest newly crossed milestone gets its ribbon');
+  check(await page.locator('.shopkeeper').evaluate(e=>e.getAnimations().some(a=>a.effect.getComputedTiming().duration===700)),'Shopkeeper gives a brief milestone reaction');
+  await page.waitForTimeout(200);await page.screenshot({path:path.join(folder,'milestone-390x844.png')});
+  await page.waitForTimeout(2300);check(await page.locator('.milestone-ribbon').count()===0,'Milestone receipt cleans up without blocking input');
+  await reset('progressed','Achievements');await settle();
+  const claim=page.locator('[data-action=ClaimAchievement]:enabled').first(),id=await claim.getAttribute('data-param');
+  const before=await page.evaluate(id=>({kk:classicPreview.state.kk,reward:classicAchievements.definitions.find(d=>d.id===id).reward}),id);
+  await claim.click();
+  check(await page.evaluate(b=>classicPreview.state.kk===b.kk+b.reward,before),'Achievement command grants its existing reward exactly once');
+  check(await page.locator('.kaju-flight>span').count()===3,'Kaju Katli tokens fly from the claim toward the existing wallet');
+  await page.waitForTimeout(300);await page.screenshot({path:path.join(folder,'achievement-flight-390x844.png')});
+  await page.locator(`[data-action=ClaimAchievement][data-param="${id}"]`).evaluate(e=>e.click());
+  check(await page.evaluate(b=>classicPreview.state.kk===b.kk+b.reward,before),'Claimed button cannot grant again during reward animation');
+  await page.waitForTimeout(1100);check(await page.locator('.kaju-flight').count()===0,'Reward-flight tokens clean up');
+  await reset('prestige','Prestige');await settle();await page.locator('.modal-layer[data-screen=Prestige] .modal-footer [data-action=Close]').click();await settle();
+  check(await page.evaluate(()=>classicPreview.state.fixture==='prestige')&&await page.locator('.prestige-scene').count()===0,'Cancelling prestige does not reset the run or start a transition');
+  await page.evaluate(()=>classicPreview.navigate('Prestige'));await settle();await page.locator('[data-action=Prestige][data-param=confirm]').click();
+  check(await page.evaluate(()=>classicPreview.state.fixture==='rebuilt'&&classicPreview.state.stack.length===0),'Explicit prestige completes its existing state transition immediately');
+  check(await page.locator('.prestige-scene').count()===1&&await page.locator('.prestige-scene').evaluate(e=>getComputedStyle(e).pointerEvents==='none'),'Lantern dim and firework bloom pass input through');
+  await page.waitForTimeout(500);await page.screenshot({path:path.join(folder,'prestige-390x844.png')});
+  await page.waitForTimeout(1200);check(await page.locator('.prestige-scene').count()===0&&await page.evaluate(()=>classicPreview.state.fixture==='rebuilt'),'Prestige overlay cleans up without another reset');
+  await page.evaluate(()=>classicPreview.navigate('Settings'));await settle();await setting('motion').click();await page.keyboard.press('Escape');await settle();
+  await reset('progressed','Home');await page.locator('#panel-Home [data-action=ActivateSkill][data-param="2"]').click();
+  check(await page.locator('.bulk-parcel').count()===0,'Reduced motion suppresses parcel travel while skill activation still succeeds');
+  await page.evaluate(()=>classicProgressFeel.milestone(0,9,10));
+  check(await page.locator('.milestone-ribbon').isVisible()&&await page.locator('.milestone-ribbon').evaluate(e=>e.getAnimations().length===0),'Reduced motion retains a static milestone receipt');
+  await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(100);
+  check(await page.evaluate(()=>document.getAnimations().filter(a=>a.playState==='running').length===0),'OS and in-game reduced motion settle every decorative animation');
+  await page.goto('http://127.0.0.1:8772/Tutorial/?capture=1&step=product');await page.emulateMedia({reducedMotion:'no-preference'});await settle();
+  await page.locator('#buy-product').click();
+  check(await page.evaluate(()=>tutorialPreview.state.products===1&&tutorialPreview.state.cash===0)&&await page.locator('.stock-dust').count()===1,'Tutorial first stocking pops the purchased product into its actual shelf');
+  await page.waitForTimeout(200);await page.screenshot({path:path.join(folder,'stocking-390x844.png')});await page.waitForTimeout(800);
+  check(await page.locator('.stock-dust').count()===0,'Stocking dust cleans up');
+  for(const [width,height]of [[360,540],[450,916]]){await page.setViewportSize({width,height});await page.evaluate(()=>classicProgressFeel.milestone(0,24,25));await page.waitForTimeout(200);
+   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Milestone effects have no horizontal overflow at '+width+'x'+height);}
+  await page.setViewportSize({width:390,height:844});await page.evaluate(()=>tutorialPreview.select('achievement'));await settle();
+  await page.locator('#achievement-entry').click();await settle();await page.locator('#modal-ok').click();
+  check(await page.evaluate(()=>tutorialPreview.state.claimed&&tutorialPreview.state.kk===5),'Tutorial achievement still grants exactly its existing 5-KK reward');
+  check(await page.locator('.kaju-flight').last().evaluate(e=>parseFloat(e.style.left)>20&&parseFloat(e.style.top)>20),'Tutorial reward starts at the actual confirmation control rather than a hidden coach');
+  await page.waitForTimeout(1100);await page.evaluate(()=>tutorialPreview.select('prestige'));await settle();await page.locator('#prestige-entry').click();await settle();await page.locator('#modal-ok').click();
+  check(await page.evaluate(()=>tutorialPreview.state.prestiges===1&&tutorialPreview.state.credits===3&&!tutorialPreview.state.card),'Tutorial prestige preserves explicit confirmation and three unspent free credits');
+  check(await page.locator('.prestige-scene').count()===1,'Tutorial prestige shares the dim-and-bloom transition');
+  check((await audio()).activeMusicVoices<=12&&(await audio()).activeVoices<=32,'Music and SFX use separate bounded voice pools');
+  check(errors.length===0,'No script errors or missing assets: '+errors.join('; '));report.push(`PASS ${report.length} all-six checks`);console.log(report.at(-1));
+ }catch(e){report.push('FAIL '+e.stack);console.error(e);process.exitCode=1;}
+ finally{fs.writeFileSync(path.join(folder,'checks.txt'),report.join('\n'));await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,0 +1,253 @@
+/* Current saved Unity UI is authoritative. All dimensions here are Main's 360-unit canvas. */
+html body{height:100dvh;overflow:hidden}
+html body #app.app{
+ width:360px;height:var(--logical-height,100dvh);max-height:none;
+ zoom:var(--viewport-scale,1);--s:1;--scale:1;
+}
+
+/* Shared painted controls: the sliced border paints inward without consuming layout space. */
+html body #app.app :is(.action,.settings-link,.close,.settings,.native-guide){
+ border-width:0!important;border-radius:0!important;outline:none;
+}
+html body #app.app .action{font:800 12px/1.2 'Native UI',sans-serif;padding:8px;min-height:48px}
+html body #app.app .action small{font-size:12px;line-height:1.2}
+html body #app.app :is(.action,.close,.settings):focus-visible{outline:none!important}
+html body.keyboard-navigation #app.app :is(.action,.close,.settings):focus-visible{outline:2px solid #d8a644!important;outline-offset:2px}
+
+/* Persistent stall and native Home anchors. */
+html body #app.app .world .settings{left:8px;top:8px;width:48px;height:48px;padding:8px!important;border-image-width:8.75px 7.6667px!important}
+html body #app.app .world .settings svg{width:32px;height:32px}
+html body #app.app .world .cash{font-size:31.1px}
+html body #app.app .world .shop-title{top:24%;font-size:16px}
+html body #app.app .world .counter-message{color:#f6d590;font-size:7px;font-weight:800}
+html body #app.app .home-next{
+ display:block;padding:0;color:#164b80;border:0;background:transparent;
+ border-image:url('assets/buttons/folk-ivory.png') 105 92 fill / 6.5625px 5.75px stretch;
+}
+.home-next-action{position:absolute;inset:0 48px 0 0;width:calc(100% - 48px);border:0;background:transparent;color:inherit;padding:0;text-align:left}
+.home-next-action>.game-icon{position:absolute;left:8.5px;top:10%;width:35.7px;height:80%}
+.home-next-copy{position:absolute;left:51px;top:0;right:4px;height:100%}
+.home-next-copy small{position:absolute;left:0;top:5%;height:35%;font:800 8px/1.1 'Native UI';color:#556f80;letter-spacing:0;display:flex;align-items:center}
+.home-next-copy strong{position:absolute;left:0;top:39%;height:49%;font:800 11.9px/1.15 'Native UI';display:flex;align-items:center}
+.home-next-help{position:absolute;right:0;top:0;width:48px;height:48px;display:grid;place-items:center;border:0;background:none;color:#164b80;padding:0}
+.home-next-help>span{width:23px;height:23px;display:grid;place-items:center;border:2px solid currentColor;border-radius:50%;font:800 15px/1 'Native UI'}
+html body #app.app .classic-income{display:block;padding:0;position:absolute}
+html body #app.app .income-breakdown,html body #app.app .total-income{display:contents;border:0;padding:0}
+html body #app.app .classic-income :is(.automatic-income,.tap-income){display:contents}
+html body #app.app .classic-income small{letter-spacing:0}
+html body #app.app .automatic-income>small,html body #app.app .tap-income>small{position:absolute;left:3.5%;width:49.5%;height:21%;font:800 8px/1 'Native UI';display:flex;align-items:center}
+html body #app.app .automatic-income>small{top:6%}
+html body #app.app .tap-income>small{top:47%}
+html body #app.app .automatic-income>strong,html body #app.app .tap-income>strong{position:absolute;left:3.5%;width:49.5%;height:27%;font:800 15px/1 'Native UI';display:flex;align-items:center}
+html body #app.app .automatic-income>strong{top:24%;font-size:14.1px}
+html body #app.app .tap-income>strong{top:66%}
+html body #app.app .classic-income .income-unit{font-size:1em}
+html body #app.app .classic-income::after{content:'';position:absolute;left:54%;top:8%;width:.2%;height:84%;background:#c7bfa6}
+html body #app.app .income-total-heading{display:contents}
+html body #app.app .income-total-heading .earnings-icon{position:absolute;left:58%;top:15%;width:7%;height:28%}
+html body #app.app .income-total-heading>small{position:absolute;left:67%;top:13%;width:31%;height:30%;display:flex;align-items:center;font:800 7px/1 'Native UI'}
+html body #app.app .classic-income .total-income>strong{position:absolute;left:58%;top:42%;width:40%;height:46%;display:flex;align-items:center;font:800 21px/1 'Native UI'}
+html body #app.app .classic-skill>.skill-status{color:#556f80;font-size:8px;font-weight:800}
+html body #app.app .classic-skill .skill-disc{box-shadow:inset 0 0 0 1.5px #eee8d4,inset 0 0 0 3px #8b8c87,inset 0 0 5px 4px #142b40;background:#174c7b}
+html body #app.app .navigation button.has-notification::after,html body #app.app .player-icon.has-notification::after{content:'';display:block!important;position:absolute;inset:7px 7px auto auto!important;width:8px;height:8px;border:1px solid #8b263a;border-image:none!important;border-radius:50%;background:#d32438;pointer-events:none;transform:none!important;z-index:2}
+html body #app.app .player-icon.has-notification{position:relative}
+html body #app.app .player-icon.has-notification::after{inset:2px 2px auto auto!important;width:10px;height:10px}
+
+/* Main panels retain the stall, then use the saved 48-unit header and 7-unit content gaps. */
+html body #app.app .panel-head{position:relative;height:49px;min-height:49px;padding:0;border:0;background:#fff4db;box-shadow:none}
+html body #app.app .panel-head::before,html body #app.app .panel-head::after{display:none}
+html body #app.app .panel-head h1{position:absolute;left:3.5%;top:0;width:56.5%;height:48px;display:flex;align-items:center;padding:0;margin:0;font:700 24px/1 'Native Heading';border:0}
+html body #app.app .panel-head{background-image:linear-gradient(#164b80,#164b80);background-repeat:no-repeat;background-size:100% 2px;background-position:0 46px}
+html body #app.app .panel-head .panel-info{position:absolute;right:60px;top:0;width:48px;height:48px}
+html body #app.app .panel-head .collapse{position:absolute;right:8px;top:0;width:48px;height:48px;padding:6px;border:0;background:none;box-shadow:none}
+html body #app.app .panel-head .collapse svg{width:36px;height:36px;background:url('parity/assets/unity/collapse-chevron.png') center/contain no-repeat}
+html body #app.app .panel-head .collapse svg>use{display:none}
+html body #app.app .sheet-row{border:0;border-radius:0;box-shadow:none;border-image:url('parity/assets/surfaces/row-frame.png') 72 fill / 6px stretch}
+html body #app.app .sheet-row::before,html body #app.app .sheet-row::after{display:none}
+html body #app.app #panel-Player .sheet-row:not(.upgrade-row)>.row-copy{display:contents}
+html body #app.app #panel-Player .sheet-row:not(.upgrade-row)>.row-copy>h2{position:absolute;left:15%;top:10%;width:54%;height:40%;display:flex;align-items:center;margin:0;font:800 12px/1.2 'Native UI'}
+html body #app.app #panel-Player .sheet-row:not(.upgrade-row)>.row-copy>p{position:absolute;left:15%;top:52%;width:53%;height:35%;display:flex;align-items:center;margin:0;font:400 11px/1.2 'Native UI'}
+html body #app.app #panel-Player .sheet-row:not(.upgrade-row)>.row-action{left:70%;top:10%;width:28%;height:80%;padding:8px;min-height:0}
+html body #app.app #panel-Player .sheet-row:has([data-param=Prestige])>.row-copy>h2{top:5%;font-size:13px}
+html body #app.app #panel-Player .sheet-row:has([data-param=Prestige])>.row-copy>p{top:43%;height:49%;font-size:10px}
+html body #app.app #panel-Player .sheet-row:has([data-param=Prestige])>.row-action{top:15%;height:68%}
+html body #app.app .section-label{height:28px;padding:0;margin:0 0 7px;display:flex;align-items:center;justify-content:space-between;border:0;box-shadow:none}
+html body #app.app .section-label strong{font:700 17.45px/1 'Native Heading'}
+html body #app.app .section-label span{font:400 11px/1 'Native UI';color:#556f80}
+html body #app.app .panel .upgrade-row,html body #app.app .modal-body .upgrade-row{position:relative;display:block;height:70px;min-height:70px;padding:0!important;margin:0 0 7px;opacity:1}
+html body #app.app .upgrade-row .upgrade-icon{position:absolute;left:8px;top:17px;width:36px;height:36px;object-fit:contain}
+html body #app.app .upgrade-row .plain-detail{position:absolute;left:52px;right:110px;top:3px;width:auto;height:63px;min-width:0}
+html body #app.app .upgrade-row .plain-detail h2{height:30.6px;margin:0;font:800 12px/1.2 'Native UI';display:flex;align-items:center}
+html body #app.app .upgrade-row .plain-detail p{height:16.2px;margin:0;font:400 10px/16.2px 'Native UI';white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+html body #app.app .upgrade-row .detail-cue{display:block;height:16.2px;font:400 10px/16.2px 'Native UI';color:#164b80}
+html body #app.app .panel .upgrade-row .row-action,html body #app.app .modal-body .upgrade-row .row-action{position:absolute;inset:8px 10px auto auto;width:96px;height:54px;min-height:54px;margin:0;padding:8px}
+
+/* Saved popup shells, independent header/body/footer regions. */
+html body #app.app .modal-layer.unity-dialog{padding:18px 12px;box-sizing:border-box;background:#101b35b8}
+html body #app.app .unity-dialog .modal-card{
+ position:relative;inset:auto;display:block;width:100%;height:var(--dialog-height);min-height:0;max-height:100%;
+ padding:0;border:0;border-radius:3px;overflow:hidden;background:#f5ead2;box-shadow:none;color:#164b80;
+}
+html body #app.app .unity-dialog .modal-card::before{display:none}
+html body #app.app .unity-dialog.unity-framed .modal-card::before{
+ content:'';display:block;position:absolute;inset:-4px;z-index:4;border:0;
+ border-image:url('assets/popup-refresh/frame.png') 144 fill / 20px stretch;pointer-events:none;background:none;
+}
+html body #app.app .unity-dialog .modal-head{
+ position:absolute;inset:0 0 auto;height:var(--dialog-header);min-height:0;margin:0;padding:12px 74px;
+ display:flex;align-items:center;justify-content:center;flex:none;border:0;border-bottom:2px solid #e5cfa2;background:transparent;
+}
+html body #app.app .unity-dialog .modal-head::before,html body #app.app .unity-dialog .modal-head::after{display:none}
+html body #app.app .unity-dialog .modal-head>h2{
+ position:static;inset:auto;display:block;width:100%;height:auto;min-height:0;padding:0;margin:0;
+ font:var(--dialog-title-weight,400) var(--dialog-title-size,22px)/1.12 'Native Card Serif',serif;
+ text-align:center;white-space:normal;overflow-wrap:anywhere;background:none;border:0;border-image:none;box-shadow:none;color:#164b80;letter-spacing:var(--dialog-title-spacing,0);
+}
+html body #app.app .unity-dialog .close{
+ position:absolute;inset:22px 22px auto auto;z-index:6;width:48px;height:48px;min-width:0;min-height:0;
+ margin:0;padding:0!important;color:#fff4db!important;background:transparent!important;
+ border:0!important;border-image:url('assets/buttons/folk-blue.png') 105 92 fill / 6.5625px 5.75px stretch!important;
+ border-radius:0!important;box-shadow:none!important;display:grid;place-items:center;
+}
+html body #app.app .close>span{font:800 23.45px/1 'Native UI';display:grid;place-items:center;width:100%;height:100%}
+html body #app.app .unity-dialog .popup-info{position:absolute;left:12px;top:20px;z-index:6}
+html body #app.app .unity-dialog .modal-body{
+ position:absolute;left:var(--body-left);top:var(--body-top);right:var(--body-right);bottom:var(--body-bottom);
+ display:flex;flex-direction:column;gap:7px;padding:7px 9px 12px;min-height:0;height:auto;
+ overflow:auto;background:transparent;font:400 12px/1.36 'Native UI';scrollbar-width:thin;scrollbar-color:#b8a273 transparent;
+}
+html body #app.app .unity-dialog .modal-body>*{flex-shrink:0}
+html body #app.app .unity-dialog .modal-footer{
+ position:absolute;left:12px;right:12px;bottom:10px;display:flex;flex-direction:column-reverse;
+ gap:6px;padding:0;margin:0;border:0;background:transparent;
+}
+html body #app.app .unity-dialog .modal-footer:empty{display:none}
+html body #app.app .unity-dialog .modal-footer>.action{height:48px;min-height:48px;margin:0;width:100%;flex:none}
+html body #app.app .unity-dialog .modal-body>.native-guide{height:56px;min-height:56px;position:relative;inset:auto;margin:0}
+html body #app.app .unity-dialog .info-card{
+ box-sizing:border-box;display:block;position:relative;min-height:var(--note-height,70px);height:var(--note-height,auto);
+ padding:32px 12px 12px;margin:0;flex:none;border:0;border-radius:0;box-shadow:none;background:transparent;
+ border-image:url('parity/assets/unity/note.png') 18 fill / 18px stretch;
+ color:#164b80;font:400 12px/1.36 'Native UI';
+}
+html body #app.app .unity-dialog .info-card>h3{
+ position:absolute;left:0;right:0;top:0;width:auto;height:30px;padding:0;margin:0;
+ display:flex;align-items:center;justify-content:center;text-align:center;font:400 16px/1.15 'Native Card Serif'!important;letter-spacing:0;
+}
+html body #app.app .unity-dialog .info-card p{margin:0;padding:0;font:400 12px/1.36 'Native UI';color:#164b80}
+.unity-emblem{position:relative;height:68px;display:grid;place-items:center}
+.unity-emblem>img{width:62px;height:62px;object-fit:contain}
+html body #app.app .unity-name-help{height:24px;margin:0;padding:0;text-align:center;color:#556f80;font:400 10px/24px 'Native UI'}
+html body #app.app .unity-dialog .name-input{width:100%;height:52px;margin:0;padding:8px;font:400 14px 'Native UI';border:1px solid #d5b268;border-radius:5px;color:#164b80;background:#fff9ec}
+.unity-guidance-topic{height:60px;padding:8px;text-align:center;font:400 20px/1.2 'Native Card Serif';display:grid;place-items:center}
+.unity-guidance-copy{min-height:133.13px;padding:10px 8px;font:400 14px/1.36 'Native UI';white-space:pre-line}
+
+/* Settings uses the same 76-unit rows, 60-unit links and imported faces as saved Bootstrap/Main. */
+html body #app.app .unity-dialog[data-screen=Settings] .modal-body{padding:7px 9px 12px;gap:7px}
+html body #app.app .unity-dialog .settings-row{position:relative;display:block;height:76px;min-height:76px;margin:0;padding:0;border:0;border-bottom:1px solid #e5cfa2;border-radius:0;background:none}
+html body #app.app .unity-dialog .settings-row>.settings-symbol{position:absolute;left:7px;top:19px;width:38px;height:38px}
+html body #app.app .settings-symbol{border:2px solid #5a533b;box-shadow:inset 0 0 0 1px #bca66d;background:#194f7c}
+html body #app.app .settings-symbol>img{padding:4px}
+html body #app.app .unity-dialog .settings-row>.settings-symbol+div{position:absolute;left:18%;top:5%;width:53%;height:85%;padding:0}
+html body #app.app .unity-dialog .settings-row h3{display:flex;align-items:center;height:38px;padding:0;margin:0;font:400 18px/1.15 'Native Card Serif'!important}
+html body #app.app .unity-dialog .settings-row p{height:26.6px;display:flex;align-items:center;font:400 11px/1.2 'Native UI';color:#556f80;margin:0}
+html body #app.app .unity-dialog .settings-row .toggle{position:absolute;left:auto;right:4px;top:14px;width:74px;height:48px;padding:6px 0;min-width:0;min-height:0;border:0;border-image:none!important;background:none!important;box-shadow:none}
+html body #app.app .setting-switch-track{width:74px;height:36px;border:1px solid #b18b44;border-radius:18px;box-shadow:none}
+html body #app.app .setting-switch-thumb{left:3px;top:5px;width:25px;height:25px;border:1px solid #6d5c36;background:#f5ead2;box-shadow:inset 0 0 0 1px #b6a379,0 0 1px 1px #263d44}
+html body #app.app .settings-row .toggle[aria-checked=true] .setting-switch-thumb{transform:translateX(42px)}
+html body #app.app .setting-switch-state{font:800 10px/1 'Native UI'}
+html body #app.app .unity-dialog[data-screen=Settings] .modal-body>[data-action=Navigate],html body #app.app .unity-dialog[data-screen=Settings] .modal-body>[data-action=AdPrivacyOptions]{
+ position:relative;display:block;width:100%;height:60px;min-height:60px;margin:0;padding:0;font:800 12px/1.2 'Native UI';color:#164b80!important;
+}
+html body #app.app .settings-link>.settings-symbol{position:absolute;left:7px;top:11px;width:38px;height:38px}
+html body #app.app .settings-link>.settings-label{position:absolute;left:20%;top:10%;width:70%;height:80%;display:flex;align-items:center}
+html body #app.app .settings-link>.settings-chevron{position:absolute;left:90%;top:0;width:8%;height:100%;display:flex;align-items:center;justify-content:center;font-size:0;color:#164b80}
+html body #app.app .settings-link>.settings-chevron::after{content:'';width:5px;height:5px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor;transform:rotate(45deg)}
+html body #app.app [data-screen=Settings] [data-param=DeveloperReset]{text-align:left;padding-left:20%!important}
+html body #app.app [data-screen=Settings] [data-param=DeveloperReset]::after{content:'›';position:absolute;right:6%;font:400 20px 'Native UI'}
+
+/* Native statistics ledger: illustration column plus five 25-unit value rows. */
+html body #app.app .unity-dialog[data-screen=Statistics] .modal-body{padding:4px 6px;gap:10px}
+html body #app.app .unity-dialog .popup-ledger{padding:0;border-image:url('parity/assets/unity/skills-list-row.png') 48 fill / 12px stretch}
+html body #app.app .unity-dialog .popup-ledger>h3{top:8px;height:28px}
+html body #app.app .popup-ledger>.popup-ledger-art{position:absolute;left:12px;top:74px;width:42px;height:52px;object-fit:contain}
+html body #app.app .popup-ledger dl{position:absolute;left:66px;right:12px;top:38px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0;margin:0;font:400 10px/25px 'Native UI'}
+html body #app.app .popup-ledger dt,html body #app.app .popup-ledger dd{height:25px;margin:0;padding:0;border:0;font:400 10px/25px 'Native UI'}
+html body #app.app .popup-ledger dd{text-align:right;overflow-wrap:normal;max-width:none}
+html body #app.app .popup-ledger>p{position:absolute;left:66px;right:12px;top:44px;font:400 10px/1.4 'Native UI'}
+html body #app.app .popup-ledger:last-child>.popup-ledger-art{top:52px}
+
+/* Native product overview: retained portrait and both progress cards, in logical units. */
+html body #app.app .unity-dialog[data-screen=ProductDetail]{padding:10.5px 9px}
+html body #app.app [data-screen=ProductDetail] .modal-head{padding:6px 55.5px;border:0}
+html body #app.app [data-screen=ProductDetail] .modal-head::after{content:'';display:block;position:absolute;left:calc(50% - 5.25px);bottom:-4.5px;width:10.5px;height:9px;background:url('parity/assets/unity/product-flower.png') center/contain no-repeat;z-index:5}
+html body #app.app [data-screen=ProductDetail] .modal-card{background:#fff3d8 url('parity/assets/unity/product-paper.png') repeat;background-size:135px}
+html body #app.app [data-screen=ProductDetail] .close{inset:10.5px 10.5px auto auto;width:48px;height:48px;border-image:none!important}
+html body #app.app [data-screen=ProductDetail] .close::before{content:'';display:block!important;position:absolute;inset:6px;border:0;border-image:url('assets/buttons/folk-blue.png') 105 92 fill / 6.5625px 5.75px stretch;pointer-events:none}
+html body #app.app [data-screen=ProductDetail] .close>span{position:relative;z-index:1}
+html body #app.app [data-screen=ProductDetail] .popup-info{left:10.5px;top:10.5px;width:48px;height:48px;min-width:48px;min-height:48px}
+html body #app.app [data-screen=ProductDetail] .popup-info>span{width:17.25px;height:17.25px;min-width:0;min-height:0;border-width:1.5px;font-size:12px}
+html body #app.app [data-screen=ProductDetail] .modal-body{display:block;padding:11px 9px 18px}
+html body #app.app .product-overview-identity{display:grid;grid-template-columns:82.5px minmax(0,1fr);gap:13.5px;height:82.5px;margin:0 0 12px}
+html body #app.app .product-overview-art{position:static;width:82.5px;height:82.5px;padding:12px;border:0;border-radius:0;box-shadow:none;background:url('parity/assets/unity/product-portrait.png') center/contain no-repeat}
+html body #app.app .product-overview-identity>div+div{position:relative;height:82.5px;inset:auto;width:auto}
+html body #app.app .product-overview-identity h3{position:absolute;inset:11.25px 0 auto;height:19.8px;display:flex;align-items:center;margin:0;font:700 18px/1.1 'Native Card Serif';letter-spacing:.03em}
+html body #app.app .product-overview-level{position:absolute;inset:37.125px 0 auto;height:17.1px;display:flex;align-items:center;margin:0;font:800 14.25px/1.2 'Native UI';color:#5b6871;gap:4px}
+html body #app.app .product-overview-level strong{color:inherit}
+html body #app.app .product-overview-subtitle{position:absolute;inset:59.25px 0 auto;height:12px;margin:0;font:800 9px/12px 'Native UI';color:#63788a}
+html body #app.app .product-overview-earnings{display:block;height:15.75px;margin:0 0 10.5px;font:700 10.5px/15.75px 'Native Card Serif';letter-spacing:.04em;text-align:center;color:#48633a}
+html body #app.app .product-overview-card{box-sizing:border-box;display:block;height:121.9px;min-height:121.9px;padding:11px;margin:0 0 9px;border:0;border-radius:0;box-shadow:none;background:transparent;border-image:url('parity/assets/unity/product-card.png') 16 fill / 8px stretch}
+html body #app.app .product-overview-card h3{position:static;display:block;height:17.25px;margin:0 0 9px;font:700 14.25px/17.25px 'Native Card Serif';letter-spacing:.04em;text-align:center;color:#164b80}
+html body #app.app .product-overview-progress{height:19.5px;min-height:0;margin:0 0 7.5px;padding:0;border:1.5px solid #a98b47;border-radius:3.75px;background:#375e67;overflow:hidden}
+html body #app.app .product-overview-progress strong{font:800 9px/1 'Native UI';padding:0 5.25px}
+html body #app.app .product-overview-card>.product-overview-reward{display:block;height:13.65px;margin:0 0 6px;font:800 10.5px/13.65px 'Native UI';text-align:center;color:#556f80}
+html body #app.app .product-overview-card>.product-overview-explanation{height:auto;min-height:27px;margin:0;padding:0;border:0;border-image:none;font:400 9px/13.5px 'Native UI';color:#164b80}
+
+/* Skills use their saved plain gold shell rather than the general painted frame. */
+html body #app.app .unity-dialog:is([data-screen=Skills],[data-screen=SkillDetail]) .modal-card{background:#fff4db;border:0;border-radius:8px;box-shadow:inset 0 0 0 1px #c69843}
+html body #app.app [data-screen=Skills] .modal-head{border:0;padding:12px 74px 36px}
+html body #app.app [data-screen=Skills] .skills-subtitle{position:absolute;left:12px;right:12px;bottom:10px;margin:0;height:16px;font:400 11px/16px 'Native UI';color:#52708b}
+html body #app.app [data-screen=Skills] .modal-body{display:block;padding:4px 6px}
+html body #app.app .skills-quick-list{display:grid;gap:10px}
+html body #app.app .skill-quick-row{position:relative;display:block;height:113px;min-height:113px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;border-image:url('parity/assets/unity/skills-list-row.png') 48 fill / 12px stretch}
+html body #app.app .skill-quick-row::before,html body #app.app .skill-quick-row::after{display:none}
+html body #app.app .skill-portrait{position:absolute;left:8px;top:31px;width:51px;height:51px;padding:6px;box-shadow:none;background:#174c7b;border:2px solid #d4b45e}
+html body #app.app .skill-portrait,html body #app.app .skill-hero-art{box-shadow:inset 0 0 0 1.5px #eee8d4,inset 0 0 0 3px #898b86,inset 0 0 5px 4px #142b40}
+html body #app.app .skill-quick-row[data-skill-index="1"] .skill-portrait,html body #app.app .skill-quick-row[data-skill-index="2"] .skill-portrait{background:#e6ca7e}
+html body #app.app .skill-hero[data-skill-hero="1"] .skill-hero-art,html body #app.app .skill-hero[data-skill-hero="2"] .skill-hero-art{background:#e6ca7e}
+html body #app.app .skill-row-copy{position:absolute;left:66px;top:0;width:152px;height:100%}
+html body #app.app .skill-row-copy h3{position:absolute;left:0;top:9px;height:20px;margin:0;font:800 14px/20px 'Native UI'}
+html body #app.app .skill-row-copy .skill-row-state{position:absolute;left:0;top:32px;height:15px;margin:0;padding:0 4px;font:800 8px/15px 'Native UI'}
+html body #app.app .skill-row-copy .skill-effect{position:absolute;left:0;top:50px;height:32px;margin:0;font:400 10px/1.3 'Native UI'}
+html body #app.app .skill-row-copy .skill-timing{position:absolute;left:0;top:86px;width:233px;height:17px;margin:0;font:400 8px/17px 'Native UI';white-space:nowrap;color:#52708b}
+html body #app.app .skill-row-actions{position:absolute;right:7px;top:8px;width:76px;display:flex;flex-direction:column;gap:0}
+html body #app.app .skill-row-actions .action{width:76px;height:48px;min-height:48px}
+html body #app.app .skill-row-actions .skill-details{height:48px;min-height:48px;font:800 10px/48px 'Native UI';padding:0;margin:0}
+html body #app.app .skills-reset-note{height:30px;margin:10px 0 0;font:400 9px/30px 'Native UI';text-align:center;color:#52708b}
+html body #app.app [data-screen=SkillDetail] .modal-body{padding:7px 9px 12px;gap:0}
+html body #app.app .skill-hero{display:block;padding:0;width:100%}
+html body #app.app .skill-hero-art{width:128px;height:128px;margin:1.6px auto 11.4px;padding:10px;border:3px solid #ffd061;box-shadow:none;background:#174c7b}
+html body #app.app .skill-hero-status{height:23px;padding:0;margin:0 0 7px;border:0;background:none;line-height:23px;font-size:12px;color:#c69843}
+html body #app.app .skill-hero-effects{height:106px;margin:0 0 7px;gap:6.12px}
+html body #app.app .skill-effect-tile{position:relative;height:106px;min-height:0;padding:0;border:0;border-radius:0;background:transparent;border-image:url('parity/assets/unity/note.png') 18 fill / 18px stretch}
+html body #app.app .skill-effect-tile>.game-icon{position:absolute;left:39%;top:6%;width:22%;height:29%}
+html body #app.app .skill-effect-tile strong{position:absolute;left:4%;top:35%;width:92%;height:34%;display:flex;align-items:center;justify-content:center;font:800 24px/1.1 'Native UI'}
+html body #app.app .skill-effect-tile>span{position:absolute;left:4%;top:72%;width:92%;height:23%;font:400 10px/1.2 'Native UI';color:#556f80}
+html body #app.app .skill-effect-tile>small{display:none}
+html body #app.app .skill-hero-timing{height:50px;min-height:50px;margin:0 0 7px;padding:5px 6px;border:0;border-radius:0;background:none;border-image:url('parity/assets/unity/note.png') 18 fill / 18px stretch}
+html body #app.app .skill-hero-timing strong{font-size:20px}
+html body #app.app .skill-hero-note{height:34px;min-height:34px;margin:0;font:400 9px/1.3 'Native UI'}
+
+/* Card aspect fitting uses canvas units, never the unscaled browser viewport. */
+html body #app.app .modal-layer[data-screen=CardDetail] .modal-card{width:min(100%,calc((var(--logical-height) - 64px) * .65));aspect-ratio:.65}
+html body #app.app .full-card-heading h3{font-weight:400}
+html body #app.app .appearance-row,html body #app.app .appearance-decoration{height:72px;position:relative;margin:0;border:0;border-image:url('parity/assets/surfaces/row-frame.png') 72 fill / 6px stretch}
+html body #app.app .appearance-row img,html body #app.app .appearance-decoration img{position:absolute;left:8px;top:8px;width:54px;height:56px;object-fit:contain}
+html body #app.app .appearance-row p,html body #app.app .appearance-decoration p{position:absolute;left:25%;top:10%;width:71%;height:80%;display:flex;align-items:center;margin:0;font:400 12px/1.3 'Native UI'}
+html body #app.app .appearance-decoration{height:68px}
+html body #app.app .appearance-decoration img{height:52px}
+html body #app.app [data-screen=DrawReveal] .pull-progress{height:24px;min-height:24px;margin:0;display:grid;place-items:center;font-size:12px}
+html body #app.app [data-screen=DrawReveal] .flip-stage{height:250px;min-height:250px;width:60%;margin:0 auto;flex:none}
+html body #app.app [data-screen=DrawReveal] .flip-result{height:105px;min-height:105px;margin:0}
+
+

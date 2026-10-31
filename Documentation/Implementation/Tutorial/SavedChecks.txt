@@ -1,0 +1,24 @@
+PASS All tutorial references survive scene reload
+PASS Transient tutorial layers are saved inactive
+PASS Complete existing legacy presentation remains inactive
+PASS Saved default panel is Home
+PASS Tutorial buttons retain authored navigation policy
+PASS All existing and added TMP material slots are preplaced
+PASS Approved hand import and opaque-fingertip pivot survive serialization
+PASS Production CanvasScaler remains 360x640 width match
+PASS Authored dialogue fits (360, 640) full safe area
+PASS Edit Mode live copy fits (360, 640)
+PASS Authored dialogue fits (360, 640) simulated notch
+PASS Edit Mode live copy fits (360, 640) notch
+PASS Authored dialogue fits (390, 844) full safe area
+PASS Edit Mode live copy fits (390, 844)
+PASS Authored dialogue fits (390, 844) simulated notch
+PASS Edit Mode live copy fits (390, 844) notch
+PASS Authored dialogue fits (360, 540) full safe area
+PASS Edit Mode live copy fits (360, 540)
+PASS Authored dialogue fits (360, 540) simulated notch
+PASS Edit Mode live copy fits (360, 540) notch
+PASS Authored dialogue fits (440, 884) full safe area
+PASS Edit Mode live copy fits (440, 884)
+PASS Authored dialogue fits (440, 884) simulated notch
+PASS Edit Mode live copy fits (440, 884) notch

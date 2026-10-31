@@ -1,0 +1,4415 @@
+{
+  "revision": 1,
+  "states": [
+    {
+      "id": "01-welcome",
+      "width": 390,
+      "height": 844,
+      "controls": 12,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹0",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 25,
+          "y": 447,
+          "text": "NEXT STEP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 466,
+          "text": "Train Salesmanship",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 484,
+          "text": "₹0 / ₹10 · tap the counter",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 308,
+          "y": 470,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 347,
+          "y": 469,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 612,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 25,
+          "y": 638,
+          "text": "₹0/sec",
+          "size": 22,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 185
+        },
+        {
+          "x": 229,
+          "y": 612,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 229,
+          "y": 638,
+          "text": "₹1",
+          "size": 23,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 25,
+          "y": 673,
+          "text": "Products earn automatically",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 229,
+          "y": 673,
+          "text": "Tap the counter",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 145
+        },
+        {
+          "x": 65,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 65,
+          "y": 765,
+          "text": "Festival Rush",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 195,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 195,
+          "y": 765,
+          "text": "Helping Hands",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 325,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 325,
+          "y": 765,
+          "text": "Bulk Order",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 28,
+          "y": 184,
+          "text": "Let’s open your stall!",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 209,
+          "text": "Tap the counter to earn rupees.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 229,
+          "text": "Then we’ll improve your sales pitch.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 105,
+          "y": 293,
+          "text": "Let’s start",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 138
+        },
+        {
+          "x": 276,
+          "y": 293,
+          "text": "Skip tutorial",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 156
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 430,
+          "w": 310,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 323,
+          "y": 440,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 40,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 170,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 300,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "tutorial-continue",
+          "x": 28,
+          "y": 264,
+          "w": 154,
+          "h": 48
+        },
+        {
+          "id": "skip-tutorial",
+          "x": 190,
+          "y": 264,
+          "w": 172,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "id": "02-saving",
+      "width": 390,
+      "height": 844,
+      "controls": 10,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹6",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 25,
+          "y": 447,
+          "text": "NEXT STEP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 466,
+          "text": "Train Salesmanship",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 484,
+          "text": "₹6 / ₹10 · tap the counter",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 308,
+          "y": 470,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 347,
+          "y": 469,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 612,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 25,
+          "y": 638,
+          "text": "₹0/sec",
+          "size": 22,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 185
+        },
+        {
+          "x": 229,
+          "y": 612,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 229,
+          "y": 638,
+          "text": "₹1",
+          "size": 23,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 25,
+          "y": 673,
+          "text": "Products earn automatically",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 229,
+          "y": 673,
+          "text": "Tap the counter",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 145
+        },
+        {
+          "x": 65,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 65,
+          "y": 765,
+          "text": "Festival Rush",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 195,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 195,
+          "y": 765,
+          "text": "Helping Hands",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 325,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 325,
+          "y": 765,
+          "text": "Bulk Order",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 37,
+          "y": 371,
+          "text": "+₹1 per tap",
+          "size": 11,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 250
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 430,
+          "w": 310,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 323,
+          "y": 440,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 40,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 170,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 300,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        }
+      ]
+    },
+    {
+      "id": "03-salesmanship",
+      "width": 390,
+      "height": 844,
+      "controls": 10,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹10",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 18,
+          "y": 456,
+          "text": "Player",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 300
+        },
+        {
+          "x": 348,
+          "y": 459,
+          "text": "⌄",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 72.33333333333334,
+          "y": 512,
+          "text": "Stats",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 100.66666666666667
+        },
+        {
+          "x": 194.00000000000003,
+          "y": 512,
+          "text": "Skills",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 100.66666666666667
+        },
+        {
+          "x": 315.6666666666667,
+          "y": 512,
+          "text": "Achievements",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 100.66666666666667
+        },
+        {
+          "x": 26,
+          "y": 568,
+          "text": "Train once to earn more per tap.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 586,
+          "text": "You can still explore every screen.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 639,
+          "text": "Salesmanship · Lvl 0",
+          "size": 12,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 660,
+          "text": "₹1 → ₹2.40 per tap",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 677,
+          "text": "First level · ₹10",
+          "size": 10,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 315,
+          "y": 657,
+          "text": "Train · ₹10",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 82
+        },
+        {
+          "x": 18,
+          "y": 719,
+          "text": "Upgrades",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 18,
+          "y": 740,
+          "text": "More improvements become useful as you grow.",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "collapse-panel",
+          "x": 324,
+          "y": 430,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "toolbar-Stats",
+          "x": 14,
+          "y": 483,
+          "w": 116.66666666666667,
+          "h": 48
+        },
+        {
+          "id": "toolbar-Skills",
+          "x": 135.66666666666669,
+          "y": 483,
+          "w": 116.66666666666667,
+          "h": 48
+        },
+        {
+          "id": "toolbar-Achievements",
+          "x": 257.33333333333337,
+          "y": 483,
+          "w": 116.66666666666667,
+          "h": 48
+        },
+        {
+          "id": "buy-training",
+          "x": 266,
+          "y": 628,
+          "w": 98,
+          "h": 48
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        }
+      ]
+    },
+    {
+      "id": "04-training-result",
+      "width": 390,
+      "height": 844,
+      "controls": 12,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹0",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 25,
+          "y": 447,
+          "text": "NEXT STEP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 466,
+          "text": "Stock Phuljhari",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 484,
+          "text": "Save ₹30 · earn automatically",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 308,
+          "y": 470,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 347,
+          "y": 469,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 612,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 25,
+          "y": 638,
+          "text": "₹0/sec",
+          "size": 22,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 185
+        },
+        {
+          "x": 229,
+          "y": 612,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 229,
+          "y": 638,
+          "text": "₹2.40",
+          "size": 23,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 25,
+          "y": 673,
+          "text": "Products earn automatically",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 229,
+          "y": 673,
+          "text": "Tap the counter",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 145
+        },
+        {
+          "x": 65,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 65,
+          "y": 765,
+          "text": "Festival Rush",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 195,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 195,
+          "y": 765,
+          "text": "Helping Hands",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 325,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 325,
+          "y": 765,
+          "text": "Bulk Order",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 28,
+          "y": 184,
+          "text": "Your taps just got better!",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 209,
+          "text": "You now earn ₹2.40 per tap,",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 229,
+          "text": "up from ₹1. Next, stock Phuljhari.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 105,
+          "y": 293,
+          "text": "Got it",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 138
+        },
+        {
+          "x": 276,
+          "y": 293,
+          "text": "Skip tutorial",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 156
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 430,
+          "w": 310,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 323,
+          "y": 440,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 40,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 170,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 300,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "tutorial-continue",
+          "x": 28,
+          "y": 264,
+          "w": 154,
+          "h": 48
+        },
+        {
+          "id": "skip-tutorial",
+          "x": 190,
+          "y": 264,
+          "w": 172,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "id": "05-first-product",
+      "width": 390,
+      "height": 844,
+      "controls": 8,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹30",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 18,
+          "y": 456,
+          "text": "Products",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 300
+        },
+        {
+          "x": 348,
+          "y": 459,
+          "text": "⌄",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 18,
+          "y": 506,
+          "text": "Automatic sales · ₹0/sec",
+          "size": 12,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 26,
+          "y": 549,
+          "text": "Stock Phuljhari to earn automatically.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 567,
+          "text": "It earns ₹0.85 every second.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 620,
+          "text": "Phuljhari · not stocked",
+          "size": 12,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 641,
+          "text": "Automatic sales · ₹0.85/sec",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 658,
+          "text": "First product · ₹30",
+          "size": 10,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 315,
+          "y": 638,
+          "text": "Stock · ₹30",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 82
+        },
+        {
+          "x": 26,
+          "y": 708,
+          "text": "Anar · locked",
+          "size": 12,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 729,
+          "text": "Stock Phuljhari first",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 746,
+          "text": "Next display",
+          "size": 10,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 315,
+          "y": 726,
+          "text": "View",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 82
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "collapse-panel",
+          "x": 324,
+          "y": 430,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "stock-product",
+          "x": 266,
+          "y": 609,
+          "w": 98,
+          "h": 48
+        },
+        {
+          "id": "next-product",
+          "x": 266,
+          "y": 697,
+          "w": 98,
+          "h": 48
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        }
+      ]
+    },
+    {
+      "id": "06-first-upgrade",
+      "width": 390,
+      "height": 844,
+      "controls": 8,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹20",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 18,
+          "y": 456,
+          "text": "Player",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 300
+        },
+        {
+          "x": 348,
+          "y": 459,
+          "text": "⌄",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 26,
+          "y": 515,
+          "text": "Salesmanship · Lvl 1",
+          "size": 12,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 536,
+          "text": "₹2.40 per tap",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 553,
+          "text": "You already trained once",
+          "size": 10,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 315,
+          "y": 533,
+          "text": "Train",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 82
+        },
+        {
+          "x": 18,
+          "y": 593,
+          "text": "Upgrades",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 26,
+          "y": 631,
+          "text": "Improve a product you already own.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 649,
+          "text": "Phuljhari: ₹0.85 → ₹1.70/sec.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 703,
+          "text": "Phuljhari Signature I",
+          "size": 12,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 724,
+          "text": "Phuljhari profit ×2",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 26,
+          "y": 741,
+          "text": "One-time upgrade this run · ₹20",
+          "size": 10,
+          "weight": 600,
+          "anchor": "start",
+          "maxWidth": 230
+        },
+        {
+          "x": 315,
+          "y": 721,
+          "text": "Buy · ₹20",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 82
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "collapse-panel",
+          "x": 324,
+          "y": 430,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "training-row",
+          "x": 266,
+          "y": 504,
+          "w": 98,
+          "h": 48
+        },
+        {
+          "id": "buy-upgrade",
+          "x": 266,
+          "y": 692,
+          "w": 98,
+          "h": 48
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        }
+      ]
+    },
+    {
+      "id": "07-achievement",
+      "width": 390,
+      "height": 844,
+      "controls": 12,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹18K",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 25,
+          "y": 447,
+          "text": "REWARD READY",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 466,
+          "text": "Claim Open for business",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 484,
+          "text": "+5 Kaju Katli · reward ready",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 308,
+          "y": 470,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 347,
+          "y": 469,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 612,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 25,
+          "y": 638,
+          "text": "₹22.42/sec",
+          "size": 22,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 185
+        },
+        {
+          "x": 229,
+          "y": 612,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 229,
+          "y": 638,
+          "text": "₹2.40",
+          "size": 23,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 25,
+          "y": 673,
+          "text": "Products earn automatically",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 229,
+          "y": 673,
+          "text": "Tap the counter",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 145
+        },
+        {
+          "x": 65,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 65,
+          "y": 765,
+          "text": "Festival Rush",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 195,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 195,
+          "y": 765,
+          "text": "Helping Hands",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 325,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 325,
+          "y": 765,
+          "text": "Bulk Order",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 28,
+          "y": 184,
+          "text": "Your first achievement!",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 209,
+          "text": "You stocked 4 different products.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 229,
+          "text": "Collect your +5 Kaju Katli reward.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 105,
+          "y": 293,
+          "text": "Show reward",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 138
+        },
+        {
+          "x": 276,
+          "y": 293,
+          "text": "Skip tutorial",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 156
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 430,
+          "w": 310,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 323,
+          "y": 440,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 40,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 170,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 300,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "tutorial-continue",
+          "x": 28,
+          "y": 264,
+          "w": 154,
+          "h": 48
+        },
+        {
+          "id": "skip-tutorial",
+          "x": 190,
+          "y": 264,
+          "w": 172,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "id": "08-prestige",
+      "width": 390,
+      "height": 844,
+      "controls": 12,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹1.26M",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 25,
+          "y": 447,
+          "text": "PRESTIGE READY",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 466,
+          "text": "View your first prestige",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 25,
+          "y": 484,
+          "text": "Review resets, Fame and 3 free pulls",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 285
+        },
+        {
+          "x": 308,
+          "y": 470,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 347,
+          "y": 469,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 612,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 25,
+          "y": 638,
+          "text": "₹11.65K/sec",
+          "size": 22,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 185
+        },
+        {
+          "x": 229,
+          "y": 612,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 229,
+          "y": 638,
+          "text": "₹1.65K",
+          "size": 23,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 139
+        },
+        {
+          "x": 25,
+          "y": 673,
+          "text": "Products earn automatically",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 181
+        },
+        {
+          "x": 229,
+          "y": 673,
+          "text": "Tap the counter",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 145
+        },
+        {
+          "x": 65,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 65,
+          "y": 765,
+          "text": "Festival Rush",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 195,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 195,
+          "y": 765,
+          "text": "Helping Hands",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 325,
+          "y": 731,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 325,
+          "y": 765,
+          "text": "Bulk Order",
+          "size": 10,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 123
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 28,
+          "y": 184,
+          "text": "Ready for a brighter start?",
+          "size": 16,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 209,
+          "text": "Prestige earns Fame and free pulls.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 28,
+          "y": 229,
+          "text": "Review what resets and what stays.",
+          "size": 13,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 322
+        },
+        {
+          "x": 105,
+          "y": 293,
+          "text": "View prestige",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 138
+        },
+        {
+          "x": 276,
+          "y": 293,
+          "text": "Skip tutorial",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 156
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 430,
+          "w": 310,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 323,
+          "y": 440,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 40,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 170,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 300,
+          "y": 705,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "tutorial-continue",
+          "x": 28,
+          "y": 264,
+          "w": 154,
+          "h": 48
+        },
+        {
+          "id": "skip-tutorial",
+          "x": 190,
+          "y": 264,
+          "w": 172,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "id": "09-free-pull",
+      "width": 390,
+      "height": 844,
+      "controls": 8,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 46,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 207,
+          "y": 44,
+          "text": "₹30",
+          "size": 29,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 207,
+          "y": 65,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 230
+        },
+        {
+          "x": 195,
+          "y": 120,
+          "text": "DIWALI DUKAAN",
+          "size": 14,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 318
+        },
+        {
+          "x": 64.75,
+          "y": 225,
+          "text": "Phuljhari",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 225,
+          "text": "Anar",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 225,
+          "text": "Chakri",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 225,
+          "text": "Rockets",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 64.75,
+          "y": 310,
+          "text": "Crackers",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 148.25,
+          "y": 310,
+          "text": "Strings",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 231.75,
+          "y": 310,
+          "text": "Aerial shots",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 315.25,
+          "y": 310,
+          "text": "Gift boxes",
+          "size": 9,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 75.5
+        },
+        {
+          "x": 35,
+          "y": 355,
+          "text": "TAP COUNTER",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 280
+        },
+        {
+          "x": 35,
+          "y": 395,
+          "text": "Tap to earn · no stock depletion",
+          "size": 10,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 295
+        },
+        {
+          "x": 18,
+          "y": 456,
+          "text": "Legacy",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 300
+        },
+        {
+          "x": 348,
+          "y": 459,
+          "text": "⌄",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 18,
+          "y": 508,
+          "text": "3 free pulls available",
+          "size": 17,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 18,
+          "y": 529,
+          "text": "Earned from your first prestige",
+          "size": 11,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 26,
+          "y": 572,
+          "text": "Use one free pull to discover a Talent card.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 26,
+          "y": 590,
+          "text": "Its benefit stays with you after prestige.",
+          "size": 12,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 338
+        },
+        {
+          "x": 123.36000000000001,
+          "y": 657,
+          "text": "1× pull · FREE",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 186.72000000000003
+        },
+        {
+          "x": 299.6,
+          "y": 657,
+          "text": "5× · 400 KK",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 106.32
+        },
+        {
+          "x": 18,
+          "y": 712,
+          "text": "Talent collection · 0 / 28",
+          "size": 14,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 18,
+          "y": 735,
+          "text": "After the reveal: explain this card’s actual benefit.",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 352
+        },
+        {
+          "x": 51.75,
+          "y": 824,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 145.25,
+          "y": 824,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 238.75,
+          "y": 824,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        },
+        {
+          "x": 332.25,
+          "y": 824,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 81.5
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 17,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "collapse-panel",
+          "x": 324,
+          "y": 430,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "free-one-pull",
+          "x": 22,
+          "y": 624,
+          "w": 202.72000000000003,
+          "h": 56
+        },
+        {
+          "id": "five-pull",
+          "x": 238.44,
+          "y": 624,
+          "w": 122.32,
+          "h": 56
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 101.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 195,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 288.5,
+          "y": 785,
+          "w": 87.5,
+          "h": 50
+        }
+      ]
+    },
+    {
+      "id": "01-welcome-360x540",
+      "width": 360,
+      "height": 540,
+      "controls": 12,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 39,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 192,
+          "y": 35,
+          "text": "₹0",
+          "size": 24,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 200
+        },
+        {
+          "x": 192,
+          "y": 53,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 200
+        },
+        {
+          "x": 180,
+          "y": 93,
+          "text": "DIWALI DUKAAN",
+          "size": 11,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 288
+        },
+        {
+          "x": 61,
+          "y": 141.5,
+          "text": "Phuljhari",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 137,
+          "y": 141.5,
+          "text": "Anar",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 213,
+          "y": 141.5,
+          "text": "Chakri",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 289,
+          "y": 141.5,
+          "text": "Rockets",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 61,
+          "y": 187,
+          "text": "Crackers",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 137,
+          "y": 187,
+          "text": "Strings",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 213,
+          "y": 187,
+          "text": "Aerial",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 289,
+          "y": 187,
+          "text": "Gift boxes",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 35,
+          "y": 221,
+          "text": "TAP COUNTER",
+          "size": 10,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 250
+        },
+        {
+          "x": 25,
+          "y": 253,
+          "text": "NEXT STEP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 25,
+          "y": 272,
+          "text": "Train Salesmanship",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 25,
+          "y": 290,
+          "text": "₹0 / ₹10 · tap the counter",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 278,
+          "y": 276,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 317,
+          "y": 275,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 330,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 164
+        },
+        {
+          "x": 25,
+          "y": 356,
+          "text": "₹0/sec",
+          "size": 19,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 168
+        },
+        {
+          "x": 212,
+          "y": 330,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 126
+        },
+        {
+          "x": 212,
+          "y": 356,
+          "text": "₹1",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 126
+        },
+        {
+          "x": 60,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 60,
+          "y": 448,
+          "text": "Festival Rush",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 180,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 180,
+          "y": 448,
+          "text": "Helping Hands",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 300,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 300,
+          "y": 448,
+          "text": "Bulk Order",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 48,
+          "y": 520,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 134,
+          "y": 520,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 220,
+          "y": 520,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 306,
+          "y": 520,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 26,
+          "y": 97,
+          "text": "Let’s open your stall!",
+          "size": 14,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 244
+        },
+        {
+          "x": 26,
+          "y": 115,
+          "text": "Tap the counter to earn rupees.",
+          "size": 11.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 244
+        },
+        {
+          "x": 26,
+          "y": 131,
+          "text": "Then we’ll improve your sales pitch.",
+          "size": 11.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 244
+        },
+        {
+          "x": 97,
+          "y": 173,
+          "text": "Let’s start",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 126
+        },
+        {
+          "x": 229,
+          "y": 173,
+          "text": "Skip tutorial",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 90
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 10,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 236,
+          "w": 280,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 293,
+          "y": 246,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 35,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 155,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 275,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 94,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 180,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 266,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "tutorial-continue",
+          "x": 26,
+          "y": 144,
+          "w": 142,
+          "h": 48
+        },
+        {
+          "id": "skip-tutorial",
+          "x": 176,
+          "y": 144,
+          "w": 106,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "id": "02-saving-360x540",
+      "width": 360,
+      "height": 540,
+      "controls": 10,
+      "minTarget": 48,
+      "labels": [
+        {
+          "x": 36,
+          "y": 39,
+          "text": "⚙",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 192,
+          "y": 35,
+          "text": "₹6",
+          "size": 24,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 200
+        },
+        {
+          "x": 192,
+          "y": 53,
+          "text": "CASH BALANCE",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 200
+        },
+        {
+          "x": 180,
+          "y": 93,
+          "text": "DIWALI DUKAAN",
+          "size": 11,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 288
+        },
+        {
+          "x": 61,
+          "y": 141.5,
+          "text": "Phuljhari",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 137,
+          "y": 141.5,
+          "text": "Anar",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 213,
+          "y": 141.5,
+          "text": "Chakri",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 289,
+          "y": 141.5,
+          "text": "Rockets",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 61,
+          "y": 187,
+          "text": "Crackers",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 137,
+          "y": 187,
+          "text": "Strings",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 213,
+          "y": 187,
+          "text": "Aerial",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 289,
+          "y": 187,
+          "text": "Gift boxes",
+          "size": 7.5,
+          "weight": 400,
+          "anchor": "middle",
+          "maxWidth": 68
+        },
+        {
+          "x": 35,
+          "y": 221,
+          "text": "TAP COUNTER",
+          "size": 10,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 250
+        },
+        {
+          "x": 25,
+          "y": 253,
+          "text": "NEXT STEP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 25,
+          "y": 272,
+          "text": "Train Salesmanship",
+          "size": 13,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 25,
+          "y": 290,
+          "text": "₹6 / ₹10 · tap the counter",
+          "size": 10.5,
+          "weight": 400,
+          "anchor": "start",
+          "maxWidth": 255
+        },
+        {
+          "x": 278,
+          "y": 276,
+          "text": "›",
+          "size": 20,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 16
+        },
+        {
+          "x": 317,
+          "y": 275,
+          "text": "?",
+          "size": 13,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 32
+        },
+        {
+          "x": 25,
+          "y": 330,
+          "text": "AUTOMATIC SALES",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 164
+        },
+        {
+          "x": 25,
+          "y": 356,
+          "text": "₹0/sec",
+          "size": 19,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 168
+        },
+        {
+          "x": 212,
+          "y": 330,
+          "text": "PER TAP",
+          "size": 9,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 126
+        },
+        {
+          "x": 212,
+          "y": 356,
+          "text": "₹1",
+          "size": 20,
+          "weight": 700,
+          "anchor": "start",
+          "maxWidth": 126
+        },
+        {
+          "x": 60,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 60,
+          "y": 448,
+          "text": "Festival Rush",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 180,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 180,
+          "y": 448,
+          "text": "Helping Hands",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 300,
+          "y": 419,
+          "text": "–",
+          "size": 15,
+          "weight": 700,
+          "anchor": "middle",
+          "maxWidth": 24
+        },
+        {
+          "x": 300,
+          "y": 448,
+          "text": "Bulk Order",
+          "size": 9,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 113
+        },
+        {
+          "x": 48,
+          "y": 520,
+          "text": "Player",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 134,
+          "y": 520,
+          "text": "Products",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 220,
+          "y": 520,
+          "text": "Legacy",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        },
+        {
+          "x": 306,
+          "y": 520,
+          "text": "Shop",
+          "size": 11,
+          "weight": 600,
+          "anchor": "middle",
+          "maxWidth": 74
+        }
+      ],
+      "targets": [
+        {
+          "id": "settings",
+          "x": 12,
+          "y": 10,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "next-step-route",
+          "x": 12,
+          "y": 236,
+          "w": 280,
+          "h": 68
+        },
+        {
+          "id": "reopen-current-tip",
+          "x": 293,
+          "y": 246,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "id": "skill-0",
+          "x": 35,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-1",
+          "x": 155,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "skill-2",
+          "x": 275,
+          "y": 393,
+          "w": 50,
+          "h": 52
+        },
+        {
+          "id": "navigation-Player",
+          "x": 8,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Products",
+          "x": 94,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Legacy",
+          "x": 180,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        },
+        {
+          "id": "navigation-Shop",
+          "x": 266,
+          "y": 481,
+          "w": 80,
+          "h": 50
+        }
+      ]
+    }
+  ],
+  "boards": [
+    {
+      "name": "tutorial-r1-review-board",
+      "width": 1378,
+      "height": 3316
+    },
+    {
+      "name": "tutorial-r1-opening-board",
+      "width": 940,
+      "height": 2304
+    },
+    {
+      "name": "tutorial-r1-compact-checks",
+      "width": 940,
+      "height": 986
+    }
+  ]
+}

@@ -163,7 +163,9 @@ namespace RocketRaja.Core
             string session = SessionKey;
             var next = State.Copy();
             if (!change(next)) return false;
+            ObserveTutorial(next);
             next.mostProductsStocked = Math.Max(next.mostProductsStocked, Math.Max(State.products.Count(n => n > 0), next.products.Count(n => n > 0)));
+            next.bestProductCollectionLevel = Math.Max(next.bestProductCollectionLevel, Math.Max(State.products.Min(), next.products.Min()));
             next.revision += (Natural)1;
             if (structural) next.commandRevision += (Natural)1;
             next.savedAt = next.now;

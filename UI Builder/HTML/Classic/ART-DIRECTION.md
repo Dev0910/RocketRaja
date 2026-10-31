@@ -1,5 +1,13 @@
 # Classic UI / current functionality — candidate 1
 
+## Current Unity parity cleanup — 31 October 2026
+
+The user requested that the existing HTML match the current Unity project. The saved production Main scene is now the visual authority for this revision. The historical design explorations below remain context; `unity-parity.css`, `unity-reference.js` and `unity-presentation.js` reconcile them with native measurements and current artwork.
+
+The preview uses a single 360-unit canvas, uniformly scaled to device pixels. The 1080×2200 review iframe sets a real device viewport; it no longer enlarges only selected CSS dimensions. Stall, navigation, goal/help controls, income, panel rows, native fonts, inward-sliced imported buttons, Settings, Skills and popup header/body/footer regions follow the saved native layout. ProductDetail reuses the native portrait/paper/card/meter sprites. Settings stays mounted, scrolled and inert behind child popups; Back restores the same parent. Particles, coin trails, drag thresholds and tutorial pointers share the canvas coordinate conversion.
+
+This is a reverse native-to-HTML synchronization, with no new Unity transfer pending. HTML remains editable DOM and live text; native screenshots are evidence only. Browser/TMP rasterization and built-in beveled circle rendering can differ slightly. No Unity asset, scene or gameplay rule was changed. Validation, native comparison captures and reproducible checks: [31 October parity evidence](../../../Documentation/Implementation/HTML-Unity-Parity-20261031/README.md). The cleaned HTML is ready for the user's visual review.
+
 ## Selected Hero skill detail card — 19 October 2026
 
 The user selected [Hero skill card](../../Reference%20Images/SkillDetail/Popup%20Variants/2026-10-19/01-hero-skill-card.png), requested implementation in the ongoing HTML preview, and explicitly removed **View skill upgrades**. The reference selection is confirmed; HTML remains a candidate awaiting review. Each individual skill now has a large painted medallion, gold/grey live ring and status, two skill-specific effect tiles, duration/cooldown panel, cooldown explanation, one activation button and close X. The large generic guidance banner and old overlapping information boxes are replaced. The Skills list and its Details links remain connected.

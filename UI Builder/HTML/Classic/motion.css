@@ -1,6 +1,6 @@
 /* Warm festival atmosphere; movement stays separate from layout and hit targets. */
 .festival-atmosphere,.motion-effects{position:absolute;inset:0;overflow:hidden;pointer-events:none;user-select:none}
-.festival-atmosphere{z-index:4}.motion-effects{z-index:42;contain:strict}
+.festival-atmosphere{z-index:4}.motion-effects{z-index:500;contain:strict}
 .lantern-glow{position:absolute;top:29%;width:14%;height:17%;border-radius:50%;background:radial-gradient(ellipse,#ffc55b55,transparent 68%);animation:lantern-breathe 4.7s ease-in-out infinite alternate}
 .lantern-glow.left{left:-2%}.lantern-glow.right{right:-2%;animation-delay:-2.1s}
 .festival-mote{position:absolute;left:var(--x);top:var(--y);width:3px;height:3px;border-radius:50%;background:#ffe4a2;box-shadow:0 0 6px #ffc75c88;opacity:0;animation:festival-drift var(--duration) ease-in-out var(--delay) infinite}
@@ -23,6 +23,13 @@
 .festival-particle{position:absolute;width:5px;height:7px;border-radius:2px;will-change:transform,opacity}
 .festival-particle.star{width:10px;height:10px;clip-path:polygon(50% 0,62% 36%,100% 50%,62% 64%,50% 100%,38% 64%,0 50%,38% 36%)}
 .festival-coin{position:absolute;width:11px;height:11px;border-radius:50%;border:2px solid #f9dc87;background:#dca547;box-shadow:inset 0 0 0 1px #a96a28;will-change:transform,opacity}
+.motion-payout{position:absolute;white-space:nowrap;color:#fff2bf;font:800 19px/1 'Native UI',sans-serif;text-shadow:0 1px 0 #6c3b20,0 2px 5px #3c201c;pointer-events:none;will-change:transform,opacity}
+.reward-ring>i{display:block;width:52px;height:52px;border:2px solid #f5c55f;border-radius:50%;box-shadow:0 0 15px #ffda7844;pointer-events:none}
+.reward-ring[data-kind=tap]>i{width:26px;height:26px;border-width:1px}
+.reward-ring[data-kind=rare]>i{border-color:#dda4db}
+.festival-firework{position:absolute;width:0;height:0;pointer-events:none}
+.firework-trail{position:absolute;width:2px;height:17px;background:linear-gradient(transparent,#ffe6a3);border-radius:50%;box-shadow:0 0 5px #ffdd88}
+.firework-spark{position:absolute;width:3px;height:3px;border-radius:50%;box-shadow:0 0 4px #ffda75}
 .app [data-motion-ghost]{pointer-events:none!important;z-index:36}
 .app [data-motion-ghost] *{pointer-events:none!important;animation:none!important;transition:none!important}
 .app[data-motion-paused=true] .festival-atmosphere *,.app[data-motion-paused=true] .shopkeeper,.app[data-motion-paused=true] .skill-disc,.app[data-motion-paused=true] .tap-hint{animation-play-state:paused!important}

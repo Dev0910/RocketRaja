@@ -26,9 +26,9 @@ namespace RocketRaja.EditorTools
         public static void Build()
         {
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Stop Play Mode first.");
-            if (File.Exists(ScenePath)) { Debug.Log("Bootstrap already exists; preserved. Use the scene to edit it."); return; }
+            if (File.Exists(ScenePath)) { Debug.Log("Bootstrap already exists; preserved. Use local loading authoring to refine it."); return; }
             AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
-            ImportSprite(Root + "Art/Festival Stall.png"); ImportSprite(Root + "Art/Google Mark.png");
+            ImportSprite(Root + "Art/Festival Stall.png");
             CreateSpinner();
             headingFont = MakeFont("Fraunces ExtraBold", Root + "Fonts/Fraunces ExtraBold.ttf");
             bodyFont = MakeFont("Nunito Medium", "Assets/Resources/Fonts/Nunito-Medium.ttf");
@@ -66,28 +66,28 @@ namespace RocketRaja.EditorTools
             layout.childControlWidth = layout.childControlHeight = true; layout.childForceExpandHeight = false;
             var title = Text(Row(panel,"Heading",86),"Welcome to your stall",66,Maroon,headingFont);
             var rule = Row(panel,"Heading Ornament",22); Divider(rule);
-            var description = Text(Row(panel,"Description",112),"Save your progress with Google and continue on another device.",39,Ink,bodyFont);
+            var description = Text(Row(panel,"Description",112),"Your progress is saved on this device.",39,Ink,bodyFont);
             var compare = Row(panel,"Save Comparison",228);
             var columns = compare.gameObject.AddComponent<HorizontalLayoutGroup>(); columns.spacing = 22;
             columns.childControlHeight = columns.childControlWidth = true; columns.childForceExpandWidth = true;
-            var device = Card(compare,"This device",false); var cloud = Card(compare,"Google save",true);
+            var device = Card(compare,"This device",false); var cloud = Card(compare,"Device save",true);
             compare.gameObject.SetActive(false);
             var loading = Row(panel,"Loading",200);
             var spinRect = Rect("Spinner",loading); spinRect.anchorMin = spinRect.anchorMax = new Vector2(.5f,1); spinRect.pivot = new Vector2(.5f,.5f); spinRect.sizeDelta = new Vector2(76,76); spinRect.anchoredPosition = new Vector2(0,-38);
             Image(spinRect,Color.white).sprite = AssetDatabase.LoadAssetAtPath<Sprite>(Root+"Art/Spinner.png");
-            var progress = Text(At(loading,"Progress",0,0,108,84),"Syncing your progress…",35,Muted,bodyFont);
+            var progress = Text(At(loading,"Progress",0,0,108,84),"Getting your stall ready…",35,Muted,bodyFont);
             loading.gameObject.SetActive(false);
-            var primary = Button(panel,"Primary Button","Sign in with Google",Color.white,out var primaryLabel);
+            var primary = Button(panel,"Primary Button","Retry",Color.white,out var primaryLabel);
             var google = Rect("Google Mark",primary.transform); google.anchorMin=google.anchorMax=new Vector2(.18f,.5f); google.sizeDelta=new Vector2(62,62);
-            Image(google,Color.white).sprite=AssetDatabase.LoadAssetAtPath<Sprite>(Root+"Art/Google Mark.png");
+            google.gameObject.SetActive(false);
             // Centered label reserves space for the icon without baking either into the button.
             primaryLabel.margin = new Vector4(85,0,0,0);
-            var secondary = Button(panel,"Secondary Button","Play as guest",C("FFF0CF"),out var secondaryLabel);
-            var tertiary = Button(panel,"Tertiary Button","Return to guest",C("FFF3DB"),out var tertiaryLabel);
+            var secondary = Button(panel,"Secondary Button","Keep files and leave",C("FFF0CF"),out var secondaryLabel);
+            var tertiary = Button(panel,"Tertiary Button","Back",C("FFF3DB"),out var tertiaryLabel);
             tertiaryLabel.fontSize=36; tertiaryLabel.fontStyle=FontStyles.Underline; tertiary.gameObject.SetActive(false);
-            var hint = Text(Row(panel,"Hint",72),"You can connect Google later in Settings.",31,Muted,bodyFont);
+            var hint = Text(Row(panel,"Hint",72),"Progress is saved on this device.",31,Muted,bodyFont);
             var footer = Row(panel,"Footer",110); Divider(At(footer,"Footer Ornament",0,0,0,20));
-            Text(At(footer,"Local and cloud note",0,0,34,76),"Guest progress stays on this device.\nGoogle progress follows you between devices.",27,Muted,bodyFont);
+            Text(At(footer,"Local and cloud note",0,0,34,76),"Progress stays on this device.",27,Muted,bodyFont);
             var compatibility = Text(Rect("Comparison compatibility",panel),"",30,Ink,bodyFont); compatibility.gameObject.SetActive(false);
             var presenter = root.gameObject.AddComponent<BootstrapController>(); var so = new SerializedObject(presenter);
             void Bind(string name,UnityEngine.Object value) { so.FindProperty(name).objectReferenceValue=value; }
@@ -103,6 +103,8 @@ namespace RocketRaja.EditorTools
             EditorSceneManager.SaveScene(scene,ScenePath);
             EditorBuildSettings.scenes = new[]{new EditorBuildSettingsScene(ScenePath,true)}.Concat(EditorBuildSettings.scenes.Where(s=>s.path!=ScenePath)).ToArray();
             Refine();
+            RocketRaja.Editor.LocalOnlyPresentationAuthoring.AuthorLoading(scene);
+            EditorSceneManager.SaveScene(scene);
             AssetDatabase.SaveAssets();
             Debug.Log("BOOTSTRAP_AUTHORED " + ScenePath);
         }
@@ -160,6 +162,7 @@ namespace RocketRaja.EditorTools
         static TMP_Text Text(RectTransform r,string value,float size,Color c,TMP_FontAsset f,TextAlignmentOptions align=TextAlignmentOptions.Center){var t=r.gameObject.AddComponent<TextMeshProUGUI>();t.font=f;t.text=value;t.fontSize=size;t.color=c;t.alignment=align;t.raycastTarget=false;t.textWrappingMode=TextWrappingModes.Normal;t.overflowMode=TextOverflowModes.Ellipsis;return t;}
         public static void Refine()
         {
+            if (File.Exists(RocketRaja.Editor.LocalOnlyPresentationAuthoring.Art)) return;
             var scene=SceneManager.GetSceneByPath(ScenePath);if(!scene.IsValid())throw new InvalidOperationException("Open Bootstrap first.");
             string path=Root+"Art/Rounded Surface.png";
             if(!File.Exists(path))

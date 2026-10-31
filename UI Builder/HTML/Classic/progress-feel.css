@@ -1,0 +1,22 @@
+/* Additive effects on existing art; all overlays pass pointer input through. */
+.progress-effects{position:absolute;inset:0;z-index:510;pointer-events:none;overflow:hidden;contain:strict}
+.skill-atmosphere{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.rush-light{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 68%,#ffb32a55,transparent 65%);opacity:0;transition:opacity 350ms}
+.app[data-festival-rush=true] .rush-light{opacity:1;animation:rush-warmth 2s ease-in-out infinite alternate}
+.working-hands{position:absolute;top:79%;width:34px;height:34px;opacity:0}
+.working-hands.first{left:32%}.working-hands.second{left:58%;animation-delay:-.65s}
+.app[data-helping-hands=true] .working-hands{opacity:.9;animation:helping-work 1.3s ease-in-out infinite}
+.app[data-helping-hands=true] .working-hands.second{animation-delay:-.65s}
+.bulk-parcel{position:absolute;left:0;top:80%;width:44px;height:44px;filter:drop-shadow(0 3px 2px #261b3688)}
+.stock-dust,.kaju-flight{position:absolute;width:0;height:0}
+.stock-dust i{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffe4a6;box-shadow:0 0 5px #ffd16b}
+.kaju-flight>span{position:absolute;display:block;width:24px;height:24px;filter:drop-shadow(0 1px 2px #39234688)}
+.kaju-flight svg{display:block;width:24px;height:24px}
+.milestone-ribbon{position:absolute;left:50%;top:35%;transform:translateX(-50%);max-width:85%;padding:10px 18px;border:1px solid #dfae4b;border-radius:5px;background:#fff4db;color:#164b80;font:800 15px/1.3 'Native UI',sans-serif;text-align:center;box-shadow:0 3px 14px #1b143d55}
+.prestige-scene{position:absolute;inset:0;background:#15132b;overflow:hidden}
+.prestige-bloom{position:absolute;left:50%;top:40%;width:160px;height:160px;border-radius:50%;background:repeating-conic-gradient(from 10deg,transparent 0deg 18deg,#ffdc7b 19deg 20deg,transparent 21deg 36deg);mask-image:radial-gradient(circle,transparent 12%,#000 13% 54%,transparent 65%);filter:drop-shadow(0 0 7px #ffd677)}
+@keyframes rush-warmth{from{filter:brightness(.95)}to{filter:brightness(1.2)}}
+@keyframes helping-work{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-7px) rotate(7deg)}}
+.app[data-motion-paused=true] .skill-atmosphere *{animation-play-state:paused!important}
+.app[data-reduced-motion=true] .working-hands{display:none}
+@media(prefers-reduced-motion:reduce){.working-hands{display:none}}

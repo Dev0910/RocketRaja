@@ -86,7 +86,7 @@ namespace RocketRaja.Editor
                 Face(track, new Color32(218, 196, 145, 255), rounded);
                 var fill = Face(Fill("Fill", track, .5f), new Color32(207, 156, 43, 255), rounded);
                 ConfigureProgressFill(fill); fill.fillAmount = 0;
-                var progress = Label("", Region("Progress", card, .225f, .045f, .62f, .24f), "0 / " + definition.Target, 10, true);
+                var progress = Label("", Region("Progress", card, .225f, .045f, .62f, .24f), definition.Progress(RedesignState.Fresh()), 10, true);
                 LedgerText(progress, 10, 9, TextAlignmentOptions.MidlineLeft);
                 Picture("", Region("Kaju Katli artwork", card, .642f, .40f, .773f, .76f), sprites["kaju"]);
                 var reward = Label("", Region("Reward", card, .628f, .045f, .782f, .43f), "+" + definition.Reward + "\nKaju Katli", 9.5f, true, Ink, TextAlignmentOptions.Center);

@@ -1,0 +1,41 @@
+PASS Page load stays silent and does not create an AudioContext
+PASS Trusted tap unlocks and plays the local synthesized cue
+PASS Tap shows its actual quoted payout
+PASS Tap produces coins and sparks
+PASS All tap labels, rings, coins and sparks clean up
+PASS Rapid taps keep particle groups bounded
+PASS Rapid taps keep synthesized voices bounded
+PASS Effects preserve exactly one gameplay preview event per tap
+PASS Sound switch mutes immediately and stops scheduled voices
+PASS Muted taps do not schedule audio
+PASS Sound can be re-enabled through the existing switch
+PASS Reduced motion clears transient effects immediately
+PASS Reduced motion retains sound feedback independently
+PASS Reduced-motion taps have no floating labels or particles
+PASS Home gets a bounded decorative background firework
+PASS Firework trails and sparks clean up
+PASS Covered shop does not launch idle fireworks
+PASS Animated child popup retains Settings behind it
+PASS Closing animated child restores parent input
+PASS Purchase feedback follows a successful existing preview command
+PASS Popup purchase ring and particles are present above popup layers
+PASS Effect overlay renders over the modal stack without blocking input
+PASS Blocked saves cannot purchase or trigger a success flourish
+PASS No success sound is emitted by a blocked state
+PASS OS Reduced motion stops CSS and Web Animations
+PASS Card draw grants one level before its presentation, without animation owning the reward
+PASS Card reveal flourish releases Continue after settling
+PASS Card reveal receives its own flourish above the popup
+PASS Completing the flourish cannot grant a duplicate card level
+PASS Tutorial tap retains its authoritative fixture transition
+PASS Tutorial taps now use the same payout and coin effects
+PASS Tutorial tap plays one cue without a duplicate navigation sound
+PASS Stocking stays explicit while the result animates
+PASS First stocked shelf celebrates with confetti and a firework
+PASS No horizontal overflow at 360x540
+PASS Payout label stays inside the phone at 360x540
+PASS No horizontal overflow at 450x916
+PASS Payout label stays inside the phone at 450x916
+PASS Responsive effects leave no stale nodes
+PASS No script errors or missing local assets: 
+PASS 40 festival animation/audio checks

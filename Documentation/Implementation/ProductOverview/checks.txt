@@ -1,0 +1,42 @@
+PASS Disposable fixture commits through the existing save codec: 0,0,0,0,0,0,0,0
+PASS Production Bootstrap uses only a disposable profile
+PASS Every popup component existed in the saved Edit Mode scene
+PASS Replacement and complete legacy popup start inactive
+PASS All text/artwork references survive save and reload
+PASS Existing native popup entry animation reaches its settled pose
+PASS Unstocked product shows live zero income and empty progress
+PASS Disposable fixture commits through the existing save codec: 75,55,29,12,5,3,1,1
+PASS Level 75 displays milestone 100, ×4 and interval progress 50%
+PASS Synergy counts qualifying products and animates to 25%
+PASS Signature copy and portrait use the current native appearance
+PASS Portrait labels, card headings, rewards and close glyph render without truncation
+PASS Information opens above the retained noninteractive product popup
+PASS Back restores the same product popup and opener focus
+PASS Product 0 uses authoritative identity, level and income
+PASS Product 1 uses authoritative identity, level and income
+PASS Product 2 uses authoritative identity, level and income
+PASS Product 3 uses authoritative identity, level and income
+PASS Product 4 uses authoritative identity, level and income
+PASS Product 5 uses authoritative identity, level and income
+PASS Product 6 uses authoritative identity, level and income
+PASS Product 7 uses authoritative identity, level and income
+PASS Popup stays inside 390x844 viewport
+PASS Popup stays inside 360x540 viewport
+PASS Popup stays inside 360x480 viewport
+PASS Short phone keeps its header fixed and body scrollable
+PASS Synergy explanation remains reachable at the bottom
+PASS Disposable fixture commits through the existing save codec: 50,50,50,50,50,50,50,49
+PASS Seven qualifying products display 7/8 and 87.5%
+PASS Disposable fixture commits through the existing save codec: 50,50,50,50,50,50,50,50
+PASS Completing synergy advances the next threshold and multiplier
+PASS Disposable fixture commits through the existing save codec: 100000,100000,100000,100000,100000,100000,100000,100000
+PASS Maximum product level shows accurate completion copy
+PASS Maximum synergy shows complete state and full progress
+PASS Existing Reduced motion setting remains authoritative
+PASS Saved Folk Blue close button dismisses the popup
+PASS Reduced motion reopens directly at the authored settled pose
+PASS Outside dismissal uses the normal navigation lifecycle
+PASS Closing during entry and reopening does not leave a stale pose
+PASS Rebinding, scrolling, stacking and motion create or destroy no UI components
+PASS No runtime error, exception or assertion occurred during the final validation
+PASS Disposable fixture commits through the existing save codec: 75,55,29,12,5,3,1,1

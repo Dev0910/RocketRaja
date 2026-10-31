@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "source": "UI Builder/HTML/Tutorial/assets/tutorial-pointing-hand.png",
+      "sourceSha256": "7e1260f107c13e14d34568130c1eaafb2844029c948b052285b7a7c530241c9d",
+      "output": "Assets/Game/ClassicUI/Tutorial/tutorial-pointing-hand.png",
+      "outputSha256": "7e1260f107c13e14d34568130c1eaafb2844029c948b052285b7a7c530241c9d"
+    },
+    {
+      "source": "UI Builder/HTML/Tutorial/assets/ivory-gold-frame.svg",
+      "sourceSha256": "d2210290be069cb942daa3ec4ec25b2e46d37a9065b6bc6d39715ac3993e7e24",
+      "output": "Assets/Game/ClassicUI/Tutorial/ivory-gold-frame.png",
+      "outputSha256": "7e366fce624ed47a617a7596c8b5c2a3d7c954e61aa21e75a73be4318f68d042"
+    },
+    {
+      "source": "UI Builder/HTML/Shared/fonts/fraunces.ttf",
+      "sourceSha256": "177ff6c0f14e5550a3c624247cd1189611d4eb65d000b14944c63d967958abbb",
+      "output": "Assets/Game/ClassicUI/Tutorial/fraunces.ttf",
+      "outputSha256": "1e9109a5ce55704ba2ce9d1ee5c4ef88fe5e5341bafc2b1fa3a1a15160437f14"
+    }
+  ],
+  "frameConversion": "Inspected static SVG, sharp/librsvg, transparent 720x256; no external resources.",
+  "pointerTipFromTopLeft": [
+    0.20563,
+    0.048644
+  ],
+  "fontConversion": "Fraunces variable source instantiated at weight 700, optical size 15, SOFT 0, WONK 1 using fontTools; static TMP atlas; OFL included."
+}

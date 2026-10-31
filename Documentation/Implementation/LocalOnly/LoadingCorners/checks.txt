@@ -1,0 +1,15 @@
+PASS circular caps, exact fill width and visibility at 0.0% / 390x844
+PASS circular caps, exact fill width and visibility at 0.5% / 390x844
+PASS circular caps, exact fill width and visibility at 1.0% / 390x844
+PASS circular caps, exact fill width and visibility at 25.0% / 390x844
+PASS circular caps, exact fill width and visibility at 58.0% / 390x844
+PASS circular caps, exact fill width and visibility at 99.0% / 390x844
+PASS circular caps, exact fill width and visibility at 100.0% / 390x844
+PASS circular caps, exact fill width and visibility at 0.0% / 360x540
+PASS circular caps, exact fill width and visibility at 0.5% / 360x540
+PASS circular caps, exact fill width and visibility at 1.0% / 360x540
+PASS circular caps, exact fill width and visibility at 25.0% / 360x540
+PASS circular caps, exact fill width and visibility at 58.0% / 360x540
+PASS circular caps, exact fill width and visibility at 99.0% / 360x540
+PASS circular caps, exact fill width and visibility at 100.0% / 360x540
+PASS no rendering errors; no changes to hierarchy during progress updates

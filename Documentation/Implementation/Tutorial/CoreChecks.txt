@@ -1,0 +1,550 @@
+PASS Fresh save explicitly enrolled
+PASS Existing save with absent tutorial stays unenrolled
+PASS Initial tutorial persisted
+PASS Save codec retains enrollment
+PASS Introduction presentation receipt is idempotent
+PASS Dismiss current note without economic action
+PASS Dismissal never buys or grants
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Earn training cash
+PASS Below training price does not offer
+PASS Actual training affordability offers at 10
+PASS Failed save cannot publish tutorial progress
+PASS Training introduction saved once
+PASS Reload never replays automatic navigation
+PASS Dismiss current note without economic action
+PASS Dismissed introduction does not repeat while waiting for purchase
+PASS Manual training commits
+PASS Actual before/after training result atomically saved
+PASS Dismiss current note without economic action
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS Save for first stock
+PASS First product readiness uses spendable cash
+PASS Dismiss current note without economic action
+PASS Manual first product result
+PASS Outcome retains priority over already-affordable upgrade
+PASS Dismiss current note without economic action
+PASS Passive cash triggers first useful upgrade
+PASS Dismiss current note without economic action
+PASS Failed upgrade save publishes neither ownership nor tutorial result
+PASS Upgrade result matches authoritative projection
+PASS Dismiss current note without economic action
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Earn a real achievement
+PASS Real first achievement readiness, independent of prestige
+PASS Dismiss current note without economic action
+PASS Existing achievement command grants once with tutorial receipt
+PASS Duplicate claim cannot grant again
+PASS Dismiss current note without economic action
+PASS Accelerated earned journey checkpoint saved through normal disk codec
+PASS Earned first prestige offers review only
+PASS Dismiss current note without economic action
+PASS Deferring prestige changes no run state
+PASS Explicit prestige preserves tutorial and grants authoritative credits
+PASS Free Talent introduction after completed prestige
+PASS Dismiss current note without economic action
+PASS Manual free draw commits once
+PASS Committed reveal has priority and one credit charge
+PASS Pending card result survives reload
+PASS Only acknowledged reveal introduces card benefit
+PASS Actual random card and duplicate levels retained
+PASS Dismiss current note without economic action
+PASS Card explanation completes without a second charge or grant
+PASS Explicit replay respects existing earned milestones
+PASS Replay welcome is not dismissed by historical taps
+PASS Only a new counter tap collapses replay welcome
+PASS Skip persists without an automatic restart
+PASS Skipped course remains skipped after reload

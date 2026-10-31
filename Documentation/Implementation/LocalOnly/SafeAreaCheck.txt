@@ -1,0 +1,1 @@
+PASS Loading title, live label and bar fit simulated 4% side and 4.5% top/bottom safe-area insets at 390x844

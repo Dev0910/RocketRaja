@@ -1,0 +1,94 @@
+PASS 360x540 Naming retains Settings behind an interactive child
+PASS 360x540 Naming Back retains DOM, scroll and focus
+PASS 360x540 Privacy retains Settings behind an interactive child
+PASS 360x540 Privacy Back retains DOM, scroll and focus
+PASS 360x540 Help retains Settings behind an interactive child
+PASS 360x540 Help Back retains DOM, scroll and focus
+PASS 360x540 TutorialHelp retains Settings behind an interactive child
+PASS 360x540 TutorialHelp Back retains DOM, scroll and focus
+PASS 360x540 DeveloperReset retains Settings behind an interactive child
+PASS 360x540 DeveloperReset Back retains DOM, scroll and focus
+PASS Consent-required preview exposes native privacy entry
+PASS All Settings action faces use imported PNG artwork
+PASS Escape closes only the child
+PASS 360x540 Player shared primary, secondary and disabled button faces
+PASS 360x540 Player has no horizontal overflow
+PASS 360x540 Products shared primary, secondary and disabled button faces
+PASS 360x540 Products has no horizontal overflow
+PASS 360x540 Shop shared primary, secondary and disabled button faces
+PASS 360x540 Shop has no horizontal overflow
+PASS 360x540 Upgrades shared primary, secondary and disabled button faces
+PASS 360x540 Upgrades has no horizontal overflow
+PASS 360x540 TapTraining shared primary, secondary and disabled button faces
+PASS 360x540 TapTraining has no horizontal overflow
+PASS 360x540 Achievements shared primary, secondary and disabled button faces
+PASS 360x540 Achievements has no horizontal overflow
+PASS 360x540 Offline shared primary, secondary and disabled button faces
+PASS 360x540 Offline has no horizontal overflow
+PASS 390x844 Naming retains Settings behind an interactive child
+PASS 390x844 Naming Back retains DOM, scroll and focus
+PASS 390x844 Privacy retains Settings behind an interactive child
+PASS 390x844 Privacy Back retains DOM, scroll and focus
+PASS 390x844 Help retains Settings behind an interactive child
+PASS 390x844 Help Back retains DOM, scroll and focus
+PASS 390x844 TutorialHelp retains Settings behind an interactive child
+PASS 390x844 TutorialHelp Back retains DOM, scroll and focus
+PASS 390x844 DeveloperReset retains Settings behind an interactive child
+PASS 390x844 DeveloperReset Back retains DOM, scroll and focus
+PASS Consent-required preview exposes native privacy entry
+PASS All Settings action faces use imported PNG artwork
+PASS Escape closes only the child
+PASS 390x844 Player shared primary, secondary and disabled button faces
+PASS 390x844 Player has no horizontal overflow
+PASS 390x844 Products shared primary, secondary and disabled button faces
+PASS 390x844 Products has no horizontal overflow
+PASS 390x844 Shop shared primary, secondary and disabled button faces
+PASS 390x844 Shop has no horizontal overflow
+PASS 390x844 Upgrades shared primary, secondary and disabled button faces
+PASS 390x844 Upgrades has no horizontal overflow
+PASS 390x844 TapTraining shared primary, secondary and disabled button faces
+PASS 390x844 TapTraining has no horizontal overflow
+PASS 390x844 Achievements shared primary, secondary and disabled button faces
+PASS 390x844 Achievements has no horizontal overflow
+PASS 390x844 Offline shared primary, secondary and disabled button faces
+PASS 390x844 Offline has no horizontal overflow
+PASS 450x916 Naming retains Settings behind an interactive child
+PASS 450x916 Naming Back retains DOM, scroll and focus
+PASS 450x916 Privacy retains Settings behind an interactive child
+PASS 450x916 Privacy Back retains DOM, scroll and focus
+PASS 450x916 Help retains Settings behind an interactive child
+PASS 450x916 Help Back retains DOM, scroll and focus
+PASS 450x916 TutorialHelp retains Settings behind an interactive child
+PASS 450x916 TutorialHelp Back retains DOM, scroll and focus
+PASS 450x916 DeveloperReset retains Settings behind an interactive child
+PASS 450x916 DeveloperReset Back retains DOM, scroll and focus
+PASS Consent-required preview exposes native privacy entry
+PASS All Settings action faces use imported PNG artwork
+PASS Escape closes only the child
+PASS 450x916 Player shared primary, secondary and disabled button faces
+PASS 450x916 Player has no horizontal overflow
+PASS 450x916 Products shared primary, secondary and disabled button faces
+PASS 450x916 Products has no horizontal overflow
+PASS 450x916 Shop shared primary, secondary and disabled button faces
+PASS 450x916 Shop has no horizontal overflow
+PASS 450x916 Upgrades shared primary, secondary and disabled button faces
+PASS 450x916 Upgrades has no horizontal overflow
+PASS 450x916 TapTraining shared primary, secondary and disabled button faces
+PASS 450x916 TapTraining has no horizontal overflow
+PASS 450x916 Achievements shared primary, secondary and disabled button faces
+PASS 450x916 Achievements has no horizontal overflow
+PASS 450x916 Offline shared primary, secondary and disabled button faces
+PASS 450x916 Offline has no horizontal overflow
+PASS Training result remains readable below next price
+PASS New earning tap continues training result
+PASS Affordable stock introduces the next action without buying it
+PASS Product purchase shows its result
+PASS Passive earnings fixture replaces product result with affordable upgrade
+PASS Upgrade purchase shows its result
+PASS New earning tap continues upgrade result
+PASS New earning tap continues product result
+PASS Surplus funds replace training result immediately
+PASS Composed tutorial inherits retained Settings layers
+PASS Tutorial settings Skip preserves stall and closes guidance
+PASS No JavaScript errors or missing local assets: 
+PASS 93 checks

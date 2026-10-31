@@ -1,0 +1,61 @@
+PASS welcome 390x844: fits, four tabs, 48px targets 
+PASS saving 390x844: fits, four tabs, 48px targets 
+PASS training 390x844: fits, four tabs, 48px targets 
+PASS result 390x844: fits, four tabs, 48px targets 
+PASS product 390x844: fits, four tabs, 48px targets 
+PASS upgrade 390x844: fits, four tabs, 48px targets 
+PASS achievement 390x844: fits, four tabs, 48px targets 
+PASS prestige 390x844: fits, four tabs, 48px targets 
+PASS talent 390x844: fits, four tabs, 48px targets 
+PASS welcome 360x540: fits, four tabs, 48px targets 
+PASS saving 360x540: fits, four tabs, 48px targets 
+PASS training 360x540: fits, four tabs, 48px targets 
+PASS result 360x540: fits, four tabs, 48px targets 
+PASS product 360x540: fits, four tabs, 48px targets 
+PASS upgrade 360x540: fits, four tabs, 48px targets 
+PASS achievement 360x540: fits, four tabs, 48px targets 
+PASS prestige 360x540: fits, four tabs, 48px targets 
+PASS talent 360x540: fits, four tabs, 48px targets 
+PASS welcome 360x640: fits, four tabs, 48px targets 
+PASS saving 360x640: fits, four tabs, 48px targets 
+PASS training 360x640: fits, four tabs, 48px targets 
+PASS result 360x640: fits, four tabs, 48px targets 
+PASS product 360x640: fits, four tabs, 48px targets 
+PASS upgrade 360x640: fits, four tabs, 48px targets 
+PASS achievement 360x640: fits, four tabs, 48px targets 
+PASS prestige 360x640: fits, four tabs, 48px targets 
+PASS talent 360x640: fits, four tabs, 48px targets 
+PASS welcome 390x700: fits, four tabs, 48px targets 
+PASS saving 390x700: fits, four tabs, 48px targets 
+PASS training 390x700: fits, four tabs, 48px targets 
+PASS result 390x700: fits, four tabs, 48px targets 
+PASS product 390x700: fits, four tabs, 48px targets 
+PASS upgrade 390x700: fits, four tabs, 48px targets 
+PASS achievement 390x700: fits, four tabs, 48px targets 
+PASS prestige 390x700: fits, four tabs, 48px targets 
+PASS talent 390x700: fits, four tabs, 48px targets 
+PASS welcome 450x916: fits, four tabs, 48px targets 
+PASS saving 450x916: fits, four tabs, 48px targets 
+PASS training 450x916: fits, four tabs, 48px targets 
+PASS result 450x916: fits, four tabs, 48px targets 
+PASS product 450x916: fits, four tabs, 48px targets 
+PASS upgrade 450x916: fits, four tabs, 48px targets 
+PASS achievement 450x916: fits, four tabs, 48px targets 
+PASS prestige 450x916: fits, four tabs, 48px targets 
+PASS talent 450x916: fits, four tabs, 48px targets 
+PASS Dialogue acknowledgement does not earn cash
+PASS Dragging counter does not count as a tap
+PASS Counter grants ten fixture taps without button click leakage
+PASS Training debits ₹10 once and shows actual before/after
+PASS First stock creates automatic-sales fixture
+PASS First ready claim grants exact +5 in fixture
+PASS Claim receipt prevents duplicate reward
+PASS Cancelling prestige makes no reset
+PASS Prestige supplies three credits and does not auto-pull
+PASS First pull uses one free credit and zero KK
+PASS Unavailable saving blocks purchase
+PASS Existing user is not enrolled
+PASS Skip collapses guidance
+PASS Skipped tutorial keeps navigation usable
+PASS One valid metadata contract, unique/resolvable action and binding IDs
+PASS No browser or asset errors: 

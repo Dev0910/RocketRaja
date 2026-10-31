@@ -1,0 +1,12 @@
+30 October 2026 — focused HTML browser verification
+PASS Buy Phuljhari from the ₹30 review fixture; dismiss its success feedback.
+PASS At ₹19.20, saving for the upgrade stays on Home.
+PASS Next ₹2.40 tap reaches ₹21.60, automatically opens Player and shows the Step 01-style shopkeeper dialog.
+PASS Phuljhari Signature Breakthrough I is highlighted, scrolled into view and remains available for a manual ₹20 purchase.
+PASS Escape dismisses the dialog; returning Home and earning ₹24 does not repeat the route/dialog.
+PASS Manual upgrade spends ₹20, leaves ₹4 and shows the existing ₹0.85 → ₹1.70/sec income feedback on Home.
+PASS The upgrade review fixture at exactly ₹20 shows the dialog and highlighted purchase control.
+PASS JavaScript syntax checks for tutorial.js and updated verify-classic.cjs.
+Screenshot: renders-r9/first-upgrade-shopkeeper-dialog.png
+Full regression runner updated for the earned upgrade threshold; not rerun this revision.
+Native Unity implementation remains pending.

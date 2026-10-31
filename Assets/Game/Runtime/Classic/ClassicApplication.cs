@@ -14,6 +14,7 @@ namespace RocketRaja.Classic
         RedesignLifecycle bound;
         bool started, leaving, foreground = true;
         string failure, shownReceipt;
+        public bool StartupAttempted => started;
         public bool Ready => started && !leaving && ui.driver.Initialized && ui.driver.Session.CanMutate;
 
         void Start()
@@ -34,12 +35,12 @@ namespace RocketRaja.Classic
             ui.driver.Changed += Observe;
             try
             {
-                if (host.Account != null) ui.driver.InitializeAccount(host.Account);
+                if (host.IsFixture && host.Account != null) ui.driver.InitializeAccount(host.Account);
                 else ui.driver.InitializeGuest(host.ProfileRoot);
             }
             catch (Exception ex) when (ex is System.IO.IOException || ex is UnauthorizedAccessException || ex is InvalidOperationException)
             {
-                failure = "Your progress could not be loaded. Existing files are preserved. Retry or open account options.";
+                failure = "Your progress could not be loaded. Existing files are preserved. Retry loading or saving.";
                 Debug.LogWarning("Classic startup needs recovery: " + ex.GetType().Name);
             }
             Observe();
@@ -61,17 +62,7 @@ namespace RocketRaja.Classic
 
         public void OpenAccount()
         {
-            if (leaving || ui.driver.Recovering) return;
-            var session = ui.driver.Session;
-            // A blocked cloud owner can return to Bootstrap to reconnect, but a failed local
-            // checkpoint must be saved before destroying its only in-memory copy.
-            if (session != null && !session.Suspend() && (session.SaveFailure != null || !ui.driver.IsAccount))
-            {
-                ui.ShowRecovery(ui.driver.RecoveryNotice ?? "Retry saving before leaving your game.");
-                return;
-            }
-            leaving = true;
-            RedesignSessionHost.Ensure().OpenAccountMenu();
+            // Old serialized callbacks cannot reopen the removed account flow or unload a local save.
         }
 
         void Observe()

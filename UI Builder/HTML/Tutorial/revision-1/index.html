@@ -1,0 +1,953 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Rocket Raja · Shopkeeper tutorial</title><link rel="stylesheet" href="tutorial.css"></head><body>
+<aside id="review" data-handoff-role="review-tool"><span class="eyebrow">ROCKET RAJA / DESIGN REVIEW</span><h1>A little guidance.<br>A brighter stall.</h1><p>Shopkeeper tutorial · HTML revision 1</p><label for="state-picker">Review a moment</label><select id="state-picker"><option value="welcome">01 · Meet the shopkeeper</option><option value="saving">02 · Save for training</option><option value="training">03 · First Salesmanship purchase</option><option value="result">04 · Explain the improvement</option><option value="product">05 · Stock Phuljhari</option><option value="upgrade">06 · First useful upgrade</option><option value="achievement">07 · First achievement ready</option><option value="prestige">08 · First prestige ready</option><option value="talent">09 · First free Talent pull</option></select><button id="review-replay">Replay from a new save</button><div class="review-events"><span>Fixture events</span><button id="review-achievement">Make first achievement ready</button><button id="review-prestige">Make first prestige ready</button><button id="review-save-error">Toggle saving unavailable</button><button id="review-existing">Preview existing user</button></div><p class="note">In-memory fixtures only. No real purchases, currency grants or save writes. The nine moments can be inspected independently; milestone buttons demonstrate later events.</p><output id="review-status" aria-live="polite"></output><a href="../../../Reference%20Images/Tutorial/ART-DIRECTION.md">Approved art references</a></aside>
+<main id="game" class="game" data-unity-name="ShopkeeperTutorial" data-step="welcome" data-view="Home">
+<div class="world" id="world"><img class="stall-art" src="../../Home/assets/gouache-stall.png" alt="Painted Diwali fireworks stall at dusk"><header class="wallet"><button id="settings" class="settings primary" data-action="Settings" aria-label="Settings"><svg viewBox="0 0 24 24"><path d="M10 3h4l1 3 3 1 3 4-2 3-1 4-4 3-3-2-4-1-3-4 2-3 1-4z"/><circle cx="12" cy="12" r="4"/></svg></button><div><strong id="cash">₹0</strong><span>CASH BALANCE</span></div></header><div class="shop-sign">DIWALI DUKAAN</div><div id="shelves" class="shelves" aria-label="Eight product displays"></div><button id="tap-counter" class="tap-counter" data-action="Tap"><strong>TAP COUNTER</strong><span id="tap-hint">Tap to earn your first rupees</span></button><img class="shopkeeper" src="../../Home/assets/gouache-shopkeeper.png" alt="Your shopkeeper, wearing a cream kurta and red stole"></div>
+<section id="coach" class="coach parchment" aria-label="Shopkeeper guidance"><h2 id="coach-title"></h2><p id="coach-copy"></p><div class="coach-actions"><button id="coach-continue" class="primary" data-action="ContinueTutorial">Let’s start</button><button id="coach-skip" data-action="SkipTutorial">Skip tutorial</button></div></section>
+<section id="home" class="home"><div id="objective" class="objective parchment"><button id="objective-route" data-action="OpenObjective"><small id="objective-kicker">NEXT STEP</small><strong id="objective-title">Train Salesmanship</strong><span id="objective-detail">₹0 / ₹10 · tap the counter</span><b aria-hidden="true">›</b></button><button id="objective-help" data-action="ReplayTip" aria-label="Repeat current instruction">?</button></div><div class="income parchment"><div><small>AUTOMATIC SALES</small><strong id="automatic-income">₹0/sec</strong><span>Products earn automatically</span></div><div><small>PER TAP</small><strong id="tap-income">₹1</strong><span>Tap the counter</span></div></div><div class="skills"><button id="skill-0" data-action="InspectSkill" aria-label="Festival Rush, locked"><span class="skill-disc">⌑</span><strong>Festival Rush</strong><small>LOCKED</small></button><button id="skill-1" data-action="InspectSkill" aria-label="Helping Hands, locked"><span class="skill-disc">⌑</span><strong>Helping Hands</strong><small>LOCKED</small></button><button id="skill-2" data-action="InspectSkill" aria-label="Bulk Order, locked"><span class="skill-disc">⌑</span><strong>Bulk Order</strong><small>LOCKED</small></button></div></section>
+<section id="panel" class="panel" hidden><header><h2 id="panel-title">Player</h2><button id="collapse" data-action="Home" aria-label="Collapse to Home">⌄</button></header><div id="panel-scroll" class="panel-scroll">
+<div id="player-content"><div class="toolbar"><button id="stats" data-action="Stats">Stats</button><button id="skills" data-action="InspectSkill">Skills</button><button id="achievements" data-action="Achievements">Achievements</button></div><div id="training-hint" class="hint">Train once to earn more per tap.<br>You can still explore every screen.</div><article class="purchase-row" id="training-row"><div><h3 id="training-title">Salesmanship · Lvl 0</h3><p id="training-effect">₹1 → ₹2.40 per tap</p><small id="training-cost">First level · ₹10</small></div><button id="buy-training" class="primary" data-action="BuyTraining">Train · ₹10</button></article><h3 class="section-title">Upgrades</h3><div id="upgrade-hint" class="hint">Improve a product you already own.<br>Phuljhari: ₹0.85 → ₹1.70/sec.</div><article id="upgrade-row" class="purchase-row"><div><h3>Phuljhari Signature I</h3><p>Phuljhari profit ×2</p><small>One-time upgrade · ₹20</small></div><button id="buy-upgrade" class="primary" data-action="BuyUpgrade">Buy · ₹20</button></article></div>
+<div id="products-content" hidden><p id="product-total">Automatic sales · ₹0/sec</p><div id="product-hint" class="hint">Stock Phuljhari to earn automatically.<br>It earns ₹0.85 every second.</div><article class="purchase-row"><div><h3 id="product-title">Phuljhari · not stocked</h3><p id="product-effect">Automatic sales · ₹0.85/sec</p><small>First product · ₹30</small></div><button id="buy-product" class="primary" data-action="BuyProduct">Stock · ₹30</button></article><article class="purchase-row"><div><h3>Anar · locked</h3><p>Stock Phuljhari first</p><small>Next display</small></div><button id="inspect-anar" data-action="InspectProduct">View</button></article></div>
+<div id="legacy-content" hidden><h3 id="free-credits" class="section-title">3 free pulls available</h3><p>Earned from your first prestige</p><div id="talent-hint" class="hint">Use one free pull to discover a Talent card.<br>Its benefit stays with you after prestige.</div><div class="pull-buttons"><button id="free-pull" class="primary" data-action="FreePull">1× pull · FREE</button><button id="five-pull" disabled>5× · 400 KK</button></div><h3 id="collection-count">Talent collection · 0 / 28</h3><p>Permanent benefits that stay after prestige.</p></div>
+<div id="shop-content" hidden><p>Kaju Katli packs are not available yet.</p><p>The tutorial uses a free pull after your first prestige.</p></div>
+</div></section>
+<nav class="navigation" aria-label="Main navigation"><button id="nav-Player" data-action="Tab" data-param="Player"><svg viewBox="0 0 32 32"><circle cx="16" cy="10" r="6"/><path d="M5 29q0-13 11-13t11 13z"/></svg><strong>Player</strong></button><button id="nav-Products" data-action="Tab" data-param="Products"><svg viewBox="0 0 32 32"><path d="M3 13h26M6 13v16h20V13M3 13l4-9h18l4 9M13 29V18h7v11"/></svg><strong>Products</strong></button><button id="nav-Legacy" data-action="Tab" data-param="Legacy"><svg viewBox="0 0 32 32"><path d="m16 2 4 10 11 1-8 7 3 11-10-6-10 6 3-11-8-7 11-1z"/></svg><strong>Legacy</strong></button><button id="nav-Shop" data-action="Tab" data-param="Shop"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="8" rx="11" ry="5"/><path d="M5 8v15c0 7 22 7 22 0V8M5 15c0 7 22 7 22 0M5 22c0 7 22 7 22 0"/></svg><strong>Shop</strong></button></nav>
+<dialog id="modal" class="parchment"><h2 id="modal-title"></h2><div id="modal-copy"></div><div class="modal-actions"><button id="modal-ok" class="primary" data-action="ModalConfirm">Got it</button><button id="modal-cancel" data-action="ModalDismiss">Back</button></div></dialog><output id="status" class="status" aria-live="polite"></output>
+</main><script id="unity-metadata" type="application/json">{
+  "schemaVersion": 1,
+  "screen": {
+    "functionalityProfile": "mixed",
+    "identity": "shopkeeper-tutorial",
+    "destinationOrOwner": "Classic production Main / proposed tutorial presenter",
+    "entryState": "welcome for newly-created saves only",
+    "referenceViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "visualApprovalStatus": "candidate",
+    "wireframeApproval": "Revision 1 explicitly approved 29 October 2026",
+    "artApproval": "User: I aprove it star making the html",
+    "lifecycle": {
+      "open": "After local startup/name/offline/recovery settles",
+      "close": "Skip/completion hides dialogue; objectives remain; prestige does not replay opening"
+    },
+    "behaviorAuthority": [
+      "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "Assets/Game/Core/RedesignEngine.cs",
+      "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "Assets/Game/Core/RedesignAchievements.cs",
+      "Game Design/Shopkeeper Tutorial Draft.md"
+    ],
+    "capabilityModules": [
+      "tutorialFlow",
+      "collections",
+      "persistence",
+      "accessibilityAndPresentation",
+      "gameplayEvents"
+    ]
+  },
+  "actions": {
+    "Settings": {
+      "triggerIds": [
+        "settings"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "Tap": {
+      "triggerIds": [
+        "tap-counter"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "Tap",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "ContinueTutorial": {
+      "triggerIds": [
+        "coach-continue"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "SkipTutorial": {
+      "triggerIds": [
+        "coach-skip"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "OpenObjective": {
+      "triggerIds": [
+        "objective-route"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "ReplayTip": {
+      "triggerIds": [
+        "objective-help"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "InspectSkill": {
+      "triggerIds": [
+        "skill-0",
+        "skill-1",
+        "skill-2",
+        "skills"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "Home": {
+      "triggerIds": [
+        "collapse"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "SetTab",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "Stats": {
+      "triggerIds": [
+        "stats"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "Achievements": {
+      "triggerIds": [
+        "achievements"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "BuyTraining": {
+      "triggerIds": [
+        "buy-training"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BuyLevels",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "BuyUpgrade": {
+      "triggerIds": [
+        "buy-upgrade"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BuyUpgrade",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "BuyProduct": {
+      "triggerIds": [
+        "buy-product"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BuyLevels",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "InspectProduct": {
+      "triggerIds": [
+        "inspect-anar"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "FreePull": {
+      "triggerIds": [
+        "free-pull"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "QuoteDraw / Draw",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "Tab": {
+      "triggerIds": [
+        "nav-Player",
+        "nav-Products",
+        "nav-Legacy",
+        "nav-Shop"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "SetTab",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing engine/navigation entry is verified; adapt contextual highlights and completion observation without replacing economic authority.",
+      "canFail": true
+    },
+    "ModalConfirm": {
+      "triggerIds": [
+        "modal-ok"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "ModalDismiss": {
+      "triggerIds": [
+        "modal-cancel"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    }
+  },
+  "bindings": {
+    "wallet": {
+      "targetIds": [
+        "cash",
+        "tap-income",
+        "automatic-income",
+        "free-credits",
+        "collection-count"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "State.cash / TapPayout / NormalIncome / freeCredits / cardLevels",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    },
+    "coach": {
+      "targetIds": [
+        "coach-title",
+        "coach-copy",
+        "coach-continue"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "New tutorial step state and successful purchase projection",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "new-approved",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    },
+    "objective": {
+      "targetIds": [
+        "objective-kicker",
+        "objective-title",
+        "objective-detail"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "New tutorial objective resolver; current goal only routes to Products",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "new-approved",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    },
+    "training": {
+      "targetIds": [
+        "training-title",
+        "training-effect",
+        "training-cost",
+        "buy-training"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "PreviewLevels(-1,1) / LevelQuote(-1,1)",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    },
+    "products": {
+      "targetIds": [
+        "shelves",
+        "product-title",
+        "product-total",
+        "buy-product"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "State.products / ProductIncome / LevelQuote(0,1)",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    },
+    "status": {
+      "targetIds": [
+        "status"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "Session.CanMutate / save recovery state",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "existing-needs-adaptation",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    }
+  },
+  "navigation": {
+    "owner": "ClassicUI.SetTab/Open/Close",
+    "routes": [
+      "Home",
+      "Player",
+      "Products",
+      "Legacy",
+      "Shop",
+      "Achievements",
+      "Prestige",
+      "DrawReveal"
+    ],
+    "history": "Selected tab toggles Home; collapse returns Home; dismiss modal before back navigation",
+    "synchronization": "Re-resolve highlight from current route and actual state; never force navigation",
+    "unavailableDestinations": "Full downstream screens not recreated here; focused informational modals are fixture adapters",
+    "transitionTiming": "No input blocking; recovery/reveal has priority"
+  },
+  "conflicts": [
+    {
+      "htmlIntent": "Sequential, durable new-user tutor",
+      "runtimeEvidence": "ClassicGuidance offers optional learned-topic hints and hides Home goal during a hint",
+      "disposition": "Add coordinator and keep current objective visible; suppress competing hints",
+      "approvalStatus": "approved",
+      "implementationConsequence": "Native implementation pending separate direction"
+    },
+    {
+      "htmlIntent": "First-pull coaching uses free credit after first prestige",
+      "runtimeEvidence": "Normal Draw can also spend 100 KK",
+      "disposition": "Require actual free credit for tutor suggestion; no automatic paid fallback",
+      "approvalStatus": "approved",
+      "implementationConsequence": "Check guard again at commit"
+    }
+  ],
+  "qaScenarios": [
+    {
+      "id": "opening",
+      "preconditions": "new save",
+      "trigger": "Tap counter and buy affordable training",
+      "expectedUIState": "₹1 → ₹2.40 acknowledgement and next product objective",
+      "expectedSideEffects": "One durable level purchase",
+      "forbiddenSideEffects": "Panel/navigation touches earning taps; tutorial advance on failed save",
+      "relatedActionIds": [
+        "Tap",
+        "BuyTraining"
+      ]
+    },
+    {
+      "id": "save-failure",
+      "preconditions": "saving unavailable",
+      "trigger": "Attempt any purchase/claim/pull",
+      "expectedUIState": "Retained objective and recovery",
+      "expectedSideEffects": "None",
+      "forbiddenSideEffects": "Currency debit/grant or persisted completion",
+      "relatedActionIds": [
+        "BuyProduct",
+        "FreePull",
+        "ModalConfirm"
+      ]
+    },
+    {
+      "id": "free-pull",
+      "preconditions": "first prestige completed, three credits",
+      "trigger": "1× free pull",
+      "expectedUIState": "Reveal actual card; two credits left",
+      "expectedSideEffects": "One engine-owned reveal and credit debit",
+      "forbiddenSideEffects": "Paid fallback/duplicate reveal reward",
+      "relatedActionIds": [
+        "FreePull"
+      ]
+    },
+    {
+      "id": "existing",
+      "preconditions": "old save lacks tutorial fields",
+      "trigger": "Load profile",
+      "expectedUIState": "No automatic tutorial",
+      "expectedSideEffects": "None",
+      "forbiddenSideEffects": "Fresh-user enrolment",
+      "relatedActionIds": [
+        "ContinueTutorial"
+      ]
+    }
+  ],
+  "modules": {
+    "tutorialFlow": {
+      "steps": [
+        "welcome",
+        "saving",
+        "training",
+        "result",
+        "product",
+        "upgrade",
+        "achievement",
+        "prestige",
+        "talent"
+      ],
+      "gates": "Observe successful actual commands and state; no fixed timers",
+      "highlights": "Suggested control only; all navigation usable",
+      "advance": "Purchase success, claim receipt, completed prestige, actual card reveal",
+      "skip": "Durable skip flag in future native owner; fixture flag is memory-only",
+      "resume": "Persist completed step separately from resettable run state; never replay after prestige",
+      "enrolment": "Only newly created saves; missing fields on old saves means not enrolled",
+      "milestones": "Achievement/skill/prestige triggers independent; achievement never gates prestige"
+    },
+    "collections": {
+      "products": {
+        "count": 8,
+        "key": "catalog product ID",
+        "layout": "Two rows of four",
+        "owner": "RedesignState.products"
+      }
+    },
+    "persistence": {
+      "owner": "RedesignEngine.Commit and RedesignSaveStore; new tutorial fields required",
+      "atomicity": "Advance tutorial completion only with durable successful economic action",
+      "recovery": "Retain current objective on write failure; no browser storage in preview",
+      "idempotency": "Engine receipts and saved step completion prevent duplicates"
+    },
+    "accessibilityAndPresentation": {
+      "touchTargets": "At least 48 logical pixels; short screens compress scene or scroll lower panels",
+      "focus": "Visible keyboard focus; native dialog focus restoration",
+      "reducedMotion": "No essential animations",
+      "localization": "Editable text; avoid fixed string lengths",
+      "pointerGuards": "Only counter accepts taps; pointer drag threshold prevents scroll gestures earning"
+    },
+    "gameplayEvents": {
+      "source": "Successful RedesignRuntimeDriver.Command/Changed; live counters for affordability",
+      "order": "Mutation then durable success then presentation refresh",
+      "coalescing": "One relevant message at a time; skip already performed actions",
+      "teardown": "Detach listeners and cancel obsolete hints on session disposal"
+    }
+  }
+}</script><script src="tutorial.js" data-handoff-role="preview-only"></script></body></html>

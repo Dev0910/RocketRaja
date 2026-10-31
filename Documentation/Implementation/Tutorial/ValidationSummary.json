@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-30",
+  "coreChecksAndActions": 550,
+  "productionPlayChecks": 68,
+  "savedAssetChecks": 24,
+  "inspectorRegressionTests": 12,
+  "runtimeConstruction": false,
+  "physicalAndroidDeviceTested": false,
+  "runtimeAndSceneSha256": {
+    "Assets/Game/Core/RedesignTutorial.cs": "7a32c44dbc38de16fb12b8d74ff114f51737e5aa71b1805fcb93b589b86b0278",
+    "Assets/Game/Runtime/Classic/ClassicTutorial.cs": "71b16f9b5e3aa44315e16457c2c836eb72970a9aba3aaf8e86bc0c115f611303",
+    "Assets/Game/Core/RedesignState.cs": "7a4e4da80c1e9c8a627f93076a757c4f09f4455f032db6d617fbef3165ec94f3",
+    "Assets/Game/Core/RedesignEngine.cs": "8bf784468f74eca8ea8731b5e15cd80ba7dd04684f52c4664930dd5ad816777b",
+    "Assets/Game/Runtime/Classic/ClassicUI.cs": "5cd11ad92cd0daa2d6b876c88d4e1ffa32326c297077cf762848c20126ca8af5",
+    "Assets/Game/Runtime/Classic/ClassicUI.Bindings.cs": "9fb2f510d7d1001290f493cc1105372a20a1ddfcc7a1d17f9fcd243a20b1dce2",
+    "Assets/Game/Runtime/Classic/ClassicGuidance.cs": "2b001e5715572b3f6295d76a7822e1d4b39220712cd8866e4d72d67d17a64358",
+    "Assets/Scenes/Main.unity": "2647a884efe71d0c09802aabf9e77c8a81ec432967a5b9db93097a0050d0469b"
+  }
+}

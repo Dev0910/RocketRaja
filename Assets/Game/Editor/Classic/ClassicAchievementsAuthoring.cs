@@ -93,7 +93,7 @@ namespace RocketRaja.Editor
                 name.rectTransform.offsetMin = new Vector2(12, 0); name.rectTransform.offsetMax = new Vector2(-12, -4);
                 var description = Label("", Region("Description", card, 0, .51f, 1, .74f), definition.Description, 10, false, Muted);
                 description.rectTransform.offsetMin = new Vector2(12, 0); description.rectTransform.offsetMax = new Vector2(-12, 0);
-                var progress = Label("", Region("Progress", card, .04f, .30f, .60f, .49f), "0 / " + definition.Target, 10, true);
+                var progress = Label("", Region("Progress", card, .04f, .30f, .60f, .49f), definition.Progress(RedesignState.Fresh()), 10, true);
                 var track = Region("Progress track", card, .04f, .24f, .60f, .28f);
                 Face(track, new Color32(224, 216, 194, 255), rounded);
                 var fill = Face(Fill("Fill", track), new Color32(203, 151, 58, 255), rounded);

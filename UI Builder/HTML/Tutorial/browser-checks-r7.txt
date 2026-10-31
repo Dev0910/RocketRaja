@@ -1,0 +1,11 @@
+30 October 2026 — focused browser check of the requested dialog placement
+PASS Training coach stays under app-inner, outside Player's scrolling content.
+PASS Player has no inline coach or training row hint.
+PASS Welcome and training share the same dialog position and width at 964x884:
+     left 522.203125 px, bottom 333.625 px, width 310 px.
+PASS Ten keyboard earning taps from the welcome fixture reach ₹10, select Player,
+     and show the shopkeeper dialog with the Salesmanship purchase still available.
+PASS Fresh training review shows the dialog above the shopkeeper, matching Step 01.
+PASS tutorial.js syntax check.
+Screenshot: renders-r7/10-rupees-shopkeeper-dialog.png
+No native Unity implementation performed.

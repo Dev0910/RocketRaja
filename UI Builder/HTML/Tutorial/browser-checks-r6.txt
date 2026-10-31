@@ -1,0 +1,12 @@
+30 October 2026 — focused browser verification, HTML preview only
+PASS At ₹9, the tutorial stays on Home with the saving objective.
+PASS The tenth keyboard earning tap grants ₹10 and automatically opens Player.
+PASS The ivory/gold ₹10 dialog is visible above Salesmanship; training remains unpurchased.
+PASS The dialog and highlighted ₹10 purchase button are both visible without overlap.
+PASS Dismissing the dialog leaves training pending; returning Home and earning ₹11 does not reopen Player.
+PASS Manually buying Salesmanship spends ₹10, returns Home, and shows ₹2.40-per-tap feedback.
+PASS Saving-unavailable mode rejects an earning tap and stays at ₹6 on Home.
+PASS After saving is restored, four mouse clicks from ₹6 trigger the same ₹10 dialog and Player route.
+PASS JavaScript syntax: tutorial.js and updated verify-classic.cjs.
+Existing full regression runner updated for automatic navigation; not rerun this revision.
+Screenshot: renders-r6/10-rupees-player.png

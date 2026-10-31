@@ -1,0 +1,19 @@
+30 October 2026 — focused HTML browser verification of remaining existing tutorial steps
+PASS Achievement readiness opens Player with shopkeeper dialogue and highlighted Achievements control.
+PASS Automatic guidance scrolls the target into view even after previously scrolling down Player.
+PASS Achievements opens an explicit claim dialog; manual claim gives exactly 5 KK and shopkeeper feedback.
+PASS Reopening the achievement shows Already claimed and a disabled claim control.
+PASS First-prestige readiness opens Player with shopkeeper dialogue and highlighted View prestige.
+PASS Prestige opens an explicit reset/keep confirmation; cancellation preserves the run.
+PASS Dismissal, return Home and an earning tap do not repeat the prestige route/dialog.
+PASS Confirming prestige opens Legacy with a shopkeeper introduction to 3 free pulls; no pull is automatic.
+PASS Dismissing Talent guidance, returning Home and tapping does not repeat the route/dialog.
+PASS Saving-unavailable mode disables the free-pull control.
+PASS Manual 1x pull uses one fixture credit, spends no KK, and opens the existing card reveal.
+PASS Reveal Continue waits until the card is shown, then displays its exported income x1.2 benefit and permanence in the shopkeeper dialog.
+PASS After the card explanation, the objective leads to the Talent collection instead of repeating opening training.
+PASS No inline tutorial hints remain.
+PASS tutorial.js and updated verify-classic.cjs syntax, handoff JSON and tracked-document whitespace checks.
+Captures: renders-r10/achievement.png, prestige.png, talent.png, card-benefit.png.
+Full regression runner adapted for milestone routes and card follow-up; not rerun in this revision.
+All preview state is disposable; native Unity implementation remains pending.

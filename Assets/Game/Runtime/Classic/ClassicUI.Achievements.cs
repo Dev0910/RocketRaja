@@ -76,7 +76,7 @@ namespace RocketRaja.Classic
                 }
                 else SetButtonSkin(row.claim, row.claim.interactable);
                 row.fill.fillAmount = complete ? 1 : definition.Metric == AchievementMetric.Earnings
-                    ? Mathf.Clamp01((float)Amount.Ratio(state.lifetimeEarnings, new Amount(definition.Target)))
+                    ? Mathf.Clamp01((float)Amount.Ratio(state.lifetimeEarnings, definition.EarningsTarget))
                     : Mathf.Clamp01((float)((double)definition.Current(state) / definition.Target));
                 row.fill.color = claimed ? new Color32(72, 145, 129, 255) : new Color32(203, 151, 58, 255);
             }

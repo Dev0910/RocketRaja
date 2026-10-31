@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Classic HTML · 1080 × 2200</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#14252d;color:#fff4db;font:14px system-ui,sans-serif}
+header{height:52px;display:flex;align-items:center;justify-content:center;gap:20px;border-bottom:1px solid #ffffff20}
+header strong{font-size:14px}button{border:1px solid #ffffff45;border-radius:6px;padding:6px 12px;background:#203c49;color:inherit;cursor:pointer}
+main{height:calc(100% - 52px);display:grid;place-items:center;overflow:auto;padding:16px}
+.device{position:relative;width:1080px;height:2200px;flex:none;box-shadow:0 8px 40px #0007}
+iframe{position:absolute;inset:0;width:1080px;height:2200px;border:0;transform-origin:top left}
+</style>
+</head>
+<body>
+<header><strong>1080 × 2200</strong><span>Live Classic HTML</span><button id="zoom" type="button">Actual size</button></header>
+<main id="stage"><div class="device" id="device"><iframe id="preview" title="Classic game at 1080 by 2200 pixels" src="../?capture=1&amp;viewport=1080x2200&amp;state=progressed&amp;build=development&amp;feel=unity-parity-20261031"></iframe></div></main>
+<script>
+const stage=document.getElementById('stage'),device=document.getElementById('device'),preview=document.getElementById('preview');
+let actual=false;
+function fit(){
+ const factor=actual?1:Math.min(1,(stage.clientWidth-32)/1080,(stage.clientHeight-32)/2200);
+ device.style.width=(1080*factor)+'px';device.style.height=(2200*factor)+'px';
+ preview.style.transform='scale('+factor+')';
+}
+preview.addEventListener('load',fit);
+new ResizeObserver(fit).observe(stage);
+document.getElementById('zoom').addEventListener('click',event=>{actual=!actual;event.currentTarget.textContent=actual?'Fit to panel':'Actual size';fit();});
+fit();
+</script>
+</body>
+</html>

@@ -27,6 +27,8 @@ namespace RocketRaja.Classic
         readonly List<DimTrack> dims=new List<DimTrack>();
         readonly string[] skillStates=new string[3];
         float ambientTime;bool focused=true;Color hintColor;
+        float keeperNodAt=-10;
+        public void NodKeeper(){if(!reduced)keeperNodAt=Time.unscaledTime;}
         static readonly Color[][] Palettes={new[]{Hex(0xf2c56d),Hex(0xfff0bd),Hex(0xe5a359),Hex(0x7cbab0)},new[]{Hex(0xdf95c4),Hex(0xffe8bd),Hex(0xa977c7)},new[]{Hex(0xffdc79),Hex(0xf49752),Hex(0xfff1bc)}};
         static Color Hex(int n)=>new Color32((byte)(n>>16),(byte)(n>>8),(byte)n,255);
         void InitializePresentation()
@@ -132,6 +134,7 @@ namespace RocketRaja.Classic
             }
             for(int i=0;i<lanterns.Length;i++){float p=(1-Mathf.Cos((time+i*2.1f)*Mathf.PI/4.7f))*.5f;var c=lanterns[i].color;c.a=reduced?0:Mathf.Lerp(.35f,.85f,p);lanterns[i].color=c;lanterns[i].rectTransform.localScale=Vector3.one*Mathf.Lerp(.9f,1.12f,p);}
             if(ambient){float p=(1-Mathf.Cos(time*Mathf.PI*2/6.5f))*.5f;keeper.anchoredPosition=keeperOrigin+Vector2.up*p;keeper.localRotation=Quaternion.Euler(0,0,-.6f*p);}
+            float nod=(time-keeperNodAt)/.7f;if(!reduced&&nod>=0&&nod<1)keeper.localRotation=Quaternion.Euler(0,0,-4*Mathf.Sin(nod*Mathf.PI));
             for(int i=0;i<skillGlows.Length;i++)
             {
                 bool active=skillStates[i]=="ACTIVE";float p=Mathf.Repeat((time+i*1.3f)/3.8f,1),ring=p<.7f?0:p<.85f?(p-.7f)/.15f:(1-p)/.15f;

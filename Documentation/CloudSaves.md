@@ -1,4 +1,18 @@
-# Google login and cloud-save integration
+# Cloud-save infrastructure — currently inactive
+
+## Current status — 28 October 2026
+
+Google login is removed from the playable game. Bootstrap automatically selects the existing local profile and loads Main; Settings and recovery expose no account actions. Local backups, version checks, offline settlement and protected recovery remain authoritative. There is no anonymous-cloud replacement or migration of account/cloud saves.
+
+Retained infrastructure includes `IAccountAuth`, cloud contracts/stores, checkpoints, coordinators, account-session logic, premium authority code and isolated tests. Production hosts cannot create account sessions; Editor-only fixture injection remains available. Firebase SDK modules, real configuration, console settings and cloud records are unchanged.
+
+To restore login later, introduce a reviewed authentication provider/adapter, reconnect session-host construction, review local/account save selection and purchase ownership, then reconstruct account UI through the normal review stages. Restore native login dependencies only when the selected provider requires them. Use the local SDK in `FirebaseSDK.md` if imports are necessary. Re-enabling `RedesignCloudSettings` alone no longer enables production account flow.
+
+Current implementation, art approvals, tests and Android build: [LocalOnly/README.md](Implementation/LocalOnly/README.md).
+
+## Historical Google-login delivery record
+
+The sections below describe the previous integration. Their available-UI and runtime-login descriptions are superseded by the local-only status above.
 
 ## Current delivery status
 

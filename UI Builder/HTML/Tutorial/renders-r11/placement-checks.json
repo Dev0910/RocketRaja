@@ -1,0 +1,185 @@
+{
+  "desktop": [
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "welcome",
+      "target": "stall-tap",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "saving",
+      "target": "stall-tap",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "training",
+      "target": "buy-training",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "result",
+      "target": "buy-training",
+      "targetOutline": "none",
+      "visible": false,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "product",
+      "target": "buy-product",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "upgrade",
+      "target": "buy-upgrade",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "achievement",
+      "target": "achievement-entry",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "prestige",
+      "target": "prestige-entry",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "events": "none",
+      "oldHighlights": 0,
+      "step": "talent",
+      "target": "free-pull",
+      "targetOutline": "none",
+      "visible": true,
+      "withinGame": true
+    }
+  ],
+  "mobile": [
+    {
+      "side": "below",
+      "step": "welcome",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "training",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "product",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "upgrade",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "below",
+      "step": "achievement",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "prestige",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "below",
+      "step": "talent",
+      "viewport": "360x640",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "below",
+      "step": "welcome",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "training",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "product",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "upgrade",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "below",
+      "step": "achievement",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "above",
+      "step": "prestige",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    },
+    {
+      "side": "below",
+      "step": "talent",
+      "viewport": "360x540",
+      "visible": true,
+      "withinGame": true
+    }
+  ]
+}

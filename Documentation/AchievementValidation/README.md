@@ -1,5 +1,7 @@
 # Player achievements and effect precision — 21 October 2026
 
+Current gameplay balance: [40-stage achievement revision, 29 October 2026](2026-10-29-balance.md). The original implementation and verification record below is historical.
+
 The saved Classic Main scene now has an **Achievements** control next to Skills on the Player page. The existing artwork, fonts and popup surfaces are reused. Completed rewards appear first, the control shows a ready count, and claimed rewards move to the end of the list.
 
 ## Rewards

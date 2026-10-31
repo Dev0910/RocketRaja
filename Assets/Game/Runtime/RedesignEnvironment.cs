@@ -14,7 +14,18 @@ namespace RocketRaja
         // Disposable redesign and Classic playtest directories are never release profile sources.
         public static string DefaultProfileRoot => Application.persistentDataPath;
         public static string SeparateProfileRoot => Path.Combine(DefaultProfileRoot, "classic-v2");
-        public static string ProfileRoot => PlayerPrefs.GetInt(ProfileNamespace + ".SeparateGuest", 0) == 1 ? SeparateProfileRoot : DefaultProfileRoot;
+        public static string ProfileRoot
+        {
+            get
+            {
+#if UNITY_EDITOR
+                // Explicit, temporary validation isolation; never compiled into players.
+                string validation = UnityEditor.SessionState.GetString("RocketRaja.LocalOnlyQA.Profile", "");
+                if (!string.IsNullOrEmpty(validation)) return validation;
+#endif
+                return PlayerPrefs.GetInt(ProfileNamespace + ".SeparateGuest", 0) == 1 ? SeparateProfileRoot : DefaultProfileRoot;
+            }
+        }
         // Called only after the explicit Bootstrap legacy-profile confirmation.
         public static void SelectSeparateGuest()
         {

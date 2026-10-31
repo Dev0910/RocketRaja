@@ -1,0 +1,49 @@
+{
+  "apk": "C:\\Unity\\Projects\\Incremental game\\Builds\\Android\\RocketRaja-local-only-validation.apk",
+  "bytes": 115164675,
+  "sha256": "4f6ee32b3f657954f09344e874192f67327c96b04203675d705ce38488d157c9",
+  "package": "package: name='com.diwali.fireworkstycoon.dev' versionCode='6' versionName='0.1.5' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+  "debuggable": true,
+  "dexMarkers": {
+    "gameGoogleBridge": false,
+    "googleIdLibrary": true,
+    "credentialManager": true,
+    "rewardedAdsSdk": true
+  },
+  "checks": {
+    "gameGoogleBridgeAbsent": true,
+    "directLoginDependenciesAbsent": true,
+    "onlyRetainedSdkGoogleIdVersion": true,
+    "rewardedAdsSdkPresent": true,
+    "arm64PlayerPresent": true
+  },
+  "dependencyReport": "Documentation\\Implementation\\LocalOnly\\AndroidDependencyGraph.txt",
+  "retainedSdkDependencyChain": [
+    "com.google.firebase:firebase-auth:24.2.0",
+    "androidx.credentials:credentials-play-services-auth:1.2.0-rc01",
+    "com.google.android.libraries.identity.googleid:googleid:1.1.0"
+  ],
+  "sdkDependencyNote": "Firebase Auth 24.2.0 depends on Credential Manager; its Play services implementation depends on Google ID 1.1.0. These transitive libraries remain with the explicitly retained SDK. The game's direct Google ID 1.2.0 / Credential Manager 1.6.0 declarations and sign-in bridge are removed; no production sign-in entry point exists.",
+  "nativeLibraries": [
+    "lib/arm64-v8a/libFirebaseCppAnalytics.so",
+    "lib/arm64-v8a/libFirebaseCppApp-13_17_0.so",
+    "lib/arm64-v8a/libFirebaseCppAppCheck.so",
+    "lib/arm64-v8a/libFirebaseCppAuth.so",
+    "lib/arm64-v8a/libFirebaseCppCrashlytics.so",
+    "lib/arm64-v8a/libFirebaseCppFirestore.so",
+    "lib/arm64-v8a/libFirebaseCppRemoteConfig.so",
+    "lib/arm64-v8a/lib_burst_generated.so",
+    "lib/arm64-v8a/libc++_shared.so",
+    "lib/arm64-v8a/libcrashlytics-common.so",
+    "lib/arm64-v8a/libcrashlytics-handler.so",
+    "lib/arm64-v8a/libcrashlytics-trampoline.so",
+    "lib/arm64-v8a/libcrashlytics.so",
+    "lib/arm64-v8a/libdatastore_shared_counter.so",
+    "lib/arm64-v8a/libgame.so",
+    "lib/arm64-v8a/libil2cpp.so",
+    "lib/arm64-v8a/libmain.so",
+    "lib/arm64-v8a/libswappywrapper.so",
+    "lib/arm64-v8a/libunity.so"
+  ],
+  "passed": true
+}

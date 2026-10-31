@@ -45,8 +45,10 @@ namespace RocketRaja.Classic
         public ClassicApplication application;
         public TMP_Text recoveryMessage;
         public ClassicGuidance guidance;
+        public ClassicTutorial tutorial;
         public ClassicProgression progression;
         public RedesignAudio audioFeedback;
+        public ClassicFestivalFeel festivalFeel;
         public GameObject developerResetRow;
         public GameObject developerResetDialog;
         public static bool DeveloperResetVisible
@@ -122,20 +124,38 @@ namespace RocketRaja.Classic
         public void Open(string route)
         {
             if(route=="DeveloperReset" && !driver.CanResetDevelopmentGame)return;
-            if (application && IsAccountRoute(route)) { application.OpenAccount(); return; }
+            if (IsAccountRoute(route)) return;
             if (!driver.Initialized || !driver.Session.CanMutate) return;
             var parts=route.Split(':');route=parts[0];if(parts.Length>1&&int.TryParse(parts[1],out int value)){if(route=="ProductDetail")product=value;if(route=="SkillDetail")skill=value;if(route=="CardDetail")selectedCard=value;}
             if(panels.Any(v=>v.route==route)){SetTab(route);return;}
             var next=dialogs.FirstOrDefault(v=>v.route==route);if(next==null){Notice("This view is unavailable.");return;}
-            if(stack.Contains(next)){while(stack.Count>0&&stack[stack.Count-1]!=next){stack[stack.Count-1].root.SetActive(false);stack.RemoveAt(stack.Count-1);}next.root.SetActive(true);RefreshDialog();RefreshHTMLPresentation();return;}
-            if(stack.Count>0){motion.ResetView(stack[stack.Count-1].root.transform);stack[stack.Count-1].root.SetActive(false);}RememberDialogFocus(next);stack.Add(next);next.root.SetActive(true);closing=false;
-            next.group.interactable=next.group.blocksRaycasts=true;motion.dialogOpen=true;driver.Session.GameplayInputEnabled=false;
+            if(closing)return;
+            if(stack.Contains(next))
+            {
+                while(stack[stack.Count-1]!=next)
+                {
+                    var removed=stack[stack.Count-1];motion.ResetView(removed.root.transform);
+                    removed.root.SetActive(false);stack.RemoveAt(stack.Count-1);dialogFocus.Remove(removed);
+                }
+                UpdateDialogLayers();RefreshDialog();RefreshHTMLPresentation();return;
+            }
+            if(stack.Count>0)motion.ResetView(stack[stack.Count-1].root.transform);
+            RememberDialogFocus(next);stack.Add(next);next.root.transform.SetAsLastSibling();next.root.SetActive(true);
+            UpdateDialogLayers();
             if(route=="Prestige")prestige=Engine.PreviewPrestige();if(route=="Naming")nameInput.SetTextWithoutNotify(string.IsNullOrEmpty(Engine.State.storeName)?"DIWALI DUKAAN":Engine.State.storeName);
             RefreshDialog();RefreshHTMLPresentation();RefreshAchievements();motion.Enter(next.window,0,20,.33f,.96f);motion.Backdrop(next.root.GetComponent<Image>());
             if(next.scroll)motion.Content((RectTransform)next.scroll.transform);
             if(route=="CardDetail")motion.Enter(images["full-art"].rectTransform,0,0,.45f,.96f,.3f);
             if(route=="DrawReveal")StartReveal();
             if(guidance)guidance.Refresh();
+        }
+        void UpdateDialogLayers()
+        {
+            // Keep the parent's live view and scroll state underneath its child.
+            // CanvasGroup blocks mouse, touch, scroll and keyboard interaction with covered views.
+            for(int i=0;i<stack.Count;i++)
+                stack[i].group.interactable=stack[i].group.blocksRaycasts=i==stack.Count-1;
+            motion.dialogOpen=stack.Count>0;driver.Session.GameplayInputEnabled=stack.Count==0;
         }
         void CloseAll(){CancelOfflineAd();closing=false;motion.SettleFlip();foreach(var v in stack){motion.ResetView(v.root.transform);v.root.SetActive(false);v.group.alpha=1;}stack.Clear();dialogFocus.Clear();motion.dialogOpen=false;}
         static bool IsAccountRoute(string route) => route == "Account" || route == "Welcome" || route == "AccountCompare" || route == "Handoff" || route == "SignOut" || route == "Promote" || route == "RecoveryConfirm";
@@ -147,7 +167,7 @@ namespace RocketRaja.Classic
             {
                 CloseAll();
                 var view = dialogs.First(v => v.route == "SaveRecovery");
-                stack.Add(view); view.root.SetActive(true); view.group.alpha = 1;
+                stack.Add(view); view.root.transform.SetAsLastSibling(); view.root.SetActive(true); view.group.alpha = 1;
                 view.group.interactable = view.group.blocksRaycasts = true;
             }
             motion.dialogOpen = true;
@@ -167,7 +187,7 @@ namespace RocketRaja.Classic
             }
             var top=stack[stack.Count-1];closing=true;top.group.interactable=false;
             motion.Backdrop(top.root.GetComponent<Image>(),true);
-            motion.Exit(top.window,()=>{if(!this)return;top.root.SetActive(false);stack.Remove(top);closing=false;if(stack.Count>0){stack[stack.Count-1].root.SetActive(true);RefreshDialog();}motion.dialogOpen=stack.Count>0;driver.Session.GameplayInputEnabled=stack.Count==0;RestoreDialogFocus(top);});
+            motion.Exit(top.window,()=>{if(!this)return;top.root.SetActive(false);stack.Remove(top);closing=false;UpdateDialogLayers();if(stack.Count>0)RefreshDialog();RestoreDialogFocus(top);});
         }
         void Search(string value){search=value;page=0;RefreshCatalogue();}
         void Tap()
@@ -177,13 +197,14 @@ namespace RocketRaja.Classic
             if(audioFeedback)audioFeedback.Feedback("tap");
             var origin=tapTarget.LastTapWorldPosition??tapTarget.transform.position;
             motion.Burst(origin,0,7);motion.Coins(origin,texts["cash"].rectTransform);motion.Pulse(texts["cash"].rectTransform);motion.Pulse(motion.tapHint);
+            if(festivalFeel)festivalFeel.Tap(origin,Cash(Engine.State.cash-beforeTap));
         }
         public void Handle(string action,string arg)
         {
             if (application)
             {
                 if (action == "Retry") { application.Retry(); return; }
-                if (action == "Account" || action == "Navigate" && IsAccountRoute(arg)) { application.OpenAccount(); return; }
+                if (action == "Account" || action == "Navigate" && IsAccountRoute(arg)) return;
                 if (action == "RecoveryExit") { GameView.BackgroundTask(); return; }
             }
             if(!initialized||closing)return;
@@ -191,6 +212,11 @@ namespace RocketRaja.Classic
             string revision=Engine.State.commandRevision.digits;
             switch(action)
             {
+                case "TutorialObjective":if(tutorial && tutorial.Active)tutorial.GoToGoal();else Open("Products");break;
+                case "TutorialResume":CloseAll();SetTab("Home");if(tutorial)tutorial.RepeatTip();break;
+                case "TutorialTip":if(tutorial && tutorial.Active)tutorial.RepeatTip();else Open("TutorialHelp");break;
+                case "TutorialSkip":if(!Engine.TutorialActive || Command(e=>e.SkipTutorial())){CloseAll();SetTab("Home");}break;
+                case "TutorialReplay":if(Command(e=>e.ReplayTutorial())){CloseAll();SetTab("Home");}break;
                 case "DeveloperReset":
                     if(CurrentDialog=="DeveloperReset" && driver.ResetDevelopmentGame())
                     {
@@ -203,23 +229,23 @@ namespace RocketRaja.Classic
                 case "AdPrivacyOptions":offlineAds.PrivacyOptions();break;
                 case "BuyShopCash":if(Command(e=>e.BuyShopCash()))Notice("24 hours of cash collected");break;
                 case "BuyShopProfit":if(Command(e=>e.BuyShopProfit()))Notice("Double profits active for 24 hours");break;
-                case "Tab":SetTab(CurrentTab==arg?"Home":arg);break;
-                case "Navigate":Open(arg);break;
+                case "Tab":SetTab(CurrentTab==arg?"Home":arg);if(audioFeedback)audioFeedback.Feedback("navigate");break;
+                case "Navigate":{string previous=CurrentDialog;Open(arg);if(audioFeedback&&previous!=CurrentDialog)audioFeedback.Feedback("open");break;}
                 case "Exact":exactSelection=arg;Open("Exact");break;
-                case "Close":Close();break;
+                case "Close":if(audioFeedback&&stack.Count>0)audioFeedback.Feedback("close");Close();break;
                 case "Card":if(int.TryParse(arg,out selectedCard)&&!Engine.State.cardLevels[selectedCard].IsZero)Open("CardDetail");break;
                 case "Quantity":if(arg=="tap")tapQuantity=Quantities[(Array.IndexOf(Quantities,tapQuantity)+1)%4];else quantity=Quantities[(Array.IndexOf(Quantities,quantity)+1)%4];Refresh();break;
-                case "BuyLevels":{int i=int.Parse(arg);bool fresh=Engine.State.products[0]==0;if(Command(e=>e.BuyLevels(i,LevelQuantity(i)))){if(i>=0){motion.Success(products[i].artFrame);motion.Pulse((RectTransform)shelfProducts[i].transform);}else motion.Success(texts["tap-row-cost"].rectTransform);Notice("Purchase complete");if(fresh&&i==0)SetTab("Home");}}break;
-                case "BuyUpgrade":if(Command(e=>e.BuyUpgrade(arg))){Notice("Upgrade purchased");motion.Success(texts["upgrade-count"].rectTransform);}break;
-                case "ClaimAchievement":if(Command(e=>e.ClaimAchievement(arg))){if(achievementSummary)motion.Success(achievementSummary.rectTransform);}break;
+                case "BuyLevels":{int i=int.Parse(arg),before=i<0?Engine.State.tapLevel:Engine.State.products[i];bool fresh=Engine.State.products[0]==0;if(Command(e=>e.BuyLevels(i,LevelQuantity(i)))){if(i>=0){motion.Success(products[i].artFrame);motion.Pulse((RectTransform)shelfProducts[i].transform);}else motion.Success(texts["tap-row-cost"].rectTransform);Notice("Purchase complete");if(fresh&&i==0)SetTab("Home");if(festivalFeel){var origin=i<0?texts["tap-row-cost"].transform.position:fresh&&i==0?shelfProducts[i].transform.position:products[i].artFrame.position;festivalFeel.Ring(origin);festivalFeel.Levels(i,before,i<0?Engine.State.tapLevel:Engine.State.products[i]);}}}break;
+                case "BuyUpgrade":if(Command(e=>e.BuyUpgrade(arg))){Notice("Upgrade purchased");var target=CurrentDialog=="Upgrades"?dialogs.First(d=>d.route=="Upgrades").window:texts["upgrade-count"].rectTransform;motion.Success(target);if(festivalFeel)festivalFeel.Ring(target.position);}break;
+                case "ClaimAchievement":{var source=achievementRows.FirstOrDefault(r=>r.id==arg);var origin=source!=null?source.claim.transform.position:transform.position;if(Command(e=>e.ClaimAchievement(arg))){if(achievementSummary)motion.Success(achievementSummary.rectTransform);if(festivalFeel)festivalFeel.Reward(origin);}break;}
                 case "BuyAll":batch=Engine.QuoteBuyAll();if(batch.Ids.Count>0&&Command(e=>e.CommitBuyAll(batch))){Notice(batch.Ids.Count+" upgrades purchased");motion.Success(texts["upgrade-count"].rectTransform,0,22);}break;
                 case "ReviewBatch":batch=Engine.QuoteBuyAll(new UpgradeScope{search=search});Open("BuyAll");break;
                 case "RefreshBatch":batch=Engine.QuoteBuyAll(new UpgradeScope{search=search});break;
                 case "ConfirmBatch":if(batch!=null&&Command(e=>e.CommitBuyAll(batch))){Close();Notice("Reviewed upgrades purchased");motion.Success(texts["upgrade-count"].rectTransform,0,22);}break;
-                case "ActivateSkill":{int target=string.IsNullOrEmpty(arg)?skill:int.Parse(arg);if(target>=0&&target<3&&SkillState(target)=="READY"&&Command(e=>e.ActivateSkill(target))){Notice(SkillNames[target]+" activated");motion.Success(homeSkillImages[target].rectTransform,1,22);}}break;
+                case "ActivateSkill":{int target=string.IsNullOrEmpty(arg)?skill:int.Parse(arg);if(target>=0&&target<3&&SkillState(target)=="READY"&&Command(e=>e.ActivateSkill(target))){Notice(SkillNames[target]+" activated");motion.Success(homeSkillImages[target].rectTransform,1,22);if(festivalFeel)festivalFeel.Skill(target);}}break;
                 case "Draw":Draw(int.Parse(arg));break;
                 case "ContinueReveal":ContinueReveal();break;
-                case "Prestige":if(prestige!=null&&Command(e=>e.Prestige(prestige))){CloseAll();SetTab("Home");motion.Success(texts["shop-name"].rectTransform,2,22);Notice("A brighter beginning!");}break;
+                case "Prestige":if(prestige!=null&&Command(e=>e.Prestige(prestige))){CloseAll();SetTab("Home");motion.Success(texts["shop-name"].rectTransform,2,22);if(festivalFeel)festivalFeel.Prestige();Notice("A brighter beginning!");}break;
                 case "Setting":Command(e=>e.ToggleSetting(arg));break;
                 case "Rename":if(Command(e=>e.SetStoreName(nameInput.text))){Close();Notice("Shop name updated");}break;
                 case "Offline":Close();break;
@@ -231,12 +257,12 @@ namespace RocketRaja.Classic
                 case "Purchase":if(!isolatedPreview){Notice("Store purchases are not available yet. No payment was started.");break;}pack=int.Parse(arg);Open("Purchase");break;
                 case "PurchaseResult":PurchaseOutcome(arg);break;
                 case "Retry":if(driver.RetrySaving()){CloseAll();SetTab("Home");Notice("Saving recovered");}else Notice(driver.RecoveryNotice??"Still unavailable. Your saved progress is retained.");break;
-                case "Account":AccountAction(arg);break;
+                case "Account":break;
                 case "RecoveryExit":CloseAll();Open("RecoveryExit");break;
             }
             if(audioFeedback && revision!=Engine.State.commandRevision.digits)
             {
-                string cue=action=="Prestige"?"prestige":action=="ActivateSkill"?"skill":action=="Draw"||action=="ContinueReveal"&&CurrentDialog=="DrawReveal"?"reveal":action=="BuyLevels"||action=="BuyUpgrade"||action=="BuyAll"||action=="ConfirmBatch"?"purchase":null;
+                string cue=action=="Prestige"?"prestige":action=="ActivateSkill"?"skill":action=="ClaimAchievement"?"reward":action=="Setting"?"click":action=="Draw"||action=="ContinueReveal"&&CurrentDialog=="DrawReveal"?"reveal":action=="BuyLevels"||action=="BuyUpgrade"||action=="BuyAll"||action=="ConfirmBatch"?"purchase":null;
                 if(cue!=null)audioFeedback.Feedback(cue);
             }
             Refresh();
@@ -252,7 +278,7 @@ namespace RocketRaja.Classic
         {
             revealContinue.interactable=false;motion.ResetView(revealResult.transform);revealResult.SetActive(true);var resultGroup=revealResult.GetComponent<CanvasGroup>();resultGroup.alpha=0;resultGroup.interactable=resultGroup.blocksRaycasts=false;RefreshDialog();
             if(motion.revealGlowImage&&Engine.Data.TryCard(Engine.State.reveal.cardId,out int cardIndex))motion.revealGlowImage.color=(int)Engine.Data.Cards[cardIndex].tier==2?new Color32(237,186,75,255):(int)Engine.Data.Cards[cardIndex].tier==1?new Color32(201,121,173,255):new Color32(98,158,180,255);
-            motion.Reveal(revealCard,revealFront,revealBack,()=>{revealContinue.interactable=true;resultGroup.alpha=1;motion.Enter((RectTransform)revealResult.transform,0,7,.25f);if(Engine.Data.TryCard(Engine.State.reveal.cardId,out int i))motion.Burst(revealCard,(int)Engine.Data.Cards[i].tier,22);});
+            motion.Reveal(revealCard,revealFront,revealBack,()=>{revealContinue.interactable=true;resultGroup.alpha=1;motion.Enter((RectTransform)revealResult.transform,0,7,.25f);if(Engine.Data.TryCard(Engine.State.reveal.cardId,out int i)){motion.Burst(revealCard,(int)Engine.Data.Cards[i].tier,22);if(festivalFeel)festivalFeel.Ring(revealCard.position,96,(int)Engine.Data.Cards[i].tier);}});
         }
         void ContinueReveal()
         {
@@ -273,11 +299,6 @@ namespace RocketRaja.Classic
             Notice("Store verification is unavailable in this importer scene.");
 #endif
         }
-        void AccountAction(string action)
-        {
-            if(action=="guest"){CloseAll();SetTab("Home");return;}
-            if(action=="signin")Open("AccountCompare");else if(action=="signout")Open("SignOut");else if(action=="confirm-signout"){CloseAll();SetTab("Home");}
-            else Notice("Account services are unavailable in the isolated importer. Your real account and saves are unchanged.");
-        }
+        void AccountAction(string action) { } // Removed serialized preview action.
     }
 }

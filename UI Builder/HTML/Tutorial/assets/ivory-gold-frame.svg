@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="128" viewBox="0 0 360 128" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="ivory" x2=".6" y2="1"><stop stop-color="#fffdf0"/><stop offset=".6" stop-color="#fff7df"/><stop offset="1" stop-color="#faebc7"/></linearGradient>
+    <linearGradient id="gold" x2=".3" y2="1"><stop stop-color="#b57a19"/><stop offset=".35" stop-color="#f0cb75"/><stop offset=".68" stop-color="#cb902e"/><stop offset="1" stop-color="#a56f20"/></linearGradient>
+    <filter id="paper" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="2" seed="8" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".035"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter>
+    <path id="shape" d="M25 4H333Q355 4 355 26V87Q355 109 333 109H324Q327 119 340 125Q320 122 308 109H25Q5 109 5 89V25Q5 4 25 4Z"/>
+    <clipPath id="clip"><use href="#shape"/></clipPath>
+  </defs>
+  <use href="#shape" fill="url(#ivory)" stroke="#7b522a" stroke-width="1.5"/>
+  <use href="#shape" fill="none" stroke="url(#gold)" stroke-width="2.4"/>
+  <path d="M26 9H332Q350 9 350 27V86Q350 104 332 104H317Q321 114 330 120Q316 116 306 104H26Q10 104 10 88V26Q10 9 26 9Z" fill="none" stroke="#edc677" stroke-width="1.2"/>
+  <path d="M27 13H331Q346 13 346 28V85Q346 100 331 100" fill="none" stroke="#fffdf1" stroke-width="1.4"/>
+  <g clip-path="url(#clip)" filter="url(#paper)"><rect x="13" y="13" width="332" height="86" fill="#fff9e9" opacity=".18"/></g>
+  <g fill="#d39a36" stroke="#bc8227" stroke-width=".5">
+    <path d="M15 35Q15 17 34 15Q21 22 18 37Z"/>
+    <path d="M20 22Q21 12 31 12Q30 21 20 22Z"/><path d="M24 20Q32 14 39 18Q34 25 24 20Z"/>
+    <path d="M20 26Q14 21 14 16Q21 16 20 26Z"/><path d="M16 31Q11 26 13 22Q19 25 16 31Z"/>
+    <path d="M345 77Q344 95 326 98Q339 91 342 75Z"/>
+    <path d="M340 89Q339 99 329 99Q331 89 340 89Z"/><path d="M336 92Q328 98 320 94Q326 87 336 92Z"/>
+    <path d="M340 85Q347 89 346 95Q339 94 340 85Z"/><path d="M344 80Q349 85 347 89Q342 86 344 80Z"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+PASS Settings has no Account section
+PASS Review selector excludes retired login/account routes
+PASS Recovery offers local retry/leave only
+PASS Privacy describes local-only progress
+PASS Classic preview has no JavaScript errors

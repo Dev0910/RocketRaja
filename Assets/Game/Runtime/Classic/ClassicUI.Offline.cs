@@ -15,6 +15,9 @@ namespace RocketRaja.Classic
 
         void InitializeOfflineAds()
         {
+#if UNITY_EDITOR
+            if (!string.IsNullOrEmpty(UnityEditor.SessionState.GetString("RocketRaja.LocalOnlyQA.Profile", ""))) return;
+#endif
 #if UNITY_ANDROID || UNITY_IOS || UNITY_EDITOR
             if (adProviderOverridden || isolatedPreview || driver.IsDisposableGuest || Cloud.RedesignSessionHost.Instance?.IsFixture == true) return;
             var settings = RewardedAdsSettings.Load();

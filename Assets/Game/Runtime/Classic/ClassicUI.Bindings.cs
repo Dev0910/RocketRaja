@@ -23,7 +23,7 @@ namespace RocketRaja.Classic
             if(guidance)guidance.Refresh();
             Text("cash",Cash(s.cash));Text("shop-name",string.IsNullOrWhiteSpace(s.storeName)?"DIWALI DUKAAN":s.storeName);
             Text("home-income",Cash(s.activeUntil[0]>s.now?e.NormalIncome()*e.PreviewSkill(0).power:e.NormalIncome()));Text("home-tap",Cash(e.TapPayout()));
-            Text("home-goal",s.products[0]==0?"Stock Phuljhari · "+Cash(e.LevelQuote(0,1).cost):"Phuljhari · discover your next signature");
+            if(!e.TutorialActive)Text("home-goal",s.products[0]==0?"Stock Phuljhari · "+Cash(e.LevelQuote(0,1).cost):"Phuljhari · discover your next signature");
             Text("product-total","Automatic sales · "+Cash(e.NormalIncome())+"/s");Text("quantity",quantity==int.MaxValue?"Buy Max":"Buy ×"+quantity);Text("tap-quantity",tapQuantity==int.MaxValue?"Buy Max":"Buy ×"+tapQuantity);
             var tapQuote=e.LevelQuote(-1,LevelQuantity(-1));
             Text("tap-row-title","Salesmanship  ·  Level "+s.tapLevel);Text("tap-row-income",Cash(e.TapPayout())+" per tap");Text("tap-row-cost",s.tapLevel>=Catalog.MaxLevel?"Max level":Cash(tapQuote.cost)+"\nBuy ×"+Math.Max(1,tapQuote.quantity));Enable("BuyLevels","-1",can&&tapQuote.affordable);
@@ -98,7 +98,10 @@ namespace RocketRaja.Classic
             {
                 case "ProductDetail":
                     var p=e.Data.Products[product];int level=s.products[product],next=NextMilestone(level);Text("product-title",p.name);Text("product-detail-name",p.name);Text("product-detail-level","Lvl : "+level);Text("product-subtitle",RedesignProductArt.Label(e.ProductAppearance(product)));Picture("product-detail-art",progression?progression.ProductSprite(product):productArt[product]);
-                    Text("product-earnings","Earns "+Cash(e.ProductIncome(product))+" / second");Text("product-milestone",level>=100000?"All milestones reached":"Lvl "+next+" · profit ×"+EconomyBalance.MilestoneReward(next));Text("product-progress-label","Lvl "+(next==0?Catalog.MaxLevel:next));motion.Fill(images["product-progress"],MilestoneProgress(level));
+                    bool atCap=level>=Catalog.MaxLevel;
+                    Text("product-earnings","Earns "+Cash(e.ProductIncome(product))+" / second");Text("product-milestone",atCap?"All level milestones reached":"Lvl "+next+" · profit ×"+EconomyBalance.MilestoneReward(next));Text("product-progress-label",atCap?"Maximum level":"Lvl "+next);motion.Fill(images["product-progress"],MilestoneProgress(level));
+                    Text("product-milestone-reward",atCap?"Fully levelled":"Milestone reward");
+                    Text("product-milestone-copy",atCap?"All automatic level bonuses are active.":"Milestones apply automatically. Buy cash upgrades for boosts, then use Max to level up.");
                     int minimum=s.products.Min(), synergy=EconomyBalance.NextSynergy(minimum);
                     Text("synergy-title",synergy==0?"Synergy complete":"Next synergy bonus");
                     Text("synergy-progress-label",synergy==0?"Complete":s.products.Count(n=>n>=synergy)+"/8 products at Lvl "+synergy);

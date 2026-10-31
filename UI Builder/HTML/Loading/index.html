@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rocket Raja — Loading</title>
+<style>
+@font-face{font-family:Fraunces;src:url('../Shared/fonts/fraunces.ttf')}@font-face{font-family:Nunito;src:url('../Shared/fonts/nunito.ttf')}
+:root{--cream:#fff1c9;--gold:#efbd53;--shadow:#15102e;--track:#25183e;--page:#121029}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--page)}
+.loading-screen{position:relative;width:100%;height:100dvh;isolation:isolate;background:var(--page)}
+.illustration{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:-2}
+.shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,10,41,.12),transparent 36%,transparent 75%,rgba(13,9,32,.32))}
+.safe-area{position:absolute;inset:max(env(safe-area-inset-top),20px) max(env(safe-area-inset-right),18px) max(env(safe-area-inset-bottom),24px) max(env(safe-area-inset-left),18px)}
+.brand{position:absolute;top:9.5%;left:0;right:0;margin:0;text-align:center;color:var(--cream);font:800 clamp(29px,11.1vw,82px)/1.1 Fraunces,serif;letter-spacing:.025em;text-shadow:0 3px 0 #9b452c,0 5px 20px rgba(8,5,28,.8)}
+.load-status{position:absolute;left:8%;right:8%;bottom:4.6%;display:grid;gap:15px;text-align:center;color:var(--cream)}
+.label{margin:0;font:700 clamp(14px,4.15vw,30px)/1.3 Nunito,sans-serif;text-shadow:0 2px 6px var(--shadow)}
+.track{height:14px;padding:3px;border:1.5px solid #d9ac57;border-radius:99px;background:var(--track);box-shadow:0 2px 10px rgba(0,0,0,.3)}
+.fill{height:100%;width:58%;border-radius:99px;background:linear-gradient(180deg,#ffe6a6,var(--gold));box-shadow:0 0 8px rgba(239,189,83,.28)}
+@media(max-height:600px){.brand{top:7%}.load-status{bottom:2%;gap:10px}.track{height:12px}}
+@media(min-aspect-ratio:3/4){.loading-screen{max-width:600px;margin:auto}.brand{font-size:58px}}
+</style>
+</head>
+<body>
+<main id="loading-screen" class="loading-screen" data-unity-name="LocalLoadingCanvas">
+ <img id="festival-art" class="illustration" src="assets/festival-stall-r1.png" alt="An illuminated Indian fireworks stall at dusk, decorated with marigolds and lanterns." data-unity-name="FestivalIllustration" data-unity-raycast-target="false">
+ <div class="shade" aria-hidden="true"></div>
+ <div id="loading-safe-area" class="safe-area" data-unity-name="SafeArea">
+  <h1 id="game-title" class="brand" data-unity-name="GameTitle">ROCKET RAJA</h1>
+  <section class="load-status" aria-label="Opening your locally saved game">
+   <p id="loading-label" class="label" data-unity-name="LoadingLabel" data-unity-binding="LoadingLabel">Getting your stall ready…</p>
+   <div id="loading-track" class="track" role="progressbar" aria-label="Loading your stall" aria-valuemin="0" aria-valuemax="100" aria-valuenow="58" data-unity-name="LoadingTrack" data-unity-binding="LoadingProgress"><div id="loading-fill" class="fill" data-unity-name="LoadingFill"></div></div>
+  </section>
+ </div>
+</main>
+<script id="unity-metadata" type="application/json">{
+  "schemaVersion": 1,
+  "screen": {
+    "functionalityProfile": "mixed",
+    "identity": "Loading",
+    "destinationOrOwner": "Bootstrap",
+    "entryState": "preparing-local",
+    "referenceViewport": {
+      "width": 1080,
+      "height": 2200
+    },
+    "lifecycle": {
+      "open": "automatic startup",
+      "close": "Main local session ready or existing recovery shown"
+    },
+    "behaviorAuthority": [
+      "Assets/Game/Runtime/Cloud/BootstrapController.Redesign.cs",
+      "Assets/Game/Runtime/Classic/ClassicApplication.cs"
+    ],
+    "capabilityModules": [
+      "asyncOperations",
+      "persistence",
+      "accessibilityAndPresentation"
+    ],
+    "visualApprovalStatus": "approved",
+    "approvalWorkflow": "28 October 2026: user approved wireframe r1, generated illustration r1 and HTML r1, then explicitly directed Unity reconstruction.",
+    "nativeOwner": "Assets/Scenes/Bootstrap.unity",
+    "nativeAuthoring": "Assets/Game/Editor/LocalOnlyPresentationAuthoring.cs"
+  },
+  "actions": {},
+  "bindings": {
+    "LoadingProgress": {
+      "targetIds": [
+        "loading-track",
+        "loading-fill"
+      ],
+      "valueType": "float",
+      "format": "0..1 horizontal fill",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "LoadingProgress",
+      "updateTrigger": "preparation and scene-load progress; completion after ClassicApplication.Ready",
+      "visibilityRule": "startup pending",
+      "interactabilityRule": "read-only",
+      "fallback": "retain previous progress on failure",
+      "runtimeStatus": "existing-verified",
+      "evidence": "LocalOnlyStartupValidation captures and isolated Play Mode startup checks; saved Bootstrap loadingFill/progress bindings.",
+      "reason": "Saved native bindings implemented after explicit HTML approval and Unity direction."
+    },
+    "LoadingLabel": {
+      "targetIds": [
+        "loading-label"
+      ],
+      "valueType": "string",
+      "format": "live text",
+      "sourceOwner": "RocketRaja.Cloud.BootstrapController",
+      "sourceSymbol": "SetLoading",
+      "updateTrigger": "startup phase changes",
+      "visibilityRule": "startup pending",
+      "interactabilityRule": "read-only",
+      "fallback": "Getting your stall ready…",
+      "runtimeStatus": "existing-verified",
+      "evidence": "LocalOnlyStartupValidation captures and isolated Play Mode startup checks; saved Bootstrap loadingFill/progress bindings.",
+      "reason": "Saved native bindings implemented after explicit HTML approval and Unity direction."
+    }
+  },
+  "navigation": {
+    "success": {
+      "route": "Main",
+      "owner": "RedesignSessionHost.EnterMain",
+      "dismissBehavior": "automatic; no tap required",
+      "transitionTiming": "only finish progress when the local session is ready"
+    },
+    "failure": {
+      "route": "existing SaveRecovery",
+      "owner": "ClassicApplication.Observe",
+      "dismissBehavior": "retry loading/saving or keep files and leave",
+      "synchronization": "no fresh fallback for unreadable or incompatible files"
+    }
+  },
+  "conflicts": [],
+  "qaScenarios": [
+    {
+      "id": "fresh-offline",
+      "preconditions": "no local save and no network",
+      "trigger": "launch",
+      "expectedUiState": "loading then Main",
+      "expectedSideEffects": "create a permitted fresh local profile exactly once",
+      "forbiddenSideEffects": [
+        "Google authentication",
+        "cloud access",
+        "artificial loading delay"
+      ],
+      "relatedActionIds": []
+    },
+    {
+      "id": "recovery",
+      "preconditions": "corrupt or unsupported local profile",
+      "trigger": "launch",
+      "expectedUiState": "existing protected recovery; bar never falsely completes",
+      "expectedSideEffects": "preserve original files",
+      "forbiddenSideEffects": [
+        "silent reset",
+        "account migration"
+      ],
+      "relatedActionIds": []
+    }
+  ],
+  "modules": {
+    "asyncOperations": {
+      "owner": "BootstrapController.LoadLocal",
+      "phases": [
+        "preparing-local",
+        "loading-main",
+        "ready",
+        "recovery"
+      ],
+      "reentry": "one startup coroutine",
+      "failure": "existing local recovery; no false completion"
+    },
+    "persistence": {
+      "owner": "RedesignRuntimeDriver.InitializeGuest / RedesignSaveStore",
+      "policy": "retain local paths, backups, version checks and explicit legacy-profile confirmation"
+    },
+    "accessibilityAndPresentation": {
+      "owner": "saved Canvas and Bootstrap safe area",
+      "policy": "live title and label; read-only progress; no looping motion required; respect device safe areas"
+    }
+  }
+}</script>
+</body></html>

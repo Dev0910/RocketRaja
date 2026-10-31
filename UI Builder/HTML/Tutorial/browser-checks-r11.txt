@@ -1,0 +1,15 @@
+30 October 2026 — generated reference-style tutorial hand pointer
+PASS Built-in image_gen produced the selected classic white glove from the user's attached reference.
+PASS Original generated PNG copied into assets/ with true RGBA alpha preserved (1254x1254).
+PASS All nine desktop tutorial moments: active CTAs have a loaded hand with pointer-events:none; outcome-only state hides it; no old outline classes remain.
+PASS Seven actionable introductions at 360x640 and 360x540: each pointer remains inside the game area and switches above/below its CTA as needed.
+PASS Viewport override restored after checks.
+PASS Scrolling Legacy moves the free-pull CTA out of view and hides the hand.
+PASS Fingertip hit testing resolves to free-pull rather than the hand overlay.
+PASS Saving-unavailable state hides the pointer.
+PASS Actual free-pull mouse click works and the pointer is hidden during the existing card reveal.
+PASS Prestige confirmation opens only on explicit CTA click and hides the pointer.
+PASS JavaScript syntax, builder syntax, handoff JSON, asset transparency and tracked-document whitespace checks.
+Placement data: renders-r11/placement-checks.json
+Exact selected generation prompt: assets/tutorial-pointing-hand.prompt.txt
+Native Unity sprite/presentation transfer remains pending.

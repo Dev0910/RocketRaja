@@ -31,7 +31,7 @@ namespace RocketRaja
         {
             if (disposed) throw new ObjectDisposedException(nameof(UnityKajuPurchasing));
             if (Application.platform != RuntimePlatform.Android || authority?.Configured != true) { SetStatus("Purchases are unavailable in this build."); return; }
-            if (!HasOwner) { SetStatus("Link your game to Google before making a purchase."); return; }
+            if (!HasOwner) { SetStatus("Store purchases are not available yet."); return; }
             if (store == null)
             {
                 store = UnityIAPServices.StoreController(GooglePlay.Name);

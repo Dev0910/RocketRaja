@@ -1,5 +1,13 @@
 # Firebase Unity SDK
 
+## Current status — 28 October 2026
+
+The playable game uses local-only saves. Google login UI, its Firebase authentication adapter, native sign-in bridges and Credential Manager/Google ID dependency declarations have been removed. Production startup constructs no Firebase identity or Firestore session. Old account-mode preferences are ignored; account checkpoints are not migrated or deleted.
+
+SDK 13.17.0 modules, service configuration, rewarded ads and the shared EDM4U resolver remain installed. Firebase-console settings, OAuth registrations and cloud records are unchanged. Retained Auth/Firestore modules and cloud abstractions support future work; their presence does not enable login.
+
+See [local-only implementation and verification](Implementation/LocalOnly/README.md). Google-login delivery records below are historical and do not describe current startup.
+
 Local SDK root: `C:\Unity\Assets\firebase_unity_sdk_13.17.0`
 
 Unity packages: `C:\Unity\Assets\firebase_unity_sdk_13.17.0\firebase_unity_sdk`

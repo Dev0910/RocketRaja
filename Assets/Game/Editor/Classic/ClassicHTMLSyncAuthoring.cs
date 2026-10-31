@@ -51,7 +51,7 @@ namespace RocketRaja.Editor
             if(!cash.GetComponent<Button>()){cash.raycastTarget=true;var b=cash.gameObject.AddComponent<Button>();b.targetGraphic=cash;b.transition=Selectable.Transition.None;var c=cash.gameObject.AddComponent<ClassicControl>();c.owner=ui;c.action="Navigate";c.parameter="Exact";}
             // Privacy describes the actual production owner, never a browser/importer fixture.
             var privacy=views.Single(v=>v.route=="Privacy").scroll.content;
-            privacy.Find("Purchases & information/Body").GetComponent<TMP_Text>().text="Store purchases require verification before currency is delivered. Google sign-in and cloud progress use the existing account service. Store purchases are currently unavailable.";
+            privacy.Find("Purchases & information/Body").GetComponent<TMP_Text>().text="Progress is saved on this device. Store purchases are currently unavailable. Rewarded ads are optional.";
             ui.textBindings=texts.ToArray();ui.imageBindings=images.ToArray();ui.dialogs=views.ToArray();ui.skillClocks=clocks.ToArray();
             ui.guidance.rows=ui.guidance.rows.Where(r=>r.root).ToArray();
             var layout=ui.GetComponent<ClassicLayout>();
@@ -62,6 +62,7 @@ namespace RocketRaja.Editor
             ClassicPanelControlsAuthoring.ApplyToUI(ui);
             foreach(var v in views)ClassicPopupClearanceAuthoring.ApplyView(v);
             Canvas.ForceUpdateCanvases();layout.Apply();
+            LocalOnlyPresentationAuthoring.EnforceMain(scene);
             EditorUtility.SetDirty(ui);EditorUtility.SetDirty(layout);EditorSceneManager.MarkSceneDirty(scene);EditorSceneManager.SaveScene(scene);
             return "Saved "+views.Count+" dialogs, "+clocks.Count+" authoritative skill clock views; original hierarchy preserved inactive";
         }
@@ -178,10 +179,10 @@ namespace RocketRaja.Editor
                 Put((RectTransform)r.Find("Title"),.18f,.45f,.71f,.95f);Put((RectTransform)r.Find("Copy"),.18f,.10f,.71f,.45f);r.Find("Title").GetComponent<TMP_Text>().font=serif;r.Find("Title").GetComponent<TMP_Text>().fontSize=17;
                 Face(Bottom("Rule",r,1),new Color(198/255f,152/255f,67/255f,.3f));
             }
-            for(int i=0;i<4;i++)
+            for(int i=0;i<3;i++)
             {
-                var r=(RectTransform)v.scroll.content.Find(new[]{"Naming","Account","Privacy","Help"}[i]);r.GetComponent<LayoutElement>().preferredHeight=r.GetComponent<LayoutElement>().minHeight=60;
-                Picture("",Region("Painted icon",r,.02f,.15f,.16f,.85f),AssetDatabase.LoadAssetAtPath<Sprite>(SyncArt+new[]{"shop","cloud","shield","book"}[i]+".png"));
+                var r=(RectTransform)v.scroll.content.Find(new[]{"Naming","Privacy","Help"}[i]);r.GetComponent<LayoutElement>().preferredHeight=r.GetComponent<LayoutElement>().minHeight=60;
+                Picture("",Region("Painted icon",r,.02f,.15f,.16f,.85f),AssetDatabase.LoadAssetAtPath<Sprite>(SyncArt+new[]{"shop","shield","book"}[i]+".png"));
                 var label=r.GetComponentInChildren<TMP_Text>();Put(label.rectTransform,.20f,.1f,.90f,.90f);label.alignment=TextAlignmentOptions.Left;
                 Label("",Region("Chevron",r,.90f,0,.98f,1),"›",20,true,Gold,TextAlignmentOptions.Center);
             }
@@ -209,7 +210,7 @@ namespace RocketRaja.Editor
         {
             foreach(var pair in new[]{("Privacy","cloud"),("Help","book"),("Guidance","book"),("TapTraining","shop"),("AccountCompare","cloud"),("Handoff","shop"),("SaveRecovery","shield"),("Naming","shop"),("Promote","shop"),("SignOut","shop"),("RecoveryConfirm","shield"),("RecoveryExit","shop"),("Welcome","shop"),("Account","cloud")})
             {
-                var v=views.Single(x=>x.route==pair.Item1);var r=New("Painted emblem",v.scroll.content);Height(r,68);var icon=New("Artwork",r);icon.anchorMin=icon.anchorMax=new Vector2(.5f,.5f);icon.sizeDelta=new Vector2(62,62);Picture("",icon,AssetDatabase.LoadAssetAtPath<Sprite>(SyncArt+pair.Item2+".png"));r.SetAsFirstSibling();
+                var v=views.FirstOrDefault(x=>x.route==pair.Item1);if(v==null)continue;var r=New("Painted emblem",v.scroll.content);Height(r,68);var icon=New("Artwork",r);icon.anchorMin=icon.anchorMax=new Vector2(.5f,.5f);icon.sizeDelta=new Vector2(62,62);Picture("",icon,AssetDatabase.LoadAssetAtPath<Sprite>(SyncArt+pair.Item2+".png"));r.SetAsFirstSibling();
             }
             foreach(var route in new[]{"Prestige","Offline"})
             {
@@ -232,6 +233,7 @@ namespace RocketRaja.Editor
         }
         public static string SyncBootstrapHTML()
         {
+            if (System.IO.File.Exists(LocalOnlyPresentationAuthoring.Art)) return "Account startup is retired; use LocalOnlyPresentationAuthoring.Apply for the reviewed loading screen.";
             if(EditorApplication.isPlayingOrWillChangePlaymode)throw new InvalidOperationException("Edit Mode required");
             var scene=SceneManager.GetSceneByPath("Assets/Scenes/Bootstrap.unity");if(!scene.isLoaded||scene.isDirty)throw new InvalidOperationException("Bootstrap must be loaded and clean");
             var root=scene.GetRootGameObjects().Single(g=>g.name=="Bootstrap Canvas");
@@ -288,6 +290,7 @@ namespace RocketRaja.Editor
         }
         public static string RefineHTMLPresentation()
         {
+            if (System.IO.File.Exists(LocalOnlyPresentationAuthoring.Art)) return "This historical full-UI migration is superseded; use current scoped authoring and local-only loading authoring.";
             if(EditorApplication.isPlayingOrWillChangePlaymode)throw new InvalidOperationException("Edit Mode required");
             var main=SceneManager.GetSceneByPath(ScenePath);bool mainWasLoaded=main.isLoaded;if(!main.isLoaded)main=EditorSceneManager.OpenScene(ScenePath,OpenSceneMode.Additive);
             body=AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(Local+"Fonts/Body SDF.asset");bold=AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(Local+"Fonts/Bold SDF.asset");serif=AssetDatabase.LoadAssetAtPath<TMP_FontAsset>(Local+"Fonts/Card Serif SDF.asset");

@@ -20,6 +20,7 @@ namespace RocketRaja.Editor
         // Deliberate Editor operation, never called from game initialization.
         public static string ApplyWelcomeOctober26()
         {
+            if (System.IO.File.Exists(LocalOnlyPresentationAuthoring.Art)) return "Account welcome presentation is retired; use local loading authoring.";
             if (EditorApplication.isPlayingOrWillChangePlaymode) throw new InvalidOperationException("Edit Mode required");
             var boot = SceneManager.GetSceneByPath("Assets/Scenes/Bootstrap.unity");
             var main = SceneManager.GetSceneByPath(ScenePath);
@@ -113,6 +114,7 @@ namespace RocketRaja.Editor
         static Sprite WelcomeSprite(string name) => AssetDatabase.LoadAssetAtPath<Sprite>(WelcomeArt + name + ".png");
         public static string RefineShortWelcomeSign()
         {
+            if (System.IO.File.Exists(LocalOnlyPresentationAuthoring.Art)) return "Account welcome presentation is retired; use local loading authoring.";
             var scene=SceneManager.GetSceneByPath("Assets/Scenes/Bootstrap.unity");
             var root=scene.GetRootGameObjects().Single(g=>g.name=="Bootstrap Canvas");
             var safe=root.transform.Find("Safe Area");
@@ -130,6 +132,7 @@ namespace RocketRaja.Editor
         }
         public static string RefineWelcomeOctober26()
         {
+            if (System.IO.File.Exists(LocalOnlyPresentationAuthoring.Art)) return "Account welcome presentation is retired; use local loading authoring.";
             if(EditorApplication.isPlayingOrWillChangePlaymode)throw new InvalidOperationException("Edit Mode required");
             var scene=SceneManager.GetSceneByPath("Assets/Scenes/Bootstrap.unity");
             var root=scene.GetRootGameObjects().Single(g=>g.name=="Bootstrap Canvas");

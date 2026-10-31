@@ -21,7 +21,9 @@ namespace RocketRaja.Editor
             var state = RedesignState.Fresh(RedesignRuntimeDriver.Utc - 36000); state.products[0] = 1;
             store.Save(state);
             var scene = UnityEditor.SceneManagement.EditorSceneManager.NewPreviewScene();
-            var owner = (GameObject)PrefabUtility.InstantiatePrefab(AssetDatabase.LoadAssetAtPath<GameObject>(BuildRedesignUI.PrefabPath), scene);
+            // Exercise the current driver directly; the old redesign UI prefab is not the shipped Classic owner.
+            var owner = new GameObject("Local save recovery validation", typeof(RedesignRuntimeDriver));
+            UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(owner, scene);
             try
             {
                 var driver = owner.GetComponent<RedesignRuntimeDriver>();

@@ -1,0 +1,1741 @@
+<!doctype html><html lang="en"><head><base href="../Classic/"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Rocket Raja · Tutorial on current game UI</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2212%22 fill=%22%23dca039%22/%3E%3C/svg%3E"><link rel="stylesheet" href="../Home/home.css"><link rel="stylesheet" href="../Home/gouache.css"><link rel="stylesheet" href="../Shared/screens.css"><link rel="stylesheet" href="../Shared/folk-buttons.css"><link rel="stylesheet" href="../Shared/player-folk.css"><link rel="stylesheet" href="../Shared/ivory-bazaar.css"><link rel="stylesheet" href="../Shared/floating-navigation.css"><link rel="stylesheet" href="../Shared/icons.css"><link rel="stylesheet" href="classic.css"><link rel="stylesheet" href="motion.css?v=all-six-20261031"><link rel="stylesheet" href="parity/native.css?v=painted-tap-banner-seam-20261026">
+<link rel="stylesheet" href="parity/startup.css?v=painted-brand-sign-20261026">
+<link rel="stylesheet" href="skills-popup.css?v=single-popup-frame-20261025"><link rel="stylesheet" href="skill-hero.css?v=single-popup-frame-20261025"><link rel="stylesheet" href="popup-refresh.css?v=flush-popup-frame-20261025"><link rel="stylesheet" href="popup-clearance.css?v=info-and-achievements-r2-20261025"><link rel="stylesheet" href="achievements-ledger.css?v=ledger-controls-r2-20261021"><link rel="stylesheet" href="currency.css?v=selected-token-20261025"><link rel="stylesheet" href="information.css?v=info-and-achievements-r2-20261025"><link rel="stylesheet" href="offline-timeline.css?v=capped-timeline-20261025"><link rel="stylesheet" href="imported-buttons.css?v=unity-sync-20261031"><link rel="stylesheet" href="progress-feel.css?v=all-six-20261031"><link rel="stylesheet" href="unity-parity.css?v=unity-20261031"><link rel="stylesheet" href="../Tutorial/classic-tutorial.css?v=unity-sync-20261031"></head><body class="tutorial-preview"><aside id="tutorial-review" data-handoff-role="review-tool"><span class="eyebrow">ROCKET RAJA / DESIGN REVIEW</span><h1>A little guidance.<br>A brighter stall.</h1><p>Shopkeeper tutorial · HTML revision 1</p><label for="state-picker">Review a moment</label><select id="state-picker"><option value="welcome">01 · Meet the shopkeeper</option><option value="saving">02 · Save for training</option><option value="training">03 · First Salesmanship purchase</option><option value="result">04 · Explain the improvement</option><option value="product">05 · Stock Phuljhari</option><option value="upgrade">06 · First useful upgrade</option><option value="achievement">07 · First achievement ready</option><option value="prestige">08 · First prestige ready</option><option value="talent">09 · First free Talent pull</option></select><button id="review-replay">Replay from a new save</button><div class="review-events"><span>Fixture events</span><button id="review-achievement">Make first achievement ready</button><button id="review-prestige">Make first prestige ready</button><button id="review-save-error">Toggle saving unavailable</button><button id="review-existing">Preview existing user</button></div><p class="note">In-memory fixtures only. No real purchases, currency grants or save writes. The nine moments can be inspected independently; milestone buttons demonstrate later events.</p><output id="tutorial-review-status" aria-live="polite"></output><a href="../../../Reference%20Images/Tutorial/ART-DIRECTION.md">Approved art references</a></aside><svg class="symbol-library" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="icon-player-crop" clipPathUnits="userSpaceOnUse"><rect x="26" y="24" width="310" height="336"/></clipPath><symbol id="icon-player" viewBox="0 0 100 100"><image href="parity/assets/icons/player.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-shelf-crop" clipPathUnits="userSpaceOnUse"><rect x="341" y="58" width="296" height="294"/></clipPath><symbol id="icon-shelf" viewBox="0 0 100 100"><image href="parity/assets/icons/shelf.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-legacy-crop" clipPathUnits="userSpaceOnUse"><rect x="645" y="48" width="284" height="312"/></clipPath><symbol id="icon-legacy" viewBox="0 0 100 100"><image href="parity/assets/icons/legacy.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-gear-crop" clipPathUnits="userSpaceOnUse"><rect x="945" y="66" width="290" height="287"/></clipPath><symbol id="icon-gear" viewBox="0 0 100 100"><image href="parity/assets/icons/gear.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-burst-crop" clipPathUnits="userSpaceOnUse"><rect x="20" y="360" width="299" height="280"/></clipPath><symbol id="icon-burst" viewBox="0 0 100 100"><image href="parity/assets/icons/burst.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-hands-crop" clipPathUnits="userSpaceOnUse"><rect x="320" y="401" width="334" height="220"/></clipPath><symbol id="icon-hands" viewBox="0 0 100 100"><image href="parity/assets/icons/hands.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-order-crop" clipPathUnits="userSpaceOnUse"><rect x="649" y="362" width="292" height="289"/></clipPath><symbol id="icon-order" viewBox="0 0 100 100"><image href="parity/assets/icons/order.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-coins-crop" clipPathUnits="userSpaceOnUse"><rect x="942" y="382" width="303" height="272"/></clipPath><symbol id="icon-coins" viewBox="0 0 100 100"><image href="parity/assets/icons/coins.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-tap-crop" clipPathUnits="userSpaceOnUse"><rect x="84" y="640" width="193" height="304"/></clipPath><symbol id="icon-tap" viewBox="0 0 100 100"><g transform="translate(-4.625 -189.68421052631578) scale(0.3026315789473684)"><image href="../Shared/icons/ivory-gouache-atlas.png" width="1254" height="1254" clip-path="url(#icon-tap-crop)"/></g></symbol><clipPath id="icon-stats-crop" clipPathUnits="userSpaceOnUse"><rect x="313" y="673" width="318" height="271"/></clipPath><symbol id="icon-stats" viewBox="0 0 100 100"><image href="parity/assets/icons/stats.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-skills-crop" clipPathUnits="userSpaceOnUse"><rect x="630" y="647" width="307" height="297"/></clipPath><symbol id="icon-skills" viewBox="0 0 100 100"><image href="parity/assets/icons/skills.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-prestige-crop" clipPathUnits="userSpaceOnUse"><rect x="944" y="650" width="304" height="299"/></clipPath><symbol id="icon-prestige" viewBox="0 0 100 100"><image href="parity/assets/icons/prestige.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-clock-crop" clipPathUnits="userSpaceOnUse"><rect x="30" y="946" width="286" height="282"/></clipPath><symbol id="icon-clock" viewBox="0 0 100 100"><g transform="translate(-5.65034965034965 -299.6643356643357) scale(0.32167832167832167)"><image href="../Shared/icons/ivory-gouache-atlas.png" width="1254" height="1254" clip-path="url(#icon-clock-crop)"/></g></symbol><clipPath id="icon-cooldown-crop" clipPathUnits="userSpaceOnUse"><rect x="357" y="947" width="271" height="278"/></clipPath><symbol id="icon-cooldown" viewBox="0 0 100 100"><g transform="translate(-112.98561151079137 -309.3956834532374) scale(0.33093525179856115)"><image href="../Shared/icons/ivory-gouache-atlas.png" width="1254" height="1254" clip-path="url(#icon-cooldown-crop)"/></g></symbol><clipPath id="icon-lock-crop" clipPathUnits="userSpaceOnUse"><rect x="653" y="943" width="265" height="286"/></clipPath><symbol id="icon-lock" viewBox="0 0 100 100"><image href="parity/assets/icons/lock.png" width="100" height="100" preserveAspectRatio="xMidYMid meet"/></symbol><clipPath id="icon-play-crop" clipPathUnits="userSpaceOnUse"><rect x="934" y="974" width="311" height="223"/></clipPath><symbol id="icon-play" viewBox="0 0 100 100"><g transform="translate(-272.2958199356913 -271.1125401929261) scale(0.2958199356913183)"><image href="../Shared/icons/ivory-gouache-atlas.png" width="1254" height="1254" clip-path="url(#icon-play-crop)"/></g></symbol><symbol id="icon-chevron" viewBox="0 0 100 100"><path d="M24 36 50 62 76 36" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></symbol><symbol id="icon-close" viewBox="0 0 100 100"><path d="M28 28 72 72M72 28 28 72" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/></symbol><symbol id="icon-add" viewBox="0 0 100 100"><path d="M50 24V76M24 50H76" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></symbol></defs></svg><aside class="preview-desk" data-handoff-role="review-tool"><p class="eyebrow">ROCKET RAJA / UI REVIEW</p><h1>A familiar shop.<br>A bigger journey.</h1><p>The original Ivory Bazaar screens, with the current game features.</p><div class="review-rule"></div><label for="review-screen">Screen</label><select id="review-screen"><option>Home</option><option>Player</option><option>Products</option><option>Legacy</option><option>Shop</option><option>Upgrades</option><option>BuyAll</option><option>ProductDetail</option><option>TapTraining</option><option>Skills</option><option>Achievements</option><option>SkillDetail</option><option>CardDetail</option><option>DrawReveal</option><option>Prestige</option><option>Offline</option><option>Statistics</option><option>Settings</option><option>Naming</option><option>Privacy</option><option>SaveRecovery</option><option>Purchase</option><option>Appearance</option><option>Help</option><option>Odds</option><option>RecoveryExit</option></select><label for="review-fixture">Game snapshot</label><select id="review-fixture"><option value="progressed">Established shop · Talent unlocked</option><option value="new">New shop · first purchase</option><option value="opened">First shelf stocked</option><option value="growing">Growing shop · before first prestige</option><option value="prestige">Ready to prestige</option><option value="rebuilt">Rebuilt shop · permanent gains</option></select><label for="review-condition">Interaction state</label><select id="review-condition"><option>normal</option><option>insufficient</option><option>active</option><option>cooldown</option><option>stale</option><option>save-error</option><option>loading</option><option>unavailable</option><option>pending</option><option>cancelled</option><option>failed</option><option>delivered</option><option>empty</option></select><button id="review-reset">Reset preview</button><p class="review-note">Connected HTML candidate · no real payments or saves. Numbers are frozen examples exported from the game’s C# core. Buttons demonstrate outcomes.</p><a href="card-art-gallery.html">Review card artwork ↗</a><output id="review-status">All screens awaiting your approval.</output></aside><main id="app" class="app" data-tab="Home"><div id="app-inner" class="app-inner"><section id="coach" class="tutorial-coach" aria-label="Shopkeeper guidance" role="note" tabindex="0" data-action="DismissCoach"><img class="tutorial-coach-frame" src="../Tutorial/assets/ivory-gold-frame.svg" alt="" aria-hidden="true"><h2 id="coach-title"></h2><p id="coach-copy"></p></section><dialog id="modal" class="tutorial-dialog"><h2 id="modal-title"></h2><div id="modal-copy"></div><div class="modal-actions"><button id="modal-ok" class="primary" data-action="ModalConfirm">Got it</button><button id="modal-cancel" data-action="ModalDismiss">Back</button></div></dialog><output id="tutorial-status" aria-live="polite"></output><section class="world" id="world" aria-label="Your fireworks stall"><img class="stall-art" src="../Home/assets/gouache-stall.png" alt="" draggable="false"><header class="wallet-header"><button id="settings-button" data-action="Navigate" data-param="Settings" data-runtime-status="existing-verified" class="settings beveled-teal" aria-label="Open settings"><svg class="game-icon" data-icon="gear" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-gear"/></svg></button><div class="wallet"><div class="cash"><span id="cash-value">₹1.24M</span></div><span>CASH BALANCE</span></div></header><div class="shop-title" aria-hidden="true">ROCKET RAJA</div><div class="shelves" id="product-shelves"><div id="display-phuljhari" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="0 175 295 430" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(175px 959px 649px 0px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Phuljhari</span></div><div id="display-anar" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="314 175 314 430" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(175px 626px 649px 314px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Anar</span></div><div id="display-chakri" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="628 175 314 430" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(175px 312px 649px 628px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Chakri</span></div><div id="display-rockets" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="942 175 312 430" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(175px 0px 649px 942px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Rockets</span></div><div id="display-small-crackers" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="0 720 314 410" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(720px 940px 124px 0px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Small crackers</span></div><div id="display-cracker-strings" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="314 720 314 410" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(720px 626px 124px 314px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Cracker strings</span></div><div id="display-aerial-shots" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="628 720 314 410" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(720px 312px 124px 628px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Aerial shots</span></div><div id="display-gift-boxes" class="product" data-owned="true"><div class="product-art"><span class="row-art" aria-hidden="true"><svg viewBox="942 720 312 410" preserveAspectRatio="xMidYMid meet" overflow="hidden"><image href="../Home/assets/gouache-products.png" width="1254" height="1254" style="clip-path:inset(720px 0px 124px 942px)"/></svg></span></div><span class="empty-mark" aria-hidden="true"><svg class="game-icon utility-icon" data-icon="add" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#icon-add"/></svg></span><span class="product-name">Celebration boxes</span></div></div><img class="shopkeeper" src="../Home/assets/gouache-shopkeeper.png" alt="" draggable="false"><div class="counter-message" aria-hidden="true">PATAAKHEIN, ROSHAN DIL</div><div class="tap-hint" aria-hidden="true">TAP TO EARN</div><button id="stall-tap" data-action="Tap" data-param="" data-runtime-status="existing-verified" class="stall-tap" aria-label="Tap the stall to earn"></button></section><section id="panel-Home" class="panel" data-panel="Home" ><div class="scroll-body" id="scroll-Home"></div></section><section id="panel-Player" class="panel" data-panel="Player" hidden><header class="panel-head"><h1>Player</h1><button class="collapse" data-action="Tab" data-param="Home" id="collapse-Player" aria-label="Collapse Player to Home"><svg class="native-collapse-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 9 7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button></header><div class="scroll-body" id="scroll-Player"></div></section><section id="panel-Products" class="panel" data-panel="Products" hidden><header class="panel-head"><h1>Products</h1><button class="collapse" data-action="Tab" data-param="Home" id="collapse-Products" aria-label="Collapse Products to Home"><svg class="native-collapse-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 9 7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button></header><div class="scroll-body" id="scroll-Products"></div></section><section id="panel-Legacy" class="panel" data-panel="Legacy" hidden><header class="panel-head"><h1>Legacy</h1><span id="legacy-kk" class="legacy-kk" aria-label="Current Kaju Katli balance"></span><button class="legacy-info" id="legacy-info" data-action="Odds" data-param="" aria-label="Card draw information"><span aria-hidden="true">i</span></button><button class="collapse" data-action="Tab" data-param="Home" id="collapse-Legacy" aria-label="Collapse Legacy to Home"><svg class="native-collapse-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 9 7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button></header><div class="scroll-body" id="scroll-Legacy"></div></section><section id="panel-Shop" class="panel" data-panel="Shop" hidden><header class="panel-head"><h1>Shop</h1><button class="collapse" data-action="Tab" data-param="Home" id="collapse-Shop" aria-label="Collapse Shop to Home"><svg class="native-collapse-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 9 7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"/></svg></button></header><div class="scroll-body" id="scroll-Shop"></div></section><output id="notice" class="toast" role="status" aria-live="polite" hidden></output><nav class="navigation" aria-label="Main navigation"><button id="nav-Player" data-action="Tab" data-param="Player" aria-pressed="false" aria-label="Player"><svg class="game-icon" aria-hidden="true"><use href="#icon-player"/></svg><strong>Player</strong></button><button id="nav-Products" data-action="Tab" data-param="Products" aria-pressed="false" aria-label="Products"><svg class="game-icon" aria-hidden="true"><use href="#icon-shelf"/></svg><strong>Products</strong></button><button id="nav-Legacy" data-action="Tab" data-param="Legacy" aria-pressed="false" aria-label="Legacy"><svg class="game-icon" aria-hidden="true"><use href="#icon-legacy"/></svg><strong>Legacy</strong></button><button id="nav-Shop" data-action="Tab" data-param="Shop" aria-pressed="false" aria-label="Shop"><svg class="game-icon" aria-hidden="true"><use href="#icon-coins"/></svg><strong>Shop</strong></button></nav></div><div id="sheets"></div></main><button id="mobile-review" data-handoff-role="review-tool" aria-label="Open preview controls">Preview</button><script id="unity-metadata" type="application/json">{
+  "schemaVersion": 1,
+  "screen": {
+    "functionalityProfile": "mixed",
+    "identity": "shopkeeper-tutorial-on-current-classic",
+    "entryState": "Home",
+    "destinationOrOwner": "Classic presentation in Bootstrap → Main",
+    "referenceViewport": {
+      "width": 1080,
+      "height": 2200
+    },
+    "visualApprovalStatus": "candidate",
+    "approvalWorkflow": "31 October 2026: user requested cleanup of existing HTML to match the saved Unity project. Current native Main is the visual authority; cleaned HTML awaits visual review.",
+    "behaviorAuthority": [
+      "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "Assets/Game/Runtime/Classic/ClassicUI.Bindings.cs",
+      "Game Design/Current Implementation Design.md",
+      "Assets/Game/Runtime/Classic/ClassicUI.HTMLSync.cs",
+      "Assets/Game/Runtime/Cloud/BootstrapController.HTMLSync.cs",
+      "Assets/Game/Runtime/Classic/ClassicUI.Achievements.cs",
+      "Assets/Game/Core/RedesignAchievements.cs",
+      "Assets/Game/Core/EconomyBalance.cs",
+      "Assets/Game/Core/RedesignState.cs",
+      "Assets/Game/Runtime/RedesignRuntimeDriver.cs",
+      "Assets/Game/Editor/Classic/ClassicDeveloperResetAuthoring.cs",
+      "Assets/Game/Runtime/Classic/ClassicCurrencyPresentation.cs",
+      "Assets/Game/Runtime/Classic/ClassicSettingsSwitch.cs",
+      "Assets/Game/Editor/Classic/ClassicRevision20261025Authoring.cs"
+    ],
+    "capabilityModules": [
+      "commerce",
+      "stateMachines",
+      "persistence",
+      "collections",
+      "tutorialFlow",
+      "forms",
+      "accessibilityAndPresentation"
+    ],
+    "syncDate": "2026-10-31",
+    "previewBuildMode": "Production default; ?build=development mirrors Editor/development-only Reset game control.",
+    "browserCommentsRevision": "2026-10-25: browser comments transferred to saved Unity Main; see ClassicHTMLSync/Unity20261025.",
+    "offlineTimelineRevision": "Selected capped timeline remains the current native layout. Native ad implementation and delivery evidence are recorded in Documentation/Implementation/RewardedAds; browser ad outcomes are disposable review fixtures.",
+    "classicNativeRevision": "31 October 2026: reverse-synchronized from read-only Main captures and exported 360-unit RectTransform measurements. Whole-canvas scaling, panels, native popup/header/body/footer dimensions, fonts, sliced button art, Settings hierarchy, Skills, ProductDetail and presentation effects match the native layout.",
+    "localOnlyRevision": "28 October 2026: Google login and account routes removed; local-only production startup uses the approved Loading screen.",
+    "visualAuthority": [
+      "Assets/Scenes/Main.unity",
+      "Assets/Scenes/Bootstrap.unity",
+      "Documentation/Implementation/HTML-Unity-Parity-20261031/README.md"
+    ],
+    "latestUserCorrection": "31 October 2026: Classic HTML cleaned up against the current saved Unity Main, using one 360-unit canvas and native popup measurements/artwork. Composed tutorial shares the same presentation, scaled pointer coordinates, separate goal/help controls and existing earning/purchase transitions."
+  },
+  "actions": {
+    "Navigate": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.RedesignScreenRouter",
+      "entrySymbol": "Navigate",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    },
+    "Close": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Close\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "Close",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Transferred into saved native uGUI and verified in the 19 October 2026 native stage; browser execution remains preview-only.",
+      "canFail": false
+    },
+    "Tab": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Tab\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.RedesignScreenRouter",
+      "entrySymbol": "Navigate",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    },
+    "Tap": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Tap\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "Tap",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Quantity": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Quantity\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "PreviewLevels",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    },
+    "BuyLevels": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"BuyLevels\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BuyLevels",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "BuyUpgrade": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"BuyUpgrade\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BuyUpgrade",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Filter": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Filter\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "unresolved",
+      "ownerPath": "Assets/Game/Core/RedesignUpgradeBrowser.cs",
+      "ownerType": "RocketRaja.Core.RedesignUpgradeBrowser",
+      "entrySymbol": "",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignUpgradeBrowser.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Core category/target semantics verified; four-tab presentation binding is pending.",
+      "canFail": false
+    },
+    "ReviewBatch": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"ReviewBatch\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "QuoteBuyAll",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "ConfirmBatch": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"ConfirmBatch\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "CommitBuyAll",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "BuyAllUpgrades": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"BuyAllUpgrades\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "CommitBuyAll",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Pin": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Pin\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "PinUpgrade",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "ActivateSkill": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"ActivateSkill\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "Handle",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Transferred into saved native uGUI and verified in the 19 October 2026 native stage; browser execution remains preview-only.",
+      "canFail": true
+    },
+    "Draw": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Draw\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "Draw",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Reveal": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Reveal\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "DismissReveal",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Prestige": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Prestige\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "Prestige",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Offline": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Offline\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "implemented",
+      "ownerPath": "Assets/Game/Core/RedesignEngine.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "DismissOffline",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "DismissOffline acknowledges the already-credited receipt and closes in place, retaining the current tab.",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs"
+      ],
+      "approvalStatus": "Selected native Capped Timeline implemented, 25 October 2026",
+      "reason": "Production Main opens the Editor-authored Offline hierarchy through ClassicApplication.",
+      "canFail": true
+    },
+    "Setting": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Setting\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/RedesignPreferences.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "ToggleSetting",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignPreferences.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Rename": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Rename\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "Handle",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignPreferences.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Transferred into saved native uGUI and verified in the 19 October 2026 native stage; browser execution remains preview-only.",
+      "canFail": true
+    },
+    "Purchase": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Purchase\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/DevelopmentShop.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "BeginDevelopmentPurchase",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/DevelopmentShop.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "PurchaseResult": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"PurchaseResult\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Core/DevelopmentShop.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "ResolveDevelopmentPurchase",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/DevelopmentShop.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": true
+    },
+    "Exact": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Exact\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.RedesignScreenRouter",
+      "entrySymbol": "Navigate",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    },
+    "Odds": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Odds\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-needs-adaptation",
+      "ownerPath": "Assets/Game/Runtime/RedesignTalentScreen.cs",
+      "ownerType": "RocketRaja.RedesignTalentScreen",
+      "entrySymbol": "Odds",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignTalentScreen.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Existing behavior needs the newly requested old-style presentation; Unity remains untouched",
+      "canFail": false
+    },
+    "Recovery": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Recovery\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "unresolved",
+      "ownerPath": "Assets/Game/Runtime/RedesignRetainedUi.cs",
+      "ownerType": "RocketRaja.RedesignRetainedUi",
+      "entrySymbol": "",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignRetainedUi.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Exact native entry point must be reconciled before separately authorized Unity implementation",
+      "canFail": true
+    },
+    "CataloguePage": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"CataloguePage\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "unresolved",
+      "ownerPath": "Assets/Game/Core/RedesignUpgradeBrowser.cs",
+      "ownerType": "RocketRaja.Core.RedesignUpgradeBrowser",
+      "entrySymbol": "",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Core/RedesignUpgradeBrowser.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "Exact native entry point must be reconciled before separately authorized Unity implementation",
+      "canFail": false
+    },
+    "Tip": {
+      "triggerIds": [],
+      "parameterSource": "saved native topic ID",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Open",
+      "guards": [
+        "session can mutate",
+        "topic is available"
+      ],
+      "reentryPolicy": "one guidance reader",
+      "success": "native topic reader or acknowledged tip; HTML uses memory only",
+      "failure": "native save failure retains reader",
+      "sideEffectOwners": [
+        "RedesignRuntimeDriver.Command (native only)"
+      ],
+      "listenerPolicy": "delegated preview click; saved ClassicControl in Unity",
+      "evidence": [
+        "Current read-only source comparison"
+      ],
+      "approvalStatus": "candidate",
+      "canFail": false
+    },
+    "LearnTip": {
+      "triggerIds": [],
+      "parameterSource": "saved native topic ID",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Acknowledge",
+      "guards": [
+        "session can mutate",
+        "topic is available"
+      ],
+      "reentryPolicy": "one guidance reader",
+      "success": "native topic reader or acknowledged tip; HTML uses memory only",
+      "failure": "native save failure retains reader",
+      "sideEffectOwners": [
+        "RedesignRuntimeDriver.Command (native only)"
+      ],
+      "listenerPolicy": "delegated preview click; saved ClassicControl in Unity",
+      "evidence": [
+        "Current read-only source comparison"
+      ],
+      "approvalStatus": "candidate",
+      "canFail": true
+    },
+    "ClaimAchievement": {
+      "triggerIds": [],
+      "parameterSource": "Stable achievement Id from RedesignAchievements.All",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Core/RedesignAchievements.cs",
+      "ownerType": "RocketRaja.Core.RedesignEngine",
+      "entrySymbol": "ClaimAchievement",
+      "guards": [
+        "Existing achievement",
+        "Milestone complete",
+        "Not already claimed",
+        "Session may mutate",
+        "Current Classic wallet supports local grants"
+      ],
+      "reentryPolicy": "Duplicate claims return false; no second grant",
+      "success": "Save currency and claim receipt atomically, then publish and refresh",
+      "failure": [
+        "Not eligible: no mutation",
+        "Already claimed: no mutation",
+        "Persistence failure: retain previous wallet and receipt state and enter existing save recovery"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine.Commit",
+        "RedesignLifecycle",
+        "RedesignSaveStore"
+      ],
+      "listenerPolicy": "One ClassicControl listener per Editor-authored button; browser demo changes memory only",
+      "evidence": [
+        "Assets/Game/Core/RedesignAchievements.cs",
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Tools/RedesignLab/AchievementChecks.cs"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Existing achievement behavior verified in the prior implementation; latest user selected Reward ledger and explicitly requested implementation.",
+      "canFail": true
+    },
+    "DeveloperReset": {
+      "triggerSelector": "[data-action=\"DeveloperReset\"]",
+      "triggerIds": [],
+      "ownerPath": "Assets/Game/Runtime/RedesignRuntimeDriver.cs",
+      "ownerType": "RocketRaja.RedesignRuntimeDriver",
+      "entrySymbol": "ResetDevelopmentGame",
+      "runtimeStatus": "existing-verified",
+      "guards": [
+        "Editor or development build only",
+        "Initialized, mutable guest session; no recovery or premium account schema",
+        "Explicit confirmation in DeveloperReset dialog"
+      ],
+      "success": "Restore fresh guest state and return Home; browser resets disposable preview state only",
+      "failure": [
+        "Keep existing state when the session cannot reset"
+      ],
+      "evidence": [
+        "Assets/Game/Runtime/RedesignRuntimeDriver.cs",
+        "Assets/Game/Editor/Classic/ClassicDeveloperResetAuthoring.cs"
+      ]
+    },
+    "OfflineAd": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"OfflineAd\"]",
+      "runtimeStatus": "implemented",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicUI.Offline.cs",
+      "entrySymbol": "WatchOfflineAd",
+      "guards": [
+        "Active offline receipt",
+        "Ad available and mutable session",
+        "Verified completed rewarded-ad result",
+        "One extra base reward per receipt; cancellation, failure, stale result or duplicate callback grants nothing"
+      ],
+      "success": "A completed provider callback saves exactly one extra base reward against the still-pending receipt ID; normal reward was already credited.",
+      "failure": [
+        "No SDK or ad unit is configured: disabled Watch action with an explicit unavailable message; Continue remains available.",
+        "Cancelled, failed, stale, repeated or late callbacks grant nothing. Save failure leaves cash and claim flag unchanged."
+      ],
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs: RewardOfflineAd",
+        "Assets/Game/Editor/Classic/ClassicOfflineTimelineValidation.cs",
+        "Documentation/Implementation/OfflineCappedTimeline/Validation.txt"
+      ],
+      "approvalStatus": "25 October 2026: user selected Capped timeline and requested implementation in the game"
+    },
+    "TutorialResume": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "TutorialResume",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "31 October HTML synchronization with saved native Settings controls; tutorial actions use disposable preview state, ad privacy has no SDK in HTML.",
+      "canFail": false
+    },
+    "TutorialReplay": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "TutorialReplay",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "31 October HTML synchronization with saved native Settings controls; tutorial actions use disposable preview state, ad privacy has no SDK in HTML.",
+      "canFail": false
+    },
+    "TutorialSkip": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "TutorialSkip",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "31 October HTML synchronization with saved native Settings controls; tutorial actions use disposable preview state, ad privacy has no SDK in HTML.",
+      "canFail": false
+    },
+    "AdPrivacyOptions": {
+      "triggerIds": [],
+      "triggerSelector": "[data-action=\"Navigate\"]",
+      "parameterSource": "data-param, selected stable content ID, or frozen core-derived fixture quote",
+      "runtimeStatus": "existing-verified",
+      "ownerPath": "Assets/Game/Runtime/RedesignScreenRouter.cs",
+      "ownerType": "RocketRaja.Classic.ClassicUI",
+      "entrySymbol": "AdPrivacyOptions",
+      "guards": [
+        "Current session owns input and save",
+        "Reject duplicate, stale, unaffordable or blocked commands",
+        "No gameplay tap from UI or dragging"
+      ],
+      "reentryPolicy": "One command per activation; pending/reveal/quote ownership fences duplicates",
+      "success": "Show the corresponding explicit preview outcome; native work later binds the core",
+      "failure": [
+        "Explain reason and retain prior state",
+        "Retry explicitly; never silently repeat rewards"
+      ],
+      "sideEffectOwners": [
+        "Existing C# core and save/session owners; browser only changes disposable memory"
+      ],
+      "listenerPolicy": "Single delegated HTML listener; future native listeners attach once and detach on teardown",
+      "evidence": [
+        "Assets/Game/Runtime/RedesignScreenRouter.cs"
+      ],
+      "approvalStatus": "candidate",
+      "reason": "31 October HTML synchronization with saved native Settings controls; tutorial actions use disposable preview state, ad privacy has no SDK in HTML.",
+      "canFail": false
+    },
+    "ReplayTip": {
+      "triggerIds": [
+        "objective-help"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Tutorial coordinator (new owner required)",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "Approved tutorial sequencing and contextual routes need a new persisted coordinator; preview fixture handlers are not native implementation.",
+      "canFail": true
+    },
+    "DismissCoach": {
+      "triggerIds": [
+        "coach"
+      ],
+      "parameterSource": "data-param for Tab; current live tutorial objective and reviewed engine quote for other actions",
+      "runtimeStatus": "new-approved",
+      "ownerPath": "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+      "ownerType": "RocketRaja.Classic.ClassicGuidance",
+      "entrySymbol": "Dismiss tutorial note",
+      "guards": [
+        "Session may mutate",
+        "Actual affordability/ownership/readiness",
+        "Tutorial enrolment only on new saves",
+        "Talent teaching only after first prestige with an available free credit"
+      ],
+      "reentryPolicy": "Ignore duplicates; engine owns receipts and committed state; tutorial advances after successful durable commands",
+      "success": "Refresh live bindings; advance only the relevant taught objective",
+      "failure": [
+        "Save/ownership unavailable: retain current objective and show recovery",
+        "Unaffordable/incomplete/claimed: no mutation",
+        "No free credit: do not substitute paid currency"
+      ],
+      "sideEffectOwners": [
+        "RedesignEngine and RedesignRuntimeDriver own actual currency/persistence; presenter owns only guidance"
+      ],
+      "listenerPolicy": "One delegated preview click listener; separate pointer gesture guard on counter. Native scene-authored controls bind once and detach on teardown.",
+      "evidence": [
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs",
+        "Game Design/Shopkeeper Tutorial Draft.md",
+        "UI Builder/Wireframes/Tutorial/README.md"
+      ],
+      "approvalStatus": "approved",
+      "reason": "User requested removal of both popup buttons; dismissal never buys or opens a destination.",
+      "canFail": true
+    }
+  },
+  "bindings": {
+    "tutorialPointer": {
+      "targetIds": [
+        "tutorial-pointer",
+        "tutorial-hand"
+      ],
+      "sourceOwner": "Tutorial presentation / authored Unity hand sprite",
+      "sourceSymbol": "Active tutorial CTA",
+      "valueType": "Decorative pointer sprite",
+      "format": "Generated white glove; smaller hand with fingertip at the CTA center; tracks scrolling and resizing; pointer-events none",
+      "runtimeStatus": "new-approved",
+      "reason": "User requested generated hand pointer replacing tutorial highlights on 30 October"
+    },
+    "tutorialCoach": {
+      "targetIds": [
+        "coach-title",
+        "coach-copy"
+      ],
+      "valueType": "Live text, amounts, availability and visibility",
+      "format": "Rupees use Amount formatting; integer credits and counts; localization-ready live copy",
+      "sourceOwner": "RocketRaja.Core.RedesignEngine / new tutorial coordinator",
+      "sourceSymbol": "New tutorial step state and successful purchase projection",
+      "updateTrigger": "Committed gameplay event, open/navigation, save/recovery and normal live refresh",
+      "visibilityRule": "Current route and eligible enrolled tutorial step only",
+      "interactabilityRule": "Engine/session guards; no tutorial action causes a paid pull",
+      "fallback": "Retain objective; suspend prompts during recovery; existing saves are not enrolled",
+      "runtimeStatus": "new-approved",
+      "evidence": [
+        "Assets/Game/Core/RedesignEngine.cs",
+        "Assets/Game/Runtime/Classic/ClassicUI.cs",
+        "Assets/Game/Runtime/Classic/ClassicGuidance.cs"
+      ],
+      "reason": "New tutor presentation binds verified gameplay data; no native tutor coordinator exists yet"
+    }
+  },
+  "navigation": {
+    "routes": [
+      "Home",
+      "Player",
+      "Products",
+      "Legacy",
+      "Shop",
+      "Upgrades",
+      "BuyAll",
+      "ProductDetail",
+      "TapTraining",
+      "Skills",
+      "Achievements",
+      "SkillDetail",
+      "CardDetail",
+      "DrawReveal",
+      "Prestige",
+      "Offline",
+      "Statistics",
+      "Settings",
+      "Naming",
+      "Privacy",
+      "SaveRecovery",
+      "Purchase",
+      "Appearance",
+      "Help",
+      "Odds",
+      "RecoveryExit",
+      "Guidance",
+      "Exact"
+    ],
+    "home": "Selected tab or collapse returns Home; persistent stall",
+    "history": "Sheets retain their invoking tab and prior sheet; Escape returns one level",
+    "scroll": "Tab, catalogue and nested-sheet scroll retained",
+    "tabs": [
+      "Player",
+      "Products",
+      "Legacy",
+      "Shop"
+    ],
+    "expandedPresentation": "Expanded panels use a compact painted shop header with cash, settings, shop name and 48px counter tap; eight shelf controls hide and become inert until Home. All product detail routes remain in Products.",
+    "catalogueScope": "Product or skill route context filters both list and frozen Buy All scope. Category changes clear the target; search and view retain it; Clear scope retains the category. Every change resets pagination.",
+    "outsideDismiss": "Click or tap anywhere outside the top popup card to invoke Close once, restoring the previous popup or invoking screen and focus. Consume the dismissal click so it cannot activate underlying controls or stall taps. Existing SaveRecovery and RecoveryExit required-choice guards still apply."
+  },
+  "conflicts": [
+    {
+      "htmlIntent": "IAP pack selection",
+      "runtimeEvidence": "Core has isolated development purchase commands; live store not used here",
+      "disposition": "Example prices with explicit preview-only purchase sheet; no payment or server calls",
+      "approvalStatus": "candidate"
+    },
+    {
+      "htmlIntent": "Match the current saved Unity presentation; Unity remains read-only.",
+      "runtimeEvidence": "ClassicLayout.cs, ClassicGuidance.cs, ClassicProgression.cs, ClassicUI.Bindings.cs, Main.unity and the live Bootstrap Game View.",
+      "disposition": "HTML adopts persistent stall, Canvas scale, native visual assets, native guidance and disabled production shop. Browser values remain disposable fixtures.",
+      "approvalStatus": "user-directed",
+      "implementationConsequence": "HTML only; no Unity reconstruction or native changes."
+    },
+    {
+      "htmlIntent": "Sequential, durable new-user tutor",
+      "runtimeEvidence": "ClassicGuidance offers optional learned-topic hints and hides Home goal during a hint",
+      "disposition": "Add coordinator and keep current objective visible; suppress competing hints",
+      "approvalStatus": "approved",
+      "implementationConsequence": "Native implementation pending separate direction"
+    },
+    {
+      "htmlIntent": "First-pull coaching uses free credit after first prestige",
+      "runtimeEvidence": "Normal Draw can also spend 100 KK",
+      "disposition": "Require actual free credit for tutor suggestion; no automatic paid fallback",
+      "approvalStatus": "approved",
+      "implementationConsequence": "Check guard again at commit"
+    }
+  ],
+  "qaScenarios": [
+    "All four tabs and collapse",
+    "All 1,000 IDs reachable by search/full catalogue",
+    "Scoped frozen Buy All and stale/save failures",
+    "Locked/ready/active/cooldown skills",
+    "28-card collection and duplicate/new reveal",
+    "Pending/cancelled/failed/delivered IAP",
+    "Prestige reset/keep and below-target state",
+    "Offline credit not repeated on close",
+    "No UI/drag gameplay taps",
+    "Short-screen scrolling and focus trapping",
+    {
+      "id": "native-guidance-reader",
+      "preconditions": [
+        "available unread topic",
+        "session can mutate"
+      ],
+      "trigger": "Tip",
+      "expectedUiState": "Guidance reader with saved native title/body",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "economy mutation",
+        "network requests"
+      ],
+      "relatedActionIds": [
+        "Tip"
+      ]
+    },
+    {
+      "id": "native-guidance-save-failure",
+      "preconditions": [
+        "guidance reader open",
+        "save unavailable"
+      ],
+      "trigger": "LearnTip",
+      "expectedUiState": "reader stays open; topic remains unread",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "mark learned on failure",
+        "dismiss reader on failed save"
+      ],
+      "relatedActionIds": [
+        "LearnTip"
+      ]
+    },
+    {
+      "id": "outside-popup-dismiss",
+      "preconditions": [
+        "dismissible popup open"
+      ],
+      "trigger": "Click or tap outside the top modal-card",
+      "expectedUiState": "Only the top popup closes; its parent or invoking screen and focus return. Inside clicks leave the popup open.",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "underlying navigation or gameplay tap",
+        "bypassing mandatory save recovery"
+      ],
+      "relatedActionIds": [
+        "Close"
+      ]
+    },
+    {
+      "id": "all-popup-refresh",
+      "preconditions": [
+        "Each existing popup opened with a representative fixture"
+      ],
+      "trigger": "Review popup at phone sizes, use existing controls and close",
+      "expectedUiState": "Readable generated-reference layout, no horizontal overflow, all prior actions retained except Settings Back; nested dismissal restores focus",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "changed gameplay rules or prices",
+        "real save/account/payment operations",
+        "new Unity writes"
+      ],
+      "relatedActionIds": [
+        "Navigate",
+        "Close"
+      ]
+    },
+    {
+      "id": "achievement-ledger-claim",
+      "preconditions": [
+        "Completed unclaimed milestone",
+        "Mutable session"
+      ],
+      "trigger": "Click Claim",
+      "expectedUiState": "Claimed state, updated wallet and claimed/ready counts; row moves after in-progress rows",
+      "expectedSideEffects": [
+        "One persisted reward and receipt"
+      ],
+      "forbiddenSideEffects": [
+        "Repeat grant",
+        "Stall tap",
+        "Reward from artwork or animation"
+      ],
+      "actionIds": [
+        "ClaimAchievement"
+      ]
+    },
+    {
+      "id": "achievement-ledger-save-failure",
+      "preconditions": [
+        "Persistence unavailable"
+      ],
+      "trigger": "Attempt Claim",
+      "expectedUiState": "Existing save recovery",
+      "expectedSideEffects": [],
+      "forbiddenSideEffects": [
+        "Currency grant",
+        "Claimed receipt",
+        "Loss of prior save"
+      ],
+      "actionIds": [
+        "ClaimAchievement"
+      ]
+    },
+    "Settings has no Account section; save recovery has local retry/leave only.",
+    {
+      "id": "retained-settings-child",
+      "trigger": "Open Settings, scroll, open Naming / Privacy / Help / TutorialHelp / DeveloperReset, then Back",
+      "expectedUiState": "Settings node stays visible and inert; Back restores same node, scroll and focus. Shared PNG button artwork throughout."
+    },
+    {
+      "id": "opening",
+      "preconditions": "new save",
+      "trigger": "Tap counter and buy affordable training",
+      "expectedUIState": "₹1 → ₹2.40 acknowledgement and next product objective",
+      "expectedSideEffects": "One durable level purchase",
+      "forbiddenSideEffects": "Panel/navigation touches earning taps; tutorial advance on failed save",
+      "relatedActionIds": [
+        "Tap",
+        "BuyTraining"
+      ]
+    },
+    {
+      "id": "save-failure",
+      "preconditions": "saving unavailable",
+      "trigger": "Attempt any purchase/claim/pull",
+      "expectedUIState": "Retained objective and recovery",
+      "expectedSideEffects": "None",
+      "forbiddenSideEffects": "Currency debit/grant or persisted completion",
+      "relatedActionIds": [
+        "BuyProduct",
+        "FreePull",
+        "ModalConfirm"
+      ]
+    },
+    {
+      "id": "free-pull",
+      "preconditions": "first prestige completed, three credits",
+      "trigger": "1× free pull",
+      "expectedUIState": "Reveal actual card; two credits left",
+      "expectedSideEffects": "One engine-owned reveal and credit debit",
+      "forbiddenSideEffects": "Paid fallback/duplicate reveal reward",
+      "relatedActionIds": [
+        "FreePull"
+      ]
+    },
+    {
+      "id": "existing",
+      "preconditions": "old save lacks tutorial fields",
+      "trigger": "Load profile",
+      "expectedUIState": "No automatic tutorial",
+      "expectedSideEffects": "None",
+      "forbiddenSideEffects": "Fresh-user enrolment",
+      "relatedActionIds": [
+        "ContinueTutorial"
+      ]
+    }
+  ],
+  "modules": {
+    "collections": {
+      "upgrades": {
+        "count": 1000,
+        "key": "upgrade.id",
+        "pagination": 20
+      },
+      "talent": {
+        "count": 28,
+        "key": "card.id"
+      },
+      "products": {
+        "count": 8,
+        "key": "product.id"
+      },
+      "packs": {
+        "count": 4,
+        "key": "pack.id"
+      },
+      "achievements": {
+        "count": 15,
+        "key": "AchievementDefinition.Id",
+        "template": "achievement-ledger-row",
+        "sort": "Ready, in progress, claimed; stable within each group"
+      }
+    },
+    "stateMachines": {
+      "states": [
+        "new",
+        "growing",
+        "progressed",
+        "prestige",
+        "rebuilt",
+        "ready",
+        "active",
+        "cooldown",
+        "insufficient",
+        "stale",
+        "save-error",
+        "pending",
+        "cancelled",
+        "failed",
+        "delivered",
+        "unavailable"
+      ]
+    },
+    "forms": {
+      "search": "Current catalogue search/filter; no gameplay tap",
+      "name": "Preview memory only; no persistence"
+    },
+    "commerce": {
+      "mode": "Visual IAP prototype only",
+      "priceAuthority": "Authored example INR; native storefront must supply localized prices",
+      "drawCost": 100,
+      "odds": {
+        "Common": 75,
+        "Rare": 22,
+        "Legendary": 3
+      },
+      "fulfillment": "Preview result cannot grant real entitlement"
+    },
+    "persistence": {
+      "mode": "No browser storage, networking or Unity writes",
+      "fixtures": "Generated through the C# core with in-memory disposable states; interactions demonstrate frozen requests"
+    },
+    "accessibilityAndPresentation": {
+      "minimumTarget": 48,
+      "motion": "Respect OS reduced motion and preview setting",
+      "focus": "Logical action and parameter identity retain keyboard focus across rerender, nested modal dismissal and successful form save. Named switches expose checked state; invalid naming focuses the associated field and error.",
+      "safeArea": "CSS env safe-area insets; future native device verification needed",
+      "feedback": "Phone-local nonoverlapping live status strip; inline associated naming errors; honest panel and modal overflow cues hidden at end.",
+      "popupRefresh": {
+        "scope": "All 29 existing popup routes; Account shares Welcome. Reuse selected Skills and SkillDetail references.",
+        "runtimeStatus": "existing-needs-adaptation",
+        "presentationFiles": [
+          "popup-refresh.css",
+          "popup-refresh.js"
+        ],
+        "referenceRoot": "UI Builder/Reference Images/PopupRefresh/2026-10-19",
+        "requirements": [
+          "Painted cream/cobalt/gold frame, semantic flowing content and readable title clearance",
+          "Existing actions, numeric data, ownership, clocks, quote/recovery/reveal policies unchanged",
+          "Settings has no bottom Back button; close X and outside dismissal remain",
+          "Short-screen body scroll; footer actions and 48px close remain reachable"
+        ],
+        "nativeOwners": [
+          "Assets/Game/Editor/Classic/BuildClassicDialogs.cs",
+          "Assets/Game/Runtime/Classic/ClassicUI.cs",
+          "Assets/Game/Runtime/Classic/ClassicUI.Bindings.cs"
+        ],
+        "approvalStatus": "candidate",
+        "authorization": "User-directed revision of existing popups; generated references and implemented HTML await visual acceptance. Unity implementation remains separately directed."
+      },
+      "nativeTransfer": {
+        "runtimeStatus": "existing-verified",
+        "tracker": "Documentation/Implementation/Classic-HTML-to-Unity-TODO.md",
+        "implementation": "Editor-authored native Canvas/uGUI/TMP; no browser runtime",
+        "sceneOwners": [
+          "Assets/Scenes/Main.unity",
+          "Assets/Scenes/Bootstrap.unity"
+        ],
+        "authoringOwner": "Assets/Game/Editor/Classic/ClassicHTMLSyncAuthoring.cs",
+        "runtimeOwner": "Assets/Game/Runtime/Classic/ClassicUI.HTMLSync.cs",
+        "legacyPolicy": "Complete previous hierarchy retained inactive as __LegacyDisabled_20261019",
+        "canvasScalers": {
+          "Main": "360x640; width match",
+          "Bootstrap": "1080x2200; existing width match"
+        },
+        "mainRoot": "ClassicProductionCanvas",
+        "dialogRoot": "ClassicProductionCanvas/Local dialogs",
+        "timingSource": "RedesignState.now / activeUntil / readyAt; no secondary gameplay clock",
+        "earningsSource": "Successful RedesignRuntimeDriver.TapGameplaySurface cash delta in preceding 1 engine second, plus current automatic income",
+        "backdropPolicy": "Close top popup and restore parent/opener focus; guarded SaveRecovery/RecoveryExit and busy account operations. Initial Welcome dismisses to a saved reopening button without selecting a profile.",
+        "servicePolicy": "Keep Bootstrap account services and production save recovery ownership; store unavailable; browser simulated outcomes remain preview-only",
+        "artSource": "assets/popup-refresh/",
+        "unityArt": "Assets/Game/ClassicUI/HTMLSync/",
+        "verification": "82 connected production-fixture checks; 66 atomic draw/persistence checks; 72 base phone captures plus focused validation, all three hero variants, safe-area and phase checks.",
+        "evidence": "Documentation/Implementation/ClassicHTMLSync/2026-10-19-native-sync.md",
+        "forms": "Native GameState.TryStoreName validation, disabled invalid Rename action and preplaced inline error",
+        "bootstrapLayout": "Saved preferred-size ILayoutElement and existing safe-area layout group; no runtime UI assembly",
+        "textSlots": "All current Main and Bootstrap text uses Editor-authored saved TMP fallback slots.",
+        "nativeActions": {
+          "Navigate": "ClassicUI.Open; account routes delegate ClassicApplication.OpenAccount to Bootstrap",
+          "Close": "ClassicUI.Close / BootstrapController.DismissPopup",
+          "ActivateSkill": "ClassicUI.Handle(ActivateSkill, index 0..2); empty index uses selected hero",
+          "Exact": "ClassicUI.Handle(Exact, product|tap); native quote magnitude",
+          "RefreshBatch": "ClassicUI.Handle(RefreshBatch); existing reviewed scope and commit fence",
+          "Rename": "ClassicUI.Handle(Rename); nameInput and core name validation"
+        },
+        "nativeBindings": {
+          "home-income": "ClassicProductionCanvas/SafeArea/Panels/Home/Income/Normal income",
+          "home-tap": "ClassicProductionCanvas/SafeArea/Panels/Home/Income/Tap income",
+          "home-total": "ClassicProductionCanvas/SafeArea/Panels/Home/Income/Total earnings",
+          "skillClocks": "ClassicUI.skillClocks[0..2] Home, [3..5] list, [6] selected hero; saved track/disc/radial Filled Image",
+          "skill-title": "SkillDetail/Window/Header/Title",
+          "skill-effect-a / b": "SkillDetail/Window/Body/Viewport/Content/Effect panels",
+          "naming-error": "Naming/Window/Body/Viewport/Content/Name validation/Error"
+        },
+        "generatedArtParity": [
+          {
+            "preview": "assets/popup-refresh/frame.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/frame.png",
+            "sha256": "f0269c31eb21bfa30aa6a9b4b762b0eb7c2c793f36ab38f3bce363b44041d105"
+          },
+          {
+            "preview": "assets/popup-refresh/music.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/music.png",
+            "sha256": "bad2ce98e9f2904b1270a69c30dc960342e7bc170f1b868a8de207c48eb73bdd"
+          },
+          {
+            "preview": "assets/popup-refresh/sound.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/sound.png",
+            "sha256": "9b440117dd153f1202551f5b73c65b662579c6ba7e294a19bce6ab131eaf1801"
+          },
+          {
+            "preview": "assets/popup-refresh/motion.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/motion.png",
+            "sha256": "e839b53f0e85d18af41baf84c433d324ef8de3867f9cdcef3844a66759e8beda"
+          },
+          {
+            "preview": "assets/popup-refresh/shop.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/shop.png",
+            "sha256": "3ecdea7927b4ccb9509ef25ba2b0d5563376fb6a66b3dc9324b1ca1e27a381ea"
+          },
+          {
+            "preview": "assets/popup-refresh/cloud.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/cloud.png",
+            "sha256": "19b8107ada6d1e136cc400317eaa64995b61294654caa52fd17557b80c0c24b3"
+          },
+          {
+            "preview": "assets/popup-refresh/shield.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/shield.png",
+            "sha256": "57d1d7901f76215b70e1b37c82ee72ce6870d0f24fdeb8aaef4eccb2e3594f1a"
+          },
+          {
+            "preview": "assets/popup-refresh/book.png",
+            "unityAsset": "Assets/Game/ClassicUI/HTMLSync/book.png",
+            "sha256": "4ffb069457c31c8f7495099d1bd60b480c7da1b7dfc45d8c56ddab60c25a88fb"
+          }
+        ]
+      },
+      "achievementLedger": {
+        "reference": "Option 1 Reward ledger, selected by user on 21 October 2026",
+        "presentation": "Independent artwork, live text, progress, rewards and actions; existing motion and reduced-motion handling",
+        "states": [
+          "Ready with Claim",
+          "In progress disabled",
+          "Claimed disabled"
+        ],
+        "preview": "Disposable fixtures only; no storage, network, Unity bridge or payment SDK"
+      }
+    },
+    "sharedImportedButtons": {
+      "source": "Assets/Game/ImportedUI/Art",
+      "html": "Classic/imported-buttons.css and assets/buttons/",
+      "nativeOwners": [
+        "ClassicButtonArtAuthoring",
+        "ClassicUI.HTMLSync",
+        "ClassicUI"
+      ],
+      "status": "existing-verified",
+      "faces": {
+        "primary": "Folk Blue.png",
+        "secondary": "Folk Ivory.png",
+        "disabled": "Folk Sand.png",
+        "destructive": "Folk Red.png"
+      }
+    },
+    "retainedPopupLayers": {
+      "nativeOwner": "ClassicUI.UpdateDialogLayers / Open / Close",
+      "status": "existing-verified",
+      "behavior": "Keep parent DOM and scroll position visible behind child popups; inert and aria-hidden while covered; only top is aria-modal; Back removes only the child and restores opener focus."
+    },
+    "festivalFeel": {
+      "status": "Implemented in saved Unity Main; 40 production Play Mode checks passed on 31 October 2026",
+      "sources": [
+        "Classic/audio.js",
+        "Classic/motion.js",
+        "Classic/motion.css",
+        "Tutorial/tutorial.js"
+      ],
+      "presentation": "Bounded coin trails, rising actual payout labels, spark/ring purchase feedback, spring popup entrances, card reveal flourish, quiet ambient fireworks and existing lantern/shopkeeper motion.",
+      "audio": "Trusted-interaction-unlocked local synthesized effects plus a quiet pentatonic music loop. Sound and Music are independent existing switches; hidden pages stop both voice pools. No audio downloads.",
+      "motionPreferences": "Both the existing Reduced motion switch and OS preference settle all effects immediately; audio follows Sound independently.",
+      "authority": "Presentation only. Animation/audio never purchases, changes currency, grants rewards or delays input.",
+      "nativeOwners": [
+        "ClassicMotion",
+        "ClassicMotion.Presentation",
+        "RedesignAudio",
+        "ClassicTutorial",
+        "Editor-authored effect pools and saved UI"
+      ],
+      "qa": [
+        "Trusted audio unlock and mute",
+        "Successful action vs blocked/duplicate action",
+        "Tutorial and Classic tap feedback",
+        "Particle cleanup and rapid-tap budget",
+        "Popup layering and reduced motion",
+        "Responsive phone viewports"
+      ],
+      "nativeEvidence": "Documentation/Implementation/FestivalFeel/Unity/README.md"
+    },
+    "progressFeel": {
+      "status": "Implemented in saved Unity Main; 40 production Play Mode checks passed on 31 October 2026",
+      "scope": [
+        "First stocking pop/dust",
+        "Festival Rush warm light, Helping Hands work gestures, Bulk Order parcel",
+        "Product/Salesmanship milestone 10, 25, 50, 100 ribbon and keeper nod",
+        "Achievement Kaju Katli flight to existing wallet",
+        "Prestige lantern dim/firework/new-stall transition",
+        "Quiet optional music loop"
+      ],
+      "authority": "Effects follow committed preview actions and quote before/after levels. They never grant currency, repeat purchases, reset progress or delay controls. Highest newly crossed milestone only per purchase.",
+      "sources": [
+        "Classic/progress-feel.js",
+        "Classic/progress-feel.css",
+        "Classic/classic.js",
+        "Classic/audio.js",
+        "Tutorial/tutorial.js"
+      ],
+      "preferences": "Music and Sound independent; both require trusted interaction. OS/game reduced motion remove all travel/decorative motion; milestone has a brief static receipt. Hidden-page cleanup and bounded groups/voices.",
+      "nativeOwners": [
+        "ClassicMotion.Presentation",
+        "RedesignAudio",
+        "ClassicUI.Bindings",
+        "ClassicUI.Achievements",
+        "ClassicTutorial",
+        "Editor-authored effect pools and scene bindings"
+      ],
+      "nativeEvidence": "Documentation/Implementation/FestivalFeel/Unity/README.md"
+    },
+    "tutorialFlow": {
+      "steps": [
+        "welcome",
+        "saving",
+        "training",
+        "result",
+        "product",
+        "upgrade",
+        "achievement",
+        "prestige",
+        "talent"
+      ],
+      "gates": "Observe successful actual commands and state; no fixed timers",
+      "highlights": "Replace all tutorial outline highlights with the generated transparent white-glove pointing cursor from the user reference. Display the hand about 20% smaller and anchor its fingertip at the exact center of the active CTA, follow panel scroll and viewport resize, hide offscreen/unavailable targets and confirmations/reveals, and never intercept clicks. Keep normal keyboard focus styling.",
+      "advance": "Purchase success, claim receipt, completed prestige, actual card reveal",
+      "skip": "Durable skip flag in future native owner; fixture flag is memory-only",
+      "resume": "Persist completed step separately from resettable run state; never replay after prestige",
+      "enrolment": "Only newly created saves; missing fields on old saves means not enrolled",
+      "milestones": "Achievement/skill/prestige triggers independent; achievement never gates prestige",
+      "presentation": "Compose existing Classic DOM/styles/art; add only coach/next-step content/highlights. Revision 1 presentation rejected, flow retained.",
+      "automaticTraining": "On the first eligible cash threshold of ₹10, open Player and show the shopkeeper-anchored Salesmanship dialog matching Step 01. Trigger once during saving; never auto-purchase or re-enroll skipped/existing users.",
+      "automaticProduct": "On first reaching at least ₹30 while saving for the first Phuljhari after Salesmanship, open Products and show the shopkeeper dialog matching Step 01. Show once; dismissal does not buy or repeat the transition. Preserve skipped/existing-user and save-error guards.",
+      "automaticUpgrade": "Once Phuljhari is stocked and at least ₹20 is available for the first unowned upgrade, open Player and show the shopkeeper dialog matching Step 01; highlight Phuljhari Signature Breakthrough I. Show once as soon as affordable, replacing purchase feedback without requiring dismissal. Keep buying manual, respect save-error/skip/existing-user guards, and do not repeat after dismissal or purchase.",
+      "earningResults": "Implemented native behavior: training, stock and upgrade results continue on a new earning tap or readiness for the next offer. Preview AdvanceEarnings applies explicit fixture income only; no independent economy or real save.",
+      "automaticMilestones": "Use one-time, eligible milestone introductions with the same shopkeeper dialog as Step 01. Achievement readiness opens Player and highlights Achievements; first prestige readiness opens Player and highlights View prestige; completed prestige opens Legacy and highlights one free pull. Claim and prestige confirmations remain explicit player actions; no automatic claim, reset, paid draw or free-credit spending. Remove inline Talent hints. Keep actual card reveal before the one-time shopkeeper explanation of its exported benefit and permanence. Guard saving failures, skipped/existing users and exhausted free credits; never reroute after an introduction is dismissed.",
+      "pointer": "Replace all tutorial outline highlights with the generated transparent white-glove pointing cursor from the user reference. Display the hand about 20% smaller and anchor its fingertip at the exact center of the active CTA, follow panel scroll and viewport resize, hide offscreen/unavailable targets and confirmations/reveals, and never intercept clicks. Keep normal keyboard focus styling.",
+      "dialogue": "Compact button-free note; tap note or press Escape to collapse. Use actual controls or next-step card to act."
+    }
+  },
+  "assets": {
+    "achievementLedgerAtlas": {
+      "previewSource": "assets/achievements/ledger-atlas.png",
+      "unityPath": "Assets/Game/ClassicUI/Achievements/ledger-atlas.png",
+      "sourceStatus": "byte-identical",
+      "byteIdentical": true,
+      "sha256": "6969c52798fff2e7eee62bf6d74d9a4ca80990a9f50139592d864abc2df57a7c"
+    },
+    "upgradeIcons": {
+      "previewRoot": "assets/upgrades/",
+      "count": 12,
+      "mapping": "CashEffect numeric order 0–11",
+      "provenance": "assets/upgrades/PROVENANCE.json",
+      "runtimeStatus": "existing-needs-adaptation",
+      "nativeStatus": "Not imported"
+    },
+    "kajuKatliToken": {
+      "previewSource": "assets/currency/kaju-katli.png",
+      "sourceStatus": "User-selected attached option 3; byte-identical copy",
+      "sha256": "3a0ccba4645843911f19b80eb6256969be91adbf53aaa56d51cf3ab86b3b91bc",
+      "selectionDate": "2026-10-25",
+      "nativeStatus": "Pending separate Unity transfer"
+    },
+    "festivalAudio": {
+      "preview": "Synthesized Web Audio; no external recordings",
+      "nativeStatus": "Implemented in RedesignAudio on the two existing Editor-authored AudioSources; synthesized native loop/cues verified in Editor"
+    },
+    "tutorialPointer": {
+      "previewSource": "../Tutorial/assets/tutorial-pointing-hand.png",
+      "promptSource": "assets/tutorial-pointing-hand.prompt.txt",
+      "generation": "Built-in image_gen; user-provided classic white-glove cursor reference",
+      "format": "PNG RGBA, 1254 x 1254, original alpha preserved",
+      "nativeStatus": "Pending separately directed Editor-authored sprite/pointer presentation"
+    }
+  }
+}</script><script src="content.js?v=project-sync-20261025" data-handoff-role="preview-only"></script><script src="fixtures.js?v=project-sync-20261025" data-handoff-role="preview-only"></script><script src="audio.js?v=all-six-20261031" data-handoff-role="preview-only"></script><script src="unity-reference.js?v=unity-20261031" data-handoff-role="preview-only"></script><script src="unity-presentation.js?v=unity-20261031" data-handoff-role="preview-only"></script><script src="viewport.js?v=unity-20261031" data-handoff-role="preview-only"></script><script src="motion.js?v=all-six-20261031" data-handoff-role="preview-only"></script><script src="progress-feel.js?v=all-six-20261031" data-handoff-role="preview-only"></script><script src="parity/guide.js?v=offline-rewarded-ad-20261025" data-handoff-role="preview-only"></script>
+<script src="popup-refresh.js?v=unity-parity-20261031" data-handoff-role="preview-only"></script><script src="currency.js?v=selected-token-20261025" data-handoff-role="preview-only"></script><script src="achievements-ledger.js?v=selected-token-20261025" data-handoff-role="preview-only"></script><script src="classic.js?v=unity-parity-20261031" data-handoff-role="preview-only"></script><script src="../Tutorial/tutorial.js?v=unity-sync-20261031" data-handoff-role="preview-only"></script></body></html>

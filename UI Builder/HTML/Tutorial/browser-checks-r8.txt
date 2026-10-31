@@ -1,0 +1,10 @@
+30 October 2026 — focused HTML browser verification
+PASS At ₹28.80 after training, saving remains on Home with no dialog.
+PASS Next ₹2.40 tap crosses ₹30 to ₹31.20, opens Products, shows the shopkeeper dialog and leaves Phuljhari unpurchased.
+PASS Escape dismisses the dialog; returning Home and tapping to ₹33.60 does not repeat the automatic route/dialog.
+PASS Manual stock purchase spends ₹30, leaves ₹3.60, and shows the existing ₹0.85/sec result on Home.
+PASS Product review fixture at exactly ₹30 displays the dialog and highlighted stock button.
+PASS Both tutorial.js and updated verify-classic.cjs pass JavaScript syntax checks.
+Screenshot: renders-r8/30-rupees-shopkeeper-dialog.png
+Existing full regression runner updated for automatic Products navigation; not rerun this revision.
+Native Unity implementation remains pending.

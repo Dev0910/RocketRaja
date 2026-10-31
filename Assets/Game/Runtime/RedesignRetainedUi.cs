@@ -51,13 +51,11 @@ namespace RocketRaja
         public void Bind(RedesignApplication owner)
         {
             application = owner;
-            bool cloud = Cloud.RedesignSessionHost.AccountFlowAvailable;
-            accountHeading.text = cloud ? "Google account" : "Development profile";
-            accountDescription.text = cloud ? "Local guests or optional Google sync." : "Local test save. No real payments.";
-            privacySummary.text = cloud ? "Guest saves stay local. Google sync is optional." : "Your test save stays on this device.";
-            privacyDescription.text = cloud
-                ? "Guests stay on this device. Google players sync progress and basic profile data to Firebase. One device plays at a time. Original game saves stay separate. Analytics and crash collection are off."
-                : "This development game uses a separate local guest profile. Live Google saves and real payments are unavailable. Original progress stays separate. Analytics and crash collection are off.";
+            account.gameObject.SetActive(false);
+            accountHeading.text = "Device save";
+            accountDescription.text = "Progress is saved on this device.";
+            privacySummary.text = "Your progress stays on this device.";
+            privacyDescription.text = "Your game uses a local device save. Cloud saves and cross-device sync are unavailable. Store purchases are currently unavailable.";
             Close();
         }
         void Show(string page)
@@ -74,11 +72,7 @@ namespace RocketRaja
             Show("settings"); Refresh();
         }
         void OpenPrivacy() { if (Page == "settings") Show("privacy"); }
-        void Account()
-        {
-            if (Cloud.RedesignSessionHost.AccountFlowAvailable) { application.OpenAccount(); return; }
-            accountStatus.text = application.router.driver.IsAccount ? application.router.driver.RecoveryNotice : "Test guest · local save\nGoogle saves unavailable in this build";
-        }
+        void Account() { }
         void ToggleMusic() => Toggle("music");
         void ToggleSound() => Toggle("sound");
         void ToggleMotion() => Toggle("motion");
@@ -99,7 +93,7 @@ namespace RocketRaja
                 toggles[i].interactable = session.CanMutate;
             }
             storeName.richText = false; storeName.text = DisplayName(s); rename.interactable = session.CanMutate;
-            accountStatus.text = application.router.driver.IsAccount ? application.router.driver.RecoveryNotice : "Test guest · saved on this device";
+            accountStatus.text = application.router.driver.IsAccount ? application.router.driver.RecoveryNotice : "Saved on this device";
         }
         void OpenName()
         {
@@ -123,16 +117,13 @@ namespace RocketRaja
         public void ShowRecovery(string message)
         {
             Show("recovery"); recoveryError.SetActive(true); recoveryMessage.text = message;
-            recoveryDescription.text = application.router.driver.IsAccount
-                ? "Reconnect to resume your Google game. Account options let you return to your guest."
-                : "Free device storage if needed, then retry. This test profile has no cloud recovery.";
-            recoveryExit.GetComponentInChildren<TMP_Text>(true).text = application.router.driver.IsAccount && Cloud.RedesignSessionHost.AccountFlowAvailable ? "Account options" : "Keep files and exit";
+            recoveryDescription.text = "Free device storage if needed, then retry. Your existing files are preserved.";
+            recoveryExit.GetComponentInChildren<TMP_Text>(true).text = "Keep files and exit";
         }
         void Retry() { if (Page == "recovery") application.Retry(); }
         void Exit()
         {
-            if (application.router.driver.IsAccount && Cloud.RedesignSessionHost.AccountFlowAvailable) application.OpenAccount();
-            else Application.Quit();
+            Application.Quit();
         }
         public bool Back()
         {

@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "device": {
+    "viewport": [
+      1080,
+      2200
+    ],
+    "canvas": [
+      1080,
+      2200
+    ]
+  },
+  "pointerStates": [
+    {
+      "w": 1080,
+      "h": 2200,
+      "step": "welcome",
+      "hidden": false,
+      "target": "stall-tap",
+      "dx": 0,
+      "dy": -0.0078125
+    },
+    {
+      "w": 1080,
+      "h": 2200,
+      "step": "training",
+      "hidden": false,
+      "target": "buy-training",
+      "dx": 0,
+      "dy": -0.0078125
+    },
+    {
+      "w": 1080,
+      "h": 2200,
+      "step": "product",
+      "hidden": false,
+      "target": "buy-product",
+      "dx": -0.0078125,
+      "dy": 0
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "step": "welcome",
+      "hidden": false,
+      "target": "stall-tap",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "step": "training",
+      "hidden": false,
+      "target": "buy-training",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "step": "product",
+      "hidden": false,
+      "target": "buy-product",
+      "dx": 0,
+      "dy": 0
+    },
+    {
+      "w": 360,
+      "h": 540,
+      "step": "welcome",
+      "hidden": false,
+      "target": "stall-tap",
+      "dx": -0.0078125,
+      "dy": 0
+    },
+    {
+      "w": 360,
+      "h": 540,
+      "step": "training",
+      "hidden": false,
+      "target": "buy-training",
+      "dx": 0,
+      "dy": -0.0078125
+    },
+    {
+      "w": 360,
+      "h": 540,
+      "step": "product",
+      "hidden": false,
+      "target": "buy-product",
+      "dx": -0.0078125,
+      "dy": 0
+    }
+  ],
+  "errors": []
+}

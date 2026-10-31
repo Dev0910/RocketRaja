@@ -27,7 +27,7 @@ namespace RocketRaja.Editor
             var ui = main.GetRootGameObjects().Single(g => g.name == BuildClassicUI.RootName).GetComponent<ClassicUI>();
             foreach (var view in ui.dialogs) ApplyView(view);
             var root = bootstrap.GetRootGameObjects().Single(g => g.name == "Bootstrap Canvas");
-            ApplyBootstrap((RectTransform)root.transform.Find("Safe Area/Ivory Status Panel"));
+            ApplyBootstrap((RectTransform)(root.transform.Find("Local Recovery Safe Area/Ivory Status Panel") ?? root.transform.Find("Safe Area/Ivory Status Panel")));
             Canvas.ForceUpdateCanvases();
             ui.GetComponent<ClassicLayout>().Apply();
             EditorSceneManager.MarkSceneDirty(main); EditorSceneManager.SaveScene(main);

@@ -31,7 +31,7 @@ namespace RocketRaja
         void OnEnable()
         {
             SubscribeSession();
-            RefreshAccountStatus();
+            if (accountButton) accountButton.gameObject.SetActive(false);
         }
 
         void OnDisable() => UnsubscribeSession();
@@ -53,7 +53,7 @@ namespace RocketRaja
 
         void SessionChanged()
         {
-            if (isActiveAndEnabled) RefreshAccountStatus();
+            if (isActiveAndEnabled) if (accountButton) accountButton.gameObject.SetActive(false);
         }
 
         void Awake()
@@ -157,7 +157,7 @@ namespace RocketRaja
             }
             if (consentRow != null)
                 consentRow.SetActive(false);
-            RefreshAccountStatus();
+            if (accountButton) accountButton.gameObject.SetActive(false);
         }
 
         void RefreshAccountStatus()
@@ -165,7 +165,7 @@ namespace RocketRaja
             if (accountStatus != null)
             {
                 var host = Cloud.PlayerSessionHost.Instance;
-                accountStatus.text = host?.Session?.IsAccount == true ? (host.Profile?.displayName ?? "Google account") + "\n" + host.Session.Status : "Guest · saved on this device";
+                accountStatus.text = host?.Session?.IsAccount == true ? "Local game" + "\n" + host.Session.Status : "Saved on this device";
             }
         }
 
@@ -200,7 +200,7 @@ namespace RocketRaja
 
         void OpenPrivacy() => view?.ShowPrivacy();
         void RenameStore() => view?.ShowStoreName();
-        void OpenAccount() { controller?.Save(); Cloud.PlayerSessionHost.Ensure().OpenAccountMenu(); }
+        void OpenAccount() { }
 
         void OpenConsent() { }
     }

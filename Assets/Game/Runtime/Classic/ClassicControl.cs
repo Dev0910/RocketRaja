@@ -10,6 +10,7 @@ namespace RocketRaja.Classic
         public ClassicUI owner;
         public string action, parameter;
         public int htmlStyle; // 0 original; 1 filled popup action; 2 secondary; 3 text-only
+        public Sprite faceOverride;
         public RectTransform motionTarget;
         public Shadow motionShadow;
         public int motionKind; // 0 button, 1 collection card, 2 shelf merchandise
