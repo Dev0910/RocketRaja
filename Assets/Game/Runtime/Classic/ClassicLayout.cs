@@ -18,9 +18,14 @@ namespace RocketRaja.Classic
         public void Apply()
         {
             if(!ui||!safe||safe.rect.height<=0)return;
-            float height=safe.rect.height,worldHeight=Mathf.Clamp(height*(height<600?.5f:.51f),220,470),edge=1-worldHeight/height;
+            float height=safe.rect.height,worldHeight=Mathf.Clamp(height*(height<600?.5f:.51f),ui.bazaarTheme?276:220,470),edge=1-worldHeight/height;
             world.anchorMin=new Vector2(0,edge);panels.anchorMax=new Vector2(1,edge);
             bool compact=panels.rect.height<230;income.sizeDelta=new Vector2(income.sizeDelta.x,compact?65:77);income.anchoredPosition=new Vector2(0,compact?78:88);skills.sizeDelta=new Vector2(0,compact?74:82);
+            if(ui.bazaarTheme)
+            {
+                income.sizeDelta=new Vector2(income.sizeDelta.x,84);income.anchoredPosition=new Vector2(0,130);skills.sizeDelta=new Vector2(0,80);
+                if(ui.bazaarHomeContent&&ui.bazaarHomeViewport)ui.bazaarHomeContent.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical,Mathf.Max(256,ui.bazaarHomeViewport.rect.height));
+            }
             foreach(var graphic in touchGraphics)
             {
                 if(!graphic||!graphic.gameObject.activeInHierarchy)continue;
@@ -28,7 +33,7 @@ namespace RocketRaja.Classic
                 float x=Mathf.Max(0,(48-rect.width)*.5f),y=Mathf.Max(0,(48-rect.height)*.5f);
                 graphic.raycastPadding=new Vector4(-x,-y,-x,-y);
             }
-            foreach(var row in infoRows)
+            foreach(var row in ui.bazaarTheme?Array.Empty<ClassicInfoFit>():infoRows)
             {
                 if(!row.layout||!row.copy||row.copy.rectTransform.rect.width<20)continue;
                 string signature=row.copy.text+"|"+(row.values?row.values.text:"");
@@ -40,7 +45,7 @@ namespace RocketRaja.Classic
             foreach(var dialog in ui.dialogs)
             {
                 var area=(RectTransform)dialog.window.parent;area.anchorMin=safe.anchorMin;area.anchorMax=safe.anchorMax;
-                if(dialog.route=="CardDetail")continue;
+                if(dialog.route=="CardDetail"&&!ui.bazaarTheme)continue;
                 if(dialog.scroll&&dialog.scroll.content)
                 {
                     var body=(RectTransform)dialog.scroll.transform;

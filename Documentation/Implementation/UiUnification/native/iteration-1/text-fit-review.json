@@ -1,0 +1,240 @@
+[
+  {
+    "route": "Fresh",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹0/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Next display/Goal",
+    "text": "Phuljhari · discover your next signature",
+    "size": 13.0,
+    "width": 232.0,
+    "height": 31.0,
+    "preferred": 36.18,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Header/Information/Selected information circle/i",
+    "text": "i",
+    "size": 14.0,
+    "width": 8.0,
+    "height": 8.0,
+    "preferred": 19.1,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Level milestone/Progress/Progress label/Text",
+    "text": "Lvl 100",
+    "size": 12.0,
+    "width": 274.0,
+    "height": 12.0,
+    "preferred": 16.37,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product synergy/Progress/Progress label/Text",
+    "text": "2/8 products at Lvl 50",
+    "size": 12.0,
+    "width": 274.0,
+    "height": 12.0,
+    "preferred": 16.37,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF"
+  },
+  {
+    "route": "Achievements",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Achievements/Safe dialog bounds/Window/Permanent rewards note/Copy",
+    "text": "Progress stays after prestige.",
+    "size": 14.0,
+    "width": 330.0,
+    "height": 14.0,
+    "preferred": 19.1,
+    "font": "Body SDF"
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Next display/Goal",
+    "text": "Phuljhari · discover your next signature",
+    "size": 13.0,
+    "width": 232.0,
+    "height": 31.0,
+    "preferred": 36.18,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Header/Information/Selected information circle/i",
+    "text": "i",
+    "size": 14.0,
+    "width": 8.0,
+    "height": 8.0,
+    "preferred": 19.1,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Level milestone/Progress/Progress label/Text",
+    "text": "Lvl 100",
+    "size": 12.0,
+    "width": 274.0,
+    "height": 12.0,
+    "preferred": 16.37,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product synergy/Progress/Progress label/Text",
+    "text": "2/8 products at Lvl 50",
+    "size": 12.0,
+    "width": 274.0,
+    "height": 12.0,
+    "preferred": 16.37,
+    "font": "Bold SDF"
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF"
+  },
+  {
+    "route": "Achievements",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Achievements/Safe dialog bounds/Window/Permanent rewards note/Copy",
+    "text": "Progress stays after prestige.",
+    "size": 14.0,
+    "width": 330.0,
+    "height": 14.0,
+    "preferred": 19.1,
+    "font": "Body SDF"
+  }
+]

@@ -1,0 +1,70 @@
+RUNNING production Bootstrap → Main with disposable profile C:\Users\Dev\AppData\Local\Temp\ClassicTutorialPlay-23221ce4f93a4a5497af3d1c32cd197e
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 01-welcome-360x640
+PASS Opening tap collapses dialogue without requiring dismissal
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 02-training-360x640
+PASS Free navigation hides a note belonging to a different tab
+PASS Returning to the target tab retains the pending note
+PASS Dialogue tap does not execute training
+PASS Later taps do not repeat Player introduction
+PASS Authored control enabled: BuyLevels:-1
+PASS Live dialogue text fits: 03-training-result
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 04-product-360x640
+PASS Live dialogue text fits: 04-product-390x844
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 04-product-360x540
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Authored control enabled: BuyLevels:0
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 05-upgrade
+PASS Authored control enabled: BuyUpgrade:PP-PHU-01
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 06-achievement
+PASS Authored control enabled: Navigate:Achievements
+PASS Claim modal suspends tutorial layers
+PASS Authored control enabled: ClaimAchievement:taps-100
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 07-prestige
+PASS Authored control enabled: Navigate:Prestige
+PASS Authored control enabled: Close:
+PASS Prestige review can be cancelled without resetting
+PASS Authored control enabled: Prestige:
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+PASS Live dialogue text fits: 08-free-talent
+PASS Authored control enabled: Draw:1
+PASS Reveal suppresses tutorial pointer
+PASS Authored control enabled: ContinueReveal:
+PASS Live dialogue text fits: 10-card-benefit
+PASS Tutorial result uses exactly one committed draw
+PASS Card-benefit acknowledgement completes course
+PASS All UI component identities retained through full journey; no runtime construction
+PASS Authored control enabled: Navigate:TutorialHelp
+PASS Authored control enabled: TutorialReplay:
+PASS Replay preserves earned progress and rewards
+PASS Failed tutorial save uses visible production recovery
+PASS Failed acknowledgement retains pending note
+PASS Recovery hides both tutorial layers
+PASS Retry restores pending guidance after storage recovers
+PASS Authored control enabled: TutorialSkip:
+PASS Explicit skip completes without a restart
+ALL 68 PLAY CHECKS PASSED

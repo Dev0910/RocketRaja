@@ -1,0 +1,8 @@
+RUNNING production Bootstrap → Main with disposable profile C:\Users\Dev\AppData\Local\Temp\ClassicTutorialPlay-d02bc8513fc44370a92c5e1578042cc2
+PASS Hand appears for the available CTA
+PASS Opaque fingertip pivot is at CTA center (error 0.0000)
+PASS Decorative hand passes all input through
+FAILED System.InvalidOperationException: FAIL Live dialogue text fits: 01-welcome-360x640
+  at RocketRaja.Editor.ClassicBazaarTutorialValidation.Check (System.Boolean ok, System.String label) [0x00009] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\Classic\ClassicBazaarTutorialValidation.cs:48 
+  at RocketRaja.Editor.ClassicBazaarTutorialValidation.Capture (System.String name) [0x000ab] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\Classic\ClassicBazaarTutorialValidation.cs:66 
+  at RocketRaja.Editor.ClassicBazaarTutorialValidation.Run () [0x00412] in C:\Unity\Projects\Incremental game\Assets\Game\Editor\Classic\ClassicBazaarTutorialValidation.cs:91 

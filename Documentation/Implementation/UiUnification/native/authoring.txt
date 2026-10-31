@@ -1,0 +1,1 @@
+Applied qualified Gouache Bazaar theme to Main and Bootstrap. Existing action/binding owners retained; component backgrounds are Editor-placed prefab instances.

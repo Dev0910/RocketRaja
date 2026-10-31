@@ -24,3 +24,7 @@ Stable action IDs, parameters and Unity functionality metadata remain the routin
 The asset manifest identifies the reused artwork and byte hashes. No new illustration style was required: existing recognizable art is presented through common materials, icon scales and framing. Minor texture differences in historic illustrations are recorded in the manual artwork score.
 
 Validation separates functional checks from manual design assessment. Vertical line-box overflow with visible glyphs is not classified as clipping; hidden/clip overflow and actual screenshot boundaries are checked. Intentional scroll viewport crops are verified again at the bottom of the content.
+
+## Native component mapping
+
+The qualified system is mapped to `Assets/Game/ClassicUI/Bazaar/Gouache Bazaar.asset`, reusable prefabs and existing Editor-authored controls. See [native implementation and reproduction](native/README.md). The application tool preserves serialized action owners; runtime code binds and animates preplaced nodes. Main uses 360 logical units, while the existing Bootstrap canvas uses three native units per logical unit.

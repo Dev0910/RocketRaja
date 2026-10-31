@@ -60,7 +60,7 @@ namespace RocketRaja.Classic
                 row.buy.interactable=can&&e.Eligible(row.control.parameter)&&e.UpgradeCost(row.control.parameter)<=s.cash;
                 SetButtonSkin(row.buy,row.buy.interactable);
             }
-            Enable("BuyAll","",can&&e.Data.Upgrades.Any(u=>e.Eligible(u.id)&&e.UpgradeCost(u.id)<=s.cash));RefreshDialog();RefreshHTMLPresentation();RefreshAchievements();
+            Enable("BuyAll","",can&&e.Data.Upgrades.Any(u=>e.Eligible(u.id)&&e.UpgradeCost(u.id)<=s.cash));RefreshDialog();RefreshHTMLPresentation();RefreshAchievements();RefreshBazaarPresentation();
         }
         static string TimeLabel(double value)=>TimeSpan.FromSeconds(Math.Max(0,value)).ToString(@"mm\:ss");
         string SkillState(int i)=>!Engine.SkillOwned(i)?"LOCKED":Engine.State.activeUntil[i]>Engine.State.now?"ACTIVE":Engine.State.readyAt[i]>Engine.State.now?"COOLDOWN":"READY";

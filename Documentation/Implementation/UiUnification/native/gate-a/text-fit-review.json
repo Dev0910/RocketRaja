@@ -1,0 +1,1067 @@
+[
+  {
+    "route": "Fresh",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹0/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "BuyAll",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/BuyAll/Safe dialog bounds/Window/Header/Title",
+    "text": "Review your purchases",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery-bottom",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "BuyAll",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/BuyAll/Safe dialog bounds/Window/Header/Title",
+    "text": "Review your purchases",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery-bottom",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "BuyAll",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/BuyAll/Safe dialog bounds/Window/Header/Title",
+    "text": "Review your purchases",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery-bottom",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Home-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Player-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Player/Scroll/Viewport/Content/A brighter beginning/View/Label",
+    "text": "View prestige",
+    "size": 14.0,
+    "width": 76.0,
+    "height": 36.0,
+    "preferred": 38.97,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour cash offer/Buy/Label",
+    "text": "100 <size=18><sprite=0></size>\nBuy cash",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Shop",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Shop/Scroll/Viewport/Content/24-hour double profits offer/Buy/Label",
+    "text": "150 <size=18><sprite=0></size>\nBuy boost",
+    "size": 14.0,
+    "width": 84.0,
+    "height": 40.0,
+    "preferred": 42.16,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "ProductDetail:0-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/ProductDetail/Safe dialog bounds/Window/Body/Viewport/Content/Product identity/Product name/Text",
+    "text": "Phuljhari",
+    "size": 22.0,
+    "width": 226.0,
+    "height": 28.0,
+    "preferred": 35.25,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Statistics-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Statistics/Safe dialog bounds/Window/Header/Title",
+    "text": "Your shop in\nnumbers",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Odds-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/Odds/Safe dialog bounds/Window/Header/Title",
+    "text": "Every card has a chance",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "BuyAll",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/BuyAll/Safe dialog bounds/Window/Header/Title",
+    "text": "Review your purchases",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "BuyAll-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/BuyAll/Safe dialog bounds/Window/Header/Title",
+    "text": "Review your purchases",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "SaveRecovery-bottom",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/Local dialogs/SaveRecovery/Safe dialog bounds/Window/Header/Title",
+    "text": "Your progress needs attention",
+    "size": 22.0,
+    "width": 214.0,
+    "height": 51.59375,
+    "preferred": 64.13,
+    "font": "Heading SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Safe-Home",
+    "viewport": [
+      1080,
+      2200
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Safe-Home",
+    "viewport": [
+      390,
+      844
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Safe-Home",
+    "viewport": [
+      360,
+      640
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Safe-Home",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  },
+  {
+    "route": "Long-Home",
+    "viewport": [
+      360,
+      540
+    ],
+    "path": "ClassicProductionCanvas/SafeArea/Panels/Home/Bazaar scroll/Viewport/Content/Income/Total earnings",
+    "text": "₹4.51K/sec",
+    "size": 22.0,
+    "width": 142.0,
+    "height": 28.0,
+    "preferred": 30.01,
+    "font": "Bold SDF",
+    "inkOverflow": 0
+  }
+]

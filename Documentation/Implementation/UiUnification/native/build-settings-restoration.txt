@@ -1,0 +1,2 @@
+Active Android profile restored byte-for-byte: True
+Bundle and signing preferences restored after a reversible toggle.
