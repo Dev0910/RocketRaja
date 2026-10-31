@@ -1,0 +1,142 @@
+[
+  {
+    "screen": "Achievements-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Appearance-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "BuyAll-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "CardDetail-0-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "CardDetail-16-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "CardDetail-26-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "contact-1080x2200.png",
+    "meanAbsolutePixelDifference": 2.3680969972530077e-07
+  },
+  {
+    "screen": "DeveloperReset-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "DrawReveal-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Exact-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Guidance-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Help-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Home-1080x2200.png",
+    "meanAbsolutePixelDifference": 1.5572390572390574e-05
+  },
+  {
+    "screen": "Legacy-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Naming-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Odds-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Offline-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Player-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Prestige-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Privacy-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "ProductDetail-0-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Products-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Purchase-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "RecoveryExit-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "SaveRecovery-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Settings-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Shop-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "SkillDetail-0-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "SkillDetail-1-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "SkillDetail-2-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Skills-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Statistics-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "TapTraining-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "TutorialHelp-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  },
+  {
+    "screen": "Upgrades-1080x2200.png",
+    "meanAbsolutePixelDifference": 0.0
+  }
+]

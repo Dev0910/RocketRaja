@@ -16,7 +16,7 @@ html body .app .tutorial-coach:focus-visible{outline:2px solid #164b80;outline-o
 html body .app .tutorial-coach{padding:14px 24px 13px 22px;border:0!important;border-image:none!important;background:none!important;border-radius:18px;box-shadow:none;filter:drop-shadow(0 3px 3px #4d2b1340);isolation:isolate}
 html body .app .tutorial-coach:after{content:none!important}
 html body .app .tutorial-coach .tutorial-coach-frame{position:absolute;inset:0;width:100%;height:calc(100% + 16px);object-fit:fill;pointer-events:none;z-index:-1;user-select:none}
-html body .app .tutorial-coach h2{font-family:Fraunces,Georgia,serif;font-size:15px;line-height:1.25;font-weight:700;letter-spacing:-.12px;color:#133e60}
+html body .app .tutorial-coach h2{font-family:var(--font-display);font-size:15px;line-height:1.25;font-weight:700;letter-spacing:-.12px;color:#133e60}
 html body .app .tutorial-coach p{font-family:var(--font-ui);font-size:12px;line-height:1.4;margin:7px 0 0;color:#164b80}
 @media(max-height:650px){html body .app .tutorial-coach{padding:12px 20px 12px}html body .app .tutorial-coach h2{font-size:13.5px}html body .app .tutorial-coach p{font-size:11px;margin-top:6px}}
 
@@ -35,3 +35,18 @@ html body .app[data-reduced-motion=true] .tutorial-pointer{animation:none!import
 /* Share the native next-action row and its separate help target. */
 html body .app .home-next.tutorial-objective{padding:0!important}
 html body .app .tutorial-objective>.tutorial-help{top:0;right:0;width:48px;height:48px}
+
+/* Shared Gouache Bazaar coach; pointer art and tutorial state remain unchanged. */
+html body .app .tutorial-coach{background:var(--bazaar-color-paper-raised)!important;border:1px solid var(--bazaar-color-gold)!important;border-radius:8px;padding:12px 16px;box-shadow:0 4px 12px #0d1f3520;filter:none}
+html body .app .tutorial-coach .tutorial-coach-frame{display:none}
+html body .app .tutorial-coach h2{font:700 18px/1.15 var(--font-display);padding:0;letter-spacing:0}
+html body .app .tutorial-coach p{font:500 14px/1.4 var(--font-ui);margin:8px 0 0;color:var(--bazaar-color-muted)}
+
+html body .app .tutorial-coach{width:74%;max-width:310px}
+
+html body .app .tutorial-coach p{font-size:12px}
+html body .app .tutorial-dialog{border:1px solid var(--bazaar-color-gold);border-radius:8px;background:var(--bazaar-color-paper-raised);font:500 14px/1.45 var(--font-ui)}
+html body .app .tutorial-dialog h2{font:700 22px/1.15 var(--font-display)}
+html body .app .tutorial-dialog .modal-actions{gap:8px}
+html body .app .tutorial-dialog .modal-actions button{min-height:48px;border:0;border-image:url("../Classic/assets/buttons/folk-blue.png") 105 92 fill / 6.5625px 5.75px stretch;border-radius:0;background:none;color:var(--bazaar-color-on-primary);font:800 14px/1.25 var(--font-ui)}
+html body .app .tutorial-dialog .modal-actions #modal-cancel{border-image-source:url("../Classic/assets/buttons/folk-ivory.png");color:var(--bazaar-color-ink)}

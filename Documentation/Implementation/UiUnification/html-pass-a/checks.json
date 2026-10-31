@@ -1,0 +1,13 @@
+{
+  "pass": "html-pass-a",
+  "states": 136,
+  "scriptOrAssetErrors": [],
+  "horizontalOverflow": [],
+  "brokenImages": [],
+  "smallTargets": [],
+  "smallText": [],
+  "textOverflow": [],
+  "popupOverflow": [],
+  "verticalClipping": [],
+  "unexpectedFonts": []
+}

@@ -1,0 +1,660 @@
+{
+  "rubric": "rubric.json",
+  "scale": "0 to 5; manual design assessment, not automated test count",
+  "passes": [
+    {
+      "pass": "baseline",
+      "complete": true,
+      "scores": {
+        "consistency": 3,
+        "ux": 3.5,
+        "hierarchy": 3.5,
+        "artwork": 3.5,
+        "responsive": 3.5,
+        "feedback": 4
+      },
+      "deductions": [
+        {
+          "evidence": "baseline/contact.png",
+          "finding": "Settings, Skills, ProductDetail, rarity cards and loading use different title, material, border and artwork-framing systems."
+        },
+        {
+          "evidence": "baseline/checks.json",
+          "finding": "1,114 undersized live-text instances across the measured route matrix; small secondary copy and catalogue overflow reduce readability."
+        },
+        {
+          "evidence": "baseline/Home-1080x2200.png",
+          "finding": "Income and instruction hierarchy are more compact than other screens, without shared type roles."
+        }
+      ],
+      "total": 68.5,
+      "qualified": false
+    },
+    {
+      "pass": "iteration-1",
+      "complete": true,
+      "scores": {
+        "consistency": 3.8,
+        "ux": 3.3,
+        "hierarchy": 3.2,
+        "artwork": 4,
+        "responsive": 3.2,
+        "feedback": 4.5
+      },
+      "deductions": [
+        {
+          "evidence": "iteration-1/Skills-1080x2200.png",
+          "finding": "Retained legacy geometry overlaps skill names, effects and action columns; major defect, gate failed."
+        },
+        {
+          "evidence": "iteration-1/Home-1080x2200.png",
+          "finding": "Home income overlaps and the goal text exceeds its row."
+        }
+      ],
+      "total": 72.4,
+      "qualified": false
+    },
+    {
+      "pass": "iteration-2",
+      "complete": true,
+      "scores": {
+        "consistency": 4.4,
+        "ux": 4.1,
+        "hierarchy": 4.1,
+        "artwork": 4.4,
+        "responsive": 4.2,
+        "feedback": 4.6
+      },
+      "deductions": [
+        {
+          "evidence": "iteration-2/checks.json",
+          "finding": "16 catalogue text overflow instances; remaining no-wrap geometry must be removed."
+        },
+        {
+          "evidence": "iteration-2/ProductDetail-0-1080x2200.png",
+          "finding": "Earnings strip retains an obsolete fixed height; prototype not ready for native transfer."
+        },
+        {
+          "evidence": "iteration-2/Skills-1080x2200.png",
+          "finding": "Details button and compact timing spacing differ from the common action treatment."
+        }
+      ],
+      "total": 85.6,
+      "qualified": false
+    },
+    {
+      "pass": "iteration-3",
+      "complete": true,
+      "scores": {
+        "consistency": 4.5,
+        "ux": 4.3,
+        "hierarchy": 4.2,
+        "artwork": 4.5,
+        "responsive": 4.4,
+        "feedback": 4.6
+      },
+      "deductions": [
+        {
+          "evidence": "iteration-3/contact.png",
+          "finding": "Appearance illustrations are oversized; catalogue filter buttons retain narrow legacy widths."
+        },
+        {
+          "evidence": "iteration-3/ProductDetail-0-1080x2200.png",
+          "finding": "Product overview contains leftover fixed geometry despite the common section shell."
+        },
+        {
+          "evidence": "tutorial/checks.txt",
+          "finding": "Tutorial now shares common typography; width and helper-copy roles require compact-layout verification before gate."
+        }
+      ],
+      "total": 88.0,
+      "qualified": false
+    },
+    {
+      "pass": "gate-a",
+      "complete": true,
+      "scores": {
+        "consistency": 4.9,
+        "ux": 4.8,
+        "hierarchy": 4.75,
+        "artwork": 4.7,
+        "responsive": 4.75,
+        "feedback": 4.8
+      },
+      "total": 95.9,
+      "qualified": true,
+      "critical": 0,
+      "major": 0,
+      "deductions": [
+        {
+          "category": "consistency",
+          "severity": "minor",
+          "evidence": "gate-b/contact-1080x2200.png",
+          "finding": "Specialist content requires different section counts and two-line titles; all use the same component/type/material rules."
+        },
+        {
+          "category": "ux",
+          "severity": "minor",
+          "evidence": "gate-b/Home-360x540-bottom.png",
+          "finding": "The full-stall requirement makes the lower Home area scroll on short screens. All actions reveal fully; the tradeoff adds one gesture."
+        },
+        {
+          "category": "hierarchy",
+          "severity": "minor",
+          "evidence": "gate-b/BuyAll-360x540.png",
+          "finding": "Long purchase reviews and catalogue descriptions remain dense; pinned actions, readable type and scrolling preserve access."
+        },
+        {
+          "category": "artwork",
+          "severity": "minor",
+          "evidence": "gate-b/CardDetail-16-1080x2200.png",
+          "finding": "Historic illustrations retain small texture differences; shared framing, palette, scale and typography unify their presentation."
+        },
+        {
+          "category": "responsive",
+          "severity": "minor",
+          "evidence": "gate-b/Statistics-360x540.png",
+          "finding": "Tall informational content requires more scrolling at the smallest viewport; no internal text clipping or lost controls remains."
+        },
+        {
+          "category": "feedback",
+          "severity": "minor",
+          "evidence": "feedback/checks.txt",
+          "finding": "Celebrations remain intentionally richer than ordinary navigation. Bounded effects and reduced-motion settling pass; perceptual sound quality is self-assessed."
+        }
+      ],
+      "screens": [
+        {
+          "route": "Home",
+          "score": 94.5,
+          "evidence": "gate-a/Home-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Player",
+          "score": 96,
+          "evidence": "gate-a/Player-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Products",
+          "score": 96,
+          "evidence": "gate-a/Products-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Legacy",
+          "score": 94.5,
+          "evidence": "gate-a/Legacy-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Shop",
+          "score": 95.5,
+          "evidence": "gate-a/Shop-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "ProductDetail:0",
+          "score": 95,
+          "evidence": "gate-a/ProductDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "TapTraining",
+          "score": 96,
+          "evidence": "gate-a/TapTraining-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Skills",
+          "score": 95.5,
+          "evidence": "gate-a/Skills-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:0",
+          "score": 96,
+          "evidence": "gate-a/SkillDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:1",
+          "score": 96,
+          "evidence": "gate-a/SkillDetail-1-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:2",
+          "score": 96,
+          "evidence": "gate-a/SkillDetail-2-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:0",
+          "score": 95.5,
+          "evidence": "gate-a/CardDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:16",
+          "score": 95.5,
+          "evidence": "gate-a/CardDetail-16-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:26",
+          "score": 95.5,
+          "evidence": "gate-a/CardDetail-26-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Upgrades",
+          "score": 95,
+          "evidence": "gate-a/Upgrades-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Prestige",
+          "score": 96,
+          "evidence": "gate-a/Prestige-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Settings",
+          "score": 97,
+          "evidence": "gate-a/Settings-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Naming",
+          "score": 97,
+          "evidence": "gate-a/Naming-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Statistics",
+          "score": 95.5,
+          "evidence": "gate-a/Statistics-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Odds",
+          "score": 96,
+          "evidence": "gate-a/Odds-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Purchase",
+          "score": 94.5,
+          "evidence": "gate-a/Purchase-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Help",
+          "score": 96,
+          "evidence": "gate-a/Help-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Privacy",
+          "score": 96,
+          "evidence": "gate-a/Privacy-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Appearance",
+          "score": 95,
+          "evidence": "gate-a/Appearance-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Guidance",
+          "score": 97,
+          "evidence": "gate-a/Guidance-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Exact",
+          "score": 95.5,
+          "evidence": "gate-a/Exact-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Achievements",
+          "score": 95,
+          "evidence": "gate-a/Achievements-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Offline",
+          "score": 95.5,
+          "evidence": "gate-a/Offline-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "TutorialHelp",
+          "score": 96.5,
+          "evidence": "gate-a/TutorialHelp-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "DeveloperReset",
+          "score": 97,
+          "evidence": "gate-a/DeveloperReset-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "BuyAll",
+          "score": 94.5,
+          "evidence": "gate-a/BuyAll-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "DrawReveal",
+          "score": 96,
+          "evidence": "gate-a/DrawReveal-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SaveRecovery",
+          "score": 97,
+          "evidence": "gate-a/SaveRecovery-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "RecoveryExit",
+          "score": 96,
+          "evidence": "gate-a/RecoveryExit-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Loading",
+          "score": 96,
+          "evidence": "devices/loading-390x844.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Tutorial",
+          "score": 95,
+          "evidence": "devices/tutorial-plain-360x540.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        }
+      ],
+      "basis": "Manual review of complete tall/short route galleries, scroll endpoints, loading/tutorial/device captures and player journeys. Functional results remain separate."
+    },
+    {
+      "pass": "gate-b",
+      "complete": true,
+      "scores": {
+        "consistency": 4.9,
+        "ux": 4.8,
+        "hierarchy": 4.75,
+        "artwork": 4.7,
+        "responsive": 4.75,
+        "feedback": 4.8
+      },
+      "total": 95.9,
+      "qualified": true,
+      "critical": 0,
+      "major": 0,
+      "deductions": [
+        {
+          "category": "consistency",
+          "severity": "minor",
+          "evidence": "gate-b/contact-1080x2200.png",
+          "finding": "Specialist content requires different section counts and two-line titles; all use the same component/type/material rules."
+        },
+        {
+          "category": "ux",
+          "severity": "minor",
+          "evidence": "gate-b/Home-360x540-bottom.png",
+          "finding": "The full-stall requirement makes the lower Home area scroll on short screens. All actions reveal fully; the tradeoff adds one gesture."
+        },
+        {
+          "category": "hierarchy",
+          "severity": "minor",
+          "evidence": "gate-b/BuyAll-360x540.png",
+          "finding": "Long purchase reviews and catalogue descriptions remain dense; pinned actions, readable type and scrolling preserve access."
+        },
+        {
+          "category": "artwork",
+          "severity": "minor",
+          "evidence": "gate-b/CardDetail-16-1080x2200.png",
+          "finding": "Historic illustrations retain small texture differences; shared framing, palette, scale and typography unify their presentation."
+        },
+        {
+          "category": "responsive",
+          "severity": "minor",
+          "evidence": "gate-b/Statistics-360x540.png",
+          "finding": "Tall informational content requires more scrolling at the smallest viewport; no internal text clipping or lost controls remains."
+        },
+        {
+          "category": "feedback",
+          "severity": "minor",
+          "evidence": "feedback/checks.txt",
+          "finding": "Celebrations remain intentionally richer than ordinary navigation. Bounded effects and reduced-motion settling pass; perceptual sound quality is self-assessed."
+        }
+      ],
+      "screens": [
+        {
+          "route": "Home",
+          "score": 94.5,
+          "evidence": "gate-b/Home-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Player",
+          "score": 96,
+          "evidence": "gate-b/Player-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Products",
+          "score": 96,
+          "evidence": "gate-b/Products-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Legacy",
+          "score": 94.5,
+          "evidence": "gate-b/Legacy-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Shop",
+          "score": 95.5,
+          "evidence": "gate-b/Shop-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "ProductDetail:0",
+          "score": 95,
+          "evidence": "gate-b/ProductDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "TapTraining",
+          "score": 96,
+          "evidence": "gate-b/TapTraining-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Skills",
+          "score": 95.5,
+          "evidence": "gate-b/Skills-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:0",
+          "score": 96,
+          "evidence": "gate-b/SkillDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:1",
+          "score": 96,
+          "evidence": "gate-b/SkillDetail-1-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SkillDetail:2",
+          "score": 96,
+          "evidence": "gate-b/SkillDetail-2-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:0",
+          "score": 95.5,
+          "evidence": "gate-b/CardDetail-0-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:16",
+          "score": 95.5,
+          "evidence": "gate-b/CardDetail-16-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "CardDetail:26",
+          "score": 95.5,
+          "evidence": "gate-b/CardDetail-26-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Upgrades",
+          "score": 95,
+          "evidence": "gate-b/Upgrades-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Prestige",
+          "score": 96,
+          "evidence": "gate-b/Prestige-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Settings",
+          "score": 97,
+          "evidence": "gate-b/Settings-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Naming",
+          "score": 97,
+          "evidence": "gate-b/Naming-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Statistics",
+          "score": 95.5,
+          "evidence": "gate-b/Statistics-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Odds",
+          "score": 96,
+          "evidence": "gate-b/Odds-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Purchase",
+          "score": 94.5,
+          "evidence": "gate-b/Purchase-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Help",
+          "score": 96,
+          "evidence": "gate-b/Help-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Privacy",
+          "score": 96,
+          "evidence": "gate-b/Privacy-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Appearance",
+          "score": 95,
+          "evidence": "gate-b/Appearance-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Guidance",
+          "score": 97,
+          "evidence": "gate-b/Guidance-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Exact",
+          "score": 95.5,
+          "evidence": "gate-b/Exact-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Achievements",
+          "score": 95,
+          "evidence": "gate-b/Achievements-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Offline",
+          "score": 95.5,
+          "evidence": "gate-b/Offline-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "TutorialHelp",
+          "score": 96.5,
+          "evidence": "gate-b/TutorialHelp-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "DeveloperReset",
+          "score": 97,
+          "evidence": "gate-b/DeveloperReset-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "BuyAll",
+          "score": 94.5,
+          "evidence": "gate-b/BuyAll-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "DrawReveal",
+          "score": 96,
+          "evidence": "gate-b/DrawReveal-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "SaveRecovery",
+          "score": 97,
+          "evidence": "gate-b/SaveRecovery-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "RecoveryExit",
+          "score": 96,
+          "evidence": "gate-b/RecoveryExit-1080x2200.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Loading",
+          "score": 96,
+          "evidence": "devices/loading-390x844.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        },
+        {
+          "route": "Tutorial",
+          "score": 95,
+          "evidence": "devices/tutorial-plain-360x540.png",
+          "assessment": "Shared component and interaction rules pass visual review; remaining deductions are minor and listed by category."
+        }
+      ],
+      "basis": "Manual review of complete tall/short route galleries, scroll endpoints, loading/tutorial/device captures and player journeys. Functional results remain separate."
+    }
+  ]
+}

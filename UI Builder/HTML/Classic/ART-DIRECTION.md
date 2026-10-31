@@ -1,5 +1,9 @@
 # Classic UI / current functionality — candidate 1
 
+## Gouache Bazaar unification — 31 October 2026
+
+The user approved the complete unification plan, retaining the full stall, allowing broader UX/art refinement and authorizing automatic native transfer after the fixed HTML gate. Shared tokens, two font families, semantic Folk controls, common popup/row/material primitives and the complete loading/tutorial journey now supersede the per-screen visual treatments below. Two complete audits score 95.9/100, with every screen at least 94.5 and no major/critical findings. This is self-assessed qualification, not a claim of final human visual signoff. Evidence and native status: [UI unification](../../../Documentation/Implementation/UiUnification/README.md).
+
 ## Current Unity parity cleanup — 31 October 2026
 
 The user requested that the existing HTML match the current Unity project. The saved production Main scene is now the visual authority for this revision. The historical design explorations below remain context; `unity-parity.css`, `unity-reference.js` and `unity-presentation.js` reconcile them with native measurements and current artwork.

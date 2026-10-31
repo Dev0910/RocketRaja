@@ -18,7 +18,7 @@ function updatePointerFrame(){
 }
 function positionPointer(){
  pointer.hidden=true;
- const s=state,target=$(pointerTargetId),app=$('app');
+ const s=state,target=$(pointerTargetId),app=$('app-inner');
  if(!hand.complete||!hand.naturalWidth||!s||s.error||s.skipped||s.existing||!target||target.disabled||target.closest('[hidden],[inert]')||$('modal').open||window.classicPreview?.state.stack.length)return;
  const visual=pointerTargetId==='stall-tap'?document.querySelector('.world .tap-hint'):target;
  const factor=window.classicViewport?.scale()||1;

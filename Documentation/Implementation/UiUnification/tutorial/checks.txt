@@ -1,0 +1,103 @@
+PASS welcome 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: welcome
+PASS saving 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: saving
+PASS training 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: training
+PASS result 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: result
+PASS product 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: product
+PASS upgrade 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: upgrade
+PASS achievement 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: achievement
+PASS prestige 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: prestige
+PASS talent 390x844 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: talent
+PASS welcome 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: welcome
+PASS saving 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: saving
+PASS training 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: training
+PASS result 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: result
+PASS product 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: product
+PASS upgrade 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: upgrade
+PASS achievement 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: achievement
+PASS prestige 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: prestige
+PASS talent 360x540 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: talent
+PASS welcome 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: welcome
+PASS saving 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: saving
+PASS training 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: training
+PASS result 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: result
+PASS product 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: product
+PASS upgrade 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: upgrade
+PASS achievement 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: achievement
+PASS prestige 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: prestige
+PASS talent 360x640 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: talent
+PASS welcome 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: welcome
+PASS saving 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: saving
+PASS training 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: training
+PASS result 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: result
+PASS product 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: product
+PASS upgrade 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: upgrade
+PASS achievement 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: achievement
+PASS prestige 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: prestige
+PASS talent 450x916 native frame, eight slots and four tabs
+PASS Shared Bazaar styles/fonts loaded: talent
+PASS Neither dialogue button exists
+PASS Popup is compact
+PASS Tutorial updates the actual native next-step row
+PASS Below ₹10 keeps saving on Home
+PASS Ten native counter taps open Player without buying training
+PASS ₹10 readiness shows the shopkeeper dialog
+PASS Dismissing training dialog leaves purchase pending
+PASS Existing Salesmanship control advances unchanged tutorial
+PASS Below ₹30 keeps saving on Home
+PASS First ₹30 threshold opens Products without buying Phuljhari
+PASS ₹30 readiness shows the shopkeeper dialog
+PASS Existing Products stock control advances tutorial
+PASS Product result uses button-free shopkeeper speech, not a modal
+PASS Below ₹20 keeps saving for the first upgrade on Home
+PASS First affordable upgrade opens Player without buying
+PASS First upgrade readiness shows the shopkeeper dialog
+PASS Upgrade result uses the same shopkeeper speech
+PASS Prestige readiness automatically opens Player with shopkeeper dialogue
+PASS Prestige cancellation preserves state
+PASS Prestige supplies three credits without auto-pull
+PASS Completed prestige automatically introduces a free Talent pull on Legacy
+PASS Native Legacy pull control spends one free credit
+PASS Talent uses the actual game card reveal, not a generic feedback dialog
+PASS Card reveal finishes before the one-time shopkeeper permanence explanation
+PASS Achievement readiness automatically opens Player with shopkeeper dialogue
+PASS First achievement exact reward retained
+PASS Duplicate claim blocked
+PASS Save-error guard retained
+PASS Existing user not enrolled
+PASS Skip preserves all actual navigation
+PASS No script or asset errors: 
