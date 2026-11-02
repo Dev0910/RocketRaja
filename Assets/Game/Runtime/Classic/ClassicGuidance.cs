@@ -30,8 +30,8 @@ namespace RocketRaja.Classic
                 if (show) { var copy = topics.Single(t => t.id == next); row.title.text = copy.title; row.brief.text = copy.brief; }
             }
             foreach (var panel in ui.panels)
-                if (panel.scroll) { var r = (RectTransform)panel.scroll.transform; r.offsetMax = new Vector2(r.offsetMax.x, ui.bazaarTheme?(panel.route=="Home"?0:-56):-(banner && panel.route == route ? 105 : 49)); }
-            var goal = ui.bazaarTheme&&ui.tutorial?ui.tutorial.objectiveRoot.transform:ui.panels[0].root.transform.Find("Next display");
+                if (panel.scroll) { var r = (RectTransform)panel.scroll.transform; r.offsetMax = new Vector2(r.offsetMax.x, -(banner && panel.route == route ? 105 : 49)); }
+            var goal = ui.panels[0].root.transform.Find("Next display");
             if (goal) goal.gameObject.SetActive(!(route == "Home" && next != null));
         }
         string Next(string route)
@@ -79,7 +79,6 @@ namespace RocketRaja.Classic
         void FitReader()
         {
             body.alignment = TextAlignmentOptions.TopLeft;
-            if(ui.bazaarTheme)return; // The authored flow measures the actual heading and paragraph.
             var row = body.transform.parent.GetComponent<UnityEngine.UI.LayoutElement>();
             if (row && body.rectTransform.rect.width > 20)
                 row.minHeight = row.preferredHeight = body.GetPreferredValues(body.text, body.rectTransform.rect.width, 0).y + 24;

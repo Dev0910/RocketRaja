@@ -5,7 +5,6 @@ root=Path(__file__).resolve().parent
 old=(root/'revision-1/index.html').read_text(encoding='utf-8')
 classic=(root.parent/'Classic/index.html').read_text(encoding='utf-8')
 review=re.search(r'<aside id="review".*?</aside>',old,re.S)[0].replace('id="review"','id="tutorial-review"').replace('id="review-status"','id="tutorial-review-status"')
-review=review.replace('../../../Reference%20Images/Tutorial/ART-DIRECTION.md','system/gallery.html').replace('Art direction notes','Shared component library')
 coach=re.search(r'<section id="coach".*?</section>',old,re.S)[0].replace('coach parchment','tutorial-coach')
 coach=re.sub(r'<div class="coach-actions">.*?</div>','',coach,flags=re.S)
 coach=coach.replace('aria-label="Shopkeeper guidance"','aria-label="Shopkeeper guidance" role="note" tabindex="0" data-action="DismissCoach"')

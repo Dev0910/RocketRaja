@@ -1,13 +1,5 @@
 # Classic HTML → Unity TODO
 
-### H2U-029 — Gouache Bazaar UI unification, 31 October 2026 — HTML qualified; native implementation next
-
-User explicitly approved the implementation plan: uniform Gouache Bazaar; broader UX changes within existing routes; full stall retained; selective artwork replacement allowed; automatic Unity transfer after the fixed HTML gate. Before edits, all current nonignored project work was committed and pushed as `2cda0d5` on `codex/ui-unification` and its remote SHA verified.
-
-The active Classic renderer now uses shared tokens, components and cleaned geometry instead of 22 competing stylesheets. Common fonts, semantic Folk button faces, navigation, popup structure, rows, portraits, progress bars, forms, Settings parent retention, rarity accents, loading and tutorial presentation cover the active journey. Short Home uses a bounded scroll region; safe-area insets and scaled pointer/effect coordinates preserve input geometry. Existing actions, economy, saves and service ownership remain intact. Historical previews are excluded from the handoff and preserved unchanged.
-
-Sources: `Classic/system/`, Classic controller/entry, composed Tutorial and Loading. Scope, frozen rubric, route galleries, scored iterations and checks: [UI unification](UiUnification/README.md). Native owners are the existing ClassicUI/layout/presentation bindings and saved Main/Bootstrap UI. Native assets/scenes remain unchanged until two complete passing HTML audits; their migration status is recorded in the same report.
-
 Viewport review utility — 31 October 2026: `Classic/reviews/device-1080x2200.html` hosts the progressed fixture in an exact 1080×2200 iframe, with Fit/Actual size viewing. H2U-028 supersedes its initial partial-scaling implementation: `?viewport=1080x2200` now scales the entire canonical 360-unit canvas once, including text, spacing, effects and hit targets. No native transfer is needed for this review utility.
 
 ### H2U-028 — Clean HTML against current saved Unity, 31 October 2026 — Done, HTML ready for review

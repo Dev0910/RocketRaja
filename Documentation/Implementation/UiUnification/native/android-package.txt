@@ -1,5 +1,0 @@
-package: name='com.diwali.fireworkstycoon.dev' versionCode='6' versionName='0.1.5' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
-sdkVersion:'25'
-targetSdkVersion:'36'
-application-debuggable
-launchable-activity: name='com.unity3d.player.UnityPlayerGameActivity'  label='' icon=''
